@@ -1,0 +1,27 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(40);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 101, 137, 0, 0);    }  if (previousRoom == 33)
+    {    get.posn(ego, goat.x, goat.y);    if (goat.x > 130)
+      {      position(ego, 140, 41);      }    if (goat.x > 88 &&         goat.x < 131)
+      {      position(ego, 88, 41);      }    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(f20))
+  {  set(f20);  print("Oh No!  That's such a dangerous river... the current is too strong... "        "you won't be able to escape!");  }if (said("check", "river"))
+  {  print("The river flows swiftly between steep banks.");  }if ((said("check", "across") ||     said("check", "across", "river")))
+  {  print("On the far side of the river is a green meadow.");  set(haveMatch);  }if (said("acquire", "water"))
+  {  if (isset(have.bucket) &&       !isset(have.water))
+    {    print("The bank is dangerously steep;  there are safer ways to  reach "          "water.");    }  }if (!isset(have.water))
+  {  if ((said("drink", "water") ||       said("acquire", "drink")))
+    {    print("The bank is dangerously steep;  there are safer ways to  reach "          "water.");    }  }if (!isset(onWater))
+  {  if ((posn(ego, 110, 53, 133, 83) ||       posn(ego, 100, 39, 106, 57)))
+    {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  v76 = 255;  if (posn(ego, 100, 32, 138, 59))
+    {    v76 = 112;    v77 = 52;    }  if (posn(ego, 101, 60, 132, 90))
+    {    v76 = 117;    v77 = 76;    }  if (posn(ego, 133, 54, 159, 89))
+    {    v76 = 140;    v77 = 86;    }  if (v76 == 255)
+    {    v76 = 0;    }  else
+    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic33);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic25);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic31);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic17);  }if (isset(goat.following))
+  {  call(lgc.goat);  }call(lgc.swim);return();[ Messages#message 1 "Oh No!  That's such a dangerous river... the current is too strong... you won't be able to escape!"#message 2 "The river flows swiftly between steep banks."#message 3 "On the far side of the river is a green meadow."#message 4 "The bank is dangerously steep;  there are safer ways to  reach water."

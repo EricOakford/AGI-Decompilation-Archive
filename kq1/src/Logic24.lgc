@@ -1,0 +1,23 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 30, 75, 0, 0);    }  if (!isset(f86))
+    {    load.view(View21);    animate.obj(o1);    set.view(o1, View21);    position(o1, 53, 134);    set(f20);    }  if (isset(f20))
+    {    draw(o1);    stop.update(o1);    }  draw(ego);  show.pic();  }if (!isset(have.clover))
+  {  if ((said("check", "clover") ||       said("check", "grass") ||       said("check", "bush")))
+    {    if (posn(ego, 0, 77, 118, 167))
+      {      print("There is a small patch of clover under the tree.");      }    else
+      {      print("Off in the distance you see a patch of clover.");      }    }  }if (said("check", "room"))
+  {  print("There is a clover patch in this meadow.");  }distance(ego, o1, work);if (said("acquire", "clover"))
+  {  if (isset(f86))
+    {    if (isset(have.clover))
+      {      print("You already have the only four-leaf clover here.");      }    else
+      {      print("You had, and lost, the only four-leaf clover  around.  You really "            "don't want a three-leaf clover.");      }    }  if (!isset(f86))
+    {    if (work < 25)
+      {      print("The clover is soft, yet you sense a strange strength in it.");      get("fourleaf clover");      currentScore  += 2;      set(f86);      set(have.clover);      start.update(o1);      erase(o1);      }    else
+      {      print("You really don't want any of the three-leaf clovers.");      }    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic25);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic23);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic17);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic9);  }if (isset(goat.following))
+  {  call(lgc.goat);  }return();[ Messages#message 1 "There is a small patch of clover under the tree."#message 2 "Off in the distance you see a patch of clover."#message 3 "You already have the only four-leaf clover here."#message 4 "The clover is soft, yet you sense a strange strength in it."#message 5 "You really don't want any of the three-leaf clovers."#message 6 "You had, and lost, the only four-leaf clover  around.  You really don't want a three-leaf clover."#message 7 "There is a clover patch in this meadow."

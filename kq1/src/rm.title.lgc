@@ -1,0 +1,17 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  load.sound(Sound0);  configure.screen(0, 21, 0);  draw.pic(currentRoom);  prevent.input();  v30 = 250;  v31 = 245;  v33 = 1;  v35 = 1;  v37 = 12;  set(soundOn);  if (monitorType == MONO)
+    {    display(24, 1, "(c) copyright SIERRA On-Line Inc.  1987");    }  else
+    {    display(22, 1, "(c) copyright SIERRA On-Line Inc.  1987");    display(24, 5, "Press any key to continue.");    }  set.key(0, 59, c.help);  set.key(0, 60, c.sound.toggle);  set.key(19, 0, c.sound.toggle);  set.key(0, 61, c.echo.line);  set.key(5, 0, c.echo.line);  set.key(0, 62, c.show.obj);  set.key(0, 63, c.save);  set.key(0, 64, c16);  set.key(0, 65, c.restore);  set.key(0, 67, c.restart);  set.key(0, 68, c9);  set.key(9, 0, c.status);  set.key(0, 32, c.debug);  set.key(10, 0, c.init.joy);  set.key(3, 0, c.cancel.line);  set.key(24, 0, c.cancel.line);  set.key(18, 0, c.toggle.monitor);  set.key(0, 44, c.quit);  set.key(61, 0, c.swim);  set.key(45, 0, c.duck);  set.key(48, 0, c.jump);  if (machineType == PCJR)
+    {    set.key(49, 0, c.help);    set.key(50, 0, c.sound.toggle);    set.key(51, 0, c.echo.line);    set.key(53, 0, c.save);    set.key(55, 0, c.restore);    set.key(57, 0, c.restart);    }  show.pic();  }if (!isset(f21))
+  {  set(f21);  sound(Sound0, f20);  }--v30;if (v30 == v31)
+  {  v32 = v33;  v34 = v35;  if (monitorType == MONO)
+    {    v36 = 19;    }  else
+    {    v36 = 18;    }Label1:  display.v(v36, v37, v32);  --v34;  if (v34 > 0)
+    {    --v36;    --v32;    goto(Label1);    }  v31 -= 5;  ++v33;  if (v35 < 13)
+    {    ++v35;    }  }if (v30 == 135)
+  {  v31 = 255;  if (monitorType == MONO)
+    {    clear.lines(24, 24, BLACK);    display(24, 5, "Press any key to continue.");    }  }if (have.key())
+  {  if (monitorType != MONO)
+    {    clear.lines(21, 24, BLACK);    }  stop.sound();  v30 = 0;  set.key(27, 0, c.menu);  if (machineType == ATARI)
+    {    set.key(1, 1, c.menu);    set.key(1, 3, c.swim);    }  else
+    {    set.key(1, 1, c0);    set.key(1, 3, c.menu);    set.key(1, 2, c.swim);    set.key(1, 4, c.status);    }  new.room(Logic1);  }return();[ Messages#message 1 "Designed and    "#message 2 "    Written by: "#message 3 "Roberta Williams"#message 4 "                "#message 5 "Orig. Version by"#message 6 " Charles Tingley"#message 7 "  Ken MacNeill  "#message 8 "   Chris Iden   "#message 9 "                "#message 10 "Graphics by:    "#message 11 " Doug MacNeill  "#message 12 "  Greg Rowland  "#message 13 "                "#message 14 "New Version by: "#message 15 " Jeff Stephenson"#message 16 "  Sol Ackerman  "#message 17 "   Chris Iden   "#message 18 "                "#message 19 "Thanks to:      "#message 20 " Linda Ackerman  "#message 21 "  Mark Crowe     "#message 22 "   Robert Heitman"#message 23 "    Scott Murphy "#message 24 "(c) copyright SIERRA On-Line Inc.  1987"#message 25 "Press any key to continue."

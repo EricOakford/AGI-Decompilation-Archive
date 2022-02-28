@@ -1,0 +1,22 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound5);  load.view(View105);  if (!isset(f132))
+    {    set(f132);    currentScore  += 2;    }  if (!isset(f137))
+    {    set(f20);    load.view(View39);    animate.obj(o1);    set.view(o1, View39);    position(o1, 70, 85);    set.priority(o1, 6);    }  set.priority(ego, 6);  position(ego, 35, 164);  observe.blocks(ego);  egoDir = STOPPED;  if (isset(f20))
+    {    draw(o1);    stop.update(o1);    }  draw(ego);  show.pic();  }if (said("check", "tree"))
+  {  print("There is a rather large bird's nest here.");  }if (isset(f137))
+  {  if ((said("check", "bird nest") ||       said("look in", "bird nest")))
+    {    print("The nest is empty.");    }  if (isset(have.egg) &&       said("acquire", "egg"))
+    {    print("You already have the golden egg from the nest.");    }  if (!isset(have.egg) &&       said("acquire", "egg"))
+    {    print("There is no egg here to get.");    }  }distance(ego, o1, work);if (!isset(f137))
+  {  if ((said("check", "bird nest") ||       said("look in", "bird nest")))
+    {    print("There is a pure golden egg lying in the nest!");    }  if (said("check", "egg"))
+    {    print("The golden egg is smooth and shiny.");    }  if (said("acquire", "egg"))
+    {    if (work < 24)
+      {      start.update(o1);      erase(o1);      set(have.egg);      get("gold egg");      set(f137);      currentScore  += 6;      print("The golden egg is so heavy you almost drop it.");      }    else
+      {      print("You can't get the egg from here!");      }    }  }if (isset(onWater) &&     !posn(ego, 12, 106, 57, 166) &&     !isset(f21))
+  {  set(f21);  set(f131);  ignore.blocks(ego);  set.view(ego, View105);  print("Apparently you lost your grip while climbing this tree and you fall to "        "the hard earth below.");  get.posn(ego, goat.x, goat.y);  goat.y = 166;  v96 = 3;  sound(Sound5, f159);  move.obj.v(ego, goat.x, goat.y, v96, done);  }if (isset(egoHitSpecial) &&     !posn(ego, 12, 106, 57, 166) &&     !isset(f21))
+  {  set(f21);  set(f131);  ignore.blocks(ego);  set.priority(ego, 4);  set.view(ego, View105);  print("Apparently you lost your grip while climbing this tree and you fall to "        "the hard earth below.");  get.posn(ego, goat.x, goat.y);  goat.y = 166;  v96 = 3;  sound(Sound5, f159);  move.obj.v(ego, goat.x, goat.y, v96, done);  }if (posn(ego, 12, 106, 57, 166) &&     !isset(f21))
+  {  if ((isset(egoHitSpecial) ||       isset(onWater)))
+    {    set(f21);    set(f131);    ignore.blocks(ego);    set.priority(ego, 5);    set.view(ego, View105);    print("Apparently you lost your grip while climbing this tree and you fall "          "to the hard earth below.");    get.posn(ego, goat.x, goat.y);    goat.y = 166;    v96 = 3;    sound(Sound5, f159);    move.obj.v(ego, goat.x, goat.y, v96, done);    }  }if (isset(done))
+  {  new.room(Logic14);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic14);  }return();[ Messages#message 1 "There is a rather large bird's nest here."#message 2 "There is a pure golden egg lying in the nest!"#message 3 "The nest is empty."#message 4 "The golden egg is smooth and shiny."#message 5 "You already have the golden egg from the nest."#message 6 "There is no egg here to get."#message 7 "The golden egg is so heavy you almost drop it."#message 8 "You can't get the egg from here!"#message 9 "Apparently you lost your grip while climbing this tree and you fall to the hard earth below."

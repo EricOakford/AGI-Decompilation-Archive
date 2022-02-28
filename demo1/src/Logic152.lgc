@@ -1,0 +1,10 @@
+if (isset(f45))
+  {  reset(f45);  animate.obj(o1);  set.view(o1, View150);  set.loop(o1, 0);  set.cel(o1, 0);  position(o1, 60, 89);  draw(o1);  demoPic = 3;  cycle.time(o1, demoPic);  animate.obj(ego);  set.view.v(ego, v142);  position(ego, 30, 90);  draw(ego);  show.pic();  if (monitorType == MONO)
+    {    clear.lines(24, 24, BLACK);    }  move.obj(ego, 55, 95, 1, f240);  if (monitorType != MONO)
+    {    clear.lines(21, 23, BLACK);    }  clear.text.rect(17, 4, 21, 35, WHITE);  set.text.attribute(BLACK, WHITE);  display(18, 6, "The rhymes in Mother Goose");  display(19, 6, "land are all mixed up!");  display(20, 6, "You must help fix them!");  }if (isset(f240))
+  {  reset(f240);  stop.cycling(ego);  stop.motion(ego);  sound(Sound152, f141);  elapsedSeconds = 0;  set(f143);  set.loop(o1, 1);  set.cel(o1, 1);  stop.cycling(o1);  animate.obj(o2);  load.view(View146);  set.view(o2, View146);  set.loop(o2, 1);  set.cel(o2, 0);  ignore.horizon(o2);  position(o2, 65, 72);  set.priority(o2, 14);  draw(o2);  stop.update(o2);  set.text.attribute(BLACK, WHITE);  display(2, 18, "I want to");  display(3, 18, "sit there.");  display(4, 18, "I need a");  display(5, 18, " ladder.");  v242 = 60;  }if (isset(f143))
+  {  --v242;  }if (v242 == 1)
+  {  v242 = 0;  clear.text.rect(3, 18, 6, 27, WHITE);  set.cel(o1, 0);  erase(o2);  set.cel(o2, 1);  position(o2, 70, 68);  draw(o2);  stop.update(o2);  animate.obj(o3);  ignore.horizon(o3);  load.view(View144);  set.view(o3, View144);  set.loop(o3, 0);  position(o3, 85, 45);  set.priority(o3, 15);  draw(o3);  stop.update(o3);  v241 = 60;  }if (isset(f143))
+  {  --v241;  }if (v241 == 1)
+  {  v241 = 0;  reset(f143);  set.loop(o1, 0);  set.cel(o1, 0);  start.cycling(o1);  erase(o3);  erase(o2);  v240 = 40;  }--v240;if (v240 == 1)
+  {  stop.sound();  close.window();  v35 = 154;  }return();[ Messages#message 1 "I want to"#message 2 "sit there."#message 3 "I need a"#message 4 " ladder."#message 5 "The rhymes in Mother Goose"#message 6 "land are all mixed up!"#message 7 "You must help fix them!"

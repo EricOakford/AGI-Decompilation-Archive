@@ -1,0 +1,28 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(45);  load.sound(Sound5);  draw(ego);  show.pic();  }if ((said("check", "room") ||     said("check", "clouds")))
+  {  print("You are in the Land of the Clouds.  It is rumored that a giant lives "        "up here.");  }if (said("check", "tree"))
+  {  if (posn(ego, 86, 101, 159, 167))
+    {    print("Its trunk has a large hole in the base.");    }  else
+    {    print("These are strange looking trees.");    }  }if ((said("check", "doorway") ||     said("look in", "doorway")))
+  {  if (posn(ego, 117, 100, 144, 117))
+    {    if (!isset(f96))
+      {      print("You notice a sling in the hole in the tree.");      }    else
+      {      print("It is empty.");      }    }  else
+    {    print("You can't see into the hole from here.");    }  }if (said("check", "sling"))
+  {  if (isset(have.sling))
+    {    print("This sling is made of very stretchy leather.");    }  else
+    {    print("Why?  What sling?");    }  }if (isset(f96))
+  {  if (said("acquire", "sling"))
+    {    if (posn(ego, 117, 100, 144, 117))
+      {      print("Why?  What sling?");      }    else
+      {      print("You need to be closer to try.");      }    }  }if (!isset(f96))
+  {  if (said("acquire", "sling"))
+    {    if (posn(ego, 117, 100, 144, 117))
+      {      print("You reach into the hole and pull out the leather sling.");      set(f96);      set(have.sling);      currentScore  += 2;      get("leather slingshot");      }    else
+      {      print("You need to be closer to try.");      }    }  }if (isset(egoHitSpecial))
+  {  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  goat.y  += 6;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f21);  sound(Sound5, f159);  }if (isset(f21))
+  {  reset(f21);  erase(ego);  }if (isset(f159))
+  {  reset(f159);  set(f20);  }if (isset(f20))
+  {  reset(f20);  print("You've fallen through the clouds!  Cloud walking is for the birds.");  erase(ego);  set(certain.death);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic59);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic61);  }return();[ Messages#message 1 "Its trunk has a large hole in the base."#message 2 "You notice a sling in the hole in the tree."#message 3 "It is empty."#message 4 "This sling is made of very stretchy leather."#message 5 "You reach into the hole and pull out the leather sling."#message 6 "You can't see into the hole from here."#message 7 "Why?  What sling?"#message 8 "You are in the Land of the Clouds.  It is rumored that a giant lives up here."#message 9 "You've fallen through the clouds!  Cloud walking is for the birds."#message 10 "These are strange looking trees."#message 11 "You need to be closer to try."

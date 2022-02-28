@@ -1,0 +1,37 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(42);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 56, 83, 0, 0);    }  if (previousRoom == 78)
+    {    shrink.timer = 0;    currentScore  += 1;    set.view(ego, View60);    position(ego, 110, 131);    move.obj(ego, 88, 131, 0, f20);    }  draw(ego);  show.pic();  }if (isset(ego.shrunk))
+  {  ignore.blocks(ego);  }else
+  {  observe.blocks(ego);  }if (isset(f20))
+  {  set.view(ego, View0);  print("You feel a stretching sensation... Oh, you're back to your original "        "size.");  reset(ego.shrunk);  reset(f20);  }if ((said("check", "doorway") ||     said("look in", "doorway")))
+  {  if (posn(ego, 90, 124, 106, 140))
+    {    print("When looking in this small hole, you see a faint green glow.");    goto(Label1);    }  if (posn(ego, 75, 125, 109, 158))
+    {    print("One rock has a small hole in its base.");    }  else
+    {    print("You'll have to move closer.");    }  }if (said("reach", "doorway"))
+  {  if (posn(ego, 90, 124, 106, 140))
+    {    print("Very cautiously, you reach into the hole, and to your dismay, find "          "nothing.");    }  else
+    {    print("You'll have to move closer.");    }  }if (!isset(ego.shrunk))
+  {  if ((said("enter", "doorway") ||       said("enter", "doorway")))
+    {    if (posn(ego, 75, 125, 109, 158))
+      {      print("You would need to be much smaller to fit through that hole.");      }    else
+      {      print("You'll have to move closer.");      }    }  }if (isset(ego.shrunk))
+  {  if ((said("enter", "doorway") ||       said("enter", "doorway")))
+    {    print("Go ahead.  Walk right in.");    }  }if (said("acquire", "boulder"))
+  {  if (posn(ego, 75, 125, 109, 158))
+    {    print("This rock is firmly stuck in the ground.");    }  else
+    {    print("You'll have to move closer.");    }  }if (said("move", "boulder"))
+  {  if (posn(ego, 75, 125, 109, 158))
+    {    print("Although you are very strong and healthy, this rock is too much even "          "for you.");    }  else
+    {    print("You'll have to move closer.");    }  }if (said("check", "boulder"))
+  {  if (posn(ego, 50, 80, 158, 166))
+    {    print("The ancient, mossy rock has seen many winters.  There is a small "          "hole at its base.");    }  else
+    {    print("From here it looks like a typical, large rock.");    }  }if (said("check", "room"))
+  {  print("You notice a hole in the base of a large moss covered rock.");  }Label1:if (posn(ego, 111, 127, 119, 132))
+  {  new.room(Logic78);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic45);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic35);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic37);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic29);  }if (isset(goat.following))
+  {  call(lgc.goat);  }return();[ Messages#message 1 "When looking in this small hole, you see a faint green glow."#message 2 "You would need to be much smaller to fit through that hole."#message 3 "This rock is firmly stuck in the ground."#message 4 "Although you are very strong and healthy, this rock is too much even for you."#message 5 "Very cautiously, you reach into the hole, and to your dismay, find nothing."#message 6 "You'll have to move closer."#message 7 "The ancient, mossy rock has seen many winters.  There is a small hole at its base."#message 8 "From here it looks like a typical, large rock."#message 9 "There are several pretty trees in the area and a few rocks.  One rock has a small hole in its base."#message 10 "You feel a stretching sensation... Oh, you're back to your original size.  You can't get out of the small  cave!"#message 11 "One rock has a small hole in its base."#message 12 "Go ahead.  Walk right in."#message 13 "You feel a stretching sensation... Oh, you're back to your original size."#message 14 "You notice a hole in the base of a large moss covered rock."

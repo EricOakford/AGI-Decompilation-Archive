@@ -1,0 +1,25 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 105, 58, 0, 0);    }  if (previousRoom == 6)
+    {    position(ego, 121, 47);    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wandered.off))
+  {  reset(goat.wandered.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (said("check", "lake"))
+  {  print("The clear blue lake is surrounded by a pretty meadow.");  }if (!isset(onWater))
+  {  if ((posn(ego, 96, 82, 115, 99) ||       posn(ego, 100, 108, 115, 120) ||       posn(ego, 30, 113, 67, 134) ||       posn(ego, 90, 121, 112, 130) ||       posn(ego, 30, 135, 67, 139) ||       posn(ego, 90, 131, 107, 142)))
+    {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  v76 = 255;  if ((posn(ego, 115, 104, 125, 111) ||       posn(ego, 113, 112, 124, 119) ||       posn(ego, 100, 120, 122, 126) ||       posn(ego, 100, 127, 118, 136) ||       posn(ego, 100, 137, 115, 142)))
+    {    v76 = 100;    v77 = 121;    }  if (posn(ego, 30, 131, 55, 146))
+    {    v76 = 25;    v77 = 123;    }  if (v76 == 255)
+    {    v76 = 0;    }  else
+    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water))
+  {  if ((said("drink", "water") ||       said("acquire", "drink")))
+    {    print("It tastes very refreshing to a thirsty wanderer.");    }  }if (!isset(have.water) &&     isset(have.bucket) &&     said("acquire", "water"))
+  {  print("The crystal clear water fills up the bucket.");  get("water");  set(have.water);  if (!isset(points.water))
+    {    currentScore  += 2;    }  set(points.water);  }if (edgeEgoHit != NOT_HIT)
+  {  if (isset(f66))
+    {    reset(f66);    reset(goat.following);    set(goat.gone);    set(goat.wandered.off);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic6);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic44);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic42);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic38);  }if (isset(goat.following))
+  {  call(lgc.goat);  }call(lgc.swim);return();[ Messages#message 1 "The crystal clear water fills up the bucket."#message 2 "It tastes very refreshing to a thirsty wanderer."#message 3 "The clear blue lake is surrounded by a pretty meadow."#message 4 "It seems the old goat has wandered off by himself and is no longer following you."

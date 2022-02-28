@@ -1,0 +1,139 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound1);  load.sound(Sound4);  load.sound(Sound5);  if (!isset(have.note))
+    {    load.view(View42);    animate.obj(o1);    set.view(o1, View42);    position(o1, 118, 140);    set.priority(o1, 14);    }  if (v87 == 2)
+    {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    }  if (v87 == 0)
+    {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (v87 == 3)
+    {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 5);    stop.cycling(o2);    }  if (v87 == 1)
+    {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 5);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (previousRoom == 80)
+    {    load.view(View105);    load.view(View103);    load.view(View104);    set.view(ego, View105);    ignore.blocks(ego);    position(ego, 80, 45);    set(keep.cycling);    set(f25);    program.control();    move.obj(ego, 80, 84, 6, f20);    v81 = 2;    }  if (previousRoom == 28)
+    {    position(ego, 49, 163);    }  if (!isset(protected.spell) &&       v81 != 3 &&       previousRoom != 80 &&       !isset(ego.invisible))
+    {    if (v81 == 2)
+      {      random(0, 250, work);      if (work < 180)
+        {        load.view(View43);        animate.obj(o4);        set.view(o4, View43);        v30 = 250;        v31 = 3;        }      }    }  if (v81 == 1)
+    {    if (!isset(protected.spell) &&         !isset(ego.invisible))
+      {      set(f27);      load.view(View43);      animate.obj(o4);      set.view(o4, View43);      position(o4, 26, 120);      }    }  if (!isset(have.note))
+    {    draw(o1);    stop.update(o1);    }  draw(o2);  if (v87 == 1)
+    {    draw(o3);    }  ignore.blocks(ego);  observe.blocks(o4);  draw(ego);  show.pic();  if (isset(protected.spell))
+    {    print("Be thankful that you have a protective spell or the witch may have "          "stuck around to try and catch you!");    }  if (isset(ego.invisible))
+    {    print("Be thankful that you are invisible or the witch may have stuck "          "around to try and catch you!");    }  if (isset(f27))
+    {    draw(o4);    follow.ego(o4, 10, f26);    print("Surprise!  Surprise!  The wicked witch is home and now she's after "          "you!");    }  }if (isset(f27) &&     !isset(f32))
+  {  set(f32);  sound(Sound1, done);  }if (isset(goat.following))
+  {  reset(goat.following);  set(goat.gone);  print("As soon as you entered the house the goat ran away.");  currentScore -= 5;  }if (v81 == 3)
+  {  if (said("anyword", "witch"))
+    {    print("The witch is dead.");    }  }if (previousRoom == 80)
+  {  if (!isset(f20) &&       !isset(f33) &&       !isset(f27))
+    {    sound(Sound5, f198);    set(f33);    }  }--v32;if (isset(f20))
+  {  stop.sound();  set(f34);  reset(f20);  observe.blocks(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH!");  v32 = 20;  set(keep.cycling);  sound(Sound4, f159);  }if (isset(f159))
+  {  if (v32 > 0)
+    {    reset(f159);    sound(Sound4, f159);    }  }if (v32 == 1)
+  {  set.view(ego, View104);  end.of.loop(ego, f22);  print("As the wicked witch flew over her house, she dropped you... into her "        "cage!  If you can't get out, you may become the secret ingredient in "        "this witches' brew!");  player.control();  }--v33;if (isset(f22))
+  {  reset(f22);  reset(keep.cycling);  set.view(ego, View0);  v33 = 100;  }if (v33 == 1)
+  {  if ((isset(f27) ||       isset(f29)))
+    {    print("With a flash, you hear her joyously exclaim, \"This has made me feel "          "like flying!\"");    erase(o4);    reset(f27);    }  else
+    {    print("Try as you will to escape, your labor will be in vain.");    }  set(f95);  stop.cycling(ego);  set(certain.death);  }if (isset(f27))
+  {  distance(ego, o4, v34);  if (v34 == 30 &&       !isset(f30))
+    {    set(f30);    stop.motion(ego);    print("Rats!  She has cast some spell to keep you from escaping!. The witch "          "remarks, \"Oh, how nice of you to come for dinner (cackle, cackle)\"");    }  if (isset(f26))
+    {    reset(f26);    print("She pokes and pinches you, then states, \"This one is too scrawny, "          "so it's into the cage until you fatten up (smack, yum)!\"");    erase(ego);    position(ego, 80, 80);    draw(ego);    start.motion(ego);    set(f22);    set(f25);    }  }--v30;if (v30 == 0)
+  {  if (v31 > 0)
+    {    --v31;    v30 = 250;    }  }if (v30 == 1 &&     v31 == 3)
+  {  print("Off in the distance you hear a high, squeaky voice say, \"I can smell "        "someone tasty in my house.\"");  }if (v30 == 1 &&     v31 == 2)
+  {  position(o4, 49, 160);  draw(o4);  sound(Sound1, done);  set(f29);  if (posn(ego, 105, 1, 158, 166))
+    {    move.obj(o4, 26, 120, 2, f21);    set(f31);    print("The witch mutters, \"I am going to get my oven ready to cook someone "          "for dinner (yum).\"");    }  }if (isset(f29) &&     !isset(f21) &&     !isset(f31))
+  {  v30 = 0;  v31 = 0;  if (posn(ego, 105, 1, 158, 166) &&       !isset(f23))
+    {    wander(o4);    }  else
+    {    if (!isset(f23))
+      {      set(f23);      ignore.blocks(o4);      follow.ego(o4, 10, f26);      }    distance(ego, o4, v34);    if (v34 < 30 &&         !isset(f30) &&         !posn(ego, 105, 132, 158, 166))
+      {      set(f30);      stop.motion(ego);      print("Rats!  She has cast some spell to keep you from escaping!. The "            "witch remarks, \"Oh, how nice of you to come for dinner (cackle, "            "cackle)\"");      }    if (isset(f26))
+      {      reset(f26);      print("She pokes and pinches you, then states, \"This one is too scrawny, "            "so it's into the cage until you fatten up (smack, yum)!\"");      reposition.to(ego, 80, 80);      start.motion(ego);      set(f22);      set(f25);      }    }  }if (isset(f21))
+  {  if (said("check", "witch"))
+    {    print("This ugly old witch is one of the most hideous sights you have ever "          "seen.  I would never trust her.");    }  distance(ego, o4, v70);  if (v70 < 15)
+    {    if ((said("move", "witch") ||         said("kill", "witch")))
+      {      erase(o4);      print("Courageously, you manage to push the witch into the oven where she "            "flashes and melts away into a harmless blob. Congratulations!");      v81 = 3;      v30 = 0;      v31 = 0;      reset(f29);      reset(f21);      currentScore  += 7;      }    }  if (v70 > 14)
+    {    if ((said("move", "witch") ||         said("kill", "witch")))
+      {      print("You are in no position to do that!");      }    }  if (v30 == 1 &&       v31 == 3)
+    {    print("The witch mumbles, \"After I get the oven nice and hot, I will be "          "ready to have someone for dinner (giggle).\"");    }  if (v30 == 1 &&       v31 == 2)
+    {    print("The witch mutters, \"The oven is heating up nicely.  I wonder who "          "will be my dinner guest!\"");    }  if (v30 == 1 &&       v31 == 0)
+    {    v30 = 0;    v31 = 0;    print("The witch says, \"My oven is now the perfect temperature. It is time "          "to invite someone for dinner (cackle, cackle)!\"");    reset(f21);    reset(f31);    if (posn(ego, 100, 1, 158, 166))
+      {      wander(o4);      }    }  }if (!isset(f21))
+  {  if ((isset(f29) ||       isset(f27)))
+    {    if (said("move", "witch"))
+      {      print("You are in no position to do that!");      }    if (said("kill", "witch"))
+      {      print("If I were you, I wouldn't try it!  This witch is mean!");      }    if (said("check", "witch"))
+      {      print("This ugly old witch is one of the most hideous sights you have "            "ever seen.  I would never trust her.");      }    }  }if (v81 != 3)
+  {  if (!isset(f29) &&       !isset(f27))
+    {    if (said("anyword", "witch"))
+      {      print("There is no witch here...RIGHT NOW!!");      }    }  }if ((isset(f29) ||     isset(f27)))
+  {  if (said("speak", "witch"))
+    {    print("Now is not a good time to try and start a conversation!");    }  if ((said("hello") ||       said("say", "hello")))
+    {    print("Now is not a good time to try and start a conversation!");    }  }if (said("open", "cage"))
+  {  print("It is fastened with a very strong lock.  There is no way for you to "        "open it.");  }if (said("check", "building"))
+  {  print("The little house is surprisingly neat considering a wicked witch lives "        "here.");  }if (said("check", "room"))
+  {  print("You need to be more specific.");  }if (posn(ego, 23, 89, 55, 100))
+  {  if ((said("check", "cabinet") ||       said("look in", "cabinet")))
+    {    if (v87 == 3)
+      {      print("There is nothing but a bare shelf here.");      }    if (v87 == 1)
+      {      print("Sitting on the shelf is a delicious piece of Swiss cheese.");      }    if ((v87 == 0 ||         v87 == 2))
+      {      print("The cabinet on the wall is rather plain and simple.");      }    }  if (said("open", "cabinet"))
+    {    if ((v87 == 1 ||         v87 == 3))
+      {      print("It is already open.");      }    if (v87 == 2)
+      {      start.cycling(o2);      end.of.loop(o2, done);      v87 = 3;      }    if (v87 == 0)
+      {      prevent.input();      start.cycling(o2);      end.of.loop(o2, f24);      v87 = 1;      if (!isset(f80))
+        {        set(f80);        currentScore  += 2;        }      }    }  if (said("close", "cabinet"))
+    {    if ((v87 == 0 ||         v87 == 2))
+      {      print("It is already closed.");      }    if (v87 == 3)
+      {      reverse.loop(o2, done);      v87 = 2;      }    if (v87 == 1)
+      {      reverse.loop(o2, done);      erase(o3);      v87 = 0;      }    }  if (!isset(have.cheese))
+    {    if (said("acquire", "cheese"))
+      {      if (v87 == 1)
+        {        erase(o3);        get("cheese");        set(have.cheese);        currentScore  += 2;        print("You pluck the Swiss cheese from the shelf.");        v87 = 3;        }      if ((v87 == 0 ||           v87 == 2))
+        {        print("I don't see any here.");        }      }    if (said("check", "cheese"))
+      {      if ((v87 == 0 ||           v87 == 2))
+        {        print("I don't see any here.");        }      if (v87 == 3)
+        {        print("I don't see any here.");        }      if (v87 == 1)
+        {        print("Sitting on the shelf is a delicious piece of Swiss cheese.");        }      }    }  }if (!posn(ego, 23, 89, 55, 100))
+  {  if (said("check", "cabinet"))
+    {    print("You need to be a little closer for a good look.");    }  if ((said("open", "cabinet") ||       said("close", "cabinet")))
+    {    print("You need to be closer to do that.");    }  if (!isset(have.cheese))
+    {    if (said("check", "cheese"))
+      {      print("You cannot see it from here.");      }    if (said("acquire", "cheese"))
+      {      print("I don't see any here.");      }    }  }if (isset(f24))
+  {  accept.input();  reset(f24);  draw(o3);  }if (said("check", "oven"))
+  {  if (posn(ego, 4, 88, 106, 160))
+    {    print("It is an old wood stove, and very hot.  The fire must have been "          "burning for some time.");    }  else
+    {    print("You may have seen one in the other room, but I am not sure.");    }  }if (said("check", "cage"))
+  {  if (isset(f25))
+    {    if (previousRoom == 80)
+      {      print("This cage will be your new home for the rest of your life.");      }    if (previousRoom == 28)
+      {      print("You look for a way to escape, but there is none.");      }    }  if (!isset(f25))
+    {    if (posn(ego, 4, 88, 106, 160))
+      {      print("It is made from rusty, but strong, iron bars.");      }    else
+      {      print("You cannot see it from here.");      }    }  }if (said("feel", "oven"))
+  {  if (posn(ego, 8, 88, 40, 144))
+    {    print("The oven is very, very hot.  Someone must have just put some wood in "          "it.");    }  else
+    {    print("You are not close enough to touch it.");    }  }if (said("open", "oven"))
+  {  if (posn(ego, 8, 88, 40, 144))
+    {    print("You open the door and see a roaring fire burning in the oven.");    }  else
+    {    print("From here it would be rather difficult to open the oven.");    }  }if (posn(ego, 105, 88, 158, 160))
+  {  if (said("check", "bedroom"))
+    {    print("It looks like an ordinary bedroom.");    }  if (said("check", "table"))
+    {    if (isset(have.note))
+      {      print("It is just a plain, wooden bedside table.");      }    else
+      {      print("There is a note lying on top of it.");      }    }  if (said("check", "bed"))
+    {    print("The witch's bed looks hard and uncomfortable.");    }  if ((said("sleep") ||       said("sleep", "bed") ||       said("acquire", "nap")))
+    {    print("You wouldn't want to sleep on a witch's bed.");    }  }if (!posn(ego, 105, 88, 158, 160))
+  {  if (said("check", "bedroom"))
+    {    print("You cannot see it from here.");    }  if (said("check", "table"))
+    {    print("That is the table where she eats her (gulp) food.");    }  if (said("check", "bed"))
+    {    print("The bed is not here.");    }  if ((said("sleep") ||       said("sleep", "bed") ||       said("acquire", "nap")))
+    {    print("The bed is not here.");    }  }if (said("check", "window"))
+  {  if (posn(ego, 115, 88, 140, 108))
+    {    print("You see the forest outside.");    }  else
+    {    print("There is little to see from here.");    }  }if (!isset(have.note))
+  {  if (said("check", "note"))
+    {    if (posn(ego, 114, 132, 140, 160))
+      {      print("It is written in a familiar language.");      }    else
+      {      print("Your eyes are not sharp enough to see it from here.");      }    }  if (said("acquire", "note"))
+    {    if (posn(ego, 114, 132, 140, 160))
+      {      start.update(o1);      erase(o1);      set(have.note);      get("note");      print("You grab the note from the table.");      currentScore  += 2;      }    else
+      {      print("You cannot reach it from here.");      }    }  }if (posn(ego, 39, 164, 56, 166))
+  {  new.room(Logic28);  }return();[ Messages#message 1 "As the wicked witch flew over her house, she dropped you... into her cage!  If you can't get out, you may become the secret ingredient in this witches' brew!"#message 2 "Surprise!  Surprise!  The wicked witch is home and now she's after you!"#message 3 "Be thankful that you have a protective spell or the witch may have stuck around to try and catch you!"#message 4 "This is not a good place to give up your protection!"#message 5 "There is no reason to jump or duck here."#message 6 "Off in the distance you hear a high, squeaky voice say, \"I can smell someone tasty in my house.\""#message 7 "The witch mutters, \"I am going to get my oven ready to cook someone for dinner (yum).\""#message 8 "The witch mumbles, \"After I get the oven nice and hot, I will be ready to have someone for dinner (giggle).\""#message 9 "The witch mutters, \"The oven is heating up nicely.  I wonder who will be my dinner guest!\""#message 10 "The witch says, \"My oven is now the perfect temperature. It is time to invite someone for dinner (cackle, cackle)!\""#message 11 "Rats!  She has cast some spell to keep you from escaping!. The witch remarks, \"Oh, how nice of you to come for dinner (cackle, cackle)\""#message 13 "She pokes and pinches you, then states, \"This one is too scrawny, so it's into the cage until you fatten up (smack, yum)!\""#message 14 "With a flash, you hear her joyously exclaim, \"This has made me feel like flying!\""#message 15 "Courageously, you manage to push the witch into the oven where she flashes and melts away into a harmless blob. Congratulations!"#message 16 "Try as you will to escape, your labor will be in vain."#message 17 "It is fastened with a very strong lock.  There is no way for you to open it."#message 18 "This ugly old witch is one of the most hideous sights you have ever seen.  I would never trust her."#message 19 "There is no witch here."#message 20 "There is nothing but a bare shelf here."#message 21 "Sitting on the shelf is a delicious piece of Swiss cheese."#message 22 "The cabinet on the wall is rather plain and simple."#message 23 "It is already open."#message 24 "It is already closed."#message 25 "You pluck the Swiss cheese from the shelf."#message 26 "I don't see any here."#message 27 "You need to be a little closer for a good look."#message 28 "You need to be closer to do that."#message 29 "You cannot see it from here."#message 30 "This cage will be your new home for the rest of your life."#message 31 "You look for a way to escape, but there is none."#message 32 "It is an old wood stove, and very hot.  The fire must have been burning for some time."#message 33 "It is made from rusty, but strong, iron bars."#message 34 "You cannot see it from here."#message 35 "You may have seen one in the other room, but I am not sure."#message 36 "The oven is very, very hot.  Someone must have just put some wood in it."#message 37 "You open the door and see a roaring fire burning in the oven."#message 38 "You are in no position to do that!"#message 39 "You are not close enough to touch it."#message 40 "From here it would be rather difficult to open the oven."#message 41 "There is a note lying on top of it."#message 42 "It is just a plain, wooden bedside table."#message 43 "The witch's bed looks hard and uncomfortable."#message 44 "You wouldn't want to sleep on a witch's bed."#message 45 "That is the table where she eats her (gulp) food."#message 46 "The bed is not here."#message 47 "You see the forest outside."#message 48 "There is little to see from here."#message 49 "It is written in a familiar language."#message 50 "You grab the note from the table."#message 51 "The note was here at one time, but now you can`t seem to locate it."#message 52 "Your eyes are not sharp enough to see it from here."#message 53 "You cannot reach it from here."#message 54 "You don't have the note."#message 55 "If I were you, I wouldn't try it!  This witch is mean!"#message 56 "The little house is surprisingly neat considering a wicked witch lives here."#message 57 "OUCH!"#message 58 "There is no witch here...RIGHT NOW!!"#message 59 "The witch is dead."#message 60 "As soon as you entered the house the goat ran away."#message 61 "Now is not a good time to try and start a conversation!"#message 62 "Be thankful that you are invisible or the witch may have stuck around to try and catch you!"#message 63 "You need to be more specific."#message 64 "It looks like an ordinary bedroom."

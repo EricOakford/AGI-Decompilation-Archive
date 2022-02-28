@@ -1,0 +1,17 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound4);  load.sound(Sound5);  load.view(View105);  load.view(View103);  load.view(View104);  if (previousRoom == 48)
+    {    position(ego, 90, 63);    set.view(ego, View105);    ignore.blocks(ego);    set(keep.cycling);    start.cycling(ego);    move.obj(ego, 90, 142, 4, f20);    if (isset(ego.invisible))
+      {      set(f23);      reset(ego.invisible);      reset(have.ring);      drop("magic ring");      currentScore -= 3;      set(lost.ring);      }    if (isset(ego.shrunk))
+      {      reset(ego.shrunk);      shrink.timer = 0;      set(f24);      }    }  if (previousRoom == 74)
+    {    position(ego, 77, 165);    }  draw(ego);  show.pic();  }if (!isset(f20) &&     !isset(f22) &&     previousRoom == 48)
+  {  sound(Sound5, f159);  set(f22);  }if (said("check", "doorway"))
+  {  print("The warm sunlight falls through the hole in the ceiling.  "        "Unfortunately, you can't reach it.");  }if (said("check", "cave"))
+  {  print("The dark tunnel leads off to the south.");  }if (isset(f20))
+  {  reset(f20);  stop.sound();  observe.blocks(ego);  set.view(ego, View103);  program.control();  shake.screen(1);  print("OUCH!");  v30 = 36;  sound(Sound4, f159);  }if (isset(f159))
+  {  if (v30 > 0)
+    {    reset(f159);    sound(Sound4, f159);    }  }if (v30 == 1)
+  {  set.view(ego, View104);  end.of.loop(ego, f21);  }if (isset(f21))
+  {  reset(f21);  set.view(ego, View0);  reset(keep.cycling);  player.control();  if (isset(f23))
+    {    reset(f23);    print("While falling through the hole, the magic ring fell off your finger. "          " Dangerous creatures can see you now!");    }  if (isset(f24))
+    {    reset(f24);    print("When you fell through the hole, you felt a streching sensation and "          "are back to your normal size.");    }  }--v30;if (posn(ego, 0, 166, 159, 167))
+  {  new.room(Logic74);  }return();[ Messages#message 1 "While falling through the hole, the magic ring fell off your finger.  Dangerous creatures can see you now!"#message 2 "The warm sunlight falls through the hole in the ceiling.  Unfortunately, you can't reach it."#message 3 "The dark tunnel leads off to the south."#message 4 "OUCH!"#message 5 "When you fell through the hole, you felt a streching sensation and are back to your normal size."

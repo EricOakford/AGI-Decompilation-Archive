@@ -1,0 +1,95 @@
+if (isset(newRoom))
+  {  set.horizon(58);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 76)
+    {    position(ego, 87, 67);    }  if (previousRoom == 78)
+    {    position(ego, 9, 95);    }  if (!isset(f188))
+    {    load.view(View49);    }  if (!isset(f189))
+    {    load.view(View48);    }  if (!isset(f186))
+    {    load.sound(Sound21);    load.view(View47);    load.view(View79);    }  if (!isset(f187))
+    {    load.view(View81);    load.view(View54);    }  if (!isset(f186))
+    {    add.to.pic(View79, 1, 0, 94, 156, 14, 0);    add.to.pic(View79, 1, 0, 120, 156, 14, 0);    add.to.pic(View79, 1, 0, 106, 144, 13, 0);    add.to.pic(View79, 1, 0, 128, 156, 14, 0);    add.to.pic(View79, 1, 0, 111, 78, 7, 0);    add.to.pic(View79, 0, 0, 57, 72, 7, 0);    add.to.pic(View79, 0, 0, 45, 77, 7, 0);    add.to.pic(View79, 0, 0, 36, 88, 8, 0);    add.to.pic(View79, 0, 0, 16, 140, 12, 0);    add.to.pic(View79, 0, 0, 30, 150, 13, 0);    }  if (!isset(f187))
+    {    animate.obj(o16);    set.view(o16, View54);    position(o16, 121, 98);    set.priority(o16, 10);    ignore.blocks(o16);    draw(o16);    if (isset(f186))
+      {      set(f20);      v30 = 27;      }    }  if (!isset(f186))
+    {    animate.obj(o2);    set.view(o2, View47);    position(o2, 56, 108);    if (!isset(have.clover))
+      {      set(f21);      follow.ego(o2, 5, f22);      }    else
+      {      wander(o2);      }    ignore.blocks(o2);    draw(o2);    }  if (!isset(f188))
+    {    animate.obj(o1);    set.view(o1, View49);    position(o1, 131, 128);    draw(o1);    }  if (isset(f187) &&       !isset(f189))
+    {    animate.obj(o3);    set.view(o3, View48);    position(o3, 115, 106);    draw(o3);    }  draw(ego);  show.pic();  }if (!isset(f186))
+  {  if (!isset(f26))
+    {    set(f26);    sound(Sound21, f27);    }  if (isset(f27))
+    {    reset(f26);    reset(f27);    }  }if (!isset(f186) &&     isset(have.clover))
+  {  observe.blocks(ego);  if (posn(ego, 80, 110, 139, 141))
+    {    if (!isset(f25))
+      {      print("The King's magic prevents you from getting close enough to harm "            "him.");      set(f25);      }    }  }if (isset(f186) &&     !isset(f187))
+  {  ignore.blocks(ego);  if (posn(ego, 31, 110, 158, 98))
+    {    if (!isset(f25))
+      {      print("The King's magic prevents you from getting close enough to harm "            "him.");      set(f25);      }    }  }if (isset(f186) &&     isset(f187))
+  {  ignore.blocks(ego);  }--v30;if (isset(f20) &&     v30 == 1)
+  {  v30 = 0;  erase(o16);  set.view(o16, View81);  position(o16, 115, 117);  set.loop(o16, 1);  draw(o16);  move.obj(o16, 33, 114, 0, f23);  animate.obj(o3);  set.view(o3, View48);  position(o3, 115, 106);  draw(o3);  print("After his followers have danced away, the King of the leprechauns "        "realizes he can lead best by following, and leaves, forgetting his "        "beautiful sceptre.");  }if (isset(f23))
+  {  reset(f23);  move.obj(o16, 5, 85, 0, f24);  }if (isset(f24))
+  {  set(f187);  reset(f20);  reset(f24);  erase(o16);  }if (isset(f21))
+  {  reset(f21);  print("I hope you can escape from the leprechauns, but it doesn't look good "        "for you.");  }if (isset(f22))
+  {  reset(f22);  print("The leprechaun, with much support from his peers, catches you and "        "refuses to let go.  I think you will be here for a long, long time.");  stop.motion(ego);  set(f95);  stop.cycling(ego);  stop.motion(o2);  stop.cycling(o2);  set(certain.death);  }if (isset(have.fiddle))
+  {  if (said("play", "fiddle"))
+    {    if (!isset(f186))
+      {      print("You find playing the fiddle here very fun, but the dance floor is "            "in the other room.");      }    else
+      {      print("You play a little tune on the fiddle to amuse yourself.");      }    }  }if (said("check", "throne"))
+  {  if (!isset(f20) &&       !isset(f186))
+    {    print("The King of the leprechauns is sitting on the stone throne.");    }  else
+    {    print("This is a rather simple stone throne, compared to King Edward's.");    }  }if (!isset(f186) &&     isset(have.clover))
+  {  if (said("check", "leprechaun"))
+    {    print("The little green men do not seem to be noticing you; perhaps because "          "of the fourleaf clover.");    }  if ((said("speak", "leprechaun") ||       said("hello") ||       said("say", "hello")))
+    {    print("I would not try talking to the leprechauns.  You might say the wrong "          "thing.");    }  if (said("kill", "leprechaun"))
+    {    print("You would not get all of them before they got you.");    }  }if (!isset(f186) &&     !isset(have.clover))
+  {  if (said("anyword", "leprechaun"))
+    {    print("The leprechauns seem irritated by your invasion of their territory.  "          "I would be real careful about what I say and do right now!");    }  }if (isset(f186))
+  {  if (said("anyword", "leprechaun"))
+    {    print("There aren't any leprechauns here.");    }  }if (!isset(f187))
+  {  if (!isset(f20))
+    {    if ((said("check", "king") ||         said("check", "king", "leprechaun") ||         said("check", "leprechaun", "king")))
+      {      if (!isset(f188))
+        {        print("The King of the leprechauns is sitting on the stone throne. The "              "magic shield is next to the throne.");        }      else
+        {        print("The King of the leprechauns is sitting on the stone throne.");        }      }    }  if (isset(f20))
+    {    if ((said("check", "king") ||         said("check", "king", "leprechaun") ||         said("check", "leprechaun", "king")))
+      {      print("The King is leaving.");      }    }  if ((said("speak", "king") ||       said("hello") ||       said("say", "hello")))
+    {    print("The leprechaun King ignores your words.");    }  }if (isset(f187))
+  {  if (said("anyword", "king"))
+    {    print("The King of the leprechauns is no longer here.");    }  }if ((said("check", "cave") ||     said("check", "room")))
+  {  if (isset(f188) &&       isset(f189))
+    {    print("This is the throne room of the leprechaun King.");    }  if ((isset(f20) ||       isset(f187)))
+    {    if (isset(f188) &&         !isset(f189))
+      {      print("This is the throne room of the leprechaun King.  There is a "            "sceptre next to the throne.");      }    if (!isset(f188) &&         !isset(f189))
+      {      print("This is the throne room of the leprechaun King.  There is a shield "            "and a sceptre near the throne.");      }    }  if (!isset(f20) &&       !isset(f187))
+    {    if (!isset(f188))
+      {      print("This is the throne room of the leprechaun King.  There is a shield "            "next to the throne.");      }    }  }if (said("check", "stairs"))
+  {  if (posn(ego, 56, 10, 60, 156))
+    {    print("The stairs go up a narrow tunnel.");    }  else
+    {    print("To see the stairs, you have to get closer.");    }  }if (!isset(have.shield) &&     isset(f188))
+  {  if (said("check", "shield"))
+    {    print("I think there might have been a shield here once, but someone has "          "since taken it.");    }  if (said("acquire", "shield"))
+    {    print("The shield is no longer here.");    }  }if (!isset(f188))
+  {  if (said("check", "shield"))
+    {    if (posn(ego, 121, 118, 144, 138))
+      {      print("It is made of titanium and is rimmed with jewels.");      }    else
+      {      print("You need to get closer to see it clearly.");      }    }  if (said("acquire", "shield"))
+    {    if (posn(ego, 121, 118, 144, 138))
+      {      erase(o1);      if (isset(f186))
+        {        print("You take the magic shield and carefully put it in your pocket.");        }      else
+        {        print("As inconspicuously as possible, you add the shield to what you "              "are carrying.");        }      set(f188);      set(have.shield);      get("shield");      currentScore  += 8;      ++num.treasures;      }    else
+      {      print("You must be closer to do that.");      }    }  }if (isset(f189) &&     !isset(have.sceptre))
+  {  if (said("check", "sceptre"))
+    {    print("I see no sceptre in the vicinity.");    }  if (said("acquire", "sceptre"))
+    {    print("There is no sceptre in sight to get.");    }  }if (!isset(f189))
+  {  if (posn(ego, 103, 100, 142, 142))
+    {    if ((isset(f187) ||         isset(f20)))
+      {      if (said("check", "sceptre"))
+        {        print("The sceptre is fashioned from gold and silver, and accented with "              "emeralds.");        }      if (said("acquire", "sceptre"))
+        {        erase(o3);        set(f189);        set(have.sceptre);        print("Eagerly, you pick up the sceptre.");        get("sceptre");        currentScore  += 6;        }      }    if (!isset(f187) &&         !isset(f20))
+      {      if (said("check", "sceptre"))
+        {        print("I see no sceptre right here.");        }      if (said("acquire", "sceptre"))
+        {        print("I see no sceptre to get around here.");        }      }    }  if (!posn(ego, 103, 100, 142, 142))
+    {    if ((said("check", "sceptre") ||         said("acquire", "sceptre")))
+      {      print("You must be closer to do that.");      }    }  }if (edgeEgoHit != NOT_HIT)
+  {  if (isset(f20))
+    {    set(f187);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic76);  }if (posn(ego, 0, 0, 1, 167))
+  {  new.room(Logic78);  }return();[ Messages#message 1 "You find playing the fiddle here very fun, but the dance floor is in the other room."#message 2 "You play a little tune on the fiddle to amuse yourself."#message 3 "It is very difficult to play a fiddle if you do not have one."#message 4 "This is a rather simple stone throne, compared to King Edward's."#message 5 "The little green men do not seem to be noticing you; perhaps because of the fourleaf clover."#message 6 "I would not try talking to the leprechauns.  You might say the wrong thing."#message 7 "You would not get all of them before they got you."#message 8 "There aren't any leprechauns here."#message 9 "The King of the leprechauns is sitting on the stone throne. The magic shield is next to the throne."#message 10 "The King of the leprechauns is sitting on the stone throne."#message 11 "The King is leaving."#message 12 "The King of the leprechauns is no longer here."#message 13 "The stairs go up a narrow tunnel."#message 14 "To see the stairs, you have to get closer."#message 15 "The leprechaun King ignores your words."#message 16 "I hope you can escape from the leprechauns, but it doesn't look good for you."#message 17 "The leprechaun, with much support from his peers, catches you and refuses to let go.  I think you will be here for a long, long time."#message 18 "The King's magic prevents you from getting close enough to harm him."#message 19 "After his followers have danced away, the King of the leprechauns realizes he can lead best by following, and leaves, forgetting his beautiful sceptre."#message 20 "The shield is already in your pocket."#message 21 "I think there might have been a shield here once, but someone has since taken it."#message 22 "The shield is no longer here."#message 23 "It is made of titanium and is rimmed with jewels."#message 24 "As inconspicuously as possible, you add the shield to what you are carrying."#message 25 "You take the magic shield and carefully put it in your pocket."#message 26 "You need to get closer to see it clearly."#message 27 "You must be closer to do that."#message 28 "The sceptre is fashioned from gold and silver, and accented with emeralds."#message 29 "I see no sceptre right here."#message 30 "I see no sceptre to get around here."#message 31 "Eagerly, you pick up the sceptre."#message 32 "I see no sceptre in the vicinity."#message 33 "There is no sceptre in sight to get."#message 34 "The leprechauns seem irritated by your invasion of their territory.  I would be real careful about what I say and do right now!"#message 35 "This is the throne room of the leprechaun King."#message 36 "This is the throne room of the leprechaun King.  There is a shield and a sceptre near the throne."#message 37 "This is the throne room of the leprechaun King.  There is a shield next to the throne."#message 38 "This is the throne room of the leprechaun King.  There is a sceptre next to the throne."#message 39 "The King of the leprechauns is sitting on the stone throne."

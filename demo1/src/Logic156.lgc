@@ -1,0 +1,39 @@
+if (isset(f45))
+  {  reset(f45);  set.text.attribute(BLACK, WHITE);  animate.obj(o1);  set.view(o1, View151);  position(o1, 110, 115);  set.loop(o1, 5);  set.cel(o1, 5);  draw(o1);  stop.cycling(o1);  demoPic = 1;  cycle.time(o1, demoPic);  step.time(o1, demoPic);  animate.obj(o2);  set.view(o2, View151);  set.loop(o2, 7);  set.cel(o2, 0);  ignore.objs(o2);  position(o2, 110, 115);  draw(o2);  demoPic = 8;  cycle.time(o2, demoPic);  animate.obj(ego);  set.view.v(ego, v142);  position(ego, 90, 120);  set.loop(ego, 0);  draw(ego);  move.obj(ego, 105, 120, 1, f245);  animate.obj(o5);  set.view(o5, View144);  set.loop(o5, 5);  ignore.horizon(o5);  set.priority(o5, 15);  position(o5, 140, 34);  draw(o5);  stop.update(o5);  show.pic();  if (monitorType != MONO)
+    {    clear.lines(22, 22, BLACK);    clear.text.rect(20, 0, 24, 28, WHITE);    }  else
+    {    clear.lines(24, 24, BLACK);    clear.text.rect(20, 0, 23, 28, WHITE);    }  set.text.attribute(BLACK, WHITE);  display(20, 1, "Then when you return the   ");  display(21, 1, "candlestick to Jack and fix");  display(22, 1, "the rhyme, watch the rhyme ");  display(23, 1, "be acted out!");  }if (isset(f245))
+  {  reset(f245);  erase(o5);  release.priority(o5);  set.loop(o5, 4);  set.cel(o5, 0);  position(o5, 102, 116);  draw(o5);  start.cycling(o5);  demoPic = 3;  cycle.time(o5, demoPic);  move.obj(ego, 90, 135, 1, f240);  }if (isset(f240))
+  {  reset(f240);  stop.cycling(ego);  stop.motion(ego);  set.cel(ego, 0);  set.loop(ego, 3);  set(f249);  }if (!isset(f246) &&     isset(f249))
+  {  set(f246);  reset(f249);  set(f46);  sound(Sound156, f141);  elapsedSeconds = 0;  set(leaveWindow);  print.at("Jack be nimble,                \n", 1, 4, 32);  }if (elapsedSeconds > 2 &&     isset(f246) &&     !isset(f247))
+  {  set(f247);  display(2, 20, "Jack be quick,");  }if (elapsedSeconds > 5 &&     isset(f247) &&     !isset(f248))
+  {  set(f248);  display(3, 4, "Jack jump over the candlestick.");  }if (isset(f243))
+  {  reset(f243);  set.loop(o1, 1);  stop.cycling(o1);  }if (isset(f244))
+  {  reset(f244);  set.loop(o1, 0);  stop.cycling(o1);  }if (elapsedSeconds > 2 &&     v241 == 1)
+  {  set(f46);  }if (elapsedSeconds > 6 &&     v241 == 3)
+  {  set(f46);  }--v242;if (v242 == 1)
+  {  set(f46);  }if (isset(f46))
+  {  reset(f46);  ++v241;  if (v241 == 1)
+    {    erase(o2);    start.update(o1);    start.cycling(o1);    start.motion(o1);    set.loop(o1, 0);    set.cel(o1, 0);    fix.loop(o1);    ignore.blocks(o1);    move.obj(o1, 131, 121, 2, f243);    }  if (v241 == 2)
+    {    animationInterval = 1;    start.cycling(o1);    ignore.objs(o1);    set.loop(o1, 1);    fix.loop(o1);    move.obj(o1, 82, 121, 2, f46);    }  if (v241 == 3)
+    {    set.loop(o1, 1);    fix.loop(o1);    move.obj(o1, 68, 114, 2, f244);    }  if (v241 == 4)
+    {    animationInterval = 2;    start.cycling(o1);    set.loop(o1, 0);    fix.loop(o1);    move.obj(o1, 85, 115, 2, f46);    }  if (v241 == 5)
+    {    stop.cycling(o1);    set.loop(o1, 4);    fix.loop(o1);    set.cel(o1, 0);    move.obj(o1, 87, 113, 2, f46);    }  if (v241 == 6)
+    {    set.cel(o1, 1);    move.obj(o1, 94, 106, 2, f46);    }  if (v241 == 7)
+    {    set.cel(o1, 2);    move.obj(o1, 99, 101, 2, f46);    }  if (v241 == 8)
+    {    set.cel(o1, 3);    move.obj(o1, 103, 103, 2, f46);    }  if (v241 == 9)
+    {    set.cel(o1, 4);    move.obj(o1, 108, 108, 2, f46);    }  if (v241 == 10)
+    {    set.cel(o1, 5);    move.obj(o1, 114, 115, 2, f46);    }  if (v241 == 11)
+    {    set.cel(o1, 6);    v242 = 6;    }  if (v241 == 12)
+    {    set.cel(o1, 7);    animate.obj(o4);    set.view(o4, View144);    set.loop(o4, 3);    fix.loop(o4);    position(o4, 83, 93);    set.priority(o4, 14);    draw(o4);    animate.obj(o3);    set.view(o3, View151);    set.loop(o3, 5);    set.cel(o3, 6);    ignore.horizon(o3);    set.priority(o3, 15);    position(o3, 91, 80);    draw(o3);    stop.cycling(o3);    v242 = 20;    }  if (v241 == 13)
+    {    erase(o3);    erase(o4);    v242 = 10;    }  if (v241 == 14)
+    {    set.loop(o1, 2);    fix.loop(o1);    set.cel(o1, 0);    start.cycling(o1);    move.obj(o1, 133, 124, 1, f46);    }  if (v241 == 15)
+    {    set.loop(o1, 3);    fix.loop(o1);    move.obj(o1, 118, 145, 1, f46);    }  if (v241 == 16)
+    {    set.loop(o1, 2);    fix.loop(o1);    set.cel(o1, 0);    move.obj(o1, 134, 150, 1, f46);    }  if (v241 == 17)
+    {    set.loop(o1, 2);    set.cel(o1, 0);    fix.loop(o1);    move.obj(o1, 140, 156, 2, f46);    }  if (v241 == 18)
+    {    set.loop(o1, 5);    set.cel(o1, 0);    fix.loop(o1);    move.obj(o1, 146, 162, 2, f46);    }  if (v241 == 19)
+    {    sound(Sound155, f142);    add.to.pic(View151, 5, 4, 146, 162, 0, 4);    reposition.to(o1, 144, 165);    set.loop(o1, 6);    fix.loop(o1);    set.cel(o1, 0);    demoPic = 4;    cycle.time(o1, demoPic);    v242 = 20;    }  if (v241 == 20)
+    {    if (monitorType != MONO)
+      {      clear.lines(21, 24, BLACK);      }    show.pic();    set(leaveWindow);    clear.lines(0, 0, BLACK);    print.at("With 18 rhymes to be solved and over 44 colorful screens, your "             "child will be entertained for hours on end!", 3, 4, 32);    v242 = 50;    }  if (v241 == 21)
+    {    new.room(rmDemoSelect);    }  }if (v241 > 13 &&     v241 < 17)
+  {  current.cel(o1, demoPic);  if (demoPic == 0)
+    {    sound(Sound154, f142);    }  }return();[ Messages#message 1 "Jack be nimble,                \n"#message 2 "Jack be quick,"#message 3 "Jack jump over the candlestick."#message 4 "Then when you return the   "#message 5 "candlestick to Jack and fix"#message 6 "the rhyme, watch the rhyme "#message 7 "be acted out!"#message 8 "With 18 rhymes to be solved and over 44 colorful screens, your child will be entertained for hours on end!"#message 11 "*==================================*"#message 12 "*                                  *"

@@ -1,0 +1,8 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 53)
+    {    get.posn(ego, goat.x, goat.y);    goat.x  += 2;    position.v(ego, goat.x, goat.y);    }  if (previousRoom == 55)
+    {    get.posn(ego, goat.x, goat.y);    goat.y -= 2;    position.v(ego, goat.x, goat.y);    }  draw(ego);  show.pic();  }if (said("check", "chandelier"))
+  {  print("The light from the oil lamp is rather dim in the dark interior of the "        "castle.");  }if ((said("check", "hall") ||     said("check", "room") ||     said("check", "building")))
+  {  print("The long marble hall has a cold, dreary feeling.");  }if (posn(ego, 0, 0, 1, 167))
+  {  new.room(Logic53);  }if (posn(ego, 0, 166, 159, 167))
+  {  new.room(Logic55);  }return();[ Messages#message 1 "The light from the oil lamp is rather dim in the dark interior of the castle."#message 2 "The long marble hall has a cold, dreary feeling."

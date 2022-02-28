@@ -1,0 +1,35 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(53);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 123, 64, 0, 0);    }  if (previousRoom == 29)
+    {    get.posn(ego, goat.x, goat.y);    if (goat.x < 50)
+      {      position(ego, 12, 54);      }    else
+      {      position(ego, 122, 54);      }    }  if (previousRoom == 13)
+    {    if (posn(ego, 0, 164, 75, 167))
+      {      position(ego, 37, 165);      }    else
+      {      position(ego, 120, 165);      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wandered.off))
+  {  reset(goat.wandered.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (said("check", "lake"))
+  {  print("This is a small alpine lake.");  }if (said("check", "stump"))
+  {  print("It looks as though there were beavers around here at one time.");  }if (said("anyword", "beaver"))
+  {  print("There are no beavers here now.");  }if (!isset(onWater))
+  {  if (posn(ego, 100, 109, 115, 135))
+    {    set(onWater);    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
+  {  if ((said("drink", "water") ||       said("acquire", "drink")))
+    {    if (posn(ego, 15, 40, 138, 167))
+      {      print("The clear water quenches your thirst.");      }    else
+      {      print("You are not close enough to the water.");      }    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  v76 = 255;  if (posn(ego, 100, 100, 115, 135))
+    {    v76 = 100;    v77 = 130;    }  if (v76 == 255)
+    {    v76 = 0;    }  else
+    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water) &&     isset(have.bucket) &&     !isset(onWater) &&     said("acquire", "water"))
+  {  if (posn(ego, 15, 40, 138, 167))
+    {    reset(drank.water);    print("You fill up your bucket with sparkling water.");    get("water");    set(have.water);    if (!isset(points.water))
+      {      currentScore  += 2;      }    set(points.water);    }  else
+    {    print("You are not close enough to the water.");    }  }if (edgeEgoHit != NOT_HIT)
+  {  if (isset(f66))
+    {    reset(f66);    reset(goat.following);    set(goat.gone);    set(goat.wandered.off);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic29);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic19);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic21);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic13);  }if (isset(goat.following))
+  {  call(lgc.goat);  }call(lgc.swim);return();[ Messages#message 1 "You fill up your bucket with sparkling water."#message 2 "The clear water quenches your thirst."#message 3 "You are not close enough to the water."#message 4 "You have no container for water."#message 5 "It looks as though there were beavers around here at one time."#message 6 "This is a small alpine lake."#message 7 "There are no beavers here now."#message 8 "It seems the old goat has wandered off by himself and is no longer following you."

@@ -1,0 +1,21 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  v32 = 4;  set.horizon(46);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 27, 131, 0, 0);    }  random(0, 250, work);  if (work < 125 &&       protected.seconds == 0)
+    {    load.view(View6);    animate.obj(o1);    set.view(o1, View6);    v31 = 45;    load.sound(Sound6);    }  draw(ego);  show.pic();  }--v31;if (v31 == 1)
+  {  position(o1, 50, 80);  draw(o1);  print("\"Gentle Sir Graham, I am your fairy godmother.  Your quest is indeed "        "noble.  My small part to aid you can be no bigger than this magic "        "spell, protective but for a little while.\"");  follow.ego(o1, 25, f21);  set(f20);  set(protected.spell);  v30 = 250;  protected.minutes = 10;  protected.seconds = 250;  }if (isset(f20))
+  {  set(f135);  --v30;  --v32;  if (v32 == 1)
+    {    sound(Sound6, f22);    }  if (isset(f22))
+    {    reset(f22);    stop.sound();    v32 = 4;    }  if (said("check", "fairy"))
+    {    print("She is your fairy godmother.");    }  if (said("acquire", "fairy"))
+    {    print("It is impossible to acquire a fairy godmother.");    }  if ((said("anyword", "fairy") ||       said("hello") ||       said("say", "hello")))
+    {    print("There is no need to say, or do, anything.");    }  if (isset(f21))
+    {    wander(o1);    }  }if (isset(f20) &&     v30 == 1)
+  {  print("\"I will be watching over you, Sir Graham.\"");  erase(o1);  reset(f20);  v32 = 0;  stop.sound();  reset(f135);  }if (!isset(f20))
+  {  if (said("anyword", "fairy"))
+    {    print("There is no fairy here.");    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic24);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic10);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic16);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic8);  }if (isset(goat.following))
+  {  call(lgc.goat);  }return();[ Messages#message 1 "\"Gentle Sir Graham, I am your fairy godmother.  Your quest is indeed noble.  My small part to aid you can be no bigger than this magic spell, protective but for a little while.\""#message 2 "It is impossible to acquire a fairy godmother."#message 3 "She is your fairy godmother."#message 4 "There is no fairy here."#message 5 "\"I will be watching over you, Sir Graham.\""#message 6 "There is no need to say, or do, anything."

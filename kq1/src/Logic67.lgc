@@ -1,0 +1,10 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.sound(Sound5);  set.horizon(40);  if (previousRoom == 66)
+    {    position(ego, 9, 152);    set.loop(ego, 0);    move.obj(ego, 10, 151, 0, done);    }  if (previousRoom == 68)
+    {    position(ego, 120, 41);    set.loop(ego, 1);    move.obj(ego, 119, 42, 0, done);    }  draw(ego);  show.pic();  }if ((said("check", "stairs") ||     said("check", "room")))
+  {  print("The stairs are moss-covered and slippery.");  }if (isset(egoHitSpecial) &&     !isset(f21))
+  {  set(f145);  set(f146);  set(f21);  if (!isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  print("Darn!  You slipped on the steep stairs.");  goat.y = 165;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  sound(Sound5, f159);  }if (isset(f20))
+  {  reset(f20);  erase(ego);  set(certain.death);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic68);  }if (posn(ego, 5, 150, 6, 167))
+  {  new.room(Logic66);  }return();[ Messages#message 1 "The stairs are moss-covered and slippery."#message 2 "Darn!  You slipped on the steep stairs."

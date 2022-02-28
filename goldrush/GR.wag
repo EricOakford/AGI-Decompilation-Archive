@@ -1,0 +1,4655 @@
+#
+# WinAGI Game Property File
+#
+
+[General]
+   WinAGIVersion = 2.1.1
+   GameID = GR
+   Interpreter = 3.002149
+   ResDir = src
+   Description = ""
+   Author = ""
+   About = ""
+   GameVersion = ""
+   LastEdit = "12/1/2020 9:48:25 PM"
+   PlatformType = ""
+   Platform = ""
+   DOSExec = ""
+   PlatformOpts = ""
+   UseResNames = True
+   UseLE = True
+
+[Palette]
+   Color0 = &H00000000
+   Color1 = &H00A00000
+   Color2 = &H0000A000
+   Color3 = &H00A0A000
+   Color4 = &H000000A0
+   Color5 = &H00A00080
+   Color6 = &H000050A0
+   Color7 = &H00A0A0A0
+   Color8 = &H00505050
+   Color9 = &H00FF5050
+   Color10 = &H0050FF00
+   Color11 = &H00FFFF50
+   Color12 = &H005050FF
+   Color13 = &H00FF50FF
+   Color14 = &H0050FFFF
+   Color15 = &H00FFFFFF
+
+[::BEGIN Logics::]
+
+[Logic0]
+   ID = lgc.Main
+   Size = 6758
+   CRC32 = &H7BE24D2B
+   CompCRC32 = &H7BE24D2B
+   Description = ""
+   IsRoom = False
+
+[Logic1]
+   ID = rm.MainSt
+   Size = 4565
+   CRC32 = &H8B7DEEB5
+   CompCRC32 = &H8B7DEEB5
+   IsRoom = True
+   Description = ""
+
+[Logic2]
+   ID = rm.WaterSt_Right
+   Size = 4969
+   CRC32 = &H689AFA84
+   CompCRC32 = &H689AFA84
+   IsRoom = True
+   Description = ""
+
+[Logic3]
+   ID = rm.LeonardsHouse
+   Size = 7151
+   CRC32 = &HCA94565
+   CompCRC32 = &HCA94565
+   IsRoom = True
+   Description = ""
+
+[Logic4]
+   ID = rm.JerrodsHouse
+   Size = 6679
+   CRC32 = &H822FD111
+   CompCRC32 = &H822FD111
+   IsRoom = True
+   Description = ""
+
+[Logic5]
+   ID = rm.GazeboPark
+   Size = 5832
+   CRC32 = &H2585CF66
+   CompCRC32 = &H2585CF66
+   IsRoom = True
+   Description = ""
+
+[Logic6]
+   ID = rm.ParkNorth
+   Size = 5778
+   CRC32 = &H492D9971
+   CompCRC32 = &H492D9971
+   IsRoom = True
+   Description = ""
+
+[Logic7]
+   ID = rm.BrooklynDock
+   Size = 4404
+   CRC32 = &H949BB867
+   CompCRC32 = &H949BB867
+   IsRoom = True
+   Description = ""
+
+[Logic8]
+   ID = rm.Bank
+   Size = 5528
+   CRC32 = &H429B37E0
+   CompCRC32 = &H429B37E0
+   IsRoom = True
+   Description = ""
+
+[Logic9]
+   ID = rm.PostOffice
+   Size = 3952
+   CRC32 = &H9580478A
+   CompCRC32 = &H9580478A
+   IsRoom = True
+   Description = ""
+
+[Logic10]
+   ID = rm.WaterSt_Left
+   Size = 3401
+   CRC32 = &H1705D34C
+   CompCRC32 = &H1705D34C
+   IsRoom = True
+   Description = ""
+
+[Logic11]
+   ID = rm.Hotel11
+   Size = 4604
+   CRC32 = &H7B540CB9
+   CompCRC32 = &H7B540CB9
+   IsRoom = True
+   Description = ""
+
+[Logic12]
+   ID = rm.Hotel12
+   Size = 8723
+   CRC32 = &H9602B45C
+   CompCRC32 = &H9602B45C
+   IsRoom = True
+   Description = ""
+
+[Logic13]
+   ID = rm.Stores
+   Size = 4114
+   CRC32 = &H107E0F1
+   CompCRC32 = &H107E0F1
+   IsRoom = True
+   Description = ""
+
+[Logic14]
+   ID = rm.FerryDock
+   Size = 2931
+   CRC32 = &HA55CFB4B
+   CompCRC32 = &HA55CFB4B
+   IsRoom = True
+   Description = ""
+
+[Logic15]
+   ID = rm.StageCoachOffice
+   Size = 2936
+   CRC32 = &H1B9DAAD8
+   CompCRC32 = &H1B9DAAD8
+   IsRoom = True
+   Description = ""
+
+[Logic16]
+   ID = rm.Livery
+   Size = 5273
+   CRC32 = &H7BFF5F19
+   CompCRC32 = &H7BFF5F19
+   IsRoom = True
+   Description = ""
+
+[Logic17]
+   ID = rm.NewspaperOffice
+   Size = 2442
+   CRC32 = &HC1CD2B4E
+   CompCRC32 = &HC1CD2B4E
+   IsRoom = True
+   Description = ""
+
+[Logic18]
+   ID = rm.CemeteryEntrance
+   Size = 3178
+   CRC32 = &H6115C8E8
+   CompCRC32 = &H6115C8E8
+   IsRoom = True
+   Description = ""
+
+[Logic19]
+   ID = rm.Cemetery
+   Size = 7107
+   CRC32 = &H47D8835A
+   CompCRC32 = &H47D8835A
+   IsRoom = True
+   Description = ""
+
+[Logic20]
+   ID = rm.Overlook
+   Size = 1626
+   CRC32 = &H42E527AD
+   CompCRC32 = &H42E527AD
+   IsRoom = True
+   Description = ""
+
+[Logic21]
+   ID = rm.DockWideView
+   Size = 1841
+   CRC32 = &H77FF7D0E
+   CompCRC32 = &H77FF7D0E
+   IsRoom = True
+   Description = "a wide angle view of the ferry dock"
+
+[Logic22]
+   ID = rm.BankInterior
+   Size = 6052
+   CRC32 = &H52E2ACC2
+   CompCRC32 = &H52E2ACC2
+   IsRoom = True
+   Description = ""
+
+[Logic23]
+   ID = rm.WarehouseInterior
+   Size = 2030
+   CRC32 = &HFC3AA392
+   CompCRC32 = &HFC3AA392
+   IsRoom = True
+   Description = ""
+
+[Logic24]
+   ID = rm.PostOfficeInterior
+   Size = 4629
+   CRC32 = &H1CB3110D
+   CompCRC32 = &H1CB3110D
+   IsRoom = True
+   Description = ""
+
+[Logic25]
+   ID = rm.HomeInterior
+   Size = 8385
+   CRC32 = &HAE5DC2A7
+   CompCRC32 = &HAE5DC2A7
+   IsRoom = True
+   Description = ""
+
+[Logic26]
+   ID = txt.BiblePage_3
+   Size = 1182
+   CRC32 = &HD01CBE6A
+   CompCRC32 = &HD01CBE6A
+   Description = ""
+   IsRoom = False
+
+[Logic27]
+   ID = rm.PaperOfficeInterior
+   Size = 9378
+   CRC32 = &H657FF098
+   CompCRC32 = &H657FF098
+   IsRoom = True
+   Description = ""
+
+[Logic28]
+   ID = rm.StoreInterior
+   Size = 5352
+   CRC32 = &HBDDDBE5B
+   CompCRC32 = &HBDDDBE5B
+   IsRoom = True
+   Description = ""
+
+[Logic29]
+   ID = txt.BiblePage_4
+   Size = 1194
+   CRC32 = &H5865B340
+   CompCRC32 = &H5865B340
+   Description = ""
+   IsRoom = False
+
+[Logic30]
+   ID = lgc.DarkenTunnel
+   Size = 1270
+   CRC32 = &H5E68D8A0
+   CompCRC32 = &H5E68D8A0
+   Description = "this logic is called in the tunnels to show all 'darkness' objects so the entire tunnel room is darkened; as Jerrod moves around, his lamp will light up nearby areas (by adjusting the darkness objects)"
+   IsRoom = False
+
+[Logic31]
+   ID = rm.StageOfficeInterior
+   Size = 4386
+   CRC32 = &H88372201
+   CompCRC32 = &H88372201
+   IsRoom = True
+   Description = ""
+
+[Logic32]
+   ID = rm.GrocerInterior
+   Size = 5130
+   CRC32 = &HD43738A
+   CompCRC32 = &HD43738A
+   IsRoom = True
+   Description = ""
+
+[Logic33]
+   ID = txt.BiblePage_2
+   Size = 1182
+   CRC32 = &H9326F3D2
+   CompCRC32 = &H9326F3D2
+   Description = ""
+   IsRoom = False
+
+[Logic34]
+   ID = cs.ChagresHarbor
+   Size = 2333
+   CRC32 = &H15E2D02E
+   CompCRC32 = &H15E2D02E
+   Description = ""
+   IsRoom = True
+
+[Logic35]
+   ID = cs.PanamaRoute
+   Size = 4018
+   CRC32 = &HE48DFBE0
+   CompCRC32 = &HE48DFBE0
+   Description = "cut scene with map of North America that is used to show Jerrod's trip along the Panama route"
+   IsRoom = True
+
+[Logic36]
+   ID = cs.Atlantic
+   Size = 3749
+   CRC32 = &H5F6196
+   CompCRC32 = &H5F6196
+   Description = "a cut scene showing Jerrod's progress from Brooklyn to coast of Brazil"
+   IsRoom = True
+
+[Logic37]
+   ID = cs.UpperSouthAm
+   Size = 5034
+   CRC32 = &H1A3028F0
+   CompCRC32 = &H1A3028F0
+   Description = "a cut scene that tracks Jerrod's progress from Caribbean Sea into Rio de Janeiro, and also from Santiago Chile up to coast of Central America on Pacific side"
+   IsRoom = True
+
+[Logic38]
+   ID = cs.LowerSouthAm
+   Size = 5505
+   CRC32 = &H1B0D8321
+   CompCRC32 = &H1B0D8321
+   Description = "a cut scene that tracks Jerrod's progress from Rio de Janeiro, down around Cape Horn, and then up the Pacific side to Santiago Chile"
+   IsRoom = True
+
+[Logic39]
+   ID = cs.Pacific
+   Size = 3815
+   CRC32 = &H2396C3C9
+   CompCRC32 = &H2396C3C9
+   Description = "a cut scene that tracks Jerrod's progress from coast of Central America into San Francisco bay"
+   IsRoom = True
+
+[Logic40]
+   ID = cs.PanamaCrossing
+   Size = 4957
+   CRC32 = &HE9D6C4BD
+   CompCRC32 = &HE9D6C4BD
+   Description = ""
+   IsRoom = False
+
+[Logic41]
+   ID = cs.ArriveCalifornia
+   Size = 3388
+   CRC32 = &HCAE00D72
+   CompCRC32 = &HCAE00D72
+   Description = "last leg of the boat journey (both options use same ending)"
+   IsRoom = True
+
+[Logic42]
+   ID = rm.ShipSternInterior
+   Size = 12139
+   CRC32 = &H20877984
+   CompCRC32 = &H20877984
+   IsRoom = True
+   Description = ""
+
+[Logic43]
+   ID = rm.ShipMidInterior
+   Size = 11243
+   CRC32 = &H3D1AB4BF
+   CompCRC32 = &H3D1AB4BF
+   IsRoom = True
+   Description = ""
+
+[Logic44]
+   ID = rm.ShipBowInterior
+   Size = 7117
+   CRC32 = &H6420DB5F
+   CompCRC32 = &H6420DB5F
+   IsRoom = True
+   Description = ""
+
+[Logic45]
+   ID = txt.BiblePage_5
+   Size = 1182
+   CRC32 = &H1BCA1F80
+   CompCRC32 = &H1BCA1F80
+   Description = ""
+   IsRoom = False
+
+[Logic46]
+   ID = txt.BiblePage_6
+   Size = 1182
+   CRC32 = &H88D88F51
+   CompCRC32 = &H88D88F51
+   Description = ""
+   IsRoom = False
+
+[Logic47]
+   ID = txt.BiblePage_7
+   Size = 1182
+   CRC32 = &HE7009514
+   CompCRC32 = &HE7009514
+   Description = ""
+   IsRoom = False
+
+[Logic48]
+   ID = txt.BiblePage_8
+   Size = 1182
+   CRC32 = &H7C1E860D
+   CompCRC32 = &H7C1E860D
+   Description = ""
+   IsRoom = False
+
+[Logic49]
+   ID = txt.BiblePage_9
+   Size = 1182
+   CRC32 = &H94A454ED
+   CompCRC32 = &H94A454ED
+   Description = ""
+   IsRoom = False
+
+[Logic50]
+   ID = txt.BiblePage_10
+   Size = 1182
+   CRC32 = &HA07900C3
+   CompCRC32 = &HA07900C3
+   Description = ""
+   IsRoom = False
+
+[Logic51]
+   ID = cs.ChagresRiver
+   Size = 1828
+   CRC32 = &H9B17C054
+   CompCRC32 = &H9B17C054
+   Description = ""
+   IsRoom = False
+
+[Logic52]
+   ID = cs.JungleNatives
+   Size = 4989
+   CRC32 = &HCA66B0CF
+   CompCRC32 = &HCA66B0CF
+   Description = ""
+   IsRoom = True
+
+[Logic53]
+   ID = rm.ShipMidExterior
+   Size = 551
+   CRC32 = &HD0D0591D
+   CompCRC32 = &HD0D0591D
+   IsRoom = True
+   Description = "used during first scene of boat trip to Panama/Cape Horn"
+
+[Logic54]
+   ID = rm.ShipSternStorm
+   Size = 7929
+   CRC32 = &H13F37631
+   CompCRC32 = &H13F37631
+   IsRoom = True
+   Description = ""
+
+[Logic55]
+   ID = rm.ShipMidStorm
+   Size = 8715
+   CRC32 = &HFA054F7E
+   CompCRC32 = &HFA054F7E
+   IsRoom = True
+   Description = ""
+
+[Logic56]
+   ID = rm.ShipBowStorm
+   Size = 4741
+   CRC32 = &HE217C1BA
+   CompCRC32 = &HE217C1BA
+   IsRoom = True
+   Description = ""
+
+[Logic57]
+   ID = txt.BiblePage_11
+   Size = 1182
+   CRC32 = &HF98A672F
+   CompCRC32 = &HF98A672F
+   Description = ""
+   IsRoom = False
+
+[Logic58]
+   ID = txt.BiblePage_12
+   Size = 1182
+   CRC32 = &HEC1515D4
+   CompCRC32 = &HEC1515D4
+   Description = ""
+   IsRoom = False
+
+[Logic59]
+   ID = txt.BiblePage_13
+   Size = 1182
+   CRC32 = &HB00419D5
+   CompCRC32 = &HB00419D5
+   Description = ""
+   IsRoom = False
+
+[Logic60]
+   ID = cs.LeavingNY
+   Size = 2900
+   CRC32 = &HC341A7FF
+   CompCRC32 = &HC341A7FF
+   IsRoom = True
+   Description = "first cut scene in wagon trip across US, with Jerrod going from New York all the way to Missouri"
+
+[Logic61]
+   ID = lgc.Mule
+   Size = 2216
+   CRC32 = &H90A9B6CD
+   CompCRC32 = &H90A9B6CD
+   Description = "code for dealing with the mules"
+   IsRoom = False
+
+[Logic62]
+   ID = cs.LowerPlatte
+   Size = 4923
+   CRC32 = &H9B9455B2
+   CompCRC32 = &H9B9455B2
+   Description = ""
+   IsRoom = True
+
+[Logic63]
+   ID = lgc.DeathScurvy
+   Size = 210
+   CRC32 = &H6353B39
+   CompCRC32 = &H6353B39
+   Description = ""
+   IsRoom = False
+
+[Logic64]
+   ID = cs.UpperPlatte
+   Size = 5047
+   CRC32 = &HC28BA181
+   CompCRC32 = &HC28BA181
+   Description = ""
+   IsRoom = True
+
+[Logic65]
+   ID = lgc.DeathCholera
+   Size = 212
+   CRC32 = &H518374FB
+   CompCRC32 = &H518374FB
+   Description = ""
+   IsRoom = False
+
+[Logic66]
+   ID = cs.Rockies
+   Size = 4922
+   CRC32 = &H766FF2C4
+   CompCRC32 = &H766FF2C4
+   Description = ""
+   IsRoom = True
+
+[Logic67]
+   ID = lgc.DeathAtSea
+   Size = 554
+   CRC32 = &H2F27C5D
+   CompCRC32 = &H2F27C5D
+   Description = ""
+   IsRoom = False
+
+[Logic68]
+   ID = cs.Utah
+   Size = 3302
+   CRC32 = &HB73532B1
+   CompCRC32 = &HB73532B1
+   Description = ""
+   IsRoom = True
+
+[Logic69]
+   ID = lgc.DeathStarvation
+   Size = 173
+   CRC32 = &HB73897CE
+   CompCRC32 = &HB73897CE
+   Description = "handles Jerrod's death by starvation"
+   IsRoom = False
+
+[Logic70]
+   ID = cs.SinkingShipClear
+   Size = 790
+   CRC32 = &H8C46C40E
+   CompCRC32 = &H8C46C40E
+   IsRoom = True
+   Description = "cut scene of ship sinking in clear weather"
+
+[Logic71]
+   ID = cs.RioDeJaneiro
+   Size = 2440
+   CRC32 = &HE3DF56EA
+   CompCRC32 = &HE3DF56EA
+   Description = ""
+   IsRoom = False
+
+[Logic72]
+   ID = rm.Sacramento
+   Size = 5248
+   CRC32 = &HEEB023CA
+   CompCRC32 = &HEEB023CA
+   IsRoom = True
+   Description = ""
+
+[Logic73]
+   ID = rm.Title
+   Size = 659
+   CRC32 = &H51E64CF5
+   CompCRC32 = &H51E64CF5
+   IsRoom = True
+   Description = "the title screen which includes the opening animation sequence; can be skipped by pressing any key"
+
+[Logic74]
+   ID = cs.SinkingShipStorm
+   Size = 790
+   CRC32 = &H486B06C9
+   CompCRC32 = &H486B06C9
+   IsRoom = True
+   Description = "cut scene of ship sinking in stormy weather"
+
+[Logic75]
+   ID = rm.SuttersFortArea
+   Size = 1771
+   CRC32 = &H12558D8A
+   CompCRC32 = &H12558D8A
+   IsRoom = True
+   Description = "An overhead view of the area around Sutters Fort; in this room, due to scale, ego is represented by a small dot"
+
+[Logic76]
+   ID = rm.SuttersFortSouth
+   Size = 2514
+   CRC32 = &HF544C433
+   CompCRC32 = &HF544C433
+   IsRoom = True
+   Description = ""
+
+[Logic77]
+   ID = rm.SuttersFortNorth
+   Size = 1279
+   CRC32 = &HF8F0FB17
+   CompCRC32 = &HF8F0FB17
+   IsRoom = True
+   Description = ""
+
+[Logic78]
+   ID = rm.SF_SouthGate
+   Size = 2841
+   CRC32 = &H7955C3CD
+   CompCRC32 = &H7955C3CD
+   IsRoom = True
+   Description = ""
+
+[Logic79]
+   ID = rm.SF_Blacksmith
+   Size = 6923
+   CRC32 = &H80D110DE
+   CompCRC32 = &H80D110DE
+   IsRoom = True
+   Description = ""
+
+[Logic80]
+   ID = rm.SF_BunkRoom
+   Size = 2224
+   CRC32 = &H1437D1D3
+   CompCRC32 = &H1437D1D3
+   IsRoom = True
+   Description = ""
+
+[Logic81]
+   ID = rm.SF_Corral
+   Size = 4835
+   CRC32 = &HBA00161E
+   CompCRC32 = &HBA00161E
+   IsRoom = True
+   Description = "this is where Jerrod can go to buy a mule"
+
+[Logic82]
+   ID = rm.SF_Kitchen
+   Size = 1927
+   CRC32 = &HF8D8A88
+   CompCRC32 = &HF8D8A88
+   IsRoom = True
+   Description = ""
+
+[Logic83]
+   ID = rm.SF_Admin
+   Size = 2506
+   CRC32 = &H2BD091BF
+   CompCRC32 = &H2BD091BF
+   IsRoom = True
+   Description = ""
+
+[Logic84]
+   ID = rm.SF_Workshops
+   Size = 1746
+   CRC32 = &H7C24155A
+   CompCRC32 = &H7C24155A
+   IsRoom = True
+   Description = ""
+
+[Logic85]
+   ID = rm.SF_CemeteryGate
+   Size = 2058
+   CRC32 = &H44F854B7
+   CompCRC32 = &H44F854B7
+   IsRoom = True
+   Description = ""
+
+[Logic86]
+   ID = rm.SF_TradingStore
+   Size = 7759
+   CRC32 = &H556EF96A
+   CompCRC32 = &H556EF96A
+   IsRoom = True
+   Description = ""
+
+[Logic87]
+   ID = rm.SF_Offices
+   Size = 3198
+   CRC32 = &HC7E00424
+   CompCRC32 = &HC7E00424
+   IsRoom = True
+   Description = ""
+
+[Logic88]
+   ID = rm.StableNorth
+   Size = 4622
+   CRC32 = &H76C53D94
+   CompCRC32 = &H76C53D94
+   IsRoom = True
+   Description = ""
+
+[Logic89]
+   ID = rm.StableSouth
+   Size = 2834
+   CRC32 = &H50115053
+   CompCRC32 = &H50115053
+   IsRoom = True
+   Description = ""
+
+[Logic90]
+   ID = rm.SutterCemetery
+   Size = 2840
+   CRC32 = &HDF600CB3
+   CompCRC32 = &HDF600CB3
+   IsRoom = True
+   Description = ""
+
+[Logic91]
+   ID = rm.MarshallGrave
+   Size = 1993
+   CRC32 = &H53E457F7
+   CompCRC32 = &H53E457F7
+   IsRoom = True
+   Description = ""
+
+[Logic92]
+   ID = rm.JungleStart
+   Size = 3457
+   CRC32 = &H1A548D5D
+   CompCRC32 = &H1A548D5D
+   Description = ""
+   IsRoom = True
+
+[Logic93]
+   ID = rm.JungleAnts
+   Size = 8094
+   CRC32 = &H206663DC
+   CompCRC32 = &H206663DC
+   IsRoom = True
+   Description = ""
+
+[Logic94]
+   ID = rm.ThickJungle
+   Size = 5303
+   CRC32 = &HAC1734A
+   CompCRC32 = &HAC1734A
+   IsRoom = True
+   Description = ""
+
+[Logic95]
+   ID = rm.RiverCrossing
+   Size = 2999
+   CRC32 = &H8A483B92
+   CompCRC32 = &H8A483B92
+   IsRoom = True
+   Description = ""
+
+[Logic96]
+   ID = cs.PanamaCity
+   Size = 3837
+   CRC32 = &H40952E7E
+   CompCRC32 = &H40952E7E
+   Description = ""
+   IsRoom = True
+
+[Logic97]
+   ID = lgc.DeathDisease
+   Size = 373
+   CRC32 = &HA3A2F2E3
+   CompCRC32 = &HA3A2F2E3
+   Description = ""
+   IsRoom = False
+
+[Logic98]
+   ID = lgc.ErrHandler
+   Size = 807
+   CRC32 = &HE13EF7B1
+   CompCRC32 = &HE13EF7B1
+   Description = ""
+   IsRoom = False
+
+[Logic99]
+   ID = lgc.Debug
+   Size = 636
+   CRC32 = &H544A6083
+   CompCRC32 = &H544A6083
+   Description = ""
+   IsRoom = False
+
+[Logic100]
+   ID = lgc.GenericInput
+   Size = 1464
+   CRC32 = &H49240D8B
+   CompCRC32 = &H49240D8B
+   Description = "This logic is never used; all the generic 'said' tests in this logic are duplicated in lgc.Main. It looks like they originally wanted a separate logic, but at some point changed their minds, forgetting to remove this unused logic."
+   IsRoom = False
+
+[Logic101]
+   ID = lgc.Initialize
+   Size = 141
+   CRC32 = &HEA55FFCF
+   CompCRC32 = &HEA55FFCF
+   Description = ""
+   IsRoom = False
+
+[Logic102]
+   ID = txt.Help1
+   Size = 919
+   CRC32 = &H3C6B9F4A
+   CompCRC32 = &H3C6B9F4A
+   Description = "the main Help screen; it is displayed on the text screen"
+   IsRoom = False
+
+[Logic103]
+   ID = lgc.AdjustCash
+   Size = 436
+   CRC32 = &H97899309
+   CompCRC32 = &H97899309
+   Description = ""
+   IsRoom = False
+
+[Logic104]
+   ID = lgc.DeathOnTrail
+   Size = 872
+   CRC32 = &H7CA4DBE8
+   CompCRC32 = &H7CA4DBE8
+   Description = ""
+   IsRoom = False
+
+[Logic105]
+   ID = lgc.TraceInfo
+   Size = 2459
+   CRC32 = &H6389ECCD
+   CompCRC32 = &H6389ECCD
+   Description = ""
+   IsRoom = False
+
+[Logic106]
+   ID = lgc.CapeTripTiming
+   Size = 2714
+   CRC32 = &HEF0D3750
+   CompCRC32 = &HEF0D3750
+   IsRoom = True
+   Description = "this logic handles timing related events that occur during trip around Cape Horn"
+
+[Logic107]
+   ID = lgc.PanamaTripTiming
+   Size = 981
+   CRC32 = &HA488A51D
+   CompCRC32 = &HA488A51D
+   IsRoom = True
+   Description = "this logic manages timing events for the trip to Panama"
+
+[Logic108]
+   ID = lgc.WagonTripTiming
+   Size = 831
+   CRC32 = &H2F674D2C
+   CompCRC32 = &H2F674D2C
+   IsRoom = True
+   Description = "the main timing logic; it tracks events and shows the correct messages and screens needed as Jerrod makes his way across the country by wagon trail"
+
+[Logic109]
+   ID = txt.BiblePage_1
+   Size = 1182
+   CRC32 = &H40CBD5E0
+   CompCRC32 = &H40CBD5E0
+   Description = ""
+   IsRoom = False
+
+[Logic110]
+   ID = lgc.AdjustGold
+   Size = 722
+   CRC32 = &HB659FC30
+   CompCRC32 = &HB659FC30
+   Description = "updates Jerrod's inventory to show how much gold he has"
+   IsRoom = False
+
+[Logic111]
+   ID = cs.Nevada
+   Size = 3041
+   CRC32 = &H350559B
+   CompCRC32 = &H350559B
+   IsRoom = True
+   Description = ""
+
+[Logic112]
+   ID = lgc.DeathSnakeSqueeze
+   Size = 126
+   CRC32 = &H4465A017
+   CompCRC32 = &H4465A017
+   Description = ""
+   IsRoom = False
+
+[Logic113]
+   ID = cs.California
+   Size = 3672
+   CRC32 = &H194D35B7
+   CompCRC32 = &H194D35B7
+   IsRoom = True
+   Description = ""
+
+[Logic114]
+   ID = rm.LIJMSC_West
+   Size = 7816
+   CRC32 = &H464F250B
+   CompCRC32 = &H464F250B
+   IsRoom = True
+   Description = ""
+
+[Logic115]
+   ID = rm.LIJMSC_East
+   Size = 3988
+   CRC32 = &HEC316D95
+   CompCRC32 = &HEC316D95
+   IsRoom = True
+   Description = ""
+
+[Logic116]
+   ID = rm.LIJMSC_Corral
+   Size = 3497
+   CRC32 = &HAEDE9B5
+   CompCRC32 = &HAEDE9B5
+   IsRoom = True
+   Description = "This is the corral in Independence, near the LIJMSC camp. Jerrod needs to buy oxen here for the trip across the Rockies"
+
+[Logic117]
+   ID = rm.LIJMSC_North
+   Size = 2650
+   CRC32 = &H6A5404DC
+   CompCRC32 = &H6A5404DC
+   IsRoom = True
+   Description = ""
+
+[Logic118]
+   ID = rm.GreenRiver
+   Size = 4549
+   CRC32 = &HE601CF06
+   CompCRC32 = &HE601CF06
+   IsRoom = True
+   Description = ""
+
+[Logic119]
+   ID = rm.GreenRiverHill
+   Size = 2335
+   CRC32 = &HAEF4D8A3
+   CompCRC32 = &HAEF4D8A3
+   IsRoom = True
+   Description = ""
+
+[Logic120]
+   ID = rm.Desert
+   Size = 4499
+   CRC32 = &H451A8598
+   CompCRC32 = &H451A8598
+   IsRoom = True
+   Description = ""
+
+[Logic121]
+   ID = lgc.DeathRunOver
+   Size = 90
+   CRC32 = &HB6BE56F8
+   CompCRC32 = &HB6BE56F8
+   Description = ""
+   IsRoom = False
+
+[Logic122]
+   ID = lgc.SacRiverWild
+   Size = 3436
+   CRC32 = &H478A492E
+   CompCRC32 = &H478A492E
+   IsRoom = True
+   Description = "this logic manages the random river wilderness rooms at the left edge of the wilderness 'area', along the Sacramento River"
+
+[Logic123]
+   ID = lgc.Wilderness
+   Size = 6034
+   CRC32 = &H1BEFA892
+   CompCRC32 = &H1BEFA892
+   IsRoom = True
+   Description = "manages the wilderness rooms when not next to the Sacramento (left) or American River (top)"
+
+[Logic124]
+   ID = lgc.AmRiverWild
+   Size = 5861
+   CRC32 = &H1255B709
+   CompCRC32 = &H1255B709
+   IsRoom = True
+   Description = "this logic manages the random wilderness rooms along the top edge of the wilderness 'area', along the American River"
+
+[Logic125]
+   ID = lgc.InitQuiz
+   Size = 94
+   CRC32 = &H60957245
+   CompCRC32 = &H60957245
+   IsRoom = True
+   Description = ""
+
+[Logic126]
+   ID = lgc.CopyProt_1
+   Size = 5743
+   CRC32 = &H4406CEB6
+   CompCRC32 = &H4406CEB6
+   IsRoom = True
+   Description = ""
+
+[Logic127]
+   ID = lgc.CopyProt_2
+   Size = 5360
+   CRC32 = &H77A85D6A
+   CompCRC32 = &H77A85D6A
+   IsRoom = True
+   Description = ""
+
+[Logic128]
+   ID = lgc.CopyProt_3
+   Size = 6123
+   CRC32 = &H8D34BEAD
+   CompCRC32 = &H8D34BEAD
+   IsRoom = True
+   Description = ""
+
+[Logic129]
+   ID = lgc.Start
+   Size = 351
+   CRC32 = &HB780E343
+   CompCRC32 = &HB780E343
+   IsRoom = True
+   Description = ""
+
+[Logic130]
+   ID = lgc.Tunnels
+   Size = 2138
+   CRC32 = &H78BD576F
+   CompCRC32 = &H78BD576F
+   Description = "contains code that is common to all the tunnels, for handling player input, death, and so on"
+   IsRoom = False
+
+[Logic131]
+   ID = lgc.Lantern
+   Size = 1067
+   CRC32 = &HC38335B5
+   CompCRC32 = &HC38335B5
+   Description = ""
+   IsRoom = False
+
+[Logic132]
+   ID = lgc.ResetLocals
+   Size = 47
+   CRC32 = &H57F09687
+   CompCRC32 = &H57F09687
+   Description = ""
+   IsRoom = False
+
+[Logic134]
+   ID = txt.Help2
+   Size = 269
+   CRC32 = &H5CF9B97B
+   CompCRC32 = &H5CF9B97B
+   Description = "second page of Help screen text"
+   IsRoom = False
+
+[Logic135]
+   ID = lgc.EasterEgg
+   Size = 237
+   CRC32 = &HBD79E25C
+   CompCRC32 = &HBD79E25C
+   Description = ""
+   IsRoom = False
+
+[Logic136]
+   ID = rm.GreenPastures
+   Size = 3178
+   CRC32 = &H818ED363
+   CompCRC32 = &H818ED363
+   IsRoom = True
+   Description = ""
+
+[Logic137]
+   ID = rm.HotelLobby
+   Size = 3820
+   CRC32 = &HE1E05438
+   CompCRC32 = &HE1E05438
+   IsRoom = True
+   Description = ""
+
+[Logic138]
+   ID = rm.Hotel2ndFloorLeft
+   Size = 2715
+   CRC32 = &HCB8B3590
+   CompCRC32 = &HCB8B3590
+   IsRoom = True
+   Description = ""
+
+[Logic139]
+   ID = rm.Hotel2ndFloorRight
+   Size = 2660
+   CRC32 = &HCC3E2F2C
+   CompCRC32 = &HCC3E2F2C
+   IsRoom = True
+   Description = ""
+
+[Logic140]
+   ID = rm.Hotel1stFloorLeft
+   Size = 1177
+   CRC32 = &HB1EBF539
+   CompCRC32 = &HB1EBF539
+   IsRoom = True
+   Description = ""
+
+[Logic141]
+   ID = rm.Hotel1stFloorRight
+   Size = 1250
+   CRC32 = &H9E57122A
+   CompCRC32 = &H9E57122A
+   IsRoom = True
+   Description = ""
+
+[Logic142]
+   ID = rm.ShipSternPanama
+   Size = 4936
+   CRC32 = &HCBCC00EB
+   CompCRC32 = &HCBCC00EB
+   IsRoom = False
+   Description = "interior of the steamship, that looks like it was originally intended for use in the Panama journey, but is never actually use anywhere."
+
+[Logic143]
+   ID = rm.ShipMidPanama
+   Size = 7257
+   CRC32 = &H5D5BB9E
+   CompCRC32 = &H5D5BB9E
+   IsRoom = False
+   Description = "interior of the steamship, that looks like it was originally intended for use in the Panama journey, but is never actually used anywhere."
+
+[Logic144]
+   ID = rm.ShipBowPanama
+   Size = 3447
+   CRC32 = &H9C4518A6
+   CompCRC32 = &H9C4518A6
+   IsRoom = False
+   Description = "interior of the steamship, that looks like it was originally intended for use in the Panama journey, but is never actually used anywhere."
+
+[Logic145]
+   ID = rm.CabinInterior
+   Size = 4008
+   CRC32 = &H3FCA57D3
+   CompCRC32 = &H3FCA57D3
+   IsRoom = True
+   Description = ""
+
+[Logic146]
+   ID = rm.OuthouseInterior
+   Size = 2065
+   CRC32 = &HD4DD79ED
+   CompCRC32 = &HD4DD79ED
+   IsRoom = True
+   Description = ""
+
+[Logic147]
+   ID = rm.Tunnel_1
+   Size = 1564
+   CRC32 = &HF5B78DE8
+   CompCRC32 = &HF5B78DE8
+   IsRoom = True
+   Description = ""
+
+[Logic148]
+   ID = rm.Tunnel_2
+   Size = 5195
+   CRC32 = &H24CF41D
+   CompCRC32 = &H24CF41D
+   IsRoom = True
+   Description = ""
+
+[Logic149]
+   ID = rm.Tunnel_3
+   Size = 1707
+   CRC32 = &HDE61B24E
+   CompCRC32 = &HDE61B24E
+   IsRoom = True
+   Description = ""
+
+[Logic150]
+   ID = rm.Tunnel_4
+   Size = 1633
+   CRC32 = &H4D6CDFE9
+   CompCRC32 = &H4D6CDFE9
+   IsRoom = True
+   Description = ""
+
+[Logic151]
+   ID = rm.Tunnel_5
+   Size = 2507
+   CRC32 = &HE9CD3114
+   CompCRC32 = &HE9CD3114
+   IsRoom = True
+   Description = ""
+
+[Logic152]
+   ID = rm.Tunnel_6
+   Size = 2102
+   CRC32 = &H3BF57997
+   CompCRC32 = &H3BF57997
+   IsRoom = True
+   Description = ""
+
+[Logic153]
+   ID = rm.Tunnel_7
+   Size = 1170
+   CRC32 = &HA2165BFE
+   CompCRC32 = &HA2165BFE
+   IsRoom = True
+   Description = ""
+
+[Logic154]
+   ID = rm.Tunnel_8
+   Size = 2687
+   CRC32 = &H3E766366
+   CompCRC32 = &H3E766366
+   IsRoom = True
+   Description = ""
+
+[Logic155]
+   ID = rm.Tunnel_9
+   Size = 1279
+   CRC32 = &H9B3014E8
+   CompCRC32 = &H9B3014E8
+   IsRoom = True
+   Description = ""
+
+[Logic156]
+   ID = rm.Tunnel_10
+   Size = 2497
+   CRC32 = &HF5A28D9B
+   CompCRC32 = &HF5A28D9B
+   IsRoom = True
+   Description = ""
+
+[Logic157]
+   ID = rm.Tunnel_11
+   Size = 1941
+   CRC32 = &H60E3796C
+   CompCRC32 = &H60E3796C
+   IsRoom = True
+   Description = ""
+
+[Logic158]
+   ID = rm.Tunnel_12
+   Size = 2225
+   CRC32 = &H1D886CBF
+   CompCRC32 = &H1D886CBF
+   IsRoom = True
+   Description = ""
+
+[Logic159]
+   ID = rm.Tunnel_13
+   Size = 1600
+   CRC32 = &HED9F9D0F
+   CompCRC32 = &HED9F9D0F
+   IsRoom = True
+   Description = ""
+
+[Logic160]
+   ID = rm.Tunnel_14
+   Size = 2193
+   CRC32 = &HD1CC03BE
+   CompCRC32 = &HD1CC03BE
+   IsRoom = True
+   Description = ""
+
+[Logic161]
+   ID = rm.Tunnel_15
+   Size = 3249
+   CRC32 = &H47AB132A
+   CompCRC32 = &H47AB132A
+   IsRoom = True
+   Description = ""
+
+[Logic162]
+   ID = rm.Tunnel_16
+   Size = 7541
+   CRC32 = &H764529E9
+   CompCRC32 = &H764529E9
+   IsRoom = True
+   Description = ""
+
+[Logic181]
+   ID = rm.MillTailrace
+   Size = 1360
+   CRC32 = &HE5B3395
+   CompCRC32 = &HE5B3395
+   IsRoom = True
+   Description = ""
+
+[Logic182]
+   ID = rm.SuttersMill
+   Size = 1702
+   CRC32 = &HCA96AFE6
+   CompCRC32 = &HCA96AFE6
+   IsRoom = True
+   Description = ""
+
+[Logic183]
+   ID = rm.ColomaWestEntrance
+   Size = 1471
+   CRC32 = &H3C5CA351
+   CompCRC32 = &H3C5CA351
+   IsRoom = True
+   Description = ""
+
+[Logic184]
+   ID = rm.ColomaNW
+   Size = 1594
+   CRC32 = &HDFC5F491
+   CompCRC32 = &HDFC5F491
+   IsRoom = True
+   Description = ""
+
+[Logic185]
+   ID = rm.ColomaNorth
+   Size = 2180
+   CRC32 = &H5F08C949
+   CompCRC32 = &H5F08C949
+   IsRoom = True
+   Description = ""
+
+[Logic186]
+   ID = rm.ColomaNE
+   Size = 1364
+   CRC32 = &H3974CD1D
+   CompCRC32 = &H3974CD1D
+   IsRoom = True
+   Description = ""
+
+[Logic187]
+   ID = rm.ColomaWest
+   Size = 1480
+   CRC32 = &H5DB5D8E3
+   CompCRC32 = &H5DB5D8E3
+   IsRoom = True
+   Description = ""
+
+[Logic188]
+   ID = rm.ColomaEast
+   Size = 1259
+   CRC32 = &H164431A1
+   CompCRC32 = &H164431A1
+   IsRoom = True
+   Description = ""
+
+[Logic189]
+   ID = rm.ColomaSouth
+   Size = 1509
+   CRC32 = &H3C98B6DD
+   CompCRC32 = &H3C98B6DD
+   IsRoom = True
+   Description = ""
+
+[Logic190]
+   ID = rm.ColomaSE
+   Size = 1198
+   CRC32 = &H98F2A7A8
+   CompCRC32 = &H98F2A7A8
+   IsRoom = True
+   Description = ""
+
+[Logic191]
+   ID = rm.JerrodIntro
+   Size = 1821
+   CRC32 = &H7516065A
+   CompCRC32 = &H7516065A
+   IsRoom = True
+   Description = "part of opening animation sequence.\nDisplays Jerrod's portrait, and the opening text that describes the goal of the game"
+
+[Logic192]
+   ID = rm.Gallows
+   Size = 1128
+   CRC32 = &HE248591D
+   CompCRC32 = &HE248591D
+   IsRoom = True
+   Description = ""
+
+[Logic193]
+   ID = cs.GoldMine
+   Size = 1769
+   CRC32 = &HED4771D1
+   CompCRC32 = &HED4771D1
+   IsRoom = True
+   Description = "This is the final room! It's a cut scene of the gold mine that Jerrod and Jake find. After getting here, the final scene is played out, and the game ends"
+
+[Logic194]
+   ID = cs.TunnelDoor
+   Size = 539
+   CRC32 = &H5AD95936
+   CompCRC32 = &H5AD95936
+   IsRoom = True
+   Description = ""
+
+[Logic196]
+   ID = rm.ExpandIntro
+   Size = 198
+   CRC32 = &H458F6E78
+   CompCRC32 = &H458F6E78
+   IsRoom = True
+   Description = "this room draws successive pictures to give the effect of an expanding screen, until we get the full size Introduction screen with four different scenes and Jerrod in the center"
+
+[Logic199]
+   ID = rm.Introduction
+   Size = 1376
+   CRC32 = &HDFD6857
+   CompCRC32 = &HDFD6857
+   IsRoom = True
+   Description = "Main introduction; shows the four mini-cut scenes in the four quadrants of the screen"
+
+[Logic200]
+   ID = rm.Credits
+   Size = 689
+   CRC32 = &H88D62418
+   CompCRC32 = &H88D62418
+   IsRoom = True
+   Description = ""
+
+[Logic242]
+   ID = rm.LedgeLeft
+   Size = 2930
+   CRC32 = &H8AF9EC44
+   CompCRC32 = &H8AF9EC44
+   IsRoom = True
+   Description = ""
+
+[Logic243]
+   ID = rm.LedgeRight
+   Size = 3488
+   CRC32 = &H3225F808
+   CompCRC32 = &H3225F808
+   IsRoom = True
+   Description = ""
+
+[Logic244]
+   ID = rm.JakesCabin
+   Size = 2403
+   CRC32 = &H975DC5DB
+   CompCRC32 = &H975DC5DB
+   IsRoom = True
+   Description = ""
+[::END Logics::]
+
+[::BEGIN Pictures::]
+
+[Picture1]
+   ID = pic.MainSt
+   Size = 4379
+   Description = ""
+   BkgdImg = ""
+
+[Picture2]
+   ID = pic.WaterSt_Right
+   Size = 3846
+   BkgdImg = ""
+   Description = ""
+
+[Picture3]
+   ID = pic.LeonardsHouse
+   Size = 5124
+   BkgdImg = ""
+   Description = ""
+
+[Picture4]
+   ID = pic.JerrodsHouse
+   Size = 5794
+   BkgdImg = ""
+   Description = ""
+
+[Picture5]
+   ID = pic.GazeboPark
+   Size = 5728
+   BkgdImg = ""
+   Description = ""
+
+[Picture6]
+   ID = pic.ParkNorth
+   Size = 4176
+   BkgdImg = ""
+   Description = ""
+
+[Picture7]
+   ID = pic.BrooklynDock
+   Size = 3499
+   BkgdImg = ""
+   Description = ""
+
+[Picture8]
+   ID = pic.Bank
+   Size = 3781
+   BkgdImg = ""
+   Description = ""
+
+[Picture9]
+   ID = pic.PostOffice
+   Size = 4591
+   BkgdImg = ""
+   Description = ""
+
+[Picture10]
+   ID = pic.WaterSt_Left
+   Size = 2411
+   BkgdImg = ""
+   Description = ""
+
+[Picture11]
+   ID = pic.Hotel11
+   Size = 2752
+   BkgdImg = ""
+   Description = ""
+
+[Picture12]
+   ID = pic.Hotel12
+   Size = 2849
+   BkgdImg = ""
+   Description = ""
+
+[Picture13]
+   ID = pic.Stores
+   Size = 4871
+   BkgdImg = ""
+   Description = "this room is the street that provides access to the Hardware Store and the General/Grocery Store"
+
+[Picture14]
+   ID = pic.FerryDock
+   Size = 3469
+   BkgdImg = ""
+   Description = ""
+
+[Picture15]
+   ID = pic.StageCoachOffice
+   Size = 4155
+   BkgdImg = ""
+   Description = ""
+
+[Picture16]
+   ID = pic.Livery
+   Size = 4642
+   BkgdImg = ""
+   Description = ""
+
+[Picture17]
+   ID = pic.NewspaperOffice
+   Size = 4763
+   BkgdImg = ""
+   Description = ""
+
+[Picture18]
+   ID = pic.CemeteryEntrance
+   Size = 5208
+   BkgdImg = ""
+   Description = ""
+
+[Picture19]
+   ID = pic.Cemetery
+   Size = 5159
+   BkgdImg = ""
+   Description = ""
+
+[Picture20]
+   ID = pic.Overlook
+   Size = 4173
+   BkgdImg = ""
+   Description = ""
+
+[Picture21]
+   ID = pic.DockWideView
+   Size = 1670
+   BkgdImg = ""
+   Description = ""
+
+[Picture22]
+   ID = pic.BankInterior
+   Size = 4205
+   BkgdImg = ""
+   Description = ""
+
+[Picture23]
+   ID = pic.WarehouseInterior
+   Size = 3528
+   BkgdImg = ""
+   Description = ""
+
+[Picture24]
+   ID = pic.PostOfficeInterior
+   Size = 2713
+   BkgdImg = ""
+   Description = ""
+
+[Picture25]
+   ID = pic.HomeInterior
+   Size = 2920
+   BkgdImg = ""
+   Description = ""
+
+[Picture26]
+   ID = pic.SeafarerPoster
+   Size = 2281
+   Description = ""
+   BkgdImg = ""
+
+[Picture27]
+   ID = pic.PaperOfficeInterior
+   Size = 4203
+   BkgdImg = ""
+   Description = ""
+
+[Picture28]
+   ID = pic.StoreInterior
+   Size = 2398
+   BkgdImg = ""
+   Description = ""
+
+[Picture29]
+   ID = pic.EmptyDock
+   Size = 1878
+   Description = ""
+   BkgdImg = ""
+
+[Picture30]
+   ID = pic.WagonFerry
+   Size = 4838
+   Description = ""
+   BkgdImg = ""
+
+[Picture31]
+   ID = pic.StageOfficeInterior
+   Size = 3236
+   BkgdImg = ""
+   Description = ""
+
+[Picture32]
+   ID = pic.GrocerInterior
+   Size = 2686
+   BkgdImg = ""
+   Description = ""
+
+[Picture34]
+   ID = pic.ChagresHarbor
+   Size = 2373
+   BkgdImg = ""
+   Description = ""
+
+[Picture35]
+   ID = pic.PanamaRoute
+   Size = 861
+   BkgdImg = ""
+   Description = ""
+
+[Picture36]
+   ID = pic.Atlantic
+   Size = 542
+   BkgdImg = ""
+   Description = "a map scene that tracks Jerrod's progress from Brooklyn to coast of Brazil"
+
+[Picture37]
+   ID = pic.UpperSouthAm
+   Size = 652
+   BkgdImg = ""
+   Description = "a map scene that tracks Jerrod's progress from the Caribbean Sea into Rio de Janeiro, and then again from Santiago to Mexican coast on Pacific side."
+
+[Picture38]
+   ID = pic.LowerSouthAm
+   Size = 566
+   BkgdImg = ""
+   Description = "a map scene that tracks Jerrod's progress from Brazil, down around Cape Horn, and then back up the Pacific side to Santiago, Chile"
+
+[Picture39]
+   ID = pic.Pacific
+   Size = 832
+   BkgdImg = ""
+   Description = "a map scene that tracks Jerrod's position from Central America into San Francisco bay"
+
+[Picture40]
+   ID = pic.PanamaCrossing
+   Size = 2996
+   BkgdImg = ""
+   Description = ""
+
+[Picture41]
+   ID = pic.ArriveCalifornia
+   Size = 2384
+   BkgdImg = ""
+   Description = ""
+
+[Picture42]
+   ID = pic.ShipSternInterior
+   Size = 2913
+   BkgdImg = ""
+   Description = "shows an internal view of the steamship's stern (aft, or rear, section)"
+
+[Picture43]
+   ID = pic.ShipMidInterior
+   Size = 3941
+   BkgdImg = ""
+   Description = "picture that shows interior of the midship portion of the Steamship"
+
+[Picture44]
+   ID = pic.ShipBowInterior
+   Size = 2187
+   BkgdImg = ""
+   Description = "shows the interior of the steam ship bow (front portion)"
+
+[Picture45]
+   ID = ovl.CoalHold1
+   Size = 172
+   Description = ""
+   BkgdImg = ""
+
+[Picture46]
+   ID = ovl.CoalHold2
+   Size = 215
+   Description = ""
+   BkgdImg = ""
+
+[Picture47]
+   ID = ovl.CoalHold3
+   Size = 197
+   Description = ""
+   BkgdImg = ""
+
+[Picture48]
+   ID = ovl.FwdHold1
+   Size = 926
+   Description = ""
+   BkgdImg = ""
+
+[Picture49]
+   ID = ovl.FwdHold2
+   Size = 528
+   Description = ""
+   BkgdImg = ""
+
+[Picture50]
+   ID = ovl.FwdHold3
+   Size = 188
+   Description = ""
+   BkgdImg = ""
+
+[Picture51]
+   ID = pic.ChagresRiver
+   Size = 3454
+   BkgdImg = ""
+   Description = ""
+
+[Picture52]
+   ID = pic.JungleNatives
+   Size = 4937
+   BkgdImg = ""
+   Description = ""
+
+[Picture53]
+   ID = pic.ShipMidExterior
+   Size = 1557
+   BkgdImg = ""
+   Description = "picture that shows the external view of the midship portion of the steam ship"
+
+[Picture54]
+   ID = picShipAftStorm
+   Size = 3685
+   BkgdImg = ""
+   Description = "shows an internal view of the steam ship used during the storm segments"
+
+[Picture55]
+   ID = pic.ShipMidStorm
+   Size = 4317
+   BkgdImg = ""
+   Description = "shows the interior of the ship during the storm segments"
+
+[Picture56]
+   ID = pic.ShipBowStorm
+   Size = 2586
+   BkgdImg = ""
+   Description = "shows the bow (front) of the steam ship during the storm sequences"
+
+[Picture60]
+   ID = map.USA
+   Size = 1766
+   BkgdImg = ""
+   Description = "map of US that is used to show Jerrod's progress as he heads to California"
+
+[Picture61]
+   ID = map.LowerPlatteSm
+   Size = 1873
+   Description = ""
+   BkgdImg = ""
+
+[Picture62]
+   ID = map.LowerPlatteLg
+   Size = 3678
+   Description = ""
+   BkgdImg = ""
+
+[Picture63]
+   ID = map.UpperPlatteSm
+   Size = 1143
+   Description = ""
+   BkgdImg = ""
+
+[Picture64]
+   ID = map.UpperPlatteLg
+   Size = 3126
+   BkgdImg = ""
+   Description = ""
+
+[Picture65]
+   ID = map.RockiesSmall
+   Size = 1335
+   Description = ""
+   BkgdImg = ""
+
+[Picture66]
+   ID = map.RockiesLarge
+   Size = 4186
+   BkgdImg = ""
+   Description = ""
+
+[Picture67]
+   ID = map.UtahSmall
+   Size = 1990
+   Description = ""
+   BkgdImg = ""
+
+[Picture68]
+   ID = map.UtahLarge
+   Size = 4970
+   BkgdImg = ""
+   Description = ""
+
+[Picture69]
+   ID = map.NevadaSmall
+   Size = 2123
+   Description = ""
+   BkgdImg = ""
+
+[Picture70]
+   ID = pic.EmptyOcean
+   Size = 34
+   BkgdImg = ""
+   Description = ""
+
+[Picture71]
+   ID = pic.RioDeJaneiro
+   Size = 3363
+   BkgdImg = ""
+   Description = ""
+
+[Picture72]
+   ID = pic.Sacramento
+   Size = 6197
+   BkgdImg = ""
+   Description = ""
+
+[Picture73]
+   ID = pic.Title
+   Size = 2966
+   BkgdImg = ""
+   Description = ""
+
+[Picture74]
+   ID = pic.StormyOcean
+   Size = 536
+   BkgdImg = ""
+   Description = ""
+
+[Picture75]
+   ID = pic.SuttersFortArea
+   Size = 3492
+   BkgdImg = ""
+   Description = ""
+
+[Picture76]
+   ID = pic.SuttersFortSouth
+   Size = 1724
+   BkgdImg = ""
+   Description = ""
+
+[Picture77]
+   ID = pic.SuttersFortNorth
+   Size = 3707
+   BkgdImg = ""
+   Description = ""
+
+[Picture78]
+   ID = pic.SF_SouthGate
+   Size = 2718
+   BkgdImg = ""
+   Description = ""
+
+[Picture79]
+   ID = pic.SF_Blacksmith
+   Size = 3024
+   BkgdImg = ""
+   Description = ""
+
+[Picture80]
+   ID = pic.SF_Bunkroom
+   Size = 2545
+   BkgdImg = ""
+   Description = ""
+
+[Picture81]
+   ID = pic.SF_Corral
+   Size = 3842
+   BkgdImg = ""
+   Description = ""
+
+[Picture82]
+   ID = pic.SF_Kitchen
+   Size = 2710
+   BkgdImg = ""
+   Description = ""
+
+[Picture83]
+   ID = pic.SF_Admin
+   Size = 2813
+   BkgdImg = ""
+   Description = ""
+
+[Picture84]
+   ID = pic.SF_Workshops
+   Size = 1802
+   BkgdImg = ""
+   Description = ""
+
+[Picture85]
+   ID = pic.SF_CemeteryGate
+   Size = 3234
+   BkgdImg = ""
+   Description = ""
+
+[Picture86]
+   ID = pic.SF_TradingStore
+   Size = 2655
+   BkgdImg = ""
+   Description = ""
+
+[Picture87]
+   ID = pic.SF_Offices
+   Size = 3569
+   BkgdImg = ""
+   Description = ""
+
+[Picture88]
+   ID = pic.StableNorth
+   Size = 2665
+   BkgdImg = ""
+   Description = ""
+
+[Picture89]
+   ID = pic.StableSouth
+   Size = 2451
+   BkgdImg = ""
+   Description = ""
+
+[Picture90]
+   ID = pic.SutterCemetery
+   Size = 2608
+   BkgdImg = ""
+   Description = ""
+
+[Picture91]
+   ID = pic.MarshallGrave
+   Size = 1774
+   BkgdImg = ""
+   Description = ""
+
+[Picture92]
+   ID = pic.JungleStart
+   Size = 5280
+   BkgdImg = ""
+   Description = ""
+
+[Picture93]
+   ID = pic.JungleAnts
+   Size = 6127
+   BkgdImg = ""
+   Description = ""
+
+[Picture94]
+   ID = pic.ThickJungle
+   Size = 5517
+   BkgdImg = ""
+   Description = ""
+
+[Picture95]
+   ID = pic.RiverCrossing
+   Size = 5469
+   BkgdImg = ""
+   Description = ""
+
+[Picture96]
+   ID = pic.PanamaCity
+   Size = 2001
+   BkgdImg = ""
+   Description = ""
+
+[Picture111]
+   ID = map.NevadaLarge
+   Size = 4980
+   BkgdImg = ""
+   Description = ""
+
+[Picture112]
+   ID = map.CaliforniaSmall
+   Size = 1905
+   Description = ""
+   BkgdImg = ""
+
+[Picture113]
+   ID = map.CaliforniaLarge
+   Size = 3688
+   BkgdImg = ""
+   Description = ""
+
+[Picture114]
+   ID = pic.LIJMSC_West
+   Size = 4194
+   BkgdImg = ""
+   Description = ""
+
+[Picture115]
+   ID = pic.LIJMSC_East
+   Size = 4181
+   BkgdImg = ""
+   Description = ""
+
+[Picture116]
+   ID = pic.IndCorral
+   Size = 4192
+   BkgdImg = ""
+   Description = ""
+
+[Picture117]
+   ID = pic.LIJMCampNorth
+   Size = 2842
+   BkgdImg = ""
+   Description = ""
+
+[Picture118]
+   ID = pic.GreenRiver
+   Size = 2417
+   BkgdImg = ""
+   Description = ""
+
+[Picture119]
+   ID = pic.GreenRiverHill
+   Size = 5142
+   BkgdImg = ""
+   Description = ""
+
+[Picture120]
+   ID = pic.Desert
+   Size = 2520
+   BkgdImg = ""
+   Description = ""
+
+[Picture121]
+   ID = pic.AmRiver1
+   Size = 2139
+   Description = ""
+   BkgdImg = ""
+
+[Picture122]
+   ID = pic.AmRiver2
+   Size = 2204
+   BkgdImg = ""
+   Description = ""
+
+[Picture123]
+   ID = pic.AmRiver3
+   Size = 2172
+   BkgdImg = ""
+   Description = ""
+
+[Picture124]
+   ID = pic.AmRiver4
+   Size = 2124
+   BkgdImg = ""
+   Description = ""
+
+[Picture125]
+   ID = pic.AmRiver5
+   Size = 2063
+   BkgdImg = ""
+   Description = ""
+
+[Picture126]
+   ID = pic.AmRiver6
+   Size = 2207
+   BkgdImg = ""
+   Description = ""
+
+[Picture127]
+   ID = pic.Wilderness1
+   Size = 806
+   BkgdImg = ""
+   Description = ""
+
+[Picture128]
+   ID = pic.Wilderness2
+   Size = 806
+   BkgdImg = ""
+   Description = ""
+
+[Picture129]
+   ID = pic.Wilderness3
+   Size = 1059
+   BkgdImg = ""
+   Description = ""
+
+[Picture130]
+   ID = pic.Wilderness4
+   Size = 1059
+   Description = ""
+   BkgdImg = ""
+
+[Picture131]
+   ID = pic.Wilderness5
+   Size = 970
+   Description = ""
+   BkgdImg = ""
+
+[Picture132]
+   ID = pic.Wilderness6
+   Size = 970
+   Description = ""
+   BkgdImg = ""
+
+[Picture133]
+   ID = pic.SacRiver1
+   Size = 1381
+   Description = ""
+   BkgdImg = ""
+
+[Picture134]
+   ID = pic.SacRiver2
+   Size = 1252
+   Description = ""
+   BkgdImg = ""
+
+[Picture135]
+   ID = pic.SacRiver3
+   Size = 1130
+   Description = ""
+   BkgdImg = ""
+
+[Picture136]
+   ID = pic.GreenPastures
+   Size = 5611
+   BkgdImg = ""
+   Description = ""
+
+[Picture137]
+   ID = pic.HotelLobby
+   Size = 3063
+   BkgdImg = ""
+   Description = ""
+
+[Picture138]
+   ID = pic.Hotel2ndFloorLeft
+   Size = 2496
+   BkgdImg = ""
+   Description = ""
+
+[Picture139]
+   ID = pic.Hotel2ndFloorRight
+   Size = 2631
+   BkgdImg = ""
+   Description = ""
+
+[Picture140]
+   ID = pic.Hotel1stFloorLeft
+   Size = 2924
+   BkgdImg = ""
+   Description = ""
+
+[Picture141]
+   ID = pic.Hotel1stFloorRight
+   Size = 2993
+   BkgdImg = ""
+   Description = ""
+
+[Picture145]
+   ID = pic.CabinInterior
+   Size = 1616
+   BkgdImg = ""
+   Description = ""
+
+[Picture146]
+   ID = pic.OuthouseInterior
+   Size = 1073
+   BkgdImg = ""
+   Description = ""
+
+[Picture147]
+   ID = pic.Tunnel_1
+   Size = 1982
+   Description = ""
+   BkgdImg = ""
+
+[Picture148]
+   ID = pic.Tunnel_2
+   Size = 1223
+   Description = ""
+   BkgdImg = ""
+
+[Picture149]
+   ID = pic.Tunnel_3
+   Size = 1719
+   Description = ""
+   BkgdImg = ""
+
+[Picture150]
+   ID = pic.Tunnel_4
+   Size = 1596
+   Description = ""
+   BkgdImg = ""
+
+[Picture151]
+   ID = pic.Tunnel_5
+   Size = 2276
+   Description = ""
+   BkgdImg = ""
+
+[Picture152]
+   ID = pic.Tunnel_6
+   Size = 1803
+   Description = ""
+   BkgdImg = ""
+
+[Picture153]
+   ID = pic.Tunnel_7
+   Size = 1197
+   Description = ""
+   BkgdImg = ""
+
+[Picture154]
+   ID = pic.Tunnel_8
+   Size = 2502
+   Description = ""
+   BkgdImg = ""
+
+[Picture155]
+   ID = pic.Tunnel_9
+   Size = 1608
+   Description = ""
+   BkgdImg = ""
+
+[Picture156]
+   ID = pic.Tunnel_10
+   Size = 1484
+   Description = ""
+   BkgdImg = ""
+
+[Picture157]
+   ID = pic.Tunnel_11
+   Size = 1378
+   Description = ""
+   BkgdImg = ""
+
+[Picture158]
+   ID = pic.Tunnel_12
+   Size = 1785
+   Description = ""
+   BkgdImg = ""
+
+[Picture159]
+   ID = pic.Tunnel_13
+   Size = 1368
+   Description = ""
+   BkgdImg = ""
+
+[Picture160]
+   ID = pic.Tunnel_14
+   Size = 1533
+   Description = ""
+   BkgdImg = ""
+
+[Picture161]
+   ID = pic.Tunnel_15
+   Size = 2152
+   Description = ""
+   BkgdImg = ""
+
+[Picture162]
+   ID = pic.Tunnel_16
+   Size = 1617
+   Description = ""
+   BkgdImg = ""
+
+[Picture163]
+   ID = ovl.Tree1
+   Size = 1027
+   Description = ""
+   BkgdImg = ""
+
+[Picture164]
+   ID = ovl.Tree2
+   Size = 1027
+   Description = ""
+   BkgdImg = ""
+
+[Picture165]
+   ID = ovl.Tree3
+   Size = 1692
+   Description = ""
+   BkgdImg = ""
+
+[Picture166]
+   ID = ovl.Tree4
+   Size = 1692
+   Description = ""
+   BkgdImg = ""
+
+[Picture167]
+   ID = ovl.Tree5
+   Size = 1567
+   Description = ""
+   BkgdImg = ""
+
+[Picture168]
+   ID = ovl.Tree6
+   Size = 1565
+   Description = ""
+   BkgdImg = ""
+
+[Picture169]
+   ID = ovl.Tree7
+   Size = 1821
+   Description = ""
+   BkgdImg = ""
+
+[Picture170]
+   ID = ovl.Tree8
+   Size = 1821
+   Description = ""
+   BkgdImg = ""
+
+[Picture171]
+   ID = ovl.Tree9
+   Size = 2191
+   Description = ""
+   BkgdImg = ""
+
+[Picture172]
+   ID = ovl.Tree10
+   Size = 2195
+   Description = ""
+   BkgdImg = ""
+
+[Picture173]
+   ID = ovl.Tree11
+   Size = 2066
+   Description = ""
+   BkgdImg = ""
+
+[Picture174]
+   ID = ovl.Tree12
+   Size = 2066
+   Description = ""
+   BkgdImg = ""
+
+[Picture175]
+   ID = ovl.Tree13
+   Size = 419
+   Description = ""
+   BkgdImg = ""
+
+[Picture176]
+   ID = ovl.Tree14
+   Size = 661
+   Description = ""
+   BkgdImg = ""
+
+[Picture177]
+   ID = ovl.Tree15
+   Size = 661
+   Description = ""
+   BkgdImg = ""
+
+[Picture178]
+   ID = ovl.Tree16
+   Size = 419
+   Description = ""
+   BkgdImg = ""
+
+[Picture179]
+   ID = ovl.Tree17
+   Size = 565
+   Description = ""
+   BkgdImg = ""
+
+[Picture180]
+   ID = ovl.Tree18
+   Size = 574
+   Description = ""
+   BkgdImg = ""
+
+[Picture181]
+   ID = pic.MillTailrace
+   Size = 3923
+   BkgdImg = ""
+   Description = ""
+
+[Picture182]
+   ID = pic.SuttersMill
+   Size = 5175
+   BkgdImg = ""
+   Description = ""
+
+[Picture183]
+   ID = pic.ColomaWestEntrance
+   Size = 4119
+   BkgdImg = ""
+   Description = ""
+
+[Picture184]
+   ID = pic.ColomaNW
+   Size = 4815
+   BkgdImg = ""
+   Description = ""
+
+[Picture185]
+   ID = pic.ColomaNorth
+   Size = 4043
+   BkgdImg = ""
+   Description = ""
+
+[Picture186]
+   ID = pic.ColomaNE
+   Size = 3607
+   BkgdImg = ""
+   Description = ""
+
+[Picture187]
+   ID = pic.ColomaWest
+   Size = 4267
+   BkgdImg = ""
+   Description = ""
+
+[Picture188]
+   ID = pic.ColomaEast
+   Size = 3570
+   BkgdImg = ""
+   Description = ""
+
+[Picture189]
+   ID = pic.ColomaSouth
+   Size = 4345
+   BkgdImg = ""
+   Description = ""
+
+[Picture190]
+   ID = pic.ColomaSE
+   Size = 4180
+   BkgdImg = ""
+   Description = ""
+
+[Picture191]
+   ID = pic.Start
+   Size = 6
+   Description = ""
+   BkgdImg = ""
+
+[Picture192]
+   ID = pic.Gallows
+   Size = 3389
+   BkgdImg = ""
+   Description = ""
+
+[Picture193]
+   ID = pic.Goldmine
+   Size = 3366
+   Description = ""
+   BkgdImg = ""
+
+[Picture194]
+   ID = pic.TunnelDoor
+   Size = 1470
+   Description = ""
+   BkgdImg = ""
+
+[Picture195]
+   ID = pic.IntroFrame
+   Size = 631
+   Description = "used in rm.JerrodIntro; it has the frame for Jerrod's portrait on right, and room for text display on left"
+   BkgdImg = ""
+
+[Picture196]
+   ID = pic.IntroF1
+   Size = 1153
+   Description = "frame 1 of the expanding introduction screen"
+   BkgdImg = ""
+
+[Picture197]
+   ID = pic.IntroF2
+   Size = 2049
+   Description = "Frame 2 of the expanding introduction screen"
+   BkgdImg = ""
+
+[Picture198]
+   ID = pic.IntroF3
+   Size = 3386
+   Description = "Frame 3 of the expanding introduction screen"
+   BkgdImg = ""
+
+[Picture199]
+   ID = pic.IntroFull
+   Size = 5259
+   Description = "the full size introduction screen with the four different quadrants"
+   BkgdImg = ""
+
+[Picture200]
+   ID = ovl.GOLDRUSH
+   Size = 4007
+   Description = "the large title banner that gets overlayed on the title page, and also on the end page"
+   BkgdImg = ""
+
+[Picture201]
+   ID = pic.NWSceneDone
+   Size = 1761
+   Description = ""
+   BkgdImg = ""
+
+[Picture202]
+   ID = pic.NESceneDone
+   Size = 777
+   Description = ""
+   BkgdImg = ""
+
+[Picture203]
+   ID = pic.SESceneDone
+   Size = 1481
+   Description = ""
+   BkgdImg = ""
+
+[Picture204]
+   ID = pic.SWSceneDone
+   Size = 1375
+   Description = ""
+   BkgdImg = ""
+
+[Picture242]
+   ID = pic.LedgeLeft
+   Size = 1896
+   BkgdImg = ""
+   Description = "on ledge outside the Green Pastures hotel; front of hotel"
+
+[Picture243]
+   ID = pic.LedgeRight
+   Size = 1715
+   Description = "outside of Green Pastures hotel on ledge; toward back of building"
+   BkgdImg = ""
+
+[Picture244]
+   ID = pic.JakesCabin
+   Size = 5096
+   BkgdImg = ""
+   Description = ""
+[::END Pictures::]
+
+[::BEGIN Sounds::]
+
+[Sound1]
+   ID = m.Suzannah
+   Size = 2346
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound2]
+   ID = m.Home
+   Size = 251
+   Description = "played when Jerrod enters his house"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound3]
+   ID = m.PoliceWarning
+   Size = 221
+   Description = "played when the policeman is coming after Jerrod for walking on grass"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound4]
+   ID = s.BadNews
+   Size = 121
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound5]
+   ID = s.AddToScore
+   Size = 141
+   Description = "played when player scores points"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound6]
+   ID = s.UhOh
+   Size = 46
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound7]
+   ID = m.AnchorsAway
+   Size = 1161
+   Description = "played durig steamship cut scenes"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound8]
+   ID = m.Travel
+   Size = 631
+   Description = "sound played when ferry arrives or leaves, or when stagecoach departs"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound9]
+   ID = m.SadSong
+   Size = 326
+   Description = "played when Jerrod encounters a sad situation, such as when visiting parents' graves, or reading clippings about Jake's troubles"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound10]
+   ID = m.Death
+   Size = 306
+   Description = "a dirge played when Jerrod dies"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound11]
+   ID = m.Arrival
+   Size = 3196
+   Description = "played when the steamship arrives in Panama"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound13]
+   ID = m.Chase
+   Size = 476
+   Description = "short clip that gets played when the ants attack in the Panamanian jungle, and when bandits chase Jerrod in the wilderness"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound14]
+   ID = m.Death2
+   Size = 221
+   Description = "an alternate music snippet played in some instances when Jerrod dies"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound15]
+   ID = m.RioDJTheme
+   Size = 2051
+   Description = "theme music played in Rio de Janeiro (La Cucaracha)"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound16]
+   ID = m.ArriveCA
+   Size = 411
+   Description = "music clip played when ship arrives in San Francisco bay"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound17]
+   ID = m.California
+   Size = 436
+   Description = "theme song played when Jerrod gets to California"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound18]
+   ID = m.FoundGold
+   Size = 776
+   Description = "played when Jerrod pans or digs up gold"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound19]
+   ID = m.LoseGold
+   Size = 271
+   Description = "played when Jerrod gives up the gold disk he found in Panama - it costs him points for using it"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound20]
+   ID = m.DangerWarning
+   Size = 106
+   Description = "played when something bad is about to happen unless Jerrod reacts; for example, when someone is about to enter the Hotel room when Jerrod is searching it, or in the jungle scene when he's getting threatened by natives"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound21]
+   ID = m.FollowMule
+   Size = 821
+   Description = "this music clip is played when Jerrod decides to follow his mule"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound22]
+   ID = m.FoundJake
+   Size = 261
+   Description = "played when Jerrod finds Jake in the tunnel mine"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound23]
+   ID = m.Victory
+   Size = 656
+   Description = "played at end of game when Jerrod finds the gold and wins the game"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound24]
+   ID = m.LedgeWarning
+   Size = 196
+   Description = "plays when there is someone in room 11 while Jerrod is on ledge outside the windows of Green River hotel "
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound25]
+   ID = m.JerrodIntro
+   Size = 416
+   Description = "this music is played while Jerrod is being introduced"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound26]
+   ID = s.Intro
+   Size = 206
+   Description = "short sequence played while the introduction screen is expanding"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound27]
+   ID = m.Intro
+   Size = 2316
+   Description = "a longer musical piece that plays while the cut scene goes on"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound30]
+   ID = s.Splash
+   Size = 116
+   Description = "played when Jerrod falls into water"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound31]
+   ID = s.EngineStart
+   Size = 96
+   Description = "sound played when paddle wheel engine starts on the steamship"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound32]
+   ID = s.RingBell
+   Size = 111
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound33]
+   ID = s.Effect1
+   Size = 56
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound34]
+   ID = s.Effect2
+   Size = 46
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound35]
+   ID = s.Effect3
+   Size = 86
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound36]
+   ID = s.Effect4
+   Size = 66
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound37]
+   ID = s.RockCrash
+   Size = 186
+   Description = "sound effect of ship crashing into a rock"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound39]
+   ID = s.Whistle
+   Size = 36
+   Description = "steam whistle sound (on the steamship)"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound41]
+   ID = s.NativeDrums
+   Size = 76
+   Description = "effect played when natives attack wagon train"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound42]
+   ID = s.SmithHammer
+   Size = 81
+   Description = "played when the blacksmith swings his hammer"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound43]
+   ID = s.Hammer
+   Size = 41
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound44]
+   ID = s.WindowBreak
+   Size = 76
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound45]
+   ID = s.Effect5
+   Size = 156
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound46]
+   ID = s.Window
+   Size = 101
+   Description = "played when Jerrod opens or closes a window"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound47]
+   ID = s.Gunshot
+   Size = 81
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound48]
+   ID = s.Magnet
+   Size = 41
+   Description = "clinking sound when magnet catches key in the tunnel room door"
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound50]
+   ID = s.TunnelDoor
+   Size = 156
+   Description = ""
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+[::END Sounds::]
+
+[::BEGIN Views::]
+
+[View0]
+   ID = vw.JerrodNY
+   Size = 2942
+   Description = "the normal view used for Jerrod while in Brooklyn NY and on his trip, before he changes into more casual, 'California' attire"
+
+[View1]
+   ID = vw.FallingJerrodNY
+   Size = 757
+   Description = "used to show Jerrod falling into the East River"
+
+[View2]
+   ID = vw.TinyJerrod
+   Size = 294
+   Description = ""
+
+[View3]
+   ID = vw.JerrodWindow
+   Size = 2754
+   Description = "a view of Jerrod as he would appear behind a window; used in the Brooklyn Dock room when Jerrod walks into the warehouse"
+
+[View4]
+   ID = vw.WaterPump
+   Size = 859
+   Description = ""
+
+[View5]
+   ID = vw.BigJerrodNY
+   Size = 4134
+   Description = "used when inside interior of buildings in Brooklyn"
+
+[View6]
+   ID = vw.ClimbingJerrodNY
+   Size = 511
+   Description = "view of Jerrod climbing, in New York attire (only loop 3; first three loops are empty [containing a single cel with a single transparent pixel])"
+
+[View7]
+   ID = vw.SickJerrodNY
+   Size = 1842
+   Description = "a view of Jerrod when he's ill, and about to die; in his Brooklyn NY attire"
+
+[View8]
+   ID = vw.WindyJerrod
+   Size = 3620
+   Description = "a view of Jerrod walking into the wind, in NY attire (2D only)"
+
+[View9]
+   ID = vw.Fishing
+   Size = 2597
+   Description = ""
+
+[View10]
+   ID = vw.JerrodCA
+   Size = 3297
+   Description = "normal view of Jerrod, in his California attire"
+
+[View11]
+   ID = vw.StagecoachArt
+   Size = 1845
+   Description = ""
+
+[View12]
+   ID = vw.DyingJerrodNY
+   Size = 658
+   Description = "view of Jerrod, sick, passing out and dying. Used in Brooklyn scenes"
+
+[View13]
+   ID = vw.EnterWater
+   Size = 720
+   Description = "a view of Jerrod entering water, in his New York attire"
+
+[View14]
+   ID = vw.WadingJerrodNY
+   Size = 1639
+   Description = "a view of Jerrod wading in shallow water, in his New York attire"
+
+[View15]
+   ID = vw.JungleArt_4
+   Size = 5329
+   Description = "loops used in the Panama jungle scene where Jerrod has to wade across the river"
+
+[View16]
+   ID = vw.SickJerrodCA
+   Size = 2068
+   Description = "shows Jerrod in California attire, slouched and ill, just before dying"
+
+[View17]
+   ID = vw.DyingJerrodCA
+   Size = 709
+   Description = "shows Jerrod collapsing and dying, in his California attire"
+
+[View18]
+   ID = vw.WadingJerrodCA
+   Size = 2675
+   Description = "a view of Jerrod wading in shallow water, in his California attire"
+
+[View19]
+   ID = vw.WideJerrodCA
+   Size = 3917
+   Description = "a view of Jerrod walking in his California attire, but with extra wide border around each cel"
+
+[View20]
+   ID = vw.BankArt
+   Size = 1666
+   Description = "views and cels of things used in rm.Bank"
+
+[View21]
+   ID = vw.Gate
+   Size = 942
+   Description = ""
+
+[View22]
+   ID = vw.SkylineArt
+   Size = 2427
+   Description = "includes a number of views that can be added to the Brooklyn rooms that have land across the river; apparently this was easier than trying to include them inside the picture resource"
+
+[View23]
+   ID = vw.Chains
+   Size = 199
+   Description = "chains used as fall guards along the river in some of the rooms"
+
+[View24]
+   ID = vw.BankIntArt
+   Size = 2317
+   Description = "various loops and cels needed for the bank interior room"
+
+[View25]
+   ID = vw.StmshipLg
+   Size = 2462
+   Description = "view of steamship when at closest range"
+
+[View26]
+   ID = vw.MrQuail
+   Size = 3565
+   Description = "Jerrod's guardian/mentor"
+
+[View27]
+   ID = vw.Gulls
+   Size = 113
+   Description = "seagulls that fly around Brooklyn"
+
+[View28]
+   ID = vw.Policeman
+   Size = 3440
+   Description = ""
+
+[View29]
+   ID = vw.Neighbor
+   Size = 3140
+   Description = "neighbor walking without rake"
+
+[View30]
+   ID = vw.NeighborRake
+   Size = 3666
+   Description = "neighbor walking while carrying a rake"
+
+[View31]
+   ID = vw.Raking
+   Size = 718
+   Description = "neighbor stationary and using rake"
+
+[View32]
+   ID = vw.BankTeller
+   Size = 3480
+   Description = ""
+
+[View33]
+   ID = vw.LeafPile
+   Size = 637
+   Description = ""
+
+[View34]
+   ID = vw.NewsOfficeArt
+   Size = 1011
+   Description = "door and building interior art used in rm.NewsPaperOffice"
+
+[View35]
+   ID = vw.FadeBrooklyn
+   Size = 1319
+   Description = "on startup, display name/location for short time, then it fades away"
+
+[View36]
+   ID = vw.PostOfficeArt
+   Size = 2332
+   Description = "a few loops and cels used in the exterior Post Office room"
+
+[View37]
+   ID = vw.Leonard
+   Size = 1958
+   Description = ""
+
+[View38]
+   ID = vw.LeonardWindow
+   Size = 1907
+   Description = "Leonard as he appears through the window of his house"
+
+[View39]
+   ID = vw.StoresArt
+   Size = 2151
+   Description = "some loops and cels used in rm.Stores"
+
+[View40]
+   ID = vw.LiveryArt
+   Size = 3785
+   Description = "loops and cels used in rm.Livery"
+
+[View41]
+   ID = vw.ShipArt
+   Size = 1326
+   Description = "contains the paddle wheel and gang plank animations for the steamship"
+
+[View42]
+   ID = vw.BankPeople
+   Size = 2375
+   Description = "contains loops for the people working at the bank, used in teh bank interior room"
+
+[View43]
+   ID = vw.HouseArt
+   Size = 1762
+   Description = "the gate for Jerrod's house, the property sale signs, and a couple other views used in Jerrod's house"
+
+[View44]
+   ID = vw.CityArt
+   Size = 351
+   Description = "a number of small pieces of art added to various pictures in the city of Brooklyn"
+
+[View45]
+   ID = vw.WaterStreetArt
+   Size = 2076
+   Description = "cels and loops that are needed in room rm.WaterSt_Left"
+
+[View46]
+   ID = vw.LeonardWindow2
+   Size = 250
+   Description = "this shows just Leonard's upper body as viewed through the window"
+
+[View47]
+   ID = vw.Posters
+   Size = 451
+   Description = "has cels that can be added on various trees and posts  in Brooklyn after the gold rush is announced that announce various ways of getting to Califormia"
+
+[View48]
+   ID = vw.Agent
+   Size = 3195
+   Description = "The real estate agent who will sell Jerrod's house"
+
+[View49]
+   ID = vw.AgentWithCash
+   Size = 1540
+   Description = "the real estate agent has a fistful of cash to pay Jerrod for his house"
+
+[View50]
+   ID = vw.PostOfficeIntArt
+   Size = 219
+   Description = "cels used in rm.PostOfficeInterior "
+
+[View51]
+   ID = vw.FerryLeaving
+   Size = 5250
+   Description = "loops showing the ferry leaving Brooklyn, each loop showing a different scale as the ferry gets further away"
+
+[View52]
+   ID = vw.GazeboRmArt
+   Size = 87
+   Description = "includes a cel added to the Gazebo Park to show the warehouse in the distance, and a ..."
+
+[View53]
+   ID = vw.FerryDockArt
+   Size = 2859
+   Description = "contains views and cels used in the FerryDock room"
+
+[View54]
+   ID = vw.CoachOfficeArt
+   Size = 885
+   Description = "a couple cels used to add art to rm.StageCoachOffice"
+
+[View55]
+   ID = vw.ShortWagon
+   Size = 2179
+   Description = ""
+
+[View56]
+   ID = vw.Wagon
+   Size = 2764
+   Description = "The wagon that frequently drives by in Brooklyn scenes"
+
+[View57]
+   ID = vw.StmshipMed
+   Size = 2011
+   Description = "medium sized view of steamship used in various locations"
+
+[View58]
+   ID = vw.StageCoach
+   Size = 5831
+   Description = "has the stagecoach and team of horses that take Jerrod to the ferry to begin the trip across the country"
+
+[View59]
+   ID = vw.StmShipSmall
+   Size = 387
+   Description = "a view of the steamship when farthest away"
+
+[View60]
+   ID = vw.JerrodsHouseArt
+   Size = 4411
+   Description = "loops and cels that are used in rm.JerrodsHouse"
+
+[View61]
+   ID = vw.DockWideArt
+   Size = 3061
+   Description = "various loops and cels needed in rm.DockWideView"
+
+[View62]
+   ID = vw.FerryArriving
+   Size = 4869
+   Description = "view of ferry coming to Brooklyn from New York, with loops showing different scales as the ferry gets closer"
+
+[View63]
+   ID = vw.StageOfficeIntArt
+   Size = 118
+   Description = "a couple cels used to add detail to rm.StageOfficeInterior, where Jerrod goes to buy a stagecoach ticket"
+
+[View64]
+   ID = vw.TicketAgent
+   Size = 4696
+   Description = "this guy will sell Jerrod a stagecoach ticket"
+
+[View65]
+   ID = vw.PaperOfficeIntArt
+   Size = 4253
+   Description = "various loops used in rm.PaperOfficeInterior"
+
+[View66]
+   ID = vw.BigHdwClerk
+   Size = 4496
+   Description = "used in interior buildings"
+
+[View67]
+   ID = vw.HardwareClerk
+   Size = 3151
+   Description = ""
+
+[View68]
+   ID = vw.Sailor1
+   Size = 3447
+   Description = "the crewman who handles the departure of the steamship"
+
+[View69]
+   ID = vw.BigGrocer
+   Size = 4702
+   Description = "used for interior rooms"
+
+[View70]
+   ID = vw.GrocerClerk
+   Size = 3081
+   Description = ""
+
+[View71]
+   ID = vw.TinyJerrodMule
+   Size = 234
+   Description = "a very small view of Jerrod with a mule"
+
+[View72]
+   ID = vw.ShipSternArt2
+   Size = 1333
+   Description = "some additional loops and cels used in rm.ShipSternInterior"
+
+[View73]
+   ID = vw.ShipMachineryArt
+   Size = 3618
+   Description = "equipment and machinery needed in the mid ship interior room"
+
+[View74]
+   ID = vw.ShipBowArt
+   Size = 1388
+   Description = "loops and cels used in rm.ShipBowInterior"
+
+[View75]
+   ID = vw.OceanItems
+   Size = 1677
+   Description = "rocks, icebergs, islands displayed in ocean rooms as needed"
+
+[View77]
+   ID = vw.MidShipArt
+   Size = 2039
+   Description = "contains various loops used in rm.ShipMidExterior"
+
+[View78]
+   ID = vw.MidShipArt2
+   Size = 1157
+   Description = "some additional loops used in rm.ShipMidExterior"
+
+[View79]
+   ID = vw.StormWaves
+   Size = 1201
+   Description = "a view showing larger waves against the boat; used in rm.ShipSternStorm"
+
+[View80]
+   ID = vw.SinkShip
+   Size = 5115
+   Description = "sinking ship"
+
+[View81]
+   ID = vw.CoalRoomArt
+   Size = 1818
+   Description = "includes loops and cels used in the coal room section of the mid ship 'room'; also inlcudes the cooked pig that shows up on the table)"
+
+[View82]
+   ID = vw.BoilerTech
+   Size = 3282
+   Description = "this guy runs the steamship boilers"
+
+[View83]
+   ID = vw.Sailor4
+   Size = 3232
+   Description = ""
+
+[View84]
+   ID = vw.Fire
+   Size = 1520
+   Description = "fire and explosion loops used on the ship"
+
+[View85]
+   ID = vw.RioDeJaneiroArt
+   Size = 2000
+   Description = "loops and cels used in the cut scene for Rio de Janeiro"
+
+[View86]
+   ID = vw.Midget
+   Size = 2743
+   Description = "this midget works at the livery"
+
+[View87]
+   ID = vw.Fish
+   Size = 239
+   Description = "a fish, just swimming along"
+
+[View88]
+   ID = vw.PostalClerk
+   Size = 4586
+   Description = ""
+
+[View89]
+   ID = vw.PostMaster
+   Size = 4770
+   Description = ""
+
+[View90]
+   ID = vw.PaperBoss
+   Size = 3227
+   Description = "Jerrod's boss at the newspaper"
+
+[View91]
+   ID = vw.SinkShipOnFire
+   Size = 5508
+   Description = "sinking ship, and on fire"
+
+[View92]
+   ID = vw.SinkingShipArt
+   Size = 1282
+   Description = "waves, and debris that are used in the sinking ship scene"
+
+[View93]
+   ID = vw.Pig
+   Size = 211
+   Description = "this pig is the ship mascot, until food runs low - then he's lunch"
+
+[View94]
+   ID = vw.Captain
+   Size = 1528
+   Description = "the Steamship captain"
+
+[View95]
+   ID = vw.CapeRouteArt
+   Size = 804
+   Description = ""
+
+[View96]
+   ID = vw.StmShipCA
+   Size = 3472
+   Description = "view of steam ship when in Sacramento"
+
+[View97]
+   ID = vw.SacPeople
+   Size = 422
+   Description = "loops of tiny people who populate the Sacramento scene"
+
+[View98]
+   ID = vw.SailShipCA
+   Size = 2767
+   Description = "view of the sailing ship that takes Jerrod from Panama to California"
+
+[View99]
+   ID = vw.StageCoachCA
+   Size = 326
+   Description = "small view of stagecoach that takes Jerrod from Sacramento to Sutters Fort"
+
+[View100]
+   ID = vw.CaliforniaArt
+   Size = 1416
+   Description = "banners and flags used in Sacramento and Sutters Fort rooms"
+
+[View101]
+   ID = vw.PanamaRouteArt
+   Size = 766
+   Description = "various graphics used in rm.PanamaRoute"
+
+[View102]
+   ID = vw.Letter
+   Size = 2662
+   Description = "the letter from Jake, with holes that, when placed over the correct tombstone, give Jerrod clue"
+
+[View103]
+   ID = vw.Sailor2
+   Size = 1585
+   Description = ""
+
+[View104]
+   ID = vw.SF_Doors1
+   Size = 4035
+   Description = "a collection of door loops used in Sutters Fort rooms"
+
+[View105]
+   ID = vw.SF_Doors2
+   Size = 5061
+   Description = "a second set of door loops used in Sutters Fort rooms"
+
+[View106]
+   ID = vw.Lady
+   Size = 1918
+   Description = "a lady who is out for a walk in Brooklyn"
+
+[View107]
+   ID = vw.JungleArt_1
+   Size = 4435
+   Description = "loops showing travelers used in jungle cut scenes"
+
+[View108]
+   ID = vw.SF_Doors3
+   Size = 606
+   Description = "this view has only one door loop, used in rm.SF_Kitchen"
+
+[View109]
+   ID = vw.ChagresArt
+   Size = 4155
+   Description = "loops and cels used in rm.ChagresRiver"
+
+[View110]
+   ID = vw.JungleArt_2
+   Size = 3250
+   Description = "loops used in the second jungle cut scene"
+
+[View112]
+   ID = vw.JungleMule
+   Size = 821
+   Description = "mule used when crossing jungles in Panama"
+
+[View113]
+   ID = vw.JungleGuide
+   Size = 1391
+   Description = "the guide who leads the group through the Panama jungle"
+
+[View114]
+   ID = vw.Traveler1
+   Size = 1461
+   Description = "one of the travelers accompanying Jerrod across the Panama jungle"
+
+[View115]
+   ID = vw.Traveler2
+   Size = 1472
+   Description = "another traveler accompanying Jerrod across Panama jungle"
+
+[View116]
+   ID = vw.Traveler3
+   Size = 1511
+   Description = "another traveler accompanying Jerrod across Panama jungle"
+
+[View117]
+   ID = vw.Snake
+   Size = 3992
+   Description = "snake in the Panama jungle; also includes a loop showing Jerrod getting strangled"
+
+[View118]
+   ID = vw.JungleArt_3
+   Size = 1760
+   Description = "various loops and cels used in the jungle scene where the ants are"
+
+[View119]
+   ID = vw.MapZoom
+   Size = 3153
+   Description = "has loops showing map sections zooming in for the detailed maps on trip across America"
+
+[View120]
+   ID = vw.MapTracks
+   Size = 942
+   Description = "contains the cursors and blocks used to manage the tracks across the USA map for the cross country trip"
+
+[View121]
+   ID = vw.PanamaCityArt
+   Size = 4481
+   Description = "various loops used in the Panama City cut scene"
+
+[View122]
+   ID = vw.TripScenery
+   Size = 6315
+   Description = "contains loops with stagecoach interior, with passing scenery, and boat views which get shown during cut scene across the country"
+
+[View123]
+   ID = vw.TripScenery2
+   Size = 1454
+   Description = "more loops and cels used to show passing scenery during trip across USA"
+
+[View124]
+   ID = vw.PlatteArt
+   Size = 4031
+   Description = "art used for detail insets in the Platte River valley cut scene"
+
+[View125]
+   ID = vw.MapArt
+   Size = 11017
+   Description = "loops and cels used on the main map in cut scene 2 (for trip across continent)"
+
+[View126]
+   ID = vw.LIJMSCArt
+   Size = 5267
+   Description = "loops and cels used in the LIJMSC rooms"
+
+[View127]
+   ID = vw.Mule
+   Size = 2312
+   Description = ""
+
+[View128]
+   ID = vw.GreenRiverArt
+   Size = 7731
+   Description = "loops and cels used in the Green River rooms"
+
+[View129]
+   ID = vw.CalifDetailArt
+   Size = 5996
+   Description = "loops and cels used in cs.California cut scene"
+
+[View130]
+   ID = vw.WildernessArt
+   Size = 4003
+   Description = "rocks and bushes that can be added to the wilderness rooms"
+
+[View131]
+   ID = vw.Sailor3
+   Size = 3474
+   Description = ""
+
+[View132]
+   ID = vw.StoreItems
+   Size = 3210
+   Description = "all the stuff that's displayed in the general store"
+
+[View133]
+   ID = vw.GroceryItems
+   Size = 3363
+   Description = "various displays and items that fill up the grocery store interior"
+
+[View134]
+   ID = vw.SuttersFortArt
+   Size = 2927
+   Description = "A collection of loops and cels used in various Sutters Fort rooms"
+
+[View136]
+   ID = vw.SuttersFortArt2
+   Size = 1913
+   Description = "additional loops and cels used in Sutters Fort rooms"
+
+[View137]
+   ID = vw2.MuleHand
+   Size = 1574
+   Description = "view of the guy who sells mules in Sutters Fort corral"
+
+[View138]
+   ID = vw.Darkness
+   Size = 756
+   Description = "various blocks used in the tunnels to simulate darkness; Jerrod's lamp won't light up the entire tunnel; these blocks are placed on the room to cover up the places the lamp light doesn't reach"
+
+[View139]
+   ID = vw.TunnelClimbing
+   Size = 1651
+   Description = "shows Jerrod climbing the ladders in the tunnels"
+
+[View140]
+   ID = vw.TunnelFalling
+   Size = 820
+   Description = "shows Jerrod falling when in the tunnels"
+
+[View141]
+   ID = vw.TunnelDigging
+   Size = 1438
+   Description = "shows Jerrod digging for gold with a pick ax in the tunnels"
+
+[View142]
+   ID = vw.TunnelDoor
+   Size = 4843
+   Description = ""
+
+[View143]
+   ID = vw.BigJerrodCA
+   Size = 4694
+   Description = "a larger view of Jerrod, in his California attire, used for rooms where scale is a bit larger"
+
+[View144]
+   ID = vw.Titles
+   Size = 1106
+   Description = "logo and title screen images"
+
+[View145]
+   ID = vw.TunnelArt
+   Size = 198
+   Description = "gold nuggets and a pickax used in some of the tunnel rooms"
+
+[View146]
+   ID = vw.Jake2D
+   Size = 1613
+   Description = "view of Jake walking but only horizontal loops"
+
+[View147]
+   ID = vw.Tunnel16Art
+   Size = 6616
+   Description = "loops and cels used in tunnel room 16"
+
+[View148]
+   ID = vw.JakesCabinArt
+   Size = 2449
+   Description = "loops and cels used in rm.JakesCabin"
+
+[View149]
+   ID = vw.OuthouseArt
+   Size = 8772
+   Description = "includes loops used in rm.OuthouseInterior. "
+
+[View150]
+   ID = vw.CabinArt
+   Size = 2559
+   Description = "loops and cels used in rm.CabinInterior"
+
+[View151]
+   ID = vw.JakeAndJerrod
+   Size = 9561
+   Description = "various loops of Jake and Jerrod played at end of game when they find the gold"
+
+[View152]
+   ID = vw.Gallows
+   Size = 10050
+   Description = "contains all the loops and cels needed to animate the hanging sequence"
+
+[View153]
+   ID = vw.SawmillArt
+   Size = 2404
+   Description = "loops and cels used in rm.SuttersMill"
+
+[View154]
+   ID = vw.Woodcutters
+   Size = 1412
+   Description = "A loop showing two woodcutters sawing a log. Used in rm.ColomaWestEntrance"
+
+[View155]
+   ID = vw.GreenPasturesArt
+   Size = 1478
+   Description = ""
+
+[View156]
+   ID = vw.HotelArt
+   Size = 6171
+   Description = "various views and loops used in rooms associated with the Green Pastures hotel"
+
+[View157]
+   ID = vw.LedgeArt
+   Size = 3259
+   Description = "loops used while Jerrod is on the ledge outside the Green River hotel"
+
+[View158]
+   ID = vw.HotelGuest
+   Size = 4646
+   Description = "this gentleman is a guest in the Green Pastures Hotel"
+
+[View159]
+   ID = vw.RoomWindowArt
+   Size = 2392
+   Description = "loops showing people inside the hotel rooms from outside the window"
+
+[View160]
+   ID = vw.HotelGuests
+   Size = 4370
+   Description = "loops of hotel guests as seen through windows"
+
+[View161]
+   ID = vw.Tents
+   Size = 2739
+   Description = "a bunch of tent images used in Coloma rooms"
+
+[View162]
+   ID = vw.Prospectors
+   Size = 4170
+   Description = " a collection of loops showing different prospectors who can be added to the wilderness rooms"
+
+[View163]
+   ID = vw.BlacksmithArt
+   Size = 3927
+   Description = "loops and cels used in rm.SF_Blacksmith"
+
+[View164]
+   ID = vw.WindowJerrod
+   Size = 3014
+   Description = "A complete view (all four loops) of Jerrod shaded to show him behind window/glass"
+
+[View165]
+   ID = vw.Panning
+   Size = 546
+   Description = "a view showing Jerrod panning for gold"
+
+[View166]
+   ID = vw.PanSuccess
+   Size = 144
+   Description = "this view shows Jerrod with gold in his pan"
+
+[View167]
+   ID = vw.JerrodDigging
+   Size = 3345
+   Description = "a view showing Jerrod digging for gold in California attire"
+
+[View168]
+   ID = vw.ColomaArt
+   Size = 570
+   Description = "loops and cels used in rmColomaNorth"
+
+[View169]
+   ID = vw.Bandit1
+   Size = 3545
+   Description = ""
+
+[View170]
+   ID = vw.Bandit2
+   Size = 3759
+   Description = ""
+
+[View171]
+   ID = vw.Panners
+   Size = 4614
+   Description = "several different miners panning for gold"
+
+[View172]
+   ID = vw.JerrodHeadIntro
+   Size = 1303
+   Description = "A view of Jerrod's head as he looks around at the four corners during the introduction sequence"
+
+[View173]
+   ID = vw.JerrodFramed
+   Size = 6828
+   Description = "used in opening sequence; it's Jerrod in a photo frame that animates to show the four quadrants of action"
+
+[View174]
+   ID = vw.FrameAnimations
+   Size = 4266
+   Description = "inlcudes the face and head animations for Jerrod's photo frame during the opening sequence. Also includes wiping animation for the screen"
+
+[View175]
+   ID = vw.CityClothes
+   Size = 6243
+   Description = "Used in opening sequence to show Jerrod in his city clothes; also includes animation for tossing his hat"
+
+[View176]
+   ID = vw.Unties
+   Size = 7251
+   Description = "animation used in opening sequence showing Jerrod untying his tie"
+
+[View177]
+   ID = vw.IntroBanners
+   Size = 1790
+   Description = "these banners are used in rm.JerrodIntro"
+
+[View178]
+   ID = vw.IntroScene1
+   Size = 7238
+   Description = "various animations used during scene 1 of the introduction"
+
+[View179]
+   ID = vw.IntroScene2
+   Size = 4338
+   Description = "animations needed for scene 2 (boat) of the intro screen"
+
+[View180]
+   ID = vw.HotelRoomArt
+   Size = 1157
+   Description = "door loops used in rm.Hotel2ndFloorRight"
+
+[View181]
+   ID = vw.IntroScene3
+   Size = 3085
+   Description = "animations needed for the third scene of the intro screen"
+
+[View182]
+   ID = vw.IntroScene4
+   Size = 1471
+   Description = "animations used in fourth scene of introduction screen"
+
+[View183]
+   ID = vw.DizzyJerrod
+   Size = 1722
+   Description = "used only in the introduction screen"
+
+[View184]
+   ID = vw.Credits
+   Size = 5277
+   Description = ""
+
+[View185]
+   ID = vw.JmpJerrod
+   Size = 2787
+   Description = ""
+
+[View186]
+   ID = vw.PosterArt
+   Size = 648
+   Description = "a graphic of the steamship that is added to the poster picture (poster is in the dock warehouse)"
+
+[View187]
+   ID = vw.ShipSternArt
+   Size = 2066
+   Description = "cels used in rm.ShipSternInterior"
+
+[View188]
+   ID = vw.ShipArt2
+   Size = 1376
+   Description = "some additional art used in the ship sequences"
+
+[View189]
+   ID = vw.PlatteRiverMap
+   Size = 1006
+   Description = "shows the Platte River map expanding out from the main map"
+
+[View190]
+   ID = vw.JerrodBk2D
+   Size = 1328
+   Description = "a view of Jerrod in Brooklyn attire but only the left and right loops"
+
+[View191]
+   ID = vw.ClimbingJerrodRight
+   Size = 644
+   Description = "view of Jerrod climbing ladder, facing right"
+
+[View192]
+   ID = vw.SickJerrodNY_2
+   Size = 1842
+   Description = "a duplicate of view 7: a view of Jerrod when he's sick and just about to die, in his New York attire (it was probably supposed to be a 2-loop view, since it's used on places where other '2D' views are used, such as on the ship)"
+
+[View193]
+   ID = vw.Startup
+   Size = 4510
+   Description = ""
+
+[View194]
+   ID = vw.CorralArt
+   Size = 2624
+   Description = "loops and cels used in rm.SF_Corral"
+
+[View195]
+   ID = vw.MrQuail2D
+   Size = 1660
+   Description = "this view only shows Mr. Quail moving left/right; no up or down loops"
+
+[View196]
+   ID = vw.BankTeller2D
+   Size = 1548
+   Description = "this view only includes left/right loops for the bank teller"
+
+[View197]
+   ID = vw.Lady2D
+   Size = 630
+   Description = "This view only includes left/right loops for the Brooklyn lady"
+
+[View199]
+   ID = vw.OldWagon
+   Size = 692
+   Description = ""
+
+[View201]
+   ID = vw.Inv.Pipes
+   Size = 836
+   Description = ""
+
+[View202]
+   ID = vw.Inv.HouseKey
+   Size = 792
+   Description = ""
+
+[View203]
+   ID = vw.Inv.Nails
+   Size = 808
+   Description = ""
+
+[View204]
+   ID = vw.Inv.Manure
+   Size = 1036
+   Description = ""
+
+[View205]
+   ID = vw.Inv.Shovel
+   Size = 800
+   Description = ""
+
+[View206]
+   ID = vw.Inv.Cash
+   Size = 1098
+   Description = ""
+
+[View207]
+   ID = vw.Inv.Envelope
+   Size = 933
+   Description = ""
+
+[View208]
+   ID = vw.Inv.String
+   Size = 747
+   Description = ""
+
+[View209]
+   ID = vw.Inv.Gold
+   Size = 1217
+   Description = ""
+
+[View210]
+   ID = vw.Inv.Matches
+   Size = 940
+   Description = ""
+
+[View211]
+   ID = vw.Inv.Photo
+   Size = 1274
+   Description = ""
+
+[View212]
+   ID = vw.Inv.Aerogram
+   Size = 913
+   Description = ""
+
+[View215]
+   ID = vw.Inv.BankStatement
+   Size = 1090
+   Description = ""
+
+[View216]
+   ID = vw.Inv.GoldFlake
+   Size = 927
+   Description = ""
+
+[View217]
+   ID = vw.Inv.Mule1
+   Size = 794
+   Description = "belongs to Copyright Ranch"
+
+[View218]
+   ID = vw.Inv.Mule2
+   Size = 774
+   Description = "belongs to Triple T Ranch"
+
+[View219]
+   ID = vw.Inv.Mule3
+   Size = 754
+   Description = "belongs to Mr. Bell"
+
+[View220]
+   ID = vw.Inv.GoldCoin
+   Size = 891
+   Description = ""
+
+[View221]
+   ID = vw.Inv.Flowers
+   Size = 915
+   Description = ""
+
+[View222]
+   ID = vw.Inv.CapeHornTicket
+   Size = 1060
+   Description = ""
+
+[View223]
+   ID = vw.Inv.PanamaTicket
+   Size = 1017
+   Description = ""
+
+[View224]
+   ID = vw.Inv.CoachTicket
+   Size = 1101
+   Description = ""
+
+[View225]
+   ID = vw.Inv.Letter
+   Size = 1050
+   Description = ""
+
+[View226]
+   ID = vw.Inv.Bible
+   Size = 870
+   Description = ""
+
+[View227]
+   ID = vw.Inv.ShovelHandle
+   Size = 589
+   Description = ""
+
+[View228]
+   ID = vw.Inv.BoatString
+   Size = 1108
+   Description = ""
+
+[View229]
+   ID = vw.Inv.MetalPieces
+   Size = 653
+   Description = ""
+
+[View230]
+   ID = vw.Inv.Paperclip
+   Size = 549
+   Description = ""
+
+[View231]
+   ID = vw.Inv.Ham
+   Size = 614
+   Description = ""
+
+[View233]
+   ID = vw.Inv.Fish
+   Size = 664
+   Description = ""
+
+[View234]
+   ID = vw.Inv.GoldDisk
+   Size = 1037
+   Description = ""
+
+[View235]
+   ID = vw.Inv.Lumber
+   Size = 758
+   Description = ""
+
+[View236]
+   ID = vw.Inv.Rope
+   Size = 1252
+   Description = ""
+
+[View237]
+   ID = vw.Inv.Bucket
+   Size = 881
+   Description = ""
+
+[View238]
+   ID = vw.Inv.Chain
+   Size = 1174
+   Description = ""
+
+[View239]
+   ID = vw.Inv.MosquitoNet
+   Size = 1112
+   Description = ""
+
+[View240]
+   ID = vw.Inv.Lantern
+   Size = 911
+   Description = ""
+
+[View241]
+   ID = vw.Inv.Oranges
+   Size = 657
+   Description = ""
+
+[View242]
+   ID = vw.Inv.Flour
+   Size = 812
+   Description = ""
+
+[View243]
+   ID = vw.Inv.Peas
+   Size = 699
+   Description = ""
+
+[View244]
+   ID = vw.Inv.Beans
+   Size = 680
+   Description = ""
+
+[View245]
+   ID = vw.Inv.Vegetables
+   Size = 786
+   Description = ""
+
+[View246]
+   ID = vw.Inv.PickAx
+   Size = 903
+   Description = ""
+
+[View247]
+   ID = vw.Inv.Pan
+   Size = 1007
+   Description = ""
+
+[View248]
+   ID = vw.Inv.JamesMule
+   Size = 819
+   Description = ""
+
+[View249]
+   ID = vw.Inv.BrandingIron
+   Size = 848
+   Description = ""
+
+[View251]
+   ID = vw.Inv.SteelKey
+   Size = 640
+   Description = ""
+
+[View252]
+   ID = vw.Inv.LazyMule
+   Size = 810
+   Description = ""
+
+[View253]
+   ID = vw.Inv.Magnet
+   Size = 706
+   Description = ""
+
+[View254]
+   ID = vw.MissouriMap
+   Size = 1592
+   Description = "an animation showing the Missouri map scene appearing on main USA map"
+
+[View255]
+   ID = vw.Inv.Note
+   Size = 788
+   Description = ""
+[::END Views::]
+
+[WORDS.TOK]
+   Description = ""
+
+[OBJECT]
+   Description = ""

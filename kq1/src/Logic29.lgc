@@ -1,0 +1,39 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 80, 66, 0, 0);    }  if (previousRoom == 20)
+    {    if (!isset(ego.invisible))
+      {      set.view(ego, View0);      reset(keep.cycling);      }    }  random(0, 250, work);  if (work < 185)
+    {    v32 = 2;    step.size(o1, v32);    load.view(View5);    load.view(View116);    load.sound(Sound1);    load.sound(Sound17);    animate.obj(o1);    set.view(o1, View5);    set(f20);    }  if (isset(f20))
+    {Label1:    random(0, 250, v70);    if (v70 > 90)
+      {      goto(Label1);      }    }  draw(ego);  show.pic();  }if (isset(f21) &&     isset(f159))
+  {  if (!isset(f25))
+    {    set(f25);    sound(Sound17, f26);    }  if (isset(f26))
+    {    reset(f25);    reset(f26);    }  }--v70;if (v70 == 1)
+  {  position(o1, 40, 140);  set(f21);  sound(Sound1, f159);  draw(o1);  if (!isset(goat.following))
+    {    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    follow.ego(o1, 7, f156);    }  if (isset(goat.following))
+    {    wander(o1);    set(f22);    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    print("The sorcerer sees the goat and decides to leave.");    }  }if (!isset(f21))
+  {  if (said("anyword", "dwarf"))
+    {    print("There's no sorcerer here.");    }  if (said("cast", "dagger") &&       isset(have.dagger) &&       !isset(goat.following))
+    {    print("OK.  But you just lost your dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(f21))
+  {  if (said("check", "dwarf"))
+    {    print("This sorcerer exudes mystery and danger.");    }  if ((said("speak", "dwarf") ||       said("hello") ||       said("say", "hello")))
+    {    print("The sorcerer only speaks in the language of the Mystics.");    }  }if (isset(f156))
+  {  reset(f156);  if (isset(protected.spell))
+    {    print("This sorcerer's magic is no match for your fairy godmother's.");    wander(o1);    set(f22);    }  else
+    {    if (isset(ego.invisible))
+      {      print("Being invisible has protected you from this sorcerer.");      set(f27);      }    else
+      {      if (isset(have.shield))
+        {        print("The magic shield will protect you from this dangerous  sorcerer.");        wander(o1);        set(f22);        }      else
+        {        set(f24);        v30 = 250;        v31 = 2;        program.control();        stop.motion(ego);        set.view(o1, View116);        end.of.loop(o1, f23);        print("The sorcerer casts a spell, freezing you to the spot. I hope no "              "dangerous creatures drop by!");        set(f145);        set(f146);        }      }    }  }if (isset(f23))
+  {  reset(f23);  set.view(o1, View5);  start.cycling(o1);  wander(o1);  set(f22);  }if (isset(f22) &&     edgeObjHit != NOT_HIT)
+  {  erase(o1);  reset(f22);  reset(f21);  }if (isset(f27))
+  {  erase(o1);  reset(f27);  reset(f21);  }--v30;if (v30 == 0 &&     v31 > 0)
+  {  --v31;  v30 = 250;  }if (v30 == 1 &&     v31 == 0)
+  {  reset(f24);  print("The sorcerer's spell has expired; now you can move  again.  Whew!");  start.motion(ego);  player.control();  }if (isset(f24))
+  {  goto(Label2);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic36);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic30);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic28);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic20);  }if (isset(goat.following))
+  {  call(lgc.goat);  }Label2:return();[ Messages#message 1 "Be careful!  Nearby is a sorcerer.  His mystical powers can leave you immobilized and helpless!"#message 2 "The magic shield will protect you from this dangerous  sorcerer."#message 3 "You're so afraid of the sorcerer that your knees are locked."#message 4 "This sorcerer exudes mystery and danger."#message 5 "There's no sorcerer here."#message 6 "The sorcerer casts a spell, freezing you to the spot. I hope no dangerous creatures drop by!"#message 7 "The sorcerer's spell has expired; now you can move  again.  Whew!"#message 8 "You are immobilized!  You can't jump or duck now!"#message 9 "OK.  But you just lost your dagger."#message 10 "The sorcerer only speaks in the language of the Mystics."#message 11 "This sorcerer's magic is no match for your fairy godmother's."#message 12 "The sorcerer sees the goat and decides to leave."#message 13 "Being invisible has protected you from this sorcerer."

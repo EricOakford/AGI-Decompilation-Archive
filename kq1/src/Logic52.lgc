@@ -1,0 +1,26 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  ignore.horizon(ego);  load.view(View73);  set.view(ego, View73);  load.view(View114);  set(onWater);  if (previousRoom == 49)
+    {    position(ego, 75, 26);    }  else
+    {    position(ego, 38, 116);    }  if (previousRoom == 51)
+    {    if (!isset(f208))
+      {      set(f208);      currentScore  += 2;      }    }  v68 = 250;  v69 = 2;  if (isset(have.bucket) &&       !isset(have.water))
+    {    set(have.water);    get("water");    if (!isset(points.water))
+      {      set(points.water);      currentScore  += 2;      }    }  draw(ego);  show.pic();  if (isset(ego.invisible))
+    {    drop("magic ring");    currentScore -= 3;    print("Thrashing around in the water has caused you to lose the magic ring "          "and become visible again.");    reset(have.ring);    reset(ego.invisible);    reset(wearing.ring);    set(lost.ring);    invisible.seconds = 0;    invisible.minutes = 0;    }  }--v68;if (v68 == 0)
+  {  --v69;  if (v69 > 0)
+    {    v68 = 250;    }  }if (v68 == 0 &&     v69 == 0 &&     !isset(f22))
+  {  set(f22);  set.view(ego, View114);  print("Not even you can hold your breath forever.  The well bottom has become "        "your eternal resting place.");  ignore.blocks(ego);  get.posn(ego, goat.x, goat.y);  if (goat.y < 141)
+    {    move.obj(ego, 65, 140, 1, f21);    }  if (goat.y > 140)
+    {    set(f21);    }  }if (isset(f21))
+  {  reset(f21);  set(certain.death);  }if (said("check", "water"))
+  {  print("This looks like typical well water.");  }if (said("check", "bottle"))
+  {  print("It looks like this bottle has been here for a very long time.");  }if (said("acquire", "bottle"))
+  {  print("This is just an old, junky bottle.  You don't want it.");  }if (said("check", "well"))
+  {  print("You are at the bottom of the well.  Through the plants you spy what "        "seems to be a hole in the side of the well.");  }if (said("check", "doorway"))
+  {  if (posn(ego, 1, 75, 65, 166))
+    {    print("It is very difficult to tell where the hole might lead.");    }  else
+    {    print("You are too far away to see clearly.");    }  }if (said("check", "can"))
+  {  print("The rusty old can has been here awhile.");  }if (said("acquire", "can"))
+  {  print("You have no use for this old can.");  }if (posn(ego, 31, 111, 32, 130))
+  {  reset(onWater);  new.room(Logic51);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic49);  }return();[ Messages#message 1 "Not even you can hold your breath forever.  The well bottom has become your eternal resting place."#message 2 "This looks like typical well water."#message 3 "It looks like this bottle has been here for a very long time."#message 4 "This is just an old, junky bottle.  You don't want it."#message 5 "You are at the bottom of the well.  Through the plants you spy what seems to be a hole in the side of the well."#message 6 "It is very difficult to tell where the hole might lead."#message 7 "You are too far away to see clearly."#message 8 "The rusty old can has been here awhile."#message 9 "You have no use for this old can."#message 10 "Thrashing around in the water has caused you to lose the magic ring and become visible again."

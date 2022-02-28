@@ -1,0 +1,44 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(40);  load.sound(Sound4);  load.sound(Sound5);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 36, 84, 0, 0);    }  if ((isset(have.beans) ||       v80 == 38))
+    {    v92 = 84;    set(f155);    load.pic(v92);    load.view(View114);    load.view(View103);    load.view(View104);    load.view(View74);    load.view(View105);    load.logics(Logic104);    load.sound(Sound12);    }  if (previousRoom == 70 &&       isset(f157))
+    {    set.view(ego, View74);    position(ego, 64, 41);    move.obj(ego, 64, 41, 0, done);    set.priority(ego, 8);    }  if (previousRoom == 70 &&       isset(f158))
+    {    program.control();    ignore.horizon(ego);    set.priority(ego, 15);    set.view(ego, View105);    get.posn(ego, goat.x, goat.y);    if (goat.x > 75)
+      {      position(ego, 80, 29);      }    else
+      {      position(ego, 65, 29);      }    get.posn(ego, goat.x, goat.y);    goat.y = 106;    v96 = 2;    move.obj.v(ego, goat.x, goat.y, v96, f22);    }  if (v80 == 38)
+    {    overlay.pic(v92);    }  draw(ego);  show.pic();  }if (said("check", "room"))
+  {  print("Numerous flowers are growing in the fertile soil.");  }if (isset(f158) &&     !isset(f23))
+  {  set(f23);  set(f135);  sound(Sound5, f24);  }if (isset(f22))
+  {  stop.sound();  set(f23);  reset(f158);  reset(f135);  set.view(ego, View114);  shake.screen(2);  set(certain.death);  }if (said("check", "blossom"))
+  {  print("What a pretty bed of wild flowers.");  }if (said("smell", "blossom"))
+  {  if (posn(ego, 60, 61, 117, 113))
+    {    print("The flowers' fragrance is enticing.");    }  else
+    {    print("You will have to move closer to do that.");    }  }if (said("acquire", "blossom"))
+  {  if (posn(ego, 60, 61, 117, 113))
+    {    print("It would be a shame to pick the lovely wild flowers.");    }  else
+    {    print("You will have to move closer to do that.");    }  }if (isset(have.beans) &&     isset(f155))
+  {  if (said("bury", "bean"))
+    {    reset(have.beans);    v80 = 38;    set(f94);    drop("beans");    currentScore  += 2;    print("The beans immediately sprout roots that reach deep into the fertile "          "soil... leaves unfold themselves to the warm, loving sun... a "          "rumbling is felt... and a mighty beanstalk now stretches up into the "          "sky!");    sound(Sound12, f25);    overlay.pic(v92);    show.pic();    }  }if (v80 == 38 &&     !isset(ego.invisible))
+  {  if (said("climb", "beanstalk") &&       !isset(f157))
+    {    if (posn(ego, 52, 76, 103, 97))
+      {      erase(ego);      set.view(ego, View74);      set(f157);      position(ego, 71, 77);      set.priority(ego, 8);      draw(ego);      move.obj(ego, 71, 77, 0, done);      }    else
+      {      print("You can't reach the beanstalk from here.");      }    }  }if (v80 != 38)
+  {  if (said("climb", "beanstalk"))
+    {    print("There is no beanstalk here to climb.");    }  }if (isset(f157))
+  {  if (isset(egoHitSpecial) &&       posn(ego, 60, 78, 93, 80))
+    {    erase(ego);    set.view(ego, View0);    reset(f157);    position(ego, 70, 106);    release.priority(ego);    draw(ego);    }  if (isset(egoHitSpecial) &&       !posn(ego, 60, 78, 93, 80))
+    {    program.control();    set.priority(ego, 15);    get.posn(ego, goat.x, goat.y);    erase(ego);    set.view(ego, View105);    reset(f157);    position.v(ego, goat.x, goat.y);    draw(ego);    goat.y = 106;    v96 = 2;    move.obj.v(ego, goat.x, goat.y, v96, f20);    set(f135);    sound(Sound5, f198);    }  }--v30;if (isset(f20))
+  {  stop.sound();  reset(f20);  observe.blocks(ego);  release.priority(ego);  stop.motion(ego);  set.view(ego, View103);  v30 = 20;  set(keep.cycling);  shake.screen(2);  print("Ouch!");  set(f135);  sound(Sound4, f159);  }if (isset(f159))
+  {  if (v30 > 0)
+    {    reset(f159);    sound(Sound4, f159);    }  }if (v30 == 1)
+  {  set.view(ego, View104);  end.of.loop(ego, f21);  }if (isset(f21))
+  {  reset(f21);  reset(keep.cycling);  start.motion(ego);  set.view(ego, View0);  release.priority(ego);  player.control();  }if (edgeEgoHit != NOT_HIT)
+  {  reset(f155);  }if (edgeEgoHit == TOP_EDGE &&     isset(f157))
+  {  new.room(Logic70);  }if (edgeEgoHit == TOP_EDGE &&     !isset(f157))
+  {  new.room(Logic43);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic37);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic39);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic27);  }if (isset(goat.following))
+  {  call(lgc.goat);  }if (v80 == 38)
+  {  call(Logic104);  }return();[ Messages#message 1 "What a pretty bed of wild flowers."#message 2 "The flowers' fragrance is enticing."#message 3 "You will have to move closer to do that."#message 4 "It would be a shame to pick the lovely wild flowers."#message 5 "The beans immediately sprout roots that reach deep into the fertile soil... leaves unfold themselves to the warm, loving sun... a rumbling is felt... and a mighty beanstalk now stretches up into the sky!"#message 6 "You can't reach the beanstalk from here."#message 7 "There is no beanstalk here to climb."#message 8 "Ouch!"#message 9 "Numerous flowers are growing in the fertile soil."

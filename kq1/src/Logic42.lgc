@@ -1,0 +1,49 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(50);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 20, 87, 0, 0);    }  if (previousRoom == 7)
+    {    get.posn(ego, goat.x, goat.y);    if (goat.x > 99)
+      {      position(ego, 99, 52);      }    }  if (previousRoom == 39)
+    {    get.posn(ego, goat.x, goat.y);    if (goat.x < 56)
+      {      position(ego, 6, 165);      }    if (goat.x > 74)
+      {      position(ego, 109, 165);      }    }  if (previousRoom == 43)
+    {    get.posn(ego, goat.x, goat.y);    if (goat.y < 123)
+      {      position(ego, 140, 58);      }    if (goat.y > 122)
+      {      position(ego, 147, 150);      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (posn(ego, 0, 83, 159, 167))
+  {  set(f68);  }else
+  {  reset(f68);  }if (isset(onWater) &&     isset(f68) &&     !isset(f20))
+  {  set(f20);  print("You have fallen in the raging current and are swept under.  I'm afraid "        "your end has come.");  }if (said("check", "water"))
+  {  if (posn(ego, 93, 40, 159, 82))
+    {    print("The clear blue lake is surrounded by a pretty meadow.");    }  else
+    {    print("The river gets to be rather rough around these parts.");    }  }if (said("check", "bridge"))
+  {  print("It is an old stone bridge dating to ancient times.");  }if (said("look under", "bridge"))
+  {  print("You glance under the old bridge, but see nothing unusual.");  }if (drown.swim <= 0 &&     isset(onWater))
+  {  v76 = 255;  if (posn(ego, 126, 84, 159, 99))
+    {    v76 = 135;    v77 = 99;    }  if (posn(ego, 144, 118, 159, 131))
+    {    v76 = 139;    v77 = 113;    }  if (posn(ego, 0, 145, 16, 157))
+    {    v76 = 2;    v77 = 139;    }  if ((posn(ego, 18, 143, 54, 167) ||       posn(ego, 66, 143, 83, 167)))
+    {    v76 = 45;    v77 = 163;    }  if ((posn(ego, 70, 129, 102, 142) ||       posn(ego, 57, 97, 83, 116)))
+    {    v76 = 72;    v77 = 126;    }  if (posn(ego, 34, 103, 56, 116))
+    {    v76 = 38;    v77 = 127;    }  if (posn(ego, 0, 103, 33, 126))
+    {    v76 = 5;    v77 = 133;    }  if (v76 == 255)
+    {    v76 = 0;    }  else
+    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water) &&     (said("drink", "water") ||     said("acquire", "drink")))
+  {  if (posn(ego, 121, 40, 159, 81))
+    {    print("It tastes very refreshing to a thirsty wanderer.");    }  else
+    {    if ((posn(ego, 127, 79, 159, 92) ||         posn(ego, 145, 125, 159, 140) ||         posn(ego, 73, 130, 103, 167) ||         posn(ego, 0, 136, 49, 167) ||         posn(ego, 0, 88, 84, 112)))
+      {      print("Being careful not to slip in, you drink deeply of the cool water.");      }    else
+      {      print("You are too far from the water.");      }    }  }if (!isset(have.water) &&     isset(have.bucket))
+  {  if ((said("acquire", "water") ||       said("fill", "bucket")))
+    {    if (posn(ego, 121, 40, 159, 78))
+      {      print("The crystal clear water fills up the bucket.");      get("water");      set(have.water);      if (!isset(points.water))
+        {        currentScore  += 2;        }      set(points.water);      }    else
+      {      if ((posn(ego, 127, 79, 159, 92) ||           posn(ego, 145, 125, 159, 140) ||           posn(ego, 73, 130, 103, 167) ||           posn(ego, 0, 136, 49, 167) ||           posn(ego, 0, 88, 84, 112)))
+        {        print("Very carefully, the bucket fills with water from the  rapid "              "river.");        get("water");        set(have.water);        if (!isset(points.water))
+          {          currentScore  += 2;          }        set(points.water);        }      else
+        {        print("You are too far from the water.");        }      }    }  }if (edgeEgoHit != NOT_HIT)
+  {  reset(f68);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic7);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic43);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic41);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic39);  }if (isset(goat.following))
+  {  call(lgc.goat);  }call(lgc.swim);return();[ Messages#message 1 "You have fallen in the raging current and are swept under.  I'm afraid your end has come."#message 2 "It is an old stone bridge dating to ancient times."#message 3 "The river gets to be rather rough around these parts."#message 4 "Very carefully, the bucket fills with water from the  rapid river."#message 5 "Being careful not to slip in, you drink deeply of the cool water."#message 6 "You are too far from the water."#message 7 "The clear blue lake is surrounded by a pretty meadow."#message 8 "It tastes very refreshing to a thirsty wanderer."#message 9 "The crystal clear water fills up the bucket."#message 10 "You glance under the old bridge, but see nothing unusual."

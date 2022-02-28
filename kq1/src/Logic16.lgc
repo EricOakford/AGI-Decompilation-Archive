@@ -1,0 +1,27 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 114, 71, 0, 0);    }  if (previousRoom == 17)
+    {    if (isset(onWater))
+      {      set.view(ego, View0);      reset(keep.cycling);      drown.swim = 0;      }    }  draw(ego);  show.pic();  }if (said("check", "room"))
+  {  print("You see an old stone wall surrounding a well kept garden.");  }if ((said("check", "carrot patch") ||     said("check", "grass") ||     said("check", "bury") ||     said("check", "bush")))
+  {  print("This is a neat little carrot patch.  The plump carrots  look tempting.");  }if ((said("check", "fence") ||     said("check", "rock wall")))
+  {  print("It is a relatively low, native stone and masonry fence to the right "        "and rear of a garden.");  }if ((said("climb", "fence") ||     said("climb", "rock wall")))
+  {  print("There is no reason to climb the fence.");  }if ((said("jump", "fence") ||     said("jump", "rock wall")))
+  {  print("You can go around the fence.");  }if ((posn(ego, 0, 57, 97, 78) ||     posn(ego, 0, 79, 117, 102) ||     posn(ego, 0, 103, 140, 152)))
+  {  set(f20);  }else
+  {  reset(f20);  }if (isset(f20))
+  {  if (!isset(have.carrot) &&       said("check", "carrot"))
+    {    print("There are many large, plump carrots in the garden.");    }  if (!isset(have.carrot) &&       said("acquire", "carrot"))
+    {    print("You pluck a delicious looking carrot from the fertile soil.");    set(have.carrot);    reset(ate.carrot);    get("carrot");    if (!isset(carrot.points))
+      {      currentScore  += 2;      set(carrot.points);      }    }  }if (!isset(f20))
+  {  if (!isset(have.carrot) &&       said("check", "carrot"))
+    {    print("They are buried in the ground.  You must get closer to see them.");    }  if (!isset(have.carrot) &&       said("acquire", "carrot"))
+    {    print("You cannot do that from here.");    }  }if (!isset(have.carrot))
+  {  if (said("consume", "carrot"))
+    {    print("You do not have a carrot to eat.");    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic17);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic9);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic15);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic1);  }if (isset(goat.following))
+  {  call(lgc.goat);  }return();[ Messages#message 1 "This is a neat little carrot patch.  The plump carrots  look tempting."#message 2 "There is no reason to climb the fence."#message 3 "You can go around the fence."#message 4 "It is a relatively low, native stone and masonry fence to the right and rear of a garden."#message 5 "There are many large, plump carrots in the garden."#message 6 "You pluck a delicious looking carrot from the fertile soil."#message 7 "They are buried in the ground.  You must get closer to see them."#message 8 "You cannot do that from here."#message 9 "You do not have a carrot to eat."#message 10 "You see an old stone wall surrounding a well kept garden."

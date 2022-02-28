@@ -1,0 +1,22 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 36)
+    {    set.view(ego, View60);    position(ego, 3, 81);    }  if (previousRoom == 77)
+    {    position(ego, 146, 131);    move.obj(ego, 145, 130, 0, done);    }  if (!isset(have.mushroom))
+    {    v30 = 250;    v31 = 4;    }  draw(ego);  show.pic();  }if (!isset(have.mushroom))
+  {  --v30;  if (v30 == 0)
+    {    if (v31 > 0)
+      {      --v31;      v30 = 250;      }    }  }if (v30 == 1 &&     v31 == 0)
+  {  stop.cycling(ego);  print("You seem to be stuck in these underground caverns.  As you have no way "        "of leaving, it looks like you'll spend the rest of your life here.");  set(certain.death);  }if (isset(ego.shrunk))
+  {  ignore.blocks(ego);  }else
+  {  observe.blocks(ego);  }if (shrink.timer == 1 &&     isset(ego.shrunk))
+  {  if (posn(ego, 1, 75, 12, 82))
+    {    reset(ego.shrunk);    print("You feel a stretching sensation... Oh, you're back to your original "          "size.  You can't get out of the small cave!");    set(certain.death);    }  else
+    {    set.view(ego, View0);    print("You feel a stretching sensation... Oh, you're back to your original "          "size.");    reset(ego.shrunk);    }  }if (said("check", "stairs"))
+  {  print("The stairs are very steep and narrow.");  }if ((said("check", "doorway") ||     said("look in", "doorway")))
+  {  print("The small hole leads to the outside world.");  }if ((said("enter", "doorway") ||     said("enter", "doorway")))
+  {  if (isset(ego.shrunk))
+    {    print("Go ahead.  Walk right in.");    }  else
+    {    print("You are much too big to fit through that small hole.");    }  }if ((said("check", "cave") ||     said("check", "room")))
+  {  print("This is a small cave with stairs on one side and a very small hole on "        "the other side.");  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic77);  }if (posn(ego, 0, 0, 1, 167))
+  {  new.room(Logic36);  }return();[ Messages#message 1 "You feel a stretching sensation... Oh, you're back to your original size.  You can't get out of the small cave!"#message 2 "The stairs are very steep and narrow."#message 3 "The small hole leads to the outside world."#message 4 "You are much too big to fit through that small hole."#message 5 "You feel a stretching sensation... Oh, you're back to your original size."#message 6 "Go ahead.  Walk right in."#message 7 "This is a small cave with stairs on one side and a very small hole on the other side."#message 8 "You seem to be stuck in these underground caverns.  As you have no way of leaving, it looks like you'll spend the rest of your life here."

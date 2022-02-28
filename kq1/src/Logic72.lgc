@@ -1,0 +1,31 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View74);  load.sound(Sound5);  if (previousRoom == 56)
+    {    position(ego, 145, 109);    }  if (previousRoom == 71)
+    {    set.view(ego, View74);    position(ego, 66, 165);    move.obj(ego, 66, 165, 0, done);    }  draw(ego);  show.pic();  }if (isset(f158) &&     !isset(f22) &&     !isset(f23))
+  {  sound(Sound5, f159);  set(f23);  }if (!posn(ego, 65, 100, 84, 120) &&     !isset(f157) &&     !isset(ego.invisible))
+  {  if (said("climb", "beanstalk"))
+    {    print("You need to be closer to do that.");    }  }if (isset(ego.invisible))
+  {  if (said("climb", "beanstalk"))
+    {    print("You can't do that when you are invisible!");    }  }if (isset(f157))
+  {  if (said("check", "beanstalk"))
+    {    get.posn(ego, goat.x, goat.y);    if (goat.y > 140)
+      {      print("Your heart thuds.  Dare you climb into the clouds?");      }    if (goat.y < 141)
+      {      print("It is amazing that you actually climbed up this high!");      }    }  }if (!isset(f157))
+  {  if (said("check", "beanstalk"))
+    {    get.posn(ego, goat.x, goat.y);    if (goat.x > 89)
+      {      print("It is hard to believe those seeds you planted grew this high.");      }    if (goat.x < 90)
+      {      print("It is a long, long way down....");      }    }  }if ((said("check", "clouds") ||     said("check", "room")))
+  {  print("You are in the Land of the Clouds.  It is rumored a giant lives up "        "here.");  }if (isset(egoHitSpecial) &&     !isset(f21) &&     !posn(ego, 65, 100, 82, 120) &&     !isset(f157))
+  {  set(f21);  if (!isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  goat.y = 165;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  sound(Sound5, f198);  }if (isset(egoHitSpecial) &&     !isset(f21) &&     posn(ego, 65, 100, 82, 120) &&     isset(ego.invisible))
+  {  set(f21);  if (!isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  goat.y = 165;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  sound(Sound5, f198);  }if (isset(f20))
+  {  reset(f20);  erase(ego);  print("Whoops!  You fall toward a distant earth.");  set(certain.death);  }if (isset(egoHitSpecial) &&     posn(ego, 65, 100, 82, 120) &&     !isset(ego.invisible))
+  {  if (isset(f157))
+    {    reset(f157);    erase(ego);    set.view(ego, View0);    position(ego, 85, 112);    draw(ego);    move.obj(ego, 85, 112, 0, done);    goto(Label1);    }  if (!isset(f157))
+    {    set(f157);    erase(ego);    set.view(ego, View74);    position(ego, 70, 123);    draw(ego);    move.obj(ego, 70, 123, 0, done);    }  }if (isset(egoHitSpecial) &&     isset(f157))
+  {  program.control();  print("Whoops!  You fall toward a distant earth.");  get.posn(ego, goat.x, goat.y);  reset(f157);  set(f158);  erase(ego);  set.view(ego, View105);  if (goat.x > 75)
+    {    goat.x = 80;    position.v(ego, goat.x, goat.y);    draw(ego);    }  if (goat.x < 76)
+    {    goat.x = 65;    position.v(ego, goat.x, goat.y);    draw(ego);    }  start.cycling(ego);  set(keep.cycling);  goat.y = 166;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f22);  }Label1:if ((isset(f22) ||     posn(ego, 0, 166, 159, 167)))
+  {  new.room(Logic71);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic56);  }return();[ Messages#message 1 "If you were to jump or duck here you might fall."#message 2 "You need to be closer to do that."#message 3 "You can't do that when you are invisible!"#message 4 "Whoops!  You fall toward a distant earth."#message 5 "Your heart thuds.  Dare you climb into the clouds?"#message 6 "It is a long, long way down...."#message 7 "It is amazing that you actually climbed up this high!"#message 8 "It is hard to believe those seeds you planted grew this high."#message 9 "You are in the Land of the Clouds.  It is rumored a giant lives up here."

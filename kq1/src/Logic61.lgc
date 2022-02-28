@@ -1,0 +1,11 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound5);  set.horizon(60);  draw(ego);  show.pic();  }if ((said("check", "room") ||     said("check", "clouds")))
+  {  print("You are in the Land of the Clouds.  It is rumored that a giant lives "        "up here.");  }if ((said("check", "tree") ||     said("check", "blossom")))
+  {  print("This is very strange vegetation.");  }if (isset(egoHitSpecial))
+  {  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  goat.y  += 8;  v96 = 4;  sound(Sound5, f159);  move.obj.v(ego, goat.x, goat.y, v96, f21);  }if (isset(f21))
+  {  reset(f21);  erase(ego);  }if (isset(f159))
+  {  reset(f159);  set(f20);  }if (isset(f20))
+  {  reset(f20);  print("Oops!  You've missed the edge and fallen through the clouds.");  set(certain.death);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic58);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic62);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic60);  }return();[ Messages#message 1 "You are in the Land of the Clouds.  It is rumored that a giant lives up here."#message 2 "Oops!  You've missed the edge and fallen through the clouds."#message 3 "This is very strange vegetation."

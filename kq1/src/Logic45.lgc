@@ -1,0 +1,26 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(43);  if (isset(goat.following))
+    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
+    {    add.to.pic(View62, 0, 0, 77, 83, 0, 0);    }  draw(ego);  show.pic();  }if (said("check", "building"))
+  {  print("This old cottage is sagging and in great need of repair.");  }if (said("check", "stump"))
+  {  print("The trees were cut from these stumps long ago.");  }if ((said("speak", "dwarf") ||     said("speak", "fairy")))
+  {  if (posn(ego, 11, 119, 45, 146))
+    {    print("You need to go inside to do that.");    }  else
+    {    print("You can't do that now.");    }  }if ((said("check", "dwarf") ||     said("check", "fairy")))
+  {  if (posn(ego, 11, 119, 45, 146))
+    {    print("Perhaps you should go inside the house for a better look.");    }  else
+    {    print("You could get a much better view if you were a little bit closer.");    }  }if ((said("check", "window") ||     said("look in", "window")))
+  {  if (posn(ego, 11, 119, 45, 146))
+    {    print("When you look in the window, you see a poor, starving woodcutter and "          "his wife.");    }  else
+    {    print("You could get a much better view if you were a little bit closer.");    }  }if (said("break", "window"))
+  {  if (posn(ego, 11, 119, 45, 146))
+    {    print("There isn't a glass pane in this window.");    }  else
+    {    print("You are not close enough.");    }  }if (said("climb", "window"))
+  {  if (posn(ego, 11, 119, 45, 146))
+    {    print("You should really try to find the door.");    }  else
+    {    print("You are not close enough.");    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic4);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic46);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic44);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic36);  }if (isset(goat.following))
+  {  call(lgc.goat);  }return();[ Messages#message 1 "This old cottage is sagging and in great need of repair."#message 2 "The trees were cut from these stumps long ago."#message 3 "When you look in the window, you see a poor, starving woodcutter and his wife."#message 4 "There isn't a glass pane in this window."#message 5 "You could get a much better view if you were a little bit closer."#message 6 "You are not close enough."#message 7 "You should really try to find the door."#message 8 "You need to go inside to do that."#message 9 "You can't do that now."#message 10 "Perhaps you should go inside the house for a better look."

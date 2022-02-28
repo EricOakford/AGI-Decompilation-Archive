@@ -1,0 +1,82 @@
+if (isset(newRoom))
+  {  ignore.horizon(ego);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View114);  load.sound(Sound1);  load.sound(Sound5);  load.sound(Sound9);  load.sound(Sound18);  v33 = 0;  if (isset(have.sling))
+    {    load.view(View102);    animate.obj(o15);    set.view(o15, View102);    }  if (!isset(have.chest) &&       !isset(f169))
+    {    load.view(View37);    animate.obj(o2);    set.view(o2, View37);    load.view(View36);    load.view(View52);    load.view(View68);    load.view(View77);    }  if ((isset(have.chest) ||       isset(f169)))
+    {    load.view(View68);    load.view(View66);    load.view(View77);    }  if (v86 == 0)
+    {    animate.obj(o1);    set.view(o1, View36);    position(o1, 91, 71);    follow.ego(o1, 10, f22);    set(f23);    v30 = 250;    v31 = 2;    }  if (v86 == 2)
+    {    animate.obj(o1);    set.view(o1, View66);    position(o1, 91, 71);    follow.ego(o1, 10, f22);    set(f23);    }  if (v86 == 4)
+    {    animate.obj(o1);    set.view(o1, View77);    position(o1, 73, 113);    set.cel(o1, 3);    stop.cycling(o1);    step.size(o1, v33);    animate.obj(o2);    set.view(o2, View37);    position(o2, 75, 114);    draw(o2);    }  if (v86 == 5)
+    {    animate.obj(o1);    set.view(o1, View77);    position(o1, 73, 113);    set.cel(o1, 3);    stop.cycling(o1);    step.size(o1, v33);    }  draw(o1);  draw(ego);  show.pic();  }if ((v86 == 0 ||     v86 == 2))
+  {  if (!isset(f26))
+    {    set(f26);    sound(Sound1, done);    }  }if (isset(f22) &&     isset(f23))
+  {  if (isset(ego.invisible))
+    {    reset(f22);    reset(f23);    print("The giant cannot see you since you are invisible.");    wander(o1);    }  else
+    {    if (isset(have.shield))
+      {      reset(f22);      reset(f23);      print("You are fortunate that you have the magic shield or this giant "            "would cause problems for you.");      wander(o1);      }    else
+      {      if (isset(protected.spell))
+        {        reset(f22);        reset(f23);        print("The fairy godmother's spell is protecting you.");        wander(o1);        }      else
+        {        if (!isset(have.shield) &&             !isset(ego.invisible) &&             !isset(protected.spell))
+          {          if ((v86 == 0 ||               v86 == 2))
+            {            reset(f22);            reset(f23);            set.view(ego, View114);            print("Be a little more careful next time.  This giant is mean!");            wander(o1);            set(certain.death);            }          }        }      }    }  }if (isset(egoHitSpecial))
+  {  set(f199);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  sound(Sound5, f159);  erase(ego);  }if (isset(f159))
+  {  reset(f159);  set(f20);  }if (isset(f20))
+  {  reset(f20);  print("You know you can't walk on clouds.");  set(certain.death);  }if (said("check", "giant"))
+  {  if (v86 == 2)
+    {    print("The giant is enormous!  He does look rather stupid, though.");    }  if (v86 == 0)
+    {    print("The enormous giant has been carrying that heavy chest for longer "          "than he can remember.");    }  if (v86 == 1)
+    {    print("The giant is sleeping with a chest.");    }  if (v86 == 3)
+    {    print("The huge giant has fallen asleep and is now snoring loudly.");    }  if (v86 == 4)
+    {    print("The giant lies dead on the ground and there is a chest beside him.");    }  if (v86 == 5)
+    {    print("The giant has been slain by a little pebble to the forehead.");    }  }if ((said("speak", "giant") ||     said("hello") ||     said("say", "hello")))
+  {  if ((v86 == 2 ||       v86 == 0))
+    {    print("The giant is in no mood for talking.");    }  if ((v86 == 1 ||       v86 == 3))
+    {    print("It is not a good idea to wake a sleeping giant.");    }  if ((v86 == 4 ||       v86 == 5))
+    {    print("A dead giant does not have a lot to say.");    }  }if (!isset(have.chest) &&     !isset(f169))
+  {  if (said("check", "chest"))
+    {    print("The magic chest appears to have been fashioned from ebony and rimmed "          "on the edges with gold.");    }  }if (!isset(have.chest))
+  {  if ((said("acquire", "chest") ||       said("acquire", "chest", "giant")))
+    {    if (v86 == 0)
+      {      print("The giant is protecting the magic chest.");      }    if (isset(f169))
+      {      print("There is no chest around here to get.");      }    distance(ego, o1, v70);    if (v86 == 1)
+      {      if (v70 > 30)
+        {        print("There is no way you can get the chest from here!");        }      else
+        {        erase(o1);        set.view(o1, View68);        stop.motion(o1);        draw(o1);        print("Very carefully, you slip the magic chest from the sleeping "              "giant's arms.");        set(have.chest);        set(f169);        currentScore  += 8;        get("chest");        ++num.treasures;        v86 = 3;        }      }    distance(ego, o2, work);    if (v86 == 4)
+      {      if (work > 30)
+        {        print("There is no way you can get the chest from here!");        }      else
+        {        erase(o2);        print("It's easy to take a magic chest from a dead giant.");        set(have.chest);        set(f169);        currentScore  += 8;        get("chest");        ++num.treasures;        v86 = 5;        }      }    }  }if (isset(have.sling))
+  {  distance(ego, o1, v71);  if ((said("use", "sling") ||       said("a", "sling")))
+    {    if (!isset(have.pebbles))
+      {      print("You need some kind of small rock to use the sling.");      }    if (isset(have.pebbles) &&         v71 < 20)
+      {      print("The giant is to close for the slingshot to be effective.  I would "            "suggest you RUN!");      }    if (isset(have.pebbles) &&         !isset(f169) &&         !isset(ego.invisible) &&         v86 == 0 &&         v71 > 19 &&         !isset(f199))
+      {      reset(f23);      get.posn(ego, ego.x, ego.y);      position.v(o15, ego.x, ego.y);      erase(ego);      draw(o15);      sound(Sound18, done);      end.of.loop(o15, f24);      print("You put the pebble in the sling, take careful aim, and luckily hit "            "the giant in the forehead!  He falls down dead.");      reset(have.pebbles);      drop("pebbles");      currentScore -= 1;      }    if (isset(have.pebbles) &&         isset(f169) &&         !isset(ego.invisible) &&         v86 == 2 &&         v71 > 19)
+      {      reset(f23);      get.posn(ego, ego.x, ego.y);      position.v(o15, ego.x, ego.y);      erase(ego);      draw(o15);      sound(Sound18, done);      end.of.loop(o15, f25);      print("You put the pebble in the sling, take careful aim, and luckily hit "            "the giant in the forehead!  He falls down dead.");      reset(have.pebbles);      drop("pebbles");      currentScore -= 1;      }    if (isset(have.pebbles) &&         !isset(f169) &&         isset(ego.invisible))
+      {      if ((v86 == 0 ||           v86 == 2))
+        {        print("Not when you're invisible!");        }      }    if (isset(have.pebbles))
+      {      if ((v86 == 1 ||           v86 == 3))
+        {        print("It would be rather cowardly of you to kill a giant while he is "              "asleep!");        }      }    }  }if (isset(f24))
+  {  reset(f24);  erase(o15);  set.view(ego, View0);  position.v(ego, ego.x, ego.y);  draw(ego);  erase(o1);  set.view(o1, View77);  step.size(o1, v33);  draw(o1);  end.of.loop(o1, done);  get.posn(o1, goat.x, goat.y);  position.v(o2, goat.x, goat.y);  draw(o2);  v86 = 4;  currentScore  += 3;  }if (isset(f25))
+  {  reset(f25);  erase(o15);  set.view(ego, View0);  position.v(ego, ego.x, ego.y);  draw(ego);  erase(o1);  set.view(o1, View77);  step.size(o1, v33);  draw(o1);  end.of.loop(o1, done);  v86 = 5;  }if (isset(have.dagger))
+  {  if ((said("use", "dagger") ||       said("cast", "dagger")))
+    {    reset(have.dagger);    drop("dagger");    print("I don't believe it!  How could you miss something so big?");    currentScore -= 5;    }  }if (said("kill", "giant"))
+  {  if (v86 == 0)
+    {    print("How?");    }  if (v86 == 2)
+    {    print("There is no reason to kill the giant.");    }  if ((v86 == 1 ||       v86 == 3))
+    {    print("It would be rather cowardly of you to kill a giant while he is "          "asleep!");    }  if ((v86 == 4 ||       v86 == 5))
+    {    print("The giant has been slain by a little pebble to the forehead.");    }  }if ((said("check", "room") ||     said("check", "clouds")))
+  {  print("You are in the Land of the Clouds.  It is rumored that a giant lives "        "up here.");  }if (v86 == 0)
+  {  --v30;  if (v30 == 0)
+    {    if (v31 > 0)
+      {      --v31;      v30 = 250;      }    }  }if (v30 == 1 &&     v31 == 0)
+  {  reset(f23);  v30 = 0;  stop.motion(o1);  erase(o1);  set.view(o1, View52);  step.size(o1, v33);  draw(o1);  v86 = 1;  if (!isset(f205))
+    {    set(f205);    currentScore  += 7;    }  print("What luck!  The huge giant fell fast asleep!");  }if ((v86 == 1 ||     v86 == 3))
+  {  if (!isset(f28))
+    {    set(f28);    sound(Sound9, f27);    }  if (isset(f27))
+    {    reset(f27);    reset(f28);    }  }if (isset(certain.death))
+  {  goto(Label1);  }if (edgeEgoHit != NOT_HIT)
+  {  if (v86 == 1)
+    {    v86 = 0;    }  if (v86 == 3)
+    {    v86 = 2;    }  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic59);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic57);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic61);  }Label1:return();[ Messages#message 1 "You are fortunate that you have the magic shield or this giant would cause problems for you."#message 2 "The giant cannot see you since you are invisible."#message 3 "The fairy godmother's spell is protecting you."#message 4 "The giant is enormous!  He does look rather stupid, though."#message 5 "The enormous giant has been carrying that heavy chest for longer than he can remember."#message 6 "The huge giant has fallen asleep and is now snoring loudly."#message 7 "The magic chest appears to have been fashioned from ebony and rimmed on the edges with gold."#message 8 "The giant is protecting the magic chest."#message 9 "There is no chest around here to get."#message 10 "Very carefully, you slip the magic chest from the sleeping giant's arms."#message 11 "There is no way you can get the chest from here!"#message 12 "It's easy to take a magic chest from a dead giant."#message 13 "You need some kind of small rock to use the sling."#message 14 "You put the pebble in the sling, take careful aim, and luckily hit the giant in the forehead!  He falls down dead."#message 15 "Not when you're invisible!"#message 16 "It would be rather cowardly of you to kill a giant while he is asleep!"#message 17 "You have no sling!"#message 18 "I don't believe it!  How could you miss something so big?"#message 19 "You have no dagger!"#message 20 "How?"#message 21 "There is no reason to kill the giant."#message 22 "You are in the Land of the Clouds.  It is rumored that a giant lives up here."#message 23 "The giant has been slain by a little pebble to the forehead."#message 24 "Be a little more careful next time.  This giant is mean!"#message 25 "You know you can't walk on clouds."#message 26 "The giant is in no mood for talking."#message 27 "It is not a good idea to wake a sleeping giant."#message 28 "A dead giant does not have a lot to say."#message 29 "What luck!  The huge giant fell fast asleep!"#message 30 "The giant is sleeping with a chest."#message 31 "The giant lies dead on the ground and there is a chest beside him."#message 32 "The giant is to close for the slingshot to be effective.  I would suggest you RUN!"

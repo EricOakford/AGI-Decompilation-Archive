@@ -1,0 +1,352 @@
+[
+[ global defines file for GR
+[ location: C:\Users\Andy\OneDrive\AGI Stuff\AGI Test Games\GR\
+[
+#define keyNextScene            c0 [ key: Ctrl+N
+#define mnuQuit                 c1 [ key: Alt+Q
+#define mnuHelp                 c2 [ key: F1
+#define mnuSave                 c3 [ key: F5
+#define mnuToggleScore          c4 [ key: F4
+#define mnuRestore              c5 [ key: F7
+#define mnuTime                 c6 [ key: F6
+#define mnuRestart              c7 [ key: F9
+#define keyTrekMsgs             c8 [ key: F8
+#define mnuEchoLine             c9 [ key: F3
+#define mnuInventory           c10 [ key: Ctrl+I/TAB
+#define mnuSpeedSlow           c11 [ key: none
+#define keyToggleMonitor       c12 [ key: Ctrl+R
+#define keyAltD                c14 [ key: Alt+D
+#define mnuInitJoystick        c15 [ key: Ctrl+J
+#define mnuToggleSound         c16 [ key: F2
+#define mnuCancelLine          c17 [ key: Ctrl+C
+#define mnuPause               c18 [ key: F10
+#define keyShowPri             c19 [ key: Ctrl+P
+#define keyShowCoords          c21 [ key: Alt+S
+#define mnuSpeedNormal         c22 [ key: none
+#define mnuSpeedFast           c23 [ key: none
+#define keyShowMenu            c25 [ key: ESC
+#define mnuSeparator           c27 [ key: none
+#define mnuSpeedFastest        c28 [ key: none
+#define mnuAbout               c29 [ key: none
+#define mnuSpeedSlower         c30 [ key: none
+#define PanelRaised            f30 [ indicates that the secret panel in the fireplace between room 11 and room 12 is raised
+#define HotelRoomEmpty         f31 [ this flag is set when the guest in room 11 is not in; it means it's safe for Jerrod to be in room 11 without getting caught
+#define RushAnnounced          f32 [ set after the message announcing the gold rush is displayed so it only gets shown once
+#define CashWithdrawn          f33 [ when TRUE, it means Jerrod has gotten his money from his bank account
+#define RushIsPublic           f35 [ after this flag gets set, travel ticket prices go way up, and Jerrod's house won't sell for full value
+#define FerryAtDock            f36 [ TRUE when the ferry is at the dock, before it leaves with the stagecoach
+#define ShipSailed             f37 [ TRUE when ship has sailed (so rooms that can see the ship don't draw it anymore)
+#define OnGangplank            f38 [ set when Jerrod is on the gangplank, so ship can't leave until he's off it
+#define ShowStatus             f40 [ when set, special status lines are displayed
+#define StatusLineSet          f41 [ set when status line is drawn, so it doesn't get redrawn when not necessary
+#define OnSteamship            f42 [ set when Jerrod is on the ship while it's docked in Brooklyn; needed so the ship doesn't leave if Jerrod is aboard when he's not supposed to be
+#define InCalifornia           f43 [ set when Jerrod completes trip to California; used to adjust score music, and grammar/style of game messages
+#define ScoreFlowers           f44 [ score 2 points for picking flowers in park by gazebo
+#define InPostOffice           f45 [ this flag has no effect; it's referenced in post office interior room, but doesn't do anything
+#define FoundGoldFlake         f46 [ set when Jerrod finds the gold flake under the stamp on letter from Jake
+#define Window12Unlatched      f48 [ set when window 12 is unlatched
+#define SeenBoatTicketFlyer    f49 [ set when Jerrod reads flyer announcing boat tickets for first time
+#define ScoreLetterClue        f56 [ score 5 points when Jerrod finds the clue on the tombstone by using the letter
+#define CycleAtRest            f57 [ set when ego view needs to cycle even when not moving
+#define FadeName               f58 [ used to manage the display and fading of lcoation names when Jerrod arrives in California
+#define FoundCabin             f59 [ set when Jerrod finds Jake's cabin, so he can come back to it later while in the wilderness
+#define OnDeckInStorm          f60 [ set when Jerrod is topside in a storm
+#define ScoreBankStatement     f61 [ score 2 points for reading Jerrod's bank statement
+#define ScoreMarshallGrave     f62 [ score 2 points when Jerrod finds James Marshall grave
+#define FlowersOnGrave         f64 [ set when Jerrod puts flowers on his parents' graves
+#define DropAllCash            f65 [ set this flag when Jerrod needs to get rid of all his money
+#define HideTripMsgs           f66 [ when true, messages are hidden during trip cut sequences
+#define BrokeValve1            f67 [ set when Jerrod breaks the valve in ship engineroom
+#define SickAtSea              f68 [ indicates when Jerrod is sick, and will die unless remedied
+#define HasHam                 f69 [ Jerrod got a piece of ham while on the ship
+#define DyingAtSea             f70 [ indicates Jerrod is going to die at sea for one of several reasons
+#define BrokeValve2            f71 [ duplicate- does exactly the same as f67
+#define ContinueJourney        f72 [ set when trip cutscenes are done so the main timing logic knows when to advance to next scene
+#define Window12Open           f73 [ set when window to room 12 is open
+#define LazyMuleBranded        f74 [ set when Jerrod puts brand on the lazy mule
+#define EnteredStable          f75 [ set when Jerrod first enters the stable
+#define PastAnts               f76 [ set when Jerrod first enters jungle area with ants and the reading man
+#define PastPoisonPlants       f77 [ set when Jerrod first enters jungle area with deadly plants
+#define PastRiverCrossing      f78 [ set when Jerrod first enters jungle area with deep river crossing
+#define LockedWheels           f79 [ true if Jerrod locked the wagon wheels at Green River
+#define ScoreWareHousePoster   f80 [ score 2 points for reading poster in warehouse
+#define ScorePlaceFlowers      f81 [ score 3 points for placing flowers at parents' graves
+#define ScoreVisitMa           f82 [ score 1 point for visiting father's grave
+#define ScoreVisitPa           f83 [ score 1 point for visiting mother's grave
+#define ScoreClippings         f84 [ score 3 points for reading newspaper clippings in Jerrod's newspaper office
+#define Window12Broken         f85 [ set when Jerrod breaks window 12
+#define ScorePostmark          f86 [ score 1 point for reading postmark on letter from Jake
+#define ScoreMosquitoNet       f87 [ score 4 points for starting Panama trip with mosquito net
+#define ScoreFruit             f88 [ score 4 points for starting Cape Horn trip with fruit
+#define ScoreAlbum             f89 [ score 2 points for reading family photo album
+#define Window11Unlatched      f90 [ set when window to room 11 is unlatched
+#define Window11Open           f91 [ set when window to room 11 is open
+#define Window11Broken         f92 [ set when Jerrod breaks the window to room 11
+#define ScoreSecretPanel       f93 [ score 5 points for finding secret panel in fireplace
+#define HasRoom11Message       f94 [ Set when the hotel clerk gives Jerrod the message for room 11
+#define BirdInCage             f95 [ set when the bird is in its cage when Jerrod leaves room 12, so that the bird will be in the cage when Jerrod comes back
+#define BoughtMule             f96 [ set when Jerrod buys a mule at the corral
+#define ScoreJamesMule         f98 [ score 7 points for getting James' mule
+#define DoneNoAction           f99 [ used by motions and sounds when it doesn't matter what happens after the motion/sound is done
+#define BanditsPresent        f100 [ when set, bandits will arrive in Jerrod's current wilderness location and steal all his gold
+#define DropAllGold           f102 [ set to indicate that Jerrod is losing all his gold
+#define MuleTiedToHotelPost   f103 [ set when Jerrod ties his mule to the hitching post outside the hotel; allows Jerrod to explore Coloma without having to worry about his mule wandering away
+#define DropLazyMule          f104 [ Jerrod has temporarily dropped the lazy mule (tied to hitching post)
+#define DropJamesMule         f105 [ Jerrod has temporarily dropped James' mule (tied to hitching post)
+#define InTailrace            f106 [ Set when Jerrod is in Sutters Mill tail race so wading view can be used
+#define MuleLeftRoom          f107 [ indicates Jerrod's mule has moved to another room
+#define LazyMuleGone          f108 [ when lazy mule runs away, he doesn't ever come back
+#define TookJamesMule         f109 [ set when Jerrod takes James' mule in the south end of the stable
+#define LeftLazyMule          f110 [ set when Jerrod leaves his lazy mule in the south end of the stable
+#define LanternLit            f111 [ indicates Jerrod has lit his lamp in the tunnels
+#define ReadBibleHint         f112 [ set when Jerrod reads the Bible page with the hint
+#define TunnelEnd             f114 [ indicates Jerrod made it to end of the tunnel, ready to enter last tunnel room
+#define UsedLantern           f115 [ set if Jerrod uses lantern; used to give a bonus if Jerrod navigates tunnels in complete darkness
+#define FallingOvbd           f116 [ indicates Jerrod is being blown overboard in a storm
+#define ScoreJungle           f117 [ score 10 points for successfully crossing Panama jungle
+#define ScoreAnts             f119 [ sore 4 points if Jerrod avoids the ants in Panama
+#define AteHam                f120 [ indicates Jerrod ate ham at sea
+#define ScoreHam              f121 [ score 3 points for getting ham
+#define ScoreFishing          f122 [ score 8 points for going fishing
+#define ScorePaperclip        f123 [ score 3 points for finding paperclip
+#define ScoreEatHam           f124 [ score 3 points for eating ham at sea
+#define ScoreCoalHold         f125 [ score 2 points just for opening coal hold door (makes no sense, but that's what happens)
+#define NearJakeMsg           f126 [ set in tunnel after Jerrod is told Jake is nearby
+#define FoundJake             f127 [ set when Jerrod reaches tunnel 16 and finds Jake
+#define MagnetOnString        f128 [ set when Jerrod ties the magnet to the string outside the tunnel door
+#define MagnetInDoor          f129 [ set when Jerrod drops magent through matching hole in the tunnel door
+#define Nugget8Taken          f130 [ set when Jerrod takes the visible gold nuggets from tunnel 8
+#define Nugget11Taken         f131 [ set when Jerrod takes the visible gold nuggets from tunnel 11
+#define Nugget13Taken         f132 [ set when Jerrod takes the visible gold nuggets from tunnel 13
+#define Nugget14Taken         f133 [ set when Jerrod takes the visible gold nuggets from tunnel 14
+#define Nugget15aTaken        f134 [ set when Jerrod takes first pile of visible gold nuggets from tunnel 15
+#define Nugget15bTaken        f135 [ set when Jerrod takes second pile of visible gold nuggets from tunnel 15
+#define Nugget16aTaken        f136 [ set when Jerrod takes first pile of visible gold in tunnel #16
+#define Nugget16bTaken        f137 [ set when Jerrod takes second pile of visible gold in tunnel 16
+#define RugMoved              f138 [ when set, it means the rug in Jake's cabin is moved aside, revealing the trap door
+#define ScoreTunnelDoor       f139 [ score 2 points for opening the tunnel door under Jake's cabin
+#define CallAllAboard         f140 [ set when the 'all aboard' call is made before the ship sets sail
+#define MuleLeadingWay        f141 [ mule is leading the way to Jake's cabin
+#define SoldHouseLow          f144 [ set if Jerrod sells his house AFTER gold rush is made public
+#define CoachTicketHigh       f145 [ set if Jerrod buys a coach ticket AFTER gold rush is made public
+#define FoundJakesCabin       f146 [ set when Jerrod finds Jake's cabin and goes to that room for the first time
+#define ShowTravelTime        f147 [ when set, Jerrod's travel time to California is displayed when status update is made
+#define BroughtMuleIn         f148 [ set when Jerrod goes into the stable with a mule already in his possession
+#define StartQuiz             f149 [ set when the copy protection quiz starts; used to determine when to display the start message
+#define PauseGameTimer        f150 [ this flag prevents game timer from advancing; it's set at beginning when startup is happening
+#define ReadJakesLetter       f151 [ set when Jerrod reads Jake's letter for the first time
+#define UpdateStatus          f152 [ used to determine when to display the custom status message on text line 24 in many rooms
+#define BuyingLow             f153 [ this flag is set when Jerrod begins conversation to buy a ticket so that if gold rush becomes public, the price doesn't change
+#define GrocerChat            f154 [ set when Jerrod talks to grocer, who asks about the gold rush
+#define JerrodIsDead          f155 [ set when Jerrod dies; used to display the restore/restart message
+#define ReadyToLeaveMO        f156 [ set when Jerrod is ready to leave Missouri, but waiting for the right time
+#define SetLoseItemsStorm     f157 [ indicates the local flag fLoseItemsStorm needs to be set
+#define Restarting            f158 [ a copy of the reserved flag gameRestarted, that the game uses to handle restart tasks
+#define LanternEmpty          f159 [ indicates Jerrod's lantern has run out of oil
+#define MatchLit              f160 [ indicates Jerrod is holding a lit match in the tunnels
+#define UsedMatch             f161 [ set if Jerrod uses a match; used to give a bonus if Jerrod navigates tunnels in complete darkness
+#define FellOffLadder         f162 [ Jerrod is fell off a ladder in the tunnels and is now dead
+#define MuleTiedToFortPost    f163 [ set when Jerrod ties his mule to the hitching post in the offices room; allows Jerrod to explore the fort without having to worry about his mule wandering away
+#define QuitJob               f164 [ set when Jerrod quits his job at the newspaper
+#define LeftMuleUnattended    f165 [ set when Jerrod leaves mule untied in offices room and then goes into the trading store
+#define FoundCoin             f166 [ set when Jerrod finds the coin in the gazebo
+#define StarvationWarning     f167 [ indicates message has been displayed about lack of food on ship
+#define ShipVisible2          f176 [ used only in rm.PostOffice, this flag is set when the ship is onscreen, and cleared when the ship leaves
+#define ShipVisible           f177 [ used only in rm.Bank, this flag is set when the ship is onscreen, and cleared when the ship leaves
+#define ShipDocked            f178 [ used in rm.BrooklynDock to indicate ship is still at the dock
+#define DoneRaking            f179 [ set when neighbor has finished raking his yard (This flag is never used anywhere though)
+#define StartRake1            f192 [ set when the neighbor rakes area 1 in his yard
+#define StartRake2            f193 [ set when the neighbor rakes area #2 in his yard
+#define StartRake3            f194 [ set when the neighbor rakes area #3 in his yard
+#define StartRake4            f195 [ set when the neighbor rakes area #4 in his yard
+#define StartRake5            f196 [ set when the neighbor rakes area #5 in his yard
+#define DebugMode             f208
+#define QuickStart            f217
+#define LazyMule               i48 [ this is the mule that Jerrod buys; he can swap it for James' mule in the stable
+#define OtherMule              i56 [ the represents any of the other mules that Jerrod finds in the stable
+#define CurrentCash            v30 [ index value that indicates amount of cash Jerrod currently has
+#define TmpX                   v31 [ used in several logics to hold position information of various objects
+#define TmpY                   v32 [ used in several logics to hold position information of various objects
+#define OnGrassCount           v33 [ number of times Jerrod has walked on the grass in the park
+#define SteamshipXL            v34 [ x position of steamship while in left room of its three room trip down the river
+#define SteamshipXR            v35 [ x position of steamship wile in right room of its three room trip down the river
+#define SteamshipXM            v36 [ x position of steamship wile in middle room of its three room trip down the river
+#define SteamshipY             v37 [ y position of steamship while it moves across Brooklyn on journey to California
+#define SteamshipPhase         v38 [ used to manage steamship movement when it begins trip
+#define StmShipCounter         v39 [ a counter used for timing events related to steamship movement
+#define TicketChoice           v40 [ indicates what tick Jerrod has bought
+#define NO_TICKET                0
+#define TKT_CAPE                 1
+#define TKT_PANAMA               2
+#define TKT_COACH                3
+#define RushTimer              v41 [ time, in game minutes, that the Gold Rush is made public
+#define StmShipStep            v42 [ step size used by steam ship when it moves down the river across the Brooklyn rooms
+#define MailArrivalTime        V43 [ time, in game minutes, that Jake's letter arrives at the post office
+#define AgentWaitTime          v44 [ determines how long, in game minutes, that the agent will wait for Jerrod to show up to sell the house
+#define ShipDepartureTime      v45 [ time, in game minutes that the steamship is scheduled to leave Brooklyn
+#define BankAccountNum         v48 [ Jerrod's bank account number; randomly chosen at beginning of game
+#define SellHousePhase         v49 [ determines the status of Jerrod's house sale
+#define NOT_FOR_SALE             0
+#define FOR_SALE                 1
+#define OFFERING                 2
+#define OFFER_MADE               3
+#define OFFER_DECLINED           5
+#define SOLD                    20
+#define EgoX                   v50 [ current ego x value
+#define EgoY                   v51 [ current ego y value
+#define OldEgoX                v52 [ previous ego x value
+#define OldEgoY                v53 [ previous ego y value
+#define OldEgoDir              v54 [ previous ego direction
+#define StagecoachPhase        v55 [ manages the phases of the stagecoach sequence as it leaves New York
+#define SC_NOT_STARTED           0 [ stagecoach is not needed yet
+#define SC_WAIT_TICKET           1 [ stagecoach is out front of livery, waiting for Jerrod to present his ticket
+#define SC_MOVE_PICKUP           2 [ after Jerrod presents his ticket, stagecoach moves to the pickup point
+#define SC_AT_PICKUP             3 [ stagecoach has arrived at pickup point
+#define SC_WAIT_BOARD            4 [ stagecoach is at pickup point, waiting for Jerrod to get on board
+#define SC_BOARDED               5 [ Jerrod has boarded the stagecoach
+#define SC_LEAVING               6 [ stagecoach has begun moving to the ferry dock, with Jerrod on board
+#define SC_TRAVELLING            7 [ stagecoach is on its way to the dock
+#define SC_AT_FERRY              9 [ stagecoach is at the dock waiting to drive on the ferry
+#define SC_READY_TO_GO          12 [ stagecoach now ready to begin moving to the ferry dock
+#define CurrentTripTime        v56 [ tracks the current 'time' to track cutscene/room for Jerrod's trip to California
+#define TripPoint_1            v60 [ trip points are used  with the time marker to determine when to switch to various cutscenes and rooms
+#define TripPoint_2            v61
+#define TripPoint_3            v63
+#define TripPoint_4            v64
+#define TripPoint_5            v65
+#define TripPoint_6            v66
+#define TripPoint_7            v67
+#define TripPoint_8            v68
+#define TripPoint_9            v69
+#define TripPoint_10           v70
+#define TripPoint_11           v71
+#define TripPoint_12           v72
+#define TripPoint_13           v73
+#define TripPoint_14           v74
+#define TripPoint_15           v75
+#define TripPoint_16           v76
+#define TripPoint_17           v77
+#define TripPoint_19           v78 [ not sure why 18 was skipped
+#define ScurvyTime             v79 [ if Jerrod doesn't have citrus, this determines when he gets sick due to scurvy
+#define StormTime              v80 [ indicates the timing point for the storm on Cape Horn route
+#define TripPoint_20           v81 [ means different things, including iceberg, or river death
+#define TripPoint_21           v82 [ used for different things on each trip mode
+#define CholeraTime            v85 [ indicates the timing point where Jerrod will die from cholera
+#define CoalFireTime           v86 [ when >1 means coal hold door will explode when opened
+#define BoilerTime             v87 [ time that boiler explodes
+#define YoungOxDeathTime       v88 [ used to determine if trip ends due to young oxen team dying in the desert
+#define AnimalStarveTime       v89 [ used to determine if trip ends due to animal team starving on the plain due to leaving too early
+#define TripCycles             v90 [ counts cycles during trip sequences
+#define TripCycles2            v91 [ when vTripCycles maxes out, increment vTripCycles2
+#define TripCycles3            v92 [ when vTripCycles2 maxes out, increment vTripCycles3
+#define HandleStatus           v94 [ tracks location/status of shovel handle; 0=not picked up; 1=picked up; 2=lost
+#define StringStatus           v95 [ tracks location/status of string; 0=not picked up; 1=picked up; 2=lost
+#define MetalStatus            v96 [ tracks location/status of metal scraps; 0 means still on deck, 1 means Jerrod has them, 2 means they are discarded
+#define PaperclipStatus        v97 [ tracks location of paperclip; 0 means not picked up, 1 means Jerrod has it, 2 means discarded
+#define TripPoint_18           v99 [ not sure why this one is out of order
+#define IcebergCounter        v100 [ number of times ship has hit an iceberg
+#define EgoHealthStatus       v101 [ used to tell if Jerrod is alive, or if not, how he died
+#define HasGoldDisk           v103 [ when greater than 0, means Jerrod has the gold disk
+#define CaptainBuddyStatus    v104 [ tracks progress of Jerrod's conversations with Captain Buddy
+#define AnimalTeam            v105 [ tracks which type of animal Jerrod got for the trip; 1=mules, 2=young oxen, 3=mature oxen
+#define GreenRiverStatus      v106 [ tracks Jerrod's progress in the Green River rooms
+#define GR_INIT                  0 [ initial state before room starts
+#define GR_THIRSTY               1 [ animals at top of hill, thirsty
+#define GR_RUNAWAY_START         2 [ team and wagon is set to go running down hill out of control
+#define GR_RUNAWAY_HILL          3 [ running down hill, out of control
+#define GR_CRASH_POINT           4 [ wagon reaches point where crash sequence starts
+#define GR_CRASHING              5 [ wagon is crashing as it goes down
+#define GR_CRASHED               6 [ crash sequence is over, wagon is done for
+#define GR_UNHOOKED             10 [ team unhooked, ready to go down to the river
+#define GR_UNHOOKED_FAR         11 [ team unhooked, going down, further away (top half of hill)
+#define GR_UNHOOKED_NEAR        12 [ team unhooked, going down, closer (bottom half of hill)
+#define GR_AT_BOTTOM            13 [ team is at bottom of hill, drinking from river
+#define GR_RETURNING            14 [ team has drunk from river, going back up hill
+#define GR_RETURNING_FAR        15 [ team is going back up hill, close to the top
+#define GR_TEAM_BACK            16 [ team is back, being hooked to wagon
+#define GR_READY                20 [ team is hooked to wagon, ready to go
+#define GR_IN_CONTROL           30 [ gwheels locked, ready to go down hill
+#define GR_IN_CONTROL_FAR       31 [ going down hill, wheels locked, further away (top half of hill)
+#define GR_IN_CONTROL_NEAR      32 [ going down hill, wheels locked, closer (bottom half of hill)
+#define GR_FINISHED             33 [ sequence is finished; Jerrod made it safely down the hill
+#define OldObj1X              v107 [ used by various objects to track previous position
+#define OldObj1Y              v108 [ used by various objects to track previous position
+#define StoreBuyCount         v109 [ number of items Jerrod has bought from hardware store
+#define GroceryBuyCount       v110 [ number of items Jerrod has bought from grocery store
+#define WildernessX           v111 [ number of 'miles' east of Sutters Fort where Jerrod is currently exploring
+#define WildernessY           v112 [ number of 'miles' south of Sutters Fort where Jerrod is currently exploring
+#define PrevWildernessPic     v113 [ number of last random wilderness room; to avoid using same room twice in a row
+#define JakesLetter           v114 [ status of letter sent by Jake to Jerrod
+#define JL_NOT_DELIVERED         0 [ letter is not in post office yet
+#define JL_DELIVERED             1 [ letter is delivered; either in the post office, or in Jerrod's possession
+#define JL_OPENED                2 [ indicates Jerrod has opened the letter
+#define GoldIndex             v115 [ tracks how much gold Jerrod has found
+#define BiblePage             v116 [ determines which Bible page is shown when Jerrod reads his Bible
+#define GameWeeks             v117 [ weeks value of game timer
+#define GameMonths            v118 [ months value of game timer
+#define OldOverhang           v119 [ number of the overhang picture used in previous room; prevents same overhang from being used in two rooms in a row
+#define OldFrontTree1         v120 [ number of front tree picture #1 used in previous room; prevents same overhang from being used in two rooms in a row
+#define OldFrontTree2         v121 [ number of front tree picture #2 used in previous room; prevents same overhang from being used in two rooms in a row
+#define ScoreJunglePath       v122 [ when greater than zero, it means Jerrod scored points for passing through jungle
+#define MuleDistance          v123 [ distance from Jerrod to his mule
+#define OtherMuleNum          v124 [ indicates which mule in the stable Jerrod is trying to take, if not taking his own mule or James' mule
+#define FlickerTime           v125 [ set to a random value that determines how long 'flicker' effect lasts in tunnels
+#define PointsFromGold        v126 [ tracks number of points that player has scored by finding gold
+#define PrevGoldIndex         v127 [ used by the gold logic to manage how much gold Jerrod currently has
+#define PickStatus            v128 [ tracks location/status of pixk; 0=not found; 1= found; 2=lost
+#define HoleSize              v129 [ size of hole in tunnel 16 that leads to final location
+#define Nugget6Status         v130 [ status of hidden gold nugget pile in tunnel 6
+#define Nugget5Status         v131 [ status of hidden gold nugget pile in tunnel 5
+#define Nugget10Status        v132 [ status of hidden gold nugget pile in tunnel 10
+#define Nugget8Status         v133 [ status of hidden gold nugget pile in tunnel 8
+#define Nugget11Status        v134 [ status of hidden gold nugget pile in tunnel 11
+#define Nugget12Status        v135 [ status of hidden gold nugget pile in tunnel 12
+#define Nugget14Status        v136 [ status of hidden gold nugget pile in tunnel 14
+#define Nugget15aStatus       v137 [ status of first hidden gold nugget pile in tunnel 15
+#define Nugget15bStatus       v138 [ status of second hidden gold nugget pile in tunnel 15
+#define Nugget16aStatus       v139 [ status of first hidden gold nugget pile in tunnel 16
+#define Nugget16bStatus       v140 [ status of second hidden gold nugget pile in tunnel 16
+#define Nugget16cStatus       v141 [ status of third hidden gold nugget pile in tunnel 16
+#define NUGGET_HIDDEN            0 [ means gold nugget is still in the wall, Jerrod hasn't found it by digging yet
+#define NUGGET_FOUND             1 [ means Jerrod used tick to uncover the gold but it's still in the wall
+#define NUGGET_GONE              2 [ means Jerrod took the gold nugget
+#define MuleDir               v142 [ edge value that mule takes when it leaves room (as when heading to Jake's cabin)
+#define MuleFollowCounter     v143 [ number of cycles that Jerrod spends following mule before it starts leading way to Jake's cabin
+#define CapsuleStatus         v144 [ tracks status of the capsule on the bird's foot in hotel room 12
+#define CAPSULE_UNOPENED         0 [ initial status; Jerrod hasn't opened the capsule yet
+#define CAPSULE_PHOTO            1 [ Jerrod has put his family photo in the capsule
+#define CAPSULE_GRAM             2 [ the bird has come back with Jake's aerogram
+#define CAPSULE_EMPTY            3 [ nothing is in the capsule
+#define BanditStatus          v145 [ tracks the presence and activity of bandits who want to rob Jerrod while he's in the wilderness
+#define BeginOkLeaveTime      v146 [ determines how many of minutes of wait time before it ok for Jerrod to leave Missouri
+#define EndOkLeaveTime        v147 [ the ending minute value of the ok window for leaving Missouri
+#define MulePostX             v148 [ x value of mule when tied to hitching post
+#define MulePostY             v149 [ y value of mule when tied to hitching post
+#define OldObj2X              v150 [ used by various objects to track previous position
+#define OldObj2Y              v151 [ used by various objects to track previous position
+#define GameSeconds           v152 [ seconds value of game timer
+#define GameMinutes           v153 [ minutes value of game timer
+#define GameHours             v154 [ hours value of game timer
+#define GameDays              v155 [ days value of game timer
+#define CycleCounter          v156 [ counts number of cycles; used to determine when to advance GameSeconds by comparing to Game_CPS
+#define TimeOnMarket          v157 [ number of minutes that Jerrod's house is up for sale
+#define LeaveCounter          v158 [ cycle counter that begins counting once Jerrod is ready to leave Missouri; used to determine the right time to leave
+#define LeaveSeconds          v159 [ tracks seconds passed while waiting to leave Missouri
+#define LeaveMinutes          v160 [ tracks minutes passed while waiting to leave Missouri - used to determine if Jerrod will get stuck in mud, or die in snowstorm
+#define TestQuestion          v161 [ this is the randomly chosen test question used at startup for copy protection
+#define RestartMsgCounter     v162 [ counts cycles used to time when the 'press enter to restart' message is displayed after Jerrod dies
+#define PreviousAnimateInt    v163 [ when animationInterval is changed, the previous value is stored here
+#define NextSecond            v164 [ used in lgc.Start to determine when one second has passed
+#define CPS_Fast              v165 [ calculated value that approximates number of cycles per second when animationInterval is set to 1
+#define Game_CPS              v166 [ this is the number of cycles that the game uses to determine when to increment the GameSeconds counter
+#define CPS_Fastest           v167 [ calculated value that approximates number of cycles per second when animationInterval is set to 0
+#define LanternTimer1         v168 [ lower counter for how long Jerrod's lantern has been lit
+#define LanternTimer2         v169 [ higher counter for how long Jerrod's lantern has been lit
+#define MatchesCount          v170 [ the number of matches that Jerrod has
+#define MatchTimer            v171 [ number of cycles that match has been burning
+#define LeafPileSize          v180 [ also used to determine timing point when Jerrod might starve on the boat
+#define StarveDying           v181 [ number of cycle2 counts when Jerrod will die of starvation if he hasn't eaten
+#define CheckCol              v201 [ input location column during copy check
+#define CheckRow              v202 [ input location row during copy check
+#define DebugVar1             v214 [ a generic variable used in debug logic
+#define DebugVar2             v215 [ a second generic variable used in debug logic

@@ -1,0 +1,9 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(f142))
+    {    load.view(View91);    set.view(ego, View91);    position(ego, 1, 60);    move.obj(ego, 130, 60, 0, f20);    }  else
+    {    load.view(View89);    set.view(ego, View89);    position(ego, 1, 60);    move.obj(ego, 135, 60, 0, f21);    }  draw(ego);  show.pic();  }if ((said("check", "view") ||     said("check", "clouds") ||     said("check", "room")))
+  {  print("The view is magnificent.");  }if (said("anyword", "witch"))
+  {  print("Now is not the time to irritate the witch.");  }if (said("anyword", "big bird"))
+  {  print("Now is not a good time to bother the bird.");  }if (isset(f20))
+  {  new.room(Logic65);  }if (isset(f21))
+  {  new.room(Logic48);  }return();[ Messages#message 1 "The view is magnificent."#message 2 "Now is not the time to irritate the witch."#message 3 "Now is not a good time to bother the bird."
