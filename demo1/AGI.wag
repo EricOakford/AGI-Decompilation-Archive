@@ -5,488 +5,216 @@
 [General]
    WinAGIVersion = 2.1.1
    GameID = AGI
-   Interpreter = 2.915
+   Interpreter = 2.917
    ResDir = src
    Description = ""
    Author = ""
    About = ""
    GameVersion = ""
-   LastEdit = "2/25/2022 9:53:13 AM"
+   LastEdit = "3/5/2022 7:57:01 PM"
    PlatformType = 1
    Platform = "C:\Program Files (x86)\DOSBox\DOSBox.exe"
-   DOSExec = SIERRA.COM
+   DOSExec = AGI.EXE
    PlatformOpts = ""
    UseResNames = True
-   UseLE = False
+   UseLE = True
 
 [::BEGIN Logics::]
 
 [Logic0]
    ID = lgcMain
-   Size = 538
-   CRC32 = &HA9285106
-   CompCRC32 = &HA9285106
-   Description = ""
-   IsRoom = False
+   Size = 594
+   CRC32 = &HDE97EDA3
+   CompCRC32 = &HDE97EDA3
 
-[Logic1]
-   ID = rmDemoSelect
-   Size = 1880
-   CRC32 = &HB2F25836
-   CompCRC32 = &HB2F25836
-   Description = ""
-   IsRoom = False
+[Logic22]
+   ID = rmKerona
+   Size = 166
+   CRC32 = &HE4A50F5F
+   CompCRC32 = &HE4A50F5F
 
-[Logic8]
+[Logic34]
+   ID = rmWizHouseExterior
+   Size = 367
+   CRC32 = &H51115805
+   CompCRC32 = &H51115805
+
+[Logic35]
+   ID = rmWizLab
+   Size = 432
+   CRC32 = &H383F9F02
+   CompCRC32 = &H383F9F02
+
+[Logic42]
+   ID = rmAsteroidField
+   Size = 578
+   CRC32 = &H8016B9F1
+   CompCRC32 = &H8016B9F1
+
+[Logic43]
+   ID = rmDeltaur
+   Size = 527
+   CRC32 = &H78AF3458
+   CompCRC32 = &H78AF3458
+
+[Logic45]
+   ID = rmKQ3Title
+   Size = 1030
+   CRC32 = &H6318F9AE
+   CompCRC32 = &H6318F9AE
+
+[Logic48]
+   ID = rmDaventryBeach
+   Size = 513
+   CRC32 = &HCA733F1
+   CompCRC32 = &HCA733F1
+
+[Logic49]
+   ID = rmMountainSide
+   Size = 323
+   CRC32 = &H38D44AA6
+   CompCRC32 = &H38D44AA6
+
+[Logic56]
+   ID = rmSnowPeaks
+   Size = 426
+   CRC32 = &H23D065A5
+   CompCRC32 = &H23D065A5
+
+[Logic60]
+   ID = rmBayControls
+   Size = 261
+   CRC32 = &H9E766D8B
+   CompCRC32 = &H9E766D8B
+
+[Logic67]
+   ID = rmSQTitle
+   Size = 289
+   CRC32 = &HC3A450AD
+   CompCRC32 = &HC3A450AD
+
+[Logic68]
+   ID = rmKQ3Start
+   Size = 235
+   CRC32 = &H6E07FD5A
+   CompCRC32 = &H6E07FD5A
+
+[Logic69]
+   ID = rmSQStart
+   Size = 250
+   CRC32 = &HAEC3E11E
+   CompCRC32 = &HAEC3E11E
+
+[Logic70]
+   ID = rmKeronaBar
+   Size = 840
+   CRC32 = &HBEF6C923
+   CompCRC32 = &HBEF6C923
+
+[Logic92]
+   ID = lgcHelp
+   Size = 607
+   CRC32 = &HFDE52851
+   CompCRC32 = &HFDE52851
+
+[Logic93]
+   ID = rmDistantCanyon
+   Size = 262
+   CRC32 = &H47220B15
+   CompCRC32 = &H47220B15
+
+[Logic95]
+   ID = lgcTrace
+   Size = 2160
+   CRC32 = &H460F64B5
+   CompCRC32 = &H460F64B5
+
+[Logic98]
    ID = lgcError
    Size = 807
-   CRC32 = &HCCA5B147
-   CompCRC32 = &HCCA5B147
-   Description = ""
-   IsRoom = False
+   CRC32 = &HFAE5CE1C
+   CompCRC32 = &HFAE5CE1C
 
-[Logic41]
-   ID = rmHelicopter
-   Size = 4319
-   CRC32 = &H5597B625
-   CompCRC32 = &H5597B625
-   Description = ""
-   IsRoom = False
-
-[Logic121]
-   ID = rmLSL
-   Size = 2653
-   CRC32 = &H13A6E86B
-   CompCRC32 = &H13A6E86B
-   Description = ""
-   IsRoom = False
-
-[Logic150]
-   ID = rmMG
-   Size = 339
-   CRC32 = &HD046C958
-   CompCRC32 = &HD046C958
-   Description = ""
-   IsRoom = False
-
-[Logic151]
-   ID = Logic151
-   Size = 1216
-   CRC32 = &HE57D6029
-   CompCRC32 = &HE57D6029
-   Description = ""
-   IsRoom = False
-
-[Logic152]
-   ID = Logic152
-   Size = 417
-   CRC32 = &HB491AD76
-   CompCRC32 = &HB491AD76
-   Description = ""
-   IsRoom = False
-
-[Logic154]
-   ID = Logic154
-   Size = 383
-   CRC32 = &H4AC99D6B
-   CompCRC32 = &H4AC99D6B
-   Description = ""
-   IsRoom = False
-
-[Logic155]
-   ID = Logic155
-   Size = 275
-   CRC32 = &HBFC3580B
-   CompCRC32 = &HBFC3580B
-   Description = ""
-   IsRoom = False
-
-[Logic156]
-   ID = Logic156
-   Size = 1230
-   CRC32 = &HBD7CD05B
-   CompCRC32 = &HBD7CD05B
-   Description = ""
-   IsRoom = False
-
-[Logic159]
-   ID = rmMGStart
-   Size = 191
-   CRC32 = &HA2A84BA
-   CompCRC32 = &HA2A84BA
-   Description = ""
-   IsRoom = False
-
-[Logic161]
-   ID = rmPQ
-   Size = 2788
-   CRC32 = &H80F49248
-   CompCRC32 = &H80F49248
-   Description = ""
-   IsRoom = False
-
-[Logic201]
-   ID = rmSQ2
-   Size = 3076
-   CRC32 = &HE150A396
-   CompCRC32 = &H5914A089
-   Description = ""
-   IsRoom = False
-
-[Logic221]
-   ID = rmThexder
-   Size = 1684
-   CRC32 = &H77224218
-   CompCRC32 = &H77224218
-   Description = ""
-   IsRoom = False
+[Logic99]
+   ID = lgcDebug
+   Size = 34
+   CRC32 = &H6443C88D
+   CompCRC32 = &H6443C88D
 [::END Logics::]
-
-[Logic81]
-   ID = ""
-
-[Logic101]
-   ID = ""
-
-[Logic102]
-   ID = ""
-
-[Logic103]
-   ID = ""
-
-[Logic104]
-   ID = ""
-
-[Logic105]
-   ID = ""
-
-[Logic106]
-   ID = ""
-
-[Logic107]
-   ID = ""
 
 [::BEGIN Pictures::]
 
-[Picture1]
-   ID = pDemoSelect
-   Size = 1728
-   Description = ""
+[Picture22]
+   ID = Picture22
+   Size = 1815
    BkgdImg = ""
 
-[Picture41]
-   ID = Picture41
-   Size = 31
-   Description = ""
+[Picture34]
+   ID = Picture34
+   Size = 3053
+   BkgdImg = ""
+
+[Picture35]
+   ID = Picture35
+   Size = 2852
    BkgdImg = ""
 
 [Picture42]
    ID = Picture42
-   Size = 1384
-   Description = ""
+   Size = 393
    BkgdImg = ""
 
 [Picture43]
    ID = Picture43
-   Size = 1375
-   Description = ""
-   BkgdImg = ""
-
-[Picture44]
-   ID = Picture44
-   Size = 3551
-   Description = ""
+   Size = 2649
    BkgdImg = ""
 
 [Picture45]
    ID = Picture45
-   Size = 1076
-   Description = ""
+   Size = 1506
    BkgdImg = ""
 
-[Picture46]
-   ID = Picture46
-   Size = 21
-   Description = ""
+[Picture48]
+   ID = Picture48
+   Size = 1239
    BkgdImg = ""
 
-[Picture47]
-   ID = Picture47
-   Size = 8
-   Description = ""
+[Picture49]
+   ID = Picture49
+   Size = 2574
    BkgdImg = ""
 
-[Picture121]
-   ID = pLSLTitle
-   Size = 1430
-   Description = ""
+[Picture56]
+   ID = Picture56
+   Size = 1818
    BkgdImg = ""
 
-[Picture122]
-   ID = pInsideBar
-   Size = 2842
-   Description = ""
+[Picture60]
+   ID = Picture60
+   Size = 1871
    BkgdImg = ""
 
-[Picture123]
-   ID = pDisco
-   Size = 1063
-   Description = ""
+[Picture67]
+   ID = Picture67
+   Size = 3921
    BkgdImg = ""
 
-[Picture124]
-   ID = pHotTub
-   Size = 1681
-   Description = ""
+[Picture70]
+   ID = Picture70
+   Size = 2260
    BkgdImg = ""
 
-[Picture125]
-   ID = Picture125
-   Size = 2308
-   Description = ""
-   BkgdImg = ""
-
-[Picture150]
-   ID = Picture150
-   Size = 1592
-   Description = ""
-   BkgdImg = ""
-
-[Picture151]
-   ID = Picture151
-   Size = 69
-   Description = ""
-   BkgdImg = ""
-
-[Picture152]
-   ID = Picture152
-   Size = 2179
-   Description = ""
-   BkgdImg = ""
-
-[Picture154]
-   ID = Picture154
-   Size = 2604
-   Description = ""
-   BkgdImg = ""
-
-[Picture155]
-   ID = Picture155
-   Size = 3261
-   Description = ""
-   BkgdImg = ""
-
-[Picture161]
-   ID = Picture161
-   Size = 3315
-   Description = ""
-   BkgdImg = ""
-
-[Picture162]
-   ID = Picture162
-   Size = 1662
-   Description = ""
-   BkgdImg = ""
-
-[Picture163]
-   ID = Picture163
-   Size = 1857
-   Description = ""
-   BkgdImg = ""
-
-[Picture164]
-   ID = Picture164
-   Size = 3458
-   Description = ""
-   BkgdImg = ""
-
-[Picture165]
-   ID = Picture165
-   Size = 2762
-   Description = ""
-   BkgdImg = ""
-
-[Picture166]
-   ID = Picture166
-   Size = 1901
-   Description = ""
-   BkgdImg = ""
-
-[Picture167]
-   ID = Picture167
-   Size = 4147
-   Description = ""
-   BkgdImg = ""
-
-[Picture168]
-   ID = Picture168
-   Size = 1647
-   Description = ""
-   BkgdImg = ""
-
-[Picture201]
-   ID = Picture201
-   Size = 976
-   Description = ""
-   BkgdImg = ""
-
-[Picture202]
-   ID = Picture202
-   Size = 341
-   Description = ""
-   BkgdImg = ""
-
-[Picture203]
-   ID = Picture203
-   Size = 606
-   Description = ""
-   BkgdImg = ""
-
-[Picture204]
-   ID = Picture204
-   Size = 2978
-   Description = ""
-   BkgdImg = ""
-
-[Picture205]
-   ID = Picture205
-   Size = 3447
-   Description = ""
-   BkgdImg = ""
-
-[Picture206]
-   ID = Picture206
-   Size = 3266
-   Description = ""
-   BkgdImg = ""
-
-[Picture207]
-   ID = Picture207
-   Size = 4849
-   Description = ""
-   BkgdImg = ""
-
-[Picture208]
-   ID = Picture208
-   Size = 2826
-   Description = ""
-   BkgdImg = ""
-
-[Picture222]
-   ID = Picture222
-   Size = 2387
-   Description = ""
-   BkgdImg = ""
-
-[Picture224]
-   ID = Picture224
-   Size = 1034
-   Description = ""
-   BkgdImg = ""
-
-[Picture225]
-   ID = Picture225
-   Size = 2667
-   Description = ""
-   BkgdImg = ""
-
-[Picture227]
-   ID = Picture227
-   Size = 806
-   Description = ""
-   BkgdImg = ""
-
-[Picture228]
-   ID = Picture228
-   Size = 1601
-   Description = ""
-   BkgdImg = ""
-
-[Picture230]
-   ID = Picture230
-   Size = 40
-   Description = ""
-   BkgdImg = ""
-
-[Picture232]
-   ID = Picture232
-   Size = 645
-   Description = ""
+[Picture93]
+   ID = Picture93
+   Size = 996
    BkgdImg = ""
 [::END Pictures::]
 
-[Picture81]
-   ID = ""
-
-[Picture82]
-   ID = ""
-
-[Picture83]
-   ID = ""
-
-[Picture84]
-   ID = ""
-
-[Picture85]
-   ID = ""
-
-[Picture101]
-   ID = ""
-
-[Picture102]
-   ID = ""
-
-[Picture103]
-   ID = ""
-
-[Picture104]
-   ID = ""
-
-[Picture105]
-   ID = ""
-
-[Picture106]
-   ID = ""
-
-[Sound81]
-   ID = ""
-
-[Sound82]
-   ID = ""
-
-[Sound83]
-   ID = ""
-
-[Sound84]
-   ID = ""
-
-[Sound85]
-   ID = ""
-
-[Sound86]
-   ID = ""
-
-[Sound101]
-   ID = ""
-
-[Sound102]
-   ID = ""
-
-[Sound103]
-   ID = ""
-
-[Sound104]
-   ID = ""
-
-[Sound105]
-   ID = ""
-
 [::BEGIN Sounds::]
 
-[Sound121]
-   ID = mLSLTitle
-   Size = 971
-   Description = ""
+[Sound1]
+   ID = Sound1
+   Size = 106
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -501,10 +229,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound122]
-   ID = mBadGuy
-   Size = 161
-   Description = ""
+[Sound2]
+   ID = Sound2
+   Size = 211
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -519,10 +246,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound123]
-   ID = Sound123
-   Size = 2281
-   Description = ""
+[Sound19]
+   ID = mGwydionTheme
+   Size = 1051
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -537,10 +263,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound150]
-   ID = Sound150
-   Size = 251
-   Description = ""
+[Sound20]
+   ID = Sound20
+   Size = 46
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -555,10 +280,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound151]
-   ID = Sound151
-   Size = 2021
-   Description = ""
+[Sound21]
+   ID = Sound21
+   Size = 281
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -573,10 +297,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound152]
-   ID = Sound152
-   Size = 286
-   Description = ""
+[Sound22]
+   ID = sAsteroids
+   Size = 131
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -591,10 +314,60 @@
    Visible2 = True
    Visible3 = True
 
-[Sound153]
-   ID = Sound153
+[Sound23]
+   ID = Sound23
+   Size = 691
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound24]
+   ID = Sound24
+   Size = 166
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound30]
+   ID = mWizTheme
+   Size = 506
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+
+[Sound31]
+   ID = mJaws
    Size = 101
-   Description = ""
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -609,10 +382,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound154]
-   ID = Sound154
-   Size = 56
-   Description = ""
+[Sound32]
+   ID = sDroidNoise
+   Size = 116
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -627,10 +399,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound155]
-   ID = Sound155
-   Size = 156
-   Description = ""
+[Sound33]
+   ID = aAsteroidsPC
+   Size = 166
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -645,10 +416,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound156]
-   ID = Sound156
-   Size = 436
-   Description = ""
+[Sound60]
+   ID = mSQTheme
+   Size = 5896
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -663,226 +433,9 @@
    Visible2 = True
    Visible3 = True
 
-[Sound157]
-   ID = Sound157
-   Size = 71
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound161]
-   ID = Sound161
-   Size = 1591
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound162]
-   ID = Sound162
-   Size = 221
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound163]
-   ID = Sound163
-   Size = 361
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound164]
-   ID = Sound164
-   Size = 1036
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound165]
-   ID = Sound165
-   Size = 96
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound201]
-   ID = Sound201
-   Size = 4941
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound202]
-   ID = Sound202
-   Size = 461
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound203]
-   ID = Sound203
-   Size = 226
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound204]
-   ID = Sound204
-   Size = 256
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound205]
-   ID = Sound205
-   Size = 471
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound221]
-   ID = Sound221
-   Size = 5756
-   Description = ""
-   Key = 0
-   TPQN = 0
-   Inst0 = 80
-   Inst1 = 80
-   Inst2 = 80
-   Mute0 = False
-   Mute1 = False
-   Mute2 = False
-   Mute3 = False
-   Visible0 = True
-   Visible1 = True
-   Visible2 = True
-   Visible3 = True
-
-[Sound222]
-   ID = Sound222
-   Size = 3751
-   Description = ""
+[Sound61]
+   ID = mAlienBand
+   Size = 1606
    Key = 0
    TPQN = 0
    Inst0 = 80
@@ -900,554 +453,166 @@
 
 [::BEGIN Views::]
 
-[View1]
-   ID = vTandy
-   Size = 3650
-   Description = ""
+[View26]
+   ID = vEagle
+   Size = 435
 
-[View2]
-   ID = vSierra
-   Size = 4174
-   Description = ""
-
-[View3]
-   ID = vDemoGuy
-   Size = 3137
-   Description = ""
-
-[View4]
-   ID = vTalkBubble
-   Size = 477
-   Description = ""
-
-[View5]
-   ID = vDemoPage1
-   Size = 2420
-   Description = ""
-
-[View6]
-   ID = vDemoPage2
-   Size = 2761
-   Description = ""
+[View40]
+   ID = vYeti
+   Size = 3633
 
 [View41]
-   ID = vHelicopterTitle
-   Size = 1326
-   Description = ""
+   ID = vYetiGrabEgo
+   Size = 1259
 
 [View42]
-   ID = View42
-   Size = 790
-   Description = ""
-
-[View43]
-   ID = vHeliPilot
-   Size = 4594
-   Description = ""
-
-[View44]
-   ID = vComputerGuy
-   Size = 1548
-   Description = ""
-
-[View45]
-   ID = vFlashWindows
-   Size = 1648
-   Description = ""
+   ID = vYetiAndEgo
+   Size = 1782
 
 [View46]
-   ID = View46
-   Size = 1273
-   Description = ""
-
-[View47]
-   ID = View47
-   Size = 3380
-   Description = ""
-
-[View121]
-   ID = vLSLEgo
-   Size = 2883
-   Description = ""
-
-[View122]
-   ID = vLSLTitle
-   Size = 1038
-   Description = ""
-
-[View123]
-   ID = vBarInterior
-   Size = 2334
-   Description = ""
-
-[View124]
-   ID = vBarKen
-   Size = 537
-   Description = ""
-
-[View125]
-   ID = vBarFlys
-   Size = 834
-   Description = ""
-
-[View126]
-   ID = vLefty
-   Size = 792
-   Description = ""
-
-[View127]
-   ID = vDiscoInterior
-   Size = 612
-   Description = ""
-
-[View128]
-   ID = vDiscoCustomers
-   Size = 1092
-   Description = ""
-
-[View129]
-   ID = vEgoDiscoing1
-   Size = 2321
-   Description = ""
-
-[View130]
-   ID = vEgoDiscoing2
-   Size = 2013
-   Description = ""
-
-[View131]
-   ID = vEgoFlingingFawn
-   Size = 1651
-   Description = ""
-
-[View132]
-   ID = vFawn
-   Size = 2308
-   Description = ""
-
-[View133]
-   ID = vFawnDancing
-   Size = 2321
-   Description = ""
-
-[View134]
-   ID = vHotTubBubbles
-   Size = 616
-   Description = ""
-
-[View135]
-   ID = vEve
-   Size = 1953
-   Description = ""
-
-[View136]
-   ID = vEveFace
-   Size = 769
-   Description = ""
-
-[View137]
-   ID = vEveInHotTub
-   Size = 888
-   Description = ""
-
-[View138]
-   ID = vCloseupBubbles
-   Size = 867
-   Description = ""
-
-[View139]
-   ID = vEgoInHotTub
-   Size = 1688
-   Description = ""
-
-[View140]
-   ID = vEgoUndressing
-   Size = 1257
-   Description = ""
-
-[View144]
-   ID = View144
-   Size = 1718
-   Description = ""
-
-[View146]
-   ID = View146
-   Size = 993
-   Description = ""
-
-[View147]
-   ID = View147
-   Size = 1842
-   Description = ""
-
-[View148]
-   ID = View148
-   Size = 3469
-   Description = ""
-
-[View149]
-   ID = View149
-   Size = 1512
-   Description = ""
-
-[View150]
-   ID = View150
-   Size = 844
-   Description = ""
-
-[View151]
-   ID = View151
-   Size = 4407
-   Description = ""
-
-[View152]
-   ID = View152
-   Size = 2003
-   Description = ""
-
-[View153]
-   ID = View153
-   Size = 1964
-   Description = ""
-
-[View154]
-   ID = View154
-   Size = 2090
-   Description = ""
-
-[View155]
-   ID = View155
-   Size = 1973
-   Description = ""
-
-[View156]
-   ID = View156
-   Size = 2126
-   Description = ""
-
-[View157]
-   ID = View157
-   Size = 2140
-   Description = ""
-
-[View158]
-   ID = View158
-   Size = 2166
-   Description = ""
-
-[View159]
-   ID = View159
-   Size = 2136
-   Description = ""
-
-[View161]
-   ID = View161
-   Size = 2727
-   Description = ""
-
-[View162]
-   ID = View162
-   Size = 1101
-   Description = ""
-
-[View163]
-   ID = View163
-   Size = 1315
-   Description = ""
-
-[View164]
-   ID = View164
-   Size = 3280
-   Description = ""
-
-[View165]
-   ID = View165
-   Size = 360
-   Description = ""
-
-[View166]
-   ID = View166
-   Size = 146
-   Description = ""
-
-[View167]
-   ID = View167
-   Size = 185
-   Description = ""
-
-[View168]
-   ID = View168
-   Size = 70
-   Description = ""
-
-[View169]
-   ID = View169
-   Size = 296
-   Description = ""
-
-[View170]
-   ID = View170
-   Size = 329
-   Description = ""
-
-[View171]
-   ID = View171
-   Size = 978
-   Description = ""
-
-[View172]
-   ID = View172
-   Size = 913
-   Description = ""
-
-[View173]
-   ID = View173
-   Size = 237
-   Description = ""
-
-[View174]
-   ID = View174
-   Size = 88
-   Description = ""
-
-[View175]
-   ID = View175
-   Size = 941
-   Description = ""
-
-[View176]
-   ID = View176
-   Size = 820
-   Description = ""
-
-[View177]
-   ID = View177
-   Size = 1620
-   Description = ""
-
-[View178]
-   ID = View178
-   Size = 1105
-   Description = ""
-
-[View201]
-   ID = View201
-   Size = 1130
-   Description = ""
-
-[View202]
-   ID = View202
-   Size = 1535
-   Description = ""
-
-[View203]
-   ID = View203
-   Size = 32
-   Description = ""
-
-[View204]
-   ID = View204
-   Size = 653
-   Description = ""
-
-[View205]
-   ID = View205
-   Size = 477
-   Description = ""
-
-[View206]
-   ID = View206
-   Size = 1161
-   Description = ""
-
-[View207]
-   ID = View207
-   Size = 878
-   Description = ""
-
-[View208]
-   ID = View208
-   Size = 923
-   Description = ""
-
-[View209]
-   ID = View209
-   Size = 1474
-   Description = ""
-
-[View210]
-   ID = View210
-   Size = 545
-   Description = ""
-
-[View211]
-   ID = View211
-   Size = 646
-   Description = ""
-
-[View212]
-   ID = View212
-   Size = 1569
-   Description = ""
-
-[View213]
-   ID = View213
-   Size = 226
-   Description = ""
-
-[View214]
-   ID = View214
-   Size = 1418
-   Description = ""
-
-[View215]
-   ID = View215
-   Size = 1985
-   Description = ""
-
-[View216]
-   ID = View216
-   Size = 157
-   Description = ""
-
-[View217]
-   ID = View217
-   Size = 569
-   Description = ""
-
-[View218]
-   ID = View218
-   Size = 666
-   Description = ""
-
-[View219]
-   ID = View219
-   Size = 164
-   Description = ""
-
-[View221]
-   ID = View221
-   Size = 3461
-   Description = ""
-
-[View222]
-   ID = View222
-   Size = 2024
-   Description = ""
-
-[View223]
-   ID = View223
-   Size = 2254
-   Description = ""
-
-[View224]
-   ID = View224
-   Size = 675
-   Description = ""
-
-[View225]
-   ID = View225
-   Size = 1644
-   Description = ""
-
-[View226]
-   ID = View226
-   Size = 6469
-   Description = ""
-[::END Views::]
-
-[View81]
-   ID = ""
-
-[View82]
-   ID = ""
-
-[View83]
-   ID = ""
-
-[View84]
-   ID = ""
-
-[View85]
-   ID = ""
-
-[View86]
-   ID = ""
-
-[View87]
-   ID = ""
-
-[View88]
-   ID = ""
-
-[View89]
-   ID = ""
-
-[View90]
-   ID = ""
-
-[View91]
-   ID = ""
-
-[View92]
-   ID = ""
-
-[View93]
-   ID = ""
-
-[View94]
-   ID = ""
-
-[View101]
-   ID = ""
-
-[View102]
-   ID = ""
-
-[View103]
-   ID = ""
+   ID = vSpiderDroid
+   Size = 2677
+
+[View56]
+   ID = vShark
+   Size = 556
 
 [View104]
-   ID = ""
+   ID = vEgoMeteor
+   Size = 1212
 
 [View105]
-   ID = ""
-
-[View106]
-   ID = ""
-
-[View107]
-   ID = ""
-
-[View108]
-   ID = ""
-
-[View109]
-   ID = ""
+   ID = vOhNo
+   Size = 235
 
 [View110]
-   ID = ""
+   ID = vTitleBeam
+   Size = 60
 
 [View111]
-   ID = ""
+   ID = vSQSubtitle
+   Size = 3171
 
 [View112]
-   ID = ""
+   ID = vBayDoor
+   Size = 2770
 
 [View113]
-   ID = ""
+   ID = vFloorSiren
+   Size = 184
 
 [View114]
-   ID = ""
+   ID = vCeilingSiren
+   Size = 104
 
 [View115]
-   ID = ""
+   ID = vDeadCrew
+   Size = 152
 
 [View116]
-   ID = ""
+   ID = vEgoSpacesuit
+   Size = 2912
 
 [View117]
-   ID = ""
+   ID = vBarSign
+   Size = 1724
+
+[View118]
+   ID = vBarAliens
+   Size = 468
+
+[View119]
+   ID = vSlotsAlien
+   Size = 1594
+
+[View120]
+   ID = vJanitorDroid
+   Size = 1555
+
+[View121]
+   ID = vBartender
+   Size = 336
+
+[View122]
+   ID = vSarienEgoDisintegrated
+   Size = 945
+
+[View123]
+   ID = vBarBand
+   Size = 4927
+
+[View124]
+   ID = vAsteroid1
+   Size = 273
+
+[View125]
+   ID = vAsteroid2
+   Size = 170
+
+[View126]
+   ID = vAsteroid3
+   Size = 25
+
+[View127]
+   ID = vAsteroidShip
+   Size = 864
+
+[View140]
+   ID = vEgoShipDeltaur
+   Size = 920
+
+[View149]
+   ID = vEgoShipLights
+   Size = 106
+
+[View162]
+   ID = vKQ3Title
+   Size = 1829
+
+[View165]
+   ID = vKQ3Ego
+   Size = 3047
+
+[View166]
+   ID = vWizHouseDoors
+   Size = 1687
+
+[View167]
+   ID = vChicken
+   Size = 197
+
+[View168]
+   ID = vChickenEating
+   Size = 357
+
+[View188]
+   ID = vLabStuff
+   Size = 345
+
+[View190]
+   ID = vWiz
+   Size = 1353
+
+[View192]
+   ID = vEgoToAshes
+   Size = 1073
+
+[View193]
+   ID = vWizCast
+   Size = 1163
+
+[View199]
+   ID = vPoof
+   Size = 1275
+
+[View221]
+   ID = vWaterfall
+   Size = 1187
+
+[View231]
+   ID = vFlame
+   Size = 436
+[::END Views::]
 
 [WORDS.TOK]
    Description = ""

@@ -1,0 +1,1 @@
+if (said("tp"))  {  get.num(":", debug0);  new.room.v(debug0);  }if (said("show", "mem"))  {  show.mem();  }return();[ Messages#message 1 ":"

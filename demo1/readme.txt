@@ -1,2 +1,2 @@
-### AGI Demo Pack 1 (DEMOPAC1)
-  Interpreter version 2.915
+### AGI Demo 1 (SQ1, KQ3)
+  Interpreter version 2.277
