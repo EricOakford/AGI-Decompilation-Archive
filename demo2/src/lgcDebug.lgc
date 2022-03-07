@@ -1,0 +1,3 @@
+if (said(7))
+  {  [ WARNING: unknown word: 7  get.num(":", v45);  new.room.v(v45);  }if (said(13, 2))
+  {  [ WARNING: unknown word: 13  [ WARNING: unknown word: 2  show.mem();  }return();[ Messages#message 1 ":"
