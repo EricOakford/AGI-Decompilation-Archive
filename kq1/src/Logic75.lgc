@@ -1,22 +1,22 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 74)
-    {    get.posn(ego, goat.x, goat.y);    goat.x  += 150;    position.v(ego, goat.x, goat.y);    }  if (previousRoom == 76)
+    {    get.posn(ego, temp.x, temp.y);    temp.x  += 150;    position.v(ego, temp.x, temp.y);    }  if (previousRoom == 76)
     {    position(ego, 34, 125);    }  ignore.objs(ego);  load.view(View95);  if (!isset(f138))
-    {    load.sound(Sound1);    load.view(View45);    animate.obj(o1);    set.view(o1, View45);    position(o1, 36, 127);    set(f20);    follow.ego(o1, 15, f21);    observe.blocks(o1);    v30 = 3;    step.size(o1, v30);    }  load.sound(Sound19);  load.view(View46);  animate.obj(o2);  set.view(o2, View46);  if (previousRoom == 76)
+    {    load.sound(Sound1);    load.view(View45);    animate.obj(o1);    set.view(o1, View45);    position(o1, 36, 127);    set(done1);    follow.ego(o1, 15, done2);    observe.blocks(o1);    timer.1 = 3;    step.size(o1, timer.1);    }  load.sound(Sound19);  load.view(View46);  animate.obj(o2);  set.view(o2, View46);  if (previousRoom == 76)
     {    set.cel(o2, 5);    }  else
-    {    set.cel(o2, 0);    }  ignore.blocks(o2);  set.priority(o2, 9);  position(o2, 25, 119);  draw(o2);  if (isset(f20))
+    {    set.cel(o2, 0);    }  ignore.blocks(o2);  set.priority(o2, 9);  position(o2, 25, 119);  draw(o2);  if (isset(done1))
     {    draw(o1);    }  draw(ego);  show.pic();  if (previousRoom == 76)
-    {    reverse.loop(o2, f203);    sound(Sound19, done);    }  else
+    {    reverse.loop(o2, f203);    sound(Sound19, script.done);    }  else
     {    stop.update(o2);    }  }if (isset(f203))
-  {  reset(f203);  stop.update(o2);  }if (isset(f20))
-  {  reset(f20);  sound(Sound1, done);  }if (posn(ego, 0, 0, 54, 167))
+  {  reset(f203);  stop.update(o2);  }if (isset(done1))
+  {  reset(done1);  sound(Sound1, script.done);  }if (posn(ego, 0, 0, 54, 167))
   {  observe.blocks(ego);  }else
-  {  ignore.blocks(ego);  }if (isset(ego.invisible) &&     !isset(f22))
-  {  set(f22);  print("Being invisible won't hide you from this rat's keen sense of smell.");  }if (isset(f138))
+  {  ignore.blocks(ego);  }if (isset(ego.invisible) &&     !isset(done3))
+  {  set(done3);  print("Being invisible won't hide you from this rat's keen sense of smell.");  }if (isset(f138))
   {  if ((said("anyword", "rat") ||       said("anyword", "mouse")))
     {    print("There is no rat here.");    }  if ((said("check", "cave") ||       said("check", "room")))
     {    print("It is very dark and dreary in here.");    }  }if (!isset(f138))
-  {  distance(ego, o1, v70);  if (said("check", "rat"))
+  {  distance(ego, o1, dist.to.obj);  if (said("check", "rat"))
     {    print("It is a big rat with dripping teeth and small, greedy eyes.");    }  if ((said("check", "cave") ||       said("check", "room")))
     {    print("It is very dark and dreary.  The rat seems to like it here.");    }  if (said("check", "mouse"))
     {    print("This is no mouse, this is a big, ugly rat!");    }  if (said("pet", "rat"))
@@ -25,37 +25,37 @@ if (isset(newRoom))
     {    print("The rat rasps, \"Treasure!  Treasure!  Give treasure, or no go door! "          " Give treasure NOW!\"");    }  if ((said("give", "treasure") ||       said("give", "rat", "treasure") ||       said("give", "treasure", "rat")))
     {    print("What kind of treasure would you like to give the  greedy rat?");    }  if (!isset(have.diamonds))
     {    if ((said("give", "bag") ||         said("give", "rat", "bag") ||         said("give", "bag", "rat")))
-      {      if (isset(have.pouch) &&           v70 < 35)
+      {      if (isset(have.pouch) &&           dist.to.obj < 35)
         {        print("The rat doesn't want a tattered pouch.");        }      else
         {        print("It appears you are afraid of the rat!  You must get closer to "              "give anything to this rat!");        }      }    }  if (isset(have.diamonds))
     {    if ((said("give", "diamond") ||         said("give", "rat", "diamond") ||         said("give", "diamond", "rat") ||         said("give", "bag") ||         said("give", "rat", "bag") ||         said("give", "bag", "rat")))
-      {      if (isset(have.diamonds) &&           v70 > 15 &&           v70 < 35)
-        {        print("The huge rat takes the treasure you have offered and scuttles "              "away.");        move.obj(o1, 46, 105, 0, f24);        drop("pouch of diamonds");        reset(have.diamonds);        set(f107);        currentScore -= 6;        }      else
+      {      if (isset(have.diamonds) &&           dist.to.obj > 15 &&           dist.to.obj < 35)
+        {        print("The huge rat takes the treasure you have offered and scuttles "              "away.");        move.obj(o1, 46, 105, 0, done5);        drop("pouch of diamonds");        reset(have.diamonds);        set(f107);        currentScore -= 6;        }      else
         {        print("It appears you are afraid of the rat!  You must get closer to "              "give anything to this rat!");        }      }    }  if ((said("give", "egg") ||       said("give", "rat", "egg") ||       said("give", "egg", "rat")))
-    {    if (isset(have.egg) &&         v70 > 15 &&         v70 < 35)
-      {      print("The huge rat takes the treasure you have offered and scuttles "            "away.");      move.obj(o1, 46, 105, 0, f24);      drop("gold egg");      reset(have.egg);      set(f111);      currentScore -= 6;      }    else
+    {    if (isset(have.egg) &&         dist.to.obj > 15 &&         dist.to.obj < 35)
+      {      print("The huge rat takes the treasure you have offered and scuttles "            "away.");      move.obj(o1, 46, 105, 0, done5);      drop("gold egg");      reset(have.egg);      set(f111);      currentScore -= 6;      }    else
       {      print("It appears you are afraid of the rat!  You must get closer to give "            "anything to this rat!");      }    }  if ((said("give", "gold nut") ||       said("give", "rat", "gold nut") ||       said("give", "gold nut", "rat")))
     {    if (isset(have.unopened.walnut))
-      {      if (v70 > 15 &&           v70 < 35)
+      {      if (dist.to.obj > 15 &&           dist.to.obj < 35)
         {        print("The rat doesn't want an ordinary walnut.");        }      else
         {        print("It appears you are afraid of the rat!  You must get closer to "              "give anything to this rat!");        }      }    if (isset(have.opened.walnut))
-      {      if (v70 > 15 &&           v70 < 35)
-        {        print("The huge rat takes the treasure you have offered and scuttles "              "away.");        move.obj(o1, 46, 105, 0, f24);        drop("gold walnut");        reset(have.opened.walnut);        set(f109);        currentScore -= 6;        }      else
+      {      if (dist.to.obj > 15 &&           dist.to.obj < 35)
+        {        print("The huge rat takes the treasure you have offered and scuttles "              "away.");        move.obj(o1, 46, 105, 0, done5);        drop("gold walnut");        reset(have.opened.walnut);        set(f109);        currentScore -= 6;        }      else
         {        print("It appears you are afraid of the rat!  You must get closer to "              "give anything to this rat!");        }      }    }  if ((said("give", "sceptre") ||       said("give", "rat", "sceptre") ||       said("give", "sceptre", "rat")))
-    {    if (isset(have.sceptre) &&         v70 > 15 &&         v70 < 35)
-      {      print("The huge rat takes the treasure you have offered and scuttles "            "away.");      move.obj(o1, 46, 105, 0, f24);      drop("sceptre");      reset(have.sceptre);      set(f114);      currentScore -= 6;      }    else
+    {    if (isset(have.sceptre) &&         dist.to.obj > 15 &&         dist.to.obj < 35)
+      {      print("The huge rat takes the treasure you have offered and scuttles "            "away.");      move.obj(o1, 46, 105, 0, done5);      drop("sceptre");      reset(have.sceptre);      set(f114);      currentScore -= 6;      }    else
       {      print("It appears you are afraid of the rat!  You must get closer to give "            "anything to this rat!");      }    }  if ((said("give", "cheese") ||       said("give", "rat", "cheese") ||       said("give", "cheese", "rat") ||       said("feed", "cheese") ||       said("feed", "rat", "cheese") ||       said("feed", "cheese", "rat")))
     {    if (!isset(have.cheese))
       {      print("That is a good idea, but you do not have any cheese.");      }    if (isset(have.cheese))
-      {      if (v70 > 15 &&           v70 < 35)
-        {        print("The rat drools at the sight of the cheese... and snatches it "              "from your hand.  You might want to count your fingers.");        move.obj(o1, 46, 105, 0, f24);        drop("cheese");        reset(have.cheese);        set(f140);        currentScore -= 2;        currentScore  += 4;        }      else
-        {        print("It appears you are afraid of the rat!  You must get closer to "              "give anything to this rat!");        }      }    }  }if (isset(f24))
-  {  reset(f24);  erase(o1);  set(f138);  print("The rat scrambles to the wall and seems to magically merge with it.");  }if ((said("count", "finger") ||     said("check", "finger")))
-  {  print("You count your fingers and are relieved to see you still have all of "        "them.");  }if (isset(f21))
+      {      if (dist.to.obj > 15 &&           dist.to.obj < 35)
+        {        print("The rat drools at the sight of the cheese... and snatches it "              "from your hand.  You might want to count your fingers.");        move.obj(o1, 46, 105, 0, done5);        drop("cheese");        reset(have.cheese);        set(f140);        currentScore -= 2;        currentScore  += 4;        }      else
+        {        print("It appears you are afraid of the rat!  You must get closer to "              "give anything to this rat!");        }      }    }  }if (isset(done5))
+  {  reset(done5);  erase(o1);  set(f138);  print("The rat scrambles to the wall and seems to magically merge with it.");  }if ((said("count", "finger") ||     said("check", "finger")))
+  {  print("You count your fingers and are relieved to see you still have all of "        "them.");  }if (isset(done2))
   {  set.view(ego, View95);  print("Be careful around this rat next time!  He's dangerous!!");  wander(o1);  set(certain.death);  }distance(ego, o2, v71);if (said("open", "door"))
   {  if (v71 < 25)
-    {    start.update(o2);    sound(Sound19, done);    print("The door slowly opens.");    end.of.loop(o2, f23);    }  else
-    {    print("Get closer if you want to try.");    }  }if (isset(f23))
+    {    start.update(o2);    sound(Sound19, script.done);    print("The door slowly opens.");    end.of.loop(o2, done4);    }  else
+    {    print("Get closer if you want to try.");    }  }if (isset(done4))
   {  new.room(Logic76);  }if (said("close", "door"))
   {  print("It is already closed.");  }if (said("check", "door"))
   {  print("The door is closed.");  }if (edgeEgoHit == RIGHT_EDGE)

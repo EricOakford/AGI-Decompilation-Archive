@@ -1,11 +1,11 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 36)
     {    set.view(ego, View60);    position(ego, 3, 81);    }  if (previousRoom == 77)
-    {    position(ego, 146, 131);    move.obj(ego, 145, 130, 0, done);    }  if (!isset(have.mushroom))
-    {    v30 = 250;    v31 = 4;    }  draw(ego);  show.pic();  }if (!isset(have.mushroom))
-  {  --v30;  if (v30 == 0)
-    {    if (v31 > 0)
-      {      --v31;      v30 = 250;      }    }  }if (v30 == 1 &&     v31 == 0)
+    {    position(ego, 146, 131);    move.obj(ego, 145, 130, 0, script.done);    }  if (!isset(have.mushroom))
+    {    timer.1 = 250;    timer.2 = 4;    }  draw(ego);  show.pic();  }if (!isset(have.mushroom))
+  {  --timer.1;  if (timer.1 == 0)
+    {    if (timer.2 > 0)
+      {      --timer.2;      timer.1 = 250;      }    }  }if (timer.1 == 1 &&     timer.2 == 0)
   {  stop.cycling(ego);  print("You seem to be stuck in these underground caverns.  As you have no way "        "of leaving, it looks like you'll spend the rest of your life here.");  set(certain.death);  }if (isset(ego.shrunk))
   {  ignore.blocks(ego);  }else
   {  observe.blocks(ego);  }if (shrink.timer == 1 &&     isset(ego.shrunk))

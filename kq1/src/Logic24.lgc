@@ -2,7 +2,7 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 30, 75, 0, 0);    }  if (!isset(f86))
-    {    load.view(View21);    animate.obj(o1);    set.view(o1, View21);    position(o1, 53, 134);    set(f20);    }  if (isset(f20))
+    {    load.view(View21);    animate.obj(o1);    set.view(o1, View21);    position(o1, 53, 134);    set(done1);    }  if (isset(done1))
     {    draw(o1);    stop.update(o1);    }  draw(ego);  show.pic();  }if (!isset(have.clover))
   {  if ((said("check", "clover") ||       said("check", "grass") ||       said("check", "bush")))
     {    if (posn(ego, 0, 77, 118, 167))

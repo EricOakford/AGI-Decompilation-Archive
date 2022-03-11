@@ -2,22 +2,22 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(55);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 128, 61, 0, 0);    }  if (previousRoom == 44)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.x < 75)
-      {      position(ego, 10, 57);      }    if (goat.x > 74)
+    {    get.posn(ego, temp.x, temp.y);    if (temp.x < 75)
+      {      position(ego, 10, 57);      }    if (temp.x > 74)
       {      position(ego, 140, 57);      }    }  if (previousRoom == 28)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.x < 75)
-      {      position(ego, 5, 164);      }    if (goat.x > 74)
+    {    get.posn(ego, temp.x, temp.y);    if (temp.x < 75)
+      {      position(ego, 5, 164);      }    if (temp.x > 74)
       {      position(ego, 144, 164);      }    }  block(27, 59, 127, 167);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wandered.off))
   {  reset(goat.wandered.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (said("check", "lake"))
   {  print("This lake looks refreshing, but a little swampy.");  }if (said("check", "tree"))
   {  print("This is a very interesting tree, growing in the middle of the lake.");  }if (!isset(onWater))
   {  if ((posn(ego, 83, 108, 131, 143) ||       posn(ego, 37, 101, 82, 145) ||       posn(ego, 48, 37, 94, 100) ||       posn(ego, 39, 54, 100, 80) ||       posn(ego, 85, 146, 108, 155)))
     {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if (posn(ego, 124, 119, 131, 141))
-    {    v76 = 112;    v77 = 139;    }  if (posn(ego, 19, 56, 33, 74))
-    {    v76 = 30;    v77 = 67;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water))
+  {  delta.x = 255;  if (posn(ego, 124, 119, 131, 141))
+    {    delta.x = 112;    delta.y = 139;    }  if (posn(ego, 19, 56, 33, 74))
+    {    delta.x = 30;    delta.y = 67;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    print("In your thirst, even swamp water is satisfying.");    }  }if (!isset(have.water) &&     isset(have.bucket) &&     said("acquire", "water"))
   {  print("The bucket fills with the somewhat swampy water.");  get("water");  set(have.water);  if (!isset(points.water))

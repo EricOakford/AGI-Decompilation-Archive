@@ -4,33 +4,33 @@ if (isset(newRoom))
     {    add.to.pic(View62, 0, 0, 80, 66, 0, 0);    }  if (previousRoom == 20)
     {    if (!isset(ego.invisible))
       {      set.view(ego, View0);      reset(keep.cycling);      }    }  random(0, 250, work);  if (work < 185)
-    {    v32 = 2;    step.size(o1, v32);    load.view(View5);    load.view(View116);    load.sound(Sound1);    load.sound(Sound17);    animate.obj(o1);    set.view(o1, View5);    set(f20);    }  if (isset(f20))
-    {Label1:    random(0, 250, v70);    if (v70 > 90)
-      {      goto(Label1);      }    }  draw(ego);  show.pic();  }if (isset(f21) &&     isset(f159))
-  {  if (!isset(f25))
-    {    set(f25);    sound(Sound17, f26);    }  if (isset(f26))
-    {    reset(f25);    reset(f26);    }  }--v70;if (v70 == 1)
-  {  position(o1, 40, 140);  set(f21);  sound(Sound1, f159);  draw(o1);  if (!isset(goat.following))
+    {    timer.3 = 2;    step.size(o1, timer.3);    load.view(View5);    load.view(View116);    load.sound(Sound1);    load.sound(Sound17);    animate.obj(o1);    set.view(o1, View5);    set(done1);    }  if (isset(done1))
+    {Label1:    random(0, 250, dist.to.obj);    if (dist.to.obj > 90)
+      {      goto(Label1);      }    }  draw(ego);  show.pic();  }if (isset(done2) &&     isset(stun.done5))
+  {  if (!isset(done6))
+    {    set(done6);    sound(Sound17, f26);    }  if (isset(f26))
+    {    reset(done6);    reset(f26);    }  }--dist.to.obj;if (dist.to.obj == 1)
+  {  position(o1, 40, 140);  set(done2);  sound(Sound1, stun.done5);  draw(o1);  if (!isset(goat.following))
     {    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    follow.ego(o1, 7, f156);    }  if (isset(goat.following))
-    {    wander(o1);    set(f22);    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    print("The sorcerer sees the goat and decides to leave.");    }  }if (!isset(f21))
+    {    wander(o1);    set(done3);    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    print("The sorcerer sees the goat and decides to leave.");    }  }if (!isset(done2))
   {  if (said("anyword", "dwarf"))
     {    print("There's no sorcerer here.");    }  if (said("cast", "dagger") &&       isset(have.dagger) &&       !isset(goat.following))
-    {    print("OK.  But you just lost your dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(f21))
+    {    print("OK.  But you just lost your dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(done2))
   {  if (said("check", "dwarf"))
     {    print("This sorcerer exudes mystery and danger.");    }  if ((said("speak", "dwarf") ||       said("hello") ||       said("say", "hello")))
     {    print("The sorcerer only speaks in the language of the Mystics.");    }  }if (isset(f156))
   {  reset(f156);  if (isset(protected.spell))
-    {    print("This sorcerer's magic is no match for your fairy godmother's.");    wander(o1);    set(f22);    }  else
+    {    print("This sorcerer's magic is no match for your fairy godmother's.");    wander(o1);    set(done3);    }  else
     {    if (isset(ego.invisible))
       {      print("Being invisible has protected you from this sorcerer.");      set(f27);      }    else
       {      if (isset(have.shield))
-        {        print("The magic shield will protect you from this dangerous  sorcerer.");        wander(o1);        set(f22);        }      else
-        {        set(f24);        v30 = 250;        v31 = 2;        program.control();        stop.motion(ego);        set.view(o1, View116);        end.of.loop(o1, f23);        print("The sorcerer casts a spell, freezing you to the spot. I hope no "              "dangerous creatures drop by!");        set(f145);        set(f146);        }      }    }  }if (isset(f23))
-  {  reset(f23);  set.view(o1, View5);  start.cycling(o1);  wander(o1);  set(f22);  }if (isset(f22) &&     edgeObjHit != NOT_HIT)
-  {  erase(o1);  reset(f22);  reset(f21);  }if (isset(f27))
-  {  erase(o1);  reset(f27);  reset(f21);  }--v30;if (v30 == 0 &&     v31 > 0)
-  {  --v31;  v30 = 250;  }if (v30 == 1 &&     v31 == 0)
-  {  reset(f24);  print("The sorcerer's spell has expired; now you can move  again.  Whew!");  start.motion(ego);  player.control();  }if (isset(f24))
+        {        print("The magic shield will protect you from this dangerous  sorcerer.");        wander(o1);        set(done3);        }      else
+        {        set(done5);        timer.1 = 250;        timer.2 = 2;        program.control();        stop.motion(ego);        set.view(o1, View116);        end.of.loop(o1, done4);        print("The sorcerer casts a spell, freezing you to the spot. I hope no "              "dangerous creatures drop by!");        set(f145);        set(f146);        }      }    }  }if (isset(done4))
+  {  reset(done4);  set.view(o1, View5);  start.cycling(o1);  wander(o1);  set(done3);  }if (isset(done3) &&     edgeObjHit != NOT_HIT)
+  {  erase(o1);  reset(done3);  reset(done2);  }if (isset(f27))
+  {  erase(o1);  reset(f27);  reset(done2);  }--timer.1;if (timer.1 == 0 &&     timer.2 > 0)
+  {  --timer.2;  timer.1 = 250;  }if (timer.1 == 1 &&     timer.2 == 0)
+  {  reset(done5);  print("The sorcerer's spell has expired; now you can move  again.  Whew!");  start.motion(ego);  player.control();  }if (isset(done5))
   {  goto(Label2);  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic36);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic30);  }if (edgeEgoHit == LEFT_EDGE)

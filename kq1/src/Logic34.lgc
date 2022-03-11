@@ -1,20 +1,20 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(45);  if (previousRoom == 47)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.x > 130)
+    {    get.posn(ego, temp.x, temp.y);    if (temp.x > 130)
       {      position(ego, 135, 47);      }    }  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 27, 96, 0, 0);    }  if (!isset(f92))
     {    load.view(View26);    animate.obj(o1);    set.view(o1, View26);    position(o1, 80, 104);    ignore.objs(o1);    draw(o1);    stop.update(o1);    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (said("check", "room"))
   {  print("There are many smooth pebbles next to the river.");  }if ((said("check", "river") ||     said("check", "beach")))
   {  print("The river is dangerous and powerful.  There is a delta of pebbles on "        "its edge.");  }if ((said("check", "across") ||     said("check", "across", "river")))
-  {  print("You notice an enchanting meadow.");  set(haveMatch);  }if (isset(onWater) &&     !isset(f20))
-  {  set(f20);  print("Your swimming attempt proved fatal!  The raging current drags you "        "under... you are lost....");  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if (posn(ego, 83, 39, 127, 60))
-    {    v76 = 96;    v77 = 56;    }  if (posn(ego, 82, 61, 129, 108))
-    {    v76 = 109;    v77 = 80;    }  if (posn(ego, 130, 61, 159, 108))
-    {    v76 = 129;    v77 = 83;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water))
+  {  print("You notice an enchanting meadow.");  set(haveMatch);  }if (isset(onWater) &&     !isset(done1))
+  {  set(done1);  print("Your swimming attempt proved fatal!  The raging current drags you "        "under... you are lost....");  }if (drown.swim <= 0 &&     isset(onWater))
+  {  delta.x = 255;  if (posn(ego, 83, 39, 127, 60))
+    {    delta.x = 96;    delta.y = 56;    }  if (posn(ego, 82, 61, 129, 108))
+    {    delta.x = 109;    delta.y = 80;    }  if (posn(ego, 130, 61, 159, 108))
+    {    delta.x = 129;    delta.y = 83;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    if (posn(ego, 77, 39, 159, 129))
       {      print("You drink deeply of the cold river water.");      }    else

@@ -1,6 +1,6 @@
-if (v80 == currentRoom)
+if (beanstalk.room == currentRoom)
   {  if (said("climb", "beanstalk"))
-    {    if (isset(f157))
+    {    if (isset(climbing.beanstalk))
       {      print("You are already climbing the beanstalk.");      }    if (isset(ego.invisible))
       {      print("You can't do that when you are invisible!");      }    }  if (said("check", "beanstalk"))
     {    print("It is a mighty beanstalk that stretches to the sky.");    }  }return();[ Messages#message 1 "You are already climbing the beanstalk."#message 2 "You can't do that when you are invisible!"#message 3 "It is a mighty beanstalk that stretches to the sky."

@@ -2,23 +2,23 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 60, 71, 0, 0);    }  set.horizon(42);  random(0, 250, work);  if (work < 175)
-    {    load.sound(Sound1);    v31 = 2;    step.size(o1, v31);    load.view(View94);    load.view(View95);    load.view(View2);    animate.obj(o1);    set.view(o1, View2);    set(f20);    }  if (isset(f20))
-    {Label1:    random(0, 250, v70);    if (v70 > 90)
-      {      goto(Label1);      }    }  draw(ego);  show.pic();  }--v70;if (v70 == 1)
-  {  set(f145);  set(f146);  position(o1, 40, 51);  set(f21);  set(f135);  sound(Sound1, f159);  draw(o1);  if (!isset(goat.following))
+    {    load.sound(Sound1);    timer.2 = 2;    step.size(o1, timer.2);    load.view(View94);    load.view(View95);    load.view(View2);    animate.obj(o1);    set.view(o1, View2);    set(done1);    }  if (isset(done1))
+    {Label1:    random(0, 250, dist.to.obj);    if (dist.to.obj > 90)
+      {      goto(Label1);      }    }  draw(ego);  show.pic();  }--dist.to.obj;if (dist.to.obj == 1)
+  {  set(f145);  set(f146);  position(o1, 40, 51);  set(done2);  set(fFlag135);  sound(Sound1, stun.done5);  draw(o1);  if (!isset(goat.following))
     {    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    follow.ego(o1, 7, f156);    }  if (isset(goat.following))
-    {    wander(o1);    set(f23);    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    print("Lucky for you that ogres are afraid of goats. This one decides to "          "leave you alone.");    }  }if (isset(f159))
-  {  reset(f159);  reset(f135);  }if (!isset(f21))
+    {    wander(o1);    set(done4);    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    print("Lucky for you that ogres are afraid of goats. This one decides to "          "leave you alone.");    }  }if (isset(stun.done5))
+  {  reset(stun.done5);  reset(fFlag135);  }if (!isset(done2))
   {  reset(f145);  reset(f146);  if (said("anyword", "dwarf"))
     {    print("There is no ogre here.");    }  if (said("cast", "dagger") &&       isset(have.dagger))
     {    print("OK.  You drop the dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(f156))
   {  reset(f156);  if (isset(ego.invisible))
-    {    print("Fortunately, you are invisible and the ogre can't see you.");    wander(o1);    set(f23);    goto(Label2);    }  if (isset(protected.spell))
-    {    print("You are very fortunate that your protective spell is still working.");    wander(o1);    set(f23);    goto(Label2);    }  if (isset(have.shield))
-    {    print("With the magic shield, no harm will come to you.");    wander(o1);    set(f23);    goto(Label2);    }  if (isset(ego.shrunk))
-    {    print("The ogre's vision is not keen enough to see you.");    wander(o1);    set(f23);    goto(Label2);    }  set(f24);  v30 = 10;  program.control();  stop.motion(ego);  erase(o1);  set.view(ego, View94);  }--v30;Label2:if (isset(f23) &&     edgeObjHit != NOT_HIT)
-  {  erase(o1);  reset(f23);  reset(f21);  }if (v30 == 1)
-  {  print("You were warned to be careful around this fierce creature!  Maybe next "        "time you will be able to elude the beast.");  get.posn(ego, goat.x, goat.y);  erase(ego);  set.view(ego, View95);  set.view(o1, View2);  position.v(ego, goat.x, goat.y);  position.v(o1, goat.x, goat.y);  draw(o1);  draw(ego);  stop.motion(o1);  stop.cycling(o1);  set(certain.death);  }if (isset(f21))
+    {    print("Fortunately, you are invisible and the ogre can't see you.");    wander(o1);    set(done4);    goto(Label2);    }  if (isset(protected.spell))
+    {    print("You are very fortunate that your protective spell is still working.");    wander(o1);    set(done4);    goto(Label2);    }  if (isset(have.shield))
+    {    print("With the magic shield, no harm will come to you.");    wander(o1);    set(done4);    goto(Label2);    }  if (isset(ego.shrunk))
+    {    print("The ogre's vision is not keen enough to see you.");    wander(o1);    set(done4);    goto(Label2);    }  set(done5);  timer.1 = 10;  program.control();  stop.motion(ego);  erase(o1);  set.view(ego, View94);  }--timer.1;Label2:if (isset(done4) &&     edgeObjHit != NOT_HIT)
+  {  erase(o1);  reset(done4);  reset(done2);  }if (timer.1 == 1)
+  {  print("You were warned to be careful around this fierce creature!  Maybe next "        "time you will be able to elude the beast.");  get.posn(ego, temp.x, temp.y);  erase(ego);  set.view(ego, View95);  set.view(o1, View2);  position.v(ego, temp.x, temp.y);  position.v(o1, temp.x, temp.y);  draw(o1);  draw(ego);  stop.motion(o1);  stop.cycling(o1);  set(certain.death);  }if (isset(done2))
   {  if (said("check", "dwarf"))
     {    print("That is a ferocious looking beast.  Please keep your distance!");    }  if (said("kill", "dwarf"))
     {    print("Ogres are practically indestructible.");    }  if (said("check", "stump"))
@@ -30,10 +30,10 @@ if (isset(newRoom))
       {      print("You need to be a little closer to smell the flowers.");      }    }  if ((said("speak", "dwarf") ||       said("hello") ||       said("say", "hello")))
     {    print("Ogres don't talk, they growl!");    }  if (said("cast", "dagger") &&       isset(have.dagger))
     {    print("The dagger is of little use against such a mean creature.  I would "          "save it if I were you.");    }  }if (edgeEgoHit != NOT_HIT)
-  {  reset(f145);  reset(f146);  }if (isset(f24))
-  {  goto(Label3);  }if (edgeEgoHit == TOP_EDGE &&     v30 <= 0)
-  {  new.room(Logic3);  }if (edgeEgoHit == RIGHT_EDGE &&     v30 <= 0)
-  {  new.room(Logic47);  }if (edgeEgoHit == LEFT_EDGE &&     v30 <= 0)
-  {  new.room(Logic45);  }if (edgeEgoHit == BOTTOM_EDGE &&     v30 <= 0)
+  {  reset(f145);  reset(f146);  }if (isset(done5))
+  {  goto(Label3);  }if (edgeEgoHit == TOP_EDGE &&     timer.1 <= 0)
+  {  new.room(Logic3);  }if (edgeEgoHit == RIGHT_EDGE &&     timer.1 <= 0)
+  {  new.room(Logic47);  }if (edgeEgoHit == LEFT_EDGE &&     timer.1 <= 0)
+  {  new.room(Logic45);  }if (edgeEgoHit == BOTTOM_EDGE &&     timer.1 <= 0)
   {  new.room(Logic35);  }if (isset(goat.following))
   {  call(lgc.goat);  }Label3:return();[ Messages#message 1 "Watch out!!!  There is an ogre nearby!  He will crush you in his strong arms if he catches you."#message 2 "You are very fortunate that your protective spell is still working."#message 3 "With the magic shield, no harm will come to you."#message 4 "Fortunately, you are invisible and the ogre can't see you."#message 5 "The ogre's vision is not keen enough to see you."#message 6 "The ogre can see you now!"#message 7 "The dagger is of little use against such a mean creature.  I would save it if I were you."#message 8 "OK.  You drop the dagger."#message 9 "That is a ferocious looking beast.  Please keep your distance!"#message 10 "There is no ogre here."#message 11 "Ogres are practically indestructible."#message 12 "At one time these were very pretty trees."#message 13 "Do you really want to try that?"#message 14 "The delightful wild flowers brighten up your day."#message 15 "Their perfume is joyful, sweet, and light."#message 16 "Ogres don't talk, they growl!"#message 17 "You were warned to be careful around this fierce creature!  Maybe next time you will be able to elude the beast."#message 18 "Lucky for you that ogres are afraid of goats. This one decides to leave you alone."#message 19 "You need to be a little closer to smell the flowers."

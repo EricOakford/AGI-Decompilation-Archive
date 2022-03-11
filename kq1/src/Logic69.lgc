@@ -1,11 +1,11 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.sound(Sound5);  if (previousRoom == 59)
     {    position(ego, 18, 97);    }  if (previousRoom == 68)
-    {    position(ego, 144, 155);    set.loop(ego, 1);    move.obj(ego, 143, 154, 0, done);    }  draw(ego);  show.pic();  }if ((said("check", "stairs") ||     said("check", "room")))
+    {    position(ego, 144, 155);    set.loop(ego, 1);    move.obj(ego, 143, 154, 0, script.done);    }  draw(ego);  show.pic();  }if ((said("check", "stairs") ||     said("check", "room")))
   {  print("The stairs descend into the lower reaches of the mountain.");  }if (said("check", "doorway"))
-  {  print("You can see sky, light, and smell clouds through the opening.");  }if (isset(egoHitSpecial) &&     !isset(f21))
-  {  set(f145);  set(f146);  set(f21);  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  print("Oh dear!  With a slip of the foot, you fall head over heels down the "        "long stairway.");  goat.y = 165;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  sound(Sound5, f159);  }if (isset(f20))
-  {  reset(f20);  erase(ego);  set(certain.death);  }if (posn(ego, 0, 0, 1, 167))
+  {  print("You can see sky, light, and smell clouds through the opening.");  }if (isset(egoHitSpecial) &&     !isset(done2))
+  {  set(f145);  set(f146);  set(done2);  if (!isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  print("Oh dear!  With a slip of the foot, you fall head over heels down the "        "long stairway.");  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  sound(Sound5, stun.done5);  }if (isset(done1))
+  {  reset(done1);  erase(ego);  set(certain.death);  }if (posn(ego, 0, 0, 1, 167))
   {  new.room(Logic59);  }if (posn(ego, 138, 156, 155, 157))
   {  new.room(Logic68);  }return();[ Messages#message 1 "The stairs descend into the lower reaches of the mountain."#message 2 "You can see sky, light, and smell clouds through the opening."#message 3 "Oh dear!  With a slip of the foot, you fall head over heels down the long stairway."

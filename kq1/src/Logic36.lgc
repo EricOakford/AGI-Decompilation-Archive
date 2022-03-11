@@ -2,10 +2,10 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(42);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 56, 83, 0, 0);    }  if (previousRoom == 78)
-    {    shrink.timer = 0;    currentScore  += 1;    set.view(ego, View60);    position(ego, 110, 131);    move.obj(ego, 88, 131, 0, f20);    }  draw(ego);  show.pic();  }if (isset(ego.shrunk))
+    {    shrink.timer = 0;    currentScore  += 1;    set.view(ego, View60);    position(ego, 110, 131);    move.obj(ego, 88, 131, 0, done1);    }  draw(ego);  show.pic();  }if (isset(ego.shrunk))
   {  ignore.blocks(ego);  }else
-  {  observe.blocks(ego);  }if (isset(f20))
-  {  set.view(ego, View0);  print("You feel a stretching sensation... Oh, you're back to your original "        "size.");  reset(ego.shrunk);  reset(f20);  }if ((said("check", "doorway") ||     said("look in", "doorway")))
+  {  observe.blocks(ego);  }if (isset(done1))
+  {  set.view(ego, View0);  print("You feel a stretching sensation... Oh, you're back to your original "        "size.");  reset(ego.shrunk);  reset(done1);  }if ((said("check", "doorway") ||     said("look in", "doorway")))
   {  if (posn(ego, 90, 124, 106, 140))
     {    print("When looking in this small hole, you see a faint green glow.");    goto(Label1);    }  if (posn(ego, 75, 125, 109, 158))
     {    print("One rock has a small hole in its base.");    }  else

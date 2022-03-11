@@ -1,11 +1,11 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.sound(Sound5);  set.horizon(45);  if (previousRoom == 19)
     {    position(ego, 21, 162);    }  if (previousRoom == 67)
-    {    position(ego, 132, 46);    set.loop(ego, 1);    move.obj(ego, 131, 47, 0, done);    }  draw(ego);  show.pic();  }if (isset(goat.following))
+    {    position(ego, 132, 46);    set.loop(ego, 1);    move.obj(ego, 131, 47, 0, script.done);    }  draw(ego);  show.pic();  }if (isset(goat.following))
   {  reset(goat.following);  set(goat.gone);  print("The old goat is afraid of the dark and decides to stay outside.");  currentScore -= 5;  }if ((said("check", "stairs") ||     said("check", "room")))
-  {  print("The stairs go up into the heart of the mountain.");  }if (isset(egoHitSpecial) &&     !isset(f21))
-  {  set(f145);  set(f146);  set(f21);  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  goat.y = 165;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  sound(Sound5, f159);  }if (isset(f20))
-  {  reset(f20);  print("Oops!  Those stairs are pretty slippery, aren't they?");  erase(ego);  set(certain.death);  }if (edgeEgoHit == TOP_EDGE)
+  {  print("The stairs go up into the heart of the mountain.");  }if (isset(egoHitSpecial) &&     !isset(done2))
+  {  set(f145);  set(f146);  set(done2);  if (!isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  sound(Sound5, stun.done5);  }if (isset(done1))
+  {  reset(done1);  print("Oops!  Those stairs are pretty slippery, aren't they?");  erase(ego);  set(certain.death);  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic67);  }if (posn(ego, 16, 165, 31, 166))
   {  new.room(Logic19);  }return();[ Messages#message 1 "The old goat is afraid of the dark and decides to stay outside."#message 2 "The stairs go up into the heart of the mountain."#message 3 "Oops!  Those stairs are pretty slippery, aren't they?"

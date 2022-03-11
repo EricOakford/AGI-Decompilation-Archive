@@ -2,9 +2,9 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(43);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 56, 127, 0, 0);    }  if (previousRoom == 32)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.x > 103)
-      {      position(ego, 143, 166);      }    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(f20))
-  {  set(f20);  print("Your swimming attempt proved fatal!  The raging current drags you "        "under....");  }if (said("check", "river"))
+    {    get.posn(ego, temp.x, temp.y);    if (temp.x > 103)
+      {      position(ego, 143, 166);      }    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(done1))
+  {  set(done1);  print("Your swimming attempt proved fatal!  The raging current drags you "        "under....");  }if (said("check", "river"))
   {  print("This is a Raging River filled with boulders and rapids.");  }if ((said("check", "across") ||     said("check", "across", "river")))
   {  print("You see a lovely green meadow on the other side of the river.");  set(haveMatch);  }if (said("check", "boulder"))
   {  print("It is a massive boulder that splits the river.");  }if (!isset(have.water))
@@ -18,18 +18,18 @@ if (isset(newRoom))
     {    print("You are not close enough to the Raging River.");    }  }if (!isset(onWater))
   {  if ((posn(ego, 14, 66, 54, 107) ||       posn(ego, 99, 64, 145, 82) ||       posn(ego, 114, 113, 133, 136)))
     {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if (posn(ego, 0, 64, 23, 109))
-    {    v76 = 5;    v77 = 90;    }  if (posn(ego, 24, 67, 47, 108))
-    {    v76 = 30;    v77 = 91;    }  if (posn(ego, 47, 63, 77, 87))
-    {    v76 = 63;    v77 = 81;    }  if (posn(ego, 47, 88, 77, 110))
-    {    v76 = 63;    v77 = 96;    }  if (posn(ego, 78, 64, 98, 112))
-    {    v76 = 79;    v77 = 90;    }  if (posn(ego, 99, 60, 131, 82))
-    {    v76 = 108;    v77 = 78;    }  if (posn(ego, 132, 40, 159, 80))
-    {    v76 = 134;    v77 = 69;    }  if (posn(ego, 95, 88, 145, 130))
-    {    v76 = 110;    v77 = 115;    }  if (posn(ego, 98, 131, 147, 167))
-    {    v76 = 122;    v77 = 157;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  delta.x = 255;  if (posn(ego, 0, 64, 23, 109))
+    {    delta.x = 5;    delta.y = 90;    }  if (posn(ego, 24, 67, 47, 108))
+    {    delta.x = 30;    delta.y = 91;    }  if (posn(ego, 47, 63, 77, 87))
+    {    delta.x = 63;    delta.y = 81;    }  if (posn(ego, 47, 88, 77, 110))
+    {    delta.x = 63;    delta.y = 96;    }  if (posn(ego, 78, 64, 98, 112))
+    {    delta.x = 79;    delta.y = 90;    }  if (posn(ego, 99, 60, 131, 82))
+    {    delta.x = 108;    delta.y = 78;    }  if (posn(ego, 132, 40, 159, 80))
+    {    delta.x = 134;    delta.y = 69;    }  if (posn(ego, 95, 88, 145, 130))
+    {    delta.x = 110;    delta.y = 115;    }  if (posn(ego, 98, 131, 147, 167))
+    {    delta.x = 122;    delta.y = 157;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic48);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic40);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic34);  }if (edgeEgoHit == BOTTOM_EDGE)

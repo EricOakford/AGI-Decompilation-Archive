@@ -1,16 +1,16 @@
 if (isset(newRoom))
   {  ignore.horizon(ego);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound5);  load.view(View105);  if (previousRoom == 57)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.y > 154)
+    {    get.posn(ego, temp.x, temp.y);    if (temp.y > 154)
       {      position(ego, 150, 153);      }    }  draw(ego);  show.pic();  }if (isset(egoHitSpecial) &&     posn(ego, 0, 0, 159, 83))
   {  set(f199);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.priority(ego, v30);  set.priority.v(ego, v30);  get.posn(ego, goat.x, goat.y);  goat.y  += 40;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  }if (isset(egoHitSpecial) &&     posn(ego, 0, 84, 159, 167))
-  {  set(f199);  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, goat.x, goat.y);  get.priority(ego, v30);  set.priority.v(ego, v30);  goat.y  += 9;  v96 = 4;  move.obj.v(ego, goat.x, goat.y, v96, f20);  }if (!isset(f20) &&     isset(f199) &&     !isset(f21))
-  {  sound(Sound5, f159);  set(f21);  }if (isset(f20))
-  {  erase(ego);  reset(f199);  reset(f20);  stop.sound();  print("You should know you can't walk on clouds.");  set(certain.death);  }if (said("check", "blossom"))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  get.posn(ego, temp.x, temp.y);  temp.y  += 40;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  }if (isset(egoHitSpecial) &&     posn(ego, 0, 84, 159, 167))
+  {  set(f199);  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, temp.x, temp.y);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  temp.y  += 9;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  }if (!isset(done1) &&     isset(f199) &&     !isset(done2))
+  {  sound(Sound5, stun.done5);  set(done2);  }if (isset(done1))
+  {  erase(ego);  reset(f199);  reset(done1);  stop.sound();  print("You should know you can't walk on clouds.");  set(certain.death);  }if (said("check", "blossom"))
   {  print("These flowers look different than any you have ever seen before.");  }else
   {  if (said("check", "anyword"))
     {    print("You are in the Land of the Clouds.  It is rumored that a giant lives "          "up here.");    }  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic57);  }if (edgeEgoHit == LEFT_EDGE)
-  {  if (isset(f94))
+  {  if (isset(planted.beans))
     {    new.room(Logic72);    }  else
     {    new.room(Logic64);    }  }return();[ Messages#message 1 "You should know you can't walk on clouds."#message 2 "You are in the Land of the Clouds.  It is rumored that a giant lives up here."#message 3 "These flowers look different than any you have ever seen before."

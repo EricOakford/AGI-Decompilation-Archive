@@ -1,15 +1,15 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(42);  if (isset(goat.following))
-    {    load.logics(lgc.goat);    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  if (!isset(f150) &&       !isset(f151))
-    {    load.view(View65);    animate.obj(o1);    set.view(o1, View65);    position(o1, 95, 154);    observe.blocks(o1);    set(f20);    load.sound(Sound1);    load.sound(Sound10);    }  draw(ego);  show.pic();  }if (isset(f21) &&     isset(f159))
+    {    load.logics(lgc.goat);    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  if (!isset(troll.dead) &&       !isset(troll.paid))
+    {    load.view(View65);    animate.obj(o1);    set.view(o1, View65);    position(o1, 95, 154);    observe.blocks(o1);    set(done1);    load.sound(Sound1);    load.sound(Sound10);    }  draw(ego);  show.pic();  }if (isset(done2) &&     isset(stun.done5))
   {  if (!isset(f32))
     {    set(f32);    sound(Sound10, f33);    }  if (isset(f33))
-    {    reset(f32);    reset(f33);    }  }if (isset(f21))
+    {    reset(f32);    reset(f33);    }  }if (isset(done2))
   {  if (posn(ego, 84, 117, 131, 124))
     {    observe.blocks(ego);    }  else
-    {    ignore.blocks(ego);    }  }if (!isset(f21))
-  {  ignore.blocks(ego);  }if (isset(f21) &&     !isset(f25))
-  {  set(f25);  follow.ego(o1, 1, f22);  }if (!isset(f21))
+    {    ignore.blocks(ego);    }  }if (!isset(done2))
+  {  ignore.blocks(ego);  }if (isset(done2) &&     !isset(done6))
+  {  set(done6);  follow.ego(o1, 1, done3);  }if (!isset(done2))
   {  if (said("anyword", "troll"))
     {    print("Good news: no troll.");    }  if ((said("cast", "dagger") ||       said("kill", "goat")))
     {    if (isset(have.dagger))
@@ -21,16 +21,16 @@ if (isset(newRoom))
     {    if (said("give", "egg"))
       {      print("To what?");      }    }  if ((isset(have.unopened.walnut) ||       isset(have.opened.walnut)))
     {    if (said("give", "gold nut"))
-      {      print("To what?");      }    }  }if (isset(f20) &&     isset(egoHitSpecial))
-  {  reset(f20);  set(f21);  v30 = 2;  step.size(o1, v30);  sound(Sound1, f159);  draw(o1);  if (isset(ego.invisible))
+      {      print("To what?");      }    }  }if (isset(done1) &&     isset(egoHitSpecial))
+  {  reset(done1);  set(done2);  timer.1 = 2;  step.size(o1, timer.1);  sound(Sound1, stun.done5);  draw(o1);  if (isset(ego.invisible))
     {    print("As you start to cross the bridge, a wretched troll appears.  Even "          "though you are invisible, he will not let you cross his bridge.");    }  else
-    {    print("As you approach the bridge, a mean, ugly troll appears.  He will not "          "let you cross his bridge.");    }  }if (isset(f21) &&     isset(goat.following) &&     !isset(f26))
-  {  distance(ego, aGoat, v31);  if (v31 > 25)
-    {    reposition.to(aGoat, 98, 90);    }  print("It is a well known fact that goats hate trolls intensely. You should "        "move aside and let the goat take care of this nasty troll.");  set(f26);  set(f76);  move.obj(aGoat, 98, 95, 0, f23);  }if (isset(f23))
-  {  ignore.objs(aGoat);  reset(f23);  move.obj(o1, 100, 124, 0, done);  move.obj(aGoat, 100, 124, 1, f203);  }distance(o1, aGoat, work);if (work < 15 &&     !isset(f150))
-  {  print("The old goat seeing the troll, the archenemy of all goats, charges the "        "troll and butts him into oblivion!  The bridge is now yours.");  set(f150);  reset(f21);  reset(goat.following);  erase(o1);  set(goat.gone);  get.posn(aGoat, goat.x, goat.y);  goat.y = 80;  move.obj.v(aGoat, goat.x, goat.y, v96, f31);  currentScore  += 4;  }if (isset(f31))
-  {  reset(f31);  move.obj(aGoat, 135, 80, 1, f30);  }if (isset(f30))
-  {  reset(f30);  erase(aGoat);  }if (isset(f21) &&     !isset(goat.following))
+    {    print("As you approach the bridge, a mean, ugly troll appears.  He will not "          "let you cross his bridge.");    }  }if (isset(done2) &&     isset(goat.following) &&     !isset(f26))
+  {  distance(ego, aGoat, timer.2);  if (timer.2 > 25)
+    {    reposition.to(aGoat, 98, 90);    }  print("It is a well known fact that goats hate trolls intensely. You should "        "move aside and let the goat take care of this nasty troll.");  set(f26);  set(f76);  move.obj(aGoat, 98, 95, 0, done4);  }if (isset(done4))
+  {  ignore.objs(aGoat);  reset(done4);  move.obj(o1, 100, 124, 0, script.done);  move.obj(aGoat, 100, 124, 1, f203);  }distance(o1, aGoat, work);if (work < 15 &&     !isset(troll.dead))
+  {  print("The old goat seeing the troll, the archenemy of all goats, charges the "        "troll and butts him into oblivion!  The bridge is now yours.");  set(troll.dead);  reset(done2);  reset(goat.following);  erase(o1);  set(goat.gone);  get.posn(aGoat, temp.x, temp.y);  temp.y = 80;  move.obj.v(aGoat, temp.x, temp.y, temp.step, f31);  currentScore  += 4;  }if (isset(f31))
+  {  reset(f31);  move.obj(aGoat, 135, 80, 1, sound.done);  }if (isset(sound.done))
+  {  reset(sound.done);  erase(aGoat);  }if (isset(done2) &&     !isset(goat.following))
   {  if (said("check", "troll"))
     {    if (posn(ego, 78, 90, 148, 166))
       {      print("This troll is big, strong, and mean-looking.  Don't mess with this "            "troll!");      }    else
@@ -54,30 +54,30 @@ if (isset(newRoom))
     {    print("What priceless treasure are you giving the old troll?");    }  if (isset(have.diamonds))
     {    if ((said("give", "diamond") ||         said("give", "troll", "diamond") ||         said("give", "diamond", "troll")))
       {      if (posn(ego, 78, 90, 148, 166))
-        {        print("OK");        drop("pouch of diamonds");        reset(have.diamonds);        set(f151);        set(f107);        currentScore -= 6;        set(f27);        }      else
+        {        print("OK");        drop("pouch of diamonds");        reset(have.diamonds);        set(troll.paid);        set(f107);        currentScore -= 6;        set(f27);        }      else
         {        print("You would have to throw it from here!");        }      }    }  if (isset(have.sceptre))
     {    if ((said("give", "sceptre") ||         said("give", "troll", "sceptre") ||         said("give", "sceptre", "troll")))
       {      if (posn(ego, 78, 90, 148, 166))
-        {        print("OK");        drop("sceptre");        reset(have.sceptre);        set(f151);        set(f114);        currentScore -= 6;        set(f27);        }      else
+        {        print("OK");        drop("sceptre");        reset(have.sceptre);        set(troll.paid);        set(f114);        currentScore -= 6;        set(f27);        }      else
         {        print("You would have to throw it from here!");        }      }    }  if (isset(have.egg))
     {    if ((said("give", "egg") ||         said("give", "troll", "egg") ||         said("give", "egg", "troll")))
       {      if (posn(ego, 78, 90, 148, 166))
-        {        print("OK");        drop("gold egg");        reset(have.egg);        set(f151);        set(f111);        currentScore -= 6;        set(f27);        }      else
+        {        print("OK");        drop("gold egg");        reset(have.egg);        set(troll.paid);        set(f111);        currentScore -= 6;        set(f27);        }      else
         {        print("You would have to throw it from here!");        }      }    }  if (isset(have.unopened.walnut))
     {    if ((said("give", "gold nut") ||         said("give", "troll", "gold nut") ||         said("give", "gold nut", "troll")))
       {      print("The troll doesn't want just a plain walnut.");      }    }  if (isset(have.opened.walnut))
     {    if ((said("give", "gold nut") ||         said("give", "troll", "gold nut") ||         said("give", "gold nut", "troll")))
       {      if (posn(ego, 78, 90, 148, 166))
-        {        print("OK");        drop("gold walnut");        reset(have.opened.walnut);        set(f151);        set(f109);        currentScore -= 6;        set(f27);        }      else
+        {        print("OK");        drop("gold walnut");        reset(have.opened.walnut);        set(troll.paid);        set(f109);        currentScore -= 6;        set(f27);        }      else
         {        print("You would have to throw it from here!");        }      }    }  }if (isset(f27))
   {  print("Grasping the precious treasure in a dirt-covered paw, the troll "        "disappears under the bridge.");  reset(f27);  move.obj(o1, 99, 153, 0, f28);  }if (isset(f28))
-  {  reset(f28);  erase(o1);  reset(f21);  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if (posn(ego, 124, 102, 159, 152))
-    {    v76 = 136;    v77 = 146;    }  if (posn(ego, 0, 69, 48, 167))
-    {    v76 = 12;    v77 = 163;    }  if (posn(ego, 49, 99, 91, 167))
-    {    v76 = 49;    v77 = 145;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (isset(onWater) &&     !isset(f29))
+  {  reset(f28);  erase(o1);  reset(done2);  }if (drown.swim <= 0 &&     isset(onWater))
+  {  delta.x = 255;  if (posn(ego, 124, 102, 159, 152))
+    {    delta.x = 136;    delta.y = 146;    }  if (posn(ego, 0, 69, 48, 167))
+    {    delta.x = 12;    delta.y = 163;    }  if (posn(ego, 49, 99, 91, 167))
+    {    delta.x = 49;    delta.y = 145;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (isset(onWater) &&     !isset(f29))
   {  set(f29);  print("You have slipped down the muddy bank and lodged in the  river's bed.  "        "Good knight.");  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    if (posn(ego, 1, 84, 158, 166))
@@ -89,8 +89,8 @@ if (isset(newRoom))
   {  print("This bridge is the only way to cross the river here.");  }if (said("look under", "bridge"))
   {  print("You glance under the old bridge, but see nothing unusual.");  }if (said("check", "river"))
   {  print("The river runs swiftly between steep banks.");  }if (edgeEgoHit != NOT_HIT)
-  {  observe.blocks(ego);  reset(f68);  if (isset(f21) &&       isset(goat.following))
-    {    reset(goat.following);    set(f150);    set(goat.gone);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  observe.blocks(ego);  reset(f68);  if (isset(done2) &&       isset(goat.following))
+    {    reset(goat.following);    set(troll.dead);    set(goat.gone);    }  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic8);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic42);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic48);  }if (edgeEgoHit == BOTTOM_EDGE)

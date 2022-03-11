@@ -2,7 +2,7 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 108, 64, 0, 0);    }  if (previousRoom == 26)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.x < 50)
+    {    get.posn(ego, temp.x, temp.y);    if (temp.x < 50)
       {      position(ego, 10, 50);      }    else
       {      position(ego, 116, 50);      }    }  block(128, 78, 136, 113);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wandered.off))
   {  reset(goat.wandered.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (said("check", "lake"))
@@ -10,11 +10,11 @@ if (isset(newRoom))
   {  print("These cattails look soft and fuzzy.");  }if (!isset(onWater))
   {  if ((posn(ego, 69, 76, 103, 131) ||       posn(ego, 104, 96, 123, 120) ||       posn(ego, 124, 96, 132, 105) ||       posn(ego, 120, 106, 125, 111)))
     {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if ((posn(ego, 108, 88, 133, 110) ||       posn(ego, 104, 111, 125, 120)))
-    {    v76 = 114;    v77 = 102;    }  if (posn(ego, 86, 125, 106, 156))
-    {    v76 = 73;    v77 = 139;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
+  {  delta.x = 255;  if ((posn(ego, 108, 88, 133, 110) ||       posn(ego, 104, 111, 125, 120)))
+    {    delta.x = 114;    delta.y = 102;    }  if (posn(ego, 86, 125, 106, 156))
+    {    delta.x = 73;    delta.y = 139;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    if ((posn(ego, 0, 40, 109, 167) ||         posn(ego, 110, 55, 151, 142)))
       {      print("Ahhh!  That water sure hit the spot!");      }    else

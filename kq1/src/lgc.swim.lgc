@@ -10,8 +10,8 @@ if (isset(newRoom))
     {    reset(f46);    reset(f45);    }  }if (isset(onWater))
   {  if (drown.swim == 0)
     {    set(keep.cycling);    stop.motion(ego);    v93 = 250;    drown.swim = 1;    if (isset(f134))
-      {      reposition(ego, v76, v77);      }    else
-      {      object.on.water(ego);      }    get.posn(ego, v76, v77);    if (v76 > 139)
+      {      reposition(ego, delta.x, delta.y);      }    else
+      {      object.on.water(ego);      }    get.posn(ego, delta.x, delta.y);    if (delta.x > 139)
       {      erase(ego);      set.view(ego, View93);      draw(ego);      if (isset(ego.shrunk))
         {        reset(ego.shrunk);        shrink.timer = 0;        print("It appears you have become normal size again.");        }      if (isset(ego.invisible))
         {        invisible.seconds = 0;        invisible.minutes = 0;        reset(ego.invisible);        reset(have.ring);        reset(wearing.ring);        set(lost.ring);        drop("magic ring");        currentScore -= 3;        print("Thrashing around in the water has caused you to lose the magic "              "ring and become visible again.");        }      }    else
@@ -33,6 +33,6 @@ if (isset(newRoom))
     {    set(f44);    print("You splash around in the water for a while but seem  to have "          "forgotten how to swim. Unfortunately, you drown.");    v95 = 50;    }  else
     {    --v93;    }  }if (!isset(onWater) &&     drown.swim == 2)
   {  reset(keep.cycling);  drown.swim = 0;  set.view(ego, View0);  if (isset(f136))
-    {    reposition(ego, v76, v77);    }  else
-    {    object.on.land(ego);    }  }reset(f134);reset(f136);v76 = 0;v77 = 0;--v95;if (v95 == 1)
+    {    reposition(ego, delta.x, delta.y);    }  else
+    {    object.on.land(ego);    }  }reset(f134);reset(f136);delta.x = 0;delta.y = 0;--v95;if (v95 == 1)
   {  erase(ego);  stop.sound();  set(certain.death);  }Label1:return();[ Messages#message 1 "You splash around in the water for a while but seem  to have forgotten how to swim. Unfortunately, you drown."#message 2 "Unfortunately, with the moat population swimming is not possible."#message 3 "You need to be in the water in order to swim."#message 4 "You are already swimming!"#message 5 "The swift current does not allow for swimming."#message 6 "Thrashing around in the water has caused you to lose the magic ring and become visible again."#message 7 "It appears you have become normal size again."

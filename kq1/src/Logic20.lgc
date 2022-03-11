@@ -2,7 +2,7 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(53);  load.logics(lgc.swim);  call(lgc.swim);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 123, 64, 0, 0);    }  if (previousRoom == 29)
-    {    get.posn(ego, goat.x, goat.y);    if (goat.x < 50)
+    {    get.posn(ego, temp.x, temp.y);    if (temp.x < 50)
       {      position(ego, 12, 54);      }    else
       {      position(ego, 122, 54);      }    }  if (previousRoom == 13)
     {    if (posn(ego, 0, 164, 75, 167))
@@ -18,10 +18,10 @@ if (isset(newRoom))
     {    if (posn(ego, 15, 40, 138, 167))
       {      print("The clear water quenches your thirst.");      }    else
       {      print("You are not close enough to the water.");      }    }  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if (posn(ego, 100, 100, 115, 135))
-    {    v76 = 100;    v77 = 130;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water) &&     isset(have.bucket) &&     !isset(onWater) &&     said("acquire", "water"))
+  {  delta.x = 255;  if (posn(ego, 100, 100, 115, 135))
+    {    delta.x = 100;    delta.y = 130;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water) &&     isset(have.bucket) &&     !isset(onWater) &&     said("acquire", "water"))
   {  if (posn(ego, 15, 40, 138, 167))
     {    reset(drank.water);    print("You fill up your bucket with sparkling water.");    get("water");    set(have.water);    if (!isset(points.water))
       {      currentScore  += 2;      }    set(points.water);    }  else

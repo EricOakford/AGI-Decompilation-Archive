@@ -1,2 +1,5 @@
-### AGI Demo 4 (Thexder, SQ2, PQ, LSL, 3D Helicopter Simulator, Mother Goose)
+### AGI Demo 2 (Helicopter, PQ, Thexder, SQ2, Mother Goose, LSL)
+  Dated 1987-11-24, Version 1, 5.25"
   Interpreter version 2.915
+
+Once a bug that prevents WinAGI from importing this demo is fixed, a new decompilation will follow.

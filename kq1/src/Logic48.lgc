@@ -1,17 +1,17 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound4);  load.sound(Sound5);  load.view(View8);  load.view(View89);  load.view(View105);  load.view(View103);  load.view(View104);  if (previousRoom == 80)
-    {    set.view(ego, View89);    animate.obj(o1);    set.view(o1, View8);    position(ego, 2, 50);    move.obj(ego, 100, 50, 0, f20);    set.priority(o1, 14);    set.priority(ego, 15);    }  draw(ego);  show.pic();  }if (isset(f20))
-  {  reset(f20);  erase(ego);  position(ego, 108, 53);  set.view(ego, View105);  set(keep.cycling);  position(o1, 100, 48);  draw(o1);  draw(ego);  move.obj(o1, 130, 48, 2, f21);  move.obj(ego, 108, 107, 4, f22);  set(f135);  sound(Sound5, f198);  }if (isset(f21))
-  {  reset(f21);  erase(o1);  }if (isset(f22))
-  {  stop.sound();  set(f27);  reset(f22);  program.control();  release.priority(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH");  sound(Sound4, f159);  v30 = 18;  }--v30;if (isset(f159))
-  {  if (v30 > 0)
-    {    reset(f159);    sound(Sound4, f159);    }  }if (v30 == 1)
-  {  set.view(ego, View104);  end.of.loop(ego, f25);  }if (isset(f25))
-  {  reset(f25);  set.view(ego, View0);  reset(keep.cycling);  player.control();  reset(f145);  reset(f209);  }if ((said("check", "doorway") ||     said("look in", "doorway")))
+    {    set.view(ego, View89);    animate.obj(o1);    set.view(o1, View8);    position(ego, 2, 50);    move.obj(ego, 100, 50, 0, done1);    set.priority(o1, 14);    set.priority(ego, 15);    }  draw(ego);  show.pic();  }if (isset(done1))
+  {  reset(done1);  erase(ego);  position(ego, 108, 53);  set.view(ego, View105);  set(keep.cycling);  position(o1, 100, 48);  draw(o1);  draw(ego);  move.obj(o1, 130, 48, 2, done2);  move.obj(ego, 108, 107, 4, done3);  set(fFlag135);  sound(Sound5, fall.done5);  }if (isset(done2))
+  {  reset(done2);  erase(o1);  }if (isset(done3))
+  {  stop.sound();  set(f27);  reset(done3);  program.control();  release.priority(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH");  sound(Sound4, stun.done5);  timer.1 = 18;  }--timer.1;if (isset(stun.done5))
+  {  if (timer.1 > 0)
+    {    reset(stun.done5);    sound(Sound4, stun.done5);    }  }if (timer.1 == 1)
+  {  set.view(ego, View104);  end.of.loop(ego, done6);  }if (isset(done6))
+  {  reset(done6);  set.view(ego, View0);  reset(keep.cycling);  player.control();  reset(f145);  reset(f209);  }if ((said("check", "doorway") ||     said("look in", "doorway")))
   {  if (posn(ego, 55, 105, 100, 142))
     {    print("In the depths of the large hole you seem to sense a faint, green "          "glow.");    }  else
     {    print("Don't be afraid... get closer.");    }  }if (isset(onWater) &&     !isset(f199))
-  {  set(f95);  stop.cycling(ego);  set(f199);  set.priority(ego, 5);  get.posn(ego, goat.x, goat.y);  goat.y  += 35;  v96 = 8;  move.obj.v(ego, goat.x, goat.y, v96, f23);  sound(Sound5, done);  }if (isset(f23))
-  {  reset(f23);  reset(f95);  erase(ego);  new.room(Logic73);  }if (edgeEgoHit == LEFT_EDGE)
+  {  set(f95);  stop.cycling(ego);  set(f199);  set.priority(ego, 5);  get.posn(ego, temp.x, temp.y);  temp.y  += 35;  temp.step = 8;  move.obj.v(ego, temp.x, temp.y, temp.step, done4);  sound(Sound5, script.done);  }if (isset(done4))
+  {  reset(done4);  reset(f95);  erase(ego);  new.room(Logic73);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic47);  }if (edgeEgoHit == BOTTOM_EDGE)
   {  new.room(Logic33);  }return();[ Messages#message 1 "In the depths of the large hole you seem to sense a faint, green glow."#message 2 "Don't be afraid... get closer."#message 3 "OUCH"

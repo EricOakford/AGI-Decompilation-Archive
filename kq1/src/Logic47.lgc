@@ -2,12 +2,12 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 14, 144, 0, 0);    }  load.logics(lgc.swim);  call(lgc.swim);  if (!isset(f121))
-    {    load.view(View60);    load.view(View84);    animate.obj(o1);    set.view(o1, View84);    position(o1, 84, 80);    set(f20);    }  if (previousRoom == 34)
+    {    load.view(View60);    load.view(View84);    animate.obj(o1);    set.view(o1, View84);    position(o1, 84, 80);    set(done1);    }  if (previousRoom == 34)
     {    if (posn(ego, 77, 165, 112, 167))
       {      position(ego, 71, 164);      }    if (posn(ego, 113, 165, 159, 167))
-      {      position(ego, 142, 164);      }    }  if (isset(f20))
-    {    reset(f20);    draw(o1);    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(f21))
-  {  set(f21);  print("This is sad.  You are not the first to fail your quest in the Raging "        "River... I hope you may be the last.");  }if (said("check", "water"))
+      {      position(ego, 142, 164);      }    }  if (isset(done1))
+    {    reset(done1);    draw(o1);    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(done2))
+  {  set(done2);  print("This is sad.  You are not the first to fail your quest in the Raging "        "River... I hope you may be the last.");  }if (said("check", "water"))
   {  print("This is the wild Raging River filled with boulders and rapids.");  }if (said("check", "boulder"))
   {  print("It would be dangerous to try and jump across the river on the "        "boulders.");  }if (said("check", "across"))
   {  if ((posn(ego, 0, 0, 36, 111) ||       posn(ego, 0, 112, 97, 167)))
@@ -40,15 +40,15 @@ if (isset(newRoom))
   {  if (isset(f121))
     {    print("This lovely meadow is split by the Raging River.");    }  else
     {    print("There is a large mushroom in the meadow next to the river.");    }  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if (posn(ego, 7, 40, 62, 81))
-    {    v76 = 23;    v77 = 81;    }  if (posn(ego, 10, 82, 37, 116))
-    {    v76 = 28;    v77 = 95;    }  if (posn(ego, 37, 82, 74, 90))
-    {    v76 = 60;    v77 = 104;    }  if (posn(ego, 64, 91, 104, 116))
-    {    v76 = 74;    v77 = 116;    }  if (posn(ego, 37, 117, 100, 145))
-    {    v76 = 70;    v77 = 117;    }  if ((posn(ego, 68, 146, 111, 167) ||       posn(ego, 101, 117, 143, 167)))
-    {    v76 = 102;    v77 = 155;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
+  {  delta.x = 255;  if (posn(ego, 7, 40, 62, 81))
+    {    delta.x = 23;    delta.y = 81;    }  if (posn(ego, 10, 82, 37, 116))
+    {    delta.x = 28;    delta.y = 95;    }  if (posn(ego, 37, 82, 74, 90))
+    {    delta.x = 60;    delta.y = 104;    }  if (posn(ego, 64, 91, 104, 116))
+    {    delta.x = 74;    delta.y = 116;    }  if (posn(ego, 37, 117, 100, 145))
+    {    delta.x = 70;    delta.y = 117;    }  if ((posn(ego, 68, 146, 111, 167) ||       posn(ego, 101, 117, 143, 167)))
+    {    delta.x = 102;    delta.y = 155;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    if ((posn(ego, 0, 40, 32, 111) ||         posn(ego, 14, 112, 88, 135) ||         posn(ego, 39, 136, 99, 167) ||         posn(ego, 36, 40, 74, 76) ||         posn(ego, 46, 77, 101, 88) ||         posn(ego, 68, 89, 151, 167)))
       {      print("The water from this swift river is cold and sweet.");      }    else

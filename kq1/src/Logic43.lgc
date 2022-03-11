@@ -7,11 +7,11 @@ if (isset(newRoom))
   {  print("The clear blue lake is surrounded by a pretty meadow.");  }if (!isset(onWater))
   {  if ((posn(ego, 96, 82, 115, 99) ||       posn(ego, 100, 108, 115, 120) ||       posn(ego, 30, 113, 67, 134) ||       posn(ego, 90, 121, 112, 130) ||       posn(ego, 30, 135, 67, 139) ||       posn(ego, 90, 131, 107, 142)))
     {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
-  {  v76 = 255;  if ((posn(ego, 115, 104, 125, 111) ||       posn(ego, 113, 112, 124, 119) ||       posn(ego, 100, 120, 122, 126) ||       posn(ego, 100, 127, 118, 136) ||       posn(ego, 100, 137, 115, 142)))
-    {    v76 = 100;    v77 = 121;    }  if (posn(ego, 30, 131, 55, 146))
-    {    v76 = 25;    v77 = 123;    }  if (v76 == 255)
-    {    v76 = 0;    }  else
-    {    get.posn(ego, goat.x, goat.y);    v76 -= goat.x;    v77 -= goat.y;    set(f134);    }  }if (!isset(have.water))
+  {  delta.x = 255;  if ((posn(ego, 115, 104, 125, 111) ||       posn(ego, 113, 112, 124, 119) ||       posn(ego, 100, 120, 122, 126) ||       posn(ego, 100, 127, 118, 136) ||       posn(ego, 100, 137, 115, 142)))
+    {    delta.x = 100;    delta.y = 121;    }  if (posn(ego, 30, 131, 55, 146))
+    {    delta.x = 25;    delta.y = 123;    }  if (delta.x == 255)
+    {    delta.x = 0;    }  else
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    print("It tastes very refreshing to a thirsty wanderer.");    }  }if (!isset(have.water) &&     isset(have.bucket) &&     said("acquire", "water"))
   {  print("The crystal clear water fills up the bucket.");  get("water");  set(have.water);  if (!isset(points.water))
