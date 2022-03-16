@@ -2,4 +2,4 @@
   Dated 1988-09-13, 5.25
   Interpreter version 3.002.102
 
-Once a bug that prevents WinAGI from importing this demo is fixed, a decompilation will follow.
+Decompilation coming soon.

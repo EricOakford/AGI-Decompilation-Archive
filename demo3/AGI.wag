@@ -184,8 +184,8 @@
 [Logic161]
    ID = rmPQ
    Size = 2788
-   CRC32 = &HCF6932D3
-   CompCRC32 = &HCF6932D3
+   CRC32 = &H39ECC16F
+   CompCRC32 = &H39ECC16F
    Description = ""
    IsRoom = False
 
@@ -1026,7 +1026,7 @@
    Description = ""
 
 [Sound161]
-   ID = Sound161
+   ID = mPQTheme
    Size = 1591
    Key = 0
    TPQN = 0
@@ -1098,7 +1098,7 @@
    Description = ""
 
 [Sound165]
-   ID = mPQTheme
+   ID = sCarOpen
    Size = 96
    Key = 0
    TPQN = 0

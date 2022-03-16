@@ -11,7 +11,7 @@
    Author = ""
    About = ""
    GameVersion = ""
-   LastEdit = "3/10/2022 3:15:17 PM"
+   LastEdit = "3/16/2022 2:53:37 PM"
    PlatformType = 1
    Platform = "C:\Program Files (x86)\DOSBox\DOSBox.exe"
    DOSExec = SIERRA.COM
@@ -184,7 +184,7 @@
 [Logic161]
    ID = rmPQ
    Size = 2785
-   CRC32 = &H4CCCB19
+   CRC32 = &H1027A726
    CompCRC32 = &H4CCCB19
    Description = ""
    IsRoom = False
@@ -732,7 +732,7 @@
    Description = ""
 
 [Sound161]
-   ID = Sound161
+   ID = mPQTheme
    Size = 1591
    Key = 0
    TPQN = 0
@@ -804,7 +804,7 @@
    Description = ""
 
 [Sound165]
-   ID = mPQTheme
+   ID = sCarOpen
    Size = 96
    Key = 0
    TPQN = 0

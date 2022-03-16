@@ -1,39 +1,0 @@
-if (isset(f45))
-  {  reset(f45);  add.to.pic(View149, 0, 0, 25, 105, 4, 4);  add.to.pic(View149, 0, 0, 55, 105, 4, 4);  add.to.pic(View149, 0, 0, 85, 105, 4, 4);  add.to.pic(View149, 0, 0, 115, 105, 4, 4);  add.to.pic(View149, 0, 0, 25, 155, 4, 4);  add.to.pic(View149, 0, 0, 55, 155, 4, 4);  add.to.pic(View149, 0, 0, 85, 155, 4, 4);  add.to.pic(View149, 0, 0, 115, 155, 4, 4);  add.to.pic(View149, 2, 0, 30, 97, 4, 4);  add.to.pic(View149, 2, 4, 60, 97, 4, 4);  add.to.pic(View149, 2, 1, 90, 97, 4, 4);  add.to.pic(View149, 2, 5, 120, 97, 4, 4);  add.to.pic(View149, 2, 6, 30, 147, 4, 4);  add.to.pic(View149, 2, 2, 60, 147, 4, 4);  add.to.pic(View149, 2, 7, 90, 147, 4, 4);  add.to.pic(View149, 2, 3, 120, 147, 4, 4);  show.pic();  clear.text.rect(2, 7, 5, 33, WHITE);  set.text.attribute(BLACK, WHITE);  display(3, 8, "Please enter your name:");  display(4, 8, "===> ");  script = 0;  scriptTimer = 5;  }if (isset(scriptDone))
-  {  reset(scriptDone);  ++script;  if (script == 1)
-    {    if (monitorType != MONO)
-      {      clear.text.rect(20, 3, 23, 35, WHITE);      set.text.attribute(BLACK, WHITE);      display(21, 6, "Your child can call his or");      display(22, 6, "her character by name.");      scriptTimer = 5;      }    else
-      {      clear.text.rect(23, 3, 24, 35, WHITE);      set.text.attribute(BLACK, WHITE);      display(23, 6, "Your child can call his or");      display(24, 6, "her character by name.");      scriptTimer = 5;      }    }  if (script == 2)
-    {    demoPic = 4;    v242 = 12;    if (v142 == 152)
-      {      v243 = 20;      }    if (v142 == 153)
-      {      v243 = 40;      }    if (v142 == 154)
-      {      v243 = 70;      }    if (v142 == 155)
-      {      v243 = 90;      }    if (v142 == 156)
-      {      v243 = 30;      }    if (v142 == 157)
-      {      v243 = 50;      }    if (v142 == 158)
-      {      v243 = 60;      }    if (v142 == 159)
-      {      v243 = 80;      }    v242 = 13;    display.v(demoPic, v242, v243);    set(scriptDone);    }  if (script == 3)
-    {    ++v242;    ++v243;    display.v(demoPic, v242, v243);    set(scriptDone);    }  if (script == 4)
-    {    ++v242;    ++v243;    display.v(demoPic, v242, v243);    set(scriptDone);    }  if (script == 5)
-    {    ++v242;    ++v243;    display.v(demoPic, v242, v243);    set(scriptDone);    }  if (script == 6)
-    {    ++v242;    ++v243;    display.v(demoPic, v242, v243);    set(scriptDone);    }  if (script == 7)
-    {    ++v242;    ++v243;    display.v(demoPic, v242, v243);    set(scriptDone);    }  if (script == 8)
-    {    if (monitorType != MONO)
-      {      clear.text.rect(20, 3, 23, 35, WHITE);      display(21, 6, "Then your child can pick");      display(22, 6, "what he or she looks like.");      }    else
-      {      clear.text.rect(23, 3, 24, 35, WHITE);      display(23, 6, "Then your child can pick");      display(24, 6, "what he or she looks like.");      }    animate.obj(o1);    set.view(o1, View149);    set.loop(o1, 1);    set.cel(o1, 0);    fix.loop(o1);    set.priority(o1, 15);    if (v142 != 152)
-      {      position(o1, 25, 105);      }    else
-      {      position(o1, 85, 105);      }    draw(o1);    stop.cycling(o1);    scriptTimer = 2;    }  if (script == 9)
-    {    if ((v142 == 154 ||         v142 == 158 ||         v142 == 155 ||         v142 == 159))
-      {      move.obj(o1, 25, 155, 5, scriptDone);      }    else
-      {      set(scriptDone);      }    }  if (script == 10)
-    {    if (v142 == 152)
-      {      move.obj(o1, 25, 105, 5, scriptDone);      }    if (v142 == 153)
-      {      move.obj(o1, 85, 105, 5, scriptDone);      }    if (v142 == 154)
-      {      move.obj(o1, 55, 155, 5, scriptDone);      }    if (v142 == 155)
-      {      move.obj(o1, 115, 155, 5, scriptDone);      }    if (v142 == 156)
-      {      move.obj(o1, 55, 105, 5, scriptDone);      }    if (v142 == 157)
-      {      move.obj(o1, 115, 105, 5, scriptDone);      }    if (v142 == 158)
-      {      move.obj(o1, 25, 155, 5, scriptDone);      }    if (v142 == 159)
-      {      move.obj(o1, 85, 155, 5, scriptDone);      }    }  if (script == 11)
-    {    scriptTimer = 4;    }  if (script == 12)
-    {    currentEgoView = v142;    load.view.v(v142);    set.view.v(ego, v142);    stop.sound();    v35 = 152;    }  }return();[ Messages#message 1 "Please enter your name:"#message 2 "===> "#message 3 "%s6, please choose"#message 4 "who you look like:     "#message 5 "Start New Character"#message 6 "(Use arrow keys to move;"#message 7 " press ENTER to choose) "#message 8 "Your child can call his or"#message 9 "her character by name."#message 11 "Then your child can pick"#message 12 "what he or she looks like."#message 20 "J"#message 21 "o"#message 22 "h"#message 23 "n"#message 24 "n"#message 25 "y"#message 30 "N"#message 31 "a"#message 32 "n"#message 33 "c"#message 34 "y"#message 35 " "#message 40 "D"#message 41 "a"#message 42 "l"#message 43 "e"#message 44 " "#message 45 " "#message 50 "K"#message 51 "a"#message 52 "t"#message 53 "h"#message 54 "y"#message 55 " "#message 60 "S"#message 61 "a"#message 62 "n"#message 63 "d"#message 64 "y"#message 65 " "#message 70 "B"#message 71 "o"#message 72 "b"#message 73 "b"#message 74 "y"#message 75 " "#message 80 "J"#message 81 "u"#message 82 "l"#message 83 "i"#message 84 "e"#message 85 " "#message 90 "B"#message 91 "i"#message 92 "l"#message 93 "l"#message 94 "y"#message 95 " "

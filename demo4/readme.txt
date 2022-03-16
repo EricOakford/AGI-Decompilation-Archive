@@ -2,4 +2,5 @@
   Dated 1987-11-24, Version 1, 5.25"
   Interpreter version 2.915
 
-Once a bug that prevents WinAGI from importing this demo is fixed, a new decompilation will follow.
+This game is missing some resources due to the lack of VOL.3.
+However, the missing resources are just for the omitted KQ2 and KQ3 demos, which are available on other demo packs.

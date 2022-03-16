@@ -1,12 +1,0 @@
-if (isset(f45))
-  {  show.pic();  display(22, 5, "(c) 1987  Sierra On-Line, Inc.");  v240 = 2;  set(f241);  sound(Sound151, f141);  }--v240;if (v240 == 1)
-  {  if (isset(f241))
-    {    set(f240);    }  }if (isset(f241))
-  {  if (isset(f240))
-    {    reset(f240);    ++v241;    if (v241 == 1)
-      {      animate.obj(o2);      set.view(o2, View147);      set.loop(o2, 0);      set.cel(o2, 0);      ignore.horizon(o2);      position(o2, 5, 24);      draw(o2);      animate.obj(o3);      set.view(o3, View147);      set.loop(o3, 1);      set.cel(o3, 0);      ignore.horizon(o3);      position(o3, 104, 24);      draw(o3);      ignore.objs(o2);      ignore.objs(o3);      move.obj(o2, 50, 24, 1, f240);      move.obj(o3, 59, 24, 1, f142);      }    if (v241 == 2)
-      {      stop.update(o2);      stop.update(o3);      animate.obj(o5);      set.view(o5, View148);      set.loop(o5, 3);      fix.loop(o5);      set.cel(o5, 0);      position(o5, 0, 141);      set.priority(o5, 6);      draw(o5);      ignore.objs(o5);      animate.obj(o4);      set.view(o4, View148);      set.loop(o4, 0);      set.cel(o4, 0);      position(o4, 3, 137);      draw(o4);      demoPic = 2;      cycle.time(o4, demoPic);      cycle.time(o5, demoPic);      move.obj(o4, 66, 137, 1, f240);      move.obj(o5, 63, 141, 1, f142);      }    if (v241 == 3)
-      {      set.view(o4, View148);      set.loop(o4, 2);      fix.loop(o4);      set.cel(o5, 0);      set.cel(o4, 0);      move.obj(o4, 76, 137, 1, f240);      move.obj(o5, 73, 141, 1, f142);      demoPic = 4;      cycle.time(o4, demoPic);      cycle.time(o5, demoPic);      }    if (v241 == 4)
-      {      add.to.pic(View147, 2, 0, 22, 67, 0, 0);      add.to.pic(View147, 3, 0, 88, 66, 0, 0);      v240 = 2;      }    if (v241 == 5)
-      {      set.view(o4, View148);      set.loop(o4, 0);      fix.loop(o4);      move.obj(o4, 100, 137, 1, f240);      move.obj(o5, 97, 141, 1, f142);      demoPic = 2;      cycle.time(o4, demoPic);      cycle.time(o5, demoPic);      }    if (v241 == 6)
-      {      v35 = 151;      }    }  }return();[ Messages#message 1 "(c) 1987  Sierra On-Line, Inc."
