@@ -1,0 +1,45 @@
+=====================================================
+ LOAD GAME WARNINGS: 
+C:\AGI\demo6\DM.wag
+16-Mar-22 3:19:24 PM
+  WARNING: Sound209 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound210 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound211 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound212 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound218 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound219 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound220 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound223 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound224 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound225 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound226 error: (Invalid sound data: unable to load sound resource)
+=====================================================
+ LOAD GAME WARNINGS: 
+C:\AGI\demo6\DM.wag
+16-Mar-22 3:34:41 PM
+  WARNING: Sound209 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound210 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound211 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound212 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound218 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound219 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound220 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound223 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound224 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound225 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound226 error: (Invalid sound data: unable to load sound resource)
+=====================================================
+ LOAD GAME WARNINGS: 
+C:\AGI\demo6\DM.wag
+16-Mar-22 5:43:31 PM
+  WARNING: Sound209 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound210 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound211 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound212 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound218 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound219 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound220 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound223 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound224 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound225 error: (Invalid sound data: unable to load sound resource)
+  WARNING: Sound226 error: (Invalid sound data: unable to load sound resource)

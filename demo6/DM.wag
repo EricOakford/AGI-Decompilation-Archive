@@ -1,0 +1,1408 @@
+#
+# WinAGI Game Property File
+#
+
+[General]
+   WinAGIVersion = 2.1.1
+   GameID = DM
+   Interpreter = 3.002149
+   ResDir = src
+   Description = ""
+   Author = ""
+   About = ""
+   GameVersion = ""
+   LastEdit = "3/16/2022 5:44:05 PM"
+   PlatformType = 1
+   Platform = "C:\Program Files (x86)\DOSBox\DOSBox.exe"
+   DOSExec = SIERRA.COM
+   PlatformOpts = ""
+   UseResNames = True
+   UseLE = True
+
+[::BEGIN Logics::]
+
+[Logic0]
+   ID = lgcMain
+   Size = 734
+   CRC32 = &H7657A1C8
+   CompCRC32 = &H7657A1C8
+   Description = ""
+   IsRoom = False
+
+[Logic1]
+   ID = rmDemoSelect
+   Size = 1728
+   CRC32 = &HB416F282
+   CompCRC32 = &HB416F282
+   Description = ""
+   IsRoom = False
+
+[Logic8]
+   ID = lgcError
+   Size = 807
+   CRC32 = &HFAE5CE1C
+   CompCRC32 = &HFAE5CE1C
+   Description = ""
+   IsRoom = False
+
+[Logic51]
+   ID = rmManhunter
+   Size = 2862
+   CRC32 = &H241B4FE3
+   CompCRC32 = &H241B4FE3
+   Description = ""
+   IsRoom = False
+
+[Logic61]
+   ID = rmGoldRush
+   Size = 2435
+   CRC32 = &HB400ED2C
+   CompCRC32 = &HB400ED2C
+   Description = ""
+   IsRoom = False
+
+[Logic62]
+   ID = rmGoldRush2
+   Size = 2785
+   CRC32 = &H449F6B36
+   CompCRC32 = &H449F6B36
+   Description = ""
+   IsRoom = False
+
+[Logic121]
+   ID = rmLSL
+   Size = 2562
+   CRC32 = &H9BABF35C
+   CompCRC32 = &H9BABF35C
+   Description = ""
+   IsRoom = False
+
+[Logic150]
+   ID = rmMGTitle
+   Size = 339
+   CRC32 = &H30EB1677
+   CompCRC32 = &H30EB1677
+   Description = ""
+   IsRoom = False
+
+[Logic151]
+   ID = rmCharSelect
+   Size = 1220
+   CRC32 = &H25106791
+   CompCRC32 = &H25106791
+   Description = ""
+   IsRoom = False
+
+[Logic152]
+   ID = rmHumptyDumpty
+   Size = 417
+   CRC32 = &HB8894718
+   CompCRC32 = &HB8894718
+   Description = ""
+   IsRoom = False
+
+[Logic154]
+   ID = rmJackBNimble
+   Size = 383
+   CRC32 = &H2736FC4A
+   CompCRC32 = &H2736FC4A
+   Description = ""
+   IsRoom = False
+
+[Logic155]
+   ID = Logic155
+   Size = 275
+   CRC32 = &HDD77CDD4
+   CompCRC32 = &HDD77CDD4
+   Description = ""
+   IsRoom = False
+
+[Logic156]
+   ID = Logic156
+   Size = 1230
+   CRC32 = &HE13D1329
+   CompCRC32 = &HE13D1329
+   Description = ""
+   IsRoom = False
+
+[Logic159]
+   ID = rmMGStart
+   Size = 221
+   CRC32 = &HA9BE7D70
+   CompCRC32 = &HA9BE7D70
+   Description = ""
+   IsRoom = False
+
+[Logic161]
+   ID = rmPQ
+   Size = 2781
+   CRC32 = &HFE00CBAD
+   CompCRC32 = &HFE00CBAD
+   Description = ""
+   IsRoom = False
+
+[Logic201]
+   ID = rmSQ2
+   Size = 2951
+   CRC32 = &H4F15DDEE
+   CompCRC32 = &H4F15DDEE
+   Description = ""
+   IsRoom = False
+[::END Logics::]
+
+[::BEGIN Pictures::]
+
+[Picture1]
+   ID = Picture1
+   Size = 1522
+   BkgdImg = ""
+   Description = ""
+
+[Picture50]
+   ID = Picture50
+   Size = 5595
+   BkgdImg = ""
+   Description = ""
+
+[Picture51]
+   ID = Picture51
+   Size = 5005
+   BkgdImg = ""
+   Description = ""
+
+[Picture52]
+   ID = Picture52
+   Size = 5761
+   BkgdImg = ""
+   Description = ""
+
+[Picture53]
+   ID = Picture53
+   Size = 2576
+   BkgdImg = ""
+   Description = ""
+
+[Picture54]
+   ID = Picture54
+   Size = 4862
+   BkgdImg = ""
+   Description = ""
+
+[Picture55]
+   ID = Picture55
+   Size = 3124
+   BkgdImg = ""
+   Description = ""
+
+[Picture56]
+   ID = Picture56
+   Size = 6781
+   BkgdImg = ""
+   Description = ""
+
+[Picture57]
+   ID = Picture57
+   Size = 7950
+   BkgdImg = ""
+   Description = ""
+
+[Picture58]
+   ID = Picture58
+   Size = 3971
+   BkgdImg = ""
+   Description = ""
+
+[Picture59]
+   ID = Picture59
+   Size = 2087
+   BkgdImg = ""
+   Description = ""
+
+[Picture60]
+   ID = Picture60
+   Size = 4220
+   BkgdImg = ""
+   Description = ""
+
+[Picture61]
+   ID = Picture61
+   Size = 5794
+   BkgdImg = ""
+   Description = ""
+
+[Picture62]
+   ID = Picture62
+   Size = 1228
+   BkgdImg = ""
+   Description = ""
+
+[Picture63]
+   ID = Picture63
+   Size = 3363
+   BkgdImg = ""
+   Description = ""
+
+[Picture64]
+   ID = Picture64
+   Size = 5289
+   BkgdImg = ""
+   Description = ""
+
+[Picture65]
+   ID = Picture65
+   Size = 1766
+   BkgdImg = ""
+   Description = ""
+
+[Picture66]
+   ID = Picture66
+   Size = 6197
+   BkgdImg = ""
+   Description = ""
+
+[Picture67]
+   ID = Picture67
+   Size = 1816
+   BkgdImg = ""
+   Description = ""
+
+[Picture68]
+   ID = Picture68
+   Size = 1724
+   BkgdImg = ""
+   Description = ""
+
+[Picture69]
+   ID = Picture69
+   Size = 4064
+   BkgdImg = ""
+   Description = ""
+
+[Picture121]
+   ID = Picture121
+   Size = 1430
+   BkgdImg = ""
+   Description = ""
+
+[Picture122]
+   ID = Picture122
+   Size = 2842
+   BkgdImg = ""
+   Description = ""
+
+[Picture123]
+   ID = Picture123
+   Size = 1063
+   BkgdImg = ""
+   Description = ""
+
+[Picture124]
+   ID = Picture124
+   Size = 1681
+   BkgdImg = ""
+   Description = ""
+
+[Picture125]
+   ID = Picture125
+   Size = 2308
+   BkgdImg = ""
+   Description = ""
+
+[Picture150]
+   ID = Picture150
+   Size = 1592
+   BkgdImg = ""
+   Description = ""
+
+[Picture151]
+   ID = Picture151
+   Size = 69
+   BkgdImg = ""
+   Description = ""
+
+[Picture152]
+   ID = Picture152
+   Size = 2179
+   BkgdImg = ""
+   Description = ""
+
+[Picture154]
+   ID = Picture154
+   Size = 2604
+   BkgdImg = ""
+   Description = ""
+
+[Picture155]
+   ID = Picture155
+   Size = 3261
+   BkgdImg = ""
+   Description = ""
+
+[Picture161]
+   ID = Picture161
+   Size = 3315
+   BkgdImg = ""
+   Description = ""
+
+[Picture162]
+   ID = Picture162
+   Size = 1662
+   BkgdImg = ""
+   Description = ""
+
+[Picture163]
+   ID = Picture163
+   Size = 1857
+   BkgdImg = ""
+   Description = ""
+
+[Picture164]
+   ID = Picture164
+   Size = 3458
+   BkgdImg = ""
+   Description = ""
+
+[Picture165]
+   ID = Picture165
+   Size = 2762
+   BkgdImg = ""
+   Description = ""
+
+[Picture166]
+   ID = Picture166
+   Size = 1901
+   BkgdImg = ""
+   Description = ""
+
+[Picture167]
+   ID = Picture167
+   Size = 4147
+   BkgdImg = ""
+   Description = ""
+
+[Picture168]
+   ID = Picture168
+   Size = 1647
+   BkgdImg = ""
+   Description = ""
+
+[Picture201]
+   ID = Picture201
+   Size = 976
+   BkgdImg = ""
+   Description = ""
+
+[Picture202]
+   ID = Picture202
+   Size = 341
+   BkgdImg = ""
+   Description = ""
+
+[Picture203]
+   ID = Picture203
+   Size = 606
+   BkgdImg = ""
+   Description = ""
+
+[Picture204]
+   ID = Picture204
+   Size = 2978
+   BkgdImg = ""
+   Description = ""
+
+[Picture205]
+   ID = Picture205
+   Size = 3447
+   BkgdImg = ""
+   Description = ""
+
+[Picture206]
+   ID = Picture206
+   Size = 3266
+   BkgdImg = ""
+   Description = ""
+
+[Picture207]
+   ID = Picture207
+   Size = 4849
+   BkgdImg = ""
+   Description = ""
+
+[Picture208]
+   ID = Picture208
+   Size = 2826
+   BkgdImg = ""
+   Description = ""
+[::END Pictures::]
+
+[::BEGIN Sounds::]
+
+[Sound51]
+   ID = Sound51
+   Size = 1421
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound52]
+   ID = Sound52
+   Size = 691
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound61]
+   ID = Sound61
+   Size = 2346
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound62]
+   ID = Sound62
+   Size = 1161
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound63]
+   ID = Sound63
+   Size = 571
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound64]
+   ID = Sound64
+   Size = 631
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound65]
+   ID = Sound65
+   Size = 411
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound66]
+   ID = Sound66
+   Size = 821
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound67]
+   ID = Sound67
+   Size = 656
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound121]
+   ID = Sound121
+   Size = 971
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound122]
+   ID = Sound122
+   Size = 161
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound123]
+   ID = Sound123
+   Size = 2281
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound150]
+   ID = Sound150
+   Size = 251
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound151]
+   ID = Sound151
+   Size = 2021
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound152]
+   ID = Sound152
+   Size = 286
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound153]
+   ID = Sound153
+   Size = 101
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound154]
+   ID = Sound154
+   Size = 56
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound155]
+   ID = Sound155
+   Size = 156
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound156]
+   ID = Sound156
+   Size = 436
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound157]
+   ID = Sound157
+   Size = 71
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound161]
+   ID = mPQTheme
+   Size = 1591
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound162]
+   ID = mPQFanfare
+   Size = 221
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound163]
+   ID = mPQFanfare2
+   Size = 361
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound164]
+   ID = mKeystone
+   Size = 1036
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound165]
+   ID = sCarOpen
+   Size = 96
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound201]
+   ID = mSQ2Theme
+   Size = 4941
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound202]
+   ID = mVohaul
+   Size = 461
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound203]
+   ID = Sound203
+   Size = 226
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound204]
+   ID = Sound204
+   Size = 256
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound205]
+   ID = mSQ2Fanfare
+   Size = 471
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound209]
+   ID = Sound209
+   Size = 3650
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound210]
+   ID = Sound210
+   Size = 4174
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound211]
+   ID = Sound211
+   Size = 3145
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound212]
+   ID = Sound212
+   Size = 477
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound218]
+   ID = Sound218
+   Size = 1146
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound219]
+   ID = Sound219
+   Size = 772
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound220]
+   ID = Sound220
+   Size = 793
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound223]
+   ID = Sound223
+   Size = 859
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound224]
+   ID = Sound224
+   Size = 1342
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound225]
+   ID = Sound225
+   Size = 916
+   Key = 0
+   TPQN = 0
+   Description = ""
+
+[Sound226]
+   ID = Sound226
+   Size = 213
+   Key = 0
+   TPQN = 0
+   Description = ""
+[::END Sounds::]
+
+[::BEGIN Views::]
+
+[View1]
+   ID = vTandy
+   Size = 3650
+   Description = ""
+
+[View2]
+   ID = vSierra
+   Size = 4174
+   Description = ""
+
+[View3]
+   ID = vDemoGuy
+   Size = 3145
+   Description = ""
+
+[View4]
+   ID = vDemoTalkBubble
+   Size = 477
+   Description = ""
+
+[View10]
+   ID = vSQ2
+   Size = 1146
+   Description = ""
+
+[View11]
+   ID = vLSL
+   Size = 772
+   Description = ""
+
+[View12]
+   ID = vPQ
+   Size = 793
+   Description = ""
+
+[View15]
+   ID = vMG
+   Size = 859
+   Description = ""
+
+[View16]
+   ID = vManhunter
+   Size = 1342
+   Description = ""
+
+[View17]
+   ID = vGoldRush
+   Size = 916
+   Description = ""
+
+[View18]
+   ID = vBlank
+   Size = 213
+   Description = ""
+
+[View51]
+   ID = vMHTitle
+   Size = 4007
+   Description = ""
+
+[View52]
+   ID = vEyeballs
+   Size = 4827
+   Description = ""
+
+[View53]
+   ID = vFerrisWheel
+   Size = 3022
+   Description = ""
+
+[View61]
+   ID = View61
+   Size = 2136
+   Description = ""
+
+[View62]
+   ID = View62
+   Size = 1622
+   Description = ""
+
+[View63]
+   ID = View63
+   Size = 5413
+   Description = ""
+
+[View64]
+   ID = View64
+   Size = 265
+   Description = ""
+
+[View65]
+   ID = View65
+   Size = 1735
+   Description = ""
+
+[View66]
+   ID = View66
+   Size = 6843
+   Description = ""
+
+[View67]
+   ID = View67
+   Size = 4939
+   Description = ""
+
+[View68]
+   ID = View68
+   Size = 1258
+   Description = ""
+
+[View69]
+   ID = View69
+   Size = 5401
+   Description = ""
+
+[View121]
+   ID = vLSLEgo
+   Size = 2883
+   Description = ""
+
+[View122]
+   ID = vLSLDemoStuff1
+   Size = 4723
+   Description = ""
+
+[View123]
+   ID = vEgoDiscoing2
+   Size = 2013
+   Description = ""
+
+[View124]
+   ID = vFawnDancing
+   Size = 2321
+   Description = ""
+
+[View125]
+   ID = vHotTubStuff
+   Size = 1474
+   Description = ""
+
+[View126]
+   ID = vLefty
+   Size = 792
+   Description = ""
+
+[View127]
+   ID = vEgoUndressing
+   Size = 1257
+   Description = ""
+
+[View128]
+   ID = vLSLDemoStuff2
+   Size = 5121
+   Description = ""
+
+[View129]
+   ID = vEgoDiscoing1
+   Size = 2321
+   Description = ""
+
+[View144]
+   ID = vMGStuff
+   Size = 1718
+   Description = ""
+
+[View146]
+   ID = vTalkBubbles
+   Size = 993
+   Description = ""
+
+[View147]
+   ID = vMGTitle
+   Size = 1842
+   Description = ""
+
+[View148]
+   ID = vMotherGoose
+   Size = 3469
+   Description = ""
+
+[View149]
+   ID = vKidPortrait
+   Size = 1512
+   Description = ""
+
+[View150]
+   ID = vHumptyDumpty
+   Size = 844
+   Description = ""
+
+[View151]
+   ID = vJackBNimble
+   Size = 4407
+   Description = ""
+
+[View152]
+   ID = vBoy1
+   Size = 2003
+   Description = ""
+
+[View153]
+   ID = vBoy2
+   Size = 1964
+   Description = ""
+
+[View154]
+   ID = vBoy3
+   Size = 2090
+   Description = ""
+
+[View155]
+   ID = vBoy4
+   Size = 1973
+   Description = ""
+
+[View156]
+   ID = vGirl1
+   Size = 2126
+   Description = ""
+
+[View157]
+   ID = vGirl2
+   Size = 2140
+   Description = ""
+
+[View158]
+   ID = vGirl3
+   Size = 2166
+   Description = ""
+
+[View159]
+   ID = vGirl4
+   Size = 2136
+   Description = ""
+
+[View161]
+   ID = vPQEgo
+   Size = 2727
+   Description = ""
+
+[View162]
+   ID = vPQDemoStuff1
+   Size = 5861
+   Description = ""
+
+[View163]
+   ID = View163
+   Size = 329
+   Description = ""
+
+[View164]
+   ID = View164
+   Size = 3656
+   Description = ""
+
+[View165]
+   ID = View165
+   Size = 360
+   Description = ""
+
+[View166]
+   ID = View166
+   Size = 146
+   Description = ""
+
+[View167]
+   ID = View167
+   Size = 185
+   Description = ""
+
+[View168]
+   ID = View168
+   Size = 70
+   Description = ""
+
+[View169]
+   ID = View169
+   Size = 820
+   Description = ""
+
+[View201]
+   ID = vSQ2Title
+   Size = 3810
+   Description = ""
+
+[View202]
+   ID = View202
+   Size = 2072
+   Description = ""
+
+[View203]
+   ID = View203
+   Size = 1152
+   Description = ""
+
+[View204]
+   ID = vEgoCuffed
+   Size = 1985
+   Description = ""
+
+[View205]
+   ID = View205
+   Size = 157
+   Description = ""
+
+[View206]
+   ID = View206
+   Size = 569
+   Description = ""
+
+[View207]
+   ID = vVohaul
+   Size = 3254
+   Description = ""
+
+[View208]
+   ID = View208
+   Size = 666
+   Description = ""
+
+[View209]
+   ID = View209
+   Size = 164
+   Description = ""
+[::END Views::]
+
+[WORDS.TOK]
+   Description = ""
+
+[OBJECT]
+   Description = ""
+
+[Palette]
+   Color0 = &H00000000
+   Color1 = &H00A00000
+   Color2 = &H0000A000
+   Color3 = &H00A0A000
+   Color4 = &H000000A0
+   Color5 = &H00A00080
+   Color6 = &H000050A0
+   Color7 = &H00A0A0A0
+   Color8 = &H00505050
+   Color9 = &H00FF5050
+   Color10 = &H0050FF00
+   Color11 = &H00FFFF50
+   Color12 = &H005050FF
+   Color13 = &H00FF50FF
+   Color14 = &H0050FFFF
+   Color15 = &H00FFFFFF
