@@ -1,0 +1,557 @@
+#
+# WinAGI Game Property File
+#
+
+[General]
+   WinAGIVersion = 2.1.1
+   GameID = DM
+   Interpreter = 3.002102
+   ResDir = src
+   Description = ""
+   Author = ""
+   About = ""
+   GameVersion = ""
+   LastEdit = "3/17/2022 1:17:12 PM"
+   PlatformType = 1
+   Platform = "C:\Program Files (x86)\DOSBox\DOSBox.exe"
+   DOSExec = SIERRA.COM
+   PlatformOpts = ""
+   UseResNames = True
+   UseLE = True
+
+[::BEGIN Logics::]
+
+[Logic0]
+   ID = lgcMain
+   Size = 628
+   CRC32 = &HD7E5B698
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic1]
+   ID = rmDemoSelect
+   Size = 1165
+   CRC32 = &H6FA0ED69
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic8]
+   ID = lgcError
+   Size = 807
+   CRC32 = &HFAE5CE1C
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic70]
+   ID = Logic70
+   Size = 3253
+   CRC32 = &HB8F0A23
+   CompCRC32 = &HB8F0A23
+   Description = ""
+   IsRoom = False
+
+[Logic71]
+   ID = Logic71
+   Size = 2788
+   CRC32 = &H53DB5622
+   CompCRC32 = &H53DB5622
+   Description = ""
+   IsRoom = False
+
+[Logic72]
+   ID = Logic72
+   Size = 2597
+   CRC32 = &HADAAD4A2
+   CompCRC32 = &HADAAD4A2
+   Description = ""
+   IsRoom = False
+
+[Logic73]
+   ID = Logic73
+   Size = 3128
+   CRC32 = &HE581C6B1
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic74]
+   ID = Logic74
+   Size = 3149
+   CRC32 = &H29A68541
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic75]
+   ID = Logic75
+   Size = 3127
+   CRC32 = &H5E6D6E
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic76]
+   ID = Logic76
+   Size = 2954
+   CRC32 = &HAA47C0DC
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic77]
+   ID = Logic77
+   Size = 3902
+   CRC32 = &H900F100C
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic78]
+   ID = Logic78
+   Size = 3087
+   CRC32 = &HAA442CFF
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+
+[Logic79]
+   ID = Logic79
+   Size = 3163
+   CRC32 = &HBD8E6C6C
+   CompCRC32 = &H0
+   Description = ""
+   IsRoom = False
+[::END Logics::]
+
+[::BEGIN Pictures::]
+
+[Picture1]
+   ID = Picture1
+   Size = 1522
+   BkgdImg = ""
+   Description = ""
+
+[Picture70]
+   ID = Picture70
+   Size = 5135
+   BkgdImg = ""
+   Description = ""
+
+[Picture71]
+   ID = Picture71
+   Size = 6112
+   BkgdImg = ""
+   Description = ""
+
+[Picture72]
+   ID = Picture72
+   Size = 82
+   BkgdImg = ""
+   Description = ""
+
+[Picture73]
+   ID = Picture73
+   Size = 238
+   BkgdImg = ""
+   Description = ""
+
+[Picture74]
+   ID = Picture74
+   Size = 4603
+   BkgdImg = ""
+   Description = ""
+
+[Picture75]
+   ID = Picture75
+   Size = 6
+   BkgdImg = ""
+   Description = ""
+
+[Picture76]
+   ID = Picture76
+   Size = 1037
+   BkgdImg = ""
+   Description = ""
+
+[Picture77]
+   ID = Picture77
+   Size = 7570
+   BkgdImg = ""
+   Description = ""
+
+[Picture78]
+   ID = Picture78
+   Size = 1481
+   BkgdImg = ""
+   Description = ""
+[::END Pictures::]
+
+[::BEGIN Sounds::]
+
+[Sound70]
+   ID = Sound70
+   Size = 1896
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound71]
+   ID = Sound71
+   Size = 746
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound72]
+   ID = Sound72
+   Size = 576
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound73]
+   ID = Sound73
+   Size = 626
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound74]
+   ID = Sound74
+   Size = 666
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound75]
+   ID = Sound75
+   Size = 601
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound76]
+   ID = Sound76
+   Size = 966
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound77]
+   ID = Sound77
+   Size = 861
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound78]
+   ID = Sound78
+   Size = 526
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound79]
+   ID = Sound79
+   Size = 2141
+   Key = 0
+   TPQN = 0
+   Inst0 = 80
+   Inst1 = 80
+   Inst2 = 80
+   Mute0 = False
+   Mute1 = False
+   Mute2 = False
+   Mute3 = False
+   Visible0 = True
+   Visible1 = True
+   Visible2 = True
+   Visible3 = True
+   Description = ""
+
+[Sound198]
+   ID = Sound198
+   Size = 1522
+   Key = 0
+   TPQN = 0
+   Description = ""
+[::END Sounds::]
+
+[Sound221]
+   ID = ""
+
+[Sound223]
+   ID = ""
+
+[Sound224]
+   ID = ""
+
+[Sound225]
+   ID = ""
+
+[Sound226]
+   ID = ""
+
+[Sound227]
+   ID = ""
+
+[Sound228]
+   ID = ""
+
+[Sound229]
+   ID = ""
+
+[Sound230]
+   ID = ""
+
+[Sound231]
+   ID = ""
+
+[Sound232]
+   ID = ""
+
+[Sound233]
+   ID = ""
+
+[Sound234]
+   ID = ""
+
+[Sound235]
+   ID = ""
+
+[Sound236]
+   ID = ""
+
+[::BEGIN Views::]
+
+[View1]
+   ID = vTandy
+   Size = 3650
+   Description = ""
+
+[View2]
+   ID = vSierra
+   Size = 4174
+   Description = ""
+
+[View3]
+   ID = vDemoGuy
+   Size = 3145
+   Description = ""
+
+[View4]
+   ID = vDemoTalkBubble
+   Size = 477
+   Description = ""
+
+[View10]
+   ID = vSQ2
+   Size = 1146
+   Description = ""
+
+[View11]
+   ID = vLSL
+   Size = 772
+   Description = ""
+
+[View12]
+   ID = vPQ
+   Size = 793
+   Description = ""
+
+[View15]
+   ID = vMG
+   Size = 859
+   Description = ""
+
+[View16]
+   ID = vManhunter
+   Size = 1342
+   Description = ""
+
+[View17]
+   ID = vGoldRush
+   Size = 916
+   Description = ""
+
+[View18]
+   ID = vBlank
+   Size = 213
+   Description = ""
+
+[View70]
+   ID = vRosellaIntro
+   Size = 6449
+   Description = ""
+
+[View71]
+   ID = View71
+   Size = 10445
+   Description = ""
+
+[View72]
+   ID = vGraham
+   Size = 3341
+   Description = ""
+
+[View73]
+   ID = vGrahamThrowHat
+   Size = 9713
+   Description = ""
+
+[View74]
+   ID = vMirror
+   Size = 8214
+   Description = ""
+
+[View75]
+   ID = vMirrorCloseup
+   Size = 8835
+   Description = ""
+
+[View76]
+   ID = vTalkingHeads
+   Size = 8200
+   Description = ""
+
+[View77]
+   ID = vGenesta
+   Size = 7369
+   Description = ""
+
+[View78]
+   ID = vBlueFairy
+   Size = 1067
+   Description = ""
+
+[View79]
+   ID = vRedFairy
+   Size = 1128
+   Description = ""
+[::END Views::]
+
+[WORDS.TOK]
+   Description = ""
+
+[OBJECT]
+   Description = ""
+
+[Palette]
+   Color0 = &H00000000
+   Color1 = &H00A00000
+   Color2 = &H0000A000
+   Color3 = &H00A0A000
+   Color4 = &H000000A0
+   Color5 = &H00A00080
+   Color6 = &H000050A0
+   Color7 = &H00A0A0A0
+   Color8 = &H00505050
+   Color9 = &H00FF5050
+   Color10 = &H0050FF00
+   Color11 = &H00FFFF50
+   Color12 = &H005050FF
+   Color13 = &H00FF50FF
+   Color14 = &H0050FFFF
+   Color15 = &H00FFFFFF
