@@ -1,7 +1,7 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
-    {    add.to.pic(View62, 0, 0, 110, 110, 0, 0);    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  if (previousRoom == 23)
+    {    add.to.pic(View62, 0, 0, 110, 110, 0, 0);    }  load.logics(lgc.swim);  call(lgc.swim);  set(deadly.water);  if (previousRoom == 23)
     {    if (isset(onWater))
       {      set.view(ego, View0);      reset(keep.cycling);      drown.swim = 0;      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if ((said("check", "doorway") ||     said("look in", "doorway") ||     said("look in", "stump")))
   {  if (posn(ego, 66, 134, 159, 167))
@@ -15,7 +15,7 @@ if (isset(newRoom))
       {      print("The bank is too steep to allow access to the river's edge.");      }    else
       {      print("You are not close enough to the river.");      }    }  }if (isset(onWater) &&     !isset(lf0))
   {  set(lf0);  print("This placid looking stream is actually quite dangerous.... the current "        "is stronger than it looks.  You can't keep your head above water.");  }if (edgeEgoHit != NOT_HIT)
-  {  reset(f68);  }if (edgeEgoHit == TOP_EDGE)
+  {  reset(deadly.water);  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic39);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic27);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic25);  }if (edgeEgoHit == BOTTOM_EDGE)

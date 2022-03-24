@@ -1,10 +1,10 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound5);  set.horizon(45);  draw(ego);  show.pic();  }if ((said("check", "room") ||     said("check", "clouds")))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(s.ego.fall);  set.horizon(45);  draw(ego);  show.pic();  }if ((said("check", "room") ||     said("check", "clouds")))
   {  print("You are in the Land of the Clouds.  It is rumored that a giant lives "        "up here.");  }if ((said("check", "tree") ||     said("check", "blossom")))
   {  print("This is very strange vegetation.");  }if (isset(egoHitSpecial))
-  {  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y  += 8;  temp.step = 4;  sound(Sound5, f159);  move.obj.v(ego, temp.x, temp.y, temp.step, lf1);  }if (isset(lf1))
-  {  reset(lf1);  erase(ego);  }if (isset(f159))
-  {  reset(f159);  set(lf0);  }if (isset(lf0))
+  {  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y  += 8;  temp.step = 4;  sound(s.ego.fall, sound.done);  move.obj.v(ego, temp.x, temp.y, temp.step, lf1);  }if (isset(lf1))
+  {  reset(lf1);  erase(ego);  }if (isset(sound.done))
+  {  reset(sound.done);  set(lf0);  }if (isset(lf0))
   {  reset(lf0);  print("You should know that it is not possible to walk on clouds!");  set(certain.death);  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic57);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic61);  }return();[ Messages#message 1 "You are in the Land of the Clouds.  It is rumored that a giant lives up here."#message 2 "You should know that it is not possible to walk on clouds!"#message 3 "This is very strange vegetation."

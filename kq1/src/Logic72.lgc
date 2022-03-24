@@ -1,8 +1,8 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View74);  load.sound(Sound5);  if (previousRoom == 56)
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View74);  load.sound(s.ego.fall);  if (previousRoom == 56)
     {    position(ego, 145, 109);    }  if (previousRoom == 71)
     {    set.view(ego, View74);    position(ego, 66, 165);    move.obj(ego, 66, 165, 0, done);    }  draw(ego);  show.pic();  }if (isset(falling.from.sky) &&     !isset(lf2) &&     !isset(lf3))
-  {  sound(Sound5, f159);  set(lf3);  }if (!posn(ego, 65, 100, 84, 120) &&     !isset(climbing.beanstalk) &&     !isset(ego.invisible))
+  {  sound(s.ego.fall, sound.done);  set(lf3);  }if (!posn(ego, 65, 100, 84, 120) &&     !isset(climbing.beanstalk) &&     !isset(ego.invisible))
   {  if (said("climb", "beanstalk"))
     {    print("You need to be closer to do that.");    }  }if (isset(ego.invisible))
   {  if (said("climb", "beanstalk"))
@@ -17,9 +17,9 @@ if (isset(newRoom))
       {      print("It is a long, long way down....");      }    }  }if ((said("check", "clouds") ||     said("check", "room")))
   {  print("You are in the Land of the Clouds.  It is rumored a giant lives up "        "here.");  }if (isset(egoHitSpecial) &&     !isset(lf1) &&     !posn(ego, 65, 100, 82, 120) &&     !isset(climbing.beanstalk))
   {  set(lf1);  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(Sound5, f198);  }if (isset(egoHitSpecial) &&     !isset(lf1) &&     posn(ego, 65, 100, 82, 120) &&     isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, f198);  }if (isset(egoHitSpecial) &&     !isset(lf1) &&     posn(ego, 65, 100, 82, 120) &&     isset(ego.invisible))
   {  set(lf1);  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(Sound5, f198);  }if (isset(lf0))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, f198);  }if (isset(lf0))
   {  reset(lf0);  erase(ego);  print("Whoops!  You fall toward a distant earth.");  set(certain.death);  }if (isset(egoHitSpecial) &&     posn(ego, 65, 100, 82, 120) &&     !isset(ego.invisible))
   {  if (isset(climbing.beanstalk))
     {    reset(climbing.beanstalk);    erase(ego);    set.view(ego, View0);    position(ego, 85, 112);    draw(ego);    move.obj(ego, 85, 112, 0, done);    goto(Label1);    }  if (!isset(climbing.beanstalk))

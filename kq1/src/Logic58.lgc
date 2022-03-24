@@ -1,5 +1,5 @@
 if (isset(newRoom))
-  {  ignore.horizon(ego);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View114);  load.sound(m.badguy);  load.sound(Sound5);  load.sound(Sound9);  load.sound(Sound18);  lv3 = 0;  if (isset(have.sling))
+  {  ignore.horizon(ego);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View114);  load.sound(m.badguy);  load.sound(s.ego.fall);  load.sound(Sound9);  load.sound(Sound18);  lv3 = 0;  if (isset(have.sling))
     {    load.view(View102);    animate.obj(o15);    set.view(o15, View102);    }  if (!isset(have.chest) &&       !isset(f169))
     {    load.view(View37);    animate.obj(o2);    set.view(o2, View37);    load.view(View36);    load.view(View52);    load.view(View68);    load.view(View77);    }  if ((isset(have.chest) ||       isset(f169)))
     {    load.view(View68);    load.view(View66);    load.view(View77);    }  if (v86 == 0)
@@ -19,8 +19,8 @@ if (isset(newRoom))
           {          if ((v86 == 0 ||               v86 == 2))
             {            reset(lf2);            reset(lf3);            set.view(ego, View114);            print("Be a little more careful next time.  This giant is mean!");            wander(o1);            set(certain.death);            }          }        }      }    }  }if (isset(egoHitSpecial))
   {  set(f199);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  sound(Sound5, f159);  erase(ego);  }if (isset(f159))
-  {  reset(f159);  set(lf0);  }if (isset(lf0))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  sound(s.ego.fall, sound.done);  erase(ego);  }if (isset(sound.done))
+  {  reset(sound.done);  set(lf0);  }if (isset(lf0))
   {  reset(lf0);  print("You know you can't walk on clouds.");  set(certain.death);  }if (said("check", "giant"))
   {  if (v86 == 2)
     {    print("The giant is enormous!  He does look rather stupid, though.");    }  if (v86 == 0)

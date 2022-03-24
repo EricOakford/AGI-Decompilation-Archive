@@ -1,15 +1,15 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound4);  load.sound(Sound5);  load.view(View105);  load.view(View103);  load.view(View104);  if (previousRoom == 48)
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound4);  load.sound(s.ego.fall);  load.view(View105);  load.view(View103);  load.view(View104);  if (previousRoom == 48)
     {    position(ego, 90, 63);    set.view(ego, View105);    ignore.blocks(ego);    set(keep.cycling);    start.cycling(ego);    move.obj(ego, 90, 142, 4, lf0);    if (isset(ego.invisible))
       {      set(lf3);      reset(ego.invisible);      reset(have.ring);      drop("magic ring");      currentScore -= 3;      set(lost.ring);      }    if (isset(ego.shrunk))
       {      reset(ego.shrunk);      shrink.timer = 0;      set(lf4);      }    }  if (previousRoom == 74)
     {    position(ego, 77, 165);    }  draw(ego);  show.pic();  }if (!isset(lf0) &&     !isset(lf2) &&     previousRoom == 48)
-  {  sound(Sound5, f159);  set(lf2);  }if (said("check", "doorway"))
+  {  sound(s.ego.fall, sound.done);  set(lf2);  }if (said("check", "doorway"))
   {  print("The warm sunlight falls through the hole in the ceiling.  "        "Unfortunately, you can't reach it.");  }if (said("check", "cave"))
   {  print("The dark tunnel leads off to the south.");  }if (isset(lf0))
-  {  reset(lf0);  stop.sound();  observe.blocks(ego);  set.view(ego, View103);  program.control();  shake.screen(1);  print("OUCH!");  lv0 = 36;  sound(Sound4, f159);  }if (isset(f159))
+  {  reset(lf0);  stop.sound();  observe.blocks(ego);  set.view(ego, View103);  program.control();  shake.screen(1);  print("OUCH!");  lv0 = 36;  sound(Sound4, sound.done);  }if (isset(sound.done))
   {  if (lv0 > 0)
-    {    reset(f159);    sound(Sound4, f159);    }  }if (lv0 == 1)
+    {    reset(sound.done);    sound(Sound4, sound.done);    }  }if (lv0 == 1)
   {  set.view(ego, View104);  end.of.loop(ego, lf1);  }if (isset(lf1))
   {  reset(lf1);  set.view(ego, View0);  reset(keep.cycling);  player.control();  if (isset(lf3))
     {    reset(lf3);    print("While falling through the hole, the magic ring fell off your finger. "          " Dangerous creatures can see you now!");    }  if (isset(lf4))

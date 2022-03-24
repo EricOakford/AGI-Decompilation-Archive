@@ -5,7 +5,7 @@ if (isset(newRoom))
     {    set(lf1);    load.view(View28);    animate.obj(o3);    set.view(o3, View28);    position(o3, 39, 118);    }  if (v83 <= 0)
     {    draw(o1);    set(lf3);    }  if (isset(lf1))
     {    draw(o3);    stop.update(o3);    }  if (isset(lf0))
-    {    draw(o2);    stop.update(o2);    }  set(f68);  draw(ego);  show.pic();  }if (said("check", "building"))
+    {    draw(o2);    stop.update(o2);    }  set(deadly.water);  draw(ego);  show.pic();  }if (said("check", "building"))
   {  print("The gnome's lean-to doesn't look very sturdy.");  }if (isset(lf3) &&     !isset(lf4))
   {  print("You see a crotchety old gnome pacing around his lean-to.");  set(lf4);  }if (isset(lf3))
   {  distance(ego, o1, work);  if (isset(lf2))
@@ -59,7 +59,7 @@ if (isset(newRoom))
   {  delta.x = 255;  if (posn(ego, 0, 34, 34, 67))
     {    delta.x = 6;    delta.y = 54;    }  if (delta.x == 255)
     {    delta.x = 0;    }  else
-    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(override.splash.loc);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    print("There is no place to safely get a drink.");    }  }if (!isset(have.water) &&     isset(have.bucket) &&     !isset(onWater) &&     said("acquire", "water"))
   {  print("There is no place to safely get water.");  }Label1:if (edgeEgoHit == TOP_EDGE)

@@ -6,20 +6,20 @@ if (isset(newRoom))
       {      set.view(ego, View0);      reset(keep.cycling);      }    }  random(0, 250, work);  if (work < 185)
     {    lv2 = 2;    step.size(o1, lv2);    load.view(View5);    load.view(View116);    load.sound(m.badguy);    load.sound(Sound17);    animate.obj(o1);    set.view(o1, View5);    set(lf0);    }  if (isset(lf0))
     {Label1:    random(0, 250, dist.to.obj);    if (dist.to.obj > 90)
-      {      goto(Label1);      }    }  draw(ego);  show.pic();  }if (isset(lf1) &&     isset(f159))
+      {      goto(Label1);      }    }  draw(ego);  show.pic();  }if (isset(lf1) &&     isset(sound.done))
   {  if (!isset(lf5))
     {    set(lf5);    sound(Sound17, lf6);    }  if (isset(lf6))
     {    reset(lf5);    reset(lf6);    }  }--dist.to.obj;if (dist.to.obj == 1)
-  {  position(o1, 40, 140);  set(lf1);  sound(m.badguy, f159);  draw(o1);  if (!isset(goat.following))
-    {    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    follow.ego(o1, 7, f156);    }  if (isset(goat.following))
+  {  position(o1, 40, 140);  set(lf1);  sound(m.badguy, sound.done);  draw(o1);  if (!isset(goat.following))
+    {    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    follow.ego(o1, 7, menace.caught.ego);    }  if (isset(goat.following))
     {    wander(o1);    set(lf2);    print("Be careful!  Nearby is a sorcerer.  His mystical powers can leave "          "you immobilized and helpless!");    print("The sorcerer sees the goat and decides to leave.");    }  }if (!isset(lf1))
   {  if (said("anyword", "dwarf"))
     {    print("There's no sorcerer here.");    }  if (said("cast", "dagger") &&       isset(have.dagger) &&       !isset(goat.following))
     {    print("OK.  But you just lost your dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(lf1))
   {  if (said("check", "dwarf"))
     {    print("This sorcerer exudes mystery and danger.");    }  if ((said("speak", "dwarf") ||       said("hello") ||       said("say", "hello")))
-    {    print("The sorcerer only speaks in the language of the Mystics.");    }  }if (isset(f156))
-  {  reset(f156);  if (isset(protected.spell))
+    {    print("The sorcerer only speaks in the language of the Mystics.");    }  }if (isset(menace.caught.ego))
+  {  reset(menace.caught.ego);  if (isset(protected.spell))
     {    print("This sorcerer's magic is no match for your fairy godmother's.");    wander(o1);    set(lf2);    }  else
     {    if (isset(ego.invisible))
       {      print("Being invisible has protected you from this sorcerer.");      set(lf7);      }    else

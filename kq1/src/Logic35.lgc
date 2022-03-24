@@ -1,8 +1,8 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(44);  load.sound(Sound4);  load.sound(Sound5);  if (isset(goat.following))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(44);  load.sound(Sound4);  load.sound(s.ego.fall);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 24, 110, 0, 0);    }  if ((isset(have.beans) ||       beanstalk.room == 35))
-    {    beanstalk.overlay = 84;    set(f155);    load.pic(beanstalk.overlay);    load.view(View114);    load.view(View103);    load.view(View104);    load.view(View74);    load.view(View105);    load.logics(lgc.beanstalk);    load.sound(Sound12);    }  if (previousRoom == 70 &&       isset(climbing.beanstalk))
+    {    beanstalk.overlay = 84;    set(can.plant.beanstalk);    load.pic(beanstalk.overlay);    load.view(View114);    load.view(View103);    load.view(View104);    load.view(View74);    load.view(View105);    load.logics(lgc.beanstalk);    load.sound(Sound12);    }  if (previousRoom == 70 &&       isset(climbing.beanstalk))
     {    set.view(ego, View74);    position(ego, 64, 41);    move.obj(ego, 64, 41, 0, done);    set.priority(ego, 8);    }  if (previousRoom == 70 &&       isset(falling.from.sky))
     {    program.control();    ignore.horizon(ego);    set.priority(ego, 15);    set.view(ego, View105);    get.posn(ego, temp.x, temp.y);    if (temp.x > 75)
       {      position(ego, 80, 29);      }    else
@@ -10,22 +10,22 @@ if (isset(newRoom))
     {    lv1 = 4;    step.size(o1, lv1);    load.view(View111);    animate.obj(o1);    set.view(o1, View111);    set(lf0);    load.sound(m.badguy);    load.sound(Sound16);    }  if (isset(lf0))
     {Label1:    random(0, 250, dist.to.obj);    if (dist.to.obj > 90)
       {      goto(Label1);      }    }  if (beanstalk.room == 35)
-    {    overlay.pic(beanstalk.overlay);    }  draw(ego);  show.pic();  }if (isset(lf1) &&     isset(f159))
+    {    overlay.pic(beanstalk.overlay);    }  draw(ego);  show.pic();  }if (isset(lf1) &&     isset(sound.done))
   {  if (!isset(lf10))
     {    set(lf10);    sound(Sound16, lf11);    }  if (isset(lf11))
     {    reset(lf10);    reset(lf11);    }  }if (isset(falling.from.sky) &&     !isset(lf7))
-  {  set(lf7);  set(f135);  sound(Sound5, lf8);  }if (isset(lf6))
-  {  stop.sound();  set(lf7);  reset(falling.from.sky);  reset(f135);  set.view(ego, View114);  shake.screen(2);  set(certain.death);  }--dist.to.obj;if (dist.to.obj == 1 &&     !isset(falling.from.sky) &&     !isset(climbing.beanstalk))
-  {  position(o1, 16, 79);  set(lf1);  sound(m.badguy, f159);  draw(o1);  if (!isset(goat.following))
-    {    print("There is a small dwarf close by.  It would be a good idea to be "          "careful.");    follow.ego(o1, 7, f156);    }  if (isset(goat.following))
+  {  set(lf7);  set(ego.stunned);  sound(s.ego.fall, lf8);  }if (isset(lf6))
+  {  stop.sound();  set(lf7);  reset(falling.from.sky);  reset(ego.stunned);  set.view(ego, View114);  shake.screen(2);  set(certain.death);  }--dist.to.obj;if (dist.to.obj == 1 &&     !isset(falling.from.sky) &&     !isset(climbing.beanstalk))
+  {  position(o1, 16, 79);  set(lf1);  sound(m.badguy, sound.done);  draw(o1);  if (!isset(goat.following))
+    {    print("There is a small dwarf close by.  It would be a good idea to be "          "careful.");    follow.ego(o1, 7, menace.caught.ego);    }  if (isset(goat.following))
     {    wander(o1);    set(lf3);    print("There is a small dwarf close by.  It would be a good idea to be "          "careful.");    print("The dwarf sees the goat and decides to leave.");    }  }if (!isset(lf1))
   {  if (said("anyword", "dwarf"))
     {    print("There is no dwarf here.");    }  }if (isset(lf1))
   {  if (said("check", "dwarf"))
     {    print("Dwarfs are quick, little guys who will try to take your treasure.");    }  if (said("kill", "dwarf"))
     {    print("He's too quick for you to catch.");    }  if ((said("speak", "dwarf") ||       said("hello") ||       said("say", "hello") ||       said("hello", "dwarf")))
-    {    print("No time to talk to him.  He's in too much of a hurry!");    }  }if (isset(f156))
-  {  reset(f156);  if (isset(protected.spell))
+    {    print("No time to talk to him.  He's in too much of a hurry!");    }  }if (isset(menace.caught.ego))
+  {  reset(menace.caught.ego);  if (isset(protected.spell))
     {    print("It's a good thing you are protected by a spell.  That little dwarf "          "likes to steal treasures.");    wander(o1);    set(lf3);    }  else
     {    if (isset(ego.invisible))
       {      print("Being invisible has protected you from the dwarf.");      wander(o1);      set(lf3);      }    else
@@ -46,7 +46,7 @@ if (isset(newRoom))
                     {                    if (isset(have.sceptre))
                       {                      reset(have.sceptre);                      set(f114);                      currentScore -= 6;                      drop("sceptre");                      }                    else
                       {                      print("The quick, little dwarf came by to see what you "                            "had -- nothing interested him.");                      wander(o1);                      set(lf3);                      goto(Label2);                      }                    }                  }                }              }            }          }        }      print("That little dwarf caught you by surprise.  Is your treasure still "            "OK?");      wander(o1);      set(lf3);      }    }  }Label2:if (isset(lf3) &&     edgeObjHit != NOT_HIT)
-  {  erase(o1);  reset(lf3);  reset(lf1);  }if (isset(have.beans) &&     isset(f155))
+  {  erase(o1);  reset(lf3);  reset(lf1);  }if (isset(have.beans) &&     isset(can.plant.beanstalk))
   {  if (said("bury", "bean"))
     {    reset(have.beans);    beanstalk.room = 35;    set(planted.beans);    drop("beans");    currentScore  += 2;    print("The beans immediately sprout roots that reach deep into the fertile "          "soil... leaves unfold themselves to the warm, loving sun... a "          "rumbling is felt... and a mighty beanstalk now stretches up into the "          "sky!");    sound(Sound12, lf9);    overlay.pic(beanstalk.overlay);    show.pic();    }  }if (beanstalk.room == 35 &&     !isset(ego.invisible))
   {  if (said("climb", "beanstalk") &&       !isset(climbing.beanstalk))
@@ -57,13 +57,13 @@ if (isset(newRoom))
     {    print("There is no beanstalk here to climb.");    }  }if (isset(climbing.beanstalk))
   {  if (isset(egoHitSpecial) &&       posn(ego, 60, 78, 93, 80))
     {    erase(ego);    set.view(ego, View0);    observe.blocks(ego);    reset(climbing.beanstalk);    position(ego, 70, 106);    release.priority(ego);    draw(ego);    }  if (isset(egoHitSpecial) &&       !posn(ego, 60, 78, 93, 80))
-    {    program.control();    set.priority(ego, 15);    get.posn(ego, temp.x, temp.y);    erase(ego);    set.view(ego, View105);    reset(climbing.beanstalk);    position.v(ego, temp.x, temp.y);    draw(ego);    temp.y = 106;    temp.step = 2;    move.obj.v(ego, temp.x, temp.y, temp.step, lf4);    set(f135);    sound(Sound5, f198);    }  }--lv0;if (isset(lf4))
-  {  stop.sound();  reset(lf4);  observe.blocks(ego);  release.priority(ego);  stop.motion(ego);  set.view(ego, View103);  lv0 = 20;  set(keep.cycling);  shake.screen(2);  print("Ouch!");  set(f135);  sound(Sound4, f159);  }if (isset(f159))
+    {    program.control();    set.priority(ego, 15);    get.posn(ego, temp.x, temp.y);    erase(ego);    set.view(ego, View105);    reset(climbing.beanstalk);    position.v(ego, temp.x, temp.y);    draw(ego);    temp.y = 106;    temp.step = 2;    move.obj.v(ego, temp.x, temp.y, temp.step, lf4);    set(ego.stunned);    sound(s.ego.fall, f198);    }  }--lv0;if (isset(lf4))
+  {  stop.sound();  reset(lf4);  observe.blocks(ego);  release.priority(ego);  stop.motion(ego);  set.view(ego, View103);  lv0 = 20;  set(keep.cycling);  shake.screen(2);  print("Ouch!");  set(ego.stunned);  sound(Sound4, sound.done);  }if (isset(sound.done))
   {  if (lv0 > 0)
-    {    reset(f159);    sound(Sound4, f159);    }  }if (lv0 == 1)
+    {    reset(sound.done);    sound(Sound4, sound.done);    }  }if (lv0 == 1)
   {  set.view(ego, View104);  end.of.loop(ego, lf5);  }if (isset(lf5))
   {  reset(lf5);  reset(keep.cycling);  start.motion(ego);  set.view(ego, View0);  release.priority(ego);  player.control();  }if (edgeEgoHit != NOT_HIT)
-  {  reset(f155);  }if (edgeEgoHit == TOP_EDGE &&     isset(climbing.beanstalk))
+  {  reset(can.plant.beanstalk);  }if (edgeEgoHit == TOP_EDGE &&     isset(climbing.beanstalk))
   {  new.room(Logic70);  }if (edgeEgoHit == TOP_EDGE &&     !isset(climbing.beanstalk))
   {  new.room(Logic46);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic34);  }if (edgeEgoHit == LEFT_EDGE)

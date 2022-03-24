@@ -10,8 +10,8 @@ if (isset(newRoom))
     {    get.posn(ego, temp.x, temp.y);    if (temp.y < 123)
       {      position(ego, 140, 58);      }    if (temp.y > 122)
       {      position(ego, 147, 150);      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (posn(ego, 0, 83, 159, 167))
-  {  set(f68);  }else
-  {  reset(f68);  }if (isset(onWater) &&     isset(f68) &&     !isset(lf0))
+  {  set(deadly.water);  }else
+  {  reset(deadly.water);  }if (isset(onWater) &&     isset(deadly.water) &&     !isset(lf0))
   {  set(lf0);  print("You have fallen in the raging current and are swept under.  I'm afraid "        "your end has come.");  }if (said("check", "water"))
   {  if (posn(ego, 93, 40, 159, 82))
     {    print("The clear blue lake is surrounded by a pretty meadow.");    }  else
@@ -27,7 +27,7 @@ if (isset(newRoom))
     {    delta.x = 38;    delta.y = 127;    }  if (posn(ego, 0, 103, 33, 126))
     {    delta.x = 5;    delta.y = 133;    }  if (delta.x == 255)
     {    delta.x = 0;    }  else
-    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water) &&     (said("drink", "water") ||     said("acquire", "drink")))
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(override.splash.loc);    }  }if (!isset(have.water) &&     (said("drink", "water") ||     said("acquire", "drink")))
   {  if (posn(ego, 121, 40, 159, 81))
     {    print("It tastes very refreshing to a thirsty wanderer.");    }  else
     {    if ((posn(ego, 127, 79, 159, 92) ||         posn(ego, 145, 125, 159, 140) ||         posn(ego, 73, 130, 103, 167) ||         posn(ego, 0, 136, 49, 167) ||         posn(ego, 0, 88, 84, 112)))
@@ -41,7 +41,7 @@ if (isset(newRoom))
         {        print("Very carefully, the bucket fills with water from the  rapid "              "river.");        get("water");        set(have.water);        if (!isset(points.water))
           {          currentScore  += 2;          }        set(points.water);        }      else
         {        print("You are too far from the water.");        }      }    }  }if (edgeEgoHit != NOT_HIT)
-  {  reset(f68);  }if (edgeEgoHit == TOP_EDGE)
+  {  reset(deadly.water);  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic7);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic43);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic41);  }if (edgeEgoHit == BOTTOM_EDGE)

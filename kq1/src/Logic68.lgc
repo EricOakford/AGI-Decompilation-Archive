@@ -1,5 +1,5 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.sound(Sound5);  random(0, 250, work);  if (work < 150 &&       previousRoom == 67)
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.sound(s.ego.fall);  random(0, 250, work);  if (work < 150 &&       previousRoom == 67)
     {    load.sound(Sound16);    load.view(View111);    load.view(View115);    animate.obj(o1);    set.view(o1, View111);    set(lf3);    observe.blocks(o1);    ignore.horizon(o1);    }  if (isset(lf3))
     {Label1:    random(0, 150, dist.to.obj);    if (dist.to.obj > 45)
       {      goto(Label1);      }    }  set.horizon(40);  if (previousRoom == 67)
@@ -12,7 +12,7 @@ if (isset(newRoom))
     {    position(o1, 96, 162);    }  else
     {    position(o1, 30, 27);    }  draw(o1);  set(lf4);  move.obj(o1, 130, 127, 2, lf5);  }if (!isset(lf6))
   {  distance(ego, o1, v71);  }if (isset(lf5))
-  {  set(lf6);  reset(lf5);  follow.ego(o1, 10, f156);  }if ((said("check", "stairs") ||     said("check", "room")))
+  {  set(lf6);  reset(lf5);  follow.ego(o1, 10, menace.caught.ego);  }if ((said("check", "stairs") ||     said("check", "room")))
   {  print("The stairs seem to go on forever.");  }if (said("check", "dwarf"))
   {  if (isset(lf4))
     {    print("This is a shy little dwarf.  He is too quick to catch.");    }  else
@@ -23,10 +23,10 @@ if (isset(newRoom))
   {  set(f145);  set(f146);  set(lf2);  ignore.blocks(ego);  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  if (!isset(ego.invisible))
     {    set.view(ego, View105);    }  print("Look out!  You are too close to the edge!  Oh, oh, you fell!");  if (temp.y < 130)
     {    temp.y = 130;    }  else
-    {    temp.y = 165;    }  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(Sound5, f159);  }if (isset(lf0))
+    {    temp.y = 165;    }  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, sound.done);  }if (isset(lf0))
   {  reset(lf0);  erase(ego);  set(certain.death);  }if (v71 > 0 &&     v71 < 11)
-  {  set(lf6);  v71 = 0;  set(f156);  }if (isset(f156))
-  {  reset(f156);  v71 = 0;  set(lf6);  normal.motion(o1);  ignore.blocks(o1);  if (isset(protected.spell))
+  {  set(lf6);  v71 = 0;  set(menace.caught.ego);  }if (isset(menace.caught.ego))
+  {  reset(menace.caught.ego);  v71 = 0;  set(lf6);  normal.motion(o1);  ignore.blocks(o1);  if (isset(protected.spell))
     {    print("It's a good thing you are protected by a spell.  That little dwarf "          "likes to steal treasures.");    set.view(o1, View115);    reset(lf4);    end.of.loop(o1, lf1);    }  else
     {    if (isset(ego.invisible))
       {      print("Being invisible has protected you, and your treasures, from the "            "dwarf.");      set.view(o1, View115);      reset(lf4);      end.of.loop(o1, lf1);      }    else

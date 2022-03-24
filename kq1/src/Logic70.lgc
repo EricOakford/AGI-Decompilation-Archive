@@ -1,11 +1,11 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View74);  load.sound(Sound5);  if (previousRoom == 71 &&       isset(climbing.beanstalk))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View105);  load.view(View74);  load.sound(s.ego.fall);  if (previousRoom == 71 &&       isset(climbing.beanstalk))
     {    set.view(ego, View74);    position(ego, 69, 40);    move.obj(ego, 69, 40, 0, done);    }  if (previousRoom == 71 &&       isset(falling.from.sky))
     {    program.control();    set.view(ego, View105);    get.posn(ego, temp.x, temp.y);    if (temp.x > 75)
       {      position(ego, 90, 29);      }    else
       {      position(ego, 55, 29);      }    temp.y = 166;    temp.step = 4;    set.priority(ego, 15);    move.obj.v(ego, temp.x, temp.y, temp.step, lf0);    }  if (previousRoom < 50)
     {    set.view(ego, View74);    position(ego, 69, 160);    move.obj(ego, 69, 160, 0, done);    }  draw(ego);  show.pic();  }if (isset(falling.from.sky) &&     !isset(lf0) &&     !isset(lf1))
-  {  sound(Sound5, f159);  set(lf1);  }if (isset(goat.following))
+  {  sound(s.ego.fall, sound.done);  set(lf1);  }if (isset(goat.following))
   {  print("The goat was quite hesitant about climbing that huge beanstalk!  You "        "may have lost the goat.");  reset(goat.following);  set(goat.gone);  currentScore -= 5;  }if (said("check", "beanstalk"))
   {  print("The beanstalk disappears up into the clouds.");  }if (isset(egoHitSpecial) &&     !isset(falling.from.sky))
   {  program.control();  print("With a wrong move, you fall dizzyingly to the ground.");  get.posn(ego, temp.x, temp.y);  set(falling.from.sky);  erase(ego);  set.view(ego, View105);  if (temp.x > 75)

@@ -6,7 +6,7 @@ if (isset(newRoom))
     {    if (posn(ego, 77, 165, 112, 167))
       {      position(ego, 71, 164);      }    if (posn(ego, 113, 165, 159, 167))
       {      position(ego, 142, 164);      }    }  if (isset(lf0))
-    {    reset(lf0);    draw(o1);    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(lf1))
+    {    reset(lf0);    draw(o1);    }  set(deadly.water);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(lf1))
   {  set(lf1);  print("This is sad.  You are not the first to fail your quest in the Raging "        "River... I hope you may be the last.");  }if (said("check", "water"))
   {  print("This is the wild Raging River filled with boulders and rapids.");  }if (said("check", "boulder"))
   {  print("It would be dangerous to try and jump across the river on the "        "boulders.");  }if (said("check", "across"))
@@ -48,7 +48,7 @@ if (isset(newRoom))
     {    delta.x = 70;    delta.y = 117;    }  if ((posn(ego, 68, 146, 111, 167) ||       posn(ego, 101, 117, 143, 167)))
     {    delta.x = 102;    delta.y = 155;    }  if (delta.x == 255)
     {    delta.x = 0;    }  else
-    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(override.splash.loc);    }  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    if ((posn(ego, 0, 40, 32, 111) ||         posn(ego, 14, 112, 88, 135) ||         posn(ego, 39, 136, 99, 167) ||         posn(ego, 36, 40, 74, 76) ||         posn(ego, 46, 77, 101, 88) ||         posn(ego, 68, 89, 151, 167)))
       {      print("The water from this swift river is cold and sweet.");      }    else

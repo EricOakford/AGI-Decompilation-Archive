@@ -1,9 +1,9 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(goat.following))
-    {    load.logics(lgc.goat);    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  if (!isset(troll.dead) &&       !isset(troll.paid))
+    {    load.logics(lgc.goat);    }  load.logics(lgc.swim);  call(lgc.swim);  set(deadly.water);  if (!isset(troll.dead) &&       !isset(troll.paid))
     {    load.view(View22);    animate.obj(o1);    set.view(o1, View22);    position(o1, 34, 54);    observe.blocks(o1);    set(lf0);    load.sound(m.badguy);    load.sound(Sound10);    }  if (previousRoom == 32)
     {    get.posn(ego, temp.x, temp.y);    if (temp.y > 83 &&         temp.y < 101)
-      {      position(ego, 1, 100);      }    }  draw(ego);  show.pic();  }if (isset(lf1) &&     isset(f159))
+      {      position(ego, 1, 100);      }    }  draw(ego);  show.pic();  }if (isset(lf1) &&     isset(sound.done))
   {  if (!isset(lf11))
     {    set(lf11);    sound(Sound10, lf12);    }  if (isset(lf12))
     {    reset(lf11);    reset(lf12);    }  }if (isset(lf1))
@@ -24,7 +24,7 @@ if (isset(newRoom))
       {      print("Why?  To what?");      }    }  if ((isset(have.unopened.walnut) ||       isset(have.opened.walnut)))
     {    if (said("give", "gold nut"))
       {      print("Why?  To what?");      }    }  }if (isset(lf0) &&     isset(egoHitSpecial))
-  {  reset(lf0);  set(lf1);  lv0 = 2;  step.size(o1, lv0);  sound(m.badguy, f159);  draw(o1);  if (isset(ego.invisible))
+  {  reset(lf0);  set(lf1);  lv0 = 2;  step.size(o1, lv0);  sound(m.badguy, sound.done);  draw(o1);  if (isset(ego.invisible))
     {    print("As you start to cross the bridge, a wretched troll appears.  Even "          "though you are invisible, he will not let you cross his bridge.");    }  else
     {    print("As you start to cross the bridge, a wretched troll appears.");    }  }if (isset(lf1) &&     isset(goat.following) &&     !isset(lf6))
   {  normal.cycle(aGoat);  distance(ego, aGoat, lv1);  if (lv1 > 25)
@@ -76,13 +76,13 @@ if (isset(newRoom))
   {  print("The troll greedily grabs the treasure and disappears  under the "        "bridge.");  reset(lf7);  move.obj(o1, 36, 60, 0, lf8);  }if (isset(lf8))
   {  reset(lf8);  erase(o1);  reset(lf1);  }if (!isset(onWater))
   {  if (posn(ego, 64, 84, 70, 90))
-    {    set(onWater);    set(f134);    }  }if (drown.swim <= 0 &&     isset(onWater))
+    {    set(onWater);    set(override.splash.loc);    }  }if (drown.swim <= 0 &&     isset(onWater))
   {  delta.x = 255;  if (posn(ego, 64, 54, 98, 88))
     {    delta.x = 78;    delta.y = 85;    }  if (posn(ego, 99, 55, 132, 88))
     {    delta.x = 116;    delta.y = 83;    }  if (posn(ego, 133, 54, 159, 89))
     {    delta.x = 138;    delta.y = 84;    }  if (delta.x == 255)
     {    delta.x = 0;    }  else
-    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (isset(onWater) &&     !isset(lf9))
+    {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(override.splash.loc);    }  }if (isset(onWater) &&     !isset(lf9))
   {  set(lf9);  print("This placid looking stream is actually quite dangerous... the current "        "is stronger than it looks.  You can't keep your head above water.");  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
   {  if ((said("drink", "water") ||       said("acquire", "drink")))
     {    if (posn(ego, 1, 46, 158, 102))
@@ -95,7 +95,7 @@ if (isset(newRoom))
   {  print("You glance under the old bridge, but see nothing unusual.");  }if (said("check", "river"))
   {  print("The stream appears placid enough, but appearances can be deceiving.");  }if (said("check", "across"))
   {  print("There is a green meadow on the other side of the river.");  }if (edgeEgoHit != NOT_HIT)
-  {  observe.blocks(ego);  reset(f68);  if (isset(lf1) &&       isset(goat.following))
+  {  observe.blocks(ego);  reset(deadly.water);  if (isset(lf1) &&       isset(goat.following))
     {    reset(goat.following);    set(troll.dead);    set(goat.gone);    }  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic40);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic26);  }if (edgeEgoHit == LEFT_EDGE)

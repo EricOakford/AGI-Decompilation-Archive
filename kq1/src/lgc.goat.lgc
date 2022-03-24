@@ -18,11 +18,11 @@ if (isset(newRoom))
       {      set(f207);      }    else
       {      if (!isset(f207) &&           drown.swim <= 0)
         {        lv11 = 0;        start.cycling(aGoat);        start.motion(aGoat);        follow.ego(aGoat, 10, f207);        }      }    }  if (isset(f207))
-    {    reset(f207);    lv11 = 9;    normal.motion(aGoat);    stop.motion(aGoat);    stop.cycling(aGoat);    }  if (lv10 > 20 &&       drown.swim > 0 &&       !isset(f66))
-    {    if (!isset(f68) &&         currentRoom != 1 &&         currentRoom != 2 &&         currentRoom != 41 &&         currentRoom != 33 &&         currentRoom != 34 &&         currentRoom != 32 &&         currentRoom != 25 &&         currentRoom != 26 &&         currentRoom != 39)
-      {      print("The goat does not mind getting its feet wet,but will not swim in "            "the water.  You should go back and lead the goat around the water.");      }    set(f66);    start.cycling(aGoat);    wander(aGoat);    }  if (isset(f66) &&       lv10 < 25 &&       drown.swim <= 0)
-    {    reset(f66);    follow.ego(aGoat, 10, f207);    }  if (isset(ego.invisible) &&       !isset(lf22))
+    {    reset(f207);    lv11 = 9;    normal.motion(aGoat);    stop.motion(aGoat);    stop.cycling(aGoat);    }  if (lv10 > 20 &&       drown.swim > 0 &&       !isset(goat.leaving))
+    {    if (!isset(deadly.water) &&         currentRoom != 1 &&         currentRoom != 2 &&         currentRoom != 41 &&         currentRoom != 33 &&         currentRoom != 34 &&         currentRoom != 32 &&         currentRoom != 25 &&         currentRoom != 26 &&         currentRoom != 39)
+      {      print("The goat does not mind getting its feet wet,but will not swim in "            "the water.  You should go back and lead the goat around the water.");      }    set(goat.leaving);    start.cycling(aGoat);    wander(aGoat);    }  if (isset(goat.leaving) &&       lv10 < 25 &&       drown.swim <= 0)
+    {    reset(goat.leaving);    follow.ego(aGoat, 10, f207);    }  if (isset(ego.invisible) &&       !isset(lf22))
     {    set(lf22);    print("The goat, not being able to see you, wanders off.");    reset(goat.following);    wander(aGoat);    if (edgeObjHit != NOT_HIT)
-      {      erase(aGoat);      }    }  goto(Label2);Label1:  distance(ego, aGoat, lv10);  if (isset(lf23) &&       drown.swim > 0 &&       !isset(f66))
-    {    set(f66);    print("The goat does not mind getting its feet wet,but will not swim in the "          "water.  You should go back and lead the goat around the water.");    }  if (isset(lf23) &&       isset(f66) &&       lv10 < 25 &&       drown.swim <= 0)
-    {    reset(f66);    }  }Label2:return();[ Messages#message 1 "The goat does not mind getting its feet wet,but will not swim in the water.  You should go back and lead the goat around the water."#message 2 "The goat, not being able to see you, wanders off."
+      {      erase(aGoat);      }    }  goto(Label2);Label1:  distance(ego, aGoat, lv10);  if (isset(lf23) &&       drown.swim > 0 &&       !isset(goat.leaving))
+    {    set(goat.leaving);    print("The goat does not mind getting its feet wet,but will not swim in the "          "water.  You should go back and lead the goat around the water.");    }  if (isset(lf23) &&       isset(goat.leaving) &&       lv10 < 25 &&       drown.swim <= 0)
+    {    reset(goat.leaving);    }  }Label2:return();[ Messages#message 1 "The goat does not mind getting its feet wet,but will not swim in the water.  You should go back and lead the goat around the water."#message 2 "The goat, not being able to see you, wanders off."

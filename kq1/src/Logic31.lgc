@@ -1,8 +1,8 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound4);  load.sound(Sound5);  set.horizon(50);  if (isset(goat.following))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound4);  load.sound(s.ego.fall);  set.horizon(50);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 39, 96, 0, 0);    }  if ((isset(have.beans) ||       beanstalk.room == 31))
-    {    beanstalk.overlay = 84;    set(f155);    load.pic(beanstalk.overlay);    load.view(View114);    load.view(View103);    load.view(View104);    load.view(View74);    load.view(View105);    load.logics(lgc.beanstalk);    load.sound(Sound12);    }  if (previousRoom == 70 &&       isset(climbing.beanstalk))
+    {    beanstalk.overlay = 84;    set(can.plant.beanstalk);    load.pic(beanstalk.overlay);    load.view(View114);    load.view(View103);    load.view(View104);    load.view(View74);    load.view(View105);    load.logics(lgc.beanstalk);    load.sound(Sound12);    }  if (previousRoom == 70 &&       isset(climbing.beanstalk))
     {    set.view(ego, View74);    position(ego, 64, 51);    move.obj(ego, 64, 51, 0, done);    set.priority(ego, 8);    }  if (previousRoom == 70 &&       isset(falling.from.sky))
     {    program.control();    ignore.horizon(ego);    set.priority(ego, 15);    set.view(ego, View105);    get.posn(ego, temp.x, temp.y);    if (temp.x > 75)
       {      position(ego, 80, 29);      }    else
@@ -10,8 +10,8 @@ if (isset(newRoom))
     {    load.view(View25);    animate.obj(o1);    set.view(o1, View25);    position(o1, 126, 138);    }  if (!isset(f90))
     {    draw(o1);    }  if (beanstalk.room == 31)
     {    overlay.pic(beanstalk.overlay);    }  draw(ego);  show.pic();  }if (isset(falling.from.sky) &&     !isset(lf3))
-  {  set(lf3);  set(f135);  sound(Sound5, lf4);  }if (isset(lf2))
-  {  stop.sound();  set(lf3);  reset(falling.from.sky);  reset(f135);  set.view(ego, View114);  shake.screen(2);  set(certain.death);  }if (isset(f90) &&     !isset(have.bowl))
+  {  set(lf3);  set(ego.stunned);  sound(s.ego.fall, lf4);  }if (isset(lf2))
+  {  stop.sound();  set(lf3);  reset(falling.from.sky);  reset(ego.stunned);  set.view(ego, View114);  shake.screen(2);  set(certain.death);  }if (isset(f90) &&     !isset(have.bowl))
   {  if (said("anyword", "bowl"))
     {    print("There may have been a bowl here at one time, but it is not here now!");    }  }if (!isset(f90))
   {  if (said("check", "bowl"))
@@ -21,7 +21,7 @@ if (isset(newRoom))
     {    print("There appears to be some sort of bowl on the ground.");    }  }if (!isset(f90) &&     said("acquire", "bowl"))
   {  if (posn(ego, 116, 128, 136, 148))
     {    print("You pick up the ceramic bowl.");    start.update(o1);    erase(o1);    currentScore  += 3;    set(have.bowl);    set(f90);    get("ceramic bowl");    }  else
-    {    print("That is impossible from here.");    }  }if (isset(have.beans) &&     isset(f155))
+    {    print("That is impossible from here.");    }  }if (isset(have.beans) &&     isset(can.plant.beanstalk))
   {  if (said("bury", "bean"))
     {    reset(have.beans);    beanstalk.room = 31;    set(planted.beans);    drop("beans");    currentScore  += 2;    print("The beans immediately sprout roots that reach deep into the fertile "          "soil... leaves unfold themselves to the warm, loving sun... a "          "rumbling is felt... and a mighty beanstalk now stretches up into the "          "sky!");    sound(Sound12, lf5);    overlay.pic(beanstalk.overlay);    show.pic();    }  }if (beanstalk.room == 31 &&     !isset(ego.invisible))
   {  if (said("climb", "beanstalk") &&       !isset(climbing.beanstalk))
@@ -32,13 +32,13 @@ if (isset(newRoom))
     {    print("There is no beanstalk here to climb.");    }  }if (isset(climbing.beanstalk))
   {  if (isset(egoHitSpecial) &&       posn(ego, 60, 78, 93, 80))
     {    erase(ego);    set.view(ego, View0);    reset(climbing.beanstalk);    position(ego, 70, 106);    release.priority(ego);    draw(ego);    }  if (isset(egoHitSpecial) &&       !posn(ego, 60, 78, 93, 80))
-    {    program.control();    set.priority(ego, 15);    get.posn(ego, temp.x, temp.y);    erase(ego);    set.view(ego, View105);    reset(climbing.beanstalk);    position.v(ego, temp.x, temp.y);    draw(ego);    temp.y = 106;    temp.step = 2;    move.obj.v(ego, temp.x, temp.y, temp.step, lf0);    set(f135);    sound(Sound5, f198);    }  }--lv0;if (isset(lf0))
-  {  stop.sound();  reset(lf0);  observe.blocks(ego);  release.priority(ego);  stop.motion(ego);  set.view(ego, View103);  lv0 = 20;  set(keep.cycling);  shake.screen(2);  print("Ouch!");  set(f135);  sound(Sound4, f159);  }if (isset(f159))
+    {    program.control();    set.priority(ego, 15);    get.posn(ego, temp.x, temp.y);    erase(ego);    set.view(ego, View105);    reset(climbing.beanstalk);    position.v(ego, temp.x, temp.y);    draw(ego);    temp.y = 106;    temp.step = 2;    move.obj.v(ego, temp.x, temp.y, temp.step, lf0);    set(ego.stunned);    sound(s.ego.fall, f198);    }  }--lv0;if (isset(lf0))
+  {  stop.sound();  reset(lf0);  observe.blocks(ego);  release.priority(ego);  stop.motion(ego);  set.view(ego, View103);  lv0 = 20;  set(keep.cycling);  shake.screen(2);  print("Ouch!");  set(ego.stunned);  sound(Sound4, sound.done);  }if (isset(sound.done))
   {  if (lv0 > 0)
-    {    reset(f159);    sound(Sound4, f159);    }  }if (lv0 == 1)
+    {    reset(sound.done);    sound(Sound4, sound.done);    }  }if (lv0 == 1)
   {  set.view(ego, View104);  end.of.loop(ego, lf1);  }if (isset(lf1))
   {  reset(lf1);  reset(keep.cycling);  start.motion(ego);  set.view(ego, View0);  release.priority(ego);  player.control();  }if (edgeEgoHit != NOT_HIT)
-  {  reset(f155);  }if (edgeEgoHit == TOP_EDGE &&     isset(climbing.beanstalk))
+  {  reset(can.plant.beanstalk);  }if (edgeEgoHit == TOP_EDGE &&     isset(climbing.beanstalk))
   {  new.room(Logic70);  }if (edgeEgoHit == TOP_EDGE &&     !isset(climbing.beanstalk))
   {  new.room(Logic34);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic32);  }if (edgeEgoHit == LEFT_EDGE)

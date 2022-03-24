@@ -1,5 +1,5 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(m.badguy);  load.sound(Sound4);  load.sound(Sound5);  if (!isset(have.note))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(m.badguy);  load.sound(Sound4);  load.sound(s.ego.fall);  if (!isset(have.note))
     {    load.view(View42);    animate.obj(o1);    set.view(o1, View42);    position(o1, 118, 140);    set.priority(o1, 14);    }  if (v87 == 2)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    }  if (v87 == 0)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (v87 == 3)
@@ -22,10 +22,10 @@ if (isset(newRoom))
   {  if (said("anyword", "witch"))
     {    print("The witch is dead.");    }  }if (previousRoom == 80)
   {  if (!isset(lf0) &&       !isset(lf13) &&       !isset(lf7))
-    {    sound(Sound5, f198);    set(lf13);    }  }--lv2;if (isset(lf0))
-  {  stop.sound();  set(lf14);  reset(lf0);  observe.blocks(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH!");  lv2 = 20;  set(keep.cycling);  sound(Sound4, f159);  }if (isset(f159))
+    {    sound(s.ego.fall, f198);    set(lf13);    }  }--lv2;if (isset(lf0))
+  {  stop.sound();  set(lf14);  reset(lf0);  observe.blocks(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH!");  lv2 = 20;  set(keep.cycling);  sound(Sound4, sound.done);  }if (isset(sound.done))
   {  if (lv2 > 0)
-    {    reset(f159);    sound(Sound4, f159);    }  }if (lv2 == 1)
+    {    reset(sound.done);    sound(Sound4, sound.done);    }  }if (lv2 == 1)
   {  set.view(ego, View104);  end.of.loop(ego, lf2);  print("As the wicked witch flew over her house, she dropped you... into her "        "cage!  If you can't get out, you may become the secret ingredient in "        "this witches' brew!");  player.control();  }--lv3;if (isset(lf2))
   {  reset(lf2);  reset(keep.cycling);  set.view(ego, View0);  lv3 = 100;  }if (lv3 == 1)
   {  if ((isset(lf7) ||       isset(lf9)))

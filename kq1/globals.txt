@@ -55,6 +55,7 @@
 #define points.find.pouch      f61
 #define moved.rock             f62
 #define certain.death          f63
+#define goat.leaving           f66
 #define have.dagger            f67
 #define took.dagger            f69
 #define lost.dagger            f70
@@ -109,14 +110,18 @@
 #define have.fiddle           f171
 #define points.stew           f184
 #define debugging             f190
+#define first.castle.entry    f193
 #define read.note             f196
 #define ego.dead              f197
 #define ego.ducking           f200
 #define ducking.done          f201
 #define ducking.jumping       f202
+#define last.castle.entry     f206
 #define playing.fiddle        f211
 #define fiddle.music.done     f212
 #define goat.wanders.off      f213
+#define a.gator.1              o11
+#define a.gator.2              o12
 #define aGoat                  o13
 #define lv0                    v30 [ Vars 30-45 are cleared on every room change.
 #define lv1                    v31
@@ -169,3 +174,23 @@
 #define goat.in.pen.room      v111
 #define random.tree.msg       v112
 #define random.rock.msg       v113
+#define can.plant.beanstalk   f155
+#define ego.stunned           f135 [ Survived a fall, but stunned from the impact
+#define sound.done            f159
+#define deadly.water           f68
+#define rope.lowered          f179
+#define cut.bucket            f176
+#define cut.lowered.rope      f178
+#define climbing.rope         f180
+#define bucket.lowered        f177
+#define ego.in.bucket         f181
+#define bucket.filled         f163 [ Random chance if lowered and raised in the well.
+#define falling.into.well     f182
+#define menace.caught.ego     f156
+#define falling.from.tree     f131
+#define elf.gave.ring          f82
+#define mountain.door.state    v66
+#define points.unlock.door     f85
+#define drown.timer            v95
+#define splash.timer           v93
+#define override.splash.loc   f134

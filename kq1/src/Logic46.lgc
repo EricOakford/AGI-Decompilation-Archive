@@ -5,14 +5,14 @@ if (isset(newRoom))
     {    load.sound(m.badguy);    lv1 = 2;    step.size(o1, lv1);    load.view(View94);    load.view(View95);    load.view(View2);    animate.obj(o1);    set.view(o1, View2);    set(lf0);    }  if (isset(lf0))
     {Label1:    random(0, 250, dist.to.obj);    if (dist.to.obj > 90)
       {      goto(Label1);      }    }  draw(ego);  show.pic();  }--dist.to.obj;if (dist.to.obj == 1)
-  {  set(f145);  set(f146);  position(o1, 40, 51);  set(lf1);  set(f135);  sound(m.badguy, f159);  draw(o1);  if (!isset(goat.following))
-    {    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    follow.ego(o1, 7, f156);    }  if (isset(goat.following))
-    {    wander(o1);    set(lf3);    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    print("Lucky for you that ogres are afraid of goats. This one decides to "          "leave you alone.");    }  }if (isset(f159))
-  {  reset(f159);  reset(f135);  }if (!isset(lf1))
+  {  set(f145);  set(f146);  position(o1, 40, 51);  set(lf1);  set(ego.stunned);  sound(m.badguy, sound.done);  draw(o1);  if (!isset(goat.following))
+    {    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    follow.ego(o1, 7, menace.caught.ego);    }  if (isset(goat.following))
+    {    wander(o1);    set(lf3);    print("Watch out!!!  There is an ogre nearby!  He will crush you in his "          "strong arms if he catches you.");    print("Lucky for you that ogres are afraid of goats. This one decides to "          "leave you alone.");    }  }if (isset(sound.done))
+  {  reset(sound.done);  reset(ego.stunned);  }if (!isset(lf1))
   {  reset(f145);  reset(f146);  if (said("anyword", "dwarf"))
     {    print("There is no ogre here.");    }  if (said("cast", "dagger") &&       isset(have.dagger))
-    {    print("OK.  You drop the dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(f156))
-  {  reset(f156);  if (isset(ego.invisible))
+    {    print("OK.  You drop the dagger.");    reset(have.dagger);    set(lost.dagger);    drop("dagger");    currentScore -= 5;    }  }if (isset(menace.caught.ego))
+  {  reset(menace.caught.ego);  if (isset(ego.invisible))
     {    print("Fortunately, you are invisible and the ogre can't see you.");    wander(o1);    set(lf3);    goto(Label2);    }  if (isset(protected.spell))
     {    print("You are very fortunate that your protective spell is still working.");    wander(o1);    set(lf3);    goto(Label2);    }  if (isset(have.shield))
     {    print("With the magic shield, no harm will come to you.");    wander(o1);    set(lf3);    goto(Label2);    }  if (isset(ego.shrunk))
