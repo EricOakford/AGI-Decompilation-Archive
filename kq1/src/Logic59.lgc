@@ -9,12 +9,12 @@ if (isset(newRoom))
   {  print("You are in the Land of the Clouds.  It is rumored that a giant lives "        "here.");  }if (said("check", "tree"))
   {  print("These are the most unusual looking trees.");  }if (said("check", "blossom"))
   {  print("These are unusual looking flowers.");  }if (isset(egoHitSpecial) &&     !isset(f95) &&     posn(ego, 0, 84, 159, 167))
-  {  set(f95);  stop.cycling(ego);  sound(Sound5, stun.done5);  move.obj(ego, 153, 166, 5, done2);  }if (isset(egoHitSpecial) &&     posn(ego, 0, 0, 159, 83))
+  {  set(f95);  stop.cycling(ego);  sound(Sound5, f159);  move.obj(ego, 153, 166, 5, lf1);  }if (isset(egoHitSpecial) &&     posn(ego, 0, 0, 159, 83))
   {  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  sound(Sound5, stun.done5);  erase(ego);  }if (isset(done2))
-  {  reset(done2);  erase(ego);  }if (isset(stun.done5))
-  {  reset(stun.done5);  set(done1);  }if (isset(done1))
-  {  reset(done1);  print("Oops, you've missed the edge and fallen through the  clouds.");  set(certain.death);  }if (posn(ego, 135, 94, 136, 120))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  sound(Sound5, f159);  erase(ego);  }if (isset(lf1))
+  {  reset(lf1);  erase(ego);  }if (isset(f159))
+  {  reset(f159);  set(lf0);  }if (isset(lf0))
+  {  reset(lf0);  print("Oops, you've missed the edge and fallen through the  clouds.");  set(certain.death);  }if (posn(ego, 135, 94, 136, 120))
   {  new.room(Logic69);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic58);  }if (edgeEgoHit == BOTTOM_EDGE)
   {  get.posn(ego, temp.x, temp.y);  if (temp.x < 153)

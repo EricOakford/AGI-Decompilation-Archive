@@ -1,68 +1,68 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound1);  load.sound(Sound4);  load.sound(Sound5);  if (!isset(have.note))
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(m.badguy);  load.sound(Sound4);  load.sound(Sound5);  if (!isset(have.note))
     {    load.view(View42);    animate.obj(o1);    set.view(o1, View42);    position(o1, 118, 140);    set.priority(o1, 14);    }  if (v87 == 2)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    }  if (v87 == 0)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (v87 == 3)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 5);    stop.cycling(o2);    }  if (v87 == 1)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 5);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (previousRoom == 80)
-    {    load.view(View105);    load.view(View103);    load.view(View104);    set.view(ego, View105);    ignore.blocks(ego);    position(ego, 80, 45);    set(keep.cycling);    set(done6);    program.control();    move.obj(ego, 80, 84, 6, done1);    v81 = 2;    }  if (previousRoom == 28)
+    {    load.view(View105);    load.view(View103);    load.view(View104);    set.view(ego, View105);    ignore.blocks(ego);    position(ego, 80, 45);    set(keep.cycling);    set(lf5);    program.control();    move.obj(ego, 80, 84, 6, lf0);    v81 = 2;    }  if (previousRoom == 28)
     {    position(ego, 49, 163);    }  if (!isset(protected.spell) &&       v81 != 3 &&       previousRoom != 80 &&       !isset(ego.invisible))
     {    if (v81 == 2)
       {      random(0, 250, work);      if (work < 180)
-        {        load.view(View43);        animate.obj(o4);        set.view(o4, View43);        timer.1 = 250;        timer.2 = 3;        }      }    }  if (v81 == 1)
+        {        load.view(View43);        animate.obj(o4);        set.view(o4, View43);        lv0 = 250;        lv1 = 3;        }      }    }  if (v81 == 1)
     {    if (!isset(protected.spell) &&         !isset(ego.invisible))
-      {      set(f27);      load.view(View43);      animate.obj(o4);      set.view(o4, View43);      position(o4, 26, 120);      }    }  if (!isset(have.note))
+      {      set(lf7);      load.view(View43);      animate.obj(o4);      set.view(o4, View43);      position(o4, 26, 120);      }    }  if (!isset(have.note))
     {    draw(o1);    stop.update(o1);    }  draw(o2);  if (v87 == 1)
     {    draw(o3);    }  ignore.blocks(ego);  observe.blocks(o4);  draw(ego);  show.pic();  if (isset(protected.spell))
     {    print("Be thankful that you have a protective spell or the witch may have "          "stuck around to try and catch you!");    }  if (isset(ego.invisible))
-    {    print("Be thankful that you are invisible or the witch may have stuck "          "around to try and catch you!");    }  if (isset(f27))
-    {    draw(o4);    follow.ego(o4, 10, f26);    print("Surprise!  Surprise!  The wicked witch is home and now she's after "          "you!");    }  }if (isset(f27) &&     !isset(f32))
-  {  set(f32);  sound(Sound1, script.done);  }if (isset(goat.following))
+    {    print("Be thankful that you are invisible or the witch may have stuck "          "around to try and catch you!");    }  if (isset(lf7))
+    {    draw(o4);    follow.ego(o4, 10, lf6);    print("Surprise!  Surprise!  The wicked witch is home and now she's after "          "you!");    }  }if (isset(lf7) &&     !isset(lf12))
+  {  set(lf12);  sound(m.badguy, done);  }if (isset(goat.following))
   {  reset(goat.following);  set(goat.gone);  print("As soon as you entered the house the goat ran away.");  currentScore -= 5;  }if (v81 == 3)
   {  if (said("anyword", "witch"))
     {    print("The witch is dead.");    }  }if (previousRoom == 80)
-  {  if (!isset(done1) &&       !isset(f33) &&       !isset(f27))
-    {    sound(Sound5, fall.done5);    set(f33);    }  }--timer.3;if (isset(done1))
-  {  stop.sound();  set(f34);  reset(done1);  observe.blocks(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH!");  timer.3 = 20;  set(keep.cycling);  sound(Sound4, stun.done5);  }if (isset(stun.done5))
-  {  if (timer.3 > 0)
-    {    reset(stun.done5);    sound(Sound4, stun.done5);    }  }if (timer.3 == 1)
-  {  set.view(ego, View104);  end.of.loop(ego, done3);  print("As the wicked witch flew over her house, she dropped you... into her "        "cage!  If you can't get out, you may become the secret ingredient in "        "this witches' brew!");  player.control();  }--v33;if (isset(done3))
-  {  reset(done3);  reset(keep.cycling);  set.view(ego, View0);  v33 = 100;  }if (v33 == 1)
-  {  if ((isset(f27) ||       isset(f29)))
-    {    print("With a flash, you hear her joyously exclaim, \"This has made me feel "          "like flying!\"");    erase(o4);    reset(f27);    }  else
-    {    print("Try as you will to escape, your labor will be in vain.");    }  set(f95);  stop.cycling(ego);  set(certain.death);  }if (isset(f27))
-  {  distance(ego, o4, v34);  if (v34 == 30 &&       !isset(sound.done))
-    {    set(sound.done);    stop.motion(ego);    print("Rats!  She has cast some spell to keep you from escaping!. The witch "          "remarks, \"Oh, how nice of you to come for dinner (cackle, cackle)\"");    }  if (isset(f26))
-    {    reset(f26);    print("She pokes and pinches you, then states, \"This one is too scrawny, "          "so it's into the cage until you fatten up (smack, yum)!\"");    erase(ego);    position(ego, 80, 80);    draw(ego);    start.motion(ego);    set(done3);    set(done6);    }  }--timer.1;if (timer.1 == 0)
-  {  if (timer.2 > 0)
-    {    --timer.2;    timer.1 = 250;    }  }if (timer.1 == 1 &&     timer.2 == 3)
-  {  print("Off in the distance you hear a high, squeaky voice say, \"I can smell "        "someone tasty in my house.\"");  }if (timer.1 == 1 &&     timer.2 == 2)
-  {  position(o4, 49, 160);  draw(o4);  sound(Sound1, script.done);  set(f29);  if (posn(ego, 105, 1, 158, 166))
-    {    move.obj(o4, 26, 120, 2, done2);    set(f31);    print("The witch mutters, \"I am going to get my oven ready to cook someone "          "for dinner (yum).\"");    }  }if (isset(f29) &&     !isset(done2) &&     !isset(f31))
-  {  timer.1 = 0;  timer.2 = 0;  if (posn(ego, 105, 1, 158, 166) &&       !isset(done4))
+  {  if (!isset(lf0) &&       !isset(lf13) &&       !isset(lf7))
+    {    sound(Sound5, f198);    set(lf13);    }  }--lv2;if (isset(lf0))
+  {  stop.sound();  set(lf14);  reset(lf0);  observe.blocks(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH!");  lv2 = 20;  set(keep.cycling);  sound(Sound4, f159);  }if (isset(f159))
+  {  if (lv2 > 0)
+    {    reset(f159);    sound(Sound4, f159);    }  }if (lv2 == 1)
+  {  set.view(ego, View104);  end.of.loop(ego, lf2);  print("As the wicked witch flew over her house, she dropped you... into her "        "cage!  If you can't get out, you may become the secret ingredient in "        "this witches' brew!");  player.control();  }--lv3;if (isset(lf2))
+  {  reset(lf2);  reset(keep.cycling);  set.view(ego, View0);  lv3 = 100;  }if (lv3 == 1)
+  {  if ((isset(lf7) ||       isset(lf9)))
+    {    print("With a flash, you hear her joyously exclaim, \"This has made me feel "          "like flying!\"");    erase(o4);    reset(lf7);    }  else
+    {    print("Try as you will to escape, your labor will be in vain.");    }  set(f95);  stop.cycling(ego);  set(certain.death);  }if (isset(lf7))
+  {  distance(ego, o4, lv4);  if (lv4 == 30 &&       !isset(lf10))
+    {    set(lf10);    stop.motion(ego);    print("Rats!  She has cast some spell to keep you from escaping!. The witch "          "remarks, \"Oh, how nice of you to come for dinner (cackle, cackle)\"");    }  if (isset(lf6))
+    {    reset(lf6);    print("She pokes and pinches you, then states, \"This one is too scrawny, "          "so it's into the cage until you fatten up (smack, yum)!\"");    erase(ego);    position(ego, 80, 80);    draw(ego);    start.motion(ego);    set(lf2);    set(lf5);    }  }--lv0;if (lv0 == 0)
+  {  if (lv1 > 0)
+    {    --lv1;    lv0 = 250;    }  }if (lv0 == 1 &&     lv1 == 3)
+  {  print("Off in the distance you hear a high, squeaky voice say, \"I can smell "        "someone tasty in my house.\"");  }if (lv0 == 1 &&     lv1 == 2)
+  {  position(o4, 49, 160);  draw(o4);  sound(m.badguy, done);  set(lf9);  if (posn(ego, 105, 1, 158, 166))
+    {    move.obj(o4, 26, 120, 2, lf1);    set(lf11);    print("The witch mutters, \"I am going to get my oven ready to cook someone "          "for dinner (yum).\"");    }  }if (isset(lf9) &&     !isset(lf1) &&     !isset(lf11))
+  {  lv0 = 0;  lv1 = 0;  if (posn(ego, 105, 1, 158, 166) &&       !isset(lf3))
     {    wander(o4);    }  else
-    {    if (!isset(done4))
-      {      set(done4);      ignore.blocks(o4);      follow.ego(o4, 10, f26);      }    distance(ego, o4, v34);    if (v34 < 30 &&         !isset(sound.done) &&         !posn(ego, 105, 132, 158, 166))
-      {      set(sound.done);      stop.motion(ego);      print("Rats!  She has cast some spell to keep you from escaping!. The "            "witch remarks, \"Oh, how nice of you to come for dinner (cackle, "            "cackle)\"");      }    if (isset(f26))
-      {      reset(f26);      print("She pokes and pinches you, then states, \"This one is too scrawny, "            "so it's into the cage until you fatten up (smack, yum)!\"");      reposition.to(ego, 80, 80);      start.motion(ego);      set(done3);      set(done6);      }    }  }if (isset(done2))
+    {    if (!isset(lf3))
+      {      set(lf3);      ignore.blocks(o4);      follow.ego(o4, 10, lf6);      }    distance(ego, o4, lv4);    if (lv4 < 30 &&         !isset(lf10) &&         !posn(ego, 105, 132, 158, 166))
+      {      set(lf10);      stop.motion(ego);      print("Rats!  She has cast some spell to keep you from escaping!. The "            "witch remarks, \"Oh, how nice of you to come for dinner (cackle, "            "cackle)\"");      }    if (isset(lf6))
+      {      reset(lf6);      print("She pokes and pinches you, then states, \"This one is too scrawny, "            "so it's into the cage until you fatten up (smack, yum)!\"");      reposition.to(ego, 80, 80);      start.motion(ego);      set(lf2);      set(lf5);      }    }  }if (isset(lf1))
   {  if (said("check", "witch"))
     {    print("This ugly old witch is one of the most hideous sights you have ever "          "seen.  I would never trust her.");    }  distance(ego, o4, dist.to.obj);  if (dist.to.obj < 15)
     {    if ((said("move", "witch") ||         said("kill", "witch")))
-      {      erase(o4);      print("Courageously, you manage to push the witch into the oven where she "            "flashes and melts away into a harmless blob. Congratulations!");      v81 = 3;      timer.1 = 0;      timer.2 = 0;      reset(f29);      reset(done2);      currentScore  += 7;      }    }  if (dist.to.obj > 14)
+      {      erase(o4);      print("Courageously, you manage to push the witch into the oven where she "            "flashes and melts away into a harmless blob. Congratulations!");      v81 = 3;      lv0 = 0;      lv1 = 0;      reset(lf9);      reset(lf1);      currentScore  += 7;      }    }  if (dist.to.obj > 14)
     {    if ((said("move", "witch") ||         said("kill", "witch")))
-      {      print("You are in no position to do that!");      }    }  if (timer.1 == 1 &&       timer.2 == 3)
-    {    print("The witch mumbles, \"After I get the oven nice and hot, I will be "          "ready to have someone for dinner (giggle).\"");    }  if (timer.1 == 1 &&       timer.2 == 2)
-    {    print("The witch mutters, \"The oven is heating up nicely.  I wonder who "          "will be my dinner guest!\"");    }  if (timer.1 == 1 &&       timer.2 == 0)
-    {    timer.1 = 0;    timer.2 = 0;    print("The witch says, \"My oven is now the perfect temperature. It is time "          "to invite someone for dinner (cackle, cackle)!\"");    reset(done2);    reset(f31);    if (posn(ego, 100, 1, 158, 166))
-      {      wander(o4);      }    }  }if (!isset(done2))
-  {  if ((isset(f29) ||       isset(f27)))
+      {      print("You are in no position to do that!");      }    }  if (lv0 == 1 &&       lv1 == 3)
+    {    print("The witch mumbles, \"After I get the oven nice and hot, I will be "          "ready to have someone for dinner (giggle).\"");    }  if (lv0 == 1 &&       lv1 == 2)
+    {    print("The witch mutters, \"The oven is heating up nicely.  I wonder who "          "will be my dinner guest!\"");    }  if (lv0 == 1 &&       lv1 == 0)
+    {    lv0 = 0;    lv1 = 0;    print("The witch says, \"My oven is now the perfect temperature. It is time "          "to invite someone for dinner (cackle, cackle)!\"");    reset(lf1);    reset(lf11);    if (posn(ego, 100, 1, 158, 166))
+      {      wander(o4);      }    }  }if (!isset(lf1))
+  {  if ((isset(lf9) ||       isset(lf7)))
     {    if (said("move", "witch"))
       {      print("You are in no position to do that!");      }    if (said("kill", "witch"))
       {      print("If I were you, I wouldn't try it!  This witch is mean!");      }    if (said("check", "witch"))
       {      print("This ugly old witch is one of the most hideous sights you have "            "ever seen.  I would never trust her.");      }    }  }if (v81 != 3)
-  {  if (!isset(f29) &&       !isset(f27))
+  {  if (!isset(lf9) &&       !isset(lf7))
     {    if (said("anyword", "witch"))
-      {      print("There is no witch here...RIGHT NOW!!");      }    }  }if ((isset(f29) ||     isset(f27)))
+      {      print("There is no witch here...RIGHT NOW!!");      }    }  }if ((isset(lf9) ||     isset(lf7)))
   {  if (said("speak", "witch"))
     {    print("Now is not a good time to try and start a conversation!");    }  if ((said("hello") ||       said("say", "hello")))
     {    print("Now is not a good time to try and start a conversation!");    }  }if (said("open", "cage"))
@@ -76,13 +76,13 @@ if (isset(newRoom))
       {      print("The cabinet on the wall is rather plain and simple.");      }    }  if (said("open", "cabinet"))
     {    if ((v87 == 1 ||         v87 == 3))
       {      print("It is already open.");      }    if (v87 == 2)
-      {      start.cycling(o2);      end.of.loop(o2, script.done);      v87 = 3;      }    if (v87 == 0)
-      {      prevent.input();      start.cycling(o2);      end.of.loop(o2, done5);      v87 = 1;      if (!isset(f80))
+      {      start.cycling(o2);      end.of.loop(o2, done);      v87 = 3;      }    if (v87 == 0)
+      {      prevent.input();      start.cycling(o2);      end.of.loop(o2, lf4);      v87 = 1;      if (!isset(f80))
         {        set(f80);        currentScore  += 2;        }      }    }  if (said("close", "cabinet"))
     {    if ((v87 == 0 ||         v87 == 2))
       {      print("It is already closed.");      }    if (v87 == 3)
-      {      reverse.loop(o2, script.done);      v87 = 2;      }    if (v87 == 1)
-      {      reverse.loop(o2, script.done);      erase(o3);      v87 = 0;      }    }  if (!isset(have.cheese))
+      {      reverse.loop(o2, done);      v87 = 2;      }    if (v87 == 1)
+      {      reverse.loop(o2, done);      erase(o3);      v87 = 0;      }    }  if (!isset(have.cheese))
     {    if (said("acquire", "cheese"))
       {      if (v87 == 1)
         {        erase(o3);        get("cheese");        set(have.cheese);        currentScore  += 2;        print("You pluck the Swiss cheese from the shelf.");        v87 = 3;        }      if ((v87 == 0 ||           v87 == 2))
@@ -96,15 +96,15 @@ if (isset(newRoom))
     {    print("You need to be closer to do that.");    }  if (!isset(have.cheese))
     {    if (said("check", "cheese"))
       {      print("You cannot see it from here.");      }    if (said("acquire", "cheese"))
-      {      print("I don't see any here.");      }    }  }if (isset(done5))
-  {  accept.input();  reset(done5);  draw(o3);  }if (said("check", "oven"))
+      {      print("I don't see any here.");      }    }  }if (isset(lf4))
+  {  accept.input();  reset(lf4);  draw(o3);  }if (said("check", "oven"))
   {  if (posn(ego, 4, 88, 106, 160))
     {    print("It is an old wood stove, and very hot.  The fire must have been "          "burning for some time.");    }  else
     {    print("You may have seen one in the other room, but I am not sure.");    }  }if (said("check", "cage"))
-  {  if (isset(done6))
+  {  if (isset(lf5))
     {    if (previousRoom == 80)
       {      print("This cage will be your new home for the rest of your life.");      }    if (previousRoom == 28)
-      {      print("You look for a way to escape, but there is none.");      }    }  if (!isset(done6))
+      {      print("You look for a way to escape, but there is none.");      }    }  if (!isset(lf5))
     {    if (posn(ego, 4, 88, 106, 160))
       {      print("It is made from rusty, but strong, iron bars.");      }    else
       {      print("You cannot see it from here.");      }    }  }if (said("feel", "oven"))

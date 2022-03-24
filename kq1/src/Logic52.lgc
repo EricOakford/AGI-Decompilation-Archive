@@ -6,13 +6,13 @@ if (isset(newRoom))
       {      set(f208);      currentScore  += 2;      }    }  v68 = 250;  v69 = 2;  if (isset(have.bucket) &&       !isset(have.water))
     {    set(have.water);    get("water");    if (!isset(points.water))
       {      set(points.water);      currentScore  += 2;      }    }  draw(ego);  show.pic();  if (isset(ego.invisible))
-    {    drop("magic ring");    currentScore -= 3;    print("Thrashing around in the water has caused you to lose the magic ring "          "and become visible again.");    reset(have.ring);    reset(ego.invisible);    reset(wearing.ring);    set(lost.ring);    invisible.seconds = 0;    invisible.minutes = 0;    }  }--v68;if (v68 == 0)
+    {    drop("magic ring");    currentScore -= 3;    print("Thrashing around in the water has caused you to lose the magic ring "          "and become visible again.");    reset(have.ring);    reset(ego.invisible);    reset(wearing.ring);    set(lost.ring);    invisible.timer.1 = 0;    invisible.timer.2 = 0;    }  }--v68;if (v68 == 0)
   {  --v69;  if (v69 > 0)
-    {    v68 = 250;    }  }if (v68 == 0 &&     v69 == 0 &&     !isset(done3))
-  {  set(done3);  set.view(ego, View114);  print("Not even you can hold your breath forever.  The well bottom has become "        "your eternal resting place.");  ignore.blocks(ego);  get.posn(ego, temp.x, temp.y);  if (temp.y < 141)
-    {    move.obj(ego, 65, 140, 1, done2);    }  if (temp.y > 140)
-    {    set(done2);    }  }if (isset(done2))
-  {  reset(done2);  set(certain.death);  }if (said("check", "water"))
+    {    v68 = 250;    }  }if (v68 == 0 &&     v69 == 0 &&     !isset(lf2))
+  {  set(lf2);  set.view(ego, View114);  print("Not even you can hold your breath forever.  The well bottom has become "        "your eternal resting place.");  ignore.blocks(ego);  get.posn(ego, temp.x, temp.y);  if (temp.y < 141)
+    {    move.obj(ego, 65, 140, 1, lf1);    }  if (temp.y > 140)
+    {    set(lf1);    }  }if (isset(lf1))
+  {  reset(lf1);  set(certain.death);  }if (said("check", "water"))
   {  print("This looks like typical well water.");  }if (said("check", "bottle"))
   {  print("It looks like this bottle has been here for a very long time.");  }if (said("acquire", "bottle"))
   {  print("This is just an old, junky bottle.  You don't want it.");  }if (said("check", "well"))

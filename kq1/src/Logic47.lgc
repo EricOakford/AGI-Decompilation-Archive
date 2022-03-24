@@ -2,12 +2,12 @@ if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(goat.following))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 14, 144, 0, 0);    }  load.logics(lgc.swim);  call(lgc.swim);  if (!isset(f121))
-    {    load.view(View60);    load.view(View84);    animate.obj(o1);    set.view(o1, View84);    position(o1, 84, 80);    set(done1);    }  if (previousRoom == 34)
+    {    load.view(View60);    load.view(View84);    animate.obj(o1);    set.view(o1, View84);    position(o1, 84, 80);    set(lf0);    }  if (previousRoom == 34)
     {    if (posn(ego, 77, 165, 112, 167))
       {      position(ego, 71, 164);      }    if (posn(ego, 113, 165, 159, 167))
-      {      position(ego, 142, 164);      }    }  if (isset(done1))
-    {    reset(done1);    draw(o1);    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(done2))
-  {  set(done2);  print("This is sad.  You are not the first to fail your quest in the Raging "        "River... I hope you may be the last.");  }if (said("check", "water"))
+      {      position(ego, 142, 164);      }    }  if (isset(lf0))
+    {    reset(lf0);    draw(o1);    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(lf1))
+  {  set(lf1);  print("This is sad.  You are not the first to fail your quest in the Raging "        "River... I hope you may be the last.");  }if (said("check", "water"))
   {  print("This is the wild Raging River filled with boulders and rapids.");  }if (said("check", "boulder"))
   {  print("It would be dangerous to try and jump across the river on the "        "boulders.");  }if (said("check", "across"))
   {  if ((posn(ego, 0, 0, 36, 111) ||       posn(ego, 0, 112, 97, 167)))

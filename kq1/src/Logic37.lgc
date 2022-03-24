@@ -7,8 +7,8 @@ if (isset(newRoom))
       {      position(ego, 140, 57);      }    }  if (previousRoom == 28)
     {    get.posn(ego, temp.x, temp.y);    if (temp.x < 75)
       {      position(ego, 5, 164);      }    if (temp.x > 74)
-      {      position(ego, 144, 164);      }    }  block(27, 59, 127, 167);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wandered.off))
-  {  reset(goat.wandered.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (said("check", "lake"))
+      {      position(ego, 144, 164);      }    }  block(27, 59, 127, 167);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wanders.off))
+  {  reset(goat.wanders.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (said("check", "lake"))
   {  print("This lake looks refreshing, but a little swampy.");  }if (said("check", "tree"))
   {  print("This is a very interesting tree, growing in the middle of the lake.");  }if (!isset(onWater))
   {  if ((posn(ego, 83, 108, 131, 143) ||       posn(ego, 37, 101, 82, 145) ||       posn(ego, 48, 37, 94, 100) ||       posn(ego, 39, 54, 100, 80) ||       posn(ego, 85, 146, 108, 155)))
@@ -23,7 +23,7 @@ if (isset(newRoom))
   {  print("The bucket fills with the somewhat swampy water.");  get("water");  set(have.water);  if (!isset(points.water))
     {    currentScore  += 2;    }  set(points.water);  }if (edgeEgoHit != NOT_HIT)
   {  if (isset(f66))
-    {    reset(f66);    reset(goat.following);    set(goat.gone);    set(goat.wandered.off);    }  }if (edgeEgoHit == TOP_EDGE)
+    {    reset(f66);    reset(goat.following);    set(goat.gone);    set(goat.wanders.off);    }  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic44);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic36);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic38);  }if (edgeEgoHit == BOTTOM_EDGE)

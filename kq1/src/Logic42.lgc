@@ -11,8 +11,8 @@ if (isset(newRoom))
       {      position(ego, 140, 58);      }    if (temp.y > 122)
       {      position(ego, 147, 150);      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (posn(ego, 0, 83, 159, 167))
   {  set(f68);  }else
-  {  reset(f68);  }if (isset(onWater) &&     isset(f68) &&     !isset(done1))
-  {  set(done1);  print("You have fallen in the raging current and are swept under.  I'm afraid "        "your end has come.");  }if (said("check", "water"))
+  {  reset(f68);  }if (isset(onWater) &&     isset(f68) &&     !isset(lf0))
+  {  set(lf0);  print("You have fallen in the raging current and are swept under.  I'm afraid "        "your end has come.");  }if (said("check", "water"))
   {  if (posn(ego, 93, 40, 159, 82))
     {    print("The clear blue lake is surrounded by a pretty meadow.");    }  else
     {    print("The river gets to be rather rough around these parts.");    }  }if (said("check", "bridge"))

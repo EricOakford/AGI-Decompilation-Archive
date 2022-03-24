@@ -4,8 +4,8 @@ if (isset(newRoom))
     {    add.to.pic(View62, 0, 0, 101, 137, 0, 0);    }  if (previousRoom == 33)
     {    get.posn(ego, temp.x, temp.y);    if (temp.x > 130)
       {      position(ego, 140, 41);      }    if (temp.x > 88 &&         temp.x < 131)
-      {      position(ego, 88, 41);      }    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(done1))
-  {  set(done1);  print("Oh No!  That's such a dangerous river... the current is too strong... "        "you won't be able to escape!");  }if (said("check", "river"))
+      {      position(ego, 88, 41);      }    }  load.logics(lgc.swim);  call(lgc.swim);  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(lf0))
+  {  set(lf0);  print("Oh No!  That's such a dangerous river... the current is too strong... "        "you won't be able to escape!");  }if (said("check", "river"))
   {  print("The river flows swiftly between steep banks.");  }if ((said("check", "across") ||     said("check", "across", "river")))
   {  print("On the far side of the river is a green meadow.");  set(haveMatch);  }if (said("acquire", "water"))
   {  if (isset(have.bucket) &&       !isset(have.water))

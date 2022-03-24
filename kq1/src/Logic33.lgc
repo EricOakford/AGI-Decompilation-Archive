@@ -3,8 +3,8 @@ if (isset(newRoom))
     {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
     {    add.to.pic(View62, 0, 0, 56, 127, 0, 0);    }  if (previousRoom == 32)
     {    get.posn(ego, temp.x, temp.y);    if (temp.x > 103)
-      {      position(ego, 143, 166);      }    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(done1))
-  {  set(done1);  print("Your swimming attempt proved fatal!  The raging current drags you "        "under....");  }if (said("check", "river"))
+      {      position(ego, 143, 166);      }    }  set(f68);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(onWater) &&     !isset(lf0))
+  {  set(lf0);  print("Your swimming attempt proved fatal!  The raging current drags you "        "under....");  }if (said("check", "river"))
   {  print("This is a Raging River filled with boulders and rapids.");  }if ((said("check", "across") ||     said("check", "across", "river")))
   {  print("You see a lovely green meadow on the other side of the river.");  set(haveMatch);  }if (said("check", "boulder"))
   {  print("It is a massive boulder that splits the river.");  }if (!isset(have.water))

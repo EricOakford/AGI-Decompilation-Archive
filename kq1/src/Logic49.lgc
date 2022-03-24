@@ -1,39 +1,39 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound5);  load.logics(lgc.swim);  call(lgc.swim);  load.view(View72);  load.view(View16);  load.view(View74);  load.view(View105);  load.view(View99);  if (isset(f182))
-    {    set.view(ego, View105);    position(ego, 81, 48);    ignore.objs(ego);    ignore.blocks(ego);    set.priority(ego, 15);    set(keep.cycling);    set(done1);    move.obj(ego, 81, 164, 3, done2);    }  if (previousRoom == 12 &&       !isset(f182))
+    {    set.view(ego, View105);    position(ego, 81, 48);    ignore.objs(ego);    ignore.blocks(ego);    set.priority(ego, 15);    set(keep.cycling);    set(lf0);    move.obj(ego, 81, 164, 3, lf1);    }  if (previousRoom == 12 &&       !isset(f182))
     {    if (!isset(f162))
       {      set(f162);      currentScore  += 1;      }    if (isset(f180))
       {      set.view(ego, View74);      position(ego, 81, 48);      set.priority(ego, 15);      }    }  if (previousRoom == 52)
-    {    drown.swim = 2;    set.view(ego, View70);    set(done4);    timer.1 = 250;    position(ego, 75, 163);    }  if (isset(f179))
+    {    drown.swim = 2;    set.view(ego, View70);    set(lf3);    lv0 = 250;    position(ego, 75, 163);    }  if (isset(f179))
     {    add.to.pic(View99, 0, 0, 84, 119, 4, 4);    discard.view(View99);    }  if (isset(f177))
     {    if (isset(f181))
-      {      animate.obj(o1);      set.view(o1, View72);      position(o1, 79, 150);      set.cel(o1, 0);      draw(o1);      add.to.pic(View99, 0, 0, 84, 119, 4, 4);      end.of.loop(o1, script.done);      goto(Label1);      }    else
+      {      animate.obj(o1);      set.view(o1, View72);      position(o1, 79, 150);      set.cel(o1, 0);      draw(o1);      add.to.pic(View99, 0, 0, 84, 119, 4, 4);      end.of.loop(o1, done);      goto(Label1);      }    else
       {      add.to.pic(View99, 0, 0, 84, 119, 4, 4);      animate.obj(o1);      set.view(o1, View16);      position(o1, 79, 150);      set.cel(o1, 0);      draw(o1);      stop.update(o1);      }    }  draw(ego);Label1:  show.pic();  }if ((isset(f179) ||     isset(f177)))
   {  if (said("check", "rope"))
     {    print("It is a very long, sturdy rope.");    }  }if (isset(onWater))
   {  observe.blocks(ego);  }else
-  {  ignore.blocks(ego);  }if (isset(f182) &&     !isset(done2) &&     !isset(done3) &&     !isset(done5))
-  {  sound(Sound5, stun.done5);  set(done5);  }if (isset(f180))
+  {  ignore.blocks(ego);  }if (isset(f182) &&     !isset(lf1) &&     !isset(lf2) &&     !isset(lf4))
+  {  sound(Sound5, f159);  set(lf4);  }if (isset(f180))
   {  get.posn(ego, temp.x, temp.y);  if (temp.y > 115 &&       isset(f177))
-    {    reset(f180);    set(f182);    set.view(ego, View105);    temp.y = 164;    ignore.objs(ego);    set.priority(ego, 15);    set(keep.cycling);    set(done1);    temp.step = 3;    move.obj.v(ego, temp.x, temp.y, temp.step, done3);    }  if (temp.y > 115 &&       isset(f179))
-    {    reset(f180);    set(f182);    set.view(ego, View105);    temp.y = 164;    ignore.objs(ego);    set.priority(ego, 15);    set(keep.cycling);    set(done1);    temp.step = 3;    move.obj.v(ego, temp.x, temp.y, temp.step, done3);    }  if ((temp.x < 79 ||       temp.x > 83))
+    {    reset(f180);    set(f182);    set.view(ego, View105);    temp.y = 164;    ignore.objs(ego);    set.priority(ego, 15);    set(keep.cycling);    set(lf0);    temp.step = 3;    move.obj.v(ego, temp.x, temp.y, temp.step, lf2);    }  if (temp.y > 115 &&       isset(f179))
+    {    reset(f180);    set(f182);    set.view(ego, View105);    temp.y = 164;    ignore.objs(ego);    set.priority(ego, 15);    set(keep.cycling);    set(lf0);    temp.step = 3;    move.obj.v(ego, temp.x, temp.y, temp.step, lf2);    }  if ((temp.x < 79 ||       temp.x > 83))
     {    if (temp.y > 70)
-      {      reset(f180);      set(f182);      set.view(ego, View105);      temp.y = 164;      ignore.objs(ego);      set.priority(ego, 15);      set(keep.cycling);      set(done1);      temp.step = 3;      move.obj.v(ego, temp.x, temp.y, temp.step, done3);      }    else
-      {      reset(f180);      set(f182);      set(done6);      set.view(ego, View105);      temp.y = 164;      ignore.objs(ego);      set.priority(ego, 15);      set(keep.cycling);      set(done1);      temp.step = 3;      move.obj.v(ego, temp.x, temp.y, temp.step, done2);      }    }  }if (isset(done2))
-  {  reset(done2);  stop.sound();  erase(ego);  if (isset(f182) &&       !isset(done6))
+      {      reset(f180);      set(f182);      set.view(ego, View105);      temp.y = 164;      ignore.objs(ego);      set.priority(ego, 15);      set(keep.cycling);      set(lf0);      temp.step = 3;      move.obj.v(ego, temp.x, temp.y, temp.step, lf2);      }    else
+      {      reset(f180);      set(f182);      set(lf5);      set.view(ego, View105);      temp.y = 164;      ignore.objs(ego);      set.priority(ego, 15);      set(keep.cycling);      set(lf0);      temp.step = 3;      move.obj.v(ego, temp.x, temp.y, temp.step, lf1);      }    }  }if (isset(lf1))
+  {  reset(lf1);  stop.sound();  erase(ego);  if (isset(f182) &&       !isset(lf5))
     {    print("You should be more careful before trying that next time!");    }  else
-    {    print("I can see you need a little practice climbing rope!");    }  set(certain.death);  }if (isset(done3))
-  {  reset(done1);  reset(done3);  reset(keep.cycling);  reset(f182);  release.priority(ego);  stop.sound();  set.view(ego, View93);  }if (drown.swim == 2 &&     !isset(done4))
-  {  set(done4);  timer.1 = 250;  }--timer.1;if (timer.1 == 1 &&     isset(done4))
-  {  erase(ego);  print("Your arms are like lead... from swimming.  You find it impossible... "        "to swim any longer.  You sink to the bottom... of the well....");  set(certain.death);  }if (!isset(f180) &&     !isset(done1))
+    {    print("I can see you need a little practice climbing rope!");    }  set(certain.death);  }if (isset(lf2))
+  {  reset(lf0);  reset(lf2);  reset(keep.cycling);  reset(f182);  release.priority(ego);  stop.sound();  set.view(ego, View93);  }if (drown.swim == 2 &&     !isset(lf3))
+  {  set(lf3);  lv0 = 250;  }--lv0;if (lv0 == 1 &&     isset(lf3))
+  {  erase(ego);  print("Your arms are like lead... from swimming.  You find it impossible... "        "to swim any longer.  You sink to the bottom... of the well....");  set(certain.death);  }if (!isset(f180) &&     !isset(lf0))
   {  if ((said("climb", "rope") ||       said("a", "rope")))
     {    if (!isset(f179) &&         !isset(f177))
       {      print("The rope is out of reach.");      }    if (isset(f179))
-      {      erase(ego);      drown.swim = 0;      reset(keep.cycling);      set.view(ego, View74);      position(ego, 81, 113);      set.priority(ego, 15);      draw(ego);      move.obj(ego, 81, 113, 0, script.done);      set(f180);      reset(done4);      }    if (isset(f177) &&         !isset(f181))
-      {      erase(ego);      drown.swim = 0;      reset(keep.cycling);      set.view(ego, View74);      position(ego, 81, 113);      set.priority(ego, 15);      draw(ego);      move.obj(ego, 81, 113, 0, script.done);      set(f180);      reset(done4);      }    if (isset(f181))
-      {      start.update(o1);      erase(o1);      set.view(o1, View16);      set.view(ego, View74);      position(o1, 78, 150);      position(ego, 81, 113);      set.cel(o1, 0);      draw(o1);      stop.update(o1);      set.priority(ego, 15);      draw(ego);      move.obj(ego, 81, 113, 0, script.done);      set(f180);      reset(f181);      }    }  if (isset(f181))
+      {      erase(ego);      drown.swim = 0;      reset(keep.cycling);      set.view(ego, View74);      position(ego, 81, 113);      set.priority(ego, 15);      draw(ego);      move.obj(ego, 81, 113, 0, done);      set(f180);      reset(lf3);      }    if (isset(f177) &&         !isset(f181))
+      {      erase(ego);      drown.swim = 0;      reset(keep.cycling);      set.view(ego, View74);      position(ego, 81, 113);      set.priority(ego, 15);      draw(ego);      move.obj(ego, 81, 113, 0, done);      set(f180);      reset(lf3);      }    if (isset(f181))
+      {      start.update(o1);      erase(o1);      set.view(o1, View16);      set.view(ego, View74);      position(o1, 78, 150);      position(ego, 81, 113);      set.cel(o1, 0);      draw(o1);      stop.update(o1);      set.priority(ego, 15);      draw(ego);      move.obj(ego, 81, 113, 0, done);      set(f180);      reset(f181);      }    }  if (isset(f181))
     {    if ((said("enter", "water") ||         said("exit", "bucket") ||         said("enter", "water") ||         said("jump", "water") ||         said("get out", "bucket")))
-      {      start.update(o1);      erase(o1);      set.view(o1, View16);      set.view(ego, View105);      position(o1, 79, 150);      position(ego, 81, 124);      set(keep.cycling);      move.obj(ego, 81, 164, 3, done3);      set.cel(o1, 0);      draw(o1);      stop.update(o1);      set.priority(ego, 15);      draw(ego);      set(f180);      reset(f181);      }    }  }if ((said("climb", "well") ||     said("a", "well")))
+      {      start.update(o1);      erase(o1);      set.view(o1, View16);      set.view(ego, View105);      position(o1, 79, 150);      position(ego, 81, 124);      set(keep.cycling);      move.obj(ego, 81, 164, 3, lf2);      set.cel(o1, 0);      draw(o1);      stop.update(o1);      set.priority(ego, 15);      draw(ego);      set(f180);      reset(f181);      }    }  }if ((said("climb", "well") ||     said("a", "well")))
   {  print("You cannot climb the sides of the well.  They are too steep and "        "slippery.");  }if (said("check", "well"))
   {  print("When you look upwards, you see the top of the well far, far above.");  }if (!isset(have.bucket))
   {  if (said("check", "bucket"))

@@ -1,9 +1,9 @@
 if (isset(newRoom))
   {  ignore.horizon(ego);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound5);  load.view(View105);  draw(ego);  show.pic();  }if (isset(egoHitSpecial))
   {  ignore.blocks(ego);  set(f199);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  get.posn(ego, temp.x, temp.y);  temp.y  += 30;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  }if (!isset(done1) &&     isset(f199) &&     !isset(done2))
-  {  sound(Sound5, stun.done5);  set(done2);  }if (isset(done1))
-  {  erase(ego);  reset(f199);  reset(done1);  stop.sound();  print("You'll have to keep yourself out of the clouds!");  set(certain.death);  }if (said("check", "tree"))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  get.posn(ego, temp.x, temp.y);  temp.y  += 30;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  }if (!isset(lf0) &&     isset(f199) &&     !isset(lf1))
+  {  sound(Sound5, f159);  set(lf1);  }if (isset(lf0))
+  {  erase(ego);  reset(f199);  reset(lf0);  stop.sound();  print("You'll have to keep yourself out of the clouds!");  set(certain.death);  }if (said("check", "tree"))
   {  print("These are very unusual looking trees.");  }else
   {  if (said("check", "anyword"))
     {    print("You are in the Land of the Clouds.  It is rumored that a giant lives "          "up here.");    }  }if (edgeEgoHit == RIGHT_EDGE)

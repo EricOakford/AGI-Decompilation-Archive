@@ -1,31 +1,31 @@
 if (isset(newRoom))
   {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(42);  load.logics(lgc.swim);  call(lgc.swim);  ignore.blocks(ego);  if (v83 <= 0)
     {    load.view(View27);    animate.obj(o1);    set.view(o1, View27);    position(o1, 34, 104);    observe.blocks(o1);    wander(o1);    load.view(View29);    animate.obj(o2);    set.view(o2, View29);    position(o2, 39, 118);    ignore.objs(o2);    load.view(View28);    animate.obj(o3);    set.view(o3, View28);    position(o3, 39, 118);    ignore.objs(o3);    }  if (v83 == 1 &&       v85 != 2)
-    {    set(done1);    load.view(View29);    animate.obj(o2);    set.view(o2, View29);    position(o2, 39, 118);    }  if (v83 == 2 &&       v85 != 1)
-    {    set(done2);    load.view(View28);    animate.obj(o3);    set.view(o3, View28);    position(o3, 39, 118);    }  if (v83 <= 0)
-    {    draw(o1);    set(done4);    }  if (isset(done2))
-    {    draw(o3);    stop.update(o3);    }  if (isset(done1))
+    {    set(lf0);    load.view(View29);    animate.obj(o2);    set.view(o2, View29);    position(o2, 39, 118);    }  if (v83 == 2 &&       v85 != 1)
+    {    set(lf1);    load.view(View28);    animate.obj(o3);    set.view(o3, View28);    position(o3, 39, 118);    }  if (v83 <= 0)
+    {    draw(o1);    set(lf3);    }  if (isset(lf1))
+    {    draw(o3);    stop.update(o3);    }  if (isset(lf0))
     {    draw(o2);    stop.update(o2);    }  set(f68);  draw(ego);  show.pic();  }if (said("check", "building"))
-  {  print("The gnome's lean-to doesn't look very sturdy.");  }if (isset(done4) &&     !isset(done5))
-  {  print("You see a crotchety old gnome pacing around his lean-to.");  set(done5);  }if (isset(done4))
-  {  distance(ego, o1, work);  if (isset(done3))
+  {  print("The gnome's lean-to doesn't look very sturdy.");  }if (isset(lf3) &&     !isset(lf4))
+  {  print("You see a crotchety old gnome pacing around his lean-to.");  set(lf4);  }if (isset(lf3))
+  {  distance(ego, o1, work);  if (isset(lf2))
     {    if ((said("speak", "dwarf") ||         said("hello") ||         said("say", "hello")))
       {      if (work < 50)
         {        print("You still haven't guessed my name!");        goto(Label1);        }      else
-        {        print("The gnome can't hear you from there.");        goto(Label1);        }      }    }  if (!isset(done3))
+        {        print("The gnome can't hear you from there.");        goto(Label1);        }      }    }  if (!isset(lf2))
     {    if ((said("speak", "dwarf") ||         said("hello") ||         said("say", "hello")))
       {      if (work < 50)
-        {        set(done3);        print("The old gnome tells you he has something that may be very useful "              "to you.  Your task is to guess his name in three guesses and his "              "gift will be yours.  Good luck!  What is your first guess?");        goto(Label1);        }      else
+        {        set(lf2);        print("The old gnome tells you he has something that may be very useful "              "to you.  Your task is to guess his name in three guesses and his "              "gift will be yours.  Good luck!  What is your first guess?");        goto(Label1);        }      else
         {        print("The gnome can't hear you from there.");        goto(Label1);        }      }    }  if (said("check", "dwarf"))
     {    if (work < 80)
       {      print("The gnome is old and bent under the weight of years, but a playful "            "wisdom still brightens his eyes.");      goto(Label1);      }    else
       {      print("You should get a little closer.");      goto(Label1);      }    }  if (said("kill", "dwarf"))
-    {    print("It would be unwise to kill a gnome.");    goto(Label1);    }  }if (isset(done3))
+    {    print("It would be unwise to kill a gnome.");    goto(Label1);    }  }if (isset(lf2))
   {  if (said("rumpelstiltskin") &&       v84 != 2)
     {    print("That is very close but not quite right!");    ++v84;    goto(Label1);    }  if (said("nikstlitselpmur") &&       v84 != 2)
     {    print("You have the right idea, but your thinking is just a little bit off.");    ++v84;    goto(Label1);    }  if (said("mikel") &&       v84 != 2)
     {    print("What do you think I am, a car?  This also won't get you a raise.  "          "Nice try.");    ++v84;    goto(Label1);    }  if (said("ifnkovhgroghprm"))
-    {    erase(o1);    reset(done3);    reset(done4);    draw(o2);    set(done1);    stop.update(o2);    v83 = 1;    print("That's right!!!  You've guessed it!!  Here are some magic beans for "          "your outstanding accomplishment!");    if (v84 <= 0)
+    {    erase(o1);    reset(lf2);    reset(lf3);    draw(o2);    set(lf0);    stop.update(o2);    v83 = 1;    print("That's right!!!  You've guessed it!!  Here are some magic beans for "          "your outstanding accomplishment!");    if (v84 <= 0)
       {      currentScore  += 5;      }    if (v84 == 1)
       {      currentScore  += 4;      }    if (v84 == 2)
       {      currentScore  += 3;      }    goto(Label1);    }  if (v84 <= 0)
@@ -34,28 +34,28 @@ if (isset(newRoom))
     {    if ((said("anyword") ||         said("anyword", "anyword")))
       {      accept.input();      print("You know that's not right!");      print("What is your next guess?");      ++v84;      goto(Label1);      }    }  if (v84 == 2)
     {    if ((said("anyword") ||         said("anyword", "anyword")))
-      {      accept.input();      erase(o1);      reset(done3);      reset(done4);      draw(o3);      set(done2);      stop.update(o3);      v83 = 2;      print("You didn't guess the gnome's name, but he left you a gold key "            "anyway.  Better luck next time!");      v84 = 3;      goto(Label1);      }    }  }if (!isset(done4))
+      {      accept.input();      erase(o1);      reset(lf2);      reset(lf3);      draw(o3);      set(lf1);      stop.update(o3);      v83 = 2;      print("You didn't guess the gnome's name, but he left you a gold key "            "anyway.  Better luck next time!");      v84 = 3;      goto(Label1);      }    }  }if (!isset(lf3))
   {  if (said("anyword", "dwarf"))
-    {    print("There is no gnome here.");    }  if (isset(done1))
+    {    print("There is no gnome here.");    }  if (isset(lf0))
     {    distance(ego, o2, dist.to.obj);    if (said("check", "bean"))
       {      if (dist.to.obj > 40)
         {        print("That's too far away.");        }      else
         {        print("They look like beans.  Interesting.");        }      }    if (said("acquire", "bean"))
       {      if (dist.to.obj > 20)
         {        print("That's too far away.");        }      else
-        {        print("Being careful that you get every one of them, you place the "              "beans in your pocket.");        reset(done1);        start.update(o2);        erase(o2);        set(have.beans);        get("beans");        v85 = 2;        currentScore  += 4;        }      }    }  if (isset(done2))
+        {        print("Being careful that you get every one of them, you place the "              "beans in your pocket.");        reset(lf0);        start.update(o2);        erase(o2);        set(have.beans);        get("beans");        v85 = 2;        currentScore  += 4;        }      }    }  if (isset(lf1))
     {    distance(ego, o3, v71);    if (said("check", "gold key"))
       {      if (v71 > 40)
         {        print("That's too far away.");        }      else
         {        print("It is a heavy, gold, skeleton key.");        }      }    if (said("acquire", "gold key"))
       {      if (v71 > 20)
         {        print("That's too far away.");        }      else
-        {        print("It is heavy and cold.");        reset(done2);        start.update(o3);        erase(o3);        set(have.gold.key);        get("key");        v85 = 1;        currentScore  += 3;        }      }    }  }if (!isset(done1) &&     !isset(have.beans))
+        {        print("It is heavy and cold.");        reset(lf1);        start.update(o3);        erase(o3);        set(have.gold.key);        get("key");        v85 = 1;        currentScore  += 3;        }      }    }  }if (!isset(lf0) &&     !isset(have.beans))
   {  if (said("anyword", "bean"))
-    {    print("There are no beans here.");    }  }if (!isset(done2) &&     !isset(have.gold.key))
+    {    print("There are no beans here.");    }  }if (!isset(lf1) &&     !isset(have.gold.key))
   {  if (said("anyword", "gold key"))
-    {    print("The key to your problems is elsewhere.");    }  }if (isset(onWater) &&     !isset(done6))
-  {  set(done6);  print("You slip down the bank into the river far below.  Your cries for help "        "are not heard.");  }if (drown.swim <= 0 &&     isset(onWater))
+    {    print("The key to your problems is elsewhere.");    }  }if (isset(onWater) &&     !isset(lf5))
+  {  set(lf5);  print("You slip down the bank into the river far below.  Your cries for help "        "are not heard.");  }if (drown.swim <= 0 &&     isset(onWater))
   {  delta.x = 255;  if (posn(ego, 0, 34, 34, 67))
     {    delta.x = 6;    delta.y = 54;    }  if (delta.x == 255)
     {    delta.x = 0;    }  else

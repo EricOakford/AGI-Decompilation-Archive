@@ -8,8 +8,8 @@ if (isset(newRoom))
       {      position(ego, 2, 59);      }    else
       {      position(ego, 109, 66);      }    }  if (previousRoom == 16)
     {    if (posn(ego, 0, 164, 88, 167))
-      {      position(ego, 88, 165);      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wandered.off))
-  {  reset(goat.wandered.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (!isset(onWater))
+      {      position(ego, 88, 165);      }    }  ignore.blocks(ego);  draw(ego);  show.pic();  }if (isset(goat.wanders.off))
+  {  reset(goat.wanders.off);  print("It seems the old goat has wandered off by himself and is no longer "        "following you.");  }if (!isset(onWater))
   {  if ((posn(ego, 32, 103, 103, 123) ||       posn(ego, 0, 96, 58, 108) ||       posn(ego, 34, 87, 68, 97) ||       posn(ego, 13, 88, 37, 97)))
     {    set(onWater);    set(f134);    }  }if (said("check", "lake"))
   {  print("This is a clear mountain lake with some steep cliffs surrounding it.");  }if (!isset(have.water) &&     !isset(onWater) &&     !isset(drank.water))
@@ -36,7 +36,7 @@ if (isset(newRoom))
     {    delta.x = 0;    }  else
     {    get.posn(ego, temp.x, temp.y);    delta.x -= temp.x;    delta.y -= temp.y;    set(f134);    }  }if (edgeEgoHit != NOT_HIT)
   {  if (isset(f66))
-    {    reset(f66);    reset(goat.following);    set(goat.gone);    set(goat.wandered.off);    }  }if (edgeEgoHit == TOP_EDGE)
+    {    reset(f66);    reset(goat.following);    set(goat.gone);    set(goat.wanders.off);    }  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic32);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic24);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic18);  }if (edgeEgoHit == BOTTOM_EDGE)

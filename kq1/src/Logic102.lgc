@@ -1,152 +1,0 @@
-if (!isset(haveInput))
-  {  goto(Label1);  }if (isset(haveMatch))
-  {  goto(Label1);  }if (isset(haveInput) &&     unknownWordNum > 0)
-  {  if (unknownWordNum == 1)
-    {    print("I don't understand \"%w1\".");    }  if (unknownWordNum == 2)
-    {    print("I don't understand \"%w2\".");    }  if (unknownWordNum == 3)
-    {    print("I don't understand \"%w3\".");    }  reset(haveInput);  }else
-  {  if ((said("look for", "anyword") ||       said("look for", "anyword", "anyword")))
-    {    print("Well.  Go look for it.");    }  if (!isset(have.dagger) &&       !isset(lost.dagger))
-    {    if (currentRoom != 3 &&         said("acquire", "dagger"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 3 &&         said("check", "dagger"))
-      {      print("You do not have it.");      }    if (said("anyword", "dagger") &&         !said("acquire", "dagger") &&         !said("check", "dagger"))
-      {      print("You do not have it.");      }    }  if (!isset(have.carrot) &&       currentRoom != 15 &&       currentRoom != 16)
-    {    if (said("anyword", "carrot") &&         !said("acquire", "carrot"))
-      {      print("You do not have a carrot.");      }    if (said("acquire", "carrot"))
-      {      print("You will have to find it before you can get it.");      }    }  if (!isset(have.unopened.walnut) &&       !isset(have.opened.walnut))
-    {    if (currentRoom != 30 &&         said("acquire", "gold nut"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 30 &&         said("check", "gold nut"))
-      {      print("You do not have it.");      }    if (said("anyword", "gold nut") &&         !said("acquire", "gold nut") &&         !said("check", "gold nut"))
-      {      print("You do not have it.");      }    }  if (!isset(have.bucket))
-    {    if (currentRoom != 12 &&         said("acquire", "water"))
-      {      print("You have no container for water.");      }    if (currentRoom != 12 &&         said("acquire", "bucket"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 12 &&         (said("check", "bucket") ||         said("climb", "bucket") ||         said("enter", "bucket") ||         said("go down", "bucket")))
-      {      print("You do not have it.");      }    if (said("anyword", "bucket") &&         !said("acquire", "bucket") &&         !said("check", "bucket") &&         !said("climb", "bucket") &&         !said("enter", "bucket") &&         !said("go down", "bucket"))
-      {      print("You do not have it.");      }    }  if (!isset(have.mushroom) &&       currentRoom != 47)
-    {    if (currentRoom != 47 &&         said("acquire", "mushroom"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 47 &&         said("check", "mushroom"))
-      {      print("You do not have it.");      }    if (said("consume", "mushroom"))
-      {      print("You can't eat the mushroom if you don't have it!");      }    if (said("anyword", "mushroom") &&         !said("acquire", "mushroom") &&         !said("check", "mushroom") &&         !said("consume", "mushroom"))
-      {      print("You do not have it.");      }    }  if (!isset(have.ring))
-    {    if (said("acquire", "ring"))
-      {      print("You will have to find it before you can get it.");      }    if (said("anyword", "ring") &&         !said("acquire", "ring"))
-      {      print("You do not have it.");      }    }  if (!isset(have.beans))
-    {    if (currentRoom != 40 &&         said("acquire", "bean"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 40 &&         said("check", "bean"))
-      {      print("You do not have it.");      }    if (said("anyword", "bean") &&         !said("acquire", "bean") &&         !said("check", "bean"))
-      {      print("You do not have it.");      }    }  if (!isset(have.bowl))
-    {    if (currentRoom != 31 &&         currentRoom != 79 &&         said("acquire", "bowl"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 31 &&         currentRoom != 79 &&         said("check", "bowl"))
-      {      print("You do not have any stew.");      }    if (said("fill"))
-      {      print("Fill what?");      }    if (currentRoom != 79 &&         said("consume", "stew"))
-      {      print("You do not have it.");      }    if (said("anyword", "bowl") &&         !said("acquire", "bowl") &&         !said("check", "bowl") &&         !said("fill") &&         !said("consume", "stew"))
-      {      print("You do not have it.");      }    if (said("anyword", "stew") &&         !said("consume", "stew"))
-      {      print("You do not have it.");      }    }  if (!isset(have.pebbles))
-    {    if (currentRoom != 34 &&         said("acquire", "pebbles"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 34 &&         said("check", "pebbles"))
-      {      print("You do not have it.");      }    if (said("anyword", "pebbles") &&         !said("acquire", "pebbles") &&         !said("check", "pebbles"))
-      {      print("You do not have it.");      }    }  if (!isset(have.chest))
-    {    if (currentRoom != 58 &&         (said("acquire", "chest") ||         said("acquire", "coin")))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 58 &&         (said("check", "chest") ||         said("check", "coin")))
-      {      print("You do not have it.");      }    if (said("anyword", "chest") &&         !said("check", "chest") &&         !said("acquire", "chest"))
-      {      print("You do not have it.");      }    if (said("anyword", "coin") &&         !said("check", "coin") &&         !said("acquire", "coin"))
-      {      print("You do not have it.");      }    }  if (!isset(have.gold.key))
-    {    if (currentRoom != 40 &&         said("acquire", "gold key"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 40 &&         said("check", "gold key"))
-      {      print("You do not have it.");      }    if (said("anyword", "gold key") &&         !said("acquire", "gold key") &&         !said("check", "gold key"))
-      {      print("You do not have it.");      }    }  if (!isset(have.note))
-    {    if (currentRoom != 65 &&         said("acquire", "note"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 65 &&         said("check", "note"))
-      {      print("You do not have it.");      }    if (said("anyword", "note") &&         !said("acquire", "note") &&         !said("check", "note"))
-      {      print("You do not have it.");      }    }  if (!isset(have.cheese))
-    {    if (currentRoom != 65 &&         said("acquire", "cheese"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 65 &&         said("check", "cheese"))
-      {      print("You do not have it.");      }    if (said("anyword", "cheese") &&         !said("acquire", "cheese") &&         !said("check", "cheese"))
-      {      print("You do not have it.");      }    }  if (!isset(have.clover))
-    {    if (currentRoom != 24 &&         said("acquire", "clover"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 24 &&         said("check", "clover"))
-      {      print("You do not have it.");      }    if (said("anyword", "clover") &&         !said("acquire", "clover") &&         !said("check", "clover"))
-      {      print("You do not have it.");      }    }  if (!isset(have.sling))
-    {    if (currentRoom != 62 &&         said("acquire", "sling"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 62 &&         said("check", "sling"))
-      {      print("You do not have it.");      }    if (said("anyword", "sling") &&         !said("acquire", "sling") &&         !said("check", "sling"))
-      {      print("You do not have it.");      }    }  if (!isset(have.shield))
-    {    if (currentRoom != 77 &&         said("acquire", "shield"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 77 &&         said("check", "shield"))
-      {      print("You do not have it.");      }    if (said("anyword", "shield") &&         !said("acquire", "shield") &&         !said("check", "shield"))
-      {      print("You do not have it.");      }    }  if (!isset(have.sceptre))
-    {    if (currentRoom != 77 &&         said("acquire", "sceptre"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 77 &&         said("check", "sceptre"))
-      {      print("You do not have it.");      }    if (said("anyword", "sceptre") &&         !said("acquire", "sceptre") &&         !said("check", "sceptre"))
-      {      print("You do not have it.");      }    }  if (!isset(have.pouch))
-    {    if (currentRoom != 6 &&         said("acquire", "bag"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 6 &&         said("check", "bag"))
-      {      print("You do not have it.");      }    if (said("anyword", "bag") &&         !said("acquire", "bag") &&         !said("check", "bag"))
-      {      print("You do not have it.");      }    }  if (!isset(have.diamonds))
-    {    if (currentRoom != 6 &&         said("acquire", "diamond"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 6 &&         said("check", "diamond"))
-      {      print("You do not have it.");      }    if (said("anyword", "diamond") &&         !said("acquire", "diamond") &&         !said("check", "diamond"))
-      {      print("You do not have it.");      }    }  if (!isset(have.egg))
-    {    if (currentRoom != 63 &&         said("acquire", "egg"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 63 &&         said("check", "egg"))
-      {      print("You do not have it.");      }    if (said("anyword", "egg") &&         !said("acquire", "egg") &&         !said("check", "egg"))
-      {      print("You do not have it.");      }    }  if (!isset(have.fiddle))
-    {    if (currentRoom != 79 &&         said("acquire", "fiddle"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 79 &&         said("check", "fiddle"))
-      {      print("You do not have it.");      }    if (said("anyword", "fiddle") &&         !said("acquire", "fiddle") &&         !said("check", "fiddle"))
-      {      print("You do not have it.");      }    }  if (!isset(have.mirror))
-    {    if (currentRoom != 51 &&         said("acquire", "mirror"))
-      {      print("You will have to find it before you can get it.");      }    if (currentRoom != 51 &&         said("check", "mirror"))
-      {      print("You do not have it.");      }    if (said("anyword", "mirror") &&         !said("acquire", "mirror") &&         !said("check", "mirror"))
-      {      print("You do not have it.");      }    }  if (isset(have.fiddle))
-    {    if (said("play", "fiddle"))
-      {      print("You can't do that--at least not now!");      }    }  if (said("play", "anyword"))
-    {    print("You have better things to do than to play all day.");    }  if (said("use", "ax"))
-    {    print("You do not have it.");    }  if (said("use", "anyword"))
-    {    print("What do you wish to do with it???");    }  if (said("anyword", "dwarf"))
-    {    print("There is no \"%w2\" here.");    }  else
-    {    if (said("anyword", "fairy"))
-      {      print("There is no \"%w2\" here.");      }    else
-      {      if (said("check"))
-        {        print("You need to be more specific.");        }      if (said("check", "river"))
-        {        print("The stream may not be safe to cross.");        }      if (said("check", "room"))
-        {        print("You need to be more specific.");        }      if (said("check", "door"))
-        {        print("There is no door here.");        }      if (!isset(have.water) &&           said("check", "water"))
-        {        print("You do not have any water.");        }      if (said("check", "tree"))
-        {        if ((currentRoom < 49 ||             currentRoom == 56 ||             currentRoom == 57 ||             currentRoom == 58 ||             currentRoom == 59 ||             currentRoom == 60 ||             currentRoom == 61 ||             currentRoom == 69))
-          {          random(1, 3, v112);          if (v112 == 1)
-            {            print("This is a very beautiful tree.");            }          if (v112 == 2)
-            {            print("This is just a normal tree, but very pretty.");            }          if (v112 == 3)
-            {            print("You admire the beauty of the tree.");            }          }        else
-          {          print("There is no \"%w2\" here to look at.");          }        }      if (said("check", "boulder"))
-        {        if (currentRoom < 49)
-          {          random(1, 3, v113);          if (v113 == 1)
-            {            print("This is a very nice looking rock.");            }          if (v113 == 2)
-            {            print("There is nothing extraordinary about this rock.");            }          if (v113 == 3)
-            {            print("This is your ordinary rock.");            }          }        else
-          {          print("There is no \"%w2\" here to look at.");          }        }      if ((said("check", "anyword") ||           said("look around")))
-        {        print("You see nothing special.");        }      if (said("acquire", "anyword") &&           !said("acquire"))
-        {        print("You cannot get the \"%w2\". At least not now!");        }      if (said("drop", "anyword"))
-        {        print("There is no reason to do that.");        }      if (said("consume", "anyword"))
-        {        if ((said("consume", "dwarf") ||             said("consume", "fairy")))
-          {          print("You can't do that.");          }        else
-          {          print("The \"%w2\" doesn't appeal just now.");          }        }      if (said("acquire"))
-        {        print("Just say what you wish to get.");        }      if (said("climb"))
-        {        print("What would you like to climb?");        }      if (said("climb", "anyword"))
-        {        print("No. That would just waste time.");        }      if (said("enter", "anyword"))
-        {        print("You can try to go there.");        }      if (said("feed", "anyword"))
-        {        print("That would be inappropriate at this time.");        }      if (said("hello", "anyword"))
-        {        print("Hello.\"");        }      if ((said("say", "hello") ||           said("hello")))
-        {        print("There is nobody here but you!");        }      else
-        {        if (said("say", "anyword"))
-          {          print("OK. \"%w2\"");          }        }      if (said("find", "dwarf"))
-        {        print("You will have to find him yourself.");        }      else
-        {        if (said("find", "fairy"))
-          {          print("You will have to find her yourself.");          }        else
-          {          if (said("find", "anyword"))
-            {            print("You will have to find it yourself.");            }          }        }      if (said("get on", "anyword"))
-        {        print("Not right now!");        }      if ((said("speak", "elf") ||           said("speak", "dwarf") ||           said("speak", "dwarf") ||           said("speak", "witch") ||           said("speak", "wolf") ||           said("speak", "fairy") ||           said("speak", "big bird") ||           said("speak", "goat") ||           said("speak", "troll") ||           said("speak", "dwarf") ||           said("speak", "dragon") ||           said("speak", "giant") ||           said("speak", "rat") ||           said("speak", "leprechaun") ||           said("speak", "king") ||           said("speak", "dwarf") ||           said("speak", "dwarf") ||           said("speak", "fairy")))
-        {        print("There is no \"%w2\" here.");        }      else
-        {        if (said("speak", "anyword"))
-          {          print("You get no response from the \"%w2\".");          }        if (isset(haveMatch))
-          {          goto(Label1);          }        print("You can't do that--at least not now!");        }      }    }  }Label1:return();[ Messages#message 1 "You see nothing special."#message 2 "You cannot get the \"%w2\". At least not now!"#message 3 "There is no reason to do that."#message 4 "The \"%w2\" doesn't appeal just now."#message 5 "No. That would just waste time."#message 6 "You can try to go there."#message 7 "That would be inappropriate at this time."#message 8 "Hello.\""#message 9 "OK. \"%w2\""#message 10 "You will have to find him yourself."#message 11 "You will have to find her yourself."#message 12 "You will have to find it yourself."#message 13 "You need to be more specific."#message 14 "There is no \"%w2\" here."#message 15 "What do you wish to do with it???"#message 16 "You have no container for water."#message 17 "You can't eat the mushroom if you don't have it!"#message 18 "You do not have a carrot."#message 19 "You can't do that--at least not now!"#message 20 "Not right now!"#message 21 "There is nobody here but you!"#message 22 "You can't do that."#message 23 "Just say what you wish to get."#message 24 "You get no response from the \"%w2\"."#message 25 "I don't understand \"%w1\"."#message 26 "I don't understand \"%w2\"."#message 27 "I don't understand \"%w3\"."#message 28 "There is no \"%w2\" here."#message 29 "Fill what?"#message 30 "You do not have any stew."#message 31 "You will have to find it before you can get it."#message 32 "You do not have it."#message 33 "You have better things to do than to play all day."#message 34 "What would you like to climb?"#message 35 "Well.  Go look for it."#message 36 "This is a very beautiful tree."#message 37 "This is just a normal tree, but very pretty."#message 38 "You admire the beauty of the tree."#message 39 "This is a very nice looking rock."#message 40 "There is nothing extraordinary about this rock."#message 41 "This is your ordinary rock."#message 42 "There is no \"%w2\" here to look at."#message 43 "You need to be more specific."#message 44 "You do not have any water."#message 45 "There is no door here."#message 46 "The stream may not be safe to cross."

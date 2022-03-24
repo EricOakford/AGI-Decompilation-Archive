@@ -3,10 +3,10 @@ if (isset(newRoom))
     {    get.posn(ego, temp.x, temp.y);    if (temp.y > 154)
       {      position(ego, 150, 153);      }    }  draw(ego);  show.pic();  }if (isset(egoHitSpecial) &&     posn(ego, 0, 0, 159, 83))
   {  set(f199);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  get.posn(ego, temp.x, temp.y);  temp.y  += 40;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  }if (isset(egoHitSpecial) &&     posn(ego, 0, 84, 159, 167))
-  {  set(f199);  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, temp.x, temp.y);  get.priority(ego, timer.1);  set.priority.v(ego, timer.1);  temp.y  += 9;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, done1);  }if (!isset(done1) &&     isset(f199) &&     !isset(done2))
-  {  sound(Sound5, stun.done5);  set(done2);  }if (isset(done1))
-  {  erase(ego);  reset(f199);  reset(done1);  stop.sound();  print("You should know you can't walk on clouds.");  set(certain.death);  }if (said("check", "blossom"))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  get.posn(ego, temp.x, temp.y);  temp.y  += 40;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  }if (isset(egoHitSpecial) &&     posn(ego, 0, 84, 159, 167))
+  {  set(f199);  set(f95);  program.control();  stop.cycling(ego);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y  += 9;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  }if (!isset(lf0) &&     isset(f199) &&     !isset(lf1))
+  {  sound(Sound5, f159);  set(lf1);  }if (isset(lf0))
+  {  erase(ego);  reset(f199);  reset(lf0);  stop.sound();  print("You should know you can't walk on clouds.");  set(certain.death);  }if (said("check", "blossom"))
   {  print("These flowers look different than any you have ever seen before.");  }else
   {  if (said("check", "anyword"))
     {    print("You are in the Land of the Clouds.  It is rumored that a giant lives "          "up here.");    }  }if (edgeEgoHit == RIGHT_EDGE)

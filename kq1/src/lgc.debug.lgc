@@ -1,19 +1,1 @@
-if (said("quit"))
-  {  stop.sound();  quit(0);  }if (said("tp"))
-  {  get.num("new room: ", v78);  new.room.v(v78);  }if (said("pos"))
-  {  get.num("x: ", v78);  get.num("y: ", v79);  erase(ego);  position.v(ego, v78, v79);  draw(ego);  }if (said("acquire", "object"))
-  {  get.num("object number: ", v78);  get.v(v78);  }if (said("set", "var"))
-  {  get.num("var number: ", v78);  get.num("var value: ", v79);  *v78 = v79;  }if (said("object"))
-  {  get.num("object #: ", v78);  obj.status.v(v78);  }if (controller(c16))
-  {  show.pri.screen();  }if (said("show", "var"))
-  {  get.num("var number: ", v73);  v72 = *v73;  print("var %v73: %v72");  }if (said("show", "banner"))
-  {  get.num("flag number: ", v73);  if (issetv(v73))
-    {    print("flag %v73 is set");    }  else
-    {    print("flag %v73 is not set");    }  }if (said("reset", "banner"))
-  {  get.num("flag number: ", v73);  reset.v(v73);  }if (said("set", "banner"))
-  {  get.num("flag number: ", v73);  set.v(v73);  }if (controller(c9))
-  {  show.mem();  }if (unknownWordNum == 1)
-  {  log("%m12%w1");  }if (unknownWordNum == 2)
-  {  log("%m12%w2");  }if (unknownWordNum == 3)
-  {  log("%m12%w3");  }if (unknownWordNum == 0 &&     isset(haveInput) &&     !isset(haveMatch))
-  {  log("No response to input.");  }return();[ Messages#message 1 "new room: "#message 2 "x: "#message 3 "y: "#message 4 "object number: "#message 5 "var number: "#message 6 "var value: "#message 7 "object #: "#message 8 "var %v73: %v72"#message 9 "flag number: "#message 10 "flag %v73 is set"#message 11 "flag %v73 is not set"#message 12 "Word not known: "#message 13 "%m12%w1"#message 14 "%m12%w2"#message 15 "%m12%w3"#message 16 "No response to input."
+if (said("quit"))  {  stop.sound();  quit(0);  }if (said("tp"))  {  get.num("new room: ", debug.0);  new.room.v(debug.0);  }if (said("pos"))  {  get.num("x: ", debug.0);  get.num("y: ", debug.1);  erase(ego);  position.v(ego, debug.0, debug.1);  draw(ego);  }if (said("acquire", "object"))  {  get.num("object number: ", debug.0);  get.v(debug.0);  }if (said("set", "var"))  {  get.num("var number: ", debug.0);  get.num("var value: ", debug.1);  *debug.0 = debug.1;  }if (said("object"))  {  get.num("object #: ", debug.0);  obj.status.v(debug.0);  }if (controller(c.show.priority))  {  show.pri.screen();  }if (said("show", "var"))  {  get.num("var number: ", debug.4);  debug.3 = *debug.4;  print("var %v73: %v72");  }if (said("show", "banner"))  {  get.num("flag number: ", debug.4);  if (issetv(debug.4))    {    print("flag %v73 is set");    }  else    {    print("flag %v73 is not set");    }  }if (said("reset", "banner"))  {  get.num("flag number: ", debug.4);  reset.v(debug.4);  }if (said("set", "banner"))  {  get.num("flag number: ", debug.4);  set.v(debug.4);  }if (controller(c.show.mem))  {  show.mem();  }if (unknownWordNum == 1)  {  log("%m12%w1");  }if (unknownWordNum == 2)  {  log("%m12%w2");  }if (unknownWordNum == 3)  {  log("%m12%w3");  }if (unknownWordNum == 0 && haveInput && !haveMatch)  {  log("No response to input.");  }return();[ Messages#message 1 "new room: "#message 2 "x: "#message 3 "y: "#message 4 "object number: "#message 5 "var number: "#message 6 "var value: "#message 7 "object #: "#message 8 "var %v73: %v72"#message 9 "flag number: "#message 10 "flag %v73 is set"#message 11 "flag %v73 is not set"#message 12 "Word not known: "#message 13 "%m12%w1"#message 14 "%m12%w2"#message 15 "%m12%w3"#message 16 "No response to input."

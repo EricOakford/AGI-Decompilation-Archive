@@ -26,7 +26,7 @@ if (isset(newRoom))
   {  if (posn(ego, 100, 111, 133, 136))
     {    print("Perhaps you should go inside the house for a better look.");    }  else
     {    print("You are not close enough.");    }  }if (posn(ego, 126, 119, 128, 127))
-  {  new.room(rm.cottage);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic79);  }if (edgeEgoHit == TOP_EDGE)
   {  new.room(Logic5);  }if (edgeEgoHit == RIGHT_EDGE)
   {  new.room(Logic45);  }if (edgeEgoHit == LEFT_EDGE)
   {  new.room(Logic43);  }if (edgeEgoHit == BOTTOM_EDGE)

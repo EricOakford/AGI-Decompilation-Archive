@@ -1,9 +1,1 @@
-if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (isset(f142))
-    {    load.view(View91);    set.view(ego, View91);    position(ego, 1, 60);    move.obj(ego, 130, 60, 0, done1);    }  else
-    {    load.view(View89);    set.view(ego, View89);    position(ego, 1, 60);    move.obj(ego, 135, 60, 0, done2);    }  draw(ego);  show.pic();  }if ((said("check", "view") ||     said("check", "clouds") ||     said("check", "room")))
-  {  print("The view is magnificent.");  }if (said("anyword", "witch"))
-  {  print("Now is not the time to irritate the witch.");  }if (said("anyword", "big bird"))
-  {  print("Now is not a good time to bother the bird.");  }if (isset(done1))
-  {  new.room(Logic65);  }if (isset(done2))
-  {  new.room(Logic48);  }return();[ Messages#message 1 "The view is magnificent."#message 2 "Now is not the time to irritate the witch."#message 3 "Now is not a good time to bother the bird."
+#define witch.here f20#define bird.here   f21if (newRoom)  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (witch.catch.ego)    {    load.view(View91);    set.view(ego, View91);    position(ego, 1, 60);    move.obj(ego, 130, 60, 0, witch.here);    }  else    {    load.view(View89);    set.view(ego, View89);    position(ego, 1, 60);    move.obj(ego, 135, 60, 0, bird.here);    }  draw(ego);  show.pic();  }if ((said("check", "view") ||     said("check", "clouds") ||     said("check", "room")))  {  print("The view is magnificent.");  }if (said("anyword", "witch"))  {  print("Now is not the time to irritate the witch.");  }if (said("anyword", "big bird"))  {  print("Now is not a good time to bother the bird.");  }if (witch.here)  {  new.room(Logic65);  }if (bird.here)  {  new.room(Logic48);  }return();[ Messages#message 1 "The view is magnificent."#message 2 "Now is not the time to irritate the witch."#message 3 "Now is not a good time to bother the bird."
