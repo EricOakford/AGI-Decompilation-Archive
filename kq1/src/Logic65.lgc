@@ -5,11 +5,11 @@ if (isset(newRoom))
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 0);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (v87 == 3)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 5);    stop.cycling(o2);    }  if (v87 == 1)
     {    load.view(View40);    animate.obj(o2);    set.view(o2, View40);    position(o2, 33, 76);    set.cel(o2, 5);    stop.cycling(o2);    load.view(View41);    animate.obj(o3);    set.view(o3, View41);    position(o3, 41, 61);    set.priority(o3, 8);    }  if (previousRoom == 80)
-    {    load.view(View105);    load.view(View103);    load.view(View104);    set.view(ego, View105);    ignore.blocks(ego);    position(ego, 80, 45);    set(keep.cycling);    set(lf5);    program.control();    move.obj(ego, 80, 84, 6, lf0);    v81 = 2;    }  if (previousRoom == 28)
-    {    position(ego, 49, 163);    }  if (!isset(protected.spell) &&       v81 != 3 &&       previousRoom != 80 &&       !isset(ego.invisible))
-    {    if (v81 == 2)
+    {    load.view(View105);    load.view(View103);    load.view(View104);    set.view(ego, View105);    ignore.blocks(ego);    position(ego, 80, 45);    set(keep.cycling);    set(lf5);    program.control();    move.obj(ego, 80, 84, 6, lf0);    witch.state = 2;    }  if (previousRoom == 28)
+    {    position(ego, 49, 163);    }  if (!isset(protected.spell) &&       witch.state != 3 &&       previousRoom != 80 &&       !isset(ego.invisible))
+    {    if (witch.state == 2)
       {      random(0, 250, work);      if (work < 180)
-        {        load.view(View43);        animate.obj(o4);        set.view(o4, View43);        lv0 = 250;        lv1 = 3;        }      }    }  if (v81 == 1)
+        {        load.view(View43);        animate.obj(o4);        set.view(o4, View43);        lv0 = 250;        lv1 = 3;        }      }    }  if (witch.state == 1)
     {    if (!isset(protected.spell) &&         !isset(ego.invisible))
       {      set(lf7);      load.view(View43);      animate.obj(o4);      set.view(o4, View43);      position(o4, 26, 120);      }    }  if (!isset(have.note))
     {    draw(o1);    stop.update(o1);    }  draw(o2);  if (v87 == 1)
@@ -18,11 +18,11 @@ if (isset(newRoom))
     {    print("Be thankful that you are invisible or the witch may have stuck "          "around to try and catch you!");    }  if (isset(lf7))
     {    draw(o4);    follow.ego(o4, 10, lf6);    print("Surprise!  Surprise!  The wicked witch is home and now she's after "          "you!");    }  }if (isset(lf7) &&     !isset(lf12))
   {  set(lf12);  sound(m.badguy, done);  }if (isset(goat.following))
-  {  reset(goat.following);  set(goat.gone);  print("As soon as you entered the house the goat ran away.");  currentScore -= 5;  }if (v81 == 3)
+  {  reset(goat.following);  set(goat.gone);  print("As soon as you entered the house the goat ran away.");  currentScore -= 5;  }if (witch.state == 3)
   {  if (said("anyword", "witch"))
     {    print("The witch is dead.");    }  }if (previousRoom == 80)
   {  if (!isset(lf0) &&       !isset(lf13) &&       !isset(lf7))
-    {    sound(s.ego.fall, f198);    set(lf13);    }  }--lv2;if (isset(lf0))
+    {    sound(s.ego.fall, fall.sound.done);    set(lf13);    }  }--lv2;if (isset(lf0))
   {  stop.sound();  set(lf14);  reset(lf0);  observe.blocks(ego);  set.view(ego, View103);  shake.screen(1);  print("OUCH!");  lv2 = 20;  set(keep.cycling);  sound(Sound4, sound.done);  }if (isset(sound.done))
   {  if (lv2 > 0)
     {    reset(sound.done);    sound(Sound4, sound.done);    }  }if (lv2 == 1)
@@ -46,9 +46,9 @@ if (isset(newRoom))
       {      set(lf10);      stop.motion(ego);      print("Rats!  She has cast some spell to keep you from escaping!. The "            "witch remarks, \"Oh, how nice of you to come for dinner (cackle, "            "cackle)\"");      }    if (isset(lf6))
       {      reset(lf6);      print("She pokes and pinches you, then states, \"This one is too scrawny, "            "so it's into the cage until you fatten up (smack, yum)!\"");      reposition.to(ego, 80, 80);      start.motion(ego);      set(lf2);      set(lf5);      }    }  }if (isset(lf1))
   {  if (said("check", "witch"))
-    {    print("This ugly old witch is one of the most hideous sights you have ever "          "seen.  I would never trust her.");    }  distance(ego, o4, dist.to.obj);  if (dist.to.obj < 15)
+    {    print("This ugly old witch is one of the most hideous sights you have ever "          "seen.  I would never trust her.");    }  distance(ego, o4, work.2);  if (work.2 < 15)
     {    if ((said("move", "witch") ||         said("kill", "witch")))
-      {      erase(o4);      print("Courageously, you manage to push the witch into the oven where she "            "flashes and melts away into a harmless blob. Congratulations!");      v81 = 3;      lv0 = 0;      lv1 = 0;      reset(lf9);      reset(lf1);      currentScore  += 7;      }    }  if (dist.to.obj > 14)
+      {      erase(o4);      print("Courageously, you manage to push the witch into the oven where she "            "flashes and melts away into a harmless blob. Congratulations!");      witch.state = 3;      lv0 = 0;      lv1 = 0;      reset(lf9);      reset(lf1);      currentScore  += 7;      }    }  if (work.2 > 14)
     {    if ((said("move", "witch") ||         said("kill", "witch")))
       {      print("You are in no position to do that!");      }    }  if (lv0 == 1 &&       lv1 == 3)
     {    print("The witch mumbles, \"After I get the oven nice and hot, I will be "          "ready to have someone for dinner (giggle).\"");    }  if (lv0 == 1 &&       lv1 == 2)
@@ -59,7 +59,7 @@ if (isset(newRoom))
     {    if (said("move", "witch"))
       {      print("You are in no position to do that!");      }    if (said("kill", "witch"))
       {      print("If I were you, I wouldn't try it!  This witch is mean!");      }    if (said("check", "witch"))
-      {      print("This ugly old witch is one of the most hideous sights you have "            "ever seen.  I would never trust her.");      }    }  }if (v81 != 3)
+      {      print("This ugly old witch is one of the most hideous sights you have "            "ever seen.  I would never trust her.");      }    }  }if (witch.state != 3)
   {  if (!isset(lf9) &&       !isset(lf7))
     {    if (said("anyword", "witch"))
       {      print("There is no witch here...RIGHT NOW!!");      }    }  }if ((isset(lf9) ||     isset(lf7)))

@@ -1,10 +1,1 @@
-if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  if (isset(goat.following))
-    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)
-    {    add.to.pic(View62, 0, 0, 107, 131, 0, 0);    }  draw(ego);  show.pic();  }if (said("look around"))
-  {  print("What are you doing that for?  There's nothing here.");  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic38);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic28);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic26);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic22);  }if (isset(goat.following))
-  {  call(lgc.goat);  }return();[ Messages#message 1 "What are you doing that for?  There's nothing here."
+if (newRoom)  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  set.horizon(46);  if (goat.following)    {    load.logics(lgc.goat);    }  if (dead.goat.room == currentRoom)    {    add.to.pic(View62, 0, 0, 107, 131, 0, 0);    }  draw(ego);  show.pic();  }if (said("look around"))  {  print("What are you doing that for?  There's nothing here.");  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic38);  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic28);  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic26);  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic22);  }if (goat.following)  {  call(lgc.goat);  }return();[ Messages#message 1 "What are you doing that for?  There's nothing here."

@@ -17,9 +17,9 @@ if (isset(newRoom))
       {      print("It is a long, long way down....");      }    }  }if ((said("check", "clouds") ||     said("check", "room")))
   {  print("You are in the Land of the Clouds.  It is rumored a giant lives up "        "here.");  }if (isset(egoHitSpecial) &&     !isset(lf1) &&     !posn(ego, 65, 100, 82, 120) &&     !isset(climbing.beanstalk))
   {  set(lf1);  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, f198);  }if (isset(egoHitSpecial) &&     !isset(lf1) &&     posn(ego, 65, 100, 82, 120) &&     isset(ego.invisible))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, fall.sound.done);  }if (isset(egoHitSpecial) &&     !isset(lf1) &&     posn(ego, 65, 100, 82, 120) &&     isset(ego.invisible))
   {  set(lf1);  if (!isset(ego.invisible))
-    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, f198);  }if (isset(lf0))
+    {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  get.posn(ego, temp.x, temp.y);  get.priority(ego, lv0);  set.priority.v(ego, lv0);  temp.y = 165;  temp.step = 4;  move.obj.v(ego, temp.x, temp.y, temp.step, lf0);  sound(s.ego.fall, fall.sound.done);  }if (isset(lf0))
   {  reset(lf0);  erase(ego);  print("Whoops!  You fall toward a distant earth.");  set(certain.death);  }if (isset(egoHitSpecial) &&     posn(ego, 65, 100, 82, 120) &&     !isset(ego.invisible))
   {  if (isset(climbing.beanstalk))
     {    reset(climbing.beanstalk);    erase(ego);    set.view(ego, View0);    position(ego, 85, 112);    draw(ego);    move.obj(ego, 85, 112, 0, done);    goto(Label1);    }  if (!isset(climbing.beanstalk))

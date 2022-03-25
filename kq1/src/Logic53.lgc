@@ -1,15 +1,15 @@
 if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  dist.to.obj = 0;  v71 = 0;  if (previousRoom == 54)
+  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  work.2 = 0;  work.3 = 0;  if (previousRoom == 54)
     {    position(ego, 154, 120);    }  load.view(View1);  load.view(View71);  load.view(View53);  load.view(View85);  load.view(View98);  load.view(View142);  load.sound(m.title);  animate.obj(o14);  set.view(o14, View53);  position(o14, 30, 90);  draw(o14);  stop.cycling(o14);  draw(ego);  show.pic();  if (num.treasures == 3)
-    {    dist.to.obj = 250;    v71 = 1;    }  }if (isset(lf6))
+    {    work.2 = 250;    work.3 = 1;    }  }if (isset(lf6))
   {  if (said("check", "king"))
     {    print("You are the only King here!");    }  }if (isset(f195))
   {  goto(Label2);  }if (said("check", "dwarf"))
   {  print("That man is the King.");  }if (lv0 <= 0)
-  {  --dist.to.obj;  if (dist.to.obj == 1)
-    {    if (v71 > 0)
-      {      --v71;      dist.to.obj = 250;      }    }  if (dist.to.obj == 1 &&       v71 == 0)
-    {    dist.to.obj = 0;    lv0 = 250;    }  }if (lv0 > 0)
+  {  --work.2;  if (work.2 == 1)
+    {    if (work.3 > 0)
+      {      --work.3;      work.2 = 250;      }    }  if (work.2 == 1 &&       work.3 == 0)
+    {    work.2 = 0;    lv0 = 250;    }  }if (lv0 > 0)
   {  --lv0;  if (lv0 == 245)
     {    set.view(ego, View0);    if (isset(ego.invisible))
       {      print("The spell to make you invisible has expired and you are once again "            "visible.");      invisible.timer.1 = 0;      invisible.timer.2 = 0;      reset(ego.invisible);      drop("magic ring");      currentScore -= 3;      reset(have.ring);      }    ignore.blocks(ego);    get.posn(ego, ego.x, ego.y);    if (ego.x < 60 &&         ego.y < 88)
@@ -30,7 +30,7 @@ if (isset(newRoom))
   {  set(lf1);  }else
   {  reset(lf1);  }if (posn(ego, 18, 80, 86, 113))
   {  if (said("check", "king"))
-    {    if (lv0 <= 0 &&         num.treasures != 3 &&         !isset(f126))
+    {    if (lv0 <= 0 &&         num.treasures != 3 &&         !isset(failed.quest))
       {      print("King Edward the Benevolent is a very wise, but elderly monarch.  "            "His frail body is almost lost in the large throne.");      }    if (!isset(lf1) &&         !isset(ego.invisible) &&         num.treasures == 3 &&         lv0 <= 0)
       {      print("The King, though very ill, seems happy to see you.");      }    }  if (said("check", "throne"))
     {    print("The King's throne is made of solid gold, accented with rubies.  It "          "will be yours if you complete your quest.");    }  if ((said("bow", "king") ||       said("bow")))
@@ -45,11 +45,11 @@ if (isset(newRoom))
             {            set(lf5);            get.posn(ego, temp.x, temp.y);            temp.x -= 7;            erase(ego);            stop.motion(ego);            set.view(ego, View71);            set.cel(ego, 0);            position.v(ego, temp.x, temp.y);            lv1 = 2;            cycle.time(ego, lv1);            draw(ego);            end.of.loop(ego, lf2);            set(keep.cycling);            if (!isset(f194))
               {              set(f194);              currentScore  += 3;              }            }          else
             {            print("There is no need to bow again.");            }          }        }      }    }  if (said("speak", "king"))
-    {    if (isset(f60) &&         lv0 <= 0 &&         !isset(f126) &&         num.treasures != 3)
+    {    if (isset(f60) &&         lv0 <= 0 &&         !isset(failed.quest) &&         num.treasures != 3)
       {      print("Go, Sir Graham!  Go and bring me back these treasures!");      }    if (lv0 <= 0 &&         num.treasures == 3)
-      {      print("Welcome back from your quest, Sir Graham.");      }    if (lv0 <= 0 &&         isset(f126))
+      {      print("Welcome back from your quest, Sir Graham.");      }    if (lv0 <= 0 &&         isset(failed.quest))
       {      print("Why, Sir Graham, have you failed me and returned without "            "accomplishing your task?  Go, and complete your quest!!");      set(castle.locked);      }    if (lv0 > 0)
-      {      print("The king cannot talk right now.");      }    if (!isset(f60) &&         lv0 <= 0 &&         !isset(f126) &&         num.treasures != 3)
+      {      print("The king cannot talk right now.");      }    if (!isset(f60) &&         lv0 <= 0 &&         !isset(failed.quest) &&         num.treasures != 3)
       {      set(f60);      set(lf3);      set(castle.locked);      set.text.attribute(WHITE, BLACK);      text.screen();      display(0, 4, "When you speak to King Edward,");      display(1, 10, "he sighs and says,");      display(2, 0, "\"Sir Graham, I am an old man. I fear");      display(3, 0, " my end is near.  I have chosen you to");      display(4, 0, " prove yourself worthy of the throne.");      display(5, 0, "As you know, our kingdom is weak and");      display(6, 0, " poor.  I have knowledge of the");      display(7, 0, " existence of three things that would");      display(8, 0, " make our kingdom wealthy and strong.");      display(9, 0, "Somewhere within our kingdom, there is");      display(10, 0, " a magic mirror that tells the future.");      display(11, 0, " There is a magic shield that will");      display(12, 0, " protect the bearer from mortal harm.");      display(13, 0, " Finally, there is a magic chest that");      display(14, 0, " is always filled with gold coins.");      display(15, 0, "Go, Sir Graham!  Go and bring me");      display(16, 0, " back these treasures.");      display(17, 0, "If you succeed, you will inherit the");      display(18, 0, " throne.\"");      display(22, 5, "Press any key to continue.");      }    }  }if (!posn(ego, 60, 85, 86, 113) &&     !isset(lf1))
   {  if (lv0 <= 0)
     {    if (said("check", "king"))
@@ -67,7 +67,7 @@ if (isset(newRoom))
   {  print("This huge, tapestried room echoes every sound.");  }if ((said("hello") ||     said("say", "hello")))
   {  print("That is no way to try and address King Edward.");  }if (isset(lf2))
   {  reset(lf2);  reset(keep.cycling);  get.posn(ego, temp.x, temp.y);  temp.x  += 7;  erase(ego);  set.loop(ego, 1);  set.view(ego, View0);  position.v(ego, temp.x, temp.y);  lv1 = 1;  cycle.time(ego, lv1);  draw(ego);  start.motion(ego);  print("When you bow to King Edward, his pleased smile warms you.");  if (isset(f194))
-    {    lv0 = 250;    dist.to.obj = 0;    v71 = 0;    }  }if (isset(lf9))
+    {    lv0 = 250;    work.2 = 0;    work.3 = 0;    }  }if (isset(lf9))
   {  reset(lf9);  reverse.loop(o14, done);  }if (isset(lf3))
   {  lastChar = 0;Label1:  if (!have.key())
     {    goto(Label1);    }  reset(lf3);  graphics();  end.of.loop(o14, lf9);  }if (edgeEgoHit == RIGHT_EDGE)

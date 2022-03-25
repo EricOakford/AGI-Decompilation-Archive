@@ -3,12 +3,12 @@ if (isset(newRoom))
     {    position(ego, 75, 26);    }  else
     {    position(ego, 38, 116);    }  if (previousRoom == 51)
     {    if (!isset(f208))
-      {      set(f208);      currentScore  += 2;      }    }  v68 = 250;  v69 = 2;  if (isset(have.bucket) &&       !isset(have.water))
+      {      set(f208);      currentScore  += 2;      }    }  timer.1 = 250;  timer.2 = 2;  if (isset(have.bucket) &&       !isset(have.water))
     {    set(have.water);    get("water");    if (!isset(points.water))
       {      set(points.water);      currentScore  += 2;      }    }  draw(ego);  show.pic();  if (isset(ego.invisible))
-    {    drop("magic ring");    currentScore -= 3;    print("Thrashing around in the water has caused you to lose the magic ring "          "and become visible again.");    reset(have.ring);    reset(ego.invisible);    reset(wearing.ring);    set(lost.ring);    invisible.timer.1 = 0;    invisible.timer.2 = 0;    }  }--v68;if (v68 == 0)
-  {  --v69;  if (v69 > 0)
-    {    v68 = 250;    }  }if (v68 == 0 &&     v69 == 0 &&     !isset(lf2))
+    {    drop("magic ring");    currentScore -= 3;    print("Thrashing around in the water has caused you to lose the magic ring "          "and become visible again.");    reset(have.ring);    reset(ego.invisible);    reset(wearing.ring);    set(lost.ring);    invisible.timer.1 = 0;    invisible.timer.2 = 0;    }  }--timer.1;if (timer.1 == 0)
+  {  --timer.2;  if (timer.2 > 0)
+    {    timer.1 = 250;    }  }if (timer.1 == 0 &&     timer.2 == 0 &&     !isset(lf2))
   {  set(lf2);  set.view(ego, View114);  print("Not even you can hold your breath forever.  The well bottom has become "        "your eternal resting place.");  ignore.blocks(ego);  get.posn(ego, temp.x, temp.y);  if (temp.y < 141)
     {    move.obj(ego, 65, 140, 1, lf1);    }  if (temp.y > 140)
     {    set(lf1);    }  }if (isset(lf1))

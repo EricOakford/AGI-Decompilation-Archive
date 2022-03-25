@@ -18,7 +18,7 @@ if (isset(newRoom))
         {        if (!isset(have.shield) &&             !isset(ego.invisible) &&             !isset(protected.spell))
           {          if ((v86 == 0 ||               v86 == 2))
             {            reset(lf2);            reset(lf3);            set.view(ego, View114);            print("Be a little more careful next time.  This giant is mean!");            wander(o1);            set(certain.death);            }          }        }      }    }  }if (isset(egoHitSpecial))
-  {  set(f199);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
+  {  set(ego.fell);  reset(egoHitSpecial);  program.control();  if (!isset(ego.invisible))
     {    set.view(ego, View105);    }  start.cycling(ego);  set(keep.cycling);  sound(s.ego.fall, sound.done);  erase(ego);  }if (isset(sound.done))
   {  reset(sound.done);  set(lf0);  }if (isset(lf0))
   {  reset(lf0);  print("You know you can't walk on clouds.");  set(certain.death);  }if (said("check", "giant"))
@@ -38,18 +38,18 @@ if (isset(newRoom))
   {  if ((said("acquire", "chest") ||       said("acquire", "chest", "giant")))
     {    if (v86 == 0)
       {      print("The giant is protecting the magic chest.");      }    if (isset(f169))
-      {      print("There is no chest around here to get.");      }    distance(ego, o1, dist.to.obj);    if (v86 == 1)
-      {      if (dist.to.obj > 30)
+      {      print("There is no chest around here to get.");      }    distance(ego, o1, work.2);    if (v86 == 1)
+      {      if (work.2 > 30)
         {        print("There is no way you can get the chest from here!");        }      else
         {        erase(o1);        set.view(o1, View68);        stop.motion(o1);        draw(o1);        print("Very carefully, you slip the magic chest from the sleeping "              "giant's arms.");        set(have.chest);        set(f169);        currentScore  += 8;        get("chest");        ++num.treasures;        v86 = 3;        }      }    distance(ego, o2, work);    if (v86 == 4)
       {      if (work > 30)
         {        print("There is no way you can get the chest from here!");        }      else
         {        erase(o2);        print("It's easy to take a magic chest from a dead giant.");        set(have.chest);        set(f169);        currentScore  += 8;        get("chest");        ++num.treasures;        v86 = 5;        }      }    }  }if (isset(have.sling))
-  {  distance(ego, o1, v71);  if ((said("use", "sling") ||       said("a", "sling")))
+  {  distance(ego, o1, work.3);  if ((said("use", "sling") ||       said("a", "sling")))
     {    if (!isset(have.pebbles))
-      {      print("You need some kind of small rock to use the sling.");      }    if (isset(have.pebbles) &&         v71 < 20)
-      {      print("The giant is to close for the slingshot to be effective.  I would "            "suggest you RUN!");      }    if (isset(have.pebbles) &&         !isset(f169) &&         !isset(ego.invisible) &&         v86 == 0 &&         v71 > 19 &&         !isset(f199))
-      {      reset(lf3);      get.posn(ego, ego.x, ego.y);      position.v(o15, ego.x, ego.y);      erase(ego);      draw(o15);      sound(Sound18, done);      end.of.loop(o15, lf4);      print("You put the pebble in the sling, take careful aim, and luckily hit "            "the giant in the forehead!  He falls down dead.");      reset(have.pebbles);      drop("pebbles");      currentScore -= 1;      }    if (isset(have.pebbles) &&         isset(f169) &&         !isset(ego.invisible) &&         v86 == 2 &&         v71 > 19)
+      {      print("You need some kind of small rock to use the sling.");      }    if (isset(have.pebbles) &&         work.3 < 20)
+      {      print("The giant is to close for the slingshot to be effective.  I would "            "suggest you RUN!");      }    if (isset(have.pebbles) &&         !isset(f169) &&         !isset(ego.invisible) &&         v86 == 0 &&         work.3 > 19 &&         !isset(ego.fell))
+      {      reset(lf3);      get.posn(ego, ego.x, ego.y);      position.v(o15, ego.x, ego.y);      erase(ego);      draw(o15);      sound(Sound18, done);      end.of.loop(o15, lf4);      print("You put the pebble in the sling, take careful aim, and luckily hit "            "the giant in the forehead!  He falls down dead.");      reset(have.pebbles);      drop("pebbles");      currentScore -= 1;      }    if (isset(have.pebbles) &&         isset(f169) &&         !isset(ego.invisible) &&         v86 == 2 &&         work.3 > 19)
       {      reset(lf3);      get.posn(ego, ego.x, ego.y);      position.v(o15, ego.x, ego.y);      erase(ego);      draw(o15);      sound(Sound18, done);      end.of.loop(o15, lf5);      print("You put the pebble in the sling, take careful aim, and luckily hit "            "the giant in the forehead!  He falls down dead.");      reset(have.pebbles);      drop("pebbles");      currentScore -= 1;      }    if (isset(have.pebbles) &&         !isset(f169) &&         isset(ego.invisible))
       {      if ((v86 == 0 ||           v86 == 2))
         {        print("Not when you're invisible!");        }      }    if (isset(have.pebbles))
