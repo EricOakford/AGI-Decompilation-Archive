@@ -1,7 +1,1 @@
-if (isset(newRoom))
-  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 75)
-    {    get.posn(ego, temp.x, temp.y);    temp.x  += 2;    position.v(ego, temp.x, temp.y);    }  if (previousRoom == 73)
-    {    position(ego, 80, 70);    }  draw(ego);  show.pic();  }if (said("check", "cave"))
-  {  print("The further you get from the light, the darker and mustier it becomes.");  }if (posn(ego, 65, 51, 100, 52))
-  {  new.room(Logic73);  }if (posn(ego, 0, 0, 1, 167))
-  {  new.room(Logic75);  }return();[ Messages#message 1 "The further you get from the light, the darker and mustier it becomes."
+if (newRoom)  {  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  if (previousRoom == 75)    {    get.posn(ego, temp.x, temp.y);    temp.x  += 2;    position.v(ego, temp.x, temp.y);    }  if (previousRoom == 73)    {    position(ego, 80, 70);    }  draw(ego);  show.pic();  }if (said("check", "cave"))  {  print("The further you get from the light, the darker and mustier it becomes.");  }if (posn(ego, 65, 51, 100, 52))  {  new.room(Logic73);  }if (posn(ego, 0, 0, 1, 167))  {  new.room(Logic75);  }return();[ Messages#message 1 "The further you get from the light, the darker and mustier it becomes."
