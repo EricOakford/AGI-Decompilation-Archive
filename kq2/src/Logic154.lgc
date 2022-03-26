@@ -1,0 +1,30 @@
+if (!isset(f242) &&     isset(newRoom))
+  {  set(f242);  reset(f60);  if (fairy.spell.timer <= 0 &&       fairy.spell.timer.2 <= 0)
+    {    random(0, 255, work);    if (work < 125)
+      {      set(f243);      load.view(View6);      load.view(View117);      load.sound(Sound33);      animate.obj(o7);      set.view(o7, View6);      set.priority(o7, 15);      ignore.objs(o7);      position(o7, 80, 20);      random(40, 255, v58);      random(0, 2, v59);      }    }  return();  }if (!isset(f60) &&     isset(f243))
+  {  --v58;  if (v58 == 1)
+    {    --v59;    if (!isset(egoHidden) &&         v59 == 0)
+      {      set(f60);      follow.ego(o7, 10, f240);      draw(o7);      print("A beautiful fairy floats down from the sky!");      }    else
+      {      v58 = 250;      }    }  }if (!isset(f239))
+  {  if (isset(f240))
+    {    set(f239);    set(f241);    set.view(o7, View117);    print("The fairy starts to sprinkle fairy dust on you. \"Good King Graham, "          "I am here to help you,\" she says. \"I give you a protective spell "          "against certain evil elements; but beware, for it lasts only a short "          "time.\"");    fairy.spell.timer = 250;    fairy.spell.timer.2 = 75;    v71 = 75;    }  }else
+  {  if (isset(f60))
+    {    follow.ego(o7, 10, f240);    }  }--v71;if (v71 == 1)
+  {  erase(o7);  reset(f60);  reset(f243);  }if (isset(f241) &&     v71 > 0)
+  {  reset(f241);  sound(Sound33, f241);  }if (!isset(haveInput))
+  {  goto(Label1);  }if (!isset(f60) &&     said("check out", "bitch"))
+  {  print("There is no one here! Perhaps you are starting to see things.");  }else
+  {  if ((said("hello", "bitch") ||       said("speak", "bitch") ||       said("say", "hello")))
+    {    if (!isset(f60))
+      {      print("There is no one here! Perhaps you have started talking to "            "yourself.");      }    else
+      {      reset(haveMatch);      }    }  if (!isset(f60) &&       said("anyword", "bitch"))
+    {    print("You are the only one here.");    }  else
+    {    if (said("check out", "bitch"))
+      {      print("The pixielike fairy has golden blonde hair, translucent wings, and "            "an endless supply of fairy dust!");      }    if (said("acquire", "bitch"))
+      {      print("It is impossible to catch a fairy.");      }    if (said("capture", "bitch"))
+      {      print("It is impossible to catch a fairy.");      }    if (said("speak", "bitch"))
+      {      print("The kind and beautiful fairy tells you that she is there to help "            "you with your quest.");      }    if (said("hello", "anyword"))
+      {      print("The lovely fairy nods her head in greeting.");      }    if (said("kill", "bitch"))
+      {      print("It is impossible to catch a fairy.");      }    if (said("kiss", "bitch"))
+      {      print("It is impossible to catch a fairy.");      }    if (said("embrace", "bitch"))
+      {      print("It is impossible to catch a fairy.");      }    }  }Label1:return();[ Messages#message 1 "A beautiful fairy floats down from the sky!"#message 2 "The pixielike fairy has golden blonde hair, translucent wings, and an endless supply of fairy dust!"#message 3 "It is impossible to catch a fairy."#message 4 "The kind and beautiful fairy tells you that she is there to help you with your quest."#message 5 "The lovely fairy nods her head in greeting."#message 6 "There is no one here! Perhaps you are starting to see things."#message 7 "There is no one here! Perhaps you have started talking to yourself."#message 8 "You are the only one here."#message 9 "The fairy starts to sprinkle fairy dust on you. \"Good King Graham, I am here to help you,\" she says. \"I give you a protective spell against certain evil elements; but beware, for it lasts only a short time.\""

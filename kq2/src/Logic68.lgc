@@ -1,0 +1,53 @@
+if (isset(newRoom))
+  {  load.view(View61);  load.view(View178);  load.view(View187);  load.view(View179);  load.view(View176);  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o3);  animate.obj(o2);  set.view(o2, View61);  work = 2;  cycle.time(o2, work);  position(o2, 115, 118);  draw(o2);  ignore.objs(ego);  position(ego, 27, 113);  draw(ego);  add.to.pic(View187, 0, 0, 20, 56, 12, 0);  add.to.pic(View178, 0, 0, 70, 100, 0, 0);  set.priority(o3, 15);  set.view(o3, View176);  position(o3, 50, 138);  draw(o3);  show.pic();  print("A little old lady in the antique shop says, \"How may I help you?\"");  }if (!isset(haveInput))
+  {  goto(Label1);  }if ((said("check out", "antique shop") ||     said("check out")))
+  {  print("You are inside a cute little antique shop. Old furniture and "        "knickknacks clutter the place. Against a wall, a glass display case "        "holds many small items. A little old lady asks if she can help you.");  }if (said("check out", "bitch"))
+  {  print("The little old lady is tiny, with twinkling blue eyes. Her white hair "        "is done up in a neat bun on top of her head. She is sitting in an old "        "rocking chair.");  }if (said("check out", "antique"))
+  {  print("You glance around the antique shop, and your eye falls on an old oil "        "lamp. There is something about it that appeals to you.");  }if (said("buy", "antique"))
+  {  print("The old oil lamp looks like an interesting item.");  }if ((said("speak", "bitch") ||     said("hello", "anyword") ||     said("y", "anyword") ||     said("say", "hello")))
+  {  print("The little old lady motions toward an old oil lamp. \"This is a new "        "item in my shop,\" she says. \"I thought you might be interested in "        "it.\"");  }if (said("no", "anyword"))
+  {  print("The little old lady nods and then goes about her business.");  }if (!isset(f101) &&     said("acquire", "lamp"))
+  {  print("You can't just take the lamp. You have to buy it.");  }if (!isset(f101) &&     said("steal", "lamp"))
+  {  print("That wouldn't be very nice, would it? You have to buy the lamp.");  }if ((said("acquire", "bitch") ||     said("capture", "bitch") ||     said("kill", "bitch")))
+  {  print("A good chap like you doesn't do things like that.");  }if (said("buy", "lamp"))
+  {  print("\"The oil lamp is expensive,\" the little old lady says. \"It will "        "cost you two treasures.\" \"There is an alternative, though,\" she "        "says. \"The old hag, Hagatha, stole my precious nightingale. If you "        "can return it to me, then I will give you the oil lamp.\"");  }reset(f31);if ((said("give", "treasure", "bitch") ||     said("give", "bitch", "treasure")))
+  {  if ((has("Tiara") ||       has("Earrings") ||       has("Bracelet") ||       has("Necklace") ||       has("Brooch")))
+    {    print("Which treasure would you like to give to the little old lady?");    }  else
+    {    print("You do not have the treasure to give to the little old lady.");    }  }else
+  {  if ((said("give", "diamond and sapphire tiara", "bitch") ||       said("give", "bitch", "diamond and sapphire tiara")))
+    {    if (has("Tiara"))
+      {      drop("Tiara");      currentScore -= 7;      set(f31);      }    else
+      {      print("You do not have the treasure to give to the little old lady.");      }    }  else
+    {    if ((said("give", "brooch", "bitch") ||         said("give", "bitch", "brooch")))
+      {      if (has("Brooch"))
+        {        drop("Brooch");        currentScore -= 7;        set(f31);        }      else
+        {        print("You do not have the treasure to give to the little old lady.");        }      }    else
+      {      if ((said("give", "earrings", "bitch") ||           said("give", "bitch", "earrings")))
+        {        if (has("Earrings"))
+          {          drop("Earrings");          currentScore -= 7;          set(f31);          }        else
+          {          print("You do not have the treasure to give to the little old lady.");          }        }      else
+        {        if ((said("give", "bracelet", "bitch") ||             said("give", "bitch", "bracelet")))
+          {          if (has("Bracelet"))
+            {            drop("Bracelet");            currentScore -= 7;            set(f31);            }          else
+            {            print("You do not have the treasure to give to the little old lady.");            }          }        else
+          {          if ((said("give", "diamond and sapphire necklace", "bitch") ||               said("give", "bitch", "diamond and sapphire necklace")))
+            {            if (has("Necklace"))
+              {              drop("Necklace");              currentScore -= 7;              set(f31);              }            else
+              {              print("You do not have the treasure to give to the little old "                    "lady.");              }            }          else
+            {            if ((said("give", "bird", "bitch") ||                 said("give", "bitch", "bird") ||                 said("give", "bird cage", "bitch") ||                 said("give", "bitch", "bird cage")))
+              {              if (has("Caged Nightingale"))
+                {                print("You hand the birdcage with the nightingale to the little "                      "old lady. \"My precious!\" she exclaims. In gratitude "                      "she gives you the oil lamp. \"Good luck,\" she says. She "                      "hastens you out the door and closes up shop.");                currentScore  += 6;                get("Oil Lamp");                drop("Caged Nightingale");                reset(f71);                set(f101);                erase(o3);                v32 = 40;                }              else
+                {                if (has("Empty Birdcage"))
+                  {                  print("You show the empty birdcage to the little old lady. "                        "\"Where's my little bird!\" she exclaims in dismay. "                        "\"I don't want an empty cage!\"");                  }                else
+                  {                  print("You do not have the treasure to give to the little old "                        "lady.");                  }                }              }            else
+              {              if ((said("give", "anyword", "bitch") ||                   said("give", "bitch", "anyword")))
+                {                print("\"That won't do!\" the little old lady snaps.");                }              else
+                {                if (said("give", "anyword"))
+                  {                  print("You must specify who you wish to give it to.");                  }                }              }            }          }        }      }    }  if (isset(f31))
+    {    if (isset(f102))
+      {      reset(f102);      print("The little old lady takes the second treasure. She motions for you "            "to take the old oil lamp, which you do. \"May it bring you good "            "luck!\" she exclaims. She then hustles you out the door.");      get("Oil Lamp");      currentScore  += 5;      reset(f71);      set(f101);      erase(o3);      v32 = 40;      }    else
+      {      print("The little old lady gladly takes your offered treasure. \"That is "            "one treasure,\" she says. \"I need one more for the oil lamp.\"");      set(f102);      }    }  if (said("acquire", "antique"))
+    {    print("Only the old oil lamp interests you.");    }  if ((said("check out", "cabinet") ||       said("look in", "cabinet")))
+    {    print("You see antique knickknacks in the display case. Nothing there "          "interests you.");    }  }Label1:if (posn(ego, 0, 0, 12, 120))
+  {  new.room(Logic20);  }--v32;if (v32 == 1)
+  {  new.room(Logic20);  }return();[ Messages#message 1 "You are inside a cute little antique shop. Old furniture and knickknacks clutter the place. Against a wall, a glass display case holds many small items. A little old lady asks if she can help you."#message 2 "A little old lady in the antique shop says, \"How may I help you?\""#message 3 "The little old lady is tiny, with twinkling blue eyes. Her white hair is done up in a neat bun on top of her head. She is sitting in an old rocking chair."#message 4 "You glance around the antique shop, and your eye falls on an old oil lamp. There is something about it that appeals to you."#message 5 "The little old lady motions toward an old oil lamp. \"This is a new item in my shop,\" she says. \"I thought you might be interested in it.\""#message 6 "The little old lady nods and then goes about her business."#message 7 "You can't just take the lamp. You have to buy it."#message 8 "That wouldn't be very nice, would it? You have to buy the lamp."#message 9 "A good chap like you doesn't do things like that."#message 10 "\"The oil lamp is expensive,\" the little old lady says. \"It will cost you two treasures.\" \"There is an alternative, though,\" she says. \"The old hag, Hagatha, stole my precious nightingale. If you can return it to me, then I will give you the oil lamp.\""#message 11 "Which treasure would you like to give to the little old lady?"#message 12 "You do not have the treasure to give to the little old lady."#message 13 "The little old lady gladly takes your offered treasure. \"That is one treasure,\" she says. \"I need one more for the oil lamp.\""#message 14 "The little old lady takes the second treasure. She motions for you to take the old oil lamp, which you do. \"May it bring you good luck!\" she exclaims. She then hustles you out the door."#message 15 "\"That won't do!\" the little old lady snaps."#message 16 "You hand the birdcage with the nightingale to the little old lady. \"My precious!\" she exclaims. In gratitude she gives you the oil lamp. \"Good luck,\" she says. She hastens you out the door and closes up shop."#message 17 "You show the empty birdcage to the little old lady. \"Where's my little bird!\" she exclaims in dismay. \"I don't want an empty cage!\""#message 18 "Only the old oil lamp interests you."#message 19 "The old oil lamp looks like an interesting item."#message 20 "You see antique knickknacks in the display case. Nothing there interests you."#message 21 "You must specify who you wish to give it to."

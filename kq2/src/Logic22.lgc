@@ -1,0 +1,37 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  load.sound(Sound25);  load.logics(Logic152);  load.logics(Logic101);  load.view(View62);  load.view(View97);  load.view(View104);  load.view(View20);  load.view(View21);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  draw.pic(currentRoom);  position(o7, 10, 70);  call(Logic152);  call(Logic101);  animate.obj(o3);  animate.obj(o4);  set.view(o3, View20);  set.view(o4, View21);  position(o3, 100, 100);  position(o4, 100, 100);  ignore.blocks(o7);  if (previousRoom == 15)
+    {    get.posn(ego, v105, v106);    if (v105 > 81)
+      {      v105 -= 80;      }    else
+      {      if (v105 > 60)
+        {        v105 -= 59;        }      else
+        {        if (v105 > 40)
+          {          v105 -= 35;          }        else
+          {          v105 = 5;          }        }      }    v106 = 37;    position.v(ego, v105, v106);    }  if (previousRoom == 29)
+    {    get.posn(ego, v105, v106);    if (v105 < 120)
+      {      if (v105 > 3)
+        {        v105 -= 4;        }      else
+        {        v105 = 0;        }      }    position.v(ego, v105, v106);    }  if (!isset(f72))
+    {    draw(o3);    }  if (isset(f72) &&       !isset(f73))
+    {    draw(o4);    }  draw(ego);  show.pic();  }if (posn(ego, 0, 0, 80, 167))
+  {  ignore.objs(ego);  }else
+  {  observe.objs(ego);  }if ((said("check out", "beach") ||     said("check out", "grass") ||     said("check out", "area") ||     said("check out")))
+  {  if (isset(f73))
+    {    print("It is a beautiful sandy beach.");    }  else
+    {    if (isset(f72))
+      {      print("There is a beautiful diamond and sapphire bracelet lying in the "            "sand!");      }    else
+      {      print("You notice a pretty clamshell lying on the sandy beach.");      }    }  }if (!isset(f72) &&     said("check out", "clam"))
+  {  print("You notice a pretty clamshell lying on the sandy beach.");  }if (said("open", "clam"))
+  {  if (isset(f72))
+    {    print("You open the clamshell and discover that it is empty. There is "          "nothing special about it.");    }  else
+    {    print("You need to get the clam first.");    }  }if (!isset(f72) &&     said("acquire", "clam"))
+  {  distance(ego, o3, work);  if (work > 15)
+    {    print("You can't reach it from here.");    }  else
+    {    print("When you pick up the clamshell, you see that there was a sparkling "          "sapphire and diamond bracelet under it!");    get("Clamshell");    erase(o3);    draw(o4);    set(f72);    }  }if (isset(f72) &&     !isset(f73) &&     said("acquire", "bracelet"))
+  {  distance(ego, o4, work);  if (work > 15)
+    {    print("You can't reach it from here.");    }  else
+    {    print("OK.");    set(f73);    get("Bracelet");    currentScore  += 7;    erase(o4);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic15);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic23);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic50);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic29);  }call(Logic152);call(Logic101);return();[ Messages#message 1 "You notice a pretty clamshell lying on the sandy beach."#message 2 "It is a beautiful sandy beach."#message 3 "When you pick up the clamshell, you see that there was a sparkling sapphire and diamond bracelet under it!"#message 4 "You can't reach it from here."#message 5 "You open the clamshell and discover that it is empty. There is nothing special about it."#message 6 "You need to get the clam first."#message 7 "There is a beautiful diamond and sapphire bracelet lying in the sand!"#message 8 "OK."

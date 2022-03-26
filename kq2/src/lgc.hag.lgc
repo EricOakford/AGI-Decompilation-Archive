@@ -1,0 +1,30 @@
+if (!isset(f230) &&     isset(newRoom))
+  {  reset(hag.in.room);  set(f230);  random(0, 255, work);  if ((work < 80 ||       isset(f129)))
+    {    set(f237);    load.view(View25);    load.view(View115);    load.view(View26);    animate.obj(o6);    set.view(o6, View26);    work = 2;    cycle.time(o6, work);    step.size(o6, work);    object.on.land(o6);    if (currentRoom == 30)
+      {      position(o6, 107, 59);      }    if (currentRoom == 31)
+      {      position(o6, 36, 125);      }    if (currentRoom == 37)
+      {      position(o6, 46, 69);      }    if (currentRoom == 38)
+      {      position(o6, 112, 92);      }    if (currentRoom == 44)
+      {      position(o6, 25, 120);      }    if (currentRoom == 45)
+      {      position(o6, 77, 60);      }    random(40, 255, v58);    random(0, 2, v59);    }  return();  }if (!isset(hag.in.room) &&     isset(f237))
+  {  --v58;  if (v58 == 1)
+    {    --v59;    if (v59 == 0)
+      {      set(hag.in.room);      follow.ego(o6, 5, f231);      set(f236);      sound(Sound5, f169);      print("The old hag, Hagatha, is nearby! You can hear her cackling and "            "smacking her gums as she comes closer. She would love to have you "            "for dinner, and I don't mean as a guest!");      draw(o6);      }    else
+      {      v58 = 250;      }    }  }if (!isset(hag.in.room))
+  {  goto(Label2);  }if (!isset(haveInput))
+  {  goto(Label1);  }if (said("check out", "bitch"))
+  {  print("This is the ugliest old lady you have ever seen. She's toothless with "        "warts all over her face and has matted gray hair. Her clawlike hands "        "are gripping a walking stick.");  }if ((said("speak", "bitch") ||     said("hello", "anyword") ||     said("say", "hello")))
+  {  print("The old hag cackles, chortles, and mutters under her breath (which "        "smells so bad you almost faint).");  }if ((said("acquire", "bitch") ||     said("capture", "bitch") ||     said("kill", "bitch")))
+  {  print("You would be a fool to try. Hagatha is far more powerful than she "        "seems.");  }if ((said("kiss", "bitch") ||     said("embrace", "bitch")))
+  {  print("What a revolting thought!");  }Label1:if ((isset(egoHidden) ||     isset(ego.flying)))
+  {  if (isset(f236))
+    {    wander(o6);    reset(f236);    }  }else
+  {  if (!isset(f236))
+    {    follow.ego(o6, 5, f231);    set(f236);    }  }if (isset(f231))
+  {  reset(f231);  if (fairy.spell.timer == 0 &&       fairy.spell.timer.2 == 0)
+    {    set(f233);    reset(is.carpet.room);    program.control();    work = 1;    cycle.time(o6, work);    step.size(o6, work);    set.view(o6, View25);    erase(ego);    v58 = 40;    }  else
+    {    work = 1;    cycle.time(o6, work);    step.size(o6, work);    set.view(o6, View115);    end.of.loop(o6, f235);    print("You have been caught by the hag! Fortunately, you were protected by "          "a magic spell so she left without harming you!");    }  }--v58;if (isset(f235))
+  {  reset(f237);  reset(hag.in.room);  reset(f235);  erase(o6);  }if (isset(f233) &&     v58 == 0)
+  {  reset(f233);  work = 1;  cycle.time(o6, work);  step.size(o6, work);  set.view(o6, View115);  end.of.loop(o6, f232);  }if (isset(f232))
+  {  set(f103);  new.room(Logic69);  }goto(Label3);Label2:if (said("anyword", "bitch"))
+  {  print("She's not here!");  }Label3:return();[ Messages#message 1 "The old hag, Hagatha, is nearby! You can hear her cackling and smacking her gums as she comes closer. She would love to have you for dinner, and I don't mean as a guest!"#message 2 "This is the ugliest old lady you have ever seen. She's toothless with warts all over her face and has matted gray hair. Her clawlike hands are gripping a walking stick."#message 3 "The old hag cackles, chortles, and mutters under her breath (which smells so bad you almost faint)."#message 4 "You would be a fool to try. Hagatha is far more powerful than she seems."#message 5 "What a revolting thought!"#message 6 "She's not here!"#message 7 "You have been caught by the hag! Fortunately, you were protected by a magic spell so she left without harming you!"

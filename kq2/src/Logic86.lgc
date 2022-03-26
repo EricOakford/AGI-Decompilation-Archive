@@ -1,0 +1,2 @@
+if (isset(newRoom))
+  {  load.logics(Logic168);  }call(Logic168);return();[ Messages

@@ -1,0 +1,10 @@
+if (!isset(haveInput))
+  {  goto(Label1);  }if (said("check out", "tree"))
+  {  print("There are many lovely pine and spruce trees near these mountains.");  }if (currentRoom != 42)
+  {  if ((said("check out", "area") ||       said("check out")))
+    {    print("The mountain range is wild and rugged. It would be impossible to "          "cross, unless you could fly like a bird.");    }  }if (said("anyword", "tree") &&     !said("check out", "tree"))
+  {  print("You have better things to do.");  }if (said("anyword", "cliff"))
+  {  print("The mountain range is wild and rugged. It would be impossible to "        "cross, unless you could fly like a bird.");  }if (said("check out", "blossom"))
+  {  print("There are not many flowers around here.");  }if ((said("acquire", "blossom") ||     said("smell", "blossom")))
+  {  print("You have better things to do.");  }if (said("check out", "bush"))
+  {  print("There are not many bushes around here.");  }Label1:return();[ Messages#message 1 "There are many lovely pine and spruce trees near these mountains."#message 2 "You have better things to do."#message 3 "The mountain range is wild and rugged. It would be impossible to cross, unless you could fly like a bird."#message 4 "There are not many flowers around here."#message 5 "There are not many bushes around here."

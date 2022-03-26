@@ -1,0 +1,7 @@
+if (isset(f188))
+  {  set.horizon(10);  animate.obj(o1);  set.view(o1, View137);  position(o1, 63, 123);  draw(o1);  move.obj(o1, 63, 76, 0, f30);  animate.obj(o2);  set.view(o2, View154);  position(o2, 58, 163);  draw(o2);  move.obj(o2, 58, 76, 0, f31);  show.pic();  if (monitorType == MONO &&       machineType == PC)
+    {    clear.lines(2, 2, BLACK);    display(2, 2, "...get friendly with the wildlife...");    }  else
+    {    clear.lines(22, 24, WHITE);    display(23, 2, "...get friendly with the wildlife...");    }  v30 = 3;  }--v30;if (v30 == 1)
+  {  sound(Sound41, f32);  }if (isset(f32))
+  {  reset(f32);  sound(Sound41, f32);  }if (isset(f30))
+  {  reset(f30);  v120 = 116;  }return();[ Messages#message 1 "...visit bizarre planets..."#message 2 "...get friendly with the wildlife..."

@@ -1,0 +1,29 @@
+if (isset(newRoom))
+  {  reset(f93);  return();  }if (isset(f147))
+  {  goto(Label3);  }if (!isset(f64))
+  {  goto(Label3);  }if (said("check out", "bush"))
+  {  print("The bushes are nothing but leafless dry sticks.");  }if (said("anyword", "blossom"))
+  {  print("What flowers? Why would you think flowers could grow around this "        "stinking lake?");  }if (said("look across", "lake"))
+  {  print("There is a desolate island in the middle of the poisoned lake.");  }if ((said("check out", "lake") ||     said("check out") ||     said("check out", "area")))
+  {  print("This lake is foul and stinking! It may be poisoned. All vegetation "        "looks dead around it.");  }if ((said("acquire", "lake") ||     said("acquire", "lake")))
+  {  print("There is no reason for you to carry around this foul water.");  }if (said("check out", "island"))
+  {  print("There is a dreary-looking castle on the island.");  }if ((said("cross", "lake") ||     said("enter", "island")))
+  {  print("The lake is foul and toxic. How could you get across it?");  }if (said("check out", "antique shop"))
+  {  if (currentRoom == 32)
+    {    print("The castle on the island looks dark and forbidding. It is surrounded "          "by thorns and brambles. You wonder who would live there.");    }  else
+    {    print("It is difficult to see any details of the castle from here.");    }  }if ((said("acquire", "drink") ||     said("drink", "lake")))
+  {  if (currentRoom == 10 &&       (posn(ego, 93, 157, 119, 167) ||       posn(ego, 101, 143, 125, 156) ||       posn(ego, 109, 130, 159, 142) ||       posn(ego, 124, 119, 159, 129)))
+    {    goto(Label1);    }  if (currentRoom == 11 &&       posn(ego, 0, 103, 159, 167))
+    {    goto(Label1);    }  if (currentRoom == 12 &&       (posn(ego, 0, 124, 36, 167) ||       posn(ego, 37, 135, 55, 167) ||       posn(ego, 56, 142, 75, 167)))
+    {    goto(Label1);    }  if (currentRoom == 17 &&       (posn(ego, 95, 0, 159, 51) ||       posn(ego, 96, 52, 131, 72) ||       posn(ego, 78, 73, 121, 95) ||       posn(ego, 60, 96, 118, 167)))
+    {    goto(Label1);    }  if (currentRoom == 19 &&       (posn(ego, 0, 0, 65, 76) ||       posn(ego, 0, 77, 75, 107) ||       posn(ego, 0, 108, 93, 167)))
+    {    goto(Label1);    }  if (currentRoom == 24 &&       (posn(ego, 72, 0, 159, 96) ||       posn(ego, 51, 97, 159, 167)))
+    {    goto(Label1);    }  if (currentRoom == 25 &&       posn(ego, 0, 145, 159, 167))
+    {    goto(Label1);    }  if (currentRoom == 26 &&       (posn(ego, 0, 0, 92, 81) ||       posn(ego, 0, 82, 82, 167)))
+    {    goto(Label1);    }  if (currentRoom == 31 &&       (posn(ego, 38, 0, 79, 93) ||       posn(ego, 40, 94, 114, 122) ||       posn(ego, 115, 101, 159, 124)))
+    {    goto(Label1);    }  if (currentRoom == 32 &&       posn(ego, 0, 0, 159, 136))
+    {    goto(Label1);    }  if (currentRoom == 33 &&       (posn(ego, 0, 0, 80, 85) ||       posn(ego, 0, 86, 78, 100) ||       posn(ego, 0, 101, 70, 110) ||       posn(ego, 0, 111, 50, 130)))
+    {    goto(Label1);    }  print("You need to be a little closer to drink the water.");  goto(Label2);Label1:  print("You bend over and take a deep drink of the stinking water. Oh, dear, "        "the lake is toxic! You die of extreme poisoning.");  set(f147);  get.posn(ego, temp.x, temp.y);  if (temp.y < 45)
+    {    temp.x = 0;    temp.y = 5;    reposition(ego, temp.x, temp.y);    }  program.control();  set(keep.cycling);  set.view(ego, View92);  work = 3;  cycle.time(ego, work);  end.of.loop(ego, f93);  }Label2:if ((said("check out", "tree") ||     said("check out", "tree") ||     said("climb", "tree")))
+  {  print("The trees around the poisoned lake are dead.");  }Label3:if (isset(f93))
+  {  set.priority(ego, 15);  set.view(ego, View91);  set(certain.death);  }return();[ Messages#message 1 "This lake is foul and stinking! It may be poisoned. All vegetation looks dead around it."#message 2 "There is no reason for you to carry around this foul water."#message 3 "You bend over and take a deep drink of the stinking water. Oh, dear, the lake is toxic! You die of extreme poisoning."#message 4 "The trees around the poisoned lake are dead."#message 5 "The bushes are nothing but leafless dry sticks."#message 6 "What flowers? Why would you think flowers could grow around this stinking lake?"#message 7 "You need to be a little closer to drink the water."#message 8 "There is a desolate island in the middle of the poisoned lake."#message 9 "There is a dreary-looking castle on the island."#message 10 "It is difficult to see any details of the castle from here."#message 11 "The castle on the island looks dark and forbidding. It is surrounded by thorns and brambles. You wonder who would live there."#message 12 "The lake is foul and toxic. How could you get across it?"

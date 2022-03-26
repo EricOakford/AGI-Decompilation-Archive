@@ -1,0 +1,13 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  load.view(View22);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(Logic157);  load.logics(Logic151);  draw.pic(currentRoom);  call(Logic157);  call(Logic151);  animate.obj(o2);  set.view(o2, View22);  position(o2, 73, 111);  if (!isset(f74))
+    {    draw(o2);    }  draw(ego);  show.pic();  }if (!isset(f74))
+  {  if ((said("check out", "tree") ||       said("check out", "area") ||       said("check out")))
+    {    print("There is a stake leaning against a tree.");    }  }if (!isset(f74) &&     said("acquire", "pole"))
+  {  distance(ego, o2, work);  if (work > 15)
+    {    print("You are too far away.");    }  else
+    {    currentScore  += 2;    get("Stake");    erase(o2);    set(f74);    print("OK.");    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic16);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic24);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic22);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic30);  }call(Logic157);call(Logic151);return();[ Messages#message 1 "There is a stake leaning against a tree."#message 2 "You are too far away."#message 3 "OK."

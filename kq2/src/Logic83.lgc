@@ -1,0 +1,32 @@
+if (isset(newRoom))
+  {  load.logics(Logic170);  load.view(View84);  load.sound(Sound21);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic170);  animate.obj(o2);  position(o2, 40, 157);  set.view(o2, View84);  work = 2;  cycle.time(o2, work);  ignore.blocks(o2);  set.cel(o2, 0);  draw(o2);  stop.update(o2);  if (previousRoom == 93)
+    {    position(ego, 49, 160);    set.loop(ego, 0);    start.update(o2);    reverse.loop(o2, f169);    }  else
+    {    if (previousRoom == 88)
+      {      get.posn(ego, v105, v106);      if (v105 < 74)
+        {        position(ego, 10, 160);        }      else
+        {        if (v105 > 106)
+          {          position(ego, 120, 163);          }        else
+          {          position(ego, 50, 165);          }        }      }    }  draw(ego);  show.pic();  }if (!isset(haveInput))
+  {  goto(Label1);  }if (said("check out", "antique shop"))
+  {  if (isset(f123))
+    {    print("The tower was built of creamy, opaque quartz blocks. You see a tiny "          "window near the top.");    }  else
+    {    print("The tower is built of creamy, opaque quartz blocks. You see a tiny "          "window near the top. A delicate hand, waving a hanky, appears from "          "the window.");    }  }if (said("climb", "antique shop"))
+  {  print("There are no footholds or handholds in the tower walls. It would be "        "impossible to climb it.");  }if ((said("acquire", "bitch") ||     said("rescue", "bitch") ||     said("aid", "bitch") ||     said("rescue", "bitch")))
+  {  print("You must do that from inside the quartz tower.");  }if ((said("check out", "window") ||     said("look up", "window") ||     said("look in", "window")))
+  {  if (isset(f123))
+    {    print("You see nothing of interest from the window.");    }  else
+    {    print("You see a small hand waving a hanky from the window at the top of "          "the tower.");    }  }if (said("check out", "bitch"))
+  {  print("You cannot see the girl's face. You can only see her hand waving from "        "the window at the top of the quartz tower.");  }if ((said("speak", "bitch") ||     said("say", "hello") ||     said("hello")))
+  {  print("The maiden cannot hear you from up in the tower.");  }if (said("check out", "door"))
+  {  print("The thick door is fashioned from a wood unknown to you.");  }if (said("open", "door"))
+  {  if (posn(ego, 40, 150, 60, 167))
+    {    start.update(o2);    end.of.loop(o2, f30);    sound(Sound21, f169);    }  else
+    {    print("King Graham may be a hero, but even he can't open a door from THIS "          "far away!");    }  }if (said("knock", "door"))
+  {  if (posn(ego, 40, 150, 60, 167))
+    {    print("You hear what sounds like a distant roar.");    }  else
+    {    print("You need to get closer to the door.");    }  }Label1:if (isset(f30))
+  {  new.room(Logic93);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic78);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic84);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic82);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic88);  }call(Logic170);return();[ Messages#message 1 "The tower is built of creamy, opaque quartz blocks. You see a tiny window near the top. A delicate hand, waving a hanky, appears from the window."#message 2 "The tower was built of creamy, opaque quartz blocks. You see a tiny window near the top."#message 3 "There are no footholds or handholds in the tower walls. It would be impossible to climb it."#message 4 "You must do that from inside the quartz tower."#message 5 "You see a small hand waving a hanky from the window at the top of the tower."#message 6 "You see nothing of interest from the window."#message 7 "You cannot see the girl's face. You can only see her hand waving from the window at the top of the quartz tower."#message 8 "The thick door is fashioned from a wood unknown to you."#message 9 "King Graham may be a hero, but even he can't open a door from THIS far away!"#message 10 "You hear what sounds like a distant roar."#message 11 "You need to get closer to the door."#message 12 "The maiden cannot hear you from up in the tower."

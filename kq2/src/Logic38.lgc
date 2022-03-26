@@ -1,0 +1,20 @@
+if (isset(newRoom))
+  {  load.view(View97);  load.view(View104);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(Logic151);  load.logics(lgc.lake);  load.logics(lgc.hag);  load.logics(Logic101);  load.pic(currentRoom);  call(lgc.hag);  call(Logic101);  draw.pic(currentRoom);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (!isset(onWater))
+  {  if ((posn(ego, 56, 125, 70, 152) ||       posn(ego, 57, 93, 88, 114) ||       posn(ego, 57, 93, 90, 133) ||       posn(ego, 76, 89, 94, 104) ||       posn(ego, 40, 133, 57, 147) ||       posn(ego, 0, 46, 35, 58)))
+    {    set(onWater);    set(f116);    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  get.posn(ego, temp.x, temp.y);  if (posn(ego, 60, 112, 95, 134))
+    {    temp.x = 70;    temp.y = 122;    set(f116);    }  if (posn(ego, 92, 89, 103, 107))
+    {    temp.x = 84;    temp.y = 102;    set(f116);    }  if (posn(ego, 34, 42, 72, 52))
+    {    temp.x = 38;    temp.y = 56;    set(f116);    }  if (posn(ego, 35, 145, 59, 156))
+    {    temp.x = 37;    temp.y = 142;    set(f116);    }  }if (drown.swim == 2 &&     isset(egoHitSpecial))
+  {  reset(onWater);  get.posn(ego, temp.x, temp.y);  temp.x  += 15;  set(f118);  }if (!posn(ego, 72, 115, 144, 167) &&     (said("look in", "branch") ||     said("look in", "chest") ||     said("check out", "chest") ||     said("check out", "branch") ||     said("acquire", "diamond and sapphire necklace")))
+  {  print("You are too far from the log.");  }if ((said("check out", "branch") ||     said("look in", "branch") ||     said("check out", "stump") ||     said("look in", "stump") ||     said("check out", "chest") ||     said("look in", "chest")))
+  {  if (!isset(f83))
+    {    print("When you peer into the old hollow log, you see a flashing necklace "          "of diamonds and sapphires!");    }  else
+    {    print("This is just an old hollow log.");    }  }if (!isset(f83) &&     said("acquire", "diamond and sapphire necklace"))
+  {  set(f83);  currentScore  += 7;  get("Necklace");  print("You pick it up and carry it with you.");  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic31);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic39);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic37);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic45);  }call(Logic151);call(lgc.lake);call(lgc.hag);call(Logic101);return();[ Messages#message 1 "When you peer into the old hollow log, you see a flashing necklace of diamonds and sapphires!"#message 2 "This is just an old hollow log."#message 3 "You pick it up and carry it with you."#message 4 "You are too far from the log."

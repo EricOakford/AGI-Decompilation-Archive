@@ -1,0 +1,13 @@
+if (isset(newRoom))
+  {  load.view(View97);  load.view(View104);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.lake);  load.logics(lgc.mountainside);  load.logics(Logic101);  load.logics(Logic154);  load.pic(currentRoom);  call(Logic101);  call(Logic154);  draw.pic(currentRoom);  ignore.blocks(ego);  if (previousRoom == 7)
+    {    get.posn(ego, v105, v106);    if (v105 > 55)
+      {      v105 = 55;      v106 = 37;      position.v(ego, v105, v106);      }    }  draw(ego);  show.pic();  }if (drown.swim <= 0 &&     isset(onWater))
+  {  get.posn(ego, temp.x, temp.y);  if (posn(ego, 56, 109, 73, 127))
+    {    temp.x = 51;    temp.y = 119;    set(f116);    }  if (posn(ego, 0, 121, 31, 128))
+    {    temp.x = 12;    temp.y = 123;    set(f116);    }  if (posn(ego, 32, 122, 56, 130))
+    {    temp.x = 33;    temp.y = 123;    set(f116);    }  if (posn(ego, 0, 103, 27, 112))
+    {    temp.x = 2;    temp.y = 114;    set(f116);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic7);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic13);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic21);  }call(lgc.lake);call(lgc.mountainside);call(Logic101);call(Logic154);return();[ Messages#message 1 "There are many lovely pine and spruce trees near these mountains."#message 2 "The mountain range is wild and rugged. It would be impossible to cross, unless you could fly like a bird."

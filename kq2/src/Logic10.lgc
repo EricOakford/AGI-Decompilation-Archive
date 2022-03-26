@@ -1,0 +1,21 @@
+if (isset(newRoom))
+  {  load.view(View97);  load.view(View104);  load.view(View92);  load.view(View91);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(Logic156);  load.logics(lgc.lake);  load.logics(Logic101);  load.logics(Logic151);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic101);  ignore.blocks(ego);  if (previousRoom == 17)
+    {    get.posn(ego, v105, v106);    if (v105 > 88)
+      {      v105 = 88;      position.v(ego, v105, v106);      }    }  draw(ego);  show.pic();  }if (!isset(onWater))
+  {  if (posn(ego, 28, 59, 33, 62))
+    {    set(onWater);    set(f116);    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  get.posn(ego, temp.x, temp.y);  if (posn(ego, 129, 128, 159, 143))
+    {    set(f116);    temp.x = 139;    temp.y = 153;    }  if (posn(ego, 98, 135, 128, 167))
+    {    set(f116);    temp.x = 121;    temp.y = 160;    }  if (posn(ego, 24, 79, 38, 86))
+    {    set(f116);    temp.x = 21;    temp.y = 74;    }  if (posn(ego, 0, 47, 28, 62))
+    {    set(f116);    temp.x = 3;    temp.y = 62;    }  if (posn(ego, 0, 77, 23, 87))
+    {    set(f116);    temp.x = 11;    temp.y = 79;    }  if (posn(ego, 39, 59, 53, 82))
+    {    set(f116);    temp.x = 32;    temp.y = 71;    }  }if ((posn(ego, 0, 0, 75, 87) ||     posn(ego, 0, 88, 41, 107) ||     posn(ego, 0, 108, 26, 130)))
+  {  reset(f64);  }else
+  {  set(f64);  }if (edgeEgoHit != NOT_HIT)
+  {  reset(f64);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic3);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic11);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic9);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic17);  }call(Logic156);call(lgc.lake);call(Logic101);call(Logic151);return();[ Messages#message 1 "What a lovely little lake! Its sparkling water looks so clean and fresh."#message 2 "Do you want to swim in the lake?"#message 3 "There is no reason for you to obtain water. Why don't you just drink some water if you're really that thirsty?"#message 4 "Ahhhhh! The clear lake water is so refreshing."#message 5 "This lake is foul and stinking! It may be poisoned. All vegetation looks dead around it."#message 6 "What a lovely little lake! Its sparkling water looks so clean and fresh."

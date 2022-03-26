@@ -1,0 +1,20 @@
+if (isset(newRoom))
+  {  load.logics(Logic167);  load.view(View79);  load.view(View80);  load.view(View81);  load.view(View82);  load.view(View86);  load.view(View104);  load.view(View175);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic167);  if (!isset(f113))
+    {    animate.obj(o2);    set.view(o2, View79);    set.priority(o2, 4);    position(o2, 40, 100);    draw(o2);    }  animate.obj(o3);  set.view(o3, View175);  work = 2;  cycle.time(o3, work);  start.cycling(o3);  ignore.blocks(o3);  position(o3, 57, 59);  draw(o3);  draw(ego);  show.pic();  }if (said("check out", "water fall"))
+  {  print("The lavender waterfall tumbles down from the towering blue cliffs.");  }get.posn(ego, v105, v106);if ((said("acquire", "drink", "water fall") ||     said("drink", "water fall") ||     said("drink", "lake", "water fall")))
+  {  if (v105 < 90)
+    {    if (posn(ego, 60, 61, 70, 65))
+      {      print("Ahhhhh! The lavender water is strangely refreshing.");      }    else
+      {      print("You need to be a little closer to drink the water.");      }    }  }if (posn(ego, 60, 58, 70, 60))
+  {  ignore.objs(ego);  if (!isset(f182) &&       isset(egoHitSpecial))
+    {    set(f182);    reset(egoHitSpecial);    program.control();    work = 2;    cycle.time(ego, work);    set(keep.cycling);    ignore.blocks(ego);    set.priority(ego, 4);    set.view(ego, View104);    reposition.to(ego, 62, 64);    move.obj(ego, 125, 64, 3, f30);    }  }else
+  {  if (!isset(f113))
+    {    ignore.objs(ego);    }  else
+    {    observe.objs(ego);    }  }if (isset(f30))
+  {  reset(f30);  v30 = 36;  program.control();  }--v30;if (v30 == 1)
+  {  print("You fall into the swift water and are washed out to sea where you "        "drown.");  erase(ego);  set(certain.death);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  if (v105 < 60)
+    {    v105  += 40;    }  else
+    {    if (v105 < 80)
+      {      v105  += 25;      }    else
+      {      v105  += 15;      }    }  position.v(ego, v105, v106);  }call(Logic167);return();[ Messages#message 1 "The lavender waterfall tumbles down from the towering blue cliffs."#message 2 "You fall into the swift water and are washed out to sea where you drown."#message 3 "Ahhhhh! The lavender water is strangely refreshing."#message 4 "You need to be a little closer to drink the water."

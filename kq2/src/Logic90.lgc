@@ -1,0 +1,37 @@
+if (isset(newRoom))
+  {  load.view(View85);  load.view(View103);  load.sound(Sound2);  load.pic(currentRoom);  draw.pic(currentRoom);  position(ego, 99, 156);  set.loop(ego, 3);  start.motion(ego);  draw(ego);  animate.obj(o2);  set.view(o2, View85);  work = 2;  cycle.time(o2, work);  if (v61 == 1)
+    {    position(o2, 70, 133);    stop.cycling(o2);    }  else
+    {    start.cycling(o2);    position(o2, 42, 112);    move.obj(o2, 70, 117, 0, f34);    }  draw(o2);  currentScore  += v79;  v79 = 0;  show.pic();  if (v61 != 1)
+    {    if (v61 <= 0)
+      {      print("You have found her! The girl from the magic mirror! She is even "            "more beautiful than you had imagined!");      }    v61 = 0;    }  }if (!isset(haveInput))
+  {  goto(Label1);  }if (v33 == 1)
+  {  if ((said("graham") ||       said("anyword", "graham")))
+    {    v33 = 2;    print("Oh, Graham, I am forever grateful to you!");    }  }if ((said("check out") ||     said("check out", "swim") ||     said("check out", "antique shop")))
+  {  print("The room at the top of the tower is very tiny. You are angered at the "        "thought of Valanice having been imprisoned in this small room.");  }if (said("check out", "bitch"))
+  {  print("She is even more lovely than she appeared in the mirror. Her long "        "auburn hair tumbles in luscious waves down her back. She has the "        "bluest eyes you've ever seen and soft creamy skin.");  }if (said("check out", "window"))
+  {  print("You see the view of the colorful ocean crashing onto the blue shore of "        "the island.");  }if ((said("acquire", "bitch") ||     said("capture", "bitch")))
+  {  print("Don't be so rough! Valanice is very grateful to you for rescuing her. "        "She will follow you anywhere! Except, of course, down those dreadful "        "stairs. She is deathly afraid of them.");  }if (said("kill", "bitch"))
+  {  print("ARE YOU OUT OF YOUR GOURD???? I thought you wanted to win this game! "        "Don't ever try something like that again!");  }if ((said("embrace", "bitch") ||     said("kiss", "bitch")))
+  {  ignore.objs(ego);  distance(ego, o2, work);  if (work > 10)
+    {    print("Come closer, kind sir.");    set(f31);    }  else
+    {    set(f37);    }  }if ((said("hello") ||     said("hello", "anyword") ||     said("anyword", "hello")))
+  {  print("Hello.");  }if ((said("marry", "bitch") ||     said("marry")))
+  {  if ((!isset(f167) ||       v33 != 2))
+    {    set(f167);    print("Don't be impatient; you just met. Take some time, and get "          "acquainted.");    }  else
+    {    print("Yes, of course I will!");    }  }if (said("love"))
+  {  print("I love you, too!");  }if (isset(haveMatch) &&     v33 == 1)
+  {  v33 = 0;  }if (said("speak", "bitch"))
+  {  if (v33 <= 0)
+    {    print("My name is Valanice, what is your name?");    v33 = 1;    }  else
+    {    print("This is no time for small talk!");    }  }Label1:if (isset(f31))
+  {  distance(ego, o2, work);  if (work < 10)
+    {    reset(f31);    set(f37);    }  }if (isset(f37))
+  {  reset(f37);  get.posn(ego, v105, v106);  if (v106 < 133)
+    {    move.obj(ego, 79, 132, 0, f33);    }  else
+    {    move.obj(ego, 79, 134, 0, f33);    }  }if (isset(f33))
+  {  sound(Sound2, f39);  reset(f33);  erase(ego);  stop.motion(ego);  set.view(o2, View103);  work = 3;  cycle.time(o2, work);  end.of.loop(o2, f32);  }if (isset(f32))
+  {  observe.objs(ego);  print("You tentatively embrace the beautiful girl. Your lips meet hers, and "        "you are both in ecstasy. This was well worth playing the game for!");  reset(f32);  set.view(o2, View85);  work = 2;  cycle.time(o2, work);  draw(ego);  start.motion(ego);  player.control();  }if (posn(ego, 95, 160, 120, 167))
+  {  new.room(Logic91);  }if (isset(f34))
+  {  move.obj(o2, 70, 117, 0, f35);  reset(f34);  }if (isset(f35))
+  {  move.obj(o2, 70, 133, 0, f36);  reset(f35);  }if (isset(f36))
+  {  stop.cycling(o2);  reset(f36);  }return();[ Messages#message 1 "You have found her! The girl from the magic mirror! She is even more beautiful than you had imagined!"#message 2 "The room at the top of the tower is very tiny. You are angered at the thought of Valanice having been imprisoned in this small room."#message 3 "She is even more lovely than she appeared in the mirror. Her long auburn hair tumbles in luscious waves down her back. She has the bluest eyes you've ever seen and soft creamy skin."#message 4 "You see the view of the colorful ocean crashing onto the blue shore of the island."#message 5 "Don't be so rough! Valanice is very grateful to you for rescuing her. She will follow you anywhere! Except, of course, down those dreadful stairs. She is deathly afraid of them."#message 6 "My name is Valanice, what is your name?"#message 7 "ARE YOU OUT OF YOUR GOURD???? I thought you wanted to win this game! Don't ever try something like that again!"#message 8 "You tentatively embrace the beautiful girl. Your lips meet hers, and you are both in ecstasy. This was well worth playing the game for!"#message 9 "Don't be impatient; you just met. Take some time, and get acquainted."#message 10 "Come closer, kind sir."#message 11 "Oh, Graham, I am forever grateful to you!"#message 12 "Hello."#message 13 "Yes, of course I will!"#message 14 "I love you, too!"#message 15 "This is no time for small talk!"#message 30 "She is even more lovely than she appeared in the mirror. Her long auburn hair tumbles down to cover her large firm breasts. Her erect nipples are one of the indications that her warm thighs would welcome your tender kisses."

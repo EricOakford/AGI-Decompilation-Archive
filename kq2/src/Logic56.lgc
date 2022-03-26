@@ -1,0 +1,66 @@
+if (isset(newRoom))
+  {  load.logics(lgc.carpet);  load.logics(lgc.mountaintop);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.view(View66);  load.view(View46);  load.view(View47);  load.view(View44);  load.view(View45);  load.view(View91);  load.view(View8);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.carpet);  call(lgc.mountaintop);  animate.obj(o3);  work = 3;  cycle.time(o3, work);  ignore.horizon(o3);  position(o3, 115, 100);  if (!isset(f136))
+    {    get.posn(ego, v105, v106);    if (v106 < 50)
+      {      v106 = 50;      }    else
+      {      if (v106 > 148)
+        {        v106 = 148;        }      }    position.v(ego, v105, v106);    }  draw(ego);  if (!isset(f108) &&       !isset(f109) &&       !isset(f110))
+    {    set.view(o3, View44);    set(f31);    }  else
+    {    if (isset(f108))
+      {      ignore.objs(ego);      set.view(o3, View66);      set.priority(o3, 5);      }    else
+      {      if (isset(f109) &&           !isset(f110))
+        {        set.view(o3, View46);        set(f32);        }      }    }  if (!isset(f110))
+    {    draw(o3);    }  show.pic();  if (!isset(f108) &&       !isset(f109) &&       !isset(f110))
+    {    print("Look out! There is a poisonous viper blocking your path!");    }  }if (said("check out", "snake"))
+  {  if (isset(f31))
+    {    print("The snake appears to be about ten feet long. It is coiled and ready "          "to strike.");    }  else
+    {    if (isset(f108))
+      {      print("The huge snake is deceased.");      }    else
+      {      print("There is no snake here!");      }    }  }if (isset(f31) &&     !isset(f35) &&     !isset(f136) &&     !isset(ego.fell) &&     posn(ego, 100, 80, 111, 115))
+  {  set(f35);  set(snakeInAction);  set.view(o3, View45);  end.of.loop(o3, f34);  }if (isset(f34))
+  {  reset(f34);  set.view(ego, View91);  print("The snake has struck you dead.");  set(certain.death);  }if ((!isset(haveInput) ||     isset(haveMatch) ||     isset(f35)))
+  {  goto(Label2);  }if (!isset(f32) &&     (said("speak", "snake") ||     said("hello", "anyword") ||     said("kiss", "snake") ||     said("say", "hello")))
+  {  if (isset(f31))
+    {    print("SSSsssssss! SSssstay away or I will ssssssstrike!");    }  else
+    {    if (isset(f108))
+      {      print("The huge snake is deceased.");      }    else
+      {      print("There is no snake here!");      }    }  }if (!isset(f109) &&     (said("acquire", "snake") ||     said("capture", "snake")))
+  {  if (isset(f31))
+    {    print("Are you joking!");    }  else
+    {    print("Why would you want a dead snake? Ugh!!");    }  }if (isset(f31) &&     (said("feed", "snake") ||     said("feed", "anyword", "snake")))
+  {  print("The serpent only wants to eat YOU!");  }if (!isset(haveMatch) &&     isset(f31) &&     (said("feed", "anyword") ||     said("give", "anyword")))
+  {  print("The snake has no use for it. He is interested in only one thing. "        "Getting rid of YOU!");  }if (said("kill", "snake"))
+  {  if (!posn(ego, 71, 72, 107, 120))
+    {    print("You are too far away.");    }  else
+    {    if (isset(f31))
+      {      if (has("Sword"))
+        {        ignore.objs(ego);        print("Brandishing the sharp sword, you quickly slash the viper into "              "ribbons.");        set(f108);        reset(f31);        set.priority(o3, 5);        set.view(o3, View66);        currentScore  += 2;        }      else
+        {        print("This is a very large snake. You don't have any weapons strong "              "enough to kill it.");        }      }    else
+      {      print("The huge snake is deceased.");      }    }  }if (isset(f37) &&     said("snake"))
+  {  goto(Label1);  }reset(f37);Label1:if ((said("cast", "bridle", "snake") ||     said("drop", "bridle", "snake") ||     isset(f37)))
+  {  reset(f37);  if (!posn(ego, 71, 72, 137, 120))
+    {    print("You are too far away.");    }  else
+    {    if (isset(f31))
+      {      if (has("Bridle"))
+        {        drop("Bridle");        currentScore  += 5;        set.view(o3, View46);        reset(f31);        set(f109);        set(f32);        print("You toss the leather bridle onto the coiled snake. Instantly, "              "there stands before you not a snake, but a beautiful winged "              "horse wearing the bridle!");        }      else
+        {        print("You don't have it.");        }      }    else
+      {      if (has("Bridle"))
+        {        print("You put the bridle on the dead snake. Nothing happens. You pick "              "the bridle up again.");        }      else
+        {        print("The huge snake is deceased.");        }      }    }  }else
+  {  if (said("cast", "bridle"))
+    {    print("Where do you want to throw the bridle?");    set(f37);    }  }if (!isset(f32))
+  {  goto(Label2);  }if (isset(f110) &&     (said("anyword", "flying horse") ||     said("anyword", "anyword", "flying horse")))
+  {  print("The horse is flying away, and pays no attention to you.");  }else
+  {  if (said("check out", "flying horse"))
+    {    print("This is a handsome white horse! It has beautiful wings of delicate "          "white feathers. The leather bridle is around the winged horse's "          "head.");    }  if (said("speak", "flying horse"))
+    {    print("\"Thank you, kind sir, for saving me. An evil enchanter turned me "          "into a snake when I refused to be his steed. To repay you, here is a "          "magic sugar cube that will guard against poisonous brambles.\"");    get("Sugar Cube");    currentScore  += 2;    set(f110);    set.priority(o3, 15);    ignore.objs(o3);    work = 2;    step.size(o3, work);    set.view(o3, View47);    move.obj(o3, 115, 60, 0, f36);    }  if ((said("get on", "flying horse") ||       said("sit", "flying horse")))
+    {    print("The winged horse has a very independent nature. It doesn't want a "          "rider on its back.");    }  if ((said("acquire", "flying horse") ||       said("capture", "flying horse")))
+    {    print("The white horse is much too big and strong for you to hold it.");    }  if (said("kill", "flying horse"))
+    {    print("Why would you want to kill a beautiful horse like that?");    }  if ((said("feed", "flying horse") ||       said("feed", "anyword", "flying horse")))
+    {    print("The flying horse is not particularly hungry, thank you.");    }  if (said("pat", "flying horse"))
+    {    print("The beautiful white horse lets you stroke its velvety soft nose.");    }  if ((said("hello", "anyword") ||       said("say", "hello")))
+    {    print("The flying horse bobs its head up and down in greeting.");    }  }Label2:if (edgeEgoHit == LEFT_EDGE)
+  {  set.view(ego, View0);  new.room(Logic55);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic57);  }if (isset(f33))
+  {  reset(f33);  reset(f32);  erase(o3);  }if (isset(f36))
+  {  reset(f36);  move.obj(o3, 0, 60, 0, f33);  }call(lgc.carpet);call(lgc.mountaintop);return();[ Messages#message 1 "Look out! There is a poisonous viper blocking your path!"#message 2 "The snake appears to be about ten feet long. It is coiled and ready to strike."#message 3 "The huge snake is deceased."#message 4 "SSSsssssss! SSssstay away or I will ssssssstrike!"#message 5 "Are you joking!"#message 6 "The serpent only wants to eat YOU!"#message 7 "Brandishing the sharp sword, you quickly slash the viper into ribbons."#message 8 "This is a very large snake. You don't have any weapons strong enough to kill it."#message 9 "You toss the leather bridle onto the coiled snake. Instantly, there stands before you not a snake, but a beautiful winged horse wearing the bridle!"#message 10 "Where do you want to throw the bridle?"#message 11 "You don't have it."#message 12 "This is a handsome white horse! It has beautiful wings of delicate white feathers. The leather bridle is around the winged horse's head."#message 13 "\"Thank you, kind sir, for saving me. An evil enchanter turned me into a snake when I refused to be his steed. To repay you, here is a magic sugar cube that will guard against poisonous brambles.\""#message 14 "The winged horse has a very independent nature. It doesn't want a rider on its back."#message 15 "The white horse is much too big and strong for you to hold it."#message 16 "Why would you want to kill a beautiful horse like that?"#message 17 "The flying horse is not particularly hungry, thank you."#message 18 "The beautiful white horse lets you stroke its velvety soft nose."#message 19 "The flying horse bobs its head up and down in greeting."#message 20 "The snake has struck you dead."#message 21 "There is no snake here!"#message 22 "You are too far away."#message 23 "The snake has no use for it. He is interested in only one thing. Getting rid of YOU!"#message 24 "Why would you want a dead snake? Ugh!!"#message 25 "You put the bridle on the dead snake. Nothing happens. You pick the bridle up again."#message 26 "The horse is flying away, and pays no attention to you."

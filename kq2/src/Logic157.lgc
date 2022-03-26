@@ -1,0 +1,7 @@
+if ((said("check out", "tree") ||     said("check out", "area") ||     said("check out")))
+  {  print("This is a heavily wooded area. It would be easy to get lost among the "        "trees.");  }if (said("check out", "blossom"))
+  {  print("Many flowers beautify these woods.");  }if (said("acquire", "blossom"))
+  {  print("You have better things to do than to dilly-dally around picking "        "flowers.");  }if (said("climb", "tree"))
+  {  print("It would be fun to climb trees for a while, but you really have better "        "things to do.");  }if (said("smell", "blossom"))
+  {  print("The lovely smell of wildflowers is all around you in these woods.");  }if (said("climb", "boulder"))
+  {  print("Stopping to climb rocks would only delay you in your quest for a "        "bride.");  }return();[ Messages#message 1 "This is a heavily wooded area. It would be easy to get lost among the trees."#message 2 "Many flowers beautify these woods."#message 3 "You have better things to do than to dilly-dally around picking flowers."#message 4 "It would be fun to climb trees for a while, but you really have better things to do."#message 5 "The lovely smell of wildflowers is all around you in these woods."#message 6 "Stopping to climb rocks would only delay you in your quest for a bride."

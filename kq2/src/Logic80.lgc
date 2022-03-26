@@ -1,0 +1,7 @@
+if (isset(newRoom))
+  {  set.horizon(45);  load.logics(Logic167);  load.view(View80);  load.view(View81);  load.view(View82);  load.view(View86);  load.view(View104);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic167);  if (previousRoom == 42)
+    {    start.motion(ego);    egoDir = UP;    set.loop(ego, 3);    work = 3;    set.dir(ego, work);    }  draw(ego);  show.pic();  }if (edgeEgoHit == TOP_EDGE)
+  {  get.posn(ego, v105, v106);  v105 -= 30;  position.v(ego, v105, v106);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  get.posn(ego, v105, v106);  if (v105 < 50)
+    {    v105  += 45;    }  else
+    {    v105  += 25;    }  position.v(ego, v105, v106);  }call(Logic167);return();[ Messages

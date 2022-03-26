@@ -1,0 +1,32 @@
+if (isset(newRoom))
+  {  set.horizon(0);  load.logics(lgc.dracula);  load.view(View134);  load.view(View56);  if (currentRoom == v92)
+    {    load.view(View51);    load.view(View52);    load.view(View53);    }  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.dracula);  if (!isset(f140))
+    {    animate.obj(o2);    set.view(o2, View56);    set.priority(o2, 12);    position(o2, 65, 98);    stop.cycling(o2);    draw(o2);    }  animate.obj(o3);  set.view(o3, View134);  set.priority(o3, 9);  position(o3, 63, 26);  draw(o3);  start.cycling(o3);  if (previousRoom == 65)
+    {    position(ego, 128, 119);    }  else
+    {    if (previousRoom == 61)
+      {      position(ego, 25, 119);      }    else
+      {      position(ego, 80, 85);      set.loop(ego, 2);      set.cel(ego, 0);      }    }  ignore.objs(ego);  draw(ego);  show.pic();  }if (!isset(f31))
+  {  position(o3, 63, 26);  set(f31);  }else
+  {  position(o3, 91, 26);  reset(f31);  }if (!isset(haveInput))
+  {  goto(Label1);  }if ((said("check out") ||     said("check out", "antique shop") ||     said("check out", "swim")))
+  {  print("This is the dingy dining room of the drafty old castle. Ants crawl "        "among old bits of food. Dust covers a dilapidated table top.");  if (!isset(f140))
+    {    print("A delicious-looking smoked ham is on the table.");    }  }if (said("check out", "stairs"))
+  {  print("The stairway appears to lead down into the dark depths of the castle.");  }if (said("check out", "chair"))
+  {  print("The chairs are old and worn.");  }if (said("check out", "table"))
+  {  print("The table top is completely covered with dust. Scratches scar the legs "        "of the table. Chairs with torn padding accompany it.");  if (!isset(f140))
+    {    print("A delicious-looking smoked ham is on the table.");    }  }if ((said("sit", "table") ||     said("sit", "chair") ||     said("sit") ||     said("sit", "chair")))
+  {  print("The worn chairs look uninviting to sit upon.");  }if (said("acquire", "ham"))
+  {  if (!isset(f140))
+    {    if (posn(ego, 50, 102, 108, 138))
+      {      print("OK.");      get("Ham");      set(f140);      erase(o2);      currentScore  += 2;      }    else
+      {      print("To do that, you will need to get closer.");      }    }  else
+    {    if (has("Ham"))
+      {      print("You don't see one here.");      }    else
+      {      print("You already have it.");      }    }  }Label1:if (isset(egoHitSpecial) &&     v92 != 5)
+  {  get.posn(ego, v105, v106);  if ((v92 == 1 ||       v92 == 3))
+    {    v92 = 0;    }  if (v106 < 100)
+    {    new.room(Logic63);    }  else
+    {    if (v105 > 80)
+      {      new.room(Logic65);      }    else
+      {      if (v105 < 80)
+        {        new.room(Logic61);        }      }    }  }call(lgc.dracula);return();[ Messages#message 1 "This is the dingy dining room of the drafty old castle. Ants crawl among old bits of food. Dust covers a dilapidated table top."#message 2 "A delicious-looking smoked ham is on the table."#message 3 "The stairway appears to lead down into the dark depths of the castle."#message 4 "The table top is completely covered with dust. Scratches scar the legs of the table. Chairs with torn padding accompany it."#message 5 "The worn chairs look uninviting to sit upon."#message 6 "To do that, you will need to get closer."#message 7 "You don't see one here."#message 8 "You already have it."#message 9 "The chairs are old and worn."#message 10 "OK."

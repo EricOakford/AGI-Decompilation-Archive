@@ -1,0 +1,7 @@
+if (isset(newRoom))
+  {  load.sound(Sound8);  load.logics(lgc.mountaintop);  load.logics(lgc.carpet);  load.view(View98);  load.view(View8);  load.view(View65);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.mountaintop);  call(lgc.carpet);  if (isset(f107))
+    {    position(ego, 0, 37);    set.view(ego, View98);    work = 2;    cycle.time(ego, work);    step.size(ego, work);    program.control();    move.obj(ego, 120, 65, 0, f31);    set.priority(ego, 15);    }  if (!isset(f136))
+    {    draw(ego);    }  show.pic();  }if (isset(f107))
+  {  if (isset(f31))
+    {    reset(f31);    reset(f107);    set.view(ego, View0);    work = 1;    cycle.time(ego, work);    step.size(ego, work);    player.control();    release.priority(ego);    reset(ego.flying);    }  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic56);  }call(lgc.mountaintop);call(lgc.carpet);return();[ Messages

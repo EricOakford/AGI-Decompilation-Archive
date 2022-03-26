@@ -1,0 +1,26 @@
+if (isset(newRoom))
+  {  load.logics(Logic151);  load.sound(Sound22);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  random(0, 255, work);  if ((work < 20 ||       isset(f129)))
+    {    load.view(View27);    load.sound(Sound24);    set(f34);    set(f36);    set(f37);    }  load.pic(currentRoom);  if (!isset(f37))
+    {    load.logics(lgc.hag);    call(lgc.hag);    }  draw.pic(currentRoom);  if (isset(f34))
+    {    animate.obj(o3);    set.view(o3, View27);    position(o3, 120, 101);    work = 2;    step.size(o3, work);    cycle.time(o3, work);    set.cel(o3, 0);    draw(o3);    stop.cycling(o3);    move.obj(o3, 40, 101, 0, f31);    }  if (previousRoom == 69)
+    {    position(ego, 124, 100);    }  draw(ego);  show.pic();  if (previousRoom == 69)
+    {    if (v65 == 2 &&         has("Caged Nightingale"))
+      {      v65 = 1;      print("As you leave the dark cave, you remove the cloth from the cage.");      sound(Sound22, f169);      get("Cloth");      }    }  }if (isset(f34) &&     !isset(f35))
+  {  reset(f34);  sound(Sound24, f34);  }if (isset(f31))
+  {  reset(f31);  start.cycling(o3);  end.of.loop(o3, f33);  }if (isset(f33))
+  {  reset(f33);  stop.cycling(o3);  move.obj(o3, 120, 101, 0, f32);  }if (isset(f32))
+  {  set(f35);  reset(f32);  reset(f36);  erase(o3);  }if ((said("check out", "area") ||     said("check out") ||     said("check out", "area")))
+  {  print("This forbidding cave is the home of Hagatha, the wicked old hag. There "        "are human skulls on stakes at the entrance. This is not a reassuring "        "sign.");  }if (said("look in", "area"))
+  {  if (posn(ego, 90, 73, 159, 121))
+    {    print("You see nothing but darkness when you peer into the cave.");    }  else
+    {    print("You can't see into the cave from there.");    }  }if (said("check out", "skull"))
+  {  print("The skulls probably belong to unfortunate travelers who fell into "        "Hagatha's clutches. She has a taste for human flesh, you know.");  }if (said("acquire", "skull"))
+  {  print("Yecchhhhh! What a horrible thought! Why would you want to do such a "        "terrible thing?");  }if (isset(f36) &&     said("anyword", "batman"))
+  {  print("He must have gotten lost. I do not think he belongs in this story.");  }if (posn(ego, 125, 89, 126, 104))
+  {  new.room(Logic69);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic37);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic43);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic2);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic45);  }call(Logic151);if (!isset(f37))
+  {  call(lgc.hag);  }return();[ Messages#message 1 "This forbidding cave is the home of Hagatha, the wicked old hag. There are human skulls on stakes at the entrance. This is not a reassuring sign."#message 2 "The skulls probably belong to unfortunate travelers who fell into Hagatha's clutches. She has a taste for human flesh, you know."#message 3 "Yecchhhhh! What a horrible thought! Why would you want to do such a terrible thing?"#message 4 "He must have gotten lost. I do not think he belongs in this story."#message 5 "You see nothing but darkness when you peer into the cave."#message 6 "You can't see into the cave from there."#message 7 "As you leave the dark cave, you remove the cloth from the cage."

@@ -1,0 +1,31 @@
+if (isset(newRoom))
+  {  set.horizon(55);  load.logics(Logic101);  load.view(View97);  load.view(View104);  load.view(View36);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic101);  animate.obj(o3);  set.view(o3, View36);  position(o3, 50, 50);  draw(ego);  show.pic();  if (previousRoom != 50)
+    {    v73 = previousRoom;    v51 = 1;    }  }if (v51 > 2 &&     v33 == 0)
+  {  program.control();  print("You are so far out to sea, you have no chance of ever getting back. "        "You can no longer swim.");  set.view(ego, View104);  stop.motion(ego);  start.motion(ego);  work = 2;  cycle.time(ego, work);  v33 = 50;  }--v33;if (v33 == 1)
+  {  erase(ego);  set(certain.death);  }else
+  {  if (said("check out", "lake"))
+    {    print("The clear blue ocean is very calm. You look out over its vastness, "          "seeing nothing but endless water.");    }  if (said("check out", "dolphin"))
+    {    print("A large, colorful fish playfully leaps out of the water around you.");    }  if ((said("capture", "dolphin") ||       said("acquire", "dolphin")))
+    {    print("It is very hard to catch fish while swimming.");    }  if (said("drink", "lake"))
+    {    print("YECCHHH!! You cough and choke from the briny water of the ocean.");    }  if (said("look under", "lake"))
+    {    print("You dip your head under the ocean water. You see nothing but "          "colorful fish and seaweed.");    }  if (isset(f31))
+    {    reset(f31);    reset(f32);    erase(o3);    random(0, 255, v34);    }  if (!isset(f31) &&       !isset(f32))
+    {    --v34;    if (v34 == 0)
+      {Label1:      random(0, 255, v31);      if ((v31 < 45 ||           v31 > 130))
+        {        goto(Label1);        }Label2:      random(0, 255, v32);      if ((v32 < 60 ||           v32 > 130))
+        {        goto(Label2);        }      set.cel(o3, 0);      position.v(o3, v31, v32);      distance(o3, ego, v230);      if (v230 > 20)
+        {        draw(o3);        end.of.loop(o3, f31);        set(f32);        }      }    }  if (edgeEgoHit == TOP_EDGE)
+    {    if (v73 == 1)
+      {      v73 = 43;      }    else
+      {      if (v73 == 43)
+        {        v73 = 36;        }      else
+        {        v73 -= 7;        }      }    new.room(Logic50);    }  if (edgeEgoHit == BOTTOM_EDGE)
+    {    if (v73 == 43)
+      {      v73 = 1;      }    else
+      {      if (v73 == 15)
+        {        v73 = 22;        }      else
+        {        v73  += 7;        }      }    new.room(Logic50);    }  if (edgeEgoHit == LEFT_EDGE)
+    {    v51  += 1;    new.room(Logic50);    }  if (edgeEgoHit == RIGHT_EDGE)
+    {    --v51;    if (v51 == 0)
+      {      new.room.v(v73);      }    else
+      {      new.room(Logic50);      }    }  call(Logic101);  }return();[ Messages#message 1 "The clear blue ocean is very calm. You look out over its vastness, seeing nothing but endless water."#message 2 "A large, colorful fish playfully leaps out of the water around you."#message 3 "It is very hard to catch fish while swimming."#message 4 "You are so far out to sea, you have no chance of ever getting back. You can no longer swim."#message 5 "YECCHHH!! You cough and choke from the briny water of the ocean."#message 6 "You dip your head under the ocean water. You see nothing but colorful fish and seaweed."

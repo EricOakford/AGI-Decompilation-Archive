@@ -1,0 +1,59 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  random(0, 255, work);  if (work < 125)
+    {    load.view(View71);    load.view(View72);    load.view(View73);    load.sound(Sound5);    set.view(o3, View71);    v58 = 20;    set(f31);    sound(Sound5, f169);    }  else
+    {    load.view(View74);    set.view(o3, View74);    }  animate.obj(o3);  draw.pic(currentRoom);  position(o3, 25, 90);  draw(o3);  stop.motion(o3);  position(ego, 14, 157);  draw(ego);  show.pic();  if (isset(f31))
+    {    print("Oh dear! A wolf in grandma's clothing is in the bed! Get out of "          "there, fast!");    }  else
+    {    stop.update(o3);    }  }if (!isset(f31))
+  {  goto(Label1);  }--v58;if (v58 == 1)
+  {  set.view(o3, View72);  work = 3;  step.size(o3, work);  v105 = 0;  v106 = 18;  reposition(o3, v105, v106);  start.motion(o3);  follow.ego(o3, 7, f32);  }if (isset(f33))
+  {  reset(f33);  print("The wolf pounces on you! My, what big TEETH he has! Good enough to eat "        "you with, my dear.");  set(certain.death);  }if (isset(f32))
+  {  reset(f32);  erase(o3);  set.view(ego, View73);  set(keep.cycling);  start.cycling(ego);  set(f33);  program.control();  stop.motion(ego);  }goto(Label2);Label1:if (isset(haveInput) &&     !isset(haveMatch) &&     !posn(ego, 22, 102, 62, 117))
+  {  if ((said("give", "anyword", "bitch") ||       said("look under", "bed") ||       said("feed", "anyword", "bitch")))
+    {    print("You are too far away.");    goto(Label2);    }  else
+    {    reset(haveMatch);    }  }if ((said("check out", "antique shop") ||     said("check out", "area") ||     said("check out")))
+  {  print("This is the home of Grandma. It is comfortably furnished. Frilly "        "curtains cover the windows. Flowers are in vases. Grandma is lying on "        "a brass bed in a cloud of pillows and coverlets.");  }if (said("check out", "bitch"))
+  {  print("Grandma looks pale and weak. She must be ailing. She is dressed in a "        "warm flannel nightgown. White curls peek out from under a flannel "        "nightcap.");  }if (said("check out", "bed"))
+  {  print("Grandma is lying in an elegant brass bed. Mounds of pillows and "        "blankets surround her.");  }if (said("check out", "window"))
+  {  print("You can see the woods when you look out the window.");  }if ((said("speak", "bitch") ||     said("hello", "anyword") ||     said("say", "hello")))
+  {  if (isset(f98))
+    {    print("\"Thank you for your generosity, good sir,\" Grandma says. \"The "          "chicken soup has warmed my poor old bones.\"");    }  else
+    {    print("Grandma is very weak. Her voice wavers as she says, \"Good day, kind "          "sir. I would like to offer you a cup of tea, but as you can see, I "          "am ailing.\"");    }  }if (said("anyword", "door"))
+  {  print("The door is already open.");  }if ((said("acquire", "bitch") ||     said("capture", "bitch")))
+  {  print("That wouldn't be very nice.");  }if (said("kill", "bitch"))
+  {  print("You are supposed to be the good guy. Good guys don't kill kindly "        "little old grandmas.");  }if ((said("kiss", "bitch") ||     said("embrace", "bitch")))
+  {  print("Watch it! Whatever she has might be catching.");  }if ((said("aid", "bitch") ||     said("acquire", "aid", "bitch")))
+  {  print("What would you like to do for poor sick old Grandma?");  }if ((said("give", "broth", "bitch") ||     said("give", "bitch", "broth") ||     said("feed", "broth", "bitch") ||     said("feed", "bitch", "broth")))
+  {  if (has("Chicken Soup"))
+    {    print("You feed the hot chicken soup to ailing Grandma. \"I feel much "          "better,\" she says. \"In return for your kindness, I have something "          "for you. Look under the bed.\"");    drop("Chicken Soup");    currentScore  += 2;    set(f98);    }  else
+    {    print("You don't have it.");    }  }else
+  {  if ((said("give", "ham", "bitch") ||       said("give", "bitch", "ham") ||       said("feed", "ham", "bitch") ||       said("feed", "bitch", "ham")))
+    {    if (has("Ham"))
+      {      print("Grandma shakes her head. \"I can't chew ham. It is too tough for "            "my teeth.\"");      }    else
+      {      print("You don't have it.");      }    }  else
+    {    if ((said("give", "basket", "bitch") ||         said("give", "bitch", "basket") ||         said("feed", "basket", "bitch") ||         said("feed", "bitch", "basket")))
+      {      if (has("Basket of Goodies"))
+        {        print("Grandma looks at the basket of goodies. \"This belongs to my "              "granddaughter,\" she declares. \"You ought to return it to "              "her.\"");        }      else
+        {        if (has("Empty Basket"))
+          {          print("The basket is empty because you ate all the goodies. What "                "would Grandma do with an empty basket?");          }        else
+          {          print("You don't have it.");          }        }      }    else
+      {      if ((said("give", "bouquet", "bitch") ||           said("give", "bitch", "bouquet") ||           said("give", "blossom", "bitch") ||           said("give", "bitch", "blossom")))
+        {        if (has("Bouquet of Flowers"))
+          {          print("\"Thank you for your kind offer of flowers, but I already have "                "enough flowers around the house,\" Grandma says.");          }        else
+          {          print("You don't have it.");          }        }      else
+        {        if ((said("give", "treasure", "bitch") ||             said("give", "bitch", "treasure") ||             said("give", "diamond and sapphire tiara", "bitch") ||             said("give", "bitch", "diamond and sapphire tiara") ||             said("give", "bracelet", "bitch") ||             said("give", "bitch", "bracelet") ||             said("give", "earrings", "bitch") ||             said("give", "bitch", "earrings") ||             said("give", "brooch", "bitch") ||             said("give", "bitch", "brooch") ||             said("give", "diamond and sapphire necklace", "bitch") ||             said("give", "bitch", "diamond and sapphire necklace")))
+          {          if ((has("Tiara") ||               has("Bracelet") ||               has("Earrings") ||               has("Brooch") ||               has("Necklace")))
+            {            print("Grandma shakes her head. \"I don't need treasures to be "                  "happy,\" she declares. You keep it.\"");            }          else
+            {            print("You don't have it.");            }          }        else
+          {          if ((said("give", "anyword", "bitch") ||               said("give", "bitch", "anyword")))
+            {            print("Grandma appears not to be interested in it.");            }          else
+            {            if (said("give", "anyword"))
+              {              print("You must specify who you wish to give it to.");              }            else
+              {              if (said("feed", "anyword"))
+                {                print("You must specify who you wish to feed it to.");                }              }            }          if (said("look under", "bed"))
+            {            if (!isset(f99))
+              {              if (isset(f98))
+                {                print("You drop to your hands and knees and peer under the bed. "                      "A large ruby ring and a black cloak are hidden there. "                      "You take them into your possession.");                set(f99);                get("Ruby Ring");                get("Black Cloak");                currentScore  += 4;                }              else
+                {                print("It would not be polite to do that.");                }              }            else
+              {              print("You peek under the bed but see only dust.");              }            }          if (said("check out", "carpet"))
+            {            print("The colorful rug appears to have been handmade.");            }          }        }      }    }  }Label2:if (edgeEgoHit == BOTTOM_EDGE &&     !isset(f33))
+  {  position(ego, 80, 110);  new.room(Logic3);  }return();[ Messages#message 1 "The wolf pounces on you! My, what big TEETH he has! Good enough to eat you with, my dear."#message 2 "Oh dear! A wolf in grandma's clothing is in the bed! Get out of there, fast!"#message 3 "This is the home of Grandma. It is comfortably furnished. Frilly curtains cover the windows. Flowers are in vases. Grandma is lying on a brass bed in a cloud of pillows and coverlets."#message 4 "Grandma looks pale and weak. She must be ailing. She is dressed in a warm flannel nightgown. White curls peek out from under a flannel nightcap."#message 5 "Grandma is lying in an elegant brass bed. Mounds of pillows and blankets surround her."#message 6 "You can see the woods when you look out the window."#message 7 "Grandma is very weak. Her voice wavers as she says, \"Good day, kind sir. I would like to offer you a cup of tea, but as you can see, I am ailing.\""#message 8 "The door is already open."#message 9 "That wouldn't be very nice."#message 10 "You are supposed to be the good guy. Good guys don't kill kindly little old grandmas."#message 11 "Watch it! Whatever she has might be catching."#message 12 "What would you like to do for poor sick old Grandma?"#message 13 "You feed the hot chicken soup to ailing Grandma. \"I feel much better,\" she says. \"In return for your kindness, I have something for you. Look under the bed.\""#message 14 "You don't have it."#message 15 "Grandma shakes her head. \"I can't chew ham. It is too tough for my teeth.\""#message 16 "Grandma looks at the basket of goodies. \"This belongs to my granddaughter,\" she declares. \"You ought to return it to her.\""#message 17 "\"Thank you for your kind offer of flowers, but I already have enough flowers around the house,\" Grandma says."#message 18 "Grandma shakes her head. \"I don't need treasures to be happy,\" she declares. You keep it.\""#message 19 "Grandma appears not to be interested in it."#message 20 "You drop to your hands and knees and peer under the bed. A large ruby ring and a black cloak are hidden there. You take them into your possession."#message 21 "It would not be polite to do that."#message 22 "You peek under the bed but see only dust."#message 23 "\"Thank you for your generosity, good sir,\" Grandma says. \"The chicken soup has warmed my poor old bones.\""#message 24 "The basket is empty because you ate all the goodies. What would Grandma do with an empty basket?"#message 25 "You are too far away."#message 26 "The colorful rug appears to have been handmade."#message 27 "You must specify who you wish to give it to."#message 28 "You must specify who you wish to feed it to."

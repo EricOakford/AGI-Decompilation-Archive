@@ -1,0 +1,3 @@
+if (isset(newRoom))
+  {  load.logics(Logic167);  load.view(View80);  load.view(View81);  load.view(View82);  load.view(View86);  load.view(View104);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic167);  position(ego, 95, 37);  draw(ego);  show.pic();  }if (edgeEgoHit == TOP_EDGE)
+  {  get.posn(ego, v105, v106);  v105 -= 40;  position.v(ego, v105, v106);  }call(Logic167);return();[ Messages

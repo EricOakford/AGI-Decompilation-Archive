@@ -1,0 +1,20 @@
+if (isset(newRoom))
+  {  load.view(View8);  load.sound(Sound29);  load.pic(currentRoom);  draw.pic(currentRoom);  if (isset(ego.fell))
+    {    set(f32);    set(f31);    ignore.blocks(ego);    ignore.horizon(ego);    set.priority(ego, 9);    v106 = 30;    position.v(ego, v74, v106);    v106 = 200;    v108 = 5;    animationInterval = 2;    move.obj.v(ego, v74, v106, v108, f169);    }  else
+    {    if (previousRoom == 91)
+      {      position(ego, 75, 50);      set.loop(ego, 1);      start.motion(ego);      }    else
+      {      position(ego, 75, 137);      set.loop(ego, 1);      start.motion(ego);      }    }  draw(ego);  show.pic();  }get.posn(ego, v105, v106);if (!isset(ego.fell))
+  {  if (v106 < 80)
+    {    release.priority(ego);    }  else
+    {    set.priority(ego, 13);    }  }else
+  {  if (isset(f32))
+    {    if (isset(f31))
+      {      sound(Sound29, f31);      }    }  goto(Label1);  }if (isset(egoHitSpecial))
+  {  set(f32);  set(f31);  ignore.blocks(ego);  set(keep.cycling);  set(ego.fell);  set.priority(ego, 9);  set.view(ego, View8);  work = 2;  cycle.time(ego, work);  work = 3;  step.size(ego, work);  print("You lost your footing on the narrow stairway.");  get.posn(ego, v105, v106);  v106 = 200;  animationInterval = 2;  v108 = 5;  move.obj.v(ego, v105, v106, v108, f169);  v74 = v105;  }if (!isset(haveInput))
+  {  goto(Label1);  }if ((said("check out") ||     said("check out", "swim") ||     said("check out", "antique shop")))
+  {  print("Wooden steps spiral up the white tower. The entrance to the tower is "        "at the bottom of the stairs.");  }if (said("check out", "stairs"))
+  {  print("The wooden steps spiral dizzily upward.");  }if ((said("check out", "window") ||     said("look up", "window")))
+  {  print("You see the strange island surrounded by the colorful sea.");  }Label1:get.posn(ego, v105, v106);if (v106 < 50 &&     !isset(ego.fell))
+  {  release.priority(ego);  new.room(Logic91);  }if ((edgeEgoHit == BOTTOM_EDGE ||     v106 > 137))
+  {  if (!isset(ego.fell))
+    {    set.view(ego, View0);    }  new.room(Logic93);  }return();[ Messages#message 1 "Wooden steps spiral up the white tower. The entrance to the tower is at the bottom of the stairs."#message 2 "The wooden steps spiral dizzily upward."#message 3 "You lost your footing on the narrow stairway."#message 4 "You see the strange island surrounded by the colorful sea."

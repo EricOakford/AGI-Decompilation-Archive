@@ -1,0 +1,8 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  load.view(View8);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(Logic154);  load.logics(Logic155);  load.logics(lgc.mountainside);  call(Logic154);  call(lgc.mountainside);  draw.pic(currentRoom);  if (previousRoom == 49)
+    {    position(ego, 95, 38);    }  draw(ego);  show.pic();  }if ((said("check out", "canyon") ||     said("check out", "area") ||     said("check out")))
+  {  print("A deep chasm wanders off to the north.");  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic6);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic49);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic14);  }call(Logic154);call(Logic155);call(lgc.mountainside);return();[ Messages#message 1 "There are many lovely pine and spruce trees near these mountains."#message 2 "The mountain range is wild and rugged. It would be impossible to cross, unless you could fly like a bird."#message 3 "A deep chasm wanders off to the north."

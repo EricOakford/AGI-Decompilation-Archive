@@ -1,0 +1,6 @@
+if (isset(newRoom))
+  {  load.logics(Logic169);  load.logics(Logic170);  call(Logic169);  call(Logic170);  }if (isset(egoHitSpecial) &&     !isset(f94))
+  {  set(f94);  v63 = 1;  get.posn(ego, temp.x, temp.y);  temp.x -= 20;  if (temp.y < 162)
+    {    temp.y  += 6;    }  else
+    {    temp.y = 167;    }  }if (!isset(newRoom))
+  {  call(Logic169);  call(Logic170);  }return();[ Messages

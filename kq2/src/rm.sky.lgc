@@ -1,0 +1,6 @@
+if (isset(newRoom))
+  {  load.view(View98);  load.pic(currentRoom);  draw.pic(currentRoom);  if (previousRoom < 50)
+    {    position(ego, 0, 100);    move.obj(ego, 137, 100, 0, f31);    set.loop(ego, 0);    }  else
+    {    position(ego, 137, 100);    move.obj(ego, 0, 100, 0, f32);    set.loop(ego, 1);    }  work = 2;  cycle.time(ego, work);  step.size(ego, work);  draw(ego);  show.pic();  }if (isset(f31))
+  {  set.view(ego, View0);  work = 1;  cycle.time(ego, work);  step.size(ego, work);  new.room(Logic55);  }if (isset(f32))
+  {  set.view(ego, View0);  work = 1;  cycle.time(ego, work);  step.size(ego, work);  new.room(Logic20);  }return();[ Messages

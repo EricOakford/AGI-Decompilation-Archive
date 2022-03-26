@@ -1,0 +1,31 @@
+if (isset(f64))
+  {  goto(Label1);  }if ((currentRoom == 14 ||     currentRoom == 37 ||     currentRoom == 38))
+  {  if ((said("check out", "area") ||       said("check out")))
+    {    print("What a lovely little lake! Its sparkling water looks so clean and "          "fresh. An unclimable cliff rises abruptly to the east.");    }  if (said("check out", "lake"))
+    {    print("What a lovely little lake! Its sparkling water looks so clean and "          "fresh.");    }  }if (currentRoom != 13)
+  {  if ((said("check out", "lake") ||       said("check out") ||       said("check out", "area")))
+    {    print("What a lovely little lake! Its sparkling water looks so clean and "          "fresh.");    }  }if (said("enter", "lake"))
+  {  print("Do you want to swim in the lake?");  }if (said("acquire", "lake"))
+  {  print("There is no reason for you to obtain water. Why don't you just drink "        "some water if you are really that thirsty?");  }if (drown.swim > 0 &&     said("look under", "lake"))
+  {  print("You dip your head under the clear blue water. You see the bottom of "        "the lake.");  }if ((said("acquire", "drink") ||     said("drink", "lake")))
+  {  if (currentRoom == 9 &&       (posn(ego, 0, 42, 79, 145) ||       posn(ego, 80, 36, 159, 145)))
+    {    print("Ahhhhh! The clear lake water is so refreshing.");    }  else
+    {    if (currentRoom == 10 &&         posn(ego, 0, 0, 58, 95))
+      {      print("Ahhhhh! The clear lake water is so refreshing.");      }    else
+      {      if (currentRoom == 12 &&           (posn(ego, 100, 61, 130, 104) ||           posn(ego, 131, 52, 159, 120)))
+        {        print("Ahhhhh! The clear lake water is so refreshing.");        }      else
+        {        if (currentRoom == 13 &&             (posn(ego, 0, 46, 62, 145) ||             posn(ego, 63, 28, 159, 143)))
+          {          print("Ahhhhh! The clear lake water is so refreshing.");          }        else
+          {          if (currentRoom == 14 &&               posn(ego, 0, 86, 83, 138))
+            {            print("Ahhhhh! The clear lake water is so refreshing.");            }          else
+            {            if (currentRoom == 33 &&                 posn(ego, 126, 53, 159, 117))
+              {              print("Ahhhhh! The clear lake water is so refreshing.");              }            else
+              {              if (currentRoom == 34 &&                   (posn(ego, 0, 30, 75, 117) ||                   posn(ego, 76, 31, 159, 136)))
+                {                print("Ahhhhh! The clear lake water is so refreshing.");                }              else
+                {                if (currentRoom == 35 &&                     posn(ego, 0, 75, 50, 127))
+                  {                  print("Ahhhhh! The clear lake water is so refreshing.");                  }                else
+                  {                  if (currentRoom == 37 &&                       (posn(ego, 44, 27, 159, 81) ||                       posn(ego, 63, 82, 159, 160)))
+                    {                    print("Ahhhhh! The clear lake water is so refreshing.");                    }                  else
+                    {                    if (currentRoom == 38 &&                         posn(ego, 0, 33, 109, 167))
+                      {                      print("Ahhhhh! The clear lake water is so refreshing.");                      }                    else
+                      {                      print("You need to be a little closer to drink the water.");                      }                    }                  }                }              }            }          }        }      }    }  }Label1:return();[ Messages#message 1 "What a lovely little lake! Its sparkling water looks so clean and fresh."#message 2 "Do you want to swim in the lake?"#message 3 "There is no reason for you to obtain water. Why don't you just drink some water if you are really that thirsty?"#message 4 "Ahhhhh! The clear lake water is so refreshing."#message 5 "You need to be a little closer to drink the water."#message 6 "You dip your head under the clear blue water. You see the bottom of the lake."#message 7 "What a lovely little lake! Its sparkling water looks so clean and fresh. An unclimable cliff rises abruptly to the east."

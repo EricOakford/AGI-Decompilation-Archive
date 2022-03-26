@@ -1,0 +1,55 @@
+if (isset(newRoom))
+  {  if (isset(f100))
+    {    reset(f34);    reset(f32);    }  else
+    {    set(f34);    set(f32);    }  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.sound(Sound6);  load.view(View101);  load.view(View91);  if (!isset(f100))
+    {    load.view(View75);    animate.obj(o2);    work = 3;    cycle.time(o2, work);    set.view(o2, View75);    set.cel(o2, 0);    position(o2, 70, 81);    }  if (!isset(f100))
+    {    draw(o2);    stop.cycling(o2);    }  position(ego, 70, 167);  egoDir = UP;  draw(ego);  show.pic();  sound(Sound6, f169);  }if ((!isset(haveInput) ||     isset(haveMatch)))
+  {  goto(Label1);  }if (!isset(haveMatch) &&     isset(f38) &&     said("anyword", "anyword"))
+  {  if (isset(f37))
+    {    if ((said("pray", "anyword") ||         said("pray")))
+      {      print("You already are.");      }    else
+      {      print("Please be quiet while praying.");      }    }  else
+    {    if ((said("pray", "anyword") ||         said("pray")))
+      {      reset(haveMatch);      }    else
+      {      if (said("bow", "anyword"))
+        {        print("You already are.");        }      else
+        {        print("You should not talk while kneeling at the altar. It shows a lack "              "of respect.");        }      }    }  if (isset(haveMatch))
+    {    [ WARNING: this block contains no commands    }  }if ((said("check out", "antique shop") ||     said("check out") ||     said("check out", "area")))
+  {  if (isset(f100))
+    {    print("The chapel of the monastery is plain and unadorned. Rows of pews "          "lead toward an altar, which is topped by a large cross.");    }  else
+    {    if (!isset(f32))
+      {      print("The chapel of the monastery is plain and unadorned. A monk in "            "simple clothing is standing next to the altar. He looks kindly at "            "you.");      }    else
+      {      print("The chapel of the monastery is plain and unadorned. A monk in "            "simple clothing is bent in prayer toward the cross on the altar.");      }    }  }if (!has("Cross") &&     (said("check out", "cross") ||     said("look up", "cross")))
+  {  print("The wooden cross is plain and simple. An altar of polished oak "        "supports it.");  }if (said("check out", "altar"))
+  {  print("There is a large wooden cross atop the oaken altar.");  }if (!posn(ego, 50, 81, 92, 83) &&     (said("bow", "anyword") ||     said("pray", "anyword") ||     said("pray")))
+  {  if (isset(f34))
+    {    print("Come, join me at the altar, my friend, says the monk.");    }  else
+    {    print("Shouldn't you go to the altar to pray?");    }  }else
+  {  if ((said("pray") ||       said("pray", "anyword")))
+    {    if (!isset(f154))
+      {      set(f154);      currentScore  += 2;      }    start.cycling(ego);    set(keep.cycling);    print("You kneel near the altar. Bowing your head, you pray.");    set(f37);    if (!isset(f38))
+      {      set.view(ego, View101);      end.of.loop(ego, f31);      work = 4;      cycle.time(o2, work);      }    set(f38);    set(f36);    }  if (said("bow", "anyword"))
+    {    start.cycling(ego);    set(keep.cycling);    print("You kneel near the altar. You look up at the wooden cross.");    set.view(ego, View101);    work = 4;    cycle.time(o2, work);    end.of.loop(ego, f31);    set(f38);    }  }if (has("Cross") &&     said("acquire", "cross"))
+  {  print("You already have a cross.");  }if (!isset(f34))
+  {  if (said("anyword", "count dracula"))
+    {    print("You are the only one in the chapel.");    }  }else
+  {  if (said("check out", "count dracula"))
+    {    print("The monk is dressed in a simple ankle-length robe. A belt of thin "          "leather is tied around his ample waist. He walks on worn sandals.");    }  if ((said("acquire", "count dracula") ||       said("capture", "count dracula")))
+    {    print("What do you think you would accomplish by doing that?");    }  if (said("kill", "count dracula"))
+    {    print("Anyone who would kill a man of the cloth doesn't deserve to play "          "this game. Therefore, we will end it.");    set.view(ego, View91);    set(certain.death);    }  if ((said("speak", "count dracula") ||       said("hello", "anyword") ||       said("say", "hello")))
+    {    if (isset(f32))
+      {      print("You speak to the praying monk but he does not respond. He seems "            "deep in worship.");      }    else
+      {      print("Can I be of service? the monk asks. What name do you go by?");      }    }  if (said("yell", "count dracula") &&       isset(f32))
+    {    print("You shout at the praying monk. He pays no attention. The monk is "          "deep in prayer.");    }  if (!isset(f100) &&       !isset(f32) &&       (said("graham") ||       said("my name", "graham")))
+    {    print("The kindly monk explains that he has heard of you and your quest. "          "Here is my cross. It will protect you from evil, he says. He removes "          "a chain with a silver cross from around his neck and gives it to "          "you. The monk then resumes his prayers.");    get("Cross");    currentScore  += 2;    reverse.loop(o2, f169);    set(f100);    set(f32);    reset(f33);    }  if (said("sit", "anyword"))
+    {    print("You don't have time to sit around.");    }  if (said("pat", "count dracula"))
+    {    distance(ego, o2, work);    if (work > 20)
+      {      print("Your arms will not reach.");      }    else
+      {      print("You tap the monk on his shoulder but it does no good. He is very "            "deep in prayer.");      }    }Label1:  if (isset(f33) &&       isset(f32) &&       !isset(f100))
+    {    start.cycling(o2);    end.of.loop(o2, f169);    print("The plump monk lifts his head from prayer and seems to notice you "          "for the first time. He stands and asks your name.");    reset(f32);    }  }if (isset(f31))
+  {  reset(keep.cycling);  reset(f31);  v58 = 30;  }if (v58 > 0)
+  {  stop.cycling(ego);  }--v58;if (v58 == 1)
+  {  set(keep.cycling);  reverse.loop(ego, f35);  }if (isset(f35))
+  {  reset(f35);  reset(keep.cycling);  reset(f37);  reset(f38);  set.view(ego, View0);  work = 1;  cycle.time(o2, work);  set.loop(ego, 3);  player.control();  if (isset(f36))
+    {    set(f33);    reset(f36);    }  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic6);  }return();[ Messages#message 1 "The chapel of the monastery is plain and unadorned. Rows of pews lead toward an altar, which is topped by a large cross."#message 2 "The chapel of the monastery is plain and unadorned. A monk in simple clothing is bent in prayer toward the cross on the altar."#message 3 "The chapel of the monastery is plain and unadorned. A monk in simple clothing is standing next to the altar. He looks kindly at you."#message 4 "The monk is dressed in a simple ankle-length robe. A belt of thin leather is tied around his ample waist. He walks on worn sandals."#message 5 "What do you think you would accomplish by doing that?"#message 6 "Anyone who would kill a man of the cloth doesn't deserve to play this game. Therefore, we will end it."#message 7 "You speak to the praying monk but he does not respond. He seems deep in worship."#message 8 "Can I be of service? the monk asks. What name do you go by?"#message 9 "Please be quiet while praying."#message 10 "You shout at the praying monk. He pays no attention. The monk is deep in prayer."#message 11 "There is a large wooden cross atop the oaken altar."#message 12 "The wooden cross is plain and simple. An altar of polished oak supports it."#message 13 "You kneel near the altar. You look up at the wooden cross."#message 14 "You kneel near the altar. Bowing your head, you pray."#message 15 "The plump monk lifts his head from prayer and seems to notice you for the first time. He stands and asks your name."#message 16 "The kindly monk explains that he has heard of you and your quest. Here is my cross. It will protect you from evil, he says. He removes a chain with a silver cross from around his neck and gives it to you. The monk then resumes his prayers."#message 17 "You are the only one in the chapel."#message 18 "Come, join me at the altar, my friend, says the monk."#message 19 "It doesn't work. The monk is deep in prayer."#message 20 "You don't have time to sit around."#message 21 "You tap the monk on his shoulder but it does no good. He is very deep in prayer."#message 22 "Shouldn't you go to the altar to pray?"#message 23 "Your arms will not reach."#message 24 "You should not talk while kneeling at the altar. It shows a lack of respect."#message 25 "You already are."#message 26 "You already have a cross."

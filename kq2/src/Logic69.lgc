@@ -1,0 +1,84 @@
+if (isset(newRoom))
+  {  reset(hag.in.room);  load.view(View115);  load.view(View63);  load.view(View67);  load.view(View68);  load.view(View69);  load.view(View70);  load.view(View26);  load.view(View25);  load.view(View164);  load.view(View64);  load.sound(Sound22);  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o2);  work = 3;  cycle.time(o2, work);  step.size(o2, work);  animate.obj(o3);  start.cycling(o3);  work = 2;  cycle.time(o3, work);  animate.obj(o4);  if (previousRoom == 44)
+    {    position(ego, 1, 119);    }  if (isset(f103))
+    {    program.control();    set.view(o2, View115);    position(o2, 80, 115);    reverse.loop(o2, f36);    draw(o2);    position(o3, 80, 120);    work = 2;    cycle.time(o3, work);    set.view(o3, View69);    draw(o3);    }  else
+    {    random(0, 255, v69);    if ((v69 > 205 ||         isset(hag.in.room) ||         fairy.spell.timer.2 > 0))
+      {      set.view(o3, View69);      position(o3, 80, 120);      draw(o3);      reset(f31);      reset(hag.in.room);      }    else
+      {      set(f31);      stop.motion(o2);      work = 2;      cycle.time(o2, work);      set.view(o2, View68);      position(o2, 80, 120);      draw(o2);      }    draw(ego);    }  position(o4, 100, 100);  if (!isset(f104))
+    {    if (v65 == 2)
+      {      set.view(o4, View70);      }    else
+      {      if (isset(f135))
+        {        set.view(o4, View164);        }      else
+        {        work = 2;        cycle.time(o4, work);        set.view(o4, View63);        }      }    draw(o4);    }  show.pic();  }if (v33 == 1)
+  {  get.posn(o5, v105, v106);  if (v105 < 53)
+    {    set.priority(o5, 10);    v33 = 2;    }  }if (!isset(haveInput))
+  {  goto(Label1);  }if (!isset(f31) &&     said("anyword", "bitch"))
+  {  print("She's not here.");  }else
+  {  if ((said("kiss", "bitch") ||       said("embrace", "bitch")))
+    {    print("Smack, hug, woopie!, yuck, barf, gag.");    }  if ((said("check out", "cauldron") ||       said("look in", "cauldron") ||       said("check out", "cauldron") ||       said("look in", "cauldron")))
+    {    print("The iron cauldron is bubbling with a nasty smelling brew. A hot fire "          "burns underneath.");    }  if (said("check out", "brew"))
+    {    print("The brew in the iron cauldron is a sickly yellow color. Hot steam "          "rises from it. The odor is almost unbearable. You believe it to be a "          "broth made from human flesh and bone.");    }  if ((said("drink", "brew") ||       said("consume", "brew") ||       said("smell", "brew")))
+    {    print("Yuck!!! Don't do that!");    }  if (said("check out", "skull"))
+    {    print("There are many human skulls in Hagatha's cave. She has a taste for "          "human flesh.");    }  if (v33 > 0 &&       said("check out", "bird"))
+    {    print("The nightingale is flying toward the cave entrance.");    }  else
+    {    if (!isset(f104) &&         (said("check out", "bird") ||         said("check out", "bird cage")))
+      {      if (isset(f135))
+        {        print("It's just an empty birdcage.");        }      else
+        {        print("The beautiful nightingale is in a gilded cage.");        }      }    }  if ((said("check out", "area") ||       said("look in", "area") ||       said("check out", "area") ||       said("check out")))
+    {    if (isset(f31))
+      {      if (isset(f104))
+        {        print("You look around this dreary cave. Fear grips you as you notice "              "human skulls lining the wall. Hagatha is busily stirring her "              "brew and muttering to herself. As she has very bad eyesight, she "              "hasn't noticed you.");        }      else
+        {        if (isset(f135))
+          {          print("You look around this dreary cave. Fear grips you as you notice "                "human skulls lining the wall. Hagatha is busily stirring her "                "brew and muttering to herself. As she has very bad eyesight, "                "she hasn't noticed you. You see a gilded cage.");          }        else
+          {          print("You look around this dreary cave. Fear grips you as you notice "                "human skulls lining the wall. Hagatha is busily stirring her "                "brew and muttering to herself. As she has very bad eyesight, "                "she hasn't noticed you. You see a nightingale in a gilded "                "cage.");          }        }      }    else
+      {      if (isset(f104))
+        {        print("You look around this dreary cave. Fear grips you as you notice "              "human skulls lining the wall. A cauldron with a bubbling brew "              "fills the cave with a putrid odor.");        }      else
+        {        if (isset(f135))
+          {          print("You look around this dreary cave. Fear grips you as you notice "                "human skulls lining the wall. A cauldron with a bubbling brew "                "fills the cave with a putrid aroma. You see a gilded cage.");          }        else
+          {          print("You look around this dreary cave. Fear grips you as you notice "                "human skulls lining the wall. A cauldron with a bubbling brew "                "fills the cave with a putrid aroma. You see a nightingale in a "                "gilded cage.");          }        }      }    }  if (v65 != 2 &&       !isset(f104) &&       !isset(f135) &&       said("listen", "bird"))
+    {    print("The nightingale flits about in the gilded cage; not making a sound.");    }  if (said("check out", "bitch"))
+    {    print("This is the ugliest old lady you have ever seen. She's toothless, "          "with warts all over her face, and she has matted gray hair. She "          "stirs her brew with a stick held by clawlike hands.");    }  if ((isset(f103) ||       isset(f32)))
+    {    goto(Label1);    }  if (v34 <= 0 &&       has("Caged Nightingale") &&       isset(f31) &&       v65 != 2 &&       (said("check out", "bird") ||       said("check out", "bird cage")))
+    {    print("Unfortunately, this alerts the hag to your presence.");    v34 = 1;    }  if (!isset(f104) &&       (said("acquire", "bird") ||       said("acquire", "bird cage")))
+    {    distance(ego, o4, work);    if (work > 20)
+      {      print("You'll have to go closer!");      }    else
+      {      set(f104);      erase(o4);      if (isset(f135))
+        {        get("Empty Birdcage");        print("You take the cage.");        }      else
+        {        currentScore  += 2;        get("Caged Nightingale");        if (v65 == 2)
+          {          print("Quietly, you pick up the covered birdcage with the "                "nightingale. To your relief, the bird remains silent.");          }        else
+          {          sound(Sound22, f169);          if (v34 <= 0 &&               isset(f31))
+            {            v34 = 1;            print("You quietly pick up the birdcage with the nightingale. "                  "Suddenly, the nightingale bursts out in song, alerting the "                  "old hag to your presence.");            }          else
+            {            print("You pick up the gilded birdcage with the nightingale in it. "                  "The little bird starts singing prettily. A moment later it "                  "stops.");            }          }        }      }    }  if (v34 <= 0 &&       (said("speak", "bitch") ||       said("hello", "anyword") ||       said("say", "hello")))
+    {    print("What a mistake you made!! You gave yourself away! Now Hagatha knows "          "you are here.");    v34 = 1;    }  if ((said("acquire", "bitch") ||       said("capture", "bitch")))
+    {    print("What would you do with her if you had her?");    }  if ((said("kill", "bitch") ||       said("move", "bitch", "cauldron")))
+    {    print("The old hag is stronger than she looks. You shouldn't try it.");    }  if ((said("cover", "bird") ||       said("cover", "bird cage") ||       said("cover", "bird cage", "cloth") ||       said("drop", "black cape", "bird cage") ||       said("drop", "cloth", "bird cage")))
+    {    if (isset(f104))
+      {      print("There is no need for you to do that now.");      }    else
+      {      distance(ego, o4, work);      if (work > 20 &&           (has("Black Cloak") ||           has("Cloth")))
+        {        print("You'll have to go closer!");        goto(Label1);        }      if (has("Black Cloak") &&           (!has("Cloth") ||           said("cover", "anyword", "black cape") ||           said("drop", "black cape")))
+        {        print("You try using the black cloak to cover the birdcage, but it is "              "the wrong shape. It slips off.");        }      else
+        {        if (has("Cloth"))
+          {          if (isset(f135))
+            {            print("OK.");            }          else
+            {            print("You drape the cloth over the birdcage. Hopefully, this will "                  "keep the nightingale quiet.");            if (v65 == 0)
+              {              currentScore  += 2;              }            }          drop("Cloth");          set.view(o4, View70);          v65 = 2;          }        else
+          {          print("You have nothing to cover a birdcage with.");          }        }      }    }  if (v65 == 2 &&       (said("remove", "cloth") ||       said("acquire", "cloth")))
+    {    get("Cloth");    v65 = 1;    if (isset(f135))
+      {      print("OK.");      set.view(o4, View164);      }    else
+      {      work = 2;      cycle.time(o4, work);      set.view(o4, View63);      sound(Sound22, f169);      if (isset(f31))
+        {        print("Without thinking, you remove the cloth from the birdcage. "              "Immediately, the nightingale sings, alerting Hagatha to your "              "presence.");        v34 = 1;        }      }    }  if (!isset(f104) &&       !isset(f135) &&       (said("open", "bird cage") ||       said("let", "bird", "a")))
+    {    distance(ego, o4, work);    if (work > 25)
+      {      print("You'll have to go closer!");      }    else
+      {      set.view(o4, View164);      print("Oh, no! When you opened the cage, the bird flew away.");      set(f135);      v33 = 1;      animate.obj(o5);      position(o5, 95, 100);      work = 2;      cycle.time(o4, work);      work = 3;      step.size(o4, work);      set.view(o5, View64);      ignore.blocks(o5);      ignore.objs(o5);      draw(o5);      move.obj(o5, 0, 80, 0, f37);      }    }  if (said("acquire", "brew"))
+    {    print("You wouldn't want any of Hagatha's brew.");    }  if (said("acquire", "skull"))
+    {    print("Yechhh!!! What a terrible thought!");    }  }Label1:if (isset(f37))
+  {  reset(f37);  v33 = 0;  erase(o5);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic44);  }if (v34 == 1)
+  {  ++v34;  erase(o2);  set.view(o3, View69);  set.view(o2, View26);  position(o3, 80, 120);  position(o2, 80, 115);  draw(o2);  draw(o3);  follow.ego(o2, 5, f32);  }if (isset(f32))
+  {  reset(f32);  print("She grabs you and throws you into her cauldron. She will love to have "        "you for dinner. heh, heh, heh!");  erase(ego);  set.view(o2, View25);  v58 = 20;  set(f34);  }if (isset(f34))
+  {  if (v58 == 1)
+    {    set.view(o2, View115);    set.cel(o2, 0);    end.of.loop(o2, f35);    reset(f34);    }  --v58;  }if (isset(f35))
+  {  reset(f35);  temp.x = 80;  temp.y = 115;  get.posn(o2, v105, v106);  temp.x -= v105;  temp.y -= v106;  reposition(o2, temp.x, temp.y);  reverse.loop(o2, f36);  }if (isset(f36))
+  {  reset(f36);  set.view(o2, View25);  start.cycling(o2);  v59 = 15;  }--v59;if (v59 == 1)
+  {  stop.motion(ego);  erase(o2);  erase(o3);  position(ego, 80, 120);  work = 2;  cycle.time(ego, work);  set.view(ego, View67);  draw(ego);  set(keep.cycling);  v36 = 30;  }--v36;if (v36 == 2)
+  {  set(certain.death);  }return();[ Messages#message 1 "You look around this dreary cave. Fear grips you as you notice human skulls lining the wall. Hagatha is busily stirring her brew and muttering to herself. As she has very bad eyesight, she hasn't noticed you."#message 2 "You look around this dreary cave. Fear grips you as you notice human skulls lining the wall. Hagatha is busily stirring her brew and muttering to herself. As she has very bad eyesight, she hasn't noticed you. You see a nightingale in a gilded cage."#message 3 "You look around this dreary cave. Fear grips you as you notice human skulls lining the wall. A cauldron with a bubbling brew fills the cave with a putrid aroma. You see a nightingale in a gilded cage."#message 4 "You look around this dreary cave. Fear grips you as you notice human skulls lining the wall. A cauldron with a bubbling brew fills the cave with a putrid odor."#message 5 "You quietly pick up the birdcage with the nightingale. Suddenly, the nightingale bursts out in song, alerting the old hag to your presence."#message 6 "Quietly, you pick up the covered birdcage with the nightingale. To your relief, the bird remains silent."#message 7 "This is the ugliest old lady you have ever seen. She's toothless, with warts all over her face, and she has matted gray hair. She stirs her brew with a stick held by clawlike hands."#message 8 "What a mistake you made!! You gave yourself away! Now Hagatha knows you are here."#message 9 "She's not here."#message 10 "What would you do with her if you had her?"#message 11 "Smack, hug, woopie!, yuck, barf, gag."#message 12 "There is no need for you to do that now."#message 13 "You try using the black cloak to cover the birdcage, but it is the wrong shape. It slips off."#message 14 "You drape the cloth over the birdcage. Hopefully, this will keep the nightingale quiet."#message 15 "You have nothing to cover a birdcage with."#message 16 "You pick up the gilded birdcage with the nightingale in it. The little bird starts singing prettily. A moment later it stops."#message 17 "Without thinking, you remove the cloth from the birdcage. Immediately, the nightingale sings, alerting Hagatha to your presence."#message 18 "The iron cauldron is bubbling with a nasty smelling brew. A hot fire burns underneath."#message 19 "The brew in the iron cauldron is a sickly yellow color. Hot steam rises from it. The odor is almost unbearable. You believe it to be a broth made from human flesh and bone."#message 20 "You wouldn't want any of Hagatha's brew."#message 21 "Yuck!!! Don't do that!"#message 22 "There are many human skulls in Hagatha's cave. She has a taste for human flesh."#message 23 "You'll have to go closer!"#message 24 "The beautiful nightingale is in a gilded cage."#message 25 "Oh, no! When you opened the cage, the bird flew away."#message 26 "It's just an empty birdcage."#message 27 "You look around this dreary cave. Fear grips you as you notice human skulls lining the wall. Hagatha is busily stirring her brew and muttering to herself. As she has very bad eyesight, she hasn't noticed you. You see a gilded cage."#message 28 "You look around this dreary cave. Fear grips you as you notice human skulls lining the wall. A cauldron with a bubbling brew fills the cave with a putrid aroma. You see a gilded cage."#message 29 "You take the cage."#message 30 "OK."#message 31 "Unfortunately, this alerts the hag to your presence."#message 32 "The old hag is stronger than she looks. You shouldn't try it."#message 33 "Yechhh!!! What a terrible thought!"#message 34 "The nightingale is flying toward the cave entrance."#message 37 "She grabs you and throws you into her cauldron. She will love to have you for dinner. heh, heh, heh!"#message 38 "The nightingale flits about in the gilded cage; not making a sound."

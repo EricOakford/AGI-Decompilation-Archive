@@ -1,0 +1,17 @@
+if (isset(newRoom))
+  {  set.horizon(0);  load.logics(lgc.dracula);  load.sound(Sound3);  load.view(View134);  if (currentRoom == v92)
+    {    load.view(View51);    load.view(View52);    load.view(View53);    }  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.dracula);  animate.obj(o2);  set.view(o2, View134);  set.priority(o2, 9);  position(o2, 44, 25);  draw(o2);  start.cycling(o2);  animate.obj(o3);  set.view(o3, View134);  set.priority(o3, 9);  position(o3, 108, 25);  draw(o3);  start.cycling(o3);  if (previousRoom == 64)
+    {    position(ego, 125, 123);    }  else
+    {    if (previousRoom == 60)
+      {      position(ego, 23, 123);      }    else
+      {      position(ego, 73, 163);      set.loop(ego, 3);      set.cel(ego, 0);      sound(Sound3, f169);      }    }  draw(ego);  show.pic();  }if (!isset(haveInput))
+  {  goto(Label1);  }if ((said("check out") ||     said("check out", "antique shop") ||     said("check out", "swim")))
+  {  print("This castle is really creepy! Cracks cover the walls, cobwebs fill the "        "corners. A chilly draft runs through the halls.");  }if ((said("check out", "stairs") ||     said("check out", "ramp")))
+  {  print("Through the archway to the west, you see a ramp that spirals up and "        "out of sight.");  }Label1:if (v92 != 5 &&     (isset(egoHitSpecial) ||     edgeEgoHit == BOTTOM_EDGE))
+  {  if ((v92 == 1 ||       v92 == 3))
+    {    v92 = 0;    }  stop.sound();  if (edgeEgoHit == BOTTOM_EDGE)
+    {    new.room(Logic18);    }  else
+    {    get.posn(ego, work, v106);    if (work > 80)
+      {      new.room(Logic64);      }    else
+      {      if (work < 80)
+        {        new.room(Logic60);        }      }    }  }call(lgc.dracula);return();[ Messages#message 1 "This castle is really creepy! Cracks cover the walls, cobwebs fill the corners. A chilly draft runs through the halls."#message 2 "Through the archway to the west, you see a ramp that spirals up and out of sight."

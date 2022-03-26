@@ -1,0 +1,19 @@
+if (isset(newRoom))
+  {  set(f94);  load.view(View14);  load.view(View37);  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o4);  set.view(o4, View37);  ignore.objs(ego);  set.view(ego, View14);  work = 2;  cycle.time(ego, work);  step.size(ego, work);  if (v64 == 4)
+    {    position(ego, 62, 50);    set.loop(ego, 1);    move.obj(ego, 62, 70, 0, f34);    }  else
+    {    position(ego, 0, 100);    move.obj(ego, 38, 100, 0, f35);    }  draw(ego);Label1:  random(0, 255, v32);  if (v32 > 50)
+    {    goto(Label1);    }Label2:  random(0, 255, v33);  if ((v33 > 100 ||       v33 < 60))
+    {    goto(Label2);    }  position.v(o4, v32, v33);  wander(o4);  draw(o4);  show.pic();  }if (isset(f34))
+  {  reset(f34);  if (v64 == 4)
+    {    move.obj(ego, 38, 100, 0, f35);    }  else
+    {    move.obj(ego, 62, 50, 0, f31);    }  }if (isset(f35))
+  {  reset(f35);  if (v64 == 4)
+    {    move.obj(ego, 0, 100, 0, f31);    }  else
+    {    move.obj(ego, 62, 70, 0, f34);    }  }if (isset(f31))
+  {  if (v64 == 4)
+    {    set.view(ego, View0);    new.room(Logic53);    }  else
+    {    set.view(ego, View0);    new.room(Logic15);    }  }if ((said("check out", "lake") ||     said("check out") ||     said("check out", "area") ||     said("look in", "lake")))
+  {  print("The bottom of the sea is teeming with fish and plant life. King "        "Neptune rules this mighty underwater empire.");  }if (said("check out", "dolphin"))
+  {  print("You can see many beautiful creatures at the bottom of the sea.");  }if ((said("acquire", "dolphin") ||     said("capture", "dolphin")))
+  {  print("You are not able to catch fish while riding a magic seahorse. Just "        "enjoy the beauty of the underwater world.");  }if (said("get off", "magic seahorse"))
+  {  print("The magic seahorse helps you breathe underwater. Without it, you would "        "die.");  }return();[ Messages#message 1 "The bottom of the sea is teeming with fish and plant life. King Neptune rules this mighty underwater empire."#message 2 "You can see many beautiful creatures at the bottom of the sea."#message 3 "You are not able to catch fish while riding a magic seahorse. Just enjoy the beauty of the underwater world."#message 4 "The magic seahorse helps you breathe underwater. Without it, you would die."

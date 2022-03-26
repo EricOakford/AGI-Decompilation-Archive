@@ -1,0 +1,19 @@
+if (isset(newRoom))
+  {  load.sound(Sound29);  load.view(View102);  load.view(View8);  load.pic(currentRoom);  draw.pic(currentRoom);  if (previousRoom == 46)
+    {    position(ego, 31, 113);    set.loop(ego, 0);    }  if (previousRoom == 73)
+    {    set.view(ego, View102);    work = 2;    step.size(ego, work);    set(f31);    }  draw(ego);  show.pic();  }if (isset(egoHitSpecial))
+  {  reset(egoHitSpecial);  if (isset(ego.fell))
+    {    goto(Label1);    }  erase(ego);  if (posn(ego, 82, 108, 103, 120))
+    {    if (isset(f31))
+      {      set.view(ego, View0);      work = 1;      step.size(ego, work);      position(ego, 90, 108);      release.priority(ego);      reset(f31);      }    else
+      {      set.view(ego, View102);      work = 2;      step.size(ego, work);      set(f31);      set.priority(ego, 13);      position(ego, 92, 120);      }    }  else
+    {    program.control();    set(keep.cycling);    set.priority(ego, 15);    set.view(ego, View8);    work = 2;    cycle.time(ego, work);    work = 3;    step.size(ego, work);    sound(Sound29, f169);    reset(f31);    set(ego.fell);    get.posn(ego, v105, v106);    v74 = v105;    v106 = 200;    v108 = 5;    animationInterval = 2;    move.obj.v(ego, v105, v106, v108, f169);    }  draw(ego);  }if ((said("look down", "anyword") ||     said("check out", "ladder")))
+  {  print("When you look down, you see the bottom of the ladder in an underground "        "tunnel.");  }if ((said("check out", "antique shop") ||     said("check out") ||     said("check out", "tree") ||     said("check out", "swim")))
+  {  print("This is a room inside the hollowed-out trunk of a large tree. A door "        "goes to the outside. A narrow ladder leads down through a hole in the "        "ground.");  }if ((said("get on", "ladder") ||     said("climb", "ladder")))
+  {  if (!isset(f31))
+    {    print("You can get on the ladder yourself.");    }  else
+    {    print("You are climbing the ladder.");    }  }if (said("check out", "door"))
+  {  print("Through the open door you see the woodland in which this tree grows.");  }if (posn(ego, 30, 0, 30, 167))
+  {  new.room(Logic46);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  if (isset(f31))
+    {    release.priority(ego);    }  new.room(Logic73);  }Label1:return();[ Messages#message 1 "This is a room inside the hollowed-out trunk of a large tree. A door goes to the outside. A narrow ladder leads down through a hole in the ground."#message 2 "When you look down, you see the bottom of the ladder in an underground tunnel."#message 3 "You can get on the ladder yourself."#message 4 "You are climbing the ladder."#message 5 "Through the open door you see the woodland in which this tree grows."

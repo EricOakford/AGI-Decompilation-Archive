@@ -1,0 +1,36 @@
+if (isset(newRoom))
+  {  set(f64);  set.horizon(50);  load.logics(Logic156);  load.logics(Logic101);  load.logics(lgc.thorns);  set(f64);  load.view(View91);  load.view(View104);  load.view(View92);  load.view(View23);  load.view(View24);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic156);  call(Logic101);  animate.obj(o2);  work = 3;  cycle.time(o2, work);  set.priority(o2, 15);  ignore.objs(ego);  if (previousRoom == 18)
+    {    set(f31);    position(ego, 70, 43);    set.view(ego, View0);    set.loop(ego, 2);    position(o2, 66, 165);    set.view(o2, View24);    set.loop(o2, 1);    }  else
+    {    reset(f31);    set.view(ego, View104);    work = 2;    cycle.time(ego, work);    set.view(o2, View23);    set.loop(o2, 1);    position(o2, 66, 167);    move.obj(o2, 66, 165, 0, f34);    }  draw(o2);  if (previousRoom == 18)
+    {    draw(ego);    stop.update(o2);    }  show.pic();  }if (isset(f35))
+  {  reset(f35);  stop.update(o2);  }if (isset(onWater) &&     drown.swim <= 0)
+  {  get.posn(ego, temp.x, temp.y);  if (posn(ego, 52, 147, 76, 161))
+    {    temp.x = 55;    temp.y = 167;    set(f116);    }  if (posn(ego, 77, 147, 113, 167))
+    {    temp.x = 80;    temp.y = 167;    set(f116);    }  }if (isset(f34))
+  {  reset(f34);  set(f31);  stop.cycling(o2);  }if (!isset(f31))
+  {  goto(Label2);  }if (isset(f32))
+  {  goto(Label1);  }if ((said("check out") ||     said("check out", "area")))
+  {  print("The castle looks cold and forbidding. Two dark towers rise on either "        "side of it. The castle is surrounded by deadly thorns and brambles.");  }if ((said("exit", "boat") ||     said("enter", "island") ||     said("exit", "boat") ||     said("climb", "boat")))
+  {  set.view(o2, View24);  set.loop(o2, 1);  stop.cycling(o2);  set(f35);  position(ego, 70, 157);  work = 1;  cycle.time(ego, work);  set.view(ego, View0);  work = 1;  cycle.time(ego, work);  set.loop(ego, 3);  draw(ego);  set(f32);  }else
+  {Label1:  if (said("check out", "count dracula"))
+    {    print("The shrouded ghoul looks very frightening. His hands are little more "          "than claws, and his face is completely hidden inside his hood.");    }  if (said("check out", "antique shop"))
+    {    print("The castle looks cold and forbidding. Two dark towers rise on either "          "side of it. The castle is surrounded by deadly thorns and brambles.");    }  if (said("check out", "island"))
+    {    print("There is a dark castle set in the middle of the dismal island. "          "Thorns and brambles grow everywhere. The stink of the foul lake is "          "oppressive.");    }  if (said("check out", "lake"))
+    {    print("This lake is foul and stinking! It may be poisoned. All vegetation "          "looks dead around it.");    }  if (said("check out", "boat"))
+    {    print("The small wooden rowboat looks rotted from exposure to the poisoned "          "lake.");    }  if ((said("check out", "tree") ||       said("climb", "tree")))
+    {    print("There are no trees on this island. Only brambles and thorns.");    }  if (said("check out", "bush"))
+    {    print("There are no bushes on this island. Only poisoned brambles and "          "thorns.");    }  if (said("cross", "lake") &&       isset(f32))
+    {    print("Do you want to get back in the rowboat?");    }  if ((said("enter", "boat") ||       said("climb", "boat") ||       said("get in", "boat") ||       said("board", "boat") ||       said("get on", "boat")))
+    {    distance(ego, o2, work);    if (work > 30)
+      {      print("You are too far away.");      }    else
+      {      print("You climb into the decrepit rowboat, and the shrouded fiend "            "paddles across the toxic lake to the shore.");      erase(o2);      work = 3;      cycle.time(ego, work);      set.view(ego, View23);      set.loop(ego, 0);      reposition.to(ego, 66, 159);      set(f147);      move.obj(ego, 66, 167, 0, f33);      }    }  if (isset(f33))
+    {    reset(f147);    player.control();    new.room(Logic32);    }  if ((said("speak", "count dracula") ||       said("hello", "anyword") ||       said("say", "hello")))
+    {    print("You are greeted by stony silence from the frightening ghoul.");    }  if (said("acquire", "boat"))
+    {    print("The ghoul will not let you take the boat.");    }  if (said("kill", "count dracula"))
+    {    print("You can't kill something that is already dead.");    }  if ((said("capture", "count dracula") ||       said("acquire", "count dracula")))
+    {    print("It is impossible to catch a ghoul.");    }  if (said("look across", "lake"))
+    {    print("You look longingly at the other side of the toxic lake.");    }  if (said("open", "door"))
+    {    print("You are too far away.");    }  if ((said("give", "count dracula", "anyword") ||       said("give", "anyword", "count dracula")))
+    {    print("The silent fiend slowly shakes his head. He is not interested in it.");    }  }Label2:if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic18);  }call(Logic156);call(Logic101);call(lgc.thorns);return();[ Messages#message 1 "The shrouded ghoul looks very frightening. His hands are little more than claws, and his face is completely hidden inside his hood."#message 2 "The castle looks cold and forbidding. Two dark towers rise on either side of it. The castle is surrounded by deadly thorns and brambles."#message 3 "There is a dark castle set in the middle of the dismal island. Thorns and brambles grow everywhere. The stink of the foul lake is oppressive."#message 4 "This lake is foul and stinking! It may be poisoned. All vegetation looks dead around it."#message 5 "The small wooden rowboat looks rotted from exposure to the poisoned lake."#message 6 "You are too far away."#message 7 "You would be crazy to touch the thorns."#message 8 "The brambles are too thick for the sword to cut through!"#message 9 "There are no trees on this island. Only brambles and thorns."#message 10 "There are no bushes on this island. Only poisoned brambles and thorns."#message 11 "Do you want to get back in the rowboat?"#message 12 "You climb into the decrepit rowboat, and the shrouded fiend paddles across the toxic lake to the shore."#message 13 "You are greeted by stony silence from the frightening ghoul."#message 14 "The ghoul will not let you take the boat."#message 15 "You can't kill something that is already dead."#message 16 "It is impossible to catch a ghoul."#message 17 "You look longingly at the other side of the toxic lake."#message 18 "You are too far away."#message 19 "The silent fiend slowly shakes his head. He is not interested in it."

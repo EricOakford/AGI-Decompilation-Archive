@@ -1,0 +1,15 @@
+if (isset(egoHitSpecial) &&     !isset(ego.falling.chasm))
+  {  if (currentRoom == 48 &&       (posn(ego, 87, 91, 115, 122) ||       isset(f142)))
+    {    goto(Label2);    }  set(ego.falling.chasm);  reset(is.carpet.room);  reset(egoHitSpecial);  set(ego.fell);  ignore.blocks(ego);  set.view(ego, View8);  work = 2;  cycle.time(ego, work);  work = 3;  step.size(ego, work);  get.priority(ego, work);  if (currentRoom == 48 &&       (posn(ego, 12, 63, 45, 71) ||       posn(ego, 46, 114, 75, 119) ||       posn(ego, 70, 142, 99, 143) ||       posn(ego, 102, 158, 113, 167)))
+    {    goto(Label1);    }  if (currentRoom == 41 &&       (posn(ego, 76, 108, 102, 119) ||       posn(ego, 137, 108, 157, 119) ||       posn(ego, 129, 132, 151, 143)))
+    {    goto(Label1);    }  if (currentRoom == 7 &&       (posn(ego, 45, 56, 65, 59) ||       posn(ego, 80, 76, 97, 83)))
+    {    goto(Label1);    }  if (currentRoom == 49 &&       (posn(ego, 18, 134, 32, 143)))
+    {    goto(Label1);    }  --work;Label1:  if (work < 4)
+    {    work = 4;    }  if (currentRoom == 42)
+    {    work = 4;    }  set.priority.v(ego, work);  get.posn(ego, work, v70);  v70 = 167;  v108 = 3;  move.obj.v(ego, work, v70, v108, f120);  v69 = 30;  sound(Sound29, f169);  }Label2:--v69;if ((v69 == 1 ||     isset(f120)))
+  {  reset(f120);  erase(ego);  set(certain.death);  print("Whoops! King Graham has fallen into the chasm, ending his quest.");  }if (currentRoom != 48 &&     currentRoom != 49)
+  {  if ((said("check out", "canyon") ||       said("check out", "area") ||       said("check out")))
+    {    print("Don't get too close to the chasm. You just might fall in!");    }  }if ((said("jump", "across", "canyon") ||     said("jump", "canyon") ||     said("enter", "across", "canyon")))
+  {  print("It would be very hazardous to your health to try a thing like that!");  }if (currentRoom != 48 &&     (said("climb", "canyon") ||     said("cross", "canyon")))
+  {  print("It would be very hazardous to your health to try a thing like that!");  }if (said("look down", "anyword"))
+  {  print("Better be careful. It's a long way down!");  }return();[ Messages#message 1 "Don't get too close to the chasm. You just might fall in!"#message 2 "It would be very hazardous to your health to try a thing like that!"#message 3 "Better be careful. It's a long way down!"#message 4 "Whoops! King Graham has fallen into the chasm, ending his quest."

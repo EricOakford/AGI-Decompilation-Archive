@@ -1,0 +1,50 @@
+if (isset(newRoom))
+  {  reset(f91);  v62 = 0;  if (currentRoom != 15)
+    {    animate.obj(o7);    ignore.blocks(o7);    ignore.objs(o7);    if (currentRoom == 1)
+      {      set.view(o7, View1);      }    if (currentRoom == 8)
+      {      set.view(o7, View122);      position(o7, 6, 113);      }    if (currentRoom == 22)
+      {      set.view(o7, View62);      work = 2;      cycle.time(o7, work);      }    if (currentRoom == 29)
+      {      set.view(o7, View111);      work = 2;      cycle.time(o7, work);      }    if (currentRoom == 36)
+      {      set.view(o7, View96);      }    if (currentRoom == 43)
+      {      set.view(o7, View118);      work = 2;      cycle.time(o7, work);      }    set.cel(o7, 0);    stop.cycling(o7);    draw(o7);    random(5, 80, v62);    reset(f90);    }  return();  }--v62;if (v62 == 1)
+  {  set(f90);  end.of.loop(o7, f91);  if (genie.delay <= 0)
+    {    sound(Sound25, f44);    }  }if (isset(f91))
+  {  reset(f91);  reset(f90);  set.cel(o7, 0);  random(5, 80, v62);  }if (isset(f41))
+  {  --v40;  }if (isset(f41) &&     v40 == 0)
+  {  reset(f41);  print("Ok. You are all through digging. You find nothing.");  start.motion(ego);  }if (isset(f41) &&     egoDir != STOPPED)
+  {  if (!isset(f43))
+    {    set(f43);    print("You can't possibly dig while walking. Stand still.");    }  }if (egoDir == STOPPED &&     isset(f43))
+  {  reset(f43);  }if (said("dig", "anyword"))
+  {  if (egoDir != STOPPED)
+    {    print("You can't possibly dig while walking. Stand still.");    }  else
+    {    printTimeout = 16;    print("Dig...Dig...Dig...");    print("Ok. You are all through digging. You find nothing.");    }  }if (currentRoom != 22 &&     currentRoom != 36)
+  {  if ((said("check out", "beach") ||       said("check out", "area") ||       said("check out")))
+    {    print("The glittering white sand of the beach feels warm from the sun. The "          "azure water of the ocean laps up to its edge.");    }  }if (said("check out", "bush"))
+  {  print("The plants grow well in the moist sea air.");  }if (said("check out", "blossom"))
+  {  print("The flowers are a beautiful contrast to the blue ocean.");  }if (said("acquire", "beach"))
+  {  print("Sifting through the sand, you notice nothing of interest.");  }if ((said("acquire", "blossom") ||     said("acquire", "blossom")))
+  {  print("The flowers are of no interest.");  }if (said("smell", "blossom"))
+  {  print("The flowers give a sweet smell to the air.");  }if ((said("suntan", "anyword") ||     said("anyword", "suntan")))
+  {  print("King Graham is not dressed for tanning.");  }if ((said("drink", "lake") ||     said("acquire", "drink")))
+  {  if (currentRoom == 1 &&       (posn(ego, 0, 0, 57, 61) ||       posn(ego, 0, 62, 81, 101) ||       posn(ego, 0, 102, 75, 117) ||       posn(ego, 0, 118, 68, 137) ||       posn(ego, 0, 138, 60, 157)))
+    {    print("YECCHHH!! You cough and choke from the briny water of the ocean.");    }  else
+    {    if (currentRoom == 8 &&         (posn(ego, 0, 0, 46, 82) ||         posn(ego, 0, 83, 57, 120) ||         posn(ego, 0, 121, 78, 167)))
+      {      print("YECCHHH!! You cough and choke from the briny water of the ocean.");      }    else
+      {      if (currentRoom == 15 &&           (posn(ego, 0, 0, 83, 52) ||           posn(ego, 0, 53, 111, 86) ||           posn(ego, 0, 87, 152, 103) ||           posn(ego, 0, 104, 159, 145) ||           posn(ego, 0, 146, 151, 167)))
+        {        print("YECCHHH!! You cough and choke from the briny water of the ocean.");        }      else
+        {        if (currentRoom == 22 &&             (posn(ego, 0, 0, 72, 82) ||             posn(ego, 0, 83, 91, 167)))
+          {          print("YECCHHH!! You cough and choke from the briny water of the "                "ocean.");          }        else
+          {          if (currentRoom == 29 &&               (posn(ego, 0, 0, 85, 85) ||               posn(ego, 0, 86, 92, 167)))
+            {            print("YECCHHH!! You cough and choke from the briny water of the "                  "ocean.");            }          else
+            {            if (currentRoom == 36 &&                 (posn(ego, 0, 0, 90, 100) ||                 posn(ego, 0, 101, 80, 136) ||                 posn(ego, 0, 137, 66, 167)))
+              {              print("YECCHHH!! You cough and choke from the briny water of the "                    "ocean.");              }            else
+              {              if (currentRoom == 43 &&                   (posn(ego, 0, 0, 93, 51) ||                   posn(ego, 0, 52, 114, 99) ||                   posn(ego, 0, 100, 135, 167)))
+                {                print("YECCHHH!! You cough and choke from the briny water of "                      "the ocean.");                }              else
+                {                print("You need to be a little closer to drink the water.");                }              }            }          }        }      }    }  }if (said("acquire", "lake"))
+  {  print("You have no need to carry water.");  }if (said("check out", "lake"))
+  {  print("The calm water of the clear blue ocean looks inviting.");  }if (said("check out", "wave"))
+  {  print("You see waves crashing upon the rocks.");  }if (said("check out", "tree"))
+  {  print("The leaning palm trees sway in the ocean breeze.");  }if (said("climb", "tree"))
+  {  print("There are nothing but green coconuts in the palm trees and the trees "        "are too slippery to climb.");  }if (drown.swim > 0 &&     said("look under", "lake"))
+  {  print("You dip your head under the ocean water. You see nothing but colorful "        "fish and seaweed.");  }if (!isset(haveMatch) &&     said("climb", "boulder"))
+  {  print("The rocks along the ocean are too dangerous to climb.");  }return();[ Messages#message 1 "The glittering white sand of the beach feels warm from the sun. The azure water of the ocean laps up to its edge."#message 6 "The plants grow well in the moist sea air."#message 7 "The flowers are a beautiful contrast to the blue ocean."#message 10 "Sifting through the sand, you notice nothing of interest."#message 11 "The flowers are of no interest."#message 12 "The flowers give a sweet smell to the air."#message 14 "OK."#message 15 "I thought you wanted to dig?"#message 16 "Ok. You are all through digging. You find nothing."#message 17 "You can't possibly dig while walking. Stand still."#message 18 "King Graham is not dressed for tanning."#message 20 "YECCHHH!! You cough and choke from the briny water of the ocean."#message 21 "You have no need to carry water."#message 22 "The calm water of the clear blue ocean looks inviting."#message 23 "You see waves crashing upon the rocks."#message 24 "The leaning palm trees sway in the ocean breeze."#message 27 "There are nothing but green coconuts in the palm trees and the trees are too slippery to climb."#message 29 "You need to be a little closer to drink the water."#message 30 "You dip your head under the ocean water. You see nothing but colorful fish and seaweed."#message 31 "The rocks along the ocean are too dangerous to climb."#message 32 "Dig...Dig...Dig..."

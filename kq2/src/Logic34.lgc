@@ -1,0 +1,25 @@
+if (isset(newRoom))
+  {  load.view(View104);  load.view(View97);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(Logic151);  load.logics(lgc.lake);  load.logics(Logic101);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic101);  ignore.blocks(ego);  get.posn(ego, v105, v106);  if (v105 > 94 &&       v105 < 151 &&       previousRoom == 41)
+    {    v106 = 150;    }  else
+    {    if (v106 < 52 &&         (previousRoom == 33 ||         previousRoom == 35))
+      {      v106 = 52;      }    }  position.v(ego, v105, v106);  draw(ego);  show.pic();  }if (!isset(onWater))
+  {  if ((posn(ego, 106, 67, 136, 112) ||       posn(ego, 86, 80, 135, 105) ||       posn(ego, 70, 46, 97, 64) ||       posn(ego, 70, 65, 98, 99) ||       posn(ego, 35, 92, 67, 103)))
+    {    set(onWater);    set(f116);    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  get.posn(ego, temp.x, temp.y);  if (posn(ego, 125, 43, 131, 48))
+    {    temp.x = 106;    temp.y = 49;    set(f116);    }  if (posn(ego, 93, 43, 124, 48))
+    {    temp.x = 93;    temp.y = 55;    set(f116);    }  if (posn(ego, 67, 45, 92, 52))
+    {    temp.x = 67;    temp.y = 57;    set(f116);    }  if (posn(ego, 39, 45, 66, 52))
+    {    temp.x = 55;    temp.y = 56;    set(f116);    }  if (posn(ego, 39, 53, 57, 61))
+    {    temp.x = 39;    temp.y = 67;    set(f116);    }  if (posn(ego, 18, 58, 38, 66))
+    {    temp.x = 18;    temp.y = 71;    set(f116);    }  if (posn(ego, 0, 59, 17, 67))
+    {    temp.x = 1;    temp.y = 71;    set(f116);    }  if (posn(ego, 98, 53, 108, 65))
+    {    temp.x = 91;    temp.y = 70;    set(f116);    }  if (posn(ego, 109, 49, 126, 54))
+    {    temp.x = 90;    temp.y = 55;    set(f116);    }  if (posn(ego, 0, 91, 159, 127))
+    {    if (posn(ego, 5, 91, 159, 127))
+      {      temp.x  += 251;      }    temp.y  += 248;    set(f116);    }  if (posn(ego, 131, 53, 146, 74))
+    {    temp.x = 118;    temp.y = 70;    set(f116);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic27);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic35);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic33);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic41);  }call(Logic151);call(lgc.lake);call(Logic101);return();[ Messages

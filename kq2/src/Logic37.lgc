@@ -1,0 +1,19 @@
+if (isset(newRoom))
+  {  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.view(View97);  load.view(View104);  load.logics(Logic151);  load.logics(lgc.lake);  load.logics(lgc.hag);  load.logics(Logic101);  load.pic(currentRoom);  call(lgc.hag);  call(Logic101);  draw.pic(currentRoom);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (!isset(onWater))
+  {  if ((posn(ego, 54, 55, 81, 65) ||       posn(ego, 77, 51, 115, 68) ||       posn(ego, 93, 69, 115, 76) ||       posn(ego, 102, 74, 136, 104) ||       posn(ego, 125, 47, 151, 103) ||       posn(ego, 116, 104, 151, 147)))
+    {    set(onWater);    set(f116);    }  }if (drown.swim <= 0 &&     isset(onWater))
+  {  get.posn(ego, temp.x, temp.y);  if (posn(ego, 54, 55, 81, 57))
+    {    temp.x = 0;    temp.y = 2;    set(f116);    }  if (posn(ego, 56, 51, 70, 64))
+    {    temp.x = 61;    temp.y = 64;    set(f116);    }  if (posn(ego, 71, 46, 96, 56))
+    {    temp.x = 79;    temp.y = 59;    set(f116);    }  if (posn(ego, 107, 43, 126, 51))
+    {    temp.x = 104;    temp.y = 55;    set(f116);    }  if (posn(ego, 127, 40, 159, 51))
+    {    temp.x = 130;    temp.y = 55;    set(f116);    }  if (posn(ego, 104, 141, 128, 152))
+    {    temp.x = 105;    temp.y = 142;    set(f116);    }  if (posn(ego, 142, 149, 159, 152))
+    {    temp.x = 139;    temp.y = 144;    set(f116);    }  if (posn(ego, 72, 70, 94, 87))
+    {    temp.x = 86;    temp.y = 83;    set(f116);    }  if (posn(ego, 68, 88, 77, 104))
+    {    temp.x = 76;    temp.y = 95;    set(f116);    }  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic30);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic38);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic36);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic44);  }call(Logic151);call(lgc.lake);call(lgc.hag);call(Logic101);return();[ Messages

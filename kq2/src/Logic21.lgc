@@ -1,0 +1,19 @@
+if (isset(newRoom))
+  {  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.enchanter);  load.logics(lgc.mountainside);  load.logics(Logic151);  load.pic(currentRoom);  call(lgc.enchanter);  draw.pic(currentRoom);  if (previousRoom == 20)
+    {    get.posn(ego, v105, v106);    if (v106 > 72 &&         v106 < 120)
+      {      v106 = 72;      position.v(ego, v105, v106);      }    }  if (previousRoom == 14)
+    {    get.posn(ego, v105, v106);    if (v105 > 84)
+      {      v105 = 84;      v106 = 37;      position.v(ego, v105, v106);      }    }  if (previousRoom == 28)
+    {    get.posn(ego, v105, v106);    if (v105 > 85)
+      {      v105 = 130;      position.v(ego, v105, v106);      }    }  draw(ego);  show.pic();  }if ((said("check out", "antique shop") ||     said("check out", "area") ||     said("check out")))
+  {  print("You are looking at the back of a quaint little antique shop. It is "        "yellow with a bright red roof. There are lovely curtains in the "        "window.");  }if ((said("check out", "window") ||     said("look in", "window")))
+  {  if (posn(ego, 9, 119, 27, 146))
+    {    print("You can see inside when you look through the window. It is hard to "          "tell details, though.");    }  else
+    {    print("You are too far away.");    }  }if (said("break", "window"))
+  {  print("You could get caught for breaking and entering. That would not be "        "wise.");  }if (said("open", "window"))
+  {  print("The window does not open.");  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic14);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic15);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic20);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic28);  }call(lgc.enchanter);call(lgc.mountainside);call(Logic151);return();[ Messages#message 1 "You are looking at the back of a quaint little antique shop. It is yellow with a bright red roof. There are lovely curtains in the window."#message 2 "You can see inside when you look through the window. It is hard to tell details, though."#message 3 "You could get caught for breaking and entering. That would not be wise."#message 4 "You are too far away."#message 5 "The window does not open."

@@ -1,0 +1,9 @@
+if (isset(newRoom))
+  {  load.pic(currentRoom);  load.logics(Logic153);  load.logics(Logic151);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  call(Logic153);  draw.pic(currentRoom);  draw(ego);  show.pic();  }if (said("check out", "fence"))
+  {  print("You see a low white fence.");  }if (said("anyword", "fence") &&     !said("enter", "fence") &&     !said("check out", "fence"))
+  {  print("You should do nothing with the fence!");  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic44);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic3);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic1);  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic9);  }call(Logic153);call(Logic151);return();[ Messages#message 1 "You should do nothing with the fence!"#message 2 "You see a low white fence."

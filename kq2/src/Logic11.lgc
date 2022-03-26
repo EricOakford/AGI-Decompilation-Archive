@@ -1,0 +1,7 @@
+if (isset(newRoom))
+  {  set(f64);  load.view(View104);  load.view(View92);  load.view(View91);  if ((has("Oil Lamp") ||       has("Carpet")))
+    {    load.view(View65);    load.view(View98);    }  load.logics(Logic156);  load.logics(Logic101);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic101);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (edgeEgoHit != NOT_HIT)
+  {  reset(f64);  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic4);  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic12);  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic10);  }call(Logic156);call(Logic101);return();[ Messages

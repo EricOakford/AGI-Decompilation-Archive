@@ -1,0 +1,73 @@
+if (isset(newRoom))
+  {  v84 = 4;  load.logics(lgc.dracula);  load.sound(Sound23);  load.sound(Sound29);  load.view(View109);  load.view(View99);  load.view(View100);  if (v92 > 66)
+    {    load.view(View51);    load.view(View52);    load.view(View53);    animate.obj(o3);    v84 = 1;    }  else
+    {    load.view(View173);    animate.obj(o2);    work = 3;    step.size(o2, work);    object.on.water(o2);    set.view(o2, View173);    }  v33 = 95;  load.pic(v33);  if (previousRoom == 65)
+    {    if (v60 > 0)
+      {      reset(f31);      load.view(View91);      position(ego, 45, 32);      move.obj(ego, 45, 108, 4, f30);      v84 = 1;      }    else
+      {      position(ego, 73, 37);      }    }  else
+    {    position(ego, 11, 150);    }  if (isset(candle.lit))
+    {    v30 = 1;    reset(f162);    load.view(View8);    load.pic(currentRoom);    draw.pic(currentRoom);    discard.pic(currentRoom);    }  else
+    {    v30 = 0;    set(f162);    v84 = 1;    set.view(ego, View99);    draw.pic(v33);    set.priority(ego, 12);    if (v92 > 66)
+      {      set.priority(o3, 4);      }    }  draw(ego);  show.pic();  }if (!isset(f35) &&     isset(f36) &&     (v60 > 0 ||     v31 > 0))
+  {  reset(f36);  sound(Sound29, f31);  }if (v84 == 2)
+  {  random(0, 255, v106);  if (v106 < 125)
+    {    position(o2, 36, 132);    }  else
+    {    position(o2, 96, 129);    }  draw(o2);  ignore.objs(o2);  wander(o2);  v84 = 3;  }else
+  {  random(0, 255, v106);  if (v84 == 4)
+    {    if (v106 < 3)
+      {      v84 = 2;      }    }  else
+    {    if (v84 == 3 &&         v106 < 15)
+      {      move.obj(o2, 81, 159, 0, f33);      }    }  }if (isset(f33))
+  {  if (v84 == 5)
+    {    move.obj(o2, 36, 132, 0, f33);    v84 = 6;    }  else
+    {    if (v84 == 7)
+      {      move.obj(o2, 96, 129, 0, f33);      v84 = 6;      }    else
+      {      if (v84 == 6)
+        {        erase(o2);        observe.objs(o2);        reset(f33);        v84 = 4;        }      else
+        {        random(0, 255, v106);        if (v106 < 125)
+          {          move.obj(o2, 36, 153, 0, f33);          v84 = 5;          }        else
+          {          move.obj(o2, 96, 144, 0, f33);          v84 = 7;          }        }      }    }  }if (posn(ego, 106, 33, 147, 52))
+  {  set.horizon(30);  }else
+  {  set.horizon(36);  }if (v31 <= 0)
+  {  if ((posn(ego, 93, 56, 98, 68) ||       posn(ego, 62, 107, 69, 112) ||       posn(ego, 72, 137, 78, 143)))
+    {    if ((egoDir == STOPPED ||         egoDir == UP ||         egoDir == DOWN))
+      {      ignore.blocks(ego);      }    else
+      {      observe.blocks(ego);      }    }  else
+    {    if (isset(egoHitSpecial))
+      {      ignore.blocks(ego);      v31 = 1;      get.posn(ego, v105, v106);      if (posn(ego, 64, 35, 92, 65))
+        {        v106 = 92;        v106 -= v105;        v106  += 79;        }      else
+        {        if (posn(ego, 85, 65, 124, 97))
+          {          if (v105 > 112)
+            {            v105 = 112;            }          v106 = 135;          set.priority(ego, 15);          }        else
+          {          if (posn(ego, 70, 88, 84, 110))
+            {            v106 = v105;            v106 -= 70;            v106  += 125;            }          else
+            {            if (posn(ego, 25, 109, 70, 138))
+              {              v106 = 146;              set.priority(ego, 15);              }            }          }        }      if (isset(candle.lit))
+        {        set.view(ego, View8);        work = 2;        cycle.time(ego, work);        work = 3;        step.size(ego, work);        }      else
+        {        set.view(ego, View100);        v60 = 0;        }      sound(Sound29, f31);      move.obj.v(ego, v105, v106, v82, f30);      set(keep.cycling);      }    else
+      {      observe.blocks(ego);      }    }  }if (isset(f30))
+  {  reset(f30);  stop.motion(ego);  if (v60 > 0)
+    {    if (!isset(candle.lit))
+      {      erase(ego);      print("Whoops! You slipped and fell down the narrow stairs in the "            "darkness. What a way to die! Next time, use a light.");      }    else
+      {      stop.sound();      set.view(ego, View91);      print("You slip from the narrow stairs and fall to your death on the "            "rocks below.");      }    set(certain.death);    }  else
+    {    v32 = 50;    if (isset(candle.lit))
+      {      set.view(ego, View109);      sound(Sound23, f34);      set(f35);      work = 2;      cycle.time(ego, work);      work = 1;      step.size(ego, work);      }    }  }--v32;if (v32 == 1)
+  {  stop.sound();  reset(f35);  reset(f31);  temp.x = 4;  temp.y = 0;  reposition(ego, temp.x, temp.y);  observe.blocks(ego);  if (isset(candle.lit))
+    {    set.view(ego, View0);    work = 1;    cycle.time(ego, work);    step.size(ego, work);    }  else
+    {    set.view(ego, View99);    work = 1;    cycle.time(ego, work);    step.size(ego, work);    }  set.loop(ego, 2);  start.motion(ego);  reset(keep.cycling);  v31 = 0;  release.priority(ego);  }if (!isset(candle.lit))
+  {  if (v30 == 1)
+    {    v30 = 2;    set(f162);    erase(o2);    if (v92 == 3)
+      {      set.priority(o3, 4);      }    draw.pic(v33);    show.pic();    set.priority(ego, 12);    set.view(ego, View99);    work = 1;    cycle.time(ego, work);    step.size(ego, work);    reset(f33);    v84 = 1;    }  else
+    {    goto(Label1);    }  }if (!isset(haveInput))
+  {  goto(Label1);  }if ((said("check out") ||     said("check out", "antique shop") ||     said("check out", "swim") ||     said("check out", "stairs")))
+  {  print("Narrow, slippery stairs descend into this empty room. Your nose "        "detects a foul odor coming from a doorway to the west.");  if (v84 > 4 &&       v84 != 1)
+    {    print("A rat darts across the cold stone floor and into a crack in the "          "wall.");    }  }if (said("check out", "rat"))
+  {  if (v84 > 4 &&       v84 != 1)
+    {    print("The rat darts nervously across the floor.");    }  else
+    {    print("You don't see a rat, but you hear scurrying sounds coming from the "          "cracks in the wall.");    }  }if ((said("acquire", "rat") ||     said("capture", "rat")))
+  {  if (v84 > 4 &&       v84 != 1)
+    {    print("The rat moves too quickly for you ever to catch it.");    }  else
+    {    print("You don't see a rat, but you hear scurrying sounds coming from the "          "cracks in the wall.");    }  }Label1:if (posn(ego, 9, 137, 9, 152) &&     v92 < 66 &&     v92 != 3)
+  {  new.room(Logic67);  }if (edgeEgoHit == TOP_EDGE)
+  {  if (v92 == 3)
+    {    v92 = 0;    }  new.room(Logic65);  }call(lgc.dracula);return();[ Messages#message 1 "You slip from the narrow stairs and fall to your death on the rocks below."#message 2 "Narrow, slippery stairs descend into this empty room. Your nose detects a foul odor coming from a doorway to the west."#message 3 "Whoops! You slipped and fell down the narrow stairs in the darkness. What a way to die! Next time, use a light."#message 4 "The rat darts nervously across the floor."#message 5 "You don't see a rat, but you hear scurrying sounds coming from the cracks in the wall."#message 6 "A rat darts across the cold stone floor and into a crack in the wall."#message 7 "The rat moves too quickly for you ever to catch it."
