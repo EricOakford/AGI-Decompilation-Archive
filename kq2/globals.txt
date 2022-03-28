@@ -1,72 +1,133 @@
 [
 [ global defines file for KQ2
 [
-#define drown.swim            v95 [ Original name
-#define genie.delay           v88 [ Original name
-#define in.boat              f176 [ Original name
-#define keep.cycling          f92 [ Original name
-#define ego.flying           f148 [ Original name
-#define snakeInAction        f179 [ Original name
-#define hag.in.room          f127 [ Original name
-#define enchanter.in.room    f132 [ Original name
-#define dwarf.in.room        f128 [ Original name
-#define is.carpet.room        f55 [ Original name
-#define egoFallingCliff      f180 [ Original name
-#define ego.falling.chasm    f119 [ Original name
-#define ego.fell             f125 [ Original name
-#define debug.0               v77
-#define debug.1               v78
-#define sugar.cube.timer      v54
-#define fairy.spell.timer     v55
-#define fairy.spell.timer.2   v57
-#define sugar.cube.timer.2    v66
-#define certain.death         f50
-#define c.help                 c1
-#define c.sound.toggle         c2
-#define c.show.mem             c4
-#define c.speed.fastest        c6
-#define c.init.joy            c10
-#define c.toggle.monitor      c11
-#define c.status              c12
-#define c.pause               c16
-#define c.save                c18
-#define c.restore             c19
-#define c.restart             c20
-#define c.quit                c21
-#define c.swim                c22
-#define c.about               c26
-#define c.speed.fast          c27
-#define c.speed.normal        c28
-#define c.speed.slow          c29
-#define c.show.obj            c30
-#define c.dummy               c31
-#define wearing.ring          f68
-#define wearing.cloak         f70
-#define candle.lit           f106
-#define first.wear.cloak     f160
-#define wearing.cross         f69
-#define first.wear.cross     f159
-#define c.crescendo           c24
-#define c.decrescendo         c25
-#define c.echo.line            c3
-#define c.cancel.cline         c9
-#define clear.work            v76
-#define debugging            f161
-#define work                  v94
-#define old.ego.dir           v99
-#define c.debug               c13
-#define ego.x                v100
-#define ego.y                v101
-#define old.ego.x            v102
-#define old.ego.y            v103
-#define tester.on            f178
-#define c.menu                c15
-#define version.string         s4
-#define ego.dead             f170
-#define wish.count            v87
-#define church.bell.rings    f177
-#define c.f8                   c5
-#define c.f6                   c8
-#define got.amulet           f122
-#define temp.x                v67
-#define temp.y                v68
+#define c.help                    c1
+#define c.sound.toggle            c2
+#define c.echo.line               c3
+#define c.show.mem                c4
+#define c.show.priority           c5
+#define c.speed.fastest           c6
+#define c.f6                      c8
+#define c.cancel.cline            c9
+#define c.init.joy               c10
+#define c.toggle.monitor         c11
+#define c.status                 c12
+#define c.debug                  c13
+#define c.menu                   c15
+#define c.pause                  c16
+#define c.save                   c18
+#define c.restore                c19
+#define c.restart                c20
+#define c.quit                   c21
+#define c.swim                   c22
+#define c.crescendo              c24
+#define c.decrescendo            c25
+#define c.about                  c26
+#define c.speed.fast             c27
+#define c.speed.normal           c28
+#define c.speed.slow             c29
+#define c.show.obj               c30
+#define c.dummy                  c31
+#define lf8                      f38
+#define death.message            f49
+#define certain.death            f50
+#define red.in.room              f53
+#define mailbox.open             f54
+#define is.carpet.room           f55 [ Original name
+#define mailbox.opening          f56
+#define mailbox.empty            f57
+#define mailbox.closing          f58
+#define give.basket.to.red       f59
+#define monastery.door.open      f61
+#define poisoned.water           f64
+#define took.basket              f65
+#define got.brooch               f66
+#define read.inscription.1       f67
+#define wearing.ring             f68
+#define wearing.cross            f69
+#define wearing.cloak            f70
+#define store.is.open            f71
+#define got.clam                 f72
+#define got.bracelet             f73
+#define got.stake                f74
+#define read.inscription.3       f75
+#define gave.treasure.to.ghoul   f76
+#define got.trident              f82
+#define got.necklace             f83
+#define got.mallet               f84
+#define unlocked.door.1          f85
+#define unlocked.door.2          f86
+#define unlocked.door.3          f87
+#define keep.cycling             f92 [ Original name
+#define got.gold.key.2           f96
+#define neptune.has.trident      f97
+#define got.lamp                f101
+#define candle.lit              f106
+#define is.water.room           f115
+#define override.splash.loc     f116
+#define override.surface.loc    f118
+#define ego.falling.chasm       f119 [ Original name
+#define got.amulet              f122
+#define start.swimming          f124
+#define ego.fell                f125 [ Original name
+#define ghosts.guard.castle     f126
+#define hag.in.room             f127 [ Original name
+#define dwarf.in.room           f128 [ Original name
+#define death.music             f129
+#define enchanter.in.room       f132 [ Original name
+#define read.inscription.2      f134
+#define got.gold.key.3          f138
+#define first.room.change       f146
+#define ego.flying              f148 [ Original name
+#define points.open.mailbox     f153
+#define find.brooch             f156
+#define first.wear.cross        f159
+#define first.wear.cloak        f160
+#define debugging               f161
+#define logging                 f163
+#define done                    f169
+#define ego.dead                f170
+#define opened.door.1           f173
+#define opened.door.2           f174
+#define opened.door.3           f175
+#define in.boat                 f176 [ Original name
+#define bell.stopped            f177
+#define tester.on               f178
+#define snakeInAction           f179 [ Original name
+#define egoFallingCliff         f180 [ Original name
+#define turbulent.water         f184
+#define normal.water            f185
+#define version.string            s4
+#define delta.x                  v42
+#define delta.y                  v43
+#define splash.time              v52
+#define sugar.cube.timer         v54
+#define fairy.spell.timer        v55
+#define fairy.spell.timer.2      v57
+#define timer.1                  v58
+#define timer.2                  v59
+#define sugar.cube.timer.2       v66
+#define temp.x                   v67
+#define temp.y                   v68
+#define clear.work               v76
+#define debug.0                  v77
+#define debug.1                  v78
+#define drown.timer              v86
+#define wish.count               v87
+#define genie.delay              v88 [ Original name
+#define work                     v94
+#define drown.swim               v95 [ Original name
+#define old.ego.dir              v99
+#define ego.x                   v100
+#define ego.y                   v101
+#define old.ego.x               v102
+#define old.ego.y               v103
+#define timer.3                 v104
+#define work.2                  v105
+#define work.3                  v106
+#define work.4                  v107
+#define work.5                  v108
+#define bird.state               v65
+#define bridge.crossings         v56
+#define shore.room               v73
+#define distance.from.shore      v51

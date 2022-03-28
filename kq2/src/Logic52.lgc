@@ -5,8 +5,8 @@ if (isset(newRoom))
     {    goto(Label1);    }Label2:  random(0, 255, v33);  if ((v33 > 100 ||       v33 < 60))
     {    goto(Label2);    }  position.v(o4, v32, v33);  draw(o4);  wander(o4);  show.pic();  }if (isset(f31))
   {  if (v64 == 4)
-    {    new.room(Logic51);    }  else
-    {    new.room(Logic53);    }  }if ((said("check out", "lake") ||     said("check out") ||     said("look in", "lake") ||     said("check out", "area")))
+    {    new.room(Logic51); [ ##LE001##    }  else
+    {    new.room(Logic53); [ ##LE002##    }  }if ((said("check out", "lake") ||     said("check out") ||     said("look in", "lake") ||     said("check out", "area")))
   {  print("The bottom of the sea is teeming with fish and plant life. King "        "Neptune rules this mighty underwater empire.");  }if (said("check out", "dolphin"))
   {  print("You can see many beautiful creatures at the bottom of the sea.");  }if ((said("acquire", "dolphin") ||     said("capture", "dolphin")))
   {  print("You are not able to catch fish while riding a magic seahorse. Just "        "enjoy the beauty of the underwater world.");  }if (said("get off", "magic seahorse"))

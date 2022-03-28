@@ -1,7 +1,1 @@
-if (isset(newRoom))
-  {  load.logics(Logic151);  load.logics(lgc.dwarf);  if ((has("Oil Lamp") ||       has("Carpet")))
-    {    load.view(View65);    load.view(View98);    }  load.pic(currentRoom);  call(lgc.dwarf);  draw.pic(currentRoom);  draw(ego);  show.pic();  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic40);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic48);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic46);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic5);  }call(Logic151);call(lgc.dwarf);return();[ Messages
+if (newRoom)  {  load.logics(lgc.trees);  load.logics(lgc.dwarf);  if ((has("Oil Lamp") ||       has("Carpet")))    {    load.view(View65);    load.view(View98);    }  load.pic(currentRoom);  call(lgc.dwarf);  draw.pic(currentRoom);  draw(ego);  show.pic();  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic40); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic48); [ ##LE002##  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic46); [ ##LE003##  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic5); [ ##LE004##  }call(lgc.trees);call(lgc.dwarf);return();[ Messages

@@ -3,15 +3,15 @@ if (isset(f188))
     {    clear.lines(1, 1, BLACK);    display(1, 6, "...visit bizarre planets...");    }  else
     {    set.text.attribute(BLACK, WHITE);    clear.lines(22, 24, WHITE);    display(23, 6, "...visit bizarre planets...");    }  }if (isset(f44))
   {  reset(f44);  shake.screen(1);  v30 = 36;  }if (isset(f48))
-  {  reset(f48);  stop.cycling(o1);  set(f49);  set(f42);  }if (isset(f42) &&     !isset(f30))
-  {  reset(f42);  get.posn(o1, v105, v106);  if (v105 < 12)
-    {    v105 = 1;    }  else
-    {    v105 -= 11;    }  v106  += 4;  position.v(o3, v105, v106);  draw(o3);  erase(o1);  start.cycling(o3);  set(f43);  }if (isset(f43))
+  {  reset(f48);  stop.cycling(o1);  set(death.message);  set(f42);  }if (isset(f42) &&     !isset(f30))
+  {  reset(f42);  get.posn(o1, work.2, work.3);  if (work.2 < 12)
+    {    work.2 = 1;    }  else
+    {    work.2 -= 11;    }  work.3  += 4;  position.v(o3, work.2, work.3);  draw(o3);  erase(o1);  start.cycling(o3);  set(f43);  }if (isset(f43))
   {  current.cel(o3, v70);  if (v70 == 4)
     {    stop.cycling(o3);    v48 = 10;    v47 = 1;    reset(f43);    }  }--v48;if (v48 == 1)
   {  if (v47 == 2)
     {    erase(o4);    draw(o5);    stop.cycling(o5);    move.obj(o5, 63, 104, 30, f31);    end.of.loop(o3, f45);    }  if (v47 == 1)
     {    set.cel(o3, 5);    v48 = 18;    draw(o4);    v47 = 2;    }  }if (isset(f31))
   {  reset(f31);  erase(o5);  }if (isset(f45))
-  {  reset(f45);  stop.update(o3);  v42 = 28;  set(f44);  }--v30;if (v30 == 1)
+  {  reset(f45);  stop.update(o3);  delta.x = 28;  set(f44);  }--v30;if (v30 == 1)
   {  v120 = 115;  }return();[ Messages#message 1 "...visit bizarre planets..."

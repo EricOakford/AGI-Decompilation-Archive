@@ -1,31 +1,0 @@
-if (isset(newRoom))
-  {  set(f115);  reset(f124);  return();  }if ((isset(f147) ||     v51 > 2 ||     v86 > 0))
-  {  goto(Label1);  }if (!isset(f124))
-  {  if ((said("swim", "anyword") ||       said("enter", "swim") ||       said("swim") ||       controller(c.swim)))
-    {    set(f124);    if (!isset(onWater))
-      {      print("You need to be in the water in order to swim.");      }    else
-      {      if (isset(onWater) &&           drown.swim == 2)
-        {        print("You are already swimming!");        }      else
-        {        reset(haveMatch);        }      }    }  }else
-  {  if (!controller(c.swim))
-    {    reset(f124);    }  }if (isset(onWater))
-  {  if (drown.swim <= 0)
-    {    set(keep.cycling);    v52 = 250;    drown.swim = 1;    if (isset(f116))
-      {      reposition.to.v(ego, temp.x, temp.y);      }    else
-      {      object.on.water(ego);      }    get.posn(ego, temp.x, temp.y);    set.view(ego, View104);    work = 2;    cycle.time(ego, work);    stop.motion(ego);    if ((isset(f64) ||         isset(f184)))
-      {      v86 = 25;      }    }  else
-    {    if (!isset(f64) &&         (said("swim") ||         said("enter", "swim") ||         said("swim", "anyword") ||         controller(c.swim)))
-      {      set.view(ego, View97);      work = 1;      cycle.time(ego, work);      start.motion(ego);      get.posn(ego, temp.x, temp.y);      v82 = 0;      move.obj.v(ego, temp.x, temp.y, v82, f169);      drown.swim = 2;      }    }  }if (drown.swim == 1 &&     v86 <= 0)
-  {  if (v52 == 0)
-    {    set(f185);    v86 = 25;    }  else
-    {    --v52;    }  }if (!isset(onWater) &&     drown.swim == 2)
-  {  reset(keep.cycling);  drown.swim = 0;  set.view(ego, View0);  work = 1;  cycle.time(ego, work);  if (isset(f118))
-    {    reposition.to.v(ego, temp.x, temp.y);    }  else
-    {    object.on.land(ego);    }  }reset(f116);reset(f118);temp.x = 0;temp.y = 0;Label1:--v86;if (v86 == 10)
-  {  if (isset(f64))
-    {    print("This is a poisoned lake! Too bad, you die of extreme poisoning.");    }  else
-    {    if (isset(f184))
-      {      print("The water is too turbulent to swim in. You have just drowned.");      }    else
-      {      if (isset(f185))
-        {        print("You splash around in the water for a while but seem to have "              "forgotten how to swim. Unfortunately, you drown.");        }      }    }  }if (v86 == 1)
-  {  erase(ego);  set(certain.death);  }return();[ Messages#message 1 "You splash around in the water for a while but seem to have forgotten how to swim. Unfortunately, you drown."#message 2 "This is a poisoned lake! Too bad, you die of extreme poisoning."#message 3 "You need to be in the water in order to swim."#message 4 "You are already swimming!"#message 5 "The water is too turbulent to swim in. You have just drowned."

@@ -6,5 +6,5 @@ if (isset(newRoom))
     {    if (!isset(snakeInAction) &&         !isset(egoFallingCliff) &&         !isset(ego.fell) &&         !isset(keep.cycling) &&         !isset(ego.flying))
       {      set(f136);      ignore.horizon(ego);      work = 2;      cycle.time(ego, work);      step.size(ego, work);      set.view(ego, View98);      set.loop(ego, 1);      set.priority(ego, 15);      program.control();      move.obj(ego, 0, 65, 0, f249);      set(ego.flying);      }    }  }if (isset(f249))
   {  release.priority(ego);  if (currentRoom == 55)
-    {    reset(f136);    new.room(rm.sky);    }  else
+    {    reset(f136);    new.room(rm.sky); [ ##LE001##    }  else
     {    work = currentRoom;    work -= 1;    new.room.v(work);    }  }return();[ Messages#message 1 "It wouldn't be safe to ride the carpet until you are all the way out of the cave. Only wierd QA types do that."

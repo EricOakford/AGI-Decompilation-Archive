@@ -3,10 +3,10 @@ if (isset(newRoom))
     {    set.view(ego, View105);    work = 2;    cycle.time(ego, work);    }  else
     {    set.view(ego, View0);    }  set.view(o2, View106);  set.view(o4, View174);  work = 2;  cycle.time(ego, work);  set.cel(o4, 0);  set.view(o3, View116);  position(ego, 110, 152);  position(o2, 117, 152);  position(o4, 105, 119);  position(o3, 116, 18);  if (previousRoom == 107)
     {    set.loop(ego, 1);    }  else
-    {    set.loop(ego, 3);    }  set.loop(o2, 1);  move.obj(ego, 110, 120, 0, f34);  move.obj(o2, 117, 120, 0, f33);  v58 = 50;  draw(ego);  if (previousRoom == 107)
+    {    set.loop(ego, 3);    }  set.loop(o2, 1);  move.obj(ego, 110, 120, 0, f34);  move.obj(o2, 117, 120, 0, f33);  timer.1 = 50;  draw(ego);  if (previousRoom == 107)
     {    draw(o2);    }  draw(o4);  start.cycling(o3);  draw(o3);  show.pic();  end.of.loop(o4, f32);  }program.control();if (isset(f34))
   {  reset(f34);  program.control();  }if (isset(f32))
-  {  reset(f32);  }--v58;if (v58 == 1)
+  {  reset(f32);  }--timer.1;if (timer.1 == 1)
   {  set.priority(ego, 3);  set.priority(o2, 3);  reverse.loop(o4, f31);  }if (isset(f31))
   {  reset(f31);  accept.input();  if (previousRoom == 107)
     {    printTimeout = 15;    print("If you have enjoyed this game, please ask your dealer about "          "availability of:");    v31 = 40;    }  else

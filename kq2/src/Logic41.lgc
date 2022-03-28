@@ -1,16 +1,1 @@
-if (isset(newRoom))
-  {  load.view(View8);  if ((has("Oil Lamp") ||       has("Carpet")))
-    {    load.view(View65);    load.view(View98);    }  load.logics(Logic155);  load.logics(lgc.dwarf);  load.logics(Logic151);  load.pic(currentRoom);  call(lgc.dwarf);  draw.pic(currentRoom);  ignore.blocks(ego);  if (previousRoom == 48)
-    {    get.posn(ego, v105, v106);    if (v105 > 21 &&         v105 < 55)
-      {      position(ego, 10, 167);      }    else
-      {      if (v105 > 54 &&           v105 < 120)
-        {        position(ego, 120, 167);        }      }    }  else
-    {    if (previousRoom == 42)
-      {      get.posn(ego, v105, v106);      if (v106 > 51 &&           v106 < 106)
-        {        position(ego, 153, 106);        }      else
-        {        if (v106 > 40 &&             v106 < 52)
-          {          position(ego, 152, 40);          }        }      }    }  draw(ego);  show.pic();  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic34);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic42);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic40);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic48);  }call(Logic155);call(lgc.dwarf);call(Logic151);return();[ Messages
+if (newRoom)  {  load.view(View8);  if ((has("Oil Lamp") ||       has("Carpet")))    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.chasm);  load.logics(lgc.dwarf);  load.logics(lgc.trees);  load.pic(currentRoom);  call(lgc.dwarf);  draw.pic(currentRoom);  ignore.blocks(ego);  if (previousRoom == 48)    {    get.posn(ego, work.2, work.3);    if (work.2 > 21 &&         work.2 < 55)      {      position(ego, 10, 167);      }    else      {      if (work.2 > 54 &&           work.2 < 120)        {        position(ego, 120, 167);        }      }    }  else    {    if (previousRoom == 42)      {      get.posn(ego, work.2, work.3);      if (work.3 > 51 &&           work.3 < 106)        {        position(ego, 153, 106);        }      else        {        if (work.3 > 40 &&             work.3 < 52)          {          position(ego, 152, 40);          }        }      }    }  draw(ego);  show.pic();  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic34); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic42); [ ##LE002##  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic40); [ ##LE003##  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic48); [ ##LE004##  }call(lgc.chasm);call(lgc.dwarf);call(lgc.trees);return();[ Messages

@@ -1,12 +1,1 @@
-if (isset(newRoom))
-  {  load.pic(currentRoom);  if ((has("Oil Lamp") ||       has("Carpet")))
-    {    load.view(View65);    load.view(View98);    }  load.logics(Logic153);  load.logics(Logic151);  draw.pic(currentRoom);  call(Logic153);  if (previousRoom == 5)
-    {    get.posn(ego, v105, v106);    if (v106 > 125 &&         v106 < 137)
-      {      v106 = 137;      position.v(ego, v105, v106);      }    }  if (previousRoom == 3 &&       posn(ego, 0, 113, 1, 131))
-    {    position(ego, 1, 110);    }  draw(ego);  show.pic();  }if (said("check out", "fence"))
-  {  print("You see a low white fence.");  }if (said("anyword", "fence") &&     !said("enter", "fence") &&     !said("check out", "fence"))
-  {  print("You should do nothing with the fence.");  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic46);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic5);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic3);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic11);  }call(Logic153);call(Logic151);return();[ Messages#message 1 "You should do nothing with the fence."#message 2 "You see a low white fence."
+if (newRoom)  {  load.pic(currentRoom);  if ((has("Oil Lamp") ||       has("Carpet")))    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.red);  load.logics(lgc.trees);  draw.pic(currentRoom);  call(lgc.red);  if (previousRoom == 5)    {    get.posn(ego, work.2, work.3);    if (work.3 > 125 &&         work.3 < 137)      {      work.3 = 137;      position.v(ego, work.2, work.3);      }    }  if (previousRoom == 3 &&       posn(ego, 0, 113, 1, 131))    {    position(ego, 1, 110);    }  draw(ego);  show.pic();  }if (said("check out", "fence"))  {  print("You see a low white fence.");  }if (said("anyword", "fence") &&     !said("enter", "fence") &&     !said("check out", "fence"))  {  print("You should do nothing with the fence.");  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic46); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic5); [ ##LE002##  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic3); [ ##LE003##  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic11); [ ##LE004##  }call(lgc.red);call(lgc.trees);return();[ Messages#message 1 "You should do nothing with the fence."#message 2 "You see a low white fence."

@@ -1,27 +1,27 @@
 if (isset(newRoom))
   {  load.view(View88);  load.view(View89);  load.view(View90);  load.view(View177);  load.view(View188);  load.view(View8);  load.view(View87);  load.sound(Sound31);  load.sound(Sound21);  load.sound(Sound29);  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o3);  set.view(o3, View87);  work = 3;  cycle.time(o3, work);  set.priority(o3, 5);  ignore.blocks(o3);  position(o3, 80, 120);  set.cel(o3, 0);  if (previousRoom == 90)
-    {    reverse.loop(o3, f169);    set.loop(ego, 2);    position(ego, 88, 124);    start.motion(ego);    }  else
+    {    reverse.loop(o3, done);    set.loop(ego, 2);    position(ego, 88, 124);    start.motion(ego);    }  else
     {    stop.cycling(o3);    position(ego, 64, 164);    set.loop(ego, 3);    start.motion(ego);    }  draw(o3);  draw(ego);  animate.obj(o2);  if (v75 == 0)
     {    set.view(o2, View88);    work = 3;    cycle.time(o2, work);    set(f35);    v30 = 16;    }  else
     {    if (v75 == 2)
       {      set.view(o2, View188);      work = 6;      cycle.time(o2, work);      }    else
       {      if (v75 == 3)
         {        set.view(o2, View89);        }      else
-        {        set.view(o2, View188);        work = 6;        cycle.time(o2, work);        }      }    }  position(o2, 88, 142);  draw(o2);  ignore.objs(o2);  show.pic();  }if (isset(f38))
-  {  reset(f38);  set.cel(o2, 0);  if (v75 <= 0)
+        {        set.view(o2, View188);        work = 6;        cycle.time(o2, work);        }      }    }  position(o2, 88, 142);  draw(o2);  ignore.objs(o2);  show.pic();  }if (isset(lf8))
+  {  reset(lf8);  set.cel(o2, 0);  if (v75 <= 0)
     {    random(18, 150, v31);    }  }--v31;if (v31 == 1)
-  {  end.of.loop(o2, f38);  v32 = 14;  }--v32;if (v32 == 1)
-  {  sound(Sound31, f37);  }get.posn(ego, v105, v106);if (v106 < 124)
+  {  end.of.loop(o2, lf8);  v32 = 14;  }--v32;if (v32 == 1)
+  {  sound(Sound31, f37);  }get.posn(ego, work.2, work.3);if (work.3 < 124)
   {  observe.objs(ego);  }else
   {  ignore.objs(ego);  }--v30;if (v30 == 1)
   {  print("Be careful!!! There is a huge lion with dripping fangs at the top of "        "the stairs. He has a hungry look in his eye!");  }if (isset(f32))
   {  print("CRUNCH! SNARL! CHOMP! Well, you made a nice meal for the hungry lion! "        "SMACK! SLURP!");  stop.cycling(ego);  reset(keep.cycling);  v75 = 5;  set(certain.death);  }if (!isset(ego.fell))
   {  if (isset(egoHitSpecial) &&       v75 < 4)
-    {    stop.sound();    v74 = v105;    v106 = 200;    ignore.blocks(ego);    ignore.objs(ego);    set.priority(ego, 11);    set.view(ego, View8);    work = 2;    cycle.time(ego, work);    work = 3;    step.size(ego, work);    set(ego.fell);    animationInterval = 2;    v108 = 5;    move.obj.v(ego, v105, v106, v108, f169);    set(keep.cycling);    sound(Sound29, f36);    }  else
+    {    stop.sound();    v74 = work.2;    work.3 = 200;    ignore.blocks(ego);    ignore.objs(ego);    set.priority(ego, 11);    set.view(ego, View8);    work = 2;    cycle.time(ego, work);    work = 3;    step.size(ego, work);    set(ego.fell);    animationInterval = 2;    work.5 = 5;    move.obj.v(ego, work.2, work.3, work.5, done);    set(keep.cycling);    sound(Sound29, f36);    }  else
     {    if (v75 == 0 &&         isset(f35))
-      {      reset(f35);      end.of.loop(o2, f38);      v32 = 13;      }    }  }else
+      {      reset(f35);      end.of.loop(o2, lf8);      v32 = 13;      }    }  }else
   {  goto(Label1);  }if (v75 == 0 &&     posn(ego, 82, 122, 115, 137))
-  {  stop.motion(ego);  v75 = 4;  set.view(ego, View90);  work = 2;  cycle.time(ego, work);  get.posn(ego, v105, v106);  temp.x = 83;  temp.y = 142;  temp.x -= v105;  temp.y -= v106;  reposition(ego, temp.x, temp.y);  set(keep.cycling);  end.of.loop(ego, f32);  erase(o2);  }if (isset(f33))
+  {  stop.motion(ego);  v75 = 4;  set.view(ego, View90);  work = 2;  cycle.time(ego, work);  get.posn(ego, work.2, work.3);  temp.x = 83;  temp.y = 142;  temp.x -= work.2;  temp.y -= work.3;  reposition(ego, temp.x, temp.y);  set(keep.cycling);  end.of.loop(ego, f32);  erase(o2);  }if (isset(f33))
   {  reset(f33);  set.view(o2, View188);  work = 6;  cycle.time(o2, work);  start.cycling(o2);  v75 = 2;  }if ((!isset(haveInput) ||     v75 > 3))
   {  goto(Label1);  }if ((said("cast", "knife") ||     said("cast", "knife", "hungry lion")))
   {  print("Swords don't fly very well. Think again.");  }if ((said("check out") ||     said("check out", "swim") ||     said("check out", "antique shop")))
@@ -44,7 +44,7 @@ if (isset(newRoom))
         {        if ((said("kill", "hungry lion") ||             said("kill", "hungry lion", "knife") ||             said("stab", "hungry lion") ||             said("stab", "hungry lion", "knife")))
           {          if (!has("Sword"))
             {            print("You have nothing with which to kill a lion.");            }          else
-            {            if (v105 > 75)
+            {            if (work.2 > 75)
               {              stop.sound();              print("With one mighty heave of your sword, you fatally wound the "                    "large lion. He slumps to the floor.");              set.view(o2, View89);              v75 = 3;              currentScore  += 2;              drop("Sword");              }            else
               {              print("You must get closer to do that.");              }            }          }        else
           {          if ((said("pat", "hungry lion") ||               said("kiss", "hungry lion") ||               said("embrace", "hungry lion")))
@@ -74,7 +74,7 @@ if (isset(newRoom))
     {    if ((said("kill", "hungry lion") ||         said("kill", "hungry lion", "knife") ||         said("stab", "hungry lion") ||         said("stab", "hungry lion", "knife")))
       {      if (!has("Sword"))
         {        print("You have nothing with which to kill a lion.");        }      else
-        {        if (v105 > 75)
+        {        if (work.2 > 75)
           {          print("With one mighty heave of your sword, you fatally wound the "                "large lion. He slumps to the floor.");          set.view(o2, View89);          v75 = 3;          currentScore -= 3;          drop("Sword");          }        else
           {          print("You must get closer to do that.");          }        }      }    else
       {      if ((said("pat", "hungry lion") ||           said("kiss", "hungry lion") ||           said("wake", "hungry lion") ||           said("embrace", "hungry lion")))
@@ -82,6 +82,6 @@ if (isset(newRoom))
         {        if (!isset(haveMatch) &&             (said("anyword", "hungry lion") ||             said("anyword", "anyword", "hungry lion")))
           {          print("The lion is sound asleep.");          }        }      }    }  else
     {    if (!isset(haveMatch) &&         (said("give", "anyword") ||         said("feed", "anyword") ||         said("cast", "anyword")))
-      {      print("The lion sniffs at it but does not appear interested.");      }    }  }Label1:get.posn(ego, v105, v106);if (isset(f31))
-  {  new.room(Logic90);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic92);  }return();[ Messages#message 1 "Be careful!!! There is a huge lion with dripping fangs at the top of the stairs. He has a hungry look in his eye!"#message 2 "You are at the top of the wooden steps in the quartz tower. A door leads off to the north."#message 3 "The lion is sound asleep."#message 4 "The heavy door is closed."#message 5 "The wooden steps spiral steeply downward."#message 6 "You can't. A huge hungry lion blocks the door. You had better not get too close!"#message 7 "This is the BIGGEST lion you have ever seen! He could eat you with two bites of his powerful jaws. His tail thumps repeatedly on the floor."#message 8 "The huge lion just snarls at you. You might be irritating him."#message 9 "There is no way you could hold an enormous lion."#message 10 "You have nothing with which to kill a lion."#message 11 "With one mighty heave of your sword, you fatally wound the large lion. He slumps to the floor."#message 12 "The large lion has succumbed from the blow of your sword. He is dead."#message 13 "That would be a wrong move!"#message 14 "CRUNCH! SNARL! CHOMP! Well, you made a nice meal for the hungry lion! SMACK! SLURP!"#message 15 "The lion sniffs at it but does not appear interested."#message 17 "Hungrily, the lion gobbles down the smoked ham and then falls fast asleep."#message 18 "You are not carrying it."#message 19 "There is not enough sustenance in chicken soup to satisfy a hungry lion."#message 20 "The lion sniffs the goodies in the basket but is not interested in them."#message 21 "A hungry-looking lion guards the door."#message 22 "A lion is sleeping near the door."#message 23 "A dead lion is lying near the door."#message 24 "A sweet voice from behind the heavy door begs, Help me, please help me!"#message 25 "You must get closer to do that."#message 26 "Swords don't fly very well. Think again."
+      {      print("The lion sniffs at it but does not appear interested.");      }    }  }Label1:get.posn(ego, work.2, work.3);if (isset(f31))
+  {  new.room(Logic90); [ ##LE001##  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic92); [ ##LE002##  }return();[ Messages#message 1 "Be careful!!! There is a huge lion with dripping fangs at the top of the stairs. He has a hungry look in his eye!"#message 2 "You are at the top of the wooden steps in the quartz tower. A door leads off to the north."#message 3 "The lion is sound asleep."#message 4 "The heavy door is closed."#message 5 "The wooden steps spiral steeply downward."#message 6 "You can't. A huge hungry lion blocks the door. You had better not get too close!"#message 7 "This is the BIGGEST lion you have ever seen! He could eat you with two bites of his powerful jaws. His tail thumps repeatedly on the floor."#message 8 "The huge lion just snarls at you. You might be irritating him."#message 9 "There is no way you could hold an enormous lion."#message 10 "You have nothing with which to kill a lion."#message 11 "With one mighty heave of your sword, you fatally wound the large lion. He slumps to the floor."#message 12 "The large lion has succumbed from the blow of your sword. He is dead."#message 13 "That would be a wrong move!"#message 14 "CRUNCH! SNARL! CHOMP! Well, you made a nice meal for the hungry lion! SMACK! SLURP!"#message 15 "The lion sniffs at it but does not appear interested."#message 17 "Hungrily, the lion gobbles down the smoked ham and then falls fast asleep."#message 18 "You are not carrying it."#message 19 "There is not enough sustenance in chicken soup to satisfy a hungry lion."#message 20 "The lion sniffs the goodies in the basket but is not interested in them."#message 21 "A hungry-looking lion guards the door."#message 22 "A lion is sleeping near the door."#message 23 "A dead lion is lying near the door."#message 24 "A sweet voice from behind the heavy door begs, Help me, please help me!"#message 25 "You must get closer to do that."#message 26 "Swords don't fly very well. Think again."

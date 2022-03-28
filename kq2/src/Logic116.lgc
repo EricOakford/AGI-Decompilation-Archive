@@ -1,5 +1,5 @@
 if (isset(f188))
-  {  set.horizon(10);  v43 = 0;  animate.obj(o1);  set.view(o1, View144);  set.loop(o1, 0);  position(o1, 68, 105);  draw(o1);  stop.cycling(o1);  animate.obj(o2);  set.view(o2, View140);  ignore.blocks(o2);  set.loop(o2, 0);  set.cel(o2, 0);  set(f40);  position(o2, 122, 142);  draw(o2);  stop.cycling(o2);  animate.obj(o3);  set.view(o3, View141);  set.loop(o3, 0);  fix.loop(o3);  ignore.blocks(o3);  set.cel(o3, 0);  position(o3, 149, 167);  draw(o3);  stop.update(o3);  animate.obj(o4);  set.view(o4, View142);  set.loop(o4, 3);  position(o4, 71, 163);  set.priority(o4, 15);  draw(o4);  stop.cycling(o4);  animate.obj(o5);  set.view(o5, View137);  position(o5, 1, 127);  draw(o5);  move.obj(o5, 30, 140, 0, f42);  add.to.pic(View139, 0, 0, 53, 152, 15, 4);  add.to.pic(View139, 0, 1, 93, 151, 15, 4);  add.to.pic(View139, 0, 2, 35, 161, 15, 4);  v30 = 72;  v32 = 2;  v33 = 1;  start.cycling(o1);  sound(Sound42, f37);  show.pic();  if (monitorType == MONO &&       machineType == PC)
+  {  set.horizon(10);  delta.y = 0;  animate.obj(o1);  set.view(o1, View144);  set.loop(o1, 0);  position(o1, 68, 105);  draw(o1);  stop.cycling(o1);  animate.obj(o2);  set.view(o2, View140);  ignore.blocks(o2);  set.loop(o2, 0);  set.cel(o2, 0);  set(f40);  position(o2, 122, 142);  draw(o2);  stop.cycling(o2);  animate.obj(o3);  set.view(o3, View141);  set.loop(o3, 0);  fix.loop(o3);  ignore.blocks(o3);  set.cel(o3, 0);  position(o3, 149, 167);  draw(o3);  stop.update(o3);  animate.obj(o4);  set.view(o4, View142);  set.loop(o4, 3);  position(o4, 71, 163);  set.priority(o4, 15);  draw(o4);  stop.cycling(o4);  animate.obj(o5);  set.view(o5, View137);  position(o5, 1, 127);  draw(o5);  move.obj(o5, 30, 140, 0, f42);  add.to.pic(View139, 0, 0, 53, 152, 15, 4);  add.to.pic(View139, 0, 1, 93, 151, 15, 4);  add.to.pic(View139, 0, 2, 35, 161, 15, 4);  v30 = 72;  v32 = 2;  v33 = 1;  start.cycling(o1);  sound(m.alien.bar, f37);  show.pic();  if (monitorType == MONO &&       machineType == PC)
     {    clear.lines(2, 3, BLACK);    display(2, 1, "..and get acquainted with some darn\n interesting folks.");    }  else
     {    clear.lines(22, 24, WHITE);    display(22, 1, "..and get acquainted with some darn\n interesting folks.");    }  v31 = 45;  v35 = 71;  v44 = 0;  v36 = 163;  }--v45;if (v45 == 1)
   {  v120 = 117;  }if (isset(f42))
@@ -7,8 +7,8 @@ if (isset(f188))
   {  if (monitorType == MONO &&       machineType == PC)
     {    clear.lines(2, 4, BLACK);    display(2, 1, "So step up to the bar and have a cool\n one and enjoy some "            "of the best\n entertainment in the universe!");    }  else
     {    clear.lines(22, 24, WHITE);    display(22, 1, "So step up to the bar and have a cool\n one and enjoy some "            "of the best\n entertainment in the universe!");    }  v45 = 90;  }if (isset(f37))
-  {  sound(Sound42, f37);  }--v31;if (v31 == 1)
-  {  if (v35 != 100 &&       v39 > 0 &&       !isset(f38) &&       v39 != 3)
+  {  sound(m.alien.bar, f37);  }--v31;if (v31 == 1)
+  {  if (v35 != 100 &&       v39 > 0 &&       !isset(lf8) &&       v39 != 3)
     {    v37 = 100;    }  else
     {Label1:    reset(f41);    random(1, 4, v37);    if (v37 == 1)
       {      v37 = 48;      }    else

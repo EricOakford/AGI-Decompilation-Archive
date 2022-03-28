@@ -23,10 +23,10 @@ if (isset(newRoom))
     {    if (has("Ham"))
       {      print("You don't see one here.");      }    else
       {      print("You already have it.");      }    }  }Label1:if (isset(egoHitSpecial) &&     v92 != 5)
-  {  get.posn(ego, v105, v106);  if ((v92 == 1 ||       v92 == 3))
-    {    v92 = 0;    }  if (v106 < 100)
-    {    new.room(Logic63);    }  else
-    {    if (v105 > 80)
-      {      new.room(Logic65);      }    else
-      {      if (v105 < 80)
-        {        new.room(Logic61);        }      }    }  }call(lgc.dracula);return();[ Messages#message 1 "This is the dingy dining room of the drafty old castle. Ants crawl among old bits of food. Dust covers a dilapidated table top."#message 2 "A delicious-looking smoked ham is on the table."#message 3 "The stairway appears to lead down into the dark depths of the castle."#message 4 "The table top is completely covered with dust. Scratches scar the legs of the table. Chairs with torn padding accompany it."#message 5 "The worn chairs look uninviting to sit upon."#message 6 "To do that, you will need to get closer."#message 7 "You don't see one here."#message 8 "You already have it."#message 9 "The chairs are old and worn."#message 10 "OK."
+  {  get.posn(ego, work.2, work.3);  if ((v92 == 1 ||       v92 == 3))
+    {    v92 = 0;    }  if (work.3 < 100)
+    {    new.room(Logic63); [ ##LE001##    }  else
+    {    if (work.2 > 80)
+      {      new.room(Logic65); [ ##LE002##      }    else
+      {      if (work.2 < 80)
+        {        new.room(Logic61); [ ##LE003##        }      }    }  }call(lgc.dracula);return();[ Messages#message 1 "This is the dingy dining room of the drafty old castle. Ants crawl among old bits of food. Dust covers a dilapidated table top."#message 2 "A delicious-looking smoked ham is on the table."#message 3 "The stairway appears to lead down into the dark depths of the castle."#message 4 "The table top is completely covered with dust. Scratches scar the legs of the table. Chairs with torn padding accompany it."#message 5 "The worn chairs look uninviting to sit upon."#message 6 "To do that, you will need to get closer."#message 7 "You don't see one here."#message 8 "You already have it."#message 9 "The chairs are old and worn."#message 10 "OK."

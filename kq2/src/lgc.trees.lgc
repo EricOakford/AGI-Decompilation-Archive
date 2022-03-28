@@ -1,4 +1,4 @@
-if (isset(f64))
+if (isset(poisoned.water))
   {  goto(Label1);  }if (!isset(haveInput))
   {  goto(Label1);  }if (currentRoom != 23 &&     currentRoom != 46)
   {  if ((said("check out", "tree") ||       said("check out", "area") ||       said("check out")))

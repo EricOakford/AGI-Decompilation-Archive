@@ -1,8 +1,1 @@
-if (isset(newRoom))
-  {  if ((has("Oil Lamp") ||       has("Carpet")))
-    {    load.view(View65);    load.view(View98);    }  load.logics(Logic151);  load.logics(lgc.enchanter);  load.pic(currentRoom);  call(lgc.enchanter);  draw.pic(currentRoom);  draw(ego);  show.pic();  }if (!isset(haveInput))
-  {  goto(Label1);  }Label1:if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic20);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic28);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic26);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic34);  }call(Logic151);call(lgc.enchanter);return();[ Messages
+if (newRoom)  {  if ((has("Oil Lamp") ||       has("Carpet")))    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.trees);  load.logics(lgc.enchanter);  load.pic(currentRoom);  call(lgc.enchanter);  draw.pic(currentRoom);  draw(ego);  show.pic();  }if (!haveInput)  {  goto(exit);  }exit:if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic20); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic28); [ ##LE002##  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic26); [ ##LE003##  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic34); [ ##LE004##  }call(lgc.trees);call(lgc.enchanter);return();[ Messages

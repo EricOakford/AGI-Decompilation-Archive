@@ -3,21 +3,21 @@ if (isset(f188))
     {    clear.lines(2, 3, BLACK);    display(2, 2, "Enjoy, for soon you'll come face to\n  face with the dreaded "            "Sariens!");    }  else
     {    clear.lines(22, 24, WHITE);    display(22, 2, "Enjoy, for soon you'll come face to\n  face with the "            "dreaded Sariens!");    }  v34 = 145;  }if (isset(f34))
   {  reset(f34);  if (isset(f37))
-    {    stop.cycling(o1);    }  }get.posn(o2, v36, v37);if (isset(f38))
+    {    stop.cycling(o1);    }  }get.posn(o2, v36, v37);if (isset(lf8))
   {  if (v36 == 30)
     {    reverse.loop(o1, f34);    if (machineType != PC)
       {      sound(Sound43, f39);      }    else
       {      sound(Sound44, f39);      }    }  if (v36 == 81)
     {    end.of.loop(o1, f34);    if (machineType != PC)
       {      sound(Sound43, f39);      }    else
-      {      sound(Sound44, f39);      }    set(f36);    reset(f38);    set(f37);    }  }else
+      {      sound(Sound44, f39);      }    set(f36);    reset(lf8);    set(f37);    }  }else
   {  if (v36 == 30)
     {    end.of.loop(o1, f34);    if (machineType != PC)
       {      sound(Sound43, f39);      }    else
       {      sound(Sound44, f39);      }    set(f37);    }  if (v36 == 81)
     {    reverse.loop(o1, f34);    if (machineType != PC)
       {      sound(Sound43, f39);      }    else
-      {      sound(Sound44, f39);      }    set(f36);    reset(f37);    set(f38);    }  }if (isset(f36))
+      {      sound(Sound44, f39);      }    set(f36);    reset(f37);    set(lf8);    }  }if (isset(f36))
   {  current.cel(o1, work);  if (work == 3)
     {    normal.motion(o1);    stop.cycling(o1);    reset(f36);    }  }--v30;if (v30 == 1)
   {  position(o2, 0, 87);  draw(o2);  move.obj(o2, 142, 87, 3, f30);  }if (isset(f30))
@@ -31,4 +31,4 @@ if (isset(f188))
   {  set.priority(o1, 15);  }else
   {  set.priority(o1, 13);  }--v34;if (v34 == 1)
   {  set.text.attribute(WHITE, BLACK);  if (monitorType == MONO &&       machineType == PC)
-    {    goto(Label1);    }  clear.lines(22, 24, BLACK);Label1:  reset(noScript);  new.room(Logic57);  }return();[ Messages#message 1 "Enjoy, for soon you'll come face to\n  face with the dreaded Sariens!"
+    {    goto(Label1);    }  clear.lines(22, 24, BLACK);Label1:  reset(noScript);  new.room(Logic57); [ ##LE001##  }return();[ Messages#message 1 "Enjoy, for soon you'll come face to\n  face with the dreaded Sariens!"

@@ -1,10 +1,10 @@
 if (isset(newRoom))
-  {  set.horizon(37);  load.logics(Logic170);  load.view(View104);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic170);  get.posn(ego, v105, v106);  if (previousRoom == 83)
-    {    if (v105 > 96)
-      {      v105 = 112;      v106 = 42;      }    else
-      {      v105 = 89;      v106 = 42;      }    }  else
-    {    if (v106 < 38)
-      {      v106 = 38;      }    }  position.v(ego, v105, v106);  draw(ego);  show.pic();  }if (said("check out", "antique shop"))
+  {  set.horizon(37);  load.logics(lgc.quartz.island);  load.view(View104);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.quartz.island);  get.posn(ego, work.2, work.3);  if (previousRoom == 83)
+    {    if (work.2 > 96)
+      {      work.2 = 112;      work.3 = 42;      }    else
+      {      work.2 = 89;      work.3 = 42;      }    }  else
+    {    if (work.3 < 38)
+      {      work.3 = 38;      }    }  position.v(ego, work.2, work.3);  draw(ego);  show.pic();  }if (said("check out", "antique shop"))
   {  print("You notice a tower in the middle of the small island. From this "        "distance it is difficult to see any details.");  }if (isset(egoHitSpecial) &&     !isset(f94))
   {  set(f94);  v63 = 1;  get.posn(ego, temp.x, temp.y);  if (temp.x > 97)
     {    erase(ego);    v63 = 2;    }  else
@@ -13,7 +13,7 @@ if (isset(newRoom))
       {      if (temp.x < 6)
         {        temp.x = 0;        }      else
         {        temp.x -= 6;        }      }    }  temp.y = 167;  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic83);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic78);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic89);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic87);  }call(Logic170);return();[ Messages#message 1 "You notice a tower in the middle of the small island. From this distance it is difficult to see any details."
+  {  new.room(Logic83); [ ##LE001##  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic78); [ ##LE002##  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic89); [ ##LE003##  }if (edgeEgoHit == LEFT_EDGE)
+  {  new.room(Logic87); [ ##LE004##  }call(lgc.quartz.island);return();[ Messages#message 1 "You notice a tower in the middle of the small island. From this distance it is difficult to see any details."

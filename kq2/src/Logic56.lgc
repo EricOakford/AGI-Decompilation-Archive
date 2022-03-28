@@ -1,10 +1,10 @@
 if (isset(newRoom))
   {  load.logics(lgc.carpet);  load.logics(lgc.mountaintop);  if ((has("Oil Lamp") ||       has("Carpet")))
     {    load.view(View65);    load.view(View98);    }  load.view(View66);  load.view(View46);  load.view(View47);  load.view(View44);  load.view(View45);  load.view(View91);  load.view(View8);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.carpet);  call(lgc.mountaintop);  animate.obj(o3);  work = 3;  cycle.time(o3, work);  ignore.horizon(o3);  position(o3, 115, 100);  if (!isset(f136))
-    {    get.posn(ego, v105, v106);    if (v106 < 50)
-      {      v106 = 50;      }    else
-      {      if (v106 > 148)
-        {        v106 = 148;        }      }    position.v(ego, v105, v106);    }  draw(ego);  if (!isset(f108) &&       !isset(f109) &&       !isset(f110))
+    {    get.posn(ego, work.2, work.3);    if (work.3 < 50)
+      {      work.3 = 50;      }    else
+      {      if (work.3 > 148)
+        {        work.3 = 148;        }      }    position.v(ego, work.2, work.3);    }  draw(ego);  if (!isset(f108) &&       !isset(f109) &&       !isset(f110))
     {    set.view(o3, View44);    set(f31);    }  else
     {    if (isset(f108))
       {      ignore.objs(ego);      set.view(o3, View66);      set.priority(o3, 5);      }    else
@@ -60,7 +60,7 @@ if (isset(newRoom))
     {    print("The flying horse is not particularly hungry, thank you.");    }  if (said("pat", "flying horse"))
     {    print("The beautiful white horse lets you stroke its velvety soft nose.");    }  if ((said("hello", "anyword") ||       said("say", "hello")))
     {    print("The flying horse bobs its head up and down in greeting.");    }  }Label2:if (edgeEgoHit == LEFT_EDGE)
-  {  set.view(ego, View0);  new.room(Logic55);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic57);  }if (isset(f33))
+  {  set.view(ego, View0);  new.room(Logic55); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)
+  {  new.room(Logic57); [ ##LE002##  }if (isset(f33))
   {  reset(f33);  reset(f32);  erase(o3);  }if (isset(f36))
   {  reset(f36);  move.obj(o3, 0, 60, 0, f33);  }call(lgc.carpet);call(lgc.mountaintop);return();[ Messages#message 1 "Look out! There is a poisonous viper blocking your path!"#message 2 "The snake appears to be about ten feet long. It is coiled and ready to strike."#message 3 "The huge snake is deceased."#message 4 "SSSsssssss! SSssstay away or I will ssssssstrike!"#message 5 "Are you joking!"#message 6 "The serpent only wants to eat YOU!"#message 7 "Brandishing the sharp sword, you quickly slash the viper into ribbons."#message 8 "This is a very large snake. You don't have any weapons strong enough to kill it."#message 9 "You toss the leather bridle onto the coiled snake. Instantly, there stands before you not a snake, but a beautiful winged horse wearing the bridle!"#message 10 "Where do you want to throw the bridle?"#message 11 "You don't have it."#message 12 "This is a handsome white horse! It has beautiful wings of delicate white feathers. The leather bridle is around the winged horse's head."#message 13 "\"Thank you, kind sir, for saving me. An evil enchanter turned me into a snake when I refused to be his steed. To repay you, here is a magic sugar cube that will guard against poisonous brambles.\""#message 14 "The winged horse has a very independent nature. It doesn't want a rider on its back."#message 15 "The white horse is much too big and strong for you to hold it."#message 16 "Why would you want to kill a beautiful horse like that?"#message 17 "The flying horse is not particularly hungry, thank you."#message 18 "The beautiful white horse lets you stroke its velvety soft nose."#message 19 "The flying horse bobs its head up and down in greeting."#message 20 "The snake has struck you dead."#message 21 "There is no snake here!"#message 22 "You are too far away."#message 23 "The snake has no use for it. He is interested in only one thing. Getting rid of YOU!"#message 24 "Why would you want a dead snake? Ugh!!"#message 25 "You put the bridle on the dead snake. Nothing happens. You pick the bridle up again."#message 26 "The horse is flying away, and pays no attention to you."

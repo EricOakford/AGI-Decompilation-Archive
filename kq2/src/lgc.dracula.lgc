@@ -4,15 +4,15 @@ if (!isset(f230) &&     isset(newRoom))
     {    reset(f162);    }  return();  }if (currentRoom == v92)
   {  if (currentRoom == 66)
     {    position(o3, 1, 150);    }  else
-    {    random(0, 255, v106);    if (currentRoom == 61)
-      {      if (v106 < 80)
+    {    random(0, 255, work.3);    if (currentRoom == 61)
+      {      if (work.3 < 80)
         {        position(o3, 71, 148);        }      else
-        {        if (v106 < 160)
+        {        if (work.3 < 160)
           {          position(o3, 33, 120);          }        else
           {          position(o3, 97, 104);          }        }      }    else
-      {      if (v106 < 80)
+      {      if (work.3 < 80)
         {        position(o3, 120, 142);        }      else
-        {        if (v106 < 160)
+        {        if (work.3 < 160)
           {          position(o3, 74, 100);          }        else
           {          position(o3, 30, 123);          }        }      }    }  v92 = 3;  if (currentRoom != 66)
     {    animate.obj(o3);    v230 = 2;    step.size(o3, v230);    print("Count Dracula is here!! Run before it's too late!");    }  else
@@ -55,9 +55,9 @@ if (!isset(f230) &&     isset(newRoom))
       {      if ((said("check out") ||           said("check out", "anyword")))
         {        print("It is pitch black in here! You can't see a thing!");        }      else
         {        if (said("anyword", "anyword"))
-          {          print("You can't do that while stumbling around in the dark.");          }        }      }    goto(Label2);Label1:    print("Count Dracula is terrified of the cross. He transforms into a bat "          "and flies away.");    set.view(o3, View52);    v230 = 2;    cycle.time(o3, v230);    ignore.blocks(o3);    ignore.objs(o3);    start.cycling(o3);    get.priority(o3, v105);    if (v105 > 12)
+          {          print("You can't do that while stumbling around in the dark.");          }        }      }    goto(Label2);Label1:    print("Count Dracula is terrified of the cross. He transforms into a bat "          "and flies away.");    set.view(o3, View52);    v230 = 2;    cycle.time(o3, v230);    ignore.blocks(o3);    ignore.objs(o3);    start.cycling(o3);    get.priority(o3, work.2);    if (work.2 > 12)
       {      set.priority(o3, 12);      }    else
-      {      set.priority.v(o3, v105);      }    v92 = 4;    if (currentRoom == 61)
+      {      set.priority.v(o3, work.2);      }    v92 = 4;    if (currentRoom == 61)
       {      move.obj(o3, 136, 55, 0, f233);      }    else
       {      if (currentRoom == 64)
         {        move.obj(o3, 0, 46, 0, f233);        }      else

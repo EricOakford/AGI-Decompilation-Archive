@@ -1,4 +1,4 @@
-if (isset(f64))
+if (isset(poisoned.water))
   {  goto(Label1);  }if ((currentRoom == 14 ||     currentRoom == 37 ||     currentRoom == 38))
   {  if ((said("check out", "area") ||       said("check out")))
     {    print("What a lovely little lake! Its sparkling water looks so clean and "          "fresh. An unclimable cliff rises abruptly to the east.");    }  if (said("check out", "lake"))

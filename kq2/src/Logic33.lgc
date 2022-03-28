@@ -1,12 +1,1 @@
-if (isset(newRoom))
-  {  load.view(View104);  load.view(View91);  load.view(View97);  load.view(View92);  if ((has("Oil Lamp") ||       has("Carpet")))
-    {    load.view(View65);    load.view(View98);    }  load.logics(Logic151);  load.logics(Logic156);  load.logics(Logic101);  load.logics(lgc.lake);  load.pic(currentRoom);  draw.pic(currentRoom);  call(Logic156);  call(Logic101);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (posn(ego, 0, 0, 106, 167))
-  {  set(f64);  }else
-  {  reset(f64);  }if (!isset(onWater) &&     posn(ego, 11, 73, 30, 115))
-  {  set(onWater);  set(f116);  }if (isset(onWater) &&     drown.swim <= 0 &&     !isset(f64))
-  {  temp.x = 139;  temp.y = 91;  set(f116);  }if (edgeEgoHit != NOT_HIT)
-  {  reset(f64);  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic26);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic34);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic32);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic40);  }call(Logic151);call(Logic156);call(Logic101);call(lgc.lake);return();[ Messages
+if (newRoom)  {  load.view(View104);  load.view(View91);  load.view(View97);  load.view(View92);  if ((has("Oil Lamp") ||       has("Carpet")))    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.trees);  load.logics(lgc.poison.lake);  load.logics(lgc.swim);  load.logics(lgc.lake);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.poison.lake);  call(lgc.swim);  ignore.blocks(ego);  draw(ego);  show.pic();  }if (posn(ego, 0, 0, 106, 167))  {  set(poisoned.water);  }else  {  reset(poisoned.water);  }if (!onWater &&     posn(ego, 11, 73, 30, 115))  {  set(onWater);  set(override.splash.loc);  }if (onWater &&     drown.swim <= 0 &&     !poisoned.water)  {  temp.x = 139;  temp.y = 91;  set(override.splash.loc);  }if (edgeEgoHit != NOT_HIT)  {  reset(poisoned.water);  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic26); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic34); [ ##LE002##  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic32); [ ##LE003##  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic40); [ ##LE004##  }call(lgc.trees);call(lgc.poison.lake);call(lgc.swim);call(lgc.lake);return();[ Messages

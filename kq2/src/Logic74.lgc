@@ -1,13 +1,13 @@
 if (isset(newRoom))
-  {  load.view(View78);  load.view(View28);  load.view(View76);  load.view(View77);  load.view(View115);  load.sound(Sound5);  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o3);  animate.obj(o2);  work = 3;  cycle.time(o2, work);  animate.obj(o4);  work = 3;  step.size(o4, work);  position(o3, 47, 111);  if (isset(f112))
+  {  load.view(View78);  load.view(View28);  load.view(View76);  load.view(View77);  load.view(View115);  load.sound(m.badguy);  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o3);  animate.obj(o2);  work = 3;  cycle.time(o2, work);  animate.obj(o4);  work = 3;  step.size(o4, work);  position(o3, 47, 111);  if (isset(f112))
     {    set.view(o3, View77);    }  else
     {    set.view(o3, View76);    }  draw(o3);  random(0, 255, work);  reset(f33);  if (fairy.spell.timer == 0 &&       fairy.spell.timer.2 == 0)
     {    if (work < 185)
       {      set(f33);      set.view(o4, View28);      position(o4, 50, 119);      follow.ego(o4, 7, f34);      draw(o4);      }    }  set.priority(o2, 12);  position(o2, 105, 141);  set.view(o2, View78);  if (v85 == 0)
     {    set.cel(o2, 0);    }  else
-    {    set.cel(o2, 3);    }  ignore.objs(o2);  ignore.objs(o4);  ignore.objs(ego);  draw(o2);  stop.cycling(o2);  get.posn(ego, v105, v106);  if (v106 < 117)
-    {    v106 = 117;    position.v(ego, v105, v106);    }  draw(ego);  show.pic();  if (isset(f33))
-    {    sound(Sound5, f169);    print("You have stumbled onto the home of the thieving dwarf! Unfortunately "          "for you, he is home!");    }  }if ((said("check out", "antique shop") ||     said("check out", "area") ||     said("check out")))
+    {    set.cel(o2, 3);    }  ignore.objs(o2);  ignore.objs(o4);  ignore.objs(ego);  draw(o2);  stop.cycling(o2);  get.posn(ego, work.2, work.3);  if (work.3 < 117)
+    {    work.3 = 117;    position.v(ego, work.2, work.3);    }  draw(ego);  show.pic();  if (isset(f33))
+    {    sound(m.badguy, done);    print("You have stumbled onto the home of the thieving dwarf! Unfortunately "          "for you, he is home!");    }  }if ((said("check out", "antique shop") ||     said("check out", "area") ||     said("check out")))
   {  if (isset(f112))
     {    print("It seems you have entered the underground home of the little dwarf. "          "It is cozy, with a fire crackling in the hearth. There is a trunk "          "tucked away in the corner.");    }  else
     {    print("It seems you have entered the underground home of the little dwarf. "          "It is cozy, with a fire crackling in the hearth. A pot of chicken "          "soup bubbling above the fire gives a delicious aroma to the room. "          "There is a trunk tucked away in the corner.");    }  }if (said("check out", "fire"))
@@ -21,12 +21,12 @@ if (isset(newRoom))
     {    print("You are too far away.");    }  else
     {    if (v85 == 1)
       {      print("The trunk lid is already open.");      }    if (v85 == 0)
-      {      end.of.loop(o2, f169);      v85 = 1;      set(f36);      }    }  }if ((said("close", "chest") ||     said("close", "lid")))
+      {      end.of.loop(o2, done);      v85 = 1;      set(f36);      }    }  }if ((said("close", "chest") ||     said("close", "lid")))
   {  if (!posn(ego, 95, 120, 122, 147))
     {    print("You are too far away.");    }  else
     {    if (v85 == 0)
       {      print("The lid of the trunk is already closed.");      }    if (v85 == 1)
-      {      reverse.loop(o2, f169);      v85 = 0;      }    }  }if (said("look in", "chest"))
+      {      reverse.loop(o2, done);      v85 = 0;      }    }  }if (said("look in", "chest"))
   {  if (v85 != 1)
     {    print("You will have to open it to see inside.");    }  else
     {    if ((isset(f78) ||         !isset(f133) ||         isset(f80) ||         isset(f77) ||         isset(f81) ||         isset(f79)))
@@ -51,7 +51,7 @@ if (isset(newRoom))
   {  if (!isset(f37))
     {    print("OUCH!!!! This fire is HOT! You're going to burn yourself.");    set(f37);    }  }else
   {  reset(f37);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic73);  }if (isset(f34))
+  {  new.room(Logic73); [ ##LE001##  }if (isset(f34))
   {  reset(f34);  set.view(ego, View115);  if (posn(ego, 16, 117, 60, 167))
-    {    erase(ego);    get.posn(ego, v105, v106);    v105 -= 15;    position.v(ego, v105, v106);    draw(ego);    }  stop.motion(ego);  set(keep.cycling);  end.of.loop(ego, f35);  set.priority(ego, 15);  ignore.objs(ego);  }if (isset(f35))
-  {  reset(keep.cycling);  reset(f35);  set.view(ego, View0);  release.priority(ego);  new.room(Logic46);  }return();[ Messages#message 1 "You have stumbled onto the home of the thieving dwarf! Unfortunately for you, he is home!"#message 2 "It seems you have entered the underground home of the little dwarf. It is cozy, with a fire crackling in the hearth. A pot of chicken soup bubbling above the fire gives a delicious aroma to the room. There is a trunk tucked away in the corner."#message 3 "It seems you have entered the underground home of the little dwarf. It is cozy, with a fire crackling in the hearth. There is a trunk tucked away in the corner."#message 4 "There is a pot of chicken soup boiling over the fire."#message 5 "The fire is crackling merrily in the fireplace."#message 6 "The trunk looks old and worn. The hinges are loose."#message 7 "You look inside and notice..."#message 8 "You look inside and notice...nothing."#message 9 "The trunk lid is already open."#message 10 "earrings"#message 11 "bracelet"#message 12 "necklace"#message 13 "brooch"#message 14 "tiara"#message 15 "The lid of the trunk is already closed."#message 16 "You grab the wooden handle of the bubbling pot of chicken soup. You take the pot with you."#message 17 "You reach into the trunk and get it."#message 19 "You are too far away."#message 20 "You will have to open it to see inside."#message 21 "The stocking hats of the dwarf are sitting on the table."#message 22 "Those hats wouldn't fit you."#message 23 "OUCH!!!! This fire is HOT! You're going to burn yourself."
+    {    erase(ego);    get.posn(ego, work.2, work.3);    work.2 -= 15;    position.v(ego, work.2, work.3);    draw(ego);    }  stop.motion(ego);  set(keep.cycling);  end.of.loop(ego, f35);  set.priority(ego, 15);  ignore.objs(ego);  }if (isset(f35))
+  {  reset(keep.cycling);  reset(f35);  set.view(ego, View0);  release.priority(ego);  new.room(Logic46); [ ##LE002##  }return();[ Messages#message 1 "You have stumbled onto the home of the thieving dwarf! Unfortunately for you, he is home!"#message 2 "It seems you have entered the underground home of the little dwarf. It is cozy, with a fire crackling in the hearth. A pot of chicken soup bubbling above the fire gives a delicious aroma to the room. There is a trunk tucked away in the corner."#message 3 "It seems you have entered the underground home of the little dwarf. It is cozy, with a fire crackling in the hearth. There is a trunk tucked away in the corner."#message 4 "There is a pot of chicken soup boiling over the fire."#message 5 "The fire is crackling merrily in the fireplace."#message 6 "The trunk looks old and worn. The hinges are loose."#message 7 "You look inside and notice..."#message 8 "You look inside and notice...nothing."#message 9 "The trunk lid is already open."#message 10 "earrings"#message 11 "bracelet"#message 12 "necklace"#message 13 "brooch"#message 14 "tiara"#message 15 "The lid of the trunk is already closed."#message 16 "You grab the wooden handle of the bubbling pot of chicken soup. You take the pot with you."#message 17 "You reach into the trunk and get it."#message 19 "You are too far away."#message 20 "You will have to open it to see inside."#message 21 "The stocking hats of the dwarf are sitting on the table."#message 22 "Those hats wouldn't fit you."#message 23 "OUCH!!!! This fire is HOT! You're going to burn yourself."

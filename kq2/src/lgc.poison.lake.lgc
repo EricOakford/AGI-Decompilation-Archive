@@ -1,6 +1,6 @@
 if (isset(newRoom))
   {  reset(f93);  return();  }if (isset(f147))
-  {  goto(Label3);  }if (!isset(f64))
+  {  goto(Label3);  }if (!isset(poisoned.water))
   {  goto(Label3);  }if (said("check out", "bush"))
   {  print("The bushes are nothing but leafless dry sticks.");  }if (said("anyword", "blossom"))
   {  print("What flowers? Why would you think flowers could grow around this "        "stinking lake?");  }if (said("look across", "lake"))

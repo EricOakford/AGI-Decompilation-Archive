@@ -6,12 +6,12 @@ if (isset(newRoom))
   {  goto(Label2);  }if (posn(ego, 95, 132, 134, 132))
   {  v31 = 1;  set.priority(ego, 12);  }else
   {  if (v31 == 1)
-    {    v31 = 0;    get.posn(ego, v105, v106);    if (v106 > 132)
+    {    v31 = 0;    get.posn(ego, work.2, work.3);    if (work.3 > 132)
       {      release.priority(ego);      observe.blocks(ego);      reset(f30);      }    else
       {      set.priority(ego, 12);      ignore.blocks(ego);      set(f30);      }    }  }if (posn(ego, 18, 82, 50, 82))
   {  v31 = 2;  set.priority(ego, 14);  set(f31);  }else
   {  if (v31 == 2)
-    {    v31 = 0;    get.posn(ego, v105, v106);    if (v106 > 82)
+    {    v31 = 0;    get.posn(ego, work.2, work.3);    if (work.3 > 82)
       {      set.priority(ego, 14);      set(f31);      reset(f30);      observe.blocks(ego);      }    else
       {      set.priority(ego, 12);      reset(f31);      set(f30);      ignore.blocks(ego);      }    }  }if (isset(f31))
   {  if ((posn(ego, 74, 81, 74, 81) ||       posn(ego, 75, 80, 75, 80)))
@@ -62,9 +62,9 @@ if (isset(newRoom))
     {    v34 = 3;    if (v30 == 8)
       {      reset(f32);      }    else
       {      stop.motion(ego);      if (v30 < 3)
-        {        stop.sound();        set.view(ego, View91);        set(f39);        set(f38);        }      else
+        {        stop.sound();        set.view(ego, View91);        set(f39);        set(lf8);        }      else
         {        set.view(ego, View109);        work = 2;        cycle.time(ego, work);        v35 = 50;        set(f33);        reset(f34);        sound(Sound23, f37);        }      }    }  }if (isset(f37) &&     v35 > 1)
-  {  sound(Sound23, f37);  }if (!isset(f38) &&     v34 == 3)
+  {  sound(Sound23, f37);  }if (!isset(lf8) &&     v34 == 3)
   {  if (v35 <= 0)
     {    if (v30 != 8)
       {      start.motion(ego);      temp.x = 4;      temp.y = 0;      reposition(ego, temp.x, temp.y);      set.view(ego, View0);      work = 1;      cycle.time(ego, work);      step.size(ego, work);      set.loop(ego, 2);      }    v34 = 0;    reset(keep.cycling);    observe.blocks(ego);    release.priority(ego);    reset(f31);    v31 = 0;    reset(f30);    }  else
@@ -86,5 +86,5 @@ if (isset(newRoom))
           {          currentScore  += 1;          set(f158);          }        }      }    else
       {      print("You can't do that from where you are standing.");      }    }  else
     {    print("You are not carrying it.");    }  }Label4:get.posn(ego, work, v33);if (isset(egoHitSpecial) &&     work > 145)
-  {  new.room(Logic61);  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic59);  }call(lgc.dracula);return();[ Messages#message 1 "There is a ramp spiraling up toward the top of a gloomy tower. A torch blazes on the wall."#message 2 "The ramp spirals steeply upward. Be careful, you don't want to fall."#message 3 "The torch lends the only warmth to this dreary castle."#message 4 "The torch is firmly attached to the wall. Try as you might, you cannot budge it."#message 5 "You hold your candle up to the blazing torch. It catches! Your candle is now lit."#message 6 "You can't do that from where you are standing."#message 7 "You are not carrying it."#message 8 "You fall to your death on the hard stone floor."
+  {  new.room(Logic61); [ ##LE001##  }if (edgeEgoHit == TOP_EDGE)
+  {  new.room(Logic59); [ ##LE002##  }call(lgc.dracula);return();[ Messages#message 1 "There is a ramp spiraling up toward the top of a gloomy tower. A torch blazes on the wall."#message 2 "The ramp spirals steeply upward. Be careful, you don't want to fall."#message 3 "The torch lends the only warmth to this dreary castle."#message 4 "The torch is firmly attached to the wall. Try as you might, you cannot budge it."#message 5 "You hold your candle up to the blazing torch. It catches! Your candle is now lit."#message 6 "You can't do that from where you are standing."#message 7 "You are not carrying it."#message 8 "You fall to your death on the hard stone floor."

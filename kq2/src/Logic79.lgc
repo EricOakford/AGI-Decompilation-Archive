@@ -1,5 +1,5 @@
 if (isset(newRoom))
-  {  load.logics(Logic170);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View104);  set.horizon(0);  ignore.horizon(ego);  draw(ego);  show.pic();  }if (isset(egoHitSpecial) &&     !isset(f94))
+  {  load.logics(lgc.quartz.island);  load.pic(currentRoom);  draw.pic(currentRoom);  discard.pic(currentRoom);  load.view(View104);  set.horizon(0);  ignore.horizon(ego);  draw(ego);  show.pic();  }if (isset(egoHitSpecial) &&     !isset(f94))
   {  set(f94);  v63 = 1;  get.posn(ego, temp.x, temp.y);  if (temp.y < 50)
     {    if (temp.x < 25)
       {      temp.x = 0;      }    else
@@ -17,5 +17,5 @@ if (isset(newRoom))
               {              temp.x  += 10;              if (temp.y < 162)
                 {                temp.y  += 6;                }              else
                 {                temp.y = 167;                }              }            }          }        }      }    }  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic78);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic84);  }call(Logic170);return();[ Messages
+  {  new.room(Logic78); [ ##LE001##  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic84); [ ##LE002##  }call(lgc.quartz.island);return();[ Messages

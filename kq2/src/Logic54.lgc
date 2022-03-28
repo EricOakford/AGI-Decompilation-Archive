@@ -11,8 +11,8 @@ if (isset(newRoom))
     {    move.obj(ego, 0, 100, 0, f31);    }  else
     {    move.obj(ego, 62, 70, 0, f34);    }  }if (isset(f31))
   {  if (v64 == 4)
-    {    set.view(ego, View0);    new.room(Logic53);    }  else
-    {    set.view(ego, View0);    new.room(Logic15);    }  }if ((said("check out", "lake") ||     said("check out") ||     said("check out", "area") ||     said("look in", "lake")))
+    {    set.view(ego, View0);    new.room(Logic53); [ ##LE001##    }  else
+    {    set.view(ego, View0);    new.room(Logic15); [ ##LE002##    }  }if ((said("check out", "lake") ||     said("check out") ||     said("check out", "area") ||     said("look in", "lake")))
   {  print("The bottom of the sea is teeming with fish and plant life. King "        "Neptune rules this mighty underwater empire.");  }if (said("check out", "dolphin"))
   {  print("You can see many beautiful creatures at the bottom of the sea.");  }if ((said("acquire", "dolphin") ||     said("capture", "dolphin")))
   {  print("You are not able to catch fish while riding a magic seahorse. Just "        "enjoy the beauty of the underwater world.");  }if (said("get off", "magic seahorse"))

@@ -1,57 +1,0 @@
-if (!isset(f248) &&     isset(newRoom))
-  {  set(f248);  reset(f53);  if (currentRoom != 3 &&       !isset(f59))
-    {    random(0, 250, work);    if ((work < 80 ||         isset(f129)))
-      {      set(f38);      animate.obj(o2);      load.view(View3);      load.view(View2);      random(40, 255, v58);      random(0, 2, v59);      if (currentRoom == 2)
-        {        position(o2, 140, 140);        }      if (currentRoom == 3)
-        {        position(o2, 140, 150);        }      if (currentRoom == 4)
-        {        position(o2, 40, 140);        }      if (currentRoom == 9)
-        {        position(o2, 20, 150);        }      if (currentRoom == 10)
-        {        position(o2, 25, 125);        }      if (currentRoom == 16)
-        {        position(o2, 120, 60);        }      object.on.land(o2);      set.view(o2, View2);      }    }  return();  }if (!isset(f53) &&     isset(f38))
-  {  --v58;  if (v58 == 1)
-    {    --v59;    if (v59 == 0)
-      {      set(f53);      wander(o2);      draw(o2);      print("What is this! It appears you have run into Little Red Riding Hood! "            "She looks a little troubled.");      }    else
-      {      v58 = 250;      }    }  }if (!isset(f53))
-  {  goto(Label1);  }distance(ego, o2, work);if (work > 110)
-  {  if (said("anyword", "bitch"))
-    {    print("You are too far away from her.");    }  }if (isset(f59) &&     said("acquire", "bouquet"))
-  {  print("You already have it.");  }if (said("follow", "bitch"))
-  {  print("No!");  }if (said("acquire", "bitch"))
-  {  print("Now, that wouldn't be very nice, would it?");  }if (said("kill", "bitch"))
-  {  print("That would be incredibly nasty!");  }if (said("kiss", "bitch"))
-  {  print("You don't need to be kissing little girls.");  }if (said("embrace", "bitch"))
-  {  print("You are a stranger to Little Red Riding Hood. You shouldn't hug her.");  }if (!isset(f59) &&     (said("acquire", "bouquet") ||     said("steal", "bouquet")))
-  {  print("It would not be nice to take the bouquet of flowers away from the "        "little girl.");  }if (said("check out", "bitch"))
-  {  print("Little Red Riding Hood is a sweet little girl. She has long blond "        "locks peeking out from her red cape and hood.");  }if (said("speak", "bitch"))
-  {  if (isset(f59))
-    {    print("Little Red Riding Hood is overjoyed to have her basket of goodies "          "back. Thank you, Mister, she exclaims. Now I can take the goodies to "          "my sick grandma.");    }  else
-    {    print("Tearfully, Little Red Riding Hood explains that someone stole her "          "basket of goodies while she was picking a bouquet of flowers. Could "          "you please help her find it?");    }  }if ((said("hello", "anyword") ||     said("say", "hello")))
-  {  if (isset(f59))
-    {    print("Shyly, Little Red Riding Hood returns your hello.");    }  else
-    {    print("Shyly, Little Red Riding Hood returns your hello. She looks a little "          "upset.");    }  }if (said("capture", "bitch"))
-  {  print("Now, that wouldn't be very nice, would it?");  }if ((said("give", "basket", "bitch") ||     said("give", "bitch", "basket")))
-  {  if (work > 25)
-    {    print("You are too far away from her.");    goto(Label3);    }  if (has("Empty Basket"))
-    {    print("You ate the goodies out of the basket! Why would you think she would "          "want it now?");    }  else
-    {    if (has("Basket of Goodies"))
-      {      drop("Basket of Goodies");      get("Bouquet of Flowers");      set.view(o2, View3);      set(f59);      print("Gratefully, Little Red Riding Hood accepts the basket of goodies. "            "In return, she gives you her bouquet of flowers.");      currentScore  += 4;      }    else
-      {      reset(haveMatch);      }    }  }else
-  {  if ((said("give", "anyword", "bitch") ||       said("give", "bitch", "anyword")))
-    {    print("Little Red Riding Hood is not interested in it.");    }  else
-    {    if (said("give", "anyword"))
-      {      print("You must specify who you wish to give it to.");      }    }  }if ((said("acquire", "basket") ||     said("steal", "basket")))
-  {  if (isset(f57) &&       !has("Basket of Goodies") &&       !has("Empty Basket"))
-    {    print("You gave the basket of goodies to Little Red Riding Hood. It's hers "          "now. You can't take it!");    }  }goto(Label2);Label1:if (said("anyword", "bitch"))
-  {  print("There is nobody here but you.");  }if (!isset(f59))
-  {  if ((said("acquire", "bouquet") ||       said("steal", "bouquet")))
-    {    print("There is no one here to get it from.");    }  }if (said("give", "basket"))
-  {  if ((has("Basket of Goodies") ||       has("Empty Basket")))
-    {    print("There is nobody here to give it to.");    }  else
-    {    print("You do not have it to give.");    }  }Label2:if (isset(f64))
-  {  goto(Label3);  }if (said("check out", "tree"))
-  {  print("This is a heavily wooded area. It would be easy to get lost among the "        "trees.");  }if (said("check out", "blossom"))
-  {  print("Many flowers beautify these woods.");  }if (said("acquire", "blossom"))
-  {  print("You have better things to do than to dilly-dally around picking "        "flowers.");  }if (said("climb", "tree"))
-  {  print("It would be fun to climb trees for a while, but you really have better "        "things to do.");  }if (said("smell", "blossom"))
-  {  print("The lovely fragrance of wildflowers is all around you in these woods.");  }if (said("check out", "bush"))
-  {  print("There are many bushes and shrubs among the trees.");  }Label3:return();[ Messages#message 1 "Little Red Riding Hood is a sweet little girl. She has long blond locks peeking out from her red cape and hood."#message 2 "Now, that wouldn't be very nice, would it?"#message 5 "Tearfully, Little Red Riding Hood explains that someone stole her basket of goodies while she was picking a bouquet of flowers. Could you please help her find it?"#message 6 "Shyly, Little Red Riding Hood returns your hello. She looks a little upset."#message 7 "What is this! It appears you have run into Little Red Riding Hood! She looks a little troubled."#message 8 "You don't need to be kissing little girls."#message 9 "You are a stranger to Little Red Riding Hood. You shouldn't hug her."#message 10 "Gratefully, Little Red Riding Hood accepts the basket of goodies. In return, she gives you her bouquet of flowers."#message 11 "You ate the goodies out of the basket! Why would you think she would want it now?"#message 12 "You are too far away from her."#message 13 "Little Red Riding Hood is overjoyed to have her basket of goodies back. Thank you, Mister, she exclaims. Now I can take the goodies to my sick grandma."#message 14 "That would be incredibly nasty!"#message 15 "This is a heavily wooded area. It would be easy to get lost among the trees."#message 16 "Many flowers beautify these woods."#message 17 "You have better things to do than to dilly-dally around picking flowers."#message 18 "It would be fun to climb trees for a while, but you really have better things to do."#message 19 "The lovely fragrance of wildflowers is all around you in these woods."#message 20 "There are many bushes and shrubs among the trees."#message 21 "It would not be nice to take the bouquet of flowers away from the little girl."#message 22 "There is nobody here but you."#message 23 "There is no one here to get it from."#message 24 "There is nobody here to give it to."#message 25 "You do not have it to give."#message 26 "No!"#message 27 "You already have it."#message 28 "Shyly, Little Red Riding Hood returns your hello."#message 29 "You gave the basket of goodies to Little Red Riding Hood. It's hers now. You can't take it!"#message 30 "Little Red Riding Hood is not interested in it."#message 31 "You must specify who you wish to give it to."

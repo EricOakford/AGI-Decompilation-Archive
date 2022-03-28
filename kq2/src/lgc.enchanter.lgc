@@ -1,18 +1,18 @@
 if (!isset(f238) &&     isset(newRoom))
   {  set(f238);  reset(enchanter.in.room);  random(0, 255, v241);  if (v241 < 100)
-    {    set(f234);    random(40, 255, v58);    random(1, 3, v59);    load.view(View115);    load.view(View18);    load.view(View112);    load.view(View95);    load.view(View19);    load.sound(Sound27);    work = 2;    step.size(o4, work);    animate.obj(o4);    set.view(o4, View18);    object.on.land(o4);    if (currentRoom == 19)
+    {    set(f234);    random(40, 255, timer.1);    random(1, 3, timer.2);    load.view(View115);    load.view(View18);    load.view(View112);    load.view(View95);    load.view(View19);    load.sound(Sound27);    work = 2;    step.size(o4, work);    animate.obj(o4);    set.view(o4, View18);    object.on.land(o4);    if (currentRoom == 19)
       {      position(o4, 140, 80);      }    if (currentRoom == 20)
       {      position(o4, 33, 63);      }    if (currentRoom == 21)
       {      position(o4, 80, 126);      }    if (currentRoom == 26)
       {      position(o4, 102, 85);      }    if (currentRoom == 27)
       {      position(o4, 84, 126);      }    if (currentRoom == 28)
       {      position(o4, 72, 143);      }    }  return();  }if (!isset(enchanter.in.room) &&     isset(f234))
-  {  --v58;  if (v58 == 1)
-    {    --v59;    if (v59 == 0 &&         genie.delay != 1)
-      {      set(enchanter.in.room);      draw(o4);      follow.ego(o4, 5, f232);      set(f236);      sound(Sound5, f169);      if (fairy.spell.timer == 0 &&           fairy.spell.timer.2 == 0)
+  {  --timer.1;  if (timer.1 == 1)
+    {    --timer.2;    if (timer.2 == 0 &&         genie.delay != 1)
+      {      set(enchanter.in.room);      draw(o4);      follow.ego(o4, 5, f232);      set(f236);      sound(m.badguy, done);      if (fairy.spell.timer == 0 &&           fairy.spell.timer.2 == 0)
         {        print("You have run into an evil enchanter! Get out of there fast, "              "before he turns you into something!");        }      else
         {        print("You have run into an evil enchanter! Let's hope the fairy's "              "spell works!");        }      }    else
-      {      v58 = 250;      }    }  }if (!isset(enchanter.in.room))
+      {      timer.1 = 250;      }    }  }if (!isset(enchanter.in.room))
   {  goto(Label2);  }if (!isset(haveInput))
   {  goto(Label1);  }if (said("check out", "count dracula"))
   {  print("The enchanter is tall and stately with a black flowing robe and a long "        "white beard. He has an evil gleam in his piercing black eyes.");  }if (said("acquire", "count dracula"))
@@ -24,7 +24,7 @@ if (!isset(f238) &&     isset(newRoom))
   {  if (posn(ego, 72, 107, 114, 145))
     {    set(egoHidden);    }  if (posn(o4, 72, 132, 86, 144))
     {    if (!isset(f236))
-      {      get.posn(o4, v105, v106);      temp.x -= v105;      temp.y -= v106;      reposition(o4, temp.x, temp.y);      }    }  else
+      {      get.posn(o4, work.2, work.3);      temp.x -= work.2;      temp.y -= work.3;      reposition(o4, temp.x, temp.y);      }    }  else
     {    get.posn(o4, temp.x, temp.y);    }  }if ((isset(egoHidden) ||     isset(ego.flying)))
   {  if (isset(f236))
     {    wander(o4);    reset(f236);    }  }else

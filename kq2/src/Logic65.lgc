@@ -8,25 +8,25 @@ if (isset(newRoom))
       {      set.view(ego, View0);      reset(f162);      }    draw.pic(v33);    }  draw(ego);  show.pic();  }if (isset(f35) &&     !isset(f37) &&     !isset(candle.lit) &&     posn(ego, 50, 107, 159, 167))
   {  set.view(ego, View100);  set(f37);  }if (isset(egoHitSpecial) &&     !isset(f35))
   {  if (egoDir > STOPPED &&       egoDir < DOWN_RIGHT)
-    {    get.priority(ego, v32);    --v32;    set.priority.v(ego, v32);    }  set(f38);  set(f35);  get.posn(ego, v105, v106);  v106 = 167;  if (!isset(f162))
+    {    get.priority(ego, v32);    --v32;    set.priority.v(ego, v32);    }  set(lf8);  set(f35);  get.posn(ego, work.2, work.3);  work.3 = 167;  if (!isset(f162))
     {    set.view(ego, View8);    work = 2;    cycle.time(ego, work);    work = 3;    step.size(ego, work);    }  else
-    {    set.view(ego, View100);    set(f37);    }  move.obj.v(ego, v105, v106, v82, f34);  set(keep.cycling);  }if (isset(f35) &&     isset(f38))
-  {  reset(f38);  sound(Sound29, f36);  }if (isset(f34))
-  {  if (v105 > 64 &&       v105 < 115 &&       isset(candle.lit))
-    {    v60 = 0;    new.room(Logic66);    }  else
+    {    set.view(ego, View100);    set(f37);    }  move.obj.v(ego, work.2, work.3, v82, f34);  set(keep.cycling);  }if (isset(f35) &&     isset(lf8))
+  {  reset(lf8);  sound(Sound29, f36);  }if (isset(f34))
+  {  if (work.2 > 64 &&       work.2 < 115 &&       isset(candle.lit))
+    {    v60 = 0;    new.room(Logic66); [ ##LE001##    }  else
     {    stop.sound();    stop.motion(ego);    erase(ego);    if (isset(f162))
       {      print("Whoops! You slipped and fell down the narrow stairs in the "            "darkness. What a way to die! Next time, use a light.");      }    else
       {      print("You slip from the narrow stairs and fall to your death on the "            "rocks below.");      }    set(certain.death);    }  }if (!isset(candle.lit))
   {  if (v30 == 1)
-    {    stop.sound();    v30 = 2;    draw.pic(v33);    show.pic();    }  get.posn(ego, v105, v106);  if (!isset(f35))
-    {    if (v105 < 71 &&         isset(f162))
-      {      set.view(ego, View0);      work = 1;      cycle.time(ego, work);      step.size(ego, work);      reset(f162);      }    if (v105 > 70 &&         !isset(f162))
+    {    stop.sound();    v30 = 2;    draw.pic(v33);    show.pic();    }  get.posn(ego, work.2, work.3);  if (!isset(f35))
+    {    if (work.2 < 71 &&         isset(f162))
+      {      set.view(ego, View0);      work = 1;      cycle.time(ego, work);      step.size(ego, work);      reset(f162);      }    if (work.2 > 70 &&         !isset(f162))
       {      set.view(ego, View99);      work = 1;      cycle.time(ego, work);      step.size(ego, work);      set(f162);      goto(Label1);      }    }  else
     {    if (v30 == 2)
-      {      if (v105 < 71)
+      {      if (work.2 < 71)
         {        set.view(ego, View8);        work = 2;        cycle.time(ego, work);        work = 3;        step.size(ego, work);        }      else
         {        set.view(ego, View100);        set(f37);        }      draw(ego);      v30 = 3;      }    }  }if (!isset(f162) &&     (said("check out") ||     said("check out", "antique shop") ||     said("check out", "swim") ||     said("check out", "stairs")))
   {  print("These stairs are narrow and slippery; both sides slope away "        "precipitously. A foul stench wafts up to you from the gloomy darkness "        "into which the stairs descend.");  }Label1:if (v30 == 2)
   {  draw(ego);  v30 = 3;  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic64);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic66);  }call(lgc.dracula);return();[ Messages#message 1 "You slip from the narrow stairs and fall to your death on the rocks below."#message 2 "These stairs are narrow and slippery; both sides slope away precipitously. A foul stench wafts up to you from the gloomy darkness into which the stairs descend."#message 3 "Whoops! You slipped and fell down the narrow stairs in the darkness. What a way to die! Next time, use a light."
+  {  new.room(Logic64); [ ##LE002##  }if (edgeEgoHit == BOTTOM_EDGE)
+  {  new.room(Logic66); [ ##LE003##  }call(lgc.dracula);return();[ Messages#message 1 "You slip from the narrow stairs and fall to your death on the rocks below."#message 2 "These stairs are narrow and slippery; both sides slope away precipitously. A foul stench wafts up to you from the gloomy darkness into which the stairs descend."#message 3 "Whoops! You slipped and fell down the narrow stairs in the darkness. What a way to die! Next time, use a light."

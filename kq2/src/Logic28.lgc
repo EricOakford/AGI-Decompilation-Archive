@@ -1,10 +1,1 @@
-if (isset(newRoom))
-  {  if ((has("Oil Lamp") ||       has("Carpet")))
-    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.mountainside);  load.logics(lgc.enchanter);  load.logics(Logic157);  load.pic(currentRoom);  call(lgc.enchanter);  draw.pic(currentRoom);  if (previousRoom == 21)
-    {    get.posn(ego, v105, v106);    if (v105 > 91)
-      {      v105 = 91;      v106 = 37;      position.v(ego, v105, v106);      }    }  draw(ego);  show.pic();  }if ((said("check out") ||     said("check out", "area")))
-  {  print("This is a forested area near an impassable cliff.");  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic21);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  new.room(Logic22);  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic27);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  new.room(Logic35);  }call(lgc.mountainside);call(lgc.enchanter);call(Logic157);return();[ Messages#message 7 "The mountains are completely impassable."#message 8 "This is a forested area near an impassable cliff."
+if (newRoom)  {  if ((has("Oil Lamp") ||       has("Carpet")))    {    load.view(View65);    load.view(View98);    }  load.logics(lgc.mountainside);  load.logics(lgc.enchanter);  load.logics(lgc.forest);  load.pic(currentRoom);  call(lgc.enchanter);  draw.pic(currentRoom);  if (previousRoom == 21)    {    get.posn(ego, work.2, work.3);    if (work.2 > 91)      {      work.2 = 91;      work.3 = 37;      position.v(ego, work.2, work.3);      }    }  draw(ego);  show.pic();  }if ((said("check out") ||     said("check out", "area")))  {  print("This is a forested area near an impassable cliff.");  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic21); [ ##LE001##  }if (edgeEgoHit == RIGHT_EDGE)  {  new.room(Logic22); [ ##LE002##  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic27); [ ##LE003##  }if (edgeEgoHit == BOTTOM_EDGE)  {  new.room(Logic35); [ ##LE004##  }call(lgc.mountainside);call(lgc.enchanter);call(lgc.forest);return();[ Messages#message 7 "The mountains are completely impassable."#message 8 "This is a forested area near an impassable cliff."

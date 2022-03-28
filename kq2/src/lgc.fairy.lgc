@@ -1,11 +1,11 @@
 if (!isset(f242) &&     isset(newRoom))
   {  set(f242);  reset(f60);  if (fairy.spell.timer <= 0 &&       fairy.spell.timer.2 <= 0)
     {    random(0, 255, work);    if (work < 125)
-      {      set(f243);      load.view(View6);      load.view(View117);      load.sound(Sound33);      animate.obj(o7);      set.view(o7, View6);      set.priority(o7, 15);      ignore.objs(o7);      position(o7, 80, 20);      random(40, 255, v58);      random(0, 2, v59);      }    }  return();  }if (!isset(f60) &&     isset(f243))
-  {  --v58;  if (v58 == 1)
-    {    --v59;    if (!isset(egoHidden) &&         v59 == 0)
+      {      set(f243);      load.view(View6);      load.view(View117);      load.sound(Sound33);      animate.obj(o7);      set.view(o7, View6);      set.priority(o7, 15);      ignore.objs(o7);      position(o7, 80, 20);      random(40, 255, timer.1);      random(0, 2, timer.2);      }    }  return();  }if (!isset(f60) &&     isset(f243))
+  {  --timer.1;  if (timer.1 == 1)
+    {    --timer.2;    if (!isset(egoHidden) &&         timer.2 == 0)
       {      set(f60);      follow.ego(o7, 10, f240);      draw(o7);      print("A beautiful fairy floats down from the sky!");      }    else
-      {      v58 = 250;      }    }  }if (!isset(f239))
+      {      timer.1 = 250;      }    }  }if (!isset(f239))
   {  if (isset(f240))
     {    set(f239);    set(f241);    set.view(o7, View117);    print("The fairy starts to sprinkle fairy dust on you. \"Good King Graham, "          "I am here to help you,\" she says. \"I give you a protective spell "          "against certain evil elements; but beware, for it lasts only a short "          "time.\"");    fairy.spell.timer = 250;    fairy.spell.timer.2 = 75;    v71 = 75;    }  }else
   {  if (isset(f60))

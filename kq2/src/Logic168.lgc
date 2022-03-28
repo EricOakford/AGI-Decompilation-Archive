@@ -1,4 +1,4 @@
 if (isset(newRoom))
-  {  program.control();  load.pic(currentRoom);  draw.pic(currentRoom);  draw(ego);  move.obj(ego, 200, 108, 2, f169);  show.pic();  return();  }if (said("check out", "dolphin"))
+  {  program.control();  load.pic(currentRoom);  draw.pic(currentRoom);  draw(ego);  move.obj(ego, 200, 108, 2, done);  show.pic();  return();  }if (said("check out", "dolphin"))
   {  print("No time for that!");  }if (edgeEgoHit == RIGHT_EDGE)
   {  work = currentRoom;  work  += 1;  new.room.v(work);  }return();[ Messages#message 1 "No time for that!"
