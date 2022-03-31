@@ -1,16 +1,1 @@
-if (isset(newRoom))
-  {  set.horizon(0);  ignore.horizon(ego);  load.logics(Logic169);  load.logics(lgc.quartz.island);  call(Logic169);  call(lgc.quartz.island);  }if (isset(egoHitSpecial) &&     !isset(f94))
-  {  v63 = 1;  set(f94);  get.posn(ego, temp.x, temp.y);  if (temp.y < 51)
-    {    if (temp.x > 147)
-      {      temp.x = 141;      }    else
-      {      temp.x -= 6;      }    temp.y -= 8;    }  else
-    {    if (temp.y < 61)
-      {      temp.x -= 15;      temp.y -= 2;      }    else
-      {      if (temp.y < 109)
-        {        temp.x -= 13;        temp.y  += 6;        }      else
-        {        if (temp.y < 148)
-          {          temp.x -= 20;          temp.y  += 6;          }        else
-          {          temp.x -= 17;          if (temp.y < 162)
-            {            temp.y  += 6;            }          else
-            {            temp.y = 167;            }          }        }      }    }  }if (!isset(newRoom))
-  {  call(Logic169);  call(lgc.quartz.island);  }return();[ Messages
+if (newRoom)  {  set.horizon(0);  ignore.horizon(ego);  load.logics(Logic169);  load.logics(lgc.quartz.island);  call(Logic169);  call(lgc.quartz.island);  }if (egoHitSpecial &&     !isset(f94))  {  v63 = 1;  set(f94);  get.posn(ego, temp.x, temp.y);  if (temp.y < 51)    {    if (temp.x > 147)      {      temp.x = 141;      }    else      {      temp.x -= 6;      }    temp.y -= 8;    }  else    {    if (temp.y < 61)      {      temp.x -= 15;      temp.y -= 2;      }    else      {      if (temp.y < 109)        {        temp.x -= 13;        temp.y  += 6;        }      else        {        if (temp.y < 148)          {          temp.x -= 20;          temp.y  += 6;          }        else          {          temp.x -= 17;          if (temp.y < 162)            {            temp.y  += 6;            }          else            {            temp.y = 167;            }          }        }      }    }  }if (!newRoom)  {  call(Logic169);  call(lgc.quartz.island);  }return();[ Messages

@@ -1,90 +1,1 @@
-if (isset(newRoom))
-  {  set.horizon(20);  load.sound(Sound23);  load.sound(Sound29);  load.logics(lgc.dracula);  load.view(View8);  load.view(View109);  load.view(View91);  load.view(View134);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.dracula);  animate.obj(o2);  set.view(o2, View134);  position(o2, 37, 29);  start.cycling(o2);  draw(o2);  if (previousRoom == 61)
-    {    position(ego, 140, 163);    reset(f31);    }  else
-    {    position(ego, 118, 32);    set.priority(ego, 14);    set(f31);    }  draw(ego);  show.pic();  }if (isset(f39))
-  {  reset(f39);  print("You fall to your death on the hard stone floor.");  set(certain.death);  }if (v34 > 0)
-  {  goto(Label2);  }if (posn(ego, 95, 132, 134, 132))
-  {  v31 = 1;  set.priority(ego, 12);  }else
-  {  if (v31 == 1)
-    {    v31 = 0;    get.posn(ego, work.2, work.3);    if (work.3 > 132)
-      {      release.priority(ego);      observe.blocks(ego);      reset(f30);      }    else
-      {      set.priority(ego, 12);      ignore.blocks(ego);      set(f30);      }    }  }if (posn(ego, 18, 82, 50, 82))
-  {  v31 = 2;  set.priority(ego, 14);  set(f31);  }else
-  {  if (v31 == 2)
-    {    v31 = 0;    get.posn(ego, work.2, work.3);    if (work.3 > 82)
-      {      set.priority(ego, 14);      set(f31);      reset(f30);      observe.blocks(ego);      }    else
-      {      set.priority(ego, 12);      reset(f31);      set(f30);      ignore.blocks(ego);      }    }  }if (isset(f31))
-  {  if ((posn(ego, 74, 81, 74, 81) ||       posn(ego, 75, 80, 75, 80)))
-    {    v30 = 3;    goto(Label1);    }  else
-    {    if ((posn(ego, 79, 76, 79, 76) ||         posn(ego, 80, 75, 80, 75) ||         posn(ego, 81, 73, 81, 73) ||         posn(ego, 82, 72, 82, 72) ||         posn(ego, 83, 71, 83, 71) ||         posn(ego, 84, 69, 84, 69) ||         posn(ego, 85, 68, 85, 68) ||         posn(ego, 86, 67, 86, 67)))
-      {      v30 = 2;      goto(Label1);      }    }  }if (!isset(egoHitSpecial))
-  {  goto(Label3);  }if (posn(ego, 84, 30, 102, 42))
-  {  v30 = 1;  }else
-  {  if (posn(ego, 79, 42, 97, 66))
-    {    v30 = 2;    }  else
-    {    if ((posn(ego, 63, 77, 73, 81) ||         posn(ego, 69, 82, 74, 83) ||         posn(ego, 67, 83, 68, 84) ||         posn(ego, 63, 85, 66, 85)))
-      {      v30 = 3;      }    else
-      {      if ((posn(ego, 47, 76, 62, 81) ||           posn(ego, 47, 82, 62, 87)))
-        {        v30 = 4;        }      else
-        {        if (posn(ego, 72, 83, 94, 105) &&             !isset(f31))
-          {          v30 = 5;          }        else
-          {          if (posn(ego, 90, 106, 104, 134))
-            {            v30 = 6;            }          else
-            {            if (posn(ego, 100, 130, 108, 143))
-              {              v30 = 7;              }            else
-              {              if (posn(ego, 103, 144, 109, 153) &&                   egoDir > DOWN_RIGHT)
-                {                v30 = 8;                }              else
-                {                goto(Label3);                }              }            }          }        }      }    }  }Label1:if (v34 <= 0)
-  {  ignore.blocks(ego);  v34 = 1;  if (v30 != 8)
-    {    sound(Sound29, f34);    set(keep.cycling);    set.view(ego, View8);    work = 2;    cycle.time(ego, work);    work = 3;    step.size(ego, work);    }  if (v30 == 1)
-    {    move.obj(ego, 92, 80, 4, f32);    set.priority(ego, 12);    }  else
-    {    if (v30 == 2)
-      {      move.obj(ego, 85, 80, 4, f32);      set.priority(ego, 13);      }    else
-      {      if (v30 > 2 &&           v30 < 6)
-        {        set(f32);        set.priority(ego, 12);        }      else
-        {        if (v30 > 5)
-          {          set(f32);          }        }      }    }  }Label2:if (v34 == 1 &&     isset(f32))
-  {  v34 = 2;  if (v30 < 3)
-    {    move.obj(ego, 88, 166, 4, f32);    }  else
-    {    if (v30 == 3)
-      {      move.obj(ego, 67, 148, 4, f32);      }    else
-      {      if (v30 == 4)
-        {        move.obj(ego, 52, 148, 4, f32);        }      else
-        {        if (v30 == 5)
-          {          move.obj(ego, 81, 144, 4, f32);          }        else
-          {          if (v30 == 6)
-            {            move.obj(ego, 90, 152, 4, f32);            }          else
-            {            if (v30 == 7)
-              {              move.obj(ego, 94, 152, 4, f32);              }            else
-              {              if (v30 == 8)
-                {                move.obj(ego, 102, 154, 2, f32);                }              }            }          }        }      }    }  }if (v34 == 2)
-  {  if (isset(f32))
-    {    v34 = 3;    if (v30 == 8)
-      {      reset(f32);      }    else
-      {      stop.motion(ego);      if (v30 < 3)
-        {        stop.sound();        set.view(ego, View91);        set(f39);        set(lf8);        }      else
-        {        set.view(ego, View109);        work = 2;        cycle.time(ego, work);        v35 = 50;        set(f33);        reset(f34);        sound(Sound23, f37);        }      }    }  }if (isset(f37) &&     v35 > 1)
-  {  sound(Sound23, f37);  }if (!isset(lf8) &&     v34 == 3)
-  {  if (v35 <= 0)
-    {    if (v30 != 8)
-      {      start.motion(ego);      temp.x = 4;      temp.y = 0;      reposition(ego, temp.x, temp.y);      set.view(ego, View0);      work = 1;      cycle.time(ego, work);      step.size(ego, work);      set.loop(ego, 2);      }    v34 = 0;    reset(keep.cycling);    observe.blocks(ego);    release.priority(ego);    reset(f31);    v31 = 0;    reset(f30);    }  else
-    {    --v35;    }  }Label3:if (isset(f30) &&     !isset(egoHitSpecial))
-  {  get.posn(ego, v32, v33);  }else
-  {  if (isset(f30) &&       v34 <= 0)
-    {    position.v(ego, v32, v33);    }  }if (!isset(haveInput))
-  {  goto(Label4);  }if ((said("check out") ||     said("check out", "antique shop") ||     said("check out", "swim")))
-  {  print("There is a ramp spiraling up toward the top of a gloomy tower. A torch "        "blazes on the wall.");  }if ((said("check out", "ramp") ||     said("check out", "stairs")))
-  {  print("The ramp spirals steeply upward. Be careful, you don't want to fall.");  }if (said("check out", "torch"))
-  {  print("The torch lends the only warmth to this dreary castle.");  }if (said("acquire", "torch"))
-  {  if (posn(ego, 35, 62, 49, 74))
-    {    print("The torch is firmly attached to the wall. Try as you might, you "          "cannot budge it.");    }  else
-    {    print("You can't do that from where you are standing.");    }  }if (!isset(haveMatch) &&     said("light", "candle"))
-  {  if (has("Candle"))
-    {    if (posn(ego, 35, 62, 49, 74))
-      {      if (!isset(candle.lit))
-        {        set(candle.lit);        print("You hold your candle up to the blazing torch. It catches! Your "              "candle is now lit.");        if (!isset(f158))
-          {          currentScore  += 1;          set(f158);          }        }      }    else
-      {      print("You can't do that from where you are standing.");      }    }  else
-    {    print("You are not carrying it.");    }  }Label4:get.posn(ego, work, v33);if (isset(egoHitSpecial) &&     work > 145)
-  {  new.room(Logic61); [ ##LE001##  }if (edgeEgoHit == TOP_EDGE)
-  {  new.room(Logic59); [ ##LE002##  }call(lgc.dracula);return();[ Messages#message 1 "There is a ramp spiraling up toward the top of a gloomy tower. A torch blazes on the wall."#message 2 "The ramp spirals steeply upward. Be careful, you don't want to fall."#message 3 "The torch lends the only warmth to this dreary castle."#message 4 "The torch is firmly attached to the wall. Try as you might, you cannot budge it."#message 5 "You hold your candle up to the blazing torch. It catches! Your candle is now lit."#message 6 "You can't do that from where you are standing."#message 7 "You are not carrying it."#message 8 "You fall to your death on the hard stone floor."
+#define a.flame o2#define on.stairs   f31#define hit.ground  f39if (newRoom)  {  set.horizon(20);  load.sound(Sound23);  load.sound(Sound29);  load.logics(lgc.dracula);  load.view(View8);  load.view(View109);  load.view(View91);  load.view(View134);  load.pic(currentRoom);  draw.pic(currentRoom);  call(lgc.dracula);  animate.obj(a.flame);  set.view(a.flame, View134);  position(a.flame, 37, 29);  start.cycling(a.flame);  draw(a.flame);  if (previousRoom == 61)    {    position(ego, 140, 163);    reset(on.stairs);    }  else    {    position(ego, 118, 32);    set.priority(ego, 14);    set(on.stairs);    }  draw(ego);  show.pic();  }if (hit.ground)  {  reset(hit.ground);  print("You fall to your death on the hard stone floor.");  set(certain.death);  }if (v34 > 0)  {  goto(Label2);  }if (posn(ego, 95, 132, 134, 132))  {  v31 = 1;  set.priority(ego, 12);  }else  {  if (v31 == 1)    {    v31 = 0;    get.posn(ego, work.2, work.3);    if (work.3 > 132)      {      release.priority(ego);      observe.blocks(ego);      reset(f30);      }    else      {      set.priority(ego, 12);      ignore.blocks(ego);      set(f30);      }    }  }if (posn(ego, 18, 82, 50, 82))  {  v31 = 2;  set.priority(ego, 14);  set(on.stairs);  }else  {  if (v31 == 2)    {    v31 = 0;    get.posn(ego, work.2, work.3);    if (work.3 > 82)      {      set.priority(ego, 14);      set(on.stairs);      reset(f30);      observe.blocks(ego);      }    else      {      set.priority(ego, 12);      reset(on.stairs);      set(f30);      ignore.blocks(ego);      }    }  }if (on.stairs)  {  if ((posn(ego, 74, 81, 74, 81) ||       posn(ego, 75, 80, 75, 80)))    {    v30 = 3;    goto(Label1);    }  else    {    if ((posn(ego, 79, 76, 79, 76) ||         posn(ego, 80, 75, 80, 75) ||         posn(ego, 81, 73, 81, 73) ||         posn(ego, 82, 72, 82, 72) ||         posn(ego, 83, 71, 83, 71) ||         posn(ego, 84, 69, 84, 69) ||         posn(ego, 85, 68, 85, 68) ||         posn(ego, 86, 67, 86, 67)))      {      v30 = 2;      goto(Label1);      }    }  }if (!egoHitSpecial)  {  goto(Label3);  }if (posn(ego, 84, 30, 102, 42))  {  v30 = 1;  }else  {  if (posn(ego, 79, 42, 97, 66))    {    v30 = 2;    }  else    {    if ((posn(ego, 63, 77, 73, 81) ||         posn(ego, 69, 82, 74, 83) ||         posn(ego, 67, 83, 68, 84) ||         posn(ego, 63, 85, 66, 85)))      {      v30 = 3;      }    else      {      if ((posn(ego, 47, 76, 62, 81) ||           posn(ego, 47, 82, 62, 87)))        {        v30 = 4;        }      else        {        if (posn(ego, 72, 83, 94, 105) &&             !on.stairs)          {          v30 = 5;          }        else          {          if (posn(ego, 90, 106, 104, 134))            {            v30 = 6;            }          else            {            if (posn(ego, 100, 130, 108, 143))              {              v30 = 7;              }            else              {              if (posn(ego, 103, 144, 109, 153) &&                   egoDir > DOWN_RIGHT)                {                v30 = 8;                }              else                {                goto(Label3);                }              }            }          }        }      }    }  }Label1:if (v34 <= 0)  {  ignore.blocks(ego);  v34 = 1;  if (v30 != 8)    {    sound(Sound29, f34);    set(keep.cycling);    set.view(ego, View8);    work = 2;    cycle.time(ego, work);    work = 3;    step.size(ego, work);    }  if (v30 == 1)    {    move.obj(ego, 92, 80, 4, f32);    set.priority(ego, 12);    }  else    {    if (v30 == 2)      {      move.obj(ego, 85, 80, 4, f32);      set.priority(ego, 13);      }    else      {      if (v30 > 2 &&           v30 < 6)        {        set(f32);        set.priority(ego, 12);        }      else        {        if (v30 > 5)          {          set(f32);          }        }      }    }  }Label2:if (v34 == 1 &&     isset(f32))  {  v34 = 2;  if (v30 < 3)    {    move.obj(ego, 88, 166, 4, f32);    }  else    {    if (v30 == 3)      {      move.obj(ego, 67, 148, 4, f32);      }    else      {      if (v30 == 4)        {        move.obj(ego, 52, 148, 4, f32);        }      else        {        if (v30 == 5)          {          move.obj(ego, 81, 144, 4, f32);          }        else          {          if (v30 == 6)            {            move.obj(ego, 90, 152, 4, f32);            }          else            {            if (v30 == 7)              {              move.obj(ego, 94, 152, 4, f32);              }            else              {              if (v30 == 8)                {                move.obj(ego, 102, 154, 2, f32);                }              }            }          }        }      }    }  }if (v34 == 2)  {  if (isset(f32))    {    v34 = 3;    if (v30 == 8)      {      reset(f32);      }    else      {      stop.motion(ego);      if (v30 < 3)        {        stop.sound();        set.view(ego, View91);        set(hit.ground);        set(lf8);        }      else        {        set.view(ego, View109);        work = 2;        cycle.time(ego, work);        v35 = 50;        set(f33);        reset(f34);        sound(Sound23, f37);        }      }    }  }if (isset(f37) &&     v35 > 1)  {  sound(Sound23, f37);  }if (!isset(lf8) &&     v34 == 3)  {  if (v35 <= 0)    {    if (v30 != 8)      {      start.motion(ego);      temp.x = 4;      temp.y = 0;      reposition(ego, temp.x, temp.y);      set.view(ego, View0);      work = 1;      cycle.time(ego, work);      step.size(ego, work);      set.loop(ego, 2);      }    v34 = 0;    reset(keep.cycling);    observe.blocks(ego);    release.priority(ego);    reset(on.stairs);    v31 = 0;    reset(f30);    }  else    {    --v35;    }  }Label3:if (isset(f30) && !egoHitSpecial)  {  get.posn(ego, v32, v33);  }else  {  if (isset(f30) &&       v34 <= 0)    {    position.v(ego, v32, v33);    }  }if (!isset(haveInput))  {  goto(Label4);  }if ((said("check out") ||     said("check out", "antique shop") ||     said("check out", "swim")))  {  print("There is a ramp spiraling up toward the top of a gloomy tower. A torch "        "blazes on the wall.");  }if ((said("check out", "ramp") ||     said("check out", "stairs")))  {  print("The ramp spirals steeply upward. Be careful, you don't want to fall.");  }if (said("check out", "torch"))  {  print("The torch lends the only warmth to this dreary castle.");  }if (said("acquire", "torch"))  {  if (posn(ego, 35, 62, 49, 74))    {    print("The torch is firmly attached to the wall. Try as you might, you "          "cannot budge it.");    }  else    {    print("You can't do that from where you are standing.");    }  }if (!haveMatch &&     said("light", "candle"))  {  if (has("Candle"))    {    if (posn(ego, 35, 62, 49, 74))      {      if (!candle.lit)        {        set(candle.lit);        print("You hold your candle up to the blazing torch. It catches! Your "              "candle is now lit.");        if (!points.light.candle)          {          currentScore  += 1;          set(points.light.candle);          }        }      }    else      {      print("You can't do that from where you are standing.");      }    }  else    {    print("You are not carrying it.");    }  }Label4:get.posn(ego, work, v33);if (egoHitSpecial &&     work > 145)  {  new.room(Logic61); [ ##LE001##  }if (edgeEgoHit == TOP_EDGE)  {  new.room(Logic59); [ ##LE002##  }call(lgc.dracula);return();[ Messages#message 1 "There is a ramp spiraling up toward the top of a gloomy tower. A torch blazes on the wall."#message 2 "The ramp spirals steeply upward. Be careful, you don't want to fall."#message 3 "The torch lends the only warmth to this dreary castle."#message 4 "The torch is firmly attached to the wall. Try as you might, you cannot budge it."#message 5 "You hold your candle up to the blazing torch. It catches! Your candle is now lit."#message 6 "You can't do that from where you are standing."#message 7 "You are not carrying it."#message 8 "You fall to your death on the hard stone floor."

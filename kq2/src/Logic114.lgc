@@ -1,5 +1,5 @@
 if (isset(f188))
-  {  animate.obj(o4);  set.view(o4, View129);  position(o4, 91, 102);  animate.obj(o3);  set.view(o3, View128);  set.cel(o3, 0);  animate.obj(o5);  set.view(o5, View128);  set.cel(o5, 7);  position(o5, 63, 24);  animate.obj(o1);  set.view(o1, View137);  position(o1, 74, 81);  set.loop(o1, 2);  draw(o1);  move.obj(o1, 74, 139, 0, f48);  v70 = 2;  cycle.time(o3, v70);  show.pic();  if (monitorType == MONO &&       machineType == PC)
+  {  animate.obj(o4);  set.view(o4, View129);  position(o4, 91, 102);  animate.obj(o3);  set.view(o3, View128);  set.cel(o3, 0);  animate.obj(o5);  set.view(o5, View128);  set.cel(o5, 7);  position(o5, 63, 24);  animate.obj(o1);  set.view(o1, View137);  position(o1, 74, 81);  set.loop(o1, 2);  draw(o1);  move.obj(o1, 74, 139, 0, f48);  fall.x = 2;  cycle.time(o3, fall.x);  show.pic();  if (monitorType == MONO &&       machineType == PC)
     {    clear.lines(1, 1, BLACK);    display(1, 6, "...visit bizarre planets...");    }  else
     {    set.text.attribute(BLACK, WHITE);    clear.lines(22, 24, WHITE);    display(23, 6, "...visit bizarre planets...");    }  }if (isset(f44))
   {  reset(f44);  shake.screen(1);  v30 = 36;  }if (isset(f48))
@@ -7,7 +7,7 @@ if (isset(f188))
   {  reset(f42);  get.posn(o1, work.2, work.3);  if (work.2 < 12)
     {    work.2 = 1;    }  else
     {    work.2 -= 11;    }  work.3  += 4;  position.v(o3, work.2, work.3);  draw(o3);  erase(o1);  start.cycling(o3);  set(f43);  }if (isset(f43))
-  {  current.cel(o3, v70);  if (v70 == 4)
+  {  current.cel(o3, fall.x);  if (fall.x == 4)
     {    stop.cycling(o3);    v48 = 10;    v47 = 1;    reset(f43);    }  }--v48;if (v48 == 1)
   {  if (v47 == 2)
     {    erase(o4);    draw(o5);    stop.cycling(o5);    move.obj(o5, 63, 104, 30, f31);    end.of.loop(o3, f45);    }  if (v47 == 1)

@@ -1,16 +1,1 @@
-if (isset(newRoom))
-  {  if (has("Oil Lamp"))
-    {    load.view(View65);    load.sound(m.genie);    }  if (!isset(f111))
-    {    load.view(View48);    }  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(o3);  if (!isset(f111))
-    {    set.priority(o3, 15);    set.view(o3, View48);    position(o3, 125, 135);    draw(o3);    }  get.posn(ego, work.2, work.3);  if (work.3 > 98)
-    {    work.3 = 98;    position.v(ego, work.2, work.3);    }  draw(ego);  show.pic();  }if ((said("check out", "area") ||     said("check out") ||     said("check out", "area") ||     said("look in", "area")))
-  {  if (isset(f111))
-    {    print("The dark damp cave is empty and uninteresting.");    }  else
-    {    print("You see a large golden key lying on a rock in the damp cave!");    }  }if (said("check out", "boulder"))
-  {  if (isset(f111))
-    {    print("The large, flat rock is empty.");    }  else
-    {    print("There is a golden key on the rock.");    }  }if (!isset(f111) &&     (said("acquire", "key") ||     said("acquire", "gold", "key")))
-  {  distance(ego, o3, work);  if (work > 30)
-    {    print("You'll have to move closer to the key.");    }  else
-    {    get("Gold Key");    set(f111);    currentScore  += 5;    erase(o3);    print("OK.");    }  }if (edgeEgoHit == LEFT_EDGE)
-  {  new.room(Logic57); [ ##LE001##  }return();[ Messages#message 1 "You see a large golden key lying on a rock in the damp cave!"#message 2 "The dark damp cave is empty and uninteresting."#message 3 "There is a golden key on the rock."#message 4 "The large, flat rock is empty."#message 5 "You'll have to move closer to the key."#message 6 "OK."
+#define a.key   o3if (newRoom)  {  if (has("Oil Lamp"))    {    load.view(View65);    load.sound(m.genie);    }  if (!got.gold.key.2)    {    load.view(View48);    }  load.pic(currentRoom);  draw.pic(currentRoom);  animate.obj(a.key);  if (!got.gold.key.2)    {    set.priority(a.key, 15);    set.view(a.key, View48);    position(a.key, 125, 135);    draw(a.key);    }  get.posn(ego, work.2, work.3);  if (work.3 > 98)    {    work.3 = 98;    position.v(ego, work.2, work.3);    }  draw(ego);  show.pic();  }if ((said("check out", "area") ||     said("check out") ||     said("check out", "area") ||     said("look in", "area")))  {  if (got.gold.key.2)    {    print("The dark damp cave is empty and uninteresting.");    }  else    {    print("You see a large golden key lying on a rock in the damp cave!");    }  }if (said("check out", "boulder"))  {  if (got.gold.key.2)    {    print("The large, flat rock is empty.");    }  else    {    print("There is a golden key on the rock.");    }  }if (!got.gold.key.2 &&     (said("acquire", "key") ||     said("acquire", "gold", "key")))  {  distance(ego, a.key, work);  if (work > 30)    {    print("You'll have to move closer to the key.");    }  else    {    get("Gold Key");    set(got.gold.key.2);    currentScore  += 5;    erase(a.key);    print("OK.");    }  }if (edgeEgoHit == LEFT_EDGE)  {  new.room(Logic57); [ ##LE001##  }return();[ Messages#message 1 "You see a large golden key lying on a rock in the damp cave!"#message 2 "The dark damp cave is empty and uninteresting."#message 3 "There is a golden key on the rock."#message 4 "The large, flat rock is empty."#message 5 "You'll have to move closer to the key."#message 6 "OK."

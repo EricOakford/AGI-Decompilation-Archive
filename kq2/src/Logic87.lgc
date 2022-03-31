@@ -1,6 +1,1 @@
-if (isset(newRoom))
-  {  load.logics(Logic169);  load.logics(lgc.quartz.island);  call(Logic169);  call(lgc.quartz.island);  }if (isset(egoHitSpecial) &&     !isset(f94))
-  {  set(f94);  v63 = 1;  get.posn(ego, temp.x, temp.y);  if (temp.y < 123)
-    {    temp.x -= 18;    temp.y  += 6;    }  else
-    {    temp.x -= 6;    temp.y  += 18;    }  }if (!isset(newRoom))
-  {  call(Logic169);  call(lgc.quartz.island);  }return();[ Messages
+if (newRoom)  {  load.logics(Logic169);  load.logics(lgc.quartz.island);  call(Logic169);  call(lgc.quartz.island);  }if (egoHitSpecial && !isset(f94))  {  set(f94);  v63 = 1;  get.posn(ego, temp.x, temp.y);  if (temp.y < 123)    {    temp.x -= 18;    temp.y  += 6;    }  else    {    temp.x -= 6;    temp.y  += 18;    }  }if (!newRoom)  {  call(Logic169);  call(lgc.quartz.island);  }return();[ Messages

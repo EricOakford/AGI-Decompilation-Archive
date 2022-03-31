@@ -1,5 +1,5 @@
 if (!isset(f230) &&     isset(newRoom))
-  {  reset(hag.in.room);  set(f230);  random(0, 255, work);  if ((work < 80 ||       isset(death.music)))
+  {  reset(hag.in.room);  set(f230);  random(0, 255, work);  if ((work < 80 ||       isset(work.f)))
     {    set(f237);    load.view(View25);    load.view(View115);    load.view(View26);    animate.obj(o6);    set.view(o6, View26);    work = 2;    cycle.time(o6, work);    step.size(o6, work);    object.on.land(o6);    if (currentRoom == 30)
       {      position(o6, 107, 59);      }    if (currentRoom == 31)
       {      position(o6, 36, 125);      }    if (currentRoom == 37)

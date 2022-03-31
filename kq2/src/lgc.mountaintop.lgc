@@ -1,14 +1,0 @@
-if (isset(newRoom))
-  {  reset(f120);  return();  }if ((said("check out", "cliff") ||     said("check out", "area") ||     said("check out") ||     said("check out", "cliff")))
-  {  if (currentRoom == 55)
-    {    print("There are steep cliffs on three sides of this mountain top. Don't "          "get too near the edge!");    }  else
-    {    print("You are walking on a narrow mountain top with steep cliffs on two "          "sides.");    }  }if (said("check out", "tree"))
-  {  print("There are a few pine and fir trees on this mountain top.");  }if (said("check out", "blossom"))
-  {  print("There are not many flowers around here.");  }if (said("acquire", "blossom"))
-  {  print("The flowers are of no interest.");  }if (said("climb", "tree"))
-  {  print("It would be fun to stop and climb trees for a while, but don't you "        "have something better to do?");  }if (said("climb", "boulder"))
-  {  print("Don't be silly. Climbing on rocks is kid stuff.");  }if ((said("climb", "cliff") ||     said("climb", "cliff") ||     said("climb") ||     said("look down", "anyword")))
-  {  print("The cliffs are too steep! Climbing them could mean death.");  }if (isset(egoHitSpecial) &&     !isset(ego.fell))
-  {  reset(egoHitSpecial);  set(egoFallingCliff);  set(ego.fell);  ignore.blocks(ego);  set.view(ego, View8);  work = 2;  cycle.time(ego, work);  work = 3;  step.size(ego, work);  get.priority(ego, work);  get.posn(ego, work.2, work.3);  if (work.3 < 90)
-    {    --work;    }  set.priority.v(ego, work);  get.posn(ego, work, v70);  v70 = 167;  work.5 = 3;  move.obj.v(ego, work, v70, work.5, f120);  v69 = 30;  sound(Sound29, done);  }--v69;if ((v69 == 1 ||     isset(f120)))
-  {  reset(f120);  erase(ego);  set(certain.death);  print("It seems you have fallen to your death from this high mountain top.");  }return();[ Messages#message 1 "There are steep cliffs on three sides of this mountain top. Don't get too near the edge!"#message 2 "There are a few pine and fir trees on this mountain top."#message 3 "There are not many flowers around here."#message 4 "The flowers are of no interest."#message 5 "It would be fun to stop and climb trees for a while, but don't you have something better to do?"#message 6 "Don't be silly. Climbing on rocks is kid stuff."#message 8 "The cliffs are too steep! Climbing them could mean death."#message 9 "You are walking on a narrow mountain top with steep cliffs on two sides."#message 10 "It seems you have fallen to your death from this high mountain top."

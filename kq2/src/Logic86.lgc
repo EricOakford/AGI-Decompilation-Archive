@@ -1,2 +1,1 @@
-if (isset(newRoom))
-  {  load.logics(Logic168);  }call(Logic168);return();[ Messages
+if (newRoom)  {  load.logics(lgc.fish.ride);  }call(lgc.fish.ride);return();[ Messages

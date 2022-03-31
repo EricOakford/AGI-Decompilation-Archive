@@ -1,5 +1,5 @@
 if (!isset(f231) &&     isset(newRoom))
-  {  set(f231);  reset(dwarf.in.room);  random(0, 255, work);  if ((work < 80 ||       isset(death.music)))
+  {  set(f231);  reset(dwarf.in.room);  random(0, 255, work);  if ((work < 80 ||       isset(work.f)))
     {    set(f40);    load.view(View28);    load.view(View115);    load.sound(m.badguy);    animate.obj(o2);    set.view(o2, View28);    work = 3;    step.size(o2, work);    if (currentRoom == 41)
       {      position(o2, 35, 45);      }    if (currentRoom == 46)
       {      position(o2, 32, 56);      }    if (currentRoom == 47)
@@ -27,13 +27,13 @@ if (!isset(f231) &&     isset(newRoom))
     {    print("The dwarf seems to have left you alone, thanks to your protective "          "spell!");    }  }if (isset(f37))
   {  erase(o2);  reset(f37);  reset(dwarf.in.room);  reset(f40);  }if (!isset(f41))
   {  goto(Label4);  }if (has("Necklace"))
-  {  currentScore -= 7;  drop("Necklace");  set(f77);  }else
+  {  currentScore -= 7;  drop("Necklace");  set(dwarf.stole.necklace);  }else
   {  if (has("Bracelet"))
-    {    currentScore -= 7;    drop("Bracelet");    set(f80);    }  else
+    {    currentScore -= 7;    drop("Bracelet");    set(dwarf.stole.bracelet);    }  else
     {    if (has("Earrings"))
-      {      currentScore -= 7;      drop("Earrings");      set(f78);      }    else
+      {      currentScore -= 7;      drop("Earrings");      set(dwarf.stole.earrings);      }    else
       {      if (has("Tiara"))
-        {        currentScore -= 7;        drop("Tiara");        set(f79);        }      else
+        {        currentScore -= 7;        drop("Tiara");        set(dwarf.stole.tiara);        }      else
         {        if (has("Brooch"))
-          {          currentScore -= 7;          drop("Brooch");          set(f81);          }        else
+          {          currentScore -= 7;          drop("Brooch");          set(dwarf.stole.brooch);          }        else
           {          }        }      }    }  }reset(f41);Label4:return();[ Messages#message 1 "You have come upon a quick little dwarf! Dwarves have a bad reputation for stealing treasure."#message 2 "The dwarf is a very small fellow. For being so little, he is very fast."#message 3 "The dwarf is too fast on his feet. You could never catch him."#message 4 "The dwarf doesn't have time to chat with you. He's too busy running around; possibly with your treasure."#message 5 "He's not here."#message 6 "The dwarf seems to have left you alone, thanks to your protective spell!"#message 7 "Oh, no! The dwarf caught you. You should check to see if he stole anything....!"

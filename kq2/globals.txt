@@ -1,6 +1,10 @@
 [
 [ global defines file for KQ2
 [
+#define draculaIN_COFFIN           1
+#define draculaSTAKED              2
+#define draculaAWAKE               3
+#define draculaBITE_EGO            5
 #define c.help                    c1
 #define c.sound.toggle            c2
 #define c.echo.line               c3
@@ -38,6 +42,7 @@
 #define mailbox.empty            f57
 #define mailbox.closing          f58
 #define give.basket.to.red       f59
+#define fairy.in.room            f60
 #define monastery.door.open      f61
 #define poisoned.water           f64
 #define took.basket              f65
@@ -52,6 +57,11 @@
 #define got.stake                f74
 #define read.inscription.3       f75
 #define gave.treasure.to.ghoul   f76
+#define dwarf.stole.necklace     f77
+#define dwarf.stole.earrings     f78
+#define dwarf.stole.tiara        f79
+#define dwarf.stole.bracelet     f80
+#define dwarf.stole.brooch       f81
 #define got.trident              f82
 #define got.necklace             f83
 #define got.mallet               f84
@@ -59,31 +69,61 @@
 #define unlocked.door.2          f86
 #define unlocked.door.3          f87
 #define keep.cycling             f92 [ Original name
-#define got.gold.key.2           f96
+#define clam.open                f95
+#define got.gold.key.1           f96
 #define neptune.has.trident      f97
+#define gave.grandma.soup        f98
+#define got.ring.and.cloak       f99
+#define got.cross               f100
 #define got.lamp                f101
+#define gave.first.treasure     f102 [ In exchange for the lamp
+#define took.cage               f104
+#define fish.alive              f105
 #define candle.lit              f106
+#define ego.in.sky              f107
+#define killed.snake            f108
+#define snake.to.horse          f109
+#define horse.gone              f110
+#define got.gold.key.2          f111
+#define took.soup               f112
+#define got.net                 f113
 #define is.water.room           f115
 #define override.splash.loc     f116
 #define override.surface.loc    f118
 #define ego.falling.chasm       f119 [ Original name
+#define ego.falling             f120
 #define got.amulet              f122
+#define saved.valanice          f123 [ Is checked in room 83, but is never set
 #define start.swimming          f124
 #define ego.fell                f125 [ Original name
 #define ghosts.guard.castle     f126
 #define hag.in.room             f127 [ Original name
 #define dwarf.in.room           f128 [ Original name
-#define death.music             f129
+#define work.f                  f129
 #define enchanter.in.room       f132 [ Original name
+#define took.earrings           f133
 #define read.inscription.2      f134
+#define bird.released           f135
+#define flying.to.sky           f136
+#define took.pillow             f137
 #define got.gold.key.3          f138
+#define took.silver.key         f139
+#define took.ham                f140
+#define got.candle              f141
+#define got.tiara               f143
 #define first.room.change       f146
+#define handsOff                f147
 #define ego.flying              f148 [ Original name
+#define bird.sound.loaded       f149
 #define points.open.mailbox     f153
+#define points.prayer           f154
 #define find.brooch             f156
+#define ate.sugar.cube          f157
+#define points.light.candle     f158
 #define first.wear.cross        f159
 #define first.wear.cloak        f160
 #define debugging               f161
+#define dark.basement           f162
 #define logging                 f163
 #define done                    f169
 #define ego.dead                f170
@@ -95,39 +135,58 @@
 #define tester.on               f178
 #define snakeInAction           f179 [ Original name
 #define egoFallingCliff         f180 [ Original name
+#define fell.in.waterfall       f182
 #define turbulent.water         f184
 #define normal.water            f185
+#define in.sq.demo              f189
 #define version.string            s4
 #define delta.x                  v42
 #define delta.y                  v43
+#define distance.from.shore      v51
 #define splash.time              v52
 #define sugar.cube.timer         v54
 #define fairy.spell.timer        v55
+#define bridge.crossings         v56
 #define fairy.spell.timer.2      v57
 #define timer.1                  v58
 #define timer.2                  v59
+#define bird.state               v65
 #define sugar.cube.timer.2       v66
 #define temp.x                   v67
 #define temp.y                   v68
+#define timer.3                  v69
+#define fall.x                   v70
+#define fairy.dust.timer         v71
+#define shore.room               v73
+#define lion.state               v75
 #define clear.work               v76
 #define debug.0                  v77
 #define debug.1                  v78
+#define trunk.state              v85
 #define drown.timer              v86
 #define wish.count               v87
 #define genie.delay              v88 [ Original name
+#define carpet.x                 v89
+#define carpet.y                 v90
+#define coffin.state             v91
+#define dracula.state            v92
+#define castle.chest.state       v93
 #define work                     v94
 #define drown.swim               v95 [ Original name
+#define castle.drawer.state      v98
 #define old.ego.dir              v99
 #define ego.x                   v100
 #define ego.y                   v101
 #define old.ego.x               v102
 #define old.ego.y               v103
-#define timer.3                 v104
+#define fish.death.timer        v104
 #define work.2                  v105
 #define work.3                  v106
 #define work.4                  v107
 #define work.5                  v108
-#define bird.state               v65
-#define bridge.crossings         v56
-#define shore.room               v73
-#define distance.from.shore      v51
+#define genie.x                 v114
+#define genie.y                 v115
+#define pre.demo.x              v116
+#define pre.demo.y              v117
+#define pre.demo.loop           v118
+#define drink.poisoned.water     f93
