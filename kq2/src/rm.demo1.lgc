@@ -1,13 +1,0 @@
-if (isset(f188))
-  {  set.horizon(10);  animate.obj(o1);  set.view(o1, View130);  position(o1, 23, 23);  set.priority(o1, 10);  animate.obj(o2);  set.view(o2, View131);  set.loop(o2, 0);  set.cel(o2, 0);  position(o2, 45, 146);  set.priority(o2, 15);  show.pic();  if (monitorType == MONO &&       machineType == PC)
-    {    goto(Label1);    }  clear.lines(22, 24, BLACK);Label1:  v30 = 18;  v35 = 3;  }--v35;if (v35 == 1)
-  {  sound(m.sq.theme, f41);  }--v30;if (v30 == 1)
-  {  draw(o2);  end.of.loop(o2, f31);  }if (isset(f31))
-  {  reset(f31);  work.2 = 234;  work.3 = 255;  reposition(o2, work.2, work.3);  set.loop(o2, 1);  set.cel(o2, 0);  stop.cycling(o2);  draw(o1);  move.obj(o1, 23, 137, 6, f30);  }if (isset(f30))
-  {  reset(f30);  if (v32 > 0)
-    {    erase(o1);    v31 = 47;    }  if (v32 <= 0)
-    {    erase(o1);    end.of.loop(o2, f32);    }  }if (isset(f32))
-  {  reset(f32);  if (v32 > 0)
-    {    position(o1, 23, 137);    draw(o1);    move.obj(o1, 23, 23, 6, f30);    }  if (v32 <= 0)
-    {    display(22, 7, "By Two Guys From Andromeda");    display(23, 5, "(C) 1986  Sierra On-Line, Inc.");    reverse.loop(o2, f32);    v32 = 1;    }  }--v31;if (v31 == 2)
-  {  v120 = 112;  }return();[ Messages#message 1 "By Two Guys From Andromeda"#message 2 "(C) 1986  Sierra On-Line, Inc."

@@ -69,6 +69,8 @@
 #define unlocked.door.2          f86
 #define unlocked.door.3          f87
 #define keep.cycling             f92 [ Original name
+#define drink.poisoned.water     f93
+#define riding.fish              f94
 #define clam.open                f95
 #define got.gold.key.1           f96
 #define neptune.has.trident      f97
@@ -77,6 +79,7 @@
 #define got.cross               f100
 #define got.lamp                f101
 #define gave.first.treasure     f102 [ In exchange for the lamp
+#define ego.in.hag.brew         f103
 #define took.cage               f104
 #define fish.alive              f105
 #define candle.lit              f106
@@ -135,6 +138,7 @@
 #define tester.on               f178
 #define snakeInAction           f179 [ Original name
 #define egoFallingCliff         f180 [ Original name
+#define ego.is.frog             f181
 #define fell.in.waterfall       f182
 #define turbulent.water         f184
 #define normal.water            f185
@@ -150,6 +154,8 @@
 #define fairy.spell.timer.2      v57
 #define timer.1                  v58
 #define timer.2                  v59
+#define wave.delay               v62
+#define turbulent.water.state    v63
 #define bird.state               v65
 #define sugar.cube.timer.2       v66
 #define temp.x                   v67
@@ -173,6 +179,7 @@
 #define castle.chest.state       v93
 #define work                     v94
 #define drown.swim               v95 [ Original name
+#define fish.state               v97
 #define castle.drawer.state      v98
 #define old.ego.dir              v99
 #define ego.x                   v100
@@ -189,4 +196,6 @@
 #define pre.demo.x              v116
 #define pre.demo.y              v117
 #define pre.demo.loop           v118
-#define drink.poisoned.water     f93
+#define nextRoom                v120
+#define curDemoRoom             v121
+#define newDemoRoom             f188

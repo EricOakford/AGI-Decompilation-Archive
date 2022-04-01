@@ -1,26 +1,0 @@
-if (isset(f188))
-  {  set.horizon(10);  animate.obj(o1);  set.view(o1, View150);  set.cel(o1, 0);  position(o1, 14, 167);  set.priority(o1, 15);  draw(o1);  stop.cycling(o1);  v31 = 27;  v36 = 1;  move.obj(o1, 14, 150, 0, f33);  work = 5;  step.time(o1, work);  animate.obj(o2);  set.view(o2, View152);  set.cel(o2, 1);  position(o2, 23, 131);  show.pic();  if (monitorType == MONO &&       machineType == PC)
-    {    clear.lines(2, 3, BLACK);    display(2, 2, "In deep space, a vessel drifts\n  silently.");    }  else
-    {    clear.lines(22, 24, WHITE);    set.text.attribute(BLACK, WHITE);    display(22, 2, "In deep space, a vessel drifts\n  silently.");    }  v44 = 40;  }--v44;if (v44 == 1)
-  {  if (monitorType == MONO &&       machineType == PC)
-    {    clear.lines(2, 4, BLACK);    display(2, 3, "Unbeknownst to you, the dreaded\n   Sariens, those bad boys "            "of the\n   universe, plan your destruction.");    }  else
-    {    clear.lines(22, 24, WHITE);    display(22, 3, "Unbeknownst to you, the dreaded\n   Sariens, those bad boys "            "of the\n   universe, plan your destruction.");    }  }get.posn(o1, work.2, work.3);if (v36 == 4)
-  {  work.2  += 9;  work.3 -= 20;  reposition.to.v(o2, work.2, work.3);  }if (work.3 == 154)
-  {  work.2  += 9;  work.3 -= 20;  position.v(o2, work.2, work.3);  draw(o2);  work = 6;  cycle.time(o2, work);  v31 = 20;  v36 = 4;  }--v31;if (v31 == 1)
-  {  if (v36 == 4)
-    {    erase(o2);    delta.y = 70;    }  if (v36 == 2)
-    {    set.cel(o1, 1);    stop.cycling(o1);    v36 = 3;    }  if (v36 == 1)
-    {    start.cycling(o1);    v36 = 2;    v31 = 18;    }  }if (isset(f33))
-  {  reset(f33);  v36 = 5;  }if (isset(f42))
-  {  reset(f42);  if (v41 == 4)
-    {    erase(o15);    delta.x = 27;    }  if (v41 == 3)
-    {    v41 = 4;    move.obj(o15, 141, 158, 0, f42);    }  if (v41 == 2)
-    {    v41 = 3;    move.obj(o15, 63, 158, 0, f42);    }  if (v41 == 1)
-    {    v41 = 2;    move.obj(o15, 43, 138, 0, f42);    }  if (v40 == 5)
-    {    move.obj(o15, 55, 131, 0, f42);    accept.input();    new.room(Logic45); [ ##LE001##    }  if (v40 == 4)
-    {    v40 = 5;    move.obj(o15, 55, 131, 0, f42);    }  if (v40 == 3)
-    {    v40 = 4;    move.obj(o15, 48, 138, 0, f42);    }  if (v40 == 2)
-    {    v40 = 3;    move.obj(o15, 40, 130, 0, f42);    }  if (v40 == 1)
-    {    v40 = 2;    move.obj(o15, 36, 130, 0, f42);    }  }--delta.x;if (delta.x == 1)
-  {  [ WARNING: this block contains no commands  }--delta.y;if (delta.y > 0)
-  {  v120 = 113;  }return();[ Messages#message 1 "In deep space, a vessel drifts\n  silently."#message 2 "Unbeknownst to you, the dreaded\n   Sariens, those bad boys of the\n   universe, plan your destruction."

@@ -1,16 +1,0 @@
-if (isset(newRoom))
-  {  load.sound(Sound23);  load.view(View108);  load.view(View109);  load.view(View104);  load.pic(currentRoom);  draw.pic(currentRoom);  if (currentRoom == 87 &&       previousRoom == 82)
-    {    position(ego, 118, 38);    }  if (currentRoom == 87 &&       previousRoom == 88 &&       posn(ego, 0, 140, 159, 167))
-    {    position(ego, 152, 139);    }  if (currentRoom == 82 &&       previousRoom == 77 &&       posn(ego, 0, 0, 89, 167))
-    {    position(ego, 90, 38);    }  if (currentRoom == 79 &&       previousRoom == 78 &&       posn(ego, 0, 0, 159, 61))
-    {    position(ego, 1, 62);    }  draw(ego);  work = currentRoom;  --work;  if (work == previousRoom)
-    {    program.control();    v63 = 4;    move.obj(ego, 160, 108, 2, done);    start.cycling(ego);    }  else
-    {    v63 = 0;    }  show.pic();  return();  }if (isset(egoHitSpecial))
-  {  if (!isset(f33) &&       !isset(f31) &&       v63 == 4)
-    {    set.view(ego, View108);    work = 3;    step.size(ego, work);    work = 2;    cycle.time(ego, work);    draw(ego);    move.obj(ego, 120, 100, 2, f31);    set(f33);    }  }if (isset(f33) &&     isset(f31))
-  {  reset(f31);  set.view(ego, View109);  work.5 = 1;  step.size(ego, work.5);  work = 2;  cycle.time(ego, work);  set(f34);  start.cycling(ego);  set(keep.cycling);  timer.1 = 30;  }if (isset(f34) &&     timer.1 > 0)
-  {  reset(f34);  sound(Sound23, f34);  }--timer.1;if (timer.1 == 1)
-  {  set.view(ego, View0);  work = 1;  step.size(ego, work);  cycle.time(ego, work);  v63 = 0;  player.control();  start.motion(ego);  reset(keep.cycling);  reset(f94);  reset(f33);  }if (edgeEgoHit == TOP_EDGE)
-  {  work = currentRoom;  work -= 5;  new.room.v(work);  }if (edgeEgoHit == BOTTOM_EDGE)
-  {  work = currentRoom;  work  += 5;  new.room.v(work);  }if (edgeEgoHit == RIGHT_EDGE)
-  {  work = currentRoom;  work  += 1;  new.room.v(work);  }return();[ Messages#message 1 "The water is too turbulent to swim. You have just drowned."#message 2 "The sky above this crazy world is a gorgeous pink. \"Where am I?\" you wonder."

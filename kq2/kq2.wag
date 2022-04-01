@@ -25,7 +25,7 @@
    ID = lgc.main
    Size = 8939
    CRC32 = &H80D54D1C
-   CompCRC32 = &H0
+   CompCRC32 = &H80D54D1C
    Description = ""
    IsRoom = False
 
@@ -33,7 +33,7 @@
    ID = Logic1
    Size = 261
    CRC32 = &HAFEB310E
-   CompCRC32 = &H0
+   CompCRC32 = &HAFEB310E
    Description = ""
    IsRoom = True
 
@@ -41,7 +41,7 @@
    ID = Logic2
    Size = 186
    CRC32 = &H565EB2F4
-   CompCRC32 = &H0
+   CompCRC32 = &H565EB2F4
    Description = ""
    IsRoom = True
 
@@ -49,7 +49,7 @@
    ID = Logic3
    Size = 1702
    CRC32 = &HD510D68F
-   CompCRC32 = &H0
+   CompCRC32 = &HD510D68F
    Description = ""
    IsRoom = True
 
@@ -57,7 +57,7 @@
    ID = Logic4
    Size = 231
    CRC32 = &HF1C28EC3
-   CompCRC32 = &H0
+   CompCRC32 = &HF1C28EC3
    Description = ""
    IsRoom = True
 
@@ -65,7 +65,7 @@
    ID = Logic5
    Size = 658
    CRC32 = &HE53CD812
-   CompCRC32 = &H0
+   CompCRC32 = &HE53CD812
    Description = ""
    IsRoom = True
 
@@ -73,7 +73,7 @@
    ID = Logic6
    Size = 861
    CRC32 = &HD7B49C67
-   CompCRC32 = &H0
+   CompCRC32 = &HD7B49C67
    Description = ""
    IsRoom = True
 
@@ -81,7 +81,7 @@
    ID = Logic7
    Size = 330
    CRC32 = &H915D7981
-   CompCRC32 = &H0
+   CompCRC32 = &H915D7981
    Description = ""
    IsRoom = True
 
@@ -89,7 +89,7 @@
    ID = Logic8
    Size = 150
    CRC32 = &H741BA8F0
-   CompCRC32 = &H0
+   CompCRC32 = &H741BA8F0
    Description = ""
    IsRoom = True
 
@@ -97,7 +97,7 @@
    ID = Logic9
    Size = 1077
    CRC32 = &HA59E5497
-   CompCRC32 = &H0
+   CompCRC32 = &HA59E5497
    Description = ""
    IsRoom = True
 
@@ -105,7 +105,7 @@
    ID = Logic10
    Size = 744
    CRC32 = &H7399D9A0
-   CompCRC32 = &H0
+   CompCRC32 = &H7399D9A0
    Description = ""
    IsRoom = True
 
@@ -113,7 +113,7 @@
    ID = Logic11
    Size = 90
    CRC32 = &HBC0D5C8E
-   CompCRC32 = &H0
+   CompCRC32 = &HBC0D5C8E
    Description = ""
    IsRoom = True
 
@@ -121,7 +121,7 @@
    ID = Logic12
    Size = 306
    CRC32 = &HA6EBF8E8
-   CompCRC32 = &H0
+   CompCRC32 = &HA6EBF8E8
    Description = ""
    IsRoom = True
 
@@ -129,7 +129,7 @@
    ID = Logic13
    Size = 1123
    CRC32 = &H3D9E1424
-   CompCRC32 = &H0
+   CompCRC32 = &H3D9E1424
    Description = ""
    IsRoom = True
 
@@ -137,7 +137,7 @@
    ID = Logic14
    Size = 376
    CRC32 = &H5EC3C650
-   CompCRC32 = &H0
+   CompCRC32 = &H5EC3C650
    Description = ""
    IsRoom = True
 
@@ -145,7 +145,7 @@
    ID = Logic15
    Size = 3086
    CRC32 = &H5FF6FAB1
-   CompCRC32 = &H0
+   CompCRC32 = &H5FF6FAB1
    Description = ""
    IsRoom = True
 
@@ -153,7 +153,7 @@
    ID = Logic16
    Size = 81
    CRC32 = &HF5D72130
-   CompCRC32 = &H0
+   CompCRC32 = &HF5D72130
    Description = ""
    IsRoom = True
 
@@ -161,7 +161,7 @@
    ID = Logic17
    Size = 92
    CRC32 = &H778CFAB8
-   CompCRC32 = &H0
+   CompCRC32 = &H778CFAB8
    Description = ""
    IsRoom = True
 
@@ -169,7 +169,7 @@
    ID = Logic18
    Size = 2133
    CRC32 = &H8A90FB06
-   CompCRC32 = &H0
+   CompCRC32 = &H8A90FB06
    Description = ""
    IsRoom = True
 
@@ -177,7 +177,7 @@
    ID = Logic19
    Size = 109
    CRC32 = &H71FD3D1
-   CompCRC32 = &H0
+   CompCRC32 = &H71FD3D1
    Description = ""
    IsRoom = True
 
@@ -185,7 +185,7 @@
    ID = Logic20
    Size = 1092
    CRC32 = &H7727975
-   CompCRC32 = &H0
+   CompCRC32 = &H7727975
    Description = ""
    IsRoom = True
 
@@ -193,7 +193,7 @@
    ID = Logic21
    Size = 605
    CRC32 = &H6C1993CA
-   CompCRC32 = &H0
+   CompCRC32 = &H6C1993CA
    Description = ""
    IsRoom = True
 
@@ -201,7 +201,7 @@
    ID = Logic22
    Size = 858
    CRC32 = &HD09D1CC7
-   CompCRC32 = &H0
+   CompCRC32 = &HD09D1CC7
    Description = ""
    IsRoom = True
 
@@ -209,7 +209,7 @@
    ID = Logic23
    Size = 245
    CRC32 = &H19FE4F38
-   CompCRC32 = &H0
+   CompCRC32 = &H19FE4F38
    Description = ""
    IsRoom = True
 
@@ -217,7 +217,7 @@
    ID = Logic24
    Size = 101
    CRC32 = &H1EDB2EEE
-   CompCRC32 = &H0
+   CompCRC32 = &H1EDB2EEE
    Description = ""
    IsRoom = True
 
@@ -225,15 +225,15 @@
    ID = Logic25
    Size = 1989
    CRC32 = &H77D6FC92
-   CompCRC32 = &H0
+   CompCRC32 = &H77D6FC92
    Description = ""
    IsRoom = True
 
 [Logic26]
    ID = Logic26
    Size = 145
-   CRC32 = &H4F665C1D
-   CompCRC32 = &H0
+   CRC32 = &H75C946B6
+   CompCRC32 = &H75C946B6
    Description = ""
    IsRoom = True
 
@@ -241,7 +241,7 @@
    ID = Logic27
    Size = 89
    CRC32 = &H8B6F8241
-   CompCRC32 = &H0
+   CompCRC32 = &H8B6F8241
    Description = ""
    IsRoom = True
 
@@ -249,7 +249,7 @@
    ID = Logic28
    Size = 236
    CRC32 = &H8507F1D4
-   CompCRC32 = &H0
+   CompCRC32 = &H8507F1D4
    Description = ""
    IsRoom = True
 
@@ -257,7 +257,7 @@
    ID = Logic29
    Size = 270
    CRC32 = &H8FF0D398
-   CompCRC32 = &H0
+   CompCRC32 = &H8FF0D398
    Description = ""
    IsRoom = True
 
@@ -265,7 +265,7 @@
    ID = Logic30
    Size = 944
    CRC32 = &H11E73AB9
-   CompCRC32 = &H0
+   CompCRC32 = &H11E73AB9
    Description = ""
    IsRoom = True
 
@@ -273,7 +273,7 @@
    ID = Logic31
    Size = 261
    CRC32 = &H977F504C
-   CompCRC32 = &H0
+   CompCRC32 = &H977F504C
    Description = ""
    IsRoom = True
 
@@ -281,7 +281,7 @@
    ID = Logic32
    Size = 2317
    CRC32 = &H686D0EB0
-   CompCRC32 = &H0
+   CompCRC32 = &H686D0EB0
    Description = ""
    IsRoom = True
 
@@ -289,7 +289,7 @@
    ID = Logic33
    Size = 164
    CRC32 = &H2F66A450
-   CompCRC32 = &H0
+   CompCRC32 = &H2F66A450
    Description = ""
    IsRoom = True
 
@@ -297,7 +297,7 @@
    ID = Logic34
    Size = 403
    CRC32 = &H25C40ABD
-   CompCRC32 = &H0
+   CompCRC32 = &H25C40ABD
    Description = ""
    IsRoom = True
 
@@ -305,7 +305,7 @@
    ID = Logic35
    Size = 416
    CRC32 = &H169CCEF7
-   CompCRC32 = &H0
+   CompCRC32 = &H169CCEF7
    Description = ""
    IsRoom = True
 
@@ -313,7 +313,7 @@
    ID = Logic36
    Size = 565
    CRC32 = &H9AF4CE5E
-   CompCRC32 = &H0
+   CompCRC32 = &H9AF4CE5E
    Description = ""
    IsRoom = True
 
@@ -321,7 +321,7 @@
    ID = Logic37
    Size = 324
    CRC32 = &HFCDF2C3B
-   CompCRC32 = &H0
+   CompCRC32 = &HFCDF2C3B
    Description = ""
    IsRoom = True
 
@@ -329,7 +329,7 @@
    ID = Logic38
    Size = 579
    CRC32 = &H78A30CB4
-   CompCRC32 = &H0
+   CompCRC32 = &H78A30CB4
    Description = ""
    IsRoom = True
 
@@ -337,7 +337,7 @@
    ID = Logic39
    Size = 181
    CRC32 = &H39C5CB49
-   CompCRC32 = &H0
+   CompCRC32 = &H39C5CB49
    Description = ""
    IsRoom = True
 
@@ -345,7 +345,7 @@
    ID = Logic40
    Size = 578
    CRC32 = &H3418FDEE
-   CompCRC32 = &H0
+   CompCRC32 = &H3418FDEE
    Description = ""
    IsRoom = True
 
@@ -353,7 +353,7 @@
    ID = Logic41
    Size = 174
    CRC32 = &HAC85674F
-   CompCRC32 = &H0
+   CompCRC32 = &HAC85674F
    Description = ""
    IsRoom = True
 
@@ -361,7 +361,7 @@
    ID = Logic42
    Size = 2415
    CRC32 = &H3DC00F6
-   CompCRC32 = &H0
+   CompCRC32 = &H3DC00F6
    Description = ""
    IsRoom = True
 
@@ -369,7 +369,7 @@
    ID = Logic43
    Size = 257
    CRC32 = &HEF487C34
-   CompCRC32 = &H0
+   CompCRC32 = &HEF487C34
    Description = ""
    IsRoom = True
 
@@ -377,7 +377,7 @@
    ID = Logic44
    Size = 954
    CRC32 = &HA53C727D
-   CompCRC32 = &H0
+   CompCRC32 = &HA53C727D
    Description = ""
    IsRoom = True
 
@@ -385,7 +385,7 @@
    ID = Logic45
    Size = 96
    CRC32 = &HEF9A0E00
-   CompCRC32 = &H0
+   CompCRC32 = &HEF9A0E00
    Description = ""
    IsRoom = True
 
@@ -393,7 +393,7 @@
    ID = Logic46
    Size = 719
    CRC32 = &H86BC4693
-   CompCRC32 = &H0
+   CompCRC32 = &H86BC4693
    Description = ""
    IsRoom = True
 
@@ -401,7 +401,7 @@
    ID = Logic47
    Size = 79
    CRC32 = &H532609DB
-   CompCRC32 = &H0
+   CompCRC32 = &H532609DB
    Description = ""
    IsRoom = True
 
@@ -409,7 +409,7 @@
    ID = Logic48
    Size = 753
    CRC32 = &HDC7F9E86
-   CompCRC32 = &H0
+   CompCRC32 = &HDC7F9E86
    Description = ""
    IsRoom = True
 
@@ -417,7 +417,7 @@
    ID = Logic49
    Size = 98
    CRC32 = &H8601560E
-   CompCRC32 = &H0
+   CompCRC32 = &H8601560E
    Description = ""
    IsRoom = True
 
@@ -425,7 +425,7 @@
    ID = Logic50
    Size = 850
    CRC32 = &HF9BB9846
-   CompCRC32 = &H0
+   CompCRC32 = &HF9BB9846
    Description = ""
    IsRoom = True
 
@@ -433,31 +433,31 @@
    ID = Logic51
    Size = 3190
    CRC32 = &H29EC94F9
-   CompCRC32 = &H0
+   CompCRC32 = &H29EC94F9
    Description = ""
    IsRoom = True
 
 [Logic52]
    ID = Logic52
    Size = 578
-   CRC32 = &H505D15F9
-   CompCRC32 = &H0
+   CRC32 = &HD8ED0934
+   CompCRC32 = &HD8ED0934
    Description = ""
    IsRoom = True
 
 [Logic53]
    ID = Logic53
    Size = 581
-   CRC32 = &HA52A4D2F
-   CompCRC32 = &H0
+   CRC32 = &HF34D266E
+   CompCRC32 = &HF34D266E
    Description = ""
    IsRoom = True
 
 [Logic54]
    ID = Logic54
    Size = 643
-   CRC32 = &H80E96355
-   CompCRC32 = &H0
+   CRC32 = &H3887B696
+   CompCRC32 = &H3887B696
    Description = ""
    IsRoom = True
 
@@ -465,7 +465,7 @@
    ID = Logic55
    Size = 120
    CRC32 = &H2F7E4268
-   CompCRC32 = &H0
+   CompCRC32 = &H2F7E4268
    Description = ""
    IsRoom = True
 
@@ -473,15 +473,15 @@
    ID = Logic56
    Size = 2583
    CRC32 = &HA80E7C68
-   CompCRC32 = &H0
+   CompCRC32 = &HA80E7C68
    Description = ""
    IsRoom = True
 
 [Logic57]
    ID = Logic57
    Size = 744
-   CRC32 = &H72B2E290
-   CompCRC32 = &H0
+   CRC32 = &H71B59F7B
+   CompCRC32 = &H71B59F7B
    Description = ""
    IsRoom = True
 
@@ -489,7 +489,7 @@
    ID = Logic58
    Size = 429
    CRC32 = &HBAAC4B40
-   CompCRC32 = &H0
+   CompCRC32 = &HBAAC4B40
    Description = ""
    IsRoom = True
 
@@ -497,7 +497,7 @@
    ID = Logic59
    Size = 1358
    CRC32 = &HEB34B513
-   CompCRC32 = &H0
+   CompCRC32 = &HEB34B513
    Description = ""
    IsRoom = True
 
@@ -505,7 +505,7 @@
    ID = Logic60
    Size = 1589
    CRC32 = &HBDEBF7A8
-   CompCRC32 = &H0
+   CompCRC32 = &HBDEBF7A8
    Description = ""
    IsRoom = True
 
@@ -513,7 +513,7 @@
    ID = Logic61
    Size = 444
    CRC32 = &H5932ACB0
-   CompCRC32 = &H0
+   CompCRC32 = &H5932ACB0
    Description = ""
    IsRoom = True
 
@@ -521,7 +521,7 @@
    ID = Logic62
    Size = 1676
    CRC32 = &H5D39D25
-   CompCRC32 = &H0
+   CompCRC32 = &H5D39D25
    Description = ""
    IsRoom = True
 
@@ -529,7 +529,7 @@
    ID = Logic63
    Size = 1123
    CRC32 = &HF543CCE5
-   CompCRC32 = &H0
+   CompCRC32 = &HF543CCE5
    Description = ""
    IsRoom = True
 
@@ -537,7 +537,7 @@
    ID = Logic64
    Size = 938
    CRC32 = &HEB763D59
-   CompCRC32 = &H0
+   CompCRC32 = &HEB763D59
    Description = ""
    IsRoom = True
 
@@ -545,7 +545,7 @@
    ID = Logic65
    Size = 799
    CRC32 = &HA14DEB10
-   CompCRC32 = &H0
+   CompCRC32 = &HA14DEB10
    Description = ""
    IsRoom = True
 
@@ -553,7 +553,7 @@
    ID = Logic66
    Size = 1516
    CRC32 = &HC4FAB23F
-   CompCRC32 = &H0
+   CompCRC32 = &HC4FAB23F
    Description = ""
    IsRoom = True
 
@@ -561,7 +561,7 @@
    ID = Logic67
    Size = 5063
    CRC32 = &H169A47D7
-   CompCRC32 = &H0
+   CompCRC32 = &H169A47D7
    Description = ""
    IsRoom = True
 
@@ -569,15 +569,15 @@
    ID = Logic68
    Size = 2963
    CRC32 = &H7F01BB60
-   CompCRC32 = &H0
+   CompCRC32 = &H7F01BB60
    Description = ""
    IsRoom = True
 
 [Logic69]
    ID = Logic69
    Size = 4661
-   CRC32 = &H37B495AD
-   CompCRC32 = &H0
+   CRC32 = &HF91163FE
+   CompCRC32 = &HF91163FE
    Description = ""
    IsRoom = True
 
@@ -585,7 +585,7 @@
    ID = Logic70
    Size = 3174
    CRC32 = &H53239B5
-   CompCRC32 = &H0
+   CompCRC32 = &H53239B5
    Description = ""
    IsRoom = True
 
@@ -593,7 +593,7 @@
    ID = Logic71
    Size = 2737
    CRC32 = &HAE7CBE06
-   CompCRC32 = &H0
+   CompCRC32 = &HAE7CBE06
    Description = ""
    IsRoom = True
 
@@ -601,7 +601,7 @@
    ID = Logic72
    Size = 678
    CRC32 = &H785E2966
-   CompCRC32 = &H0
+   CompCRC32 = &H785E2966
    Description = ""
    IsRoom = True
 
@@ -609,7 +609,7 @@
    ID = Logic73
    Size = 664
    CRC32 = &HB83BD214
-   CompCRC32 = &H0
+   CompCRC32 = &HB83BD214
    Description = ""
    IsRoom = True
 
@@ -617,15 +617,15 @@
    ID = Logic74
    Size = 1989
    CRC32 = &HFED5C11E
-   CompCRC32 = &H0
+   CompCRC32 = &HFED5C11E
    Description = ""
    IsRoom = True
 
 [Logic75]
    ID = Logic75
    Size = 536
-   CRC32 = &HFB23E521
-   CompCRC32 = &H0
+   CRC32 = &HBBC71123
+   CompCRC32 = &HBBC71123
    Description = ""
    IsRoom = False
 
@@ -633,39 +633,39 @@
    ID = Logic76
    Size = 18
    CRC32 = &H99FD54EF
-   CompCRC32 = &H0
+   CompCRC32 = &H99FD54EF
    Description = ""
    IsRoom = False
 
 [Logic77]
    ID = Logic77
    Size = 149
-   CRC32 = &H6756262B
-   CompCRC32 = &H0
+   CRC32 = &H13A6EB17
+   CompCRC32 = &H13A6EB17
    Description = ""
    IsRoom = False
 
 [Logic78]
    ID = Logic78
    Size = 525
-   CRC32 = &H20F1650E
-   CompCRC32 = &H0
+   CRC32 = &H624ABC4C
+   CompCRC32 = &H624ABC4C
    Description = ""
    IsRoom = True
 
 [Logic79]
    ID = Logic79
    Size = 195
-   CRC32 = &HFF153558
-   CompCRC32 = &H0
+   CRC32 = &H92EB2A6F
+   CompCRC32 = &H92EB2A6F
    Description = ""
    IsRoom = True
 
 [Logic80]
    ID = Logic80
    Size = 107
-   CRC32 = &HC36CE697
-   CompCRC32 = &H0
+   CRC32 = &H4F1F891F
+   CompCRC32 = &H4F1F891F
    Description = ""
    IsRoom = True
 
@@ -673,15 +673,15 @@
    ID = Logic81
    Size = 16
    CRC32 = &H7E868D7D
-   CompCRC32 = &H0
+   CompCRC32 = &H7E868D7D
    Description = ""
    IsRoom = False
 
 [Logic82]
    ID = Logic82
    Size = 68
-   CRC32 = &H4090481
-   CompCRC32 = &H0
+   CRC32 = &HE3EA09E0
+   CompCRC32 = &HE3EA09E0
    Description = ""
    IsRoom = False
 
@@ -689,23 +689,23 @@
    ID = Logic83
    Size = 1277
    CRC32 = &H989F9E60
-   CompCRC32 = &H0
+   CompCRC32 = &H989F9E60
    Description = ""
    IsRoom = True
 
 [Logic84]
    ID = Logic84
    Size = 111
-   CRC32 = &HEF78C6F3
-   CompCRC32 = &H0
+   CRC32 = &H5CD899AD
+   CompCRC32 = &H5CD899AD
    Description = ""
    IsRoom = True
 
 [Logic85]
    ID = Logic85
    Size = 57
-   CRC32 = &H3A8C5F84
-   CompCRC32 = &H0
+   CRC32 = &HE00E42AB
+   CompCRC32 = &HE00E42AB
    Description = ""
    IsRoom = False
 
@@ -713,31 +713,31 @@
    ID = Logic86
    Size = 16
    CRC32 = &H7E868D7D
-   CompCRC32 = &H0
+   CompCRC32 = &H7E868D7D
    Description = ""
    IsRoom = False
 
 [Logic87]
    ID = Logic87
    Size = 71
-   CRC32 = &HE9427FDC
-   CompCRC32 = &H0
+   CRC32 = &HAAAFD63D
+   CompCRC32 = &HAAAFD63D
    Description = ""
    IsRoom = False
 
 [Logic88]
    ID = Logic88
    Size = 303
-   CRC32 = &H424EF733
-   CompCRC32 = &H0
+   CRC32 = &H636F4961
+   CompCRC32 = &H636F4961
    Description = ""
    IsRoom = True
 
 [Logic89]
    ID = Logic89
    Size = 148
-   CRC32 = &H996DB809
-   CompCRC32 = &H0
+   CRC32 = &H2F98D2D0
+   CompCRC32 = &H2F98D2D0
    Description = ""
    IsRoom = True
 
@@ -745,7 +745,7 @@
    ID = Logic90
    Size = 1993
    CRC32 = &H2E3BD499
-   CompCRC32 = &H0
+   CompCRC32 = &H2E3BD499
    Description = ""
    IsRoom = True
 
@@ -753,7 +753,7 @@
    ID = Logic91
    Size = 2864
    CRC32 = &H7BC3E343
-   CompCRC32 = &H0
+   CompCRC32 = &H7BC3E343
    Description = ""
    IsRoom = True
 
@@ -761,7 +761,7 @@
    ID = Logic92
    Size = 557
    CRC32 = &HE16CED63
-   CompCRC32 = &H0
+   CompCRC32 = &HE16CED63
    Description = ""
    IsRoom = True
 
@@ -769,7 +769,7 @@
    ID = Logic93
    Size = 1029
    CRC32 = &H4B197C3E
-   CompCRC32 = &H0
+   CompCRC32 = &H4B197C3E
    Description = ""
    IsRoom = True
 
@@ -777,7 +777,7 @@
    ID = lgc.help
    Size = 802
    CRC32 = &HE2A5AA0A
-   CompCRC32 = &H0
+   CompCRC32 = &HE2A5AA0A
    Description = ""
    IsRoom = False
 
@@ -785,7 +785,7 @@
    ID = lgc.trace
    Size = 2459
    CRC32 = &H4A46C2E
-   CompCRC32 = &H0
+   CompCRC32 = &H4A46C2E
    Description = ""
    IsRoom = False
 
@@ -793,7 +793,7 @@
    ID = rm.title
    Size = 1896
    CRC32 = &HAEBA148C
-   CompCRC32 = &H0
+   CompCRC32 = &HAEBA148C
    Description = ""
    IsRoom = True
 
@@ -801,7 +801,7 @@
    ID = lgc.error
    Size = 751
    CRC32 = &HDBE827BA
-   CompCRC32 = &H0
+   CompCRC32 = &HDBE827BA
    Description = ""
    IsRoom = False
 
@@ -809,7 +809,7 @@
    ID = lgc.debug
    Size = 904
    CRC32 = &H736F6A24
-   CompCRC32 = &H0
+   CompCRC32 = &H736F6A24
    Description = ""
    IsRoom = False
 
@@ -817,7 +817,7 @@
    ID = lgc.death
    Size = 885
    CRC32 = &H99E73F31
-   CompCRC32 = &H0
+   CompCRC32 = &H99E73F31
    Description = ""
    IsRoom = False
 
@@ -825,7 +825,7 @@
    ID = lgc.swim
    Size = 673
    CRC32 = &H12F33685
-   CompCRC32 = &H0
+   CompCRC32 = &H12F33685
    Description = ""
    IsRoom = False
 
@@ -833,7 +833,7 @@
    ID = rm.sky
    Size = 106
    CRC32 = &H8FF237E
-   CompCRC32 = &H0
+   CompCRC32 = &H8FF237E
    Description = ""
    IsRoom = True
 
@@ -841,7 +841,7 @@
    ID = rm.credits
    Size = 875
    CRC32 = &H12E93918
-   CompCRC32 = &H0
+   CompCRC32 = &H12E93918
    Description = ""
    IsRoom = False
 
@@ -849,71 +849,71 @@
    ID = rm.wedding
    Size = 477
    CRC32 = &HB2F650DC
-   CompCRC32 = &H0
+   CompCRC32 = &HB2F650DC
    Description = ""
    IsRoom = True
 
 [Logic110]
-   ID = rm.demo.start
+   ID = rmSQStart
    Size = 313
-   CRC32 = &H583409A7
-   CompCRC32 = &H0
+   CRC32 = &HE92CFF43
+   CompCRC32 = &HE92CFF43
    Description = ""
    IsRoom = True
 
 [Logic111]
-   ID = rm.demo1
+   ID = rmSQTitle
    Size = 284
-   CRC32 = &H453433BB
-   CompCRC32 = &H0
+   CRC32 = &H69ED4BCC
+   CompCRC32 = &H69ED4BCC
    Description = ""
    IsRoom = False
 
 [Logic112]
-   ID = Logic112
+   ID = rmDeltaur
    Size = 569
-   CRC32 = &HF4F5B5FE
-   CompCRC32 = &H0
+   CRC32 = &H9F972150
+   CompCRC32 = &H9F972150
    Description = ""
    IsRoom = True
 
 [Logic113]
-   ID = Logic113
+   ID = rmBayControls
    Size = 282
-   CRC32 = &HBB39697D
-   CompCRC32 = &H0
+   CRC32 = &H4BF46332
+   CompCRC32 = &H4BF46332
    Description = ""
    IsRoom = False
 
 [Logic114]
-   ID = Logic114
+   ID = rmDistantCanyon
    Size = 315
-   CRC32 = &H3630510F
-   CompCRC32 = &H0
+   CRC32 = &HC305EE78
+   CompCRC32 = &HC305EE78
    Description = ""
    IsRoom = False
 
 [Logic115]
-   ID = Logic115
+   ID = rmKerona
    Size = 184
-   CRC32 = &HB293284E
-   CompCRC32 = &H0
+   CRC32 = &HC43E4250
+   CompCRC32 = &HC43E4250
    Description = ""
    IsRoom = False
 
 [Logic116]
-   ID = Logic116
+   ID = rmKeronaBar
    Size = 882
-   CRC32 = &H7BBCCDC9
-   CompCRC32 = &H0
+   CRC32 = &H9A400CD6
+   CompCRC32 = &H9A400CD6
    Description = ""
    IsRoom = False
 
 [Logic117]
-   ID = Logic117
+   ID = rmAsteroidField
    Size = 614
-   CRC32 = &H4CDA33EC
-   CompCRC32 = &H0
+   CRC32 = &H88909A27
+   CompCRC32 = &H88909A27
    Description = ""
    IsRoom = True
 
@@ -921,31 +921,31 @@
    ID = lgc.trees
    Size = 990
    CRC32 = &H8AD3189C
-   CompCRC32 = &H0
+   CompCRC32 = &H8AD3189C
    Description = ""
    IsRoom = False
 
 [Logic152]
    ID = lgc.beach
    Size = 1858
-   CRC32 = &HCCD7A85D
-   CompCRC32 = &H0
+   CRC32 = &H74B8A504
+   CompCRC32 = &H74B8A504
    Description = ""
    IsRoom = False
 
 [Logic153]
    ID = lgc.red
    Size = 2612
-   CRC32 = &H655A2A5E
-   CompCRC32 = &H0
+   CRC32 = &HEA7797D3
+   CompCRC32 = &HEA7797D3
    Description = ""
    IsRoom = False
 
 [Logic154]
    ID = lgc.fairy
    Size = 1064
-   CRC32 = &HCA21A9A2
-   CompCRC32 = &H0
+   CRC32 = &H8F26A3B6
+   CompCRC32 = &H8F26A3B6
    Description = ""
    IsRoom = False
 
@@ -953,15 +953,15 @@
    ID = lgc.chasm
    Size = 581
    CRC32 = &HDB9F2796
-   CompCRC32 = &H0
+   CompCRC32 = &HDB9F2796
    Description = ""
    IsRoom = False
 
 [Logic156]
    ID = lgc.poison.lake
    Size = 1436
-   CRC32 = &H58784CE4
-   CompCRC32 = &H0
+   CRC32 = &HFD4C2242
+   CompCRC32 = &HFD4C2242
    Description = ""
    IsRoom = False
 
@@ -969,7 +969,7 @@
    ID = lgc.forest
    Size = 510
    CRC32 = &HACB807CB
-   CompCRC32 = &H0
+   CompCRC32 = &HACB807CB
    Description = ""
    IsRoom = False
 
@@ -977,7 +977,7 @@
    ID = lgc.lake
    Size = 900
    CRC32 = &H88CE3360
-   CompCRC32 = &H0
+   CompCRC32 = &H88CE3360
    Description = ""
    IsRoom = False
 
@@ -985,31 +985,31 @@
    ID = lgc.thorns
    Size = 403
    CRC32 = &H24605C04
-   CompCRC32 = &H0
+   CompCRC32 = &H24605C04
    Description = ""
    IsRoom = False
 
 [Logic160]
    ID = lgc.enchanter
    Size = 1124
-   CRC32 = &H23D2BEF7
-   CompCRC32 = &H0
+   CRC32 = &H5DA1E0FE
+   CompCRC32 = &H5DA1E0FE
    Description = ""
    IsRoom = False
 
 [Logic161]
    ID = lgc.hag
    Size = 1131
-   CRC32 = &H3ADDF51F
-   CompCRC32 = &H0
+   CRC32 = &HB2D1D848
+   CompCRC32 = &HB2D1D848
    Description = ""
    IsRoom = True
 
 [Logic162]
    ID = lgc.dwarf
    Size = 968
-   CRC32 = &H3298578E
-   CompCRC32 = &H0
+   CRC32 = &HA8B2558C
+   CompCRC32 = &HA8B2558C
    Description = ""
    IsRoom = False
 
@@ -1017,7 +1017,7 @@
    ID = lgc.mountainside
    Size = 420
    CRC32 = &H50AA9F45
-   CompCRC32 = &H0
+   CompCRC32 = &H50AA9F45
    Description = ""
    IsRoom = False
 
@@ -1025,7 +1025,7 @@
    ID = lgc.cliff
    Size = 822
    CRC32 = &H84BAB12E
-   CompCRC32 = &H0
+   CompCRC32 = &H84BAB12E
    Description = ""
    IsRoom = False
 
@@ -1033,23 +1033,23 @@
    ID = lgc.carpet
    Size = 275
    CRC32 = &H26B8AA26
-   CompCRC32 = &H0
+   CompCRC32 = &H26B8AA26
    Description = ""
    IsRoom = True
 
 [Logic166]
    ID = lgc.dracula
    Size = 1890
-   CRC32 = &H2262ED4C
-   CompCRC32 = &H0
+   CRC32 = &HCF47181E
+   CompCRC32 = &HCF47181E
    Description = ""
    IsRoom = False
 
 [Logic167]
-   ID = lgc.quartz.mountains
+   ID = lgc.blue.cliff
    Size = 4549
-   CRC32 = &H3DE994FF
-   CompCRC32 = &H0
+   CRC32 = &H137936BE
+   CompCRC32 = &H137936BE
    Description = ""
    IsRoom = False
 
@@ -1057,23 +1057,23 @@
    ID = lgc.fish.ride
    Size = 74
    CRC32 = &H22EE0901
-   CompCRC32 = &H0
+   CompCRC32 = &H22EE0901
    Description = ""
    IsRoom = False
 
 [Logic169]
-   ID = Logic169
+   ID = lgc.enter.island
    Size = 442
-   CRC32 = &H15FC6465
-   CompCRC32 = &H0
+   CRC32 = &H6A19BC2A
+   CompCRC32 = &H6A19BC2A
    Description = ""
    IsRoom = False
 
 [Logic170]
    ID = lgc.quartz.island
    Size = 2174
-   CRC32 = &HCD2BA1B1
-   CompCRC32 = &H0
+   CRC32 = &H8B0A9A31
+   CompCRC32 = &H8B0A9A31
    Description = ""
    IsRoom = False
 
@@ -1081,7 +1081,7 @@
    ID = lgc.startup
    Size = 274
    CRC32 = &HAC1991FD
-   CompCRC32 = &H0
+   CompCRC32 = &HAC1991FD
    Description = ""
    IsRoom = False
 [::END Logics::]
@@ -2226,7 +2226,7 @@
    Description = ""
 
 [Sound40]
-   ID = m.sq.theme
+   ID = mSQTheme
    Size = 5896
    Key = 0
    TPQN = 0
@@ -2244,7 +2244,7 @@
    Description = ""
 
 [Sound41]
-   ID = Sound41
+   ID = sDroidNoise
    Size = 116
    Key = 0
    TPQN = 0
@@ -2262,7 +2262,7 @@
    Description = ""
 
 [Sound42]
-   ID = m.alien.bar
+   ID = mAlienBand
    Size = 1606
    Key = 0
    TPQN = 0
@@ -2280,7 +2280,7 @@
    Description = ""
 
 [Sound43]
-   ID = Sound43
+   ID = sAsteroids
    Size = 131
    Key = 0
    TPQN = 0
@@ -2298,7 +2298,7 @@
    Description = ""
 
 [Sound44]
-   ID = Sound44
+   ID = sAsteroidsPC
    Size = 166
    Key = 0
    TPQN = 0
@@ -2929,32 +2929,32 @@
    Description = ""
 
 [View128]
-   ID = View128
+   ID = vEgoMeteor
    Size = 1212
    Description = ""
 
 [View129]
-   ID = View129
+   ID = vOhNo
    Size = 235
    Description = ""
 
 [View130]
-   ID = View130
+   ID = vSQTitleBeam
    Size = 60
    Description = ""
 
 [View131]
-   ID = View131
+   ID = vSQSubtitle
    Size = 3171
    Description = ""
 
 [View132]
-   ID = View132
+   ID = vBayDoor
    Size = 586
    Description = ""
 
 [View133]
-   ID = View133
+   ID = vFloorSiren
    Size = 184
    Description = ""
 
@@ -2964,42 +2964,42 @@
    Description = ""
 
 [View135]
-   ID = View135
+   ID = vCeilingSiren
    Size = 104
    Description = ""
 
 [View136]
-   ID = View136
+   ID = vDeadCrew
    Size = 152
    Description = ""
 
 [View137]
-   ID = View137
+   ID = vEgoSpacesuit
    Size = 2912
    Description = ""
 
 [View139]
-   ID = View139
+   ID = vBarAliens
    Size = 466
    Description = ""
 
 [View140]
-   ID = View140
+   ID = vSlotsAlien
    Size = 1594
    Description = ""
 
 [View141]
-   ID = View141
+   ID = vJanitorDroid
    Size = 1007
    Description = ""
 
 [View142]
-   ID = View142
+   ID = vBartender
    Size = 336
    Description = ""
 
 [View144]
-   ID = View144
+   ID = vBarBand
    Size = 1856
    Description = ""
 
@@ -3009,27 +3009,27 @@
    Description = ""
 
 [View146]
-   ID = View146
+   ID = vAsteroid1
    Size = 273
    Description = ""
 
 [View147]
-   ID = View147
+   ID = vAsteroid2
    Size = 170
    Description = ""
 
 [View148]
-   ID = View148
+   ID = vAsteroid3
    Size = 25
    Description = ""
 
 [View149]
-   ID = View149
+   ID = vAsteroidShip
    Size = 864
    Description = ""
 
 [View150]
-   ID = View150
+   ID = vEgoShipDeltaur
    Size = 920
    Description = ""
 
@@ -3039,12 +3039,12 @@
    Description = ""
 
 [View152]
-   ID = View152
+   ID = vEgoShipLights
    Size = 106
    Description = ""
 
 [View154]
-   ID = View154
+   ID = vSpiderDroid
    Size = 916
    Description = ""
 
