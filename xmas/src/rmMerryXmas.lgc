@@ -1,0 +1,102 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aShine  o1
+
+#define musicDone  f220
+
+if (newRoom)
+  {
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.view(vHalfDome);
+  load.view(vHalfDomeShine);
+  load.sound(mMerryChristmas);
+  load.view(vMerryXmasFromSierra);
+  add.to.pic(vHalfDome, 0, 0, 100, 80, 4, 4);
+  animate.obj(aShine);
+  set.view(aShine, vHalfDomeShine);
+  ignore.horizon(aShine);
+  position(aShine, 105, 37);
+  draw(aShine);
+  add.to.pic(vMerryXmasFromSierra, 0, 0, 23, 121, 4, 4);
+  load.logics(Logic101);
+  load.logics(Logic100);
+  call(Logic101);
+  show.pic();
+  v50 = 0;
+  sound(mMerryChristmas, musicDone);
+  if (fNoMessage)
+    {
+    reset(f33);
+    }
+  else
+    {
+    toggle(f33);
+    }
+  if (isset(f36) && 
+      isset(f38))
+    {
+    v50 = 25;
+    }
+  }
+if (!newRoom)
+  {
+  call(Logic101);
+  }
+if (v50 == 0 && 
+    isset(f222))
+  {
+  toggle(f36);
+  if (isset(f36))
+    {
+    toggle(f38);
+    if ((previousRoom == 13 || 
+        previousRoom == 42 || 
+        previousRoom == 48))
+      {
+      new.room(rmComingSoon);
+      }
+    else
+      {
+      new.room(rmJingleBells);
+      }
+    }
+  else
+    {
+    if ((previousRoom == 13 || 
+        previousRoom == 42 || 
+        previousRoom == 48))
+      {
+      new.room(rmComingSoon);
+      }
+    else
+      {
+      new.room(rmJingleBells);
+      }
+    }
+  }
+if (soundOn)
+  {
+  if (isset(f221))
+    {
+    set(f222);
+    }
+  }
+else
+  {
+  if (secondsInRoom > 30)
+    {
+    set(f222);
+    }
+  }
+if (musicDone)
+  {
+  reset(musicDone);
+  set(f221);
+  sound(mMerryChristmas, musicDone);
+  }
+return();
+
+[ Messages

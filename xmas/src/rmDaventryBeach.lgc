@@ -1,0 +1,53 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aEgo    o1
+
+#define egoMoved    f220
+#define nextMsg     f221
+
+#define nextRoomTimer   v220
+
+if (newRoom)
+  {
+  load.view(vKQ3Ego);
+  animate.obj(aEgo);
+  set.view(aEgo, vKQ3Ego);
+  position(aEgo, 150, 107);
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  draw(aEgo);
+  move.obj(aEgo, 96, 107, 0, egoMoved);
+  show.pic();
+  clear.lines(22, 24, WHITE);
+  display(22, 1, "Find passage on a ship bound for\n places unknown. Embark "
+          "upon a\n dangerous voyage to another land.");
+  }
+if (nextMsg)
+  {
+  reset(nextMsg);
+  clear.lines(22, 24, WHITE);
+  display(22, 1, "And of course, match wits with the\n powerful wizard "
+          "Manannan, whose every\n whim must be your command!");
+  nextRoomTimer = 90;
+  }
+if (egoMoved)
+  {
+  reset(egoMoved);
+  set.loop(aEgo, 3);
+  stop.cycling(aEgo);
+  stop.motion(aEgo);
+  set(nextMsg);
+  }
+--nextRoomTimer;
+if (nextRoomTimer == 1)
+  {
+  clear.lines(22, 24, BLACK);
+  set.text.attribute(WHITE, BLACK);
+  new.room(rmMerryXmas);
+  }
+return();
+
+[ Messages
+#message 1 "Find passage on a ship bound for\n places unknown. Embark upon a\n dangerous voyage to another land."
+#message 2 "And of course, match wits with the\n powerful wizard Manannan, whose every\n whim must be your command!"

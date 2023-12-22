@@ -1,0 +1,36 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aEgo    o1
+#define aSpider o2
+
+#define roomTimer   v220
+
+#define egoMoved    f220
+#define spiderMoved f221
+#define soundDone   f222
+
+if (newRoom)
+  {
+  set.horizon(70);
+  load.view(vEgoSpacesuit);
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  animate.obj(aEgo);
+  set.view(aEgo, vEgoSpacesuit);
+  position(aEgo, 63, 164);
+  draw(aEgo);
+  move.obj(aEgo, 63, 127, 0, egoMoved);
+  show.pic();
+  clear.lines(22, 24, WHITE);
+  display(23, 6, "...visit bizarre planets...");
+  }
+if (egoMoved)
+  {
+  reset(egoMoved);
+  new.room(rmSQBar);
+  }
+return();
+
+[ Messages
+#message 1 "...visit bizarre planets..."

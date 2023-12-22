@@ -1,0 +1,149 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aDoe    o1
+#define aMoon   o2
+
+#define roomTimer v220
+#define doeEnterTimer    v224
+
+#define doeEnters   f221
+#define doeFaceCamera   f222
+#define doeFaceLeft     f223
+#define moonFirstMoved  f227
+#define moonMoved  f228
+#define musicDone   f233
+
+if (newRoom)
+  {
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.view(vDoeWalk);
+  load.view(vDoeDrink);
+  load.view(vMoon);
+  load.view(View12);
+  load.view(vDoeTurnHead);
+  load.sound(mSilentNight);
+  animate.obj(aMoon);
+  animate.obj(aDoe);
+  position(aDoe, 100, 149);
+  position(aMoon, 107, 66);
+  set.view(aDoe, vDoeWalk);
+  set.view(aMoon, vMoon);
+  ignore.horizon(aMoon);
+  draw(aDoe);
+  draw(aMoon);
+  work = 3;
+  step.time(aDoe, work);
+  cycle.time(aDoe, work);
+  doeEnterTimer = 75;
+  work = 25;
+  step.time(aMoon, work);
+  move.obj(aMoon, 93, 45, 0, moonFirstMoved);
+  show.pic();
+  sound(mSilentNight, musicDone);
+  roomTimer = 65;
+  }
+  
+--doeEnterTimer;
+if (doeEnterTimer == 1)
+  {
+  move.obj(aDoe, 75, 149, 0, doeEnters);
+  }
+if (moonFirstMoved)
+  {
+  reset(moonFirstMoved);
+  move.obj(aMoon, 93, 45, 0, moonMoved);
+  }
+if (moonMoved)
+  {
+  reset(moonMoved);
+  move.obj(aMoon, 85, 30, 0, moonMoved);
+  }
+if (doeEnters)
+  {
+  reset(doeEnters);
+  work = 4;
+  cycle.time(aDoe, work);
+  set.view(aDoe, vDoeTurnHead);
+  last.cel(aDoe, work);
+  set.cel.v(aDoe, work);
+  reverse.loop(aDoe, doeFaceCamera);
+  }
+if (doeFaceCamera)
+  {
+  reset(doeFaceCamera);
+  end.of.loop(aDoe, doeFaceLeft);
+  }
+if (doeFaceLeft)
+  {
+  reset(doeFaceLeft);
+  v221 = 45;
+  }
+--v221;
+if (v221 == 1)
+  {
+  set.view(aDoe, vDoeWalk);
+  work = 3;
+  cycle.time(aDoe, work);
+  start.cycling(aDoe);
+  move.obj(aDoe, 57, 149, 0, f224);
+  }
+if (isset(f224))
+  {
+  reset(f224);
+  work = 4;
+  cycle.time(aDoe, work);
+  set.view(aDoe, vDoeTurnHead);
+  last.cel(aDoe, work);
+  set.cel.v(aDoe, work);
+  reverse.loop(aDoe, f225);
+  }
+if (isset(f225))
+  {
+  reset(f225);
+  end.of.loop(aDoe, f226);
+  }
+if (isset(f226))
+  {
+  reset(f226);
+  v222 = 45;
+  }
+--v222;
+if (v222 == 1)
+  {
+  set.view(aDoe, vDoeDrink);
+  set.cel(aDoe, 0);
+  end.of.loop(aDoe, f234);
+  }
+if (isset(f234))
+  {
+  reset(f234);
+  v223 = 45;
+  }
+--v223;
+if (v223 == 1)
+  {
+  reverse.loop(aDoe, f235);
+  }
+if (isset(f235))
+  {
+  reset(f235);
+  set.view(aDoe, vDoeTurnHead);
+  last.cel(aDoe, work);
+  set.cel.v(aDoe, work);
+  reverse.loop(aDoe, f236);
+  }
+  
+if (aSecondPassed)
+  {
+  --roomTimer;
+  if (roomTimer == 1)
+    {
+    new.room(rmMerryXmas);
+    }
+  }
+return();
+
+[ Messages

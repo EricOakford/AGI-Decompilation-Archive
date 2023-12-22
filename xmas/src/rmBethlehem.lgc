@@ -1,0 +1,94 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+
+#define aBethlehem  o1
+#define aStarLight  o2
+#define aFire       o3 
+
+#define firstShine  f221
+#define fadeShineOut f222
+#define fadeShineIn    f223
+#define musicDone   f224
+
+#define roomTimer  v220
+#define roomSeconds v221
+
+if (newRoom)
+  {
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.sound(Sound5);
+  load.view(vStarLight);
+  load.view(vBethlehem);
+  load.view(vStarLight2);
+  load.view(vFire);
+  animate.obj(aBethlehem);
+  animate.obj(aStarLight);
+  animate.obj(aFire);
+  ignore.horizon(aStarLight);
+  position(aBethlehem, 42, 98);
+  position(aStarLight, 62, 58);
+  position(aFire, 52, 157);
+  set.view(aBethlehem, vBethlehem);
+  set.view(aFire, vFire);
+  set.view(aStarLight, vStarLight);
+  set.cel(aBethlehem, 0);
+  set.cel(aStarLight, 0);
+  draw(aBethlehem);
+  draw(aFire);
+  draw(aStarLight);
+  stop.cycling(aBethlehem);
+  stop.cycling(aStarLight);
+  show.pic();
+  v33 = 5;
+  work = 8;
+  cycle.time(aStarLight, work);
+  work = 16;
+  cycle.time(aBethlehem, work);
+  sound(Sound5, musicDone);
+  roomTimer = 38;
+  }
+if (elapsedSeconds != roomSeconds)
+  {
+  roomSeconds = elapsedSeconds;
+  --v33;
+  if (v33 == 1)
+    {
+    start.cycling(aStarLight);
+    start.cycling(aBethlehem);
+    end.of.loop(aBethlehem, fSoundDone);
+    end.of.loop(aStarLight, firstShine);
+    }
+  }
+if (firstShine)
+  {
+  reset(firstShine);
+  set.view(aStarLight, vStarLight2);
+  set(fadeShineOut);
+  work = 4;
+  cycle.time(aStarLight, work);
+  }
+if (fadeShineOut)
+  {
+  reset(fadeShineOut);
+  end.of.loop(aStarLight, fadeShineIn);
+  }
+if (fadeShineIn)
+  {
+  reset(fadeShineIn);
+  reverse.loop(aStarLight, fadeShineOut);
+  }
+  
+if (aSecondPassed)
+  {
+  --roomTimer;
+  if (roomTimer == 1)
+    {
+    new.room(rmFrosty);
+    }
+  }
+return();
+
+[ Messages

@@ -1,0 +1,233 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define row v221
+#define col v222
+#define msg v223
+#define numChars v224
+
+if (newRoom)
+  {
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.sound(sButton);
+  show.pic();
+  msg = 1;
+  col = 1;
+  row = 1;
+Label1:
+  if (msg < 23)
+    {
+    display.v(row, col, msg);
+    ++row;
+    ++msg;
+    goto(Label1);
+    }
+  lastChar = 0;
+  }
+if (lastChar == 13 && 
+    !isset(f221))
+  {
+  set(f221);
+  clear.lines(0, 24, BLACK);
+  v224 = 100;
+  msg = 30;
+  col = 1;
+  row = 1;
+Label2:
+  if (msg < 38)
+    {
+    display.v(row, col, msg);
+    ++row;
+    ++msg;
+    goto(Label2);
+    }
+  else
+    {
+    display(24, 1, "       (up to 38 characters)        ");
+    }
+  }
+if (!isset(f221))
+  {
+  goto(Label3);
+  }
+lastChar = 0;
+set.scan.start();
+if (lastChar != 0)
+  {
+  work = 0;
+  if (lastChar == 13)
+    {
+    if ((isset(f222) || 
+        v224 == 100))
+      {
+      *v224 = 0;
+      if (v224 == 100)
+        {
+        set(f34);
+        }
+      reset.scan.start();
+      clear.lines(0, 24, BLACK);
+      prevent.input();
+      if (isset(f34))
+        {
+        new.room(rmChestnuts);
+        }
+      else
+        {
+        new.room(rmMerryXmas);
+        }
+      }
+    else
+      {
+      clear.lines(23, 23, BLACK);
+      set(f222);
+      msg = 38;
+      --row;
+      display.v(row, col, msg);
+      ++msg;
+      ++row;
+      display.v(row, col, msg);
+      sound(sButton, fSoundDone);
+      work = 77;
+      }
+    }
+  if (!isset(f222) && 
+      v224 > 137)
+    {
+    lastChar = 0;
+    display(23, 0, "Message full. Please press return");
+    sound(sButton, fSoundDone);
+    }
+  if (isset(f222) && 
+      v224 > 174)
+    {
+    lastChar = 0;
+    display(23, 0, "Message full. Please press return");
+    sound(sButton, fSoundDone);
+    }
+  if (lastChar == 32)
+    {
+    work = 77;
+    }
+  if (lastChar == 33)
+    {
+    work = 94;
+    }
+  if (lastChar == 34)
+    {
+    work = 97;
+    }
+  if (lastChar == 36)
+    {
+    work = 93;
+    }
+  if (lastChar == 37)
+    {
+    work = 95;
+    }
+  if (lastChar == 39)
+    {
+    work = 76;
+    }
+  if (lastChar == 40)
+    {
+    work = 48;
+    }
+  if (lastChar == 41)
+    {
+    work = 49;
+    }
+  if (lastChar == 44)
+    {
+    work = 79;
+    }
+  if (lastChar == 46)
+    {
+    work = 78;
+    }
+  if (lastChar > 47 && 
+      lastChar < 58)
+    {
+    work = lastChar;
+    work  += 35;
+    }
+  if (lastChar == 58)
+    {
+    work = 98;
+    }
+  if (lastChar == 59)
+    {
+    work = 99;
+    }
+  if (lastChar == 63)
+    {
+    work = 96;
+    }
+  if (lastChar > 64 && 
+      lastChar < 91)
+    {
+    work = lastChar;
+    work -= 15;
+    }
+  if (lastChar > 96 && 
+      lastChar < 123)
+    {
+    work = lastChar;
+    work -= 47;
+    }
+  if (lastChar == 8)
+    {
+    if (v224 > 100)
+      {
+      --v224;
+      }
+    }
+  if (work != 0)
+    {
+    *v224 = work;
+    ++v224;
+    }
+  lastChar = 0;
+  work = 0;
+  }
+Label3:
+return();
+return();
+
+[ Messages
+#message 1 "            Merry Christmas"
+#message 2 "                 from"
+#message 3 "          Sierra On-Line Inc."
+#message 4 " "
+#message 5 "        \"A COMPUTER CHRISTMAS\""
+#message 6 " "
+#message 7 "Sierra is pleased to present this"
+#message 8 "living Christmas card. It is intended"
+#message 9 "to help you demonstrate the color and"
+#message 10 "sound capabilities possible with"
+#message 11 "today's  personal computers while"
+#message 12 "promoting the Christmas spirit "
+#message 13 "within your store."
+#message 14 " "
+#message 15 "As an added bonus, you may customize"
+#message 16 "this program each time you run it"
+#message 17 "with a message of your own. This allows"
+#message 18 "you to advertise your sale items, or to"
+#message 19 "wish your customers a Merry Christmas"
+#message 20 "in your own words."
+#message 21 " "
+#message 22 "        press RETURN"
+#message 30 "This program is hard disk installable"
+#message 31 "and is meant to be run in the morning"
+#message 32 "and left running all day."
+#message 33 " "
+#message 34 "If you wish to enter your own message,"
+#message 35 "just type it below."
+#message 36 ""
+#message 37 "Enter message (or press RETURN):    "
+#message 38 "Enter second line of message        "
+#message 39 "           (or press RETURN):       "
+#message 40 "       (up to 38 characters)        "
+#message 41 "Message full. Please press return"

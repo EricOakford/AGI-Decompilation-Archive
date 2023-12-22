@@ -1,0 +1,574 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aSleigh o1
+#define aReindeer1  o2
+#define aReindeer2  o3
+#define aReindeer3  o4
+#define aSanta o5
+
+#define sleighState v220
+#define roomTimer v225
+
+#define sleighMoved f222
+
+if (newRoom)
+  {
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.view(vReindeer);
+  load.view(vRudolph);
+  load.view(vSantaChimney);
+  load.view(vSantaSleigh);
+  load.view(View16);
+  load.view(View17);
+  load.view(View18);
+  load.view(View19);
+  load.view(vSleighShadow);
+  load.view(View30);
+  load.view(View31);
+  load.view(View29);
+  load.view(vChimney);
+  load.view(vEmptySleigh);
+  load.sound(mRudolph);
+  load.sound(sEgoFalling);
+  animate.obj(aSleigh);
+  animate.obj(aReindeer1);
+  animate.obj(aReindeer2);
+  animate.obj(aReindeer3);
+  animate.obj(aSanta);
+  ignore.objs(aSleigh);
+  ignore.objs(aReindeer1);
+  ignore.objs(aReindeer2);
+  ignore.objs(aReindeer3);
+  ignore.objs(aSanta);
+  ignore.horizon(aSleigh);
+  set.view(aSleigh, View19);
+  set.cel(aSleigh, 0);
+  position(aSleigh, 0, 34);
+  draw(aSleigh);
+  work = 1;
+  cycle.time(aSleigh, work);
+  move.obj(aSleigh, 9, 34, 0, sleighMoved);
+  sleighState = 0;
+  stop.cycling(aSleigh);
+  add.to.pic(vChimney, 0, 0, 113, 141, 15, 15);
+  show.pic();
+  work = 2;
+  animationInterval = work;
+  set(f227);
+  }
+if (sleighMoved)
+  {
+  reset(sleighMoved);
+  if (sleighState == 20)
+    {
+    stop.update(aSleigh);
+    }
+  if (sleighState == 18)
+    {
+    set.view(aSleigh, View29);
+    end.of.loop(aSleigh, sleighMoved);
+    sleighState = 20;
+    }
+  if (sleighState == 17)
+    {
+    set.view(aSleigh, View29);
+    start.cycling(aSleigh);
+    sleighState = 18;
+    move.obj(aSleigh, 86, 138, 0, sleighMoved);
+    set.view(aReindeer1, View16);
+    set.loop(aReindeer1, 0);
+    set.cel(aReindeer1, 0);
+    position(aReindeer1, 0, 138);
+    move.obj(aReindeer1, 9, 138, 0, f223);
+    stop.cycling(aReindeer1);
+    v221 = 7;
+    draw(aReindeer1);
+    }
+  if (sleighState == 16)
+    {
+    set.cel(aSleigh, 2);
+    sleighState = 17;
+    move.obj(aSleigh, 9, 138, 0, sleighMoved);
+    }
+  if (sleighState == 15)
+    {
+    set.cel(aSleigh, 1);
+    sleighState = 16;
+    reposition.to(aSleigh, 0, 138);
+    move.obj(aSleigh, 9, 138, 0, sleighMoved);
+    }
+  if (sleighState == 14)
+    {
+    set.view(aSleigh, View17);
+    set.cel(aSleigh, 0);
+    set.loop(aSleigh, 0);
+    sleighState = 15;
+    reposition.to(aSleigh, 0, 138);
+    draw(aSleigh);
+    move.obj(aSleigh, 9, 138, 0, sleighMoved);
+    stop.cycling(aSleigh);
+    }
+  if (sleighState == 19)
+    {
+    erase(aSleigh);
+    }
+  if (sleighState == 13)
+    {
+    set.cel(aSleigh, 5);
+    reposition.to(aSleigh, 9, 85);
+    move.obj(aSleigh, 0, 85, 0, sleighMoved);
+    sleighState = 19;
+    }
+  if (sleighState == 12)
+    {
+    set.cel(aSleigh, 4);
+    reposition.to(aSleigh, 9, 85);
+    move.obj(aSleigh, 0, 85, 0, sleighMoved);
+    sleighState = 13;
+    }
+  if (sleighState == 11)
+    {
+    set.view(aSleigh, View17);
+    stop.cycling(aSleigh);
+    set.cel(aSleigh, 3);
+    reposition.to(aSleigh, 9, 85);
+    move.obj(aSleigh, 0, 85, 0, sleighMoved);
+    sleighState = 12;
+    }
+  if (sleighState == 10)
+    {
+    set.view(aSleigh, vRudolph);
+    start.cycling(aSleigh);
+    sleighState = 11;
+    move.obj(aSleigh, 0, 85, 0, sleighMoved);
+    set.view(aReindeer1, View16);
+    set.loop(aReindeer1, 1);
+    set.cel(aReindeer1, 0);
+    position(aReindeer1, 148, 85);
+    move.obj(aReindeer1, 142, 85, 0, f223);
+    stop.cycling(aReindeer1);
+    v221 = 0;
+    draw(aReindeer1);
+    }
+  if (sleighState == 9)
+    {
+    set.cel(aSleigh, 2);
+    sleighState = 10;
+    move.obj(aSleigh, 124, 85, 0, sleighMoved);
+    }
+  if (sleighState == 8)
+    {
+    set.cel(aSleigh, 1);
+    sleighState = 9;
+    move.obj(aSleigh, 133, 85, 0, sleighMoved);
+    }
+  if (sleighState == 7)
+    {
+    set.view(aSleigh, View17);
+    set.cel(aSleigh, 0);
+    set.loop(aSleigh, 1);
+    sleighState = 8;
+    reposition.to(aSleigh, 148, 85);
+    move.obj(aSleigh, 142, 85, 0, sleighMoved);
+    stop.cycling(aSleigh);
+    }
+  if (sleighState == 6)
+    {
+    sleighState = 7;
+    v33 = 20;
+    work = 2;
+    step.size(aSleigh, work);
+    step.size(aReindeer1, work);
+    step.size(aReindeer2, work);
+    step.size(aReindeer3, work);
+    work = 1;
+    animationInterval = work;
+    }
+  if (sleighState == 5)
+    {
+    set.cel(aSleigh, 5);
+    sleighState = 6;
+    move.obj(aSleigh, 150, 34, 0, sleighMoved);
+    }
+  if (sleighState == 4)
+    {
+    set.cel(aSleigh, 4);
+    sleighState = 5;
+    move.obj(aSleigh, 141, 34, 0, sleighMoved);
+    }
+  if (sleighState == 3)
+    {
+    set.view(aSleigh, View19);
+    set.cel(aSleigh, 3);
+    sleighState = 4;
+    move.obj(aSleigh, 132, 34, 0, sleighMoved);
+    stop.cycling(aSleigh);
+    }
+  if (sleighState == 2)
+    {
+    set.view(aSleigh, vSleighShadow);
+    sleighState = 3;
+    reposition.to(aSleigh, 0, 34);
+    move.obj(aSleigh, 121, 34, 0, sleighMoved);
+    start.cycling(aSleigh);
+    }
+  if (sleighState == 1)
+    {
+    set.cel(aSleigh, 2);
+    sleighState = 2;
+    reposition.to(aSleigh, 1, 34);
+    move.obj(aSleigh, 10, 34, 0, sleighMoved);
+    }
+  if (sleighState == 0)
+    {
+    set.cel(aSleigh, 1);
+    sleighState = 1;
+    reposition.to(aSleigh, 2, 34);
+    move.obj(aSleigh, 9, 34, 0, sleighMoved);
+    }
+  }
+if (isset(f223))
+  {
+  reset(f223);
+  if (v221 == 19)
+    {
+    stop.update(aReindeer1);
+    }
+  if (v221 == 18)
+    {
+    set.view(aReindeer1, View31);
+    end.of.loop(aReindeer1, f223);
+    v221 = 19;
+    }
+  if (v221 == 17)
+    {
+    set.view(aReindeer1, View31);
+    start.cycling(aReindeer1);
+    v221 = 18;
+    move.obj(aReindeer1, 61, 138, 0, f223);
+    set.view(aReindeer2, View16);
+    set.loop(aReindeer2, 0);
+    set.cel(aReindeer2, 0);
+    position(aReindeer2, 0, 138);
+    move.obj(aReindeer2, 9, 138, 0, f224);
+    stop.cycling(aReindeer2);
+    v222 = 7;
+    draw(aReindeer2);
+    }
+  if (v221 == 16)
+    {
+    set.cel(aReindeer1, 2);
+    v221 = 17;
+    move.obj(aReindeer1, 9, 138, 0, f223);
+    }
+  if (v221 == 7)
+    {
+    set.cel(aReindeer1, 1);
+    v221 = 16;
+    reposition.to(aReindeer1, 0, 138);
+    move.obj(aReindeer1, 9, 138, 0, f223);
+    }
+  if (v221 == 5)
+    {
+    erase(aReindeer1);
+    }
+  if (v221 == 4)
+    {
+    set.cel(aReindeer1, 4);
+    reposition.to(aReindeer1, 9, 85);
+    move.obj(aReindeer1, 0, 85, 0, f223);
+    v221 = 5;
+    }
+  if (v221 == 3)
+    {
+    set.view(aReindeer1, View16);
+    stop.cycling(aReindeer1);
+    set.cel(aReindeer1, 3);
+    reposition.to(aReindeer1, 9, 85);
+    move.obj(aReindeer1, 0, 85, 0, f223);
+    v221 = 4;
+    }
+  if (v221 == 2)
+    {
+    set.view(aReindeer1, vReindeer);
+    start.cycling(aReindeer1);
+    v221 = 3;
+    move.obj(aReindeer1, 0, 85, 0, f223);
+    set.view(aReindeer2, View16);
+    set.loop(aReindeer2, 1);
+    set.cel(aReindeer2, 0);
+    position(aReindeer2, 148, 85);
+    move.obj(aReindeer2, 142, 85, 0, f224);
+    stop.cycling(aReindeer2);
+    v222 = 0;
+    draw(aReindeer2);
+    }
+  if (v221 == 1)
+    {
+    set.cel(aReindeer1, 2);
+    v221 = 2;
+    move.obj(aReindeer1, 124, 85, 0, f223);
+    }
+  if (v221 == 0)
+    {
+    set.cel(aReindeer1, 1);
+    v221 = 1;
+    move.obj(aReindeer1, 133, 85, 0, f223);
+    }
+  }
+if (isset(f224))
+  {
+  reset(f224);
+  if (v222 == 19)
+    {
+    stop.update(aReindeer2);
+    }
+  if (v222 == 18)
+    {
+    set.view(aReindeer2, View31);
+    end.of.loop(aReindeer2, f224);
+    v222 = 19;
+    }
+  if (v222 == 17)
+    {
+    set.view(aReindeer2, View31);
+    start.cycling(aReindeer2);
+    v222 = 18;
+    move.obj(aReindeer2, 35, 138, 0, f224);
+    set.view(aReindeer3, View18);
+    set.loop(aReindeer3, 0);
+    set.cel(aReindeer3, 0);
+    position(aReindeer3, 0, 138);
+    move.obj(aReindeer3, 9, 138, 0, f225);
+    stop.cycling(aReindeer3);
+    v223 = 7;
+    draw(aReindeer3);
+    }
+  if (v222 == 16)
+    {
+    set.cel(aReindeer2, 2);
+    v222 = 17;
+    move.obj(aReindeer2, 9, 138, 0, f224);
+    }
+  if (v222 == 7)
+    {
+    set.cel(aReindeer2, 1);
+    v222 = 16;
+    reposition.to(aReindeer2, 0, 138);
+    move.obj(aReindeer2, 9, 138, 0, f224);
+    }
+  if (v222 == 5)
+    {
+    erase(aReindeer2);
+    }
+  if (v222 == 4)
+    {
+    set.cel(aReindeer2, 4);
+    reposition.to(aReindeer2, 9, 85);
+    move.obj(aReindeer2, 0, 85, 0, f224);
+    v222 = 5;
+    }
+  if (v222 == 3)
+    {
+    set.view(aReindeer2, View16);
+    stop.cycling(aReindeer2);
+    set.cel(aReindeer2, 3);
+    reposition.to(aReindeer2, 9, 85);
+    move.obj(aReindeer2, 0, 85, 0, f224);
+    v222 = 4;
+    }
+  if (v222 == 2)
+    {
+    set.view(aReindeer2, vReindeer);
+    start.cycling(aReindeer2);
+    v222 = 3;
+    move.obj(aReindeer2, 0, 85, 0, f224);
+    set.view(aReindeer3, View18);
+    set.loop(aReindeer3, 1);
+    set.cel(aReindeer3, 0);
+    position(aReindeer3, 148, 85);
+    move.obj(aReindeer3, 142, 85, 0, f225);
+    stop.cycling(aReindeer3);
+    v223 = 0;
+    draw(aReindeer3);
+    }
+  if (v222 == 1)
+    {
+    set.cel(aReindeer2, 2);
+    v222 = 2;
+    move.obj(aReindeer2, 124, 85, 0, f224);
+    }
+  if (v222 == 0)
+    {
+    set.cel(aReindeer2, 1);
+    v222 = 1;
+    move.obj(aReindeer2, 133, 85, 0, f224);
+    }
+  }
+if (isset(f225))
+  {
+  reset(f225);
+  if (v223 == 11)
+    {
+    stop.update(aReindeer3);
+    sound(sEgoFalling, fSoundDone);
+    position(aSanta, 24, 123);
+    set.view(aSanta, vSantaChimney);
+    set.cel(aSanta, 0);
+    stop.cycling(aSanta);
+    draw(aSanta);
+    move.obj(aSanta, 39, 108, 2, f226);
+    v224 = 0;
+    }
+  if (v223 == 10)
+    {
+    set.view(aReindeer3, View30);
+    end.of.loop(aReindeer3, f225);
+    v223 = 11;
+    }
+  if (v223 == 9)
+    {
+    set.view(aReindeer3, vSantaSleigh);
+    start.cycling(aReindeer3);
+    v223 = 10;
+    move.obj(aReindeer3, 15, 138, 0, f225);
+    }
+  if (v223 == 8)
+    {
+    set.cel(aReindeer3, 2);
+    v223 = 9;
+    move.obj(aReindeer3, 9, 138, 0, f225);
+    }
+  if (v223 == 7)
+    {
+    set.cel(aReindeer3, 1);
+    v223 = 8;
+    reposition.to(aReindeer3, 0, 138);
+    move.obj(aReindeer3, 9, 138, 0, f225);
+    }
+  if (v223 == 6)
+    {
+    v223 = 7;
+    v33 = 20;
+    }
+  if (v223 == 5)
+    {
+    set.cel(aReindeer3, 5);
+    reposition.to(aReindeer3, 9, 85);
+    move.obj(aReindeer3, 0, 85, 0, f225);
+    v223 = 6;
+    }
+  if (v223 == 4)
+    {
+    set.cel(aReindeer3, 4);
+    reposition.to(aReindeer3, 9, 85);
+    move.obj(aReindeer3, 0, 85, 0, f225);
+    v223 = 5;
+    }
+  if (v223 == 3)
+    {
+    set.view(aReindeer3, View18);
+    stop.cycling(aReindeer3);
+    set.cel(aReindeer3, 3);
+    reposition.to(aReindeer3, 9, 85);
+    move.obj(aReindeer3, 0, 85, 0, f225);
+    v223 = 4;
+    }
+  if (v223 == 2)
+    {
+    set.view(aReindeer3, vSantaSleigh);
+    start.cycling(aReindeer3);
+    v223 = 3;
+    move.obj(aReindeer3, 0, 85, 0, f225);
+    }
+  if (v223 == 1)
+    {
+    set.cel(aReindeer3, 2);
+    v223 = 2;
+    move.obj(aReindeer3, 124, 85, 0, f225);
+    }
+  if (v223 == 0)
+    {
+    set.cel(aReindeer3, 1);
+    v223 = 1;
+    move.obj(aReindeer3, 133, 85, 0, f225);
+    }
+  }
+if (isset(f226))
+  {
+  reset(f226);
+  if (v224 == 5)
+    {
+    new.room(rmSilentNight);
+    }
+  if (v224 == 4)
+    {
+    v224 = 5;
+    move.obj(aSanta, 114, 142, 2, f226);
+    }
+  if (v224 == 3)
+    {
+    v224 = 4;
+    move.obj(aSanta, 114, 100, 2, f226);
+    set.cel(aSanta, 5);
+    }
+  if (v224 == 2)
+    {
+    v224 = 3;
+    move.obj(aSanta, 103, 91, 2, f226);
+    set.cel(aSanta, 4);
+    }
+  if (v224 == 1)
+    {
+    v224 = 2;
+    move.obj(aSanta, 83, 84, 2, f226);
+    set.cel(aSanta, 3);
+    }
+  if (v224 == 1)
+    {
+    v224 = 2;
+    move.obj(aSanta, 63, 87, 2, f226);
+    set.cel(aSanta, 2);
+    }
+  if (v224 == 0)
+    {
+    v224 = 1;
+    move.obj(aSanta, 43, 108, 2, f226);
+    set.cel(aSanta, 1);
+    set.view(aReindeer3, vEmptySleigh);
+    force.update(aReindeer3);
+    }
+  }
+if (sleighState == 7)
+  {
+  --v33;
+  if (v33 == 1)
+    {
+    set(sleighMoved);
+    }
+  }
+if (v223 == 7)
+  {
+  --v33;
+  if (v33 == 1)
+    {
+    set(sleighMoved);
+    sleighState = 14;
+    }
+  }
+if (isset(f227))
+  {
+  reset(f227);
+  v225 = 10;
+  }
+--roomTimer;
+if (roomTimer == 1)
+  {
+  sound(mRudolph, fSoundDone);
+  }
+return();
+
+[ Messages

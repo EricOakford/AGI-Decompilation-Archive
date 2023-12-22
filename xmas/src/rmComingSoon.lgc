@@ -1,0 +1,262 @@
+if (newRoom)
+  {
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  set.horizon(10);
+  load.view(View101);
+  load.view(View104);
+  load.view(View103);
+  load.view(View105);
+  load.view(View102);
+  animate.obj(o1);
+  animate.obj(o7);
+  set.priority(o1, 12);
+  set.priority(o7, 12);
+  if (v56 == 1)
+    {
+    load.view(vTandy);
+    set.view(o1, vTandy);
+    position(o1, 40, 94);
+    }
+  else
+    {
+    load.view(vMarquee);
+    animate.obj(o8);
+    set.priority(o8, 11);
+    set.view(o8, vMarquee);
+    position(o8, 39, 95);
+    }
+  if (v56 == 3)
+    {
+    load.view(vIngram);
+    set.view(o1, vIngram);
+    position(o1, 53, 77);
+    }
+  if (v56 == 2)
+    {
+    load.view(vCSS);
+    set.view(o1, vCSS);
+    position(o1, 62, 77);
+    }
+  if (v56 == 4)
+    {
+    load.view(vABCO);
+    set.view(o1, vABCO);
+    position(o1, 62, 77);
+    }
+  if (v56 == 5)
+    {
+    load.view(vBeamscope);
+    set.view(o1, vBeamscope);
+    position(o1, 43, 77);
+    }
+  if (v56 == 6)
+    {
+    load.view(vElectronic);
+    set.view(o1, vElectronic);
+    position(o1, 38, 68);
+    load.view(vBoutique);
+    set.view(o7, vBoutique);
+    position(o7, 45, 83);
+    }
+  if (v56 == 7)
+    {
+    load.view(vMicroD);
+    set.view(o1, vMicroD);
+    position(o1, 52, 77);
+    }
+  if (v56 == 8)
+    {
+    load.view(vSoftSel);
+    set.view(o1, vSoftSel);
+    position(o1, 50, 77);
+    }
+  if (v56 == 9)
+    {
+    load.view(vSoftKat);
+    set.view(o1, vSoftKat);
+    position(o1, 49, 77);
+    }
+  if (v56 == 10)
+    {
+    load.view(vApex);
+    set.view(o1, vApex);
+    position(o1, 62, 77);
+    }
+  if (v56 == 11)
+    {
+    load.view(vNavarre);
+    set.view(o1, vNavarre);
+    position(o1, 49, 77);
+    }
+  if (v56 == 12)
+    {
+    load.view(vBabbages);
+    set.view(o1, vBabbages);
+    position(o1, 46, 77);
+    }
+  if (v56 == 13)
+    {
+    load.view(vEgghead);
+    set.view(o1, vEgghead);
+    position(o1, 49, 77);
+    }
+  if (v56 == 14)
+    {
+    load.view(vLieberman);
+    set.view(o1, vLieberman);
+    position(o1, 42, 77);
+    }
+  if (v56 == 15)
+    {
+    load.view(vFirst);
+    set.view(o1, vFirst);
+    position(o1, 57, 68);
+    load.view(vSoftware);
+    set.view(o7, vSoftware);
+    position(o7, 45, 83);
+    }
+  if (v56 == 16)
+    {
+    load.view(vCompucentre);
+    set.view(o1, vCompucentre);
+    position(o1, 34, 77);
+    }
+  if (v56 == 17)
+    {
+    load.view(vSilicon);
+    set.view(o1, vSilicon);
+    position(o1, 49, 68);
+    load.view(vValley);
+    set.view(o7, vValley);
+    position(o7, 53, 83);
+    }
+  if (v56 == 18)
+    {
+    load.view(vSierra);
+    set.view(o1, vSierra);
+    position(o1, 53, 76);
+    }
+  load.sound(mKQ3Theme);
+  animate.obj(o2);
+  animate.obj(o3);
+  animate.obj(o4);
+  animate.obj(o6);
+  animate.obj(o5);
+  set.view(o2, View101);
+  set.view(o3, View104);
+  set.view(o4, View103);
+  set.view(o6, View105);
+  set.view(o5, View102);
+  set.cel(o1, 0);
+  set.cel(o2, 0);
+  set.cel(o3, 0);
+  set.cel(o4, 0);
+  set.cel(o6, 0);
+  set.cel(o5, 0);
+  position(o2, 106, 155);
+  position(o3, 116, 37);
+  position(o4, 61, 37);
+  position(o6, 11, 165);
+  set.priority(o6, 5);
+  position(o5, 13, 41);
+  draw(o1);
+  if ((v56 == 6 || 
+      v56 == 15 || 
+      v56 == 17))
+    {
+    draw(o7);
+    }
+  draw(o2);
+  draw(o3);
+  draw(o4);
+  draw(o6);
+  draw(o5);
+  if (v56 != 1)
+    {
+    draw(o8);
+    }
+  work = 6;
+  cycle.time(o2, work);
+  cycle.time(o3, work);
+  cycle.time(o4, work);
+  cycle.time(o6, work);
+  cycle.time(o5, work);
+  stop.update(o1);
+  stop.update(o2);
+  stop.update(o3);
+  stop.update(o4);
+  stop.update(o5);
+  stop.update(o6);
+  show.pic();
+  if (v56 == 1)
+    {
+    v33 = 5;
+    }
+  else
+    {
+    v33 = 140;
+    }
+  sound(mKQ3Theme, fSoundDone);
+  }
+--v33;
+if (v56 == 1)
+  {
+  if (!isset(f226) && 
+      v33 == 1)
+    {
+    start.update(o6);
+    end.of.loop(o6, f221);
+    }
+  if (isset(f221))
+    {
+    reset(f221);
+    stop.update(o6);
+    start.update(o5);
+    end.of.loop(o5, f222);
+    }
+  if (isset(f222))
+    {
+    reset(f222);
+    stop.update(o5);
+    start.update(o4);
+    end.of.loop(o4, f223);
+    }
+  if (isset(f223))
+    {
+    reset(f223);
+    stop.update(o4);
+    start.update(o3);
+    end.of.loop(o3, f224);
+    }
+  if (isset(f224))
+    {
+    reset(f224);
+    stop.update(o3);
+    start.update(o2);
+    end.of.loop(o2, f225);
+    }
+  if (isset(f225))
+    {
+    reset(f225);
+    stop.update(o2);
+    v33 = 10;
+    set(f226);
+    }
+  if (isset(f226) && 
+      v33 == 1)
+    {
+    new.room(rmChestnuts);
+    }
+  }
+else
+  {
+  if (v33 == 1)
+    {
+    new.room(rmChestnuts);
+    }
+  }
+return();
+
+[ Messages

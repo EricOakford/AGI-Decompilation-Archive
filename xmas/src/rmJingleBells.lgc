@@ -1,0 +1,301 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aSleigh o1
+#define aHorse  o2
+
+#define roomTimer v220
+
+#define musicDone f233
+
+if (newRoom)
+  {
+  animationInterval = 3;
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.view(vShiningStar);
+  load.view(vHorseSleigh);
+  load.view(vHorse);
+  load.view(vTrees);
+  load.sound(mJingleBells);
+  add.to.pic(vTrees, 0, 1, 0, 75, 4, 4);
+  add.to.pic(vTrees, 0, 0, 131, 75, 4, 4);
+  animate.obj(o3);
+  animate.obj(o4);
+  animate.obj(o5);
+  animate.obj(o6);
+  animate.obj(o7);
+  animate.obj(o8);
+  animate.obj(aHorse);
+  animate.obj(aSleigh);
+  ignore.horizon(o3);
+  ignore.horizon(o4);
+  ignore.horizon(o5);
+  ignore.horizon(o6);
+  ignore.horizon(o7);
+  ignore.horizon(o8);
+  ignore.objs(aHorse);
+  ignore.objs(aSleigh);
+  ignore.objs(o3);
+  ignore.objs(o4);
+  ignore.objs(o5);
+  ignore.objs(o6);
+  ignore.objs(o7);
+  ignore.objs(o8);
+  work = 1;
+  step.size(o3, work);
+  step.size(o4, work);
+  step.size(o5, work);
+  step.size(o6, work);
+  step.size(o7, work);
+  step.size(o8, work);
+  set.priority(o3, 15);
+  set.priority(o4, 15);
+  set.priority(o5, 15);
+  set.priority(o6, 15);
+  set.priority(o7, 15);
+  set.priority(o8, 15);
+  position(aHorse, 40, 132);
+  position(aSleigh, 10, 131);
+  work = 2;
+  step.time(aHorse, work);
+  step.time(aSleigh, work);
+  set.view(aHorse, vHorse);
+  set.view(aSleigh, vHorseSleigh);
+  set.view(o3, vShiningStar);
+  set.view(o4, vShiningStar);
+  set.view(o5, vShiningStar);
+  set.view(o6, vShiningStar);
+  set.view(o7, vShiningStar);
+  set.view(o8, vShiningStar);
+  draw(aHorse);
+  draw(aSleigh);
+  move.obj(aHorse, 129, 132, 0, f236);
+  move.obj(aSleigh, 99, 131, 0, f235);
+  show.pic();
+  random(2, 60, v221);
+  random(2, 60, v222);
+  random(2, 60, v223);
+  random(2, 60, v224);
+  random(2, 60, v225);
+  random(2, 60, v226);
+  set(f222);
+  set(f224);
+  set(f226);
+  set(f228);
+  set(f230);
+  set(f232);
+  sound(mJingleBells, musicDone);
+  roomTimer = 30;
+  }
+if (!isset(f222))
+  {
+  set(f222);
+  random(0, 155, work);
+  work2 = work;
+  work3 = 10;
+  position.v(o3, work2, work3);
+  set.cel(o3, 0);
+  draw(o3);
+  if (work2 > 46 && 
+      work2 < 110)
+    {
+    work3 = 150;
+    }
+  else
+    {
+    work3 = 100;
+    }
+  work = 1;
+  stop.cycling(o3);
+  move.obj.v(o3, work2, work3, work, f221);
+  }
+if (isset(f221))
+  {
+  reset(f221);
+  erase(o3);
+  reset(f222);
+  }
+if (!isset(f224))
+  {
+  set(f224);
+  random(0, 155, work);
+  work2 = work;
+  work3 = 10;
+  position.v(o4, work2, work3);
+  set.cel(o4, 1);
+  draw(o4);
+  if (work2 > 46 && 
+      work2 < 110)
+    {
+    work3 = 150;
+    }
+  else
+    {
+    work3 = 100;
+    }
+  work = 1;
+  stop.cycling(o4);
+  move.obj.v(o4, work2, work3, work, f223);
+  }
+if (isset(f223))
+  {
+  reset(f223);
+  erase(o4);
+  reset(f224);
+  }
+if (!isset(f226))
+  {
+  set(f226);
+  random(0, 155, work);
+  work2 = work;
+  work3 = 10;
+  position.v(o5, work2, work3);
+  set.cel(o5, 2);
+  draw(o5);
+  if (work2 > 46 && 
+      work2 < 110)
+    {
+    work3 = 150;
+    }
+  else
+    {
+    work3 = 100;
+    }
+  work = 1;
+  stop.cycling(o5);
+  move.obj.v(o5, work2, work3, work, f225);
+  }
+if (isset(f225))
+  {
+  reset(f225);
+  erase(o5);
+  reset(f226);
+  }
+if (!isset(f228))
+  {
+  set(f228);
+  random(0, 155, work);
+  work2 = work;
+  work3 = 10;
+  position.v(o6, work2, work3);
+  set.cel(o6, 3);
+  draw(o6);
+  if (work2 > 46 && 
+      work2 < 110)
+    {
+    work3 = 150;
+    }
+  else
+    {
+    work3 = 100;
+    }
+  work = 2;
+  stop.cycling(o6);
+  move.obj.v(o6, work2, work3, work, f227);
+  }
+if (isset(f227))
+  {
+  reset(f227);
+  erase(o6);
+  reset(f228);
+  }
+if (!isset(f230))
+  {
+  set(f230);
+  random(0, 155, work);
+  work2 = work;
+  work3 = 10;
+  position.v(o7, work2, work3);
+  set.cel(o7, 4);
+  draw(o7);
+  if (work2 > 46 && 
+      work2 < 110)
+    {
+    work3 = 150;
+    }
+  else
+    {
+    work3 = 100;
+    }
+  work = 2;
+  stop.cycling(o7);
+  move.obj.v(o7, work2, work3, work, f229);
+  }
+if (isset(f229))
+  {
+  reset(f229);
+  erase(o7);
+  reset(f230);
+  }
+if (!isset(f232))
+  {
+  set(f232);
+  random(0, 155, work);
+  work2 = work;
+  work3 = 10;
+  position.v(o8, work2, work3);
+  set.cel(o8, 5);
+  draw(o8);
+  if (work2 > 46 && 
+      work2 < 110)
+    {
+    work3 = 150;
+    }
+  else
+    {
+    work3 = 100;
+    }
+  work = 2;
+  stop.cycling(o8);
+  move.obj.v(o8, work2, work3, work, f231);
+  }
+if (isset(f231))
+  {
+  reset(f231);
+  erase(o8);
+  reset(f232);
+  }
+--v221;
+if (v221 == 1)
+  {
+  reset(f222);
+  }
+--v222;
+if (v222 == 1)
+  {
+  reset(f224);
+  }
+--v223;
+if (v223 == 1)
+  {
+  reset(f226);
+  }
+--v224;
+if (v224 == 1)
+  {
+  reset(f228);
+  }
+--v225;
+if (v225 == 1)
+  {
+  reset(f230);
+  }
+--v226;
+if (v226 == 1)
+  {
+  reset(f232);
+  }
+if (aSecondPassed)
+  {
+  --roomTimer;
+  if (roomTimer == 1)
+    {
+    animationInterval = 2;
+    new.room(rmBethlehem);
+    }
+  }
+return();
+
+[ Messages

@@ -1,0 +1,391 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aSpark1 o1
+#define aSpark2 o2
+#define aSpark3 o3
+#define aSpark4 o4
+
+#define spark1Timer v221
+#define spark2Timer v222
+#define spark3Timer v223
+#define spark4Timer v224
+#define nextRoomTimer v230
+
+#define spark1Done  f221
+#define spark2Done  f222
+#define spark3Done  f223
+#define spark4Done  f224
+#define musicDone   f229
+
+
+if (newRoom)
+  {
+  set.horizon(1);
+  load.sound(mWizard);
+  load.view(vKQ3Title);
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  add.to.pic(vKQ3Title, 0, 0, 59, 148, 4, 4);
+  add.to.pic(vKQ3Title, 0, 1, 75, 148, 4, 4);
+  add.to.pic(vKQ3Title, 0, 2, 87, 148, 4, 4);
+  spark1Timer = 2;
+  spark2Timer = 3;
+  spark3Timer = 4;
+  spark4Timer = 5;
+  animate.obj(aSpark1);
+  ignore.objs(aSpark1);
+  set.view(aSpark1, vKQ3Title);
+  set.loop(aSpark1, 2);
+  set.priority(aSpark1, 15);
+  animate.obj(aSpark2);
+  ignore.objs(aSpark2);
+  set.view(aSpark2, vKQ3Title);
+  set.loop(aSpark2, 2);
+  set.priority(aSpark2, 15);
+  animate.obj(aSpark3);
+  ignore.objs(aSpark3);
+  set.view(aSpark3, vKQ3Title);
+  set.loop(aSpark3, 2);
+  set.priority(aSpark3, 15);
+  animate.obj(aSpark4);
+  ignore.objs(aSpark4);
+  set.view(aSpark4, vKQ3Title);
+  set.loop(aSpark4, 2);
+  set.priority(aSpark4, 15);
+  show.pic();
+  display(23, 5, "(C) 1986  Sierra On-Line, Inc.");
+  sound(mWizard, musicDone);
+  nextRoomTimer = 126;
+  return();
+  }
+--spark1Timer;
+if (spark1Timer == 1)
+  {
+  random(1, 13, work);
+  if (work == 1)
+    {
+    work2 = 39;
+    work3 = 77;
+    }
+  if (work == 2)
+    {
+    work2 = 48;
+    work3 = 107;
+    }
+  if (work == 3)
+    {
+    work2 = 68;
+    work3 = 73;
+    }
+  if (work == 4)
+    {
+    work2 = 92;
+    work3 = 79;
+    }
+  if (work == 5)
+    {
+    work2 = 105;
+    work3 = 106;
+    }
+  if (work == 6)
+    {
+    work2 = 126;
+    work3 = 88;
+    }
+  if (work == 7)
+    {
+    work2 = 132;
+    work3 = 106;
+    }
+  if (work == 8)
+    {
+    work2 = 55;
+    work3 = 57;
+    }
+  if (work == 9)
+    {
+    work2 = 99;
+    work3 = 46;
+    }
+  if (work == 10)
+    {
+    work2 = 55;
+    work3 = 150;
+    }
+  if (work == 11)
+    {
+    work2 = 100;
+    work3 = 153;
+    }
+  if (work == 12)
+    {
+    work2 = 94;
+    work3 = 136;
+    }
+  if (work == 13)
+    {
+    work2 = 72;
+    work3 = 63;
+    }
+  position.v(aSpark1, work2, work3);
+  set.cel(aSpark1, 0);
+  draw(aSpark1);
+  end.of.loop(aSpark1, spark1Done);
+  }
+if (spark1Done)
+  {
+  reset(spark1Done);
+  erase(aSpark1);
+  random(4, 10, spark1Timer);
+  }
+--spark2Timer;
+if (spark2Timer == 1)
+  {
+  random(1, 13, work);
+  if (work == 1)
+    {
+    work2 = 39;
+    work3 = 77;
+    }
+  if (work == 2)
+    {
+    work2 = 48;
+    work3 = 107;
+    }
+  if (work == 3)
+    {
+    work2 = 68;
+    work3 = 73;
+    }
+  if (work == 4)
+    {
+    work2 = 92;
+    work3 = 79;
+    }
+  if (work == 5)
+    {
+    work2 = 105;
+    work3 = 106;
+    }
+  if (work == 6)
+    {
+    work2 = 126;
+    work3 = 88;
+    }
+  if (work == 7)
+    {
+    work2 = 132;
+    work3 = 106;
+    }
+  if (work == 8)
+    {
+    work2 = 55;
+    work3 = 57;
+    }
+  if (work == 9)
+    {
+    work2 = 99;
+    work3 = 46;
+    }
+  if (work == 10)
+    {
+    work2 = 55;
+    work3 = 150;
+    }
+  if (work == 11)
+    {
+    work2 = 100;
+    work3 = 153;
+    }
+  if (work == 12)
+    {
+    work2 = 94;
+    work3 = 136;
+    }
+  if (work == 13)
+    {
+    work2 = 72;
+    work3 = 63;
+    }
+  position.v(aSpark2, work2, work3);
+  draw(aSpark2);
+  set.cel(aSpark2, 0);
+  end.of.loop(aSpark2, spark2Done);
+  }
+if (spark2Done)
+  {
+  reset(spark2Done);
+  erase(aSpark2);
+  random(4, 10, spark2Timer);
+  }
+--spark3Timer;
+if (spark3Timer == 1)
+  {
+  random(1, 13, work);
+  if (work == 1)
+    {
+    work2 = 39;
+    work3 = 77;
+    }
+  if (work == 2)
+    {
+    work2 = 48;
+    work3 = 107;
+    }
+  if (work == 3)
+    {
+    work2 = 68;
+    work3 = 73;
+    }
+  if (work == 4)
+    {
+    work2 = 92;
+    work3 = 79;
+    }
+  if (work == 5)
+    {
+    work2 = 105;
+    work3 = 106;
+    }
+  if (work == 6)
+    {
+    work2 = 126;
+    work3 = 88;
+    }
+  if (work == 7)
+    {
+    work2 = 132;
+    work3 = 106;
+    }
+  if (work == 8)
+    {
+    work2 = 55;
+    work3 = 57;
+    }
+  if (work == 9)
+    {
+    work2 = 99;
+    work3 = 46;
+    }
+  if (work == 10)
+    {
+    work2 = 55;
+    work3 = 150;
+    }
+  if (work == 11)
+    {
+    work2 = 100;
+    work3 = 153;
+    }
+  if (work == 12)
+    {
+    work2 = 94;
+    work3 = 136;
+    }
+  if (work == 13)
+    {
+    work2 = 72;
+    work3 = 63;
+    }
+  position.v(aSpark3, work2, work3);
+  set.cel(aSpark3, 0);
+  draw(aSpark3);
+  end.of.loop(aSpark3, spark3Done);
+  }
+if (spark3Done)
+  {
+  reset(spark3Done);
+  erase(aSpark3);
+  random(4, 10, spark3Timer);
+  }
+--spark4Timer;
+if (spark4Timer == 1)
+  {
+  random(1, 13, work);
+  if (work == 1)
+    {
+    work2 = 39;
+    work3 = 77;
+    }
+  if (work == 2)
+    {
+    work2 = 48;
+    work3 = 107;
+    }
+  if (work == 3)
+    {
+    work2 = 68;
+    work3 = 73;
+    }
+  if (work == 4)
+    {
+    work2 = 92;
+    work3 = 79;
+    }
+  if (work == 5)
+    {
+    work2 = 105;
+    work3 = 106;
+    }
+  if (work == 6)
+    {
+    work2 = 126;
+    work3 = 88;
+    }
+  if (work == 7)
+    {
+    work2 = 132;
+    work3 = 106;
+    }
+  if (work == 8)
+    {
+    work2 = 55;
+    work3 = 57;
+    }
+  if (work == 9)
+    {
+    work2 = 99;
+    work3 = 46;
+    }
+  if (work == 10)
+    {
+    work2 = 55;
+    work3 = 150;
+    }
+  if (work == 11)
+    {
+    work2 = 100;
+    work3 = 153;
+    }
+  if (work == 12)
+    {
+    work2 = 94;
+    work3 = 136;
+    }
+  if (work == 13)
+    {
+    work2 = 72;
+    work3 = 63;
+    }
+  position.v(aSpark4, work2, work3);
+  set.cel(aSpark4, 0);
+  draw(aSpark4);
+  end.of.loop(aSpark4, spark4Done);
+  }
+if (spark4Done)
+  {
+  reset(spark4Done);
+  erase(aSpark4);
+  random(4, 10, spark4Timer);
+  }
+--nextRoomTimer;
+if (nextRoomTimer == 1)
+  {
+  clear.lines(22, 24, BLACK);
+  new.room(rmWizHouseExterior);
+  }
+return();
+
+[ Messages
+#message 2 "(C) 1986  Sierra On-Line, Inc."

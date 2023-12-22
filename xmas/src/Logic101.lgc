@@ -1,0 +1,253 @@
+if (isset(newRoom))
+  {
+  work = 48;
+Label1:
+  if (work < 100)
+    {
+    load.view.v(work);
+    ++work;
+    goto(Label1);
+    }
+  animate.obj(o3);
+  animate.obj(o4);
+  animate.obj(o5);
+  animate.obj(o6);
+  animate.obj(o7);
+  animate.obj(o8);
+  animate.obj(o9);
+  animate.obj(o10);
+  animate.obj(o11);
+  animate.obj(o12);
+  ignore.objs(o3);
+  ignore.objs(o4);
+  ignore.objs(o5);
+  ignore.objs(o6);
+  ignore.objs(o7);
+  ignore.objs(o8);
+  ignore.objs(o9);
+  ignore.objs(o10);
+  ignore.objs(o11);
+  ignore.objs(o12);
+  position(o3, 16, 50);
+  position(o4, 24, 50);
+  position(o5, 32, 50);
+  position(o6, 40, 50);
+  position(o7, 48, 50);
+  position(o8, 56, 50);
+  position(o9, 64, 50);
+  position(o10, 72, 50);
+  position(o11, 80, 50);
+  position(o12, 88, 50);
+  set.view(o3, vSpace);
+  set.view(o4, vSpace);
+  set.view(o5, vSpace);
+  set.view(o6, vSpace);
+  set.view(o7, vSpace);
+  set.view(o8, vSpace);
+  set.view(o9, vSpace);
+  set.view(o10, vSpace);
+  set.view(o11, vSpace);
+  set.view(o12, vSpace);
+  set.priority(o12, 4);
+  move.obj(o3, 8, 50, 1, f230);
+  move.obj(o4, 8, 50, 1, f231);
+  move.obj(o5, 8, 50, 1, f232);
+  move.obj(o6, 8, 50, 1, f233);
+  move.obj(o7, 8, 50, 1, f234);
+  move.obj(o8, 8, 50, 1, f235);
+  move.obj(o9, 8, 50, 1, f236);
+  move.obj(o10, 8, 50, 1, f237);
+  move.obj(o11, 8, 50, 1, f238);
+  move.obj(o12, 8, 50, 1, f239);
+  draw(o3);
+  draw(o4);
+  draw(o5);
+  draw(o6);
+  draw(o7);
+  draw(o8);
+  draw(o9);
+  draw(o10);
+  draw(o11);
+  draw(o12);
+  }
+if (isset(f32))
+  {
+  reset(f32);
+  v50 = 0;
+  }
+else
+  {
+  if (isset(f230))
+    {
+    reset(f230);
+    reposition.to(o3, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o3, v51);
+    if (v51 == 77)
+      {
+      set.priority(o3, 4);
+      }
+    else
+      {
+      set.priority(o3, 5);
+      }
+    move.obj(o3, 8, 50, 1, f230);
+    }
+  if (isset(f231))
+    {
+    reset(f231);
+    reposition.to(o4, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o4, v51);
+    if (v51 == 77)
+      {
+      set.priority(o4, 4);
+      }
+    else
+      {
+      set.priority(o4, 5);
+      }
+    move.obj(o4, 8, 50, 1, f231);
+    }
+  if (isset(f232))
+    {
+    reset(f232);
+    reposition.to(o5, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o5, v51);
+    if (v51 == 77)
+      {
+      set.priority(o5, 4);
+      }
+    else
+      {
+      set.priority(o5, 5);
+      }
+    move.obj(o5, 8, 50, 1, f232);
+    }
+  if (isset(f233))
+    {
+    reset(f233);
+    reposition.to(o6, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o6, v51);
+    if (v51 == 77)
+      {
+      set.priority(o6, 4);
+      }
+    else
+      {
+      set.priority(o6, 5);
+      }
+    move.obj(o6, 8, 50, 1, f233);
+    }
+  if (isset(f234))
+    {
+    reset(f234);
+    reposition.to(o7, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o7, v51);
+    if (v51 == 77)
+      {
+      set.priority(o7, 4);
+      }
+    else
+      {
+      set.priority(o7, 5);
+      }
+    move.obj(o7, 8, 50, 1, f234);
+    }
+  if (isset(f235))
+    {
+    reset(f235);
+    reposition.to(o8, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o8, v51);
+    if (v51 == 77)
+      {
+      set.priority(o8, 4);
+      }
+    else
+      {
+      set.priority(o8, 5);
+      }
+    move.obj(o8, 8, 50, 1, f235);
+    }
+  if (isset(f236))
+    {
+    reset(f236);
+    reposition.to(o9, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o9, v51);
+    if (v51 == 77)
+      {
+      set.priority(o9, 4);
+      }
+    else
+      {
+      set.priority(o9, 5);
+      }
+    move.obj(o9, 8, 50, 1, f236);
+    }
+  if (isset(f237))
+    {
+    reset(f237);
+    reposition.to(o10, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o10, v51);
+    if (v51 == 77)
+      {
+      set.priority(o10, 4);
+      }
+    else
+      {
+      set.priority(o10, 5);
+      }
+    move.obj(o10, 8, 50, 1, f237);
+    }
+  if (isset(f238))
+    {
+    reset(f238);
+    reposition.to(o11, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o11, v51);
+    if (v51 == 77)
+      {
+      set.priority(o11, 4);
+      }
+    else
+      {
+      set.priority(o11, 5);
+      }
+    move.obj(o11, 8, 50, 1, f238);
+    }
+  if (isset(f239))
+    {
+    reset(f239);
+    reposition.to(o12, 86, 50);
+    ++v50;
+    call(Logic100);
+    set.view.v(o12, v51);
+    if (v51 == 77)
+      {
+      set.priority(o12, 4);
+      }
+    else
+      {
+      set.priority(o12, 5);
+      }
+    move.obj(o12, 8, 50, 1, f239);
+    }
+  }
+return();
+
+[ Messages

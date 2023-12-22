@@ -1,0 +1,19 @@
+if (said("object", "room"))
+  {  get.num("Object number:", v46);  get.room.v(v46, v45);  print("Object %v46 is in room %v45.");  }if ((said("examine") ||     controller(c13)))
+  {  show.mem();  }if ((controller(c11) ||     said("examine", "priority")))
+  {  show.pri.screen();  }if (said("set", "priority"))
+  {  get.num("New priority:", v46);  set.priority.v(ego, v46);  }if (said("release", "priority"))
+  {  release.priority(ego);  }if (said("tp"))
+  {  get.num("New room:", v45);  new.room.v(v45);  }if (said("position"))
+  {  get.num("X coordinate:", v45);  get.num("Y coordinate:", v46);  erase(ego);  position.v(ego, v45, v46);  draw(ego);  }if ((said("examine", "position") ||     controller(c19) ||     said("where") ||     said("sp")))
+  {  v45 = 0;  obj.status.v(v45);  }if ((said("examine", "object") ||     said("object")))
+  {  get.num("Object number:", v45);  obj.status.v(v45);  }if (said("get", "object"))
+  {  get.num("Object number:", v45);  get.v(v45);  }if (said("examine", "banner"))
+  {  get.num("Flag number:", v45);  if (issetv(v45))
+    {    print("Flag %v45 set");    }  else
+    {    print("Flag %v45 not set");    }  }if (said("set", "banner"))
+  {  get.num("Flag number:", v45);  set.v(v45);  }if (said("reset", "banner"))
+  {  get.num("Flag number:", v45);  reset.v(v45);  }if (said("examine", "var"))
+  {  get.num("Variable number:", v45);  v46 = *v45;  print("Variable %v45 = %v46");  }if (said("set", "var"))
+  {  get.num("Variable number:", v45);  get.num("New value:", v46);  *v45 = v46;  }if (said("quit"))
+  {  quit(0);[ Messages#message 1 "New room:"#message 2 "X coordinate:"#message 3 "Y coordinate:"#message 4 "Object number:"#message 5 "Flag number:"#message 6 "New value:"#message 7 "Current room = %v0"#message 8 "Variable number:"#message 9 "Variable %v45 = %v46"#message 10 "Flag %v45 set"#message 11 "Flag %v45 not set"#message 12 "New priority:"#message 13 "Object %v46 is in room %v45."

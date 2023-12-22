@@ -1,0 +1,124 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+
+#define aFrosty o1
+#define aKid    o2
+
+#define kidMoved    f220
+#define musicDone  f222
+#define frostyMoved f224
+
+#define roomSeconds v221
+#define nextRoomTimer   v224
+
+if (newRoom)
+  {
+  animationInterval = 3;
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  load.sound(mFrosty);
+  load.view(vFrostyBuild);
+  load.view(vFrostyDance);
+  load.view(vKid);
+  load.view(vKidLook);
+  animate.obj(aFrosty);
+  animate.obj(aKid);
+  position(aFrosty, 62, 152);
+  position(aKid, 56, 155);
+  set.view(aFrosty, vFrostyBuild);
+  set.cel(aFrosty, 0);
+  set.view(aKid, vKid);
+  draw(aFrosty);
+  draw(aKid);
+  stop.cycling(aFrosty);
+  stop.cycling(aKid);
+  show.pic();
+  work = 8;
+  cycle.time(aKid, work);
+  v222 = 6;
+  set.cel(aFrosty, 0);
+  set.cel(aKid, 0);
+  v33 = 0;
+  sound(mFrosty, musicDone);
+  }
+if (elapsedSeconds != roomSeconds && 
+    !isset(f221))
+  {
+  roomSeconds = elapsedSeconds;
+  ++v223;
+  if (v223 == 2)
+    {
+    v223 = 0;
+    --v222;
+    if (v222 != 0)
+      {
+      end.of.loop(aKid, kidMoved);
+      set(f221);
+      }
+    }
+  }
+if (kidMoved)
+  {
+  reset(kidMoved);
+  reset(f221);
+  current.cel(aFrosty, work);
+  ++work;
+  set.cel.v(aFrosty, work);
+  if (v222 == 1)
+    {
+    v33 = 10;
+    }
+  else
+    {
+    set.cel(aKid, 0);
+    }
+  }
+--v33;
+if (v33 == 1)
+  {
+  set.view(aFrosty, vFrostyDance);
+  set.view(aKid, vKidLook);
+  work = 2;
+  step.size(aFrosty, work);
+  move.obj(aFrosty, 104, 110, 0, frostyMoved);
+  start.cycling(aFrosty);
+  start.cycling(aKid);
+  nextRoomTimer = 70;
+  }
+if (frostyMoved)
+  {
+  reset(frostyMoved);
+  wander(aFrosty);
+  }
+if (musicDone)
+  {
+  sound(mFrosty, musicDone);
+  }
+--nextRoomTimer;
+if (nextRoomTimer == 1)
+  {
+  if (v56 == 1)
+    {
+    animationInterval = 2;
+    new.room(rmSQTitle);
+    }
+  else
+    {
+    toggle(f37);
+    if (isset(f37))
+      {
+      animationInterval = 2;
+      new.room(rmSQTitle);
+      }
+    else
+      {
+      animationInterval = 2;
+      new.room(rmKQ3Title);
+      }
+    }
+  }
+return();
+
+[ Messages

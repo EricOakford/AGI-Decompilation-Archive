@@ -1,0 +1,187 @@
+[***********************************************************
+[
+[ lgcMain
+[
+[ Logic 0 is the main logic; it gets run at the beginning
+[ of every game cycle, and it is responsible for calling
+[ all other logics as needed during the game.
+[
+[***********************************************************
+
+[ **************************************
+[ ERROR CHECK
+[ **************************************
+
+[ if one of the few trappable errors in AGI is encountered,
+[ the game is probably not able to continue; make an
+[ announcement to the player and quit
+
+if (errorNumber)
+  {
+  call(lgcError);
+  }
+[ **************************************
+[ GAME START
+[ **************************************
+if (!currentRoom)
+  {
+  [ when the game starts, the current room is zero, so all
+  [ the setup/initialization code goes here
+  [
+  [ restarting a game also sets currentRoom to zero, and
+  [ also requires most of the same setup/initialization
+  [ steps
+  
+  [ when restarting, menus do not get reset so creating
+  [ menus is only done at very beginning, not on a restart
+  
+  v56 = 11;
+  trace.info(lgcTrace, 3, 10);
+  configure.screen(1, 22, 0);
+  status.line.off();
+  script.size(200);
+  accept.input();
+  set.key(0, 59, cHelp);
+  set.key(0, 60, cSoundToggle);
+  set.key(19, 0, cSoundToggle);
+  set.key(0, 61, c9);
+  set.key(5, 0, c9);
+  set.key(0, 62, c4);
+  set.key(0, 63, cSave);
+  set.key(0, 64, c6);
+  set.key(0, 65, cRestore);
+  set.key(0, 66, c8);
+  set.key(0, 67, cRestart);
+  set.key(0, 68, cShowMem);
+  set.key(9, 0, c10);
+  set.key(0, 32, c14);
+  set.key(10, 0, c15);
+  set.key(3, 0, c17);
+  set.key(27, 0, cPause);
+  set.key(18, 0, cToggleMonitor);
+  set.key(0, 44, cQuit);
+  set.key(43, 0, cCrescendo);
+  set.key(44, 0, cCrescendo);
+  set.key(45, 0, cDecrescendo);
+[ Although this game's interpreter (2.272) does not support menus,
+[ there is code for one here that is unused, and is only a placeholder.
+  set.menu("File");
+  set.menu.item("Save Game      <F5>", cSave);
+  set.menu.item("Restore Game   <F7>", cRestore);
+  set.menu("Game");
+  set.menu.item("Restart Game   <F9>", cRestart);
+  set.menu.item("Pause         <Esc>", cPause);
+  set.menu.item("Quit            ", cQuit);
+  set.menu("Sound");
+  set.menu.item("Toggle Sound   <F1>", cSoundToggle);
+  submit.menu();
+  set.game.id("XMAS");
+  if (machineType == PCJR)
+    {
+    set.key(49, 0, cHelp);
+    set.key(50, 0, cSoundToggle);
+    set.key(51, 0, c9);
+    set.key(52, 0, c4);
+    set.key(53, 0, cSave);
+    set.key(54, 0, c6);
+    set.key(55, 0, cRestore);
+    set.key(56, 0, c8);
+    set.key(57, 0, cRestart);
+    }
+  new.room(lgcStart);
+  }
+  
+if (newRoom)
+  {
+  work = 220;
+Label1:
+  *work = 0;
+  reset.v(work);
+  if (work < 254)
+    {
+    ++work;
+    goto(Label1);
+    }
+  work = NORMAL_SPEED;
+  animationInterval = work;
+  load.logics.v(currentRoom);
+  load.logics(lgcDebug);
+  secondsInRoom = 0;
+  }
+if (currentRoom != lgcStart)
+  {
+  if (controller(cHelp))
+    {
+    call(lgcHelp);
+    }
+  if (controller(cPause))
+    {
+    pause();
+    }
+  if ((controller(cQuit) || 
+      said("quit")))
+    {
+    stop.sound();
+    quit(0);
+    }
+  }
+if (controller(cCrescendo))
+  {
+  --attenuation;
+  }
+if (controller(cDecrescendo))
+  {
+  if (attenuation < 15)
+    {
+    ++attenuation;
+    }
+  }
+if (controller(cSoundToggle))
+  {
+  toggle(soundOn);
+  }
+if (controller(cToggleMonitor))
+  {
+  toggle.monitor();
+  }
+if (controller(cRestart))
+  {
+  restart.game();
+  }
+if (said("fast"))
+  {
+  work = FAST_SPEED;
+  animationInterval = work;
+  }
+if (said("normal"))
+  {
+  work = NORMAL_SPEED;
+  animationInterval = work;
+  }
+if (said("slow"))
+  {
+  work = SLOW_SPEED;
+  animationInterval = work;
+  }
+if (elapsedSeconds != oldSeconds)
+  {
+  oldSeconds = elapsedSeconds;
+  set(aSecondPassed);
+  ++secondsInRoom;
+  }
+call.v(currentRoom);
+reset(aSecondPassed);
+call(lgcDebug);
+return();
+
+[ Messages
+#message 12 "XMAS"
+#message 20 "File"
+#message 21 "Save Game      <F5>"
+#message 22 "Restore Game   <F7>"
+#message 25 "Game"
+#message 26 "Restart Game   <F9>"
+#message 27 "Pause         <Esc>"
+#message 28 "Quit            "
+#message 30 "Sound"
+#message 31 "Toggle Sound   <F1>"

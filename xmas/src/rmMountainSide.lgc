@@ -1,0 +1,71 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aWater1     o1
+#define aWater2     o2
+#define aWater3     o3
+#define aWater4     o4
+#define aEgo        o5
+
+#define egoMoved    f221
+
+if (newRoom)
+  {
+  load.view(vKQ3Ego);
+  set.horizon(52);
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  load.view(vWaterfall);
+  animate.obj(aWater1);
+  position(aWater1, 101, 61);
+  set.view(aWater1, vWaterfall);
+  set.loop(aWater1, 0);
+  ignore.blocks(aWater1);
+  ignore.objs(aWater1);
+  set.priority(aWater1, 15);
+  draw(aWater1);
+  animate.obj(aWater2);
+  position(aWater2, 103, 118);
+  set.view(aWater2, vWaterfall);
+  set.loop(aWater2, 0);
+  set.cel(aWater2, 1);
+  set.priority(aWater2, 15);
+  ignore.blocks(aWater2);
+  ignore.objs(aWater2);
+  draw(aWater2);
+  animate.obj(aWater3);
+  position(aWater3, 96, 126);
+  set.view(aWater3, vWaterfall);
+  set.loop(aWater3, 1);
+  set.priority(aWater3, 15);
+  ignore.blocks(aWater3);
+  ignore.objs(aWater3);
+  work = 2;
+  cycle.time(aWater3, work);
+  draw(aWater3);
+  animate.obj(aWater4);
+  position(aWater4, 130, 147);
+  set.view(aWater4, vWaterfall);
+  set.loop(aWater4, 2);
+  set.priority(aWater4, 15);
+  ignore.blocks(aWater4);
+  ignore.objs(aWater4);
+  draw(aWater4);
+  animate.obj(aEgo);
+  set.view(aEgo, vKQ3Ego);
+  set.loop(aEgo, 1);
+  position(aEgo, 128, 132);
+  draw(aEgo);
+  move.obj(aEgo, 8, 114, 0, egoMoved);
+  show.pic();
+  clear.lines(22, 24, WHITE);
+  display(22, 1, "Explore the countryside where Manannan\n reigns supreme.");
+  }
+if (egoMoved)
+  {
+  new.room(rmWizLab);
+  }
+return();
+
+[ Messages
+#message 1 "Explore the countryside where Manannan\n reigns supreme."

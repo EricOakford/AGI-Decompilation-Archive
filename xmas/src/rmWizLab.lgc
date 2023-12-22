@@ -1,0 +1,152 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aFlame1 o1
+#define aFlame2 o2
+#define aEgo    o3
+#define aWiz    o4
+#define aPoof   o5
+
+#define roomTimer       v223
+#define roomState       v224
+#define nextRoomTimer   v225
+
+#define wizMoved    f232
+#define poofDone    f233
+#define egoDisintegrated   f234
+#define soundDone   f235
+#define egoMoved    f236
+
+if (newRoom)
+  {
+  set.text.attribute(BLACK, WHITE);
+  load.view(vKQ3Ego);
+  load.view(vKQ3Fire);
+  load.view(vPoof);
+  load.view(vWizCast);
+  load.view(vEgoZapped);
+  load.view(vLabStuff);
+  load.sound(Sound23);
+  load.sound(Sound24);
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  add.to.pic(vLabStuff, 0, 0, 82, 141, 15, 4);
+  add.to.pic(vLabStuff, 0, 1, 123, 140, 15, 4);
+  add.to.pic(vLabStuff, 0, 2, 98, 133, 15, 4);
+  add.to.pic(vLabStuff, 0, 3, 100, 144, 15, 4);
+  animate.obj(aEgo);
+  set.view(aEgo, vKQ3Ego);
+  position(aEgo, 124, 118);
+  set.loop(aEgo, 0);
+  work = 3;
+  cycle.time(aEgo, work);
+  animate.obj(aPoof);
+  set.view(aPoof, vPoof);
+  position(aPoof, 55, 128);
+  set.cel(aPoof, 0);
+  animate.obj(aWiz);
+  set.view(aWiz, vWizCast);
+  position(aWiz, 54, 125);
+  set.loop(aWiz, 0);
+  animate.obj(aFlame1);
+  ignore.horizon(aFlame1);
+  ignore.blocks(aFlame1);
+  ignore.objs(aFlame1);
+  position(aFlame1, 49, 58);
+  set.view(aFlame1, vKQ3Fire);
+  draw(aFlame1);
+  animate.obj(aFlame2);
+  ignore.horizon(aFlame2);
+  ignore.blocks(aFlame2);
+  ignore.objs(aFlame2);
+  position(aFlame2, 115, 33);
+  set.view(aFlame2, vKQ3Fire);
+  draw(aFlame2);
+  draw(aEgo);
+  stop.cycling(aEgo);
+  show.pic();
+  roomTimer = 60;
+  roomState = 1;
+  work = 3;
+  cycle.time(aWiz, work);
+  work = 0;
+  clear.lines(22, 24, WHITE);
+  display(22, 1, "Discover the Wizards secret spells,\n and use his magic to "
+          "free yourself\n from his thrall.");
+  }
+if (isset(f231))
+  {
+  current.cel(aPoof, work);
+  if (work == 2)
+    {
+    reset(f231);
+    if (roomState == 1)
+      {
+      draw(aWiz);
+      stop.cycling(aWiz);
+      roomState = 2;
+      roomTimer = 36;
+      }
+    else
+      {
+      erase(aWiz);
+      }
+    }
+  }
+if (poofDone)
+  {
+  reset(poofDone);
+  erase(aPoof);
+  if (roomState == 3)
+    {
+    nextRoomTimer = 36;
+    }
+  }
+--roomTimer;
+if (roomTimer == 1)
+  {
+  if (roomState == 1)
+    {
+    set(f231);
+    draw(aPoof);
+    end.of.loop(aPoof, poofDone);
+    sound(Sound23, soundDone);
+    }
+  if (roomState == 2)
+    {
+    end.of.loop(aWiz, wizMoved);
+    }
+  if (roomState == 3)
+    {
+    set.cel(aPoof, 0);
+    draw(aPoof);
+    end.of.loop(aPoof, poofDone);
+    set(f231);
+    sound(Sound23, soundDone);
+    }
+  }
+if (wizMoved)
+  {
+  reset(wizMoved);
+  roomState = 3;
+  set.cel(aEgo, 0);
+  set.view(aEgo, vEgoZapped);
+  end.of.loop(aEgo, egoDisintegrated);
+  sound(Sound24, soundDone);
+  }
+if (egoDisintegrated)
+  {
+  reset(egoDisintegrated);
+  set.cel(aWiz, 0);
+  roomTimer = 36;
+  }
+  
+--nextRoomTimer;
+if (nextRoomTimer == 1)
+  {
+  new.room(rmDaventryBeach);
+  }
+return();
+
+[ Messages
+#message 1 "Discover the Wizards secret spells,\n and use his magic to free yourself\n from his thrall."

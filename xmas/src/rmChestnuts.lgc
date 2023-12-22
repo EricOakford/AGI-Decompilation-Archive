@@ -1,0 +1,279 @@
+[ **************************************
+[ LOCAL DEFINES
+[ **************************************
+#define aPendulum       o1
+#define aCandle1        o2
+#define aCandle2        o3
+#define aXmasLights1    o4
+#define aXmasLights2    o5
+#define aXmasLights3    o6
+#define aXmasLights4    o7
+#define aXmasLights5    o8
+#define aXmasLights6    o9
+#define aXmasLights7    o10
+#define aFire           o11
+#define aChestnuts      o12
+
+#define light1Done     f220
+#define light2Done     f221
+#define light3Done     f222
+#define light4Done     f223
+#define light5Done     f224
+#define light6Done     f225
+#define light7Done     f226
+#define chestnutsDone  f227
+#define musicDone      f230
+
+#define roomTimer      v220
+
+if (newRoom)
+  {
+  
+  [ load the picture
+  load.pic(currentRoom);
+  draw.pic(currentRoom);
+  discard.pic(currentRoom);
+  
+  [ load the music
+  load.sound(mChestnuts);
+  
+  [ load the views
+  load.view(vClock);
+  load.view(vPendulum);
+  load.view(vCandleLight);
+  load.view(vYuleLog);
+  load.view(vFire);
+  load.view(vStockings);
+  load.view(vOrnaments);
+  load.view(vXmasLights);
+  load.view(vChestnuts);
+  
+  [ animate the objects
+  animate.obj(aCandle2);
+  animate.obj(aCandle1);
+  animate.obj(aPendulum);
+  animate.obj(aFire);
+  animate.obj(aXmasLights1);
+  animate.obj(aXmasLights2);
+  animate.obj(aXmasLights3);
+  animate.obj(aXmasLights4);
+  animate.obj(aXmasLights5);
+  animate.obj(aXmasLights6);
+  animate.obj(aXmasLights7);
+  animate.obj(aChestnuts);
+  
+  [ set object views
+  set.view(aPendulum, vPendulum);
+  set.view(aCandle2, vCandleLight);
+  set.view(aCandle1, vCandleLight);
+  set.view(aXmasLights1, vXmasLights);
+  set.view(aXmasLights2, vXmasLights);
+  set.view(aXmasLights3, vXmasLights);
+  set.view(aXmasLights4, vXmasLights);
+  set.view(aXmasLights5, vXmasLights);
+  set.view(aXmasLights6, vXmasLights);
+  set.view(aXmasLights7, vXmasLights);
+  set.view(aFire, vFire);
+  set.view(aChestnuts, vChestnuts);
+  ignore.horizon(aCandle2);
+  ignore.horizon(aCandle1);
+  ignore.horizon(aPendulum);
+  
+  [ position the objects
+  position(aCandle1, 42, 18);
+  position(aPendulum, 76, 35);
+  position(aCandle2, 100, 18);
+  position(aFire, 73, 120);
+  position(aXmasLights1, 2, 77);
+  position(aXmasLights2, 8, 74);
+  position(aXmasLights3, 3, 107);
+  position(aXmasLights4, 10, 101);
+  position(aXmasLights5, 16, 96);
+  position(aXmasLights6, 4, 150);
+  position(aXmasLights7, 18, 140);
+  position(aChestnuts, 90, 154);
+  
+  [ set the cels
+  set.cel(aXmasLights1, 0);
+  set.cel(aXmasLights2, 2);
+  set.cel(aXmasLights3, 4);
+  set.cel(aXmasLights4, 6);
+  set.cel(aXmasLights5, 0);
+  set.cel(aXmasLights6, 2);
+  set.cel(aXmasLights7, 4);
+  set.cel(aCandle2, 1);
+  
+  [ draw the objects
+  draw(aChestnuts);
+  draw(aCandle1);
+  draw(aCandle2);
+  draw(aPendulum);
+  draw(aFire);
+  draw(aXmasLights1);
+  draw(aXmasLights2);
+  draw(aXmasLights3);
+  draw(aXmasLights4);
+  draw(aXmasLights5);
+  draw(aXmasLights6);
+  draw(aXmasLights7);
+  stop.update(aXmasLights1);
+  stop.update(aXmasLights2);
+  stop.update(aXmasLights3);
+  stop.update(aXmasLights4);
+  stop.update(aXmasLights5);
+  stop.update(aXmasLights6);
+  stop.update(aXmasLights7);
+  work = 3;
+  cycle.time(aPendulum, work);
+  work = 3;
+  cycle.time(aChestnuts, work);
+  work = 2;
+  cycle.time(aCandle2, work);
+  cycle.time(aCandle1, work);
+  add.to.pic(vClock, 0, 0, 71, 44, 4, 4);
+  add.to.pic(vYuleLog, 0, 0, 62, 133, 4, 4);
+  add.to.pic(vStockings, 0, 0, 59, 96, 15, 14);
+  add.to.pic(vStockings, 0, 1, 75, 94, 15, 14);
+  add.to.pic(vStockings, 0, 2, 89, 94, 15, 14);
+  add.to.pic(vOrnaments, 0, 2, 11, 58, 4, 4);
+  add.to.pic(vOrnaments, 0, 1, 38, 140, 4, 4);
+  add.to.pic(vOrnaments, 0, 0, 11, 114, 4, 4);
+  add.to.pic(vOrnaments, 0, 2, 5, 160, 4, 4);
+  show.pic();
+  set(f229);
+  roomTimer = 35;
+  }
+  
+[ cycle the Christmas lights
+random(0, 2, work);
+if (work == 0)
+  {
+  random(0, 6, work);
+  if (work == 0)
+    {
+    if (light1Done)
+      {
+      reset(light1Done);
+      set.cel(aXmasLights1, 0);
+      }
+    else
+      {
+      set(light1Done);
+      set.cel(aXmasLights1, 1);
+      }
+    force.update(aXmasLights1);
+    }
+  if (work == 1)
+    {
+    if (light2Done)
+      {
+      reset(light2Done);
+      set.cel(aXmasLights2, 2);
+      }
+    else
+      {
+      set(light2Done);
+      set.cel(aXmasLights2, 3);
+      }
+    force.update(aXmasLights2);
+    }
+  if (work == 2)
+    {
+    if (light3Done)
+      {
+      reset(light3Done);
+      set.cel(aXmasLights1, 4);
+      }
+    else
+      {
+      set(light3Done);
+      set.cel(aXmasLights3, 5);
+      }
+    force.update(aXmasLights3);
+    }
+  if (work == 3)
+    {
+    if (light4Done)
+      {
+      reset(light4Done);
+      set.cel(aXmasLights4, 6);
+      }
+    else
+      {
+      set(light4Done);
+      set.cel(aXmasLights4, 7);
+      }
+    force.update(aXmasLights4);
+    }
+  if (work == 4)
+    {
+    if (light5Done)
+      {
+      reset(light5Done);
+      set.cel(aXmasLights5, 0);
+      }
+    else
+      {
+      set(light5Done);
+      set.cel(aXmasLights5, 1);
+      }
+    force.update(aXmasLights5);
+    }
+  if (work == 5)
+    {
+    if (light6Done)
+      {
+      reset(light6Done);
+      set.cel(aXmasLights6, 2);
+      }
+    else
+      {
+      set(light6Done);
+      set.cel(aXmasLights6, 3);
+      }
+    force.update(aXmasLights6);
+    }
+  if (work == 6)
+    {
+    if (light7Done)
+      {
+      reset(light7Done);
+      set.cel(aXmasLights7, 4);
+      }
+    else
+      {
+      set(light7Done);
+      set.cel(aXmasLights7, 5);
+      }
+    force.update(aXmasLights7);
+    }
+  }
+random(0, 20, work);
+
+[ cycle the chestnuts
+if (chestnutsDone)
+  {
+  reset(chestnutsDone);
+  stop.update(aChestnuts);
+  set.cel(aChestnuts, 0);
+  force.update(aChestnuts);
+  reset(f228);
+  }
+if (isset(f229))
+  {
+  reset(f229);
+  sound(mChestnuts, musicDone);
+  }
+  
+[ pass the time
+if (aSecondPassed)
+  {
+  --roomTimer;
+  if (roomTimer == 1)
+    {
+    new.room(rmRudolph);
+    }
+  }
+return();
+
+[ Messages
